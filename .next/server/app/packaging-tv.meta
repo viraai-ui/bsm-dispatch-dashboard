@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/packaging-tv/layout,_N_T_/packaging-tv/page,_N_T_/packaging-tv"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/packaging-tv/__PAGE__",
+    "/packaging-tv",
+    "/_index",
+    "/_head"
+  ]
+}

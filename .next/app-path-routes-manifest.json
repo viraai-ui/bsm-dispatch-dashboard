@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/orders/[id]/generate-serials/route": "/api/orders/[id]/generate-serials",
+  "/api/orders/route": "/api/orders",
+  "/api/packaging-tv/route": "/api/packaging-tv",
+  "/api/sync/status/route": "/api/sync/status",
+  "/api/webhooks/zoho/sales-order/route": "/api/webhooks/zoho/sales-order",
+  "/m/[qrToken]/page": "/m/[qrToken]",
+  "/orders/[id]/page": "/orders/[id]",
+  "/packaging-tv/page": "/packaging-tv",
+  "/page": "/"
+}

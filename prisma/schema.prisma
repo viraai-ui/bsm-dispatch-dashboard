@@ -1,0 +1,295 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  PACKAGING_TEAM
+  DISPATCH_TEAM
+  VIEWER
+}
+
+enum UserStatus {
+  ACTIVE
+  DISABLED
+}
+
+enum DashboardStatus {
+  QR_PENDING
+  QR_GENERATED
+  QR_PRINTED
+  READY_FOR_PACKAGING
+  PACKING_DONE
+  MEDIA_PROOF_PENDING
+  MEDIA_PROOF_UPLOADED
+  VEHICLE_BOOKED
+  DISPATCHED
+  CLOSED_DELIVERED
+  REVIEW_REQUIRED
+}
+
+enum SyncStatus {
+  PENDING
+  SYNCED
+  FAILED
+  MANUAL_REVIEW_REQUIRED
+  NOT_APPLICABLE
+}
+
+enum MediaType {
+  PHOTO
+  VIDEO
+  LOADING_PHOTO
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  role         Role
+  status       UserStatus @default(ACTIVE)
+  lastLoginAt  DateTime?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model ZohoSalesOrder {
+  id                 String               @id @default(cuid())
+  zohoSalesOrderId   String               @unique
+  salesOrderNumber   String
+  customerId         String?
+  customerName       String
+  customerPhone      String?
+  customerEmail      String?
+  billingAddressJson Json?
+  shippingAddressJson Json?
+  orderDate          DateTime?
+  deliveryDate       DateTime?
+  zohoStatus         String?
+  dashboardStatus    DashboardStatus      @default(QR_PENDING)
+  rawPayloadJson     Json
+  payloadHash        String
+  reviewRequired     Boolean              @default(false)
+  lastSyncedAt       DateTime?
+  items              ZohoSalesOrderItem[]
+  machines           MachineUnit[]
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+}
+
+model ZohoSalesOrderItem {
+  id                    String          @id @default(cuid())
+  salesOrderId          String
+  salesOrder            ZohoSalesOrder  @relation(fields: [salesOrderId], references: [id])
+  zohoLineItemId        String
+  zohoItemId            String
+  sku                   String?
+  itemName              String
+  description           String?
+  quantity              Int
+  unit                  String?
+  woodenPackingRequired Boolean         @default(false)
+  packingType           String?
+  dimensions            String?
+  rawPayloadJson        Json?
+  payloadHash           String?
+  machines              MachineUnit[]
+  createdAt             DateTime        @default(now())
+  updatedAt             DateTime        @updatedAt
+
+  @@unique([salesOrderId, zohoLineItemId])
+}
+
+model SerialCounter {
+  id         String   @id @default(cuid())
+  fyPrefix   String   @unique
+  lastNumber Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model MachineUnit {
+  id                   String             @id @default(cuid())
+  serialNumber         String             @unique
+  qrToken              String             @unique
+  qrUrl                String
+  salesOrderId         String
+  salesOrder           ZohoSalesOrder     @relation(fields: [salesOrderId], references: [id])
+  salesOrderItemId     String
+  salesOrderItem       ZohoSalesOrderItem @relation(fields: [salesOrderItemId], references: [id])
+  zohoSalesOrderId     String
+  zohoLineItemId       String
+  zohoItemId           String
+  itemName             String
+  sku                  String?
+  unitIndex            Int
+  customerId           String?
+  customerName         String
+  deliveryDate         DateTime?
+  qrStatus             String             @default("Generated")
+  qrGeneratedAt        DateTime           @default(now())
+  qrPrintedAt          DateTime?
+  packingStatus        String             @default("Not Started")
+  woodenPackingStatus  String             @default("Not Required")
+  mediaStatus          String             @default("Pending")
+  vehicleStatus        String             @default("Pending")
+  dispatchStatus       String             @default("Pending")
+  dispatchDate         DateTime?
+  warrantyStartDate    DateTime?
+  warrantyEndDate      DateTime?
+  zohoSerialSyncStatus SyncStatus         @default(PENDING)
+  zohoSerialId         String?
+  voidedAt             DateTime?
+  voidedBy             String?
+  voidReason           String?
+  createdBy            String?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+}
+
+model QrTemplate {
+  id            String   @id @default(cuid())
+  templateName  String
+  labelWidthMm  Int
+  labelHeightMm Int
+  paperType     String
+  logoUrl       String?
+  settingsJson  Json
+  isDefault     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model PrintJob {
+  id                 String    @id @default(cuid())
+  templateId         String
+  salesOrderId       String
+  machineUnitIdsJson Json
+  printedBy          String?
+  printedAt          DateTime?
+  status             String
+  pdfUrl             String?
+  createdAt          DateTime  @default(now())
+}
+
+model WoodenPackingTask {
+  id            String    @id @default(cuid())
+  machineUnitId String
+  salesOrderId  String
+  status        String    @default("Pending")
+  packingType   String?
+  dimensions    String?
+  vendorName    String?
+  orderedAt     DateTime?
+  completedAt   DateTime?
+  remarks       String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model PackingTask {
+  id            String    @id @default(cuid())
+  machineUnitId String
+  salesOrderId  String
+  status        String    @default("Pending")
+  qrPasted      Boolean   @default(false)
+  qcDone        Boolean   @default(false)
+  issueFound    Boolean   @default(false)
+  issueRemarks  String?
+  startedAt     DateTime?
+  completedAt   DateTime?
+  updatedBy     String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model MediaUpload {
+  id                String    @id @default(cuid())
+  machineUnitId     String
+  salesOrderId      String
+  mediaType         MediaType
+  fileName          String
+  fileSize          Int
+  workdriveFileId   String?
+  workdriveFolderId String?
+  workdriveUrl      String
+  uploadedBy        String?
+  uploadedAt        DateTime  @default(now())
+  createdAt         DateTime  @default(now())
+}
+
+model DispatchBooking {
+  id              String    @id @default(cuid())
+  salesOrderId    String
+  machineUnitId   String?
+  transporterName String
+  vehicleType     String?
+  driverName      String?
+  driverPhone     String?
+  vehicleNumber   String
+  pickupDatetime  DateTime?
+  freightAmount   Decimal?
+  lrDocketNumber  String?
+  loadingPhotoUrl String?
+  remarks         String?
+  bookedBy        String?
+  bookedAt        DateTime?
+  dispatchedBy    String?
+  dispatchedAt    DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model SyncJob {
+  id           String     @id @default(cuid())
+  jobType      String
+  entityType   String
+  entityId     String?
+  payloadJson  Json?
+  status       SyncStatus @default(PENDING)
+  attemptCount Int        @default(0)
+  lastError    String?
+  nextRetryAt  DateTime?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model SyncConflict {
+  id              String    @id @default(cuid())
+  salesOrderId    String
+  conflictType    String
+  oldPayloadJson  Json?
+  newPayloadJson  Json?
+  status          String    @default("Open")
+  resolvedBy      String?
+  resolvedAt      DateTime?
+  resolutionNote  String?
+  createdAt       DateTime  @default(now())
+}
+
+model AuditLog {
+  id           String   @id @default(cuid())
+  userId       String?
+  action       String
+  entityType   String
+  entityId     String
+  oldValueJson Json?
+  newValueJson Json?
+  ipAddress    String?
+  userAgent    String?
+  createdAt    DateTime @default(now())
+}
+
+model AppSetting {
+  key       String   @id
+  valueJson Json
+  updatedBy String?
+  updatedAt DateTime @updatedAt
+}
