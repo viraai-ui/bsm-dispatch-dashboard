@@ -7,8 +7,6 @@ const nav = [
   { label: 'Vehicle / Dispatch', href: '/#vehicle-dispatch' },
   { label: 'Machine Lookup', href: '/m/262700001' },
   { label: 'Sync Monitor', href: '/#sync-monitor' },
-  { label: 'Settings', href: '/#settings' },
-  { label: 'Audit Logs', href: '/#audit-logs' },
 ]
 
 export function DashboardShell({ children, active = 'Orders' }: { children: React.ReactNode; active?: string }) {

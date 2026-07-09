@@ -1,7 +1,6 @@
 import { DashboardShell, Badge } from '@/components/DashboardShell'
 import { machines, orders } from '@/lib/mock-data'
-
-const tabs = ['QR Pending', 'QR Generated', 'QR Printed', 'Wooden Packing', 'Ready for Packaging', 'Packing Done', 'Media Pending', 'Vehicle Pending', 'Dispatched', 'Review Required']
+import { statusTabs } from '@/types/domain'
 
 export default function Home() {
   const readyForDispatch = machines.filter((m) => m.mediaPhotos >= 2 && m.mediaVideos >= 1 && m.status !== 'Dispatched').length
@@ -26,7 +25,7 @@ export default function Home() {
 
       <section id="orders" className="card">
         <h2>Orders</h2>
-        <div className="tabs">{tabs.map((t) => <span className="pill" key={t}>{t}</span>)}</div>
+        <div className="tabs">{statusTabs.map((t) => <span className="pill" data-status={t.status} key={t.status}>{t.label}</span>)}</div>
 
         <div className="desktop-table table-wrap">
           <table className="table">

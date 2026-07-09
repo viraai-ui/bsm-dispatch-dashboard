@@ -1,9 +1,11 @@
 import { DashboardShell, Badge } from '@/components/DashboardShell'
 import { orders } from '@/lib/mock-data'
+import { notFound } from 'next/navigation'
 
 export default async function OrderDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const order = orders.find((item) => item.id === id) ?? orders[0]
+  const order = orders.find((item) => item.id === id)
+  if (!order) notFound()
   const alreadyGenerated = order.machines.length > 0
 
   return (

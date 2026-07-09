@@ -1,14 +1,18 @@
 import { Badge } from '@/components/DashboardShell'
-import { machines } from '@/lib/mock-data'
+import { machines, orders } from '@/lib/mock-data'
+import { notFound } from 'next/navigation'
 
 export default async function MachinePassport({ params }: { params: Promise<{ qrToken: string }> }) {
   const { qrToken } = await params
-  const machine = machines.find((m) => m.serialNumber === qrToken) ?? machines[0]
+  const machine = machines.find((m) => m.qrToken === qrToken || m.serialNumber === qrToken)
+  if (!machine) notFound()
+  const order = orders.find((item) => item.id === machine.orderId)
+  if (!order) notFound()
   const completeMedia = machine.mediaPhotos >= 2 && machine.mediaVideos >= 1
 
   return (
     <main className="main passport">
-      <a className="btn light back-link" href={`/orders/${machine.salesOrderNumber === 'SO-1001' ? 'so-1001' : 'so-1002'}`}>← Back to Order</a>
+      <a className="btn light back-link" href={`/orders/${order.id}`}>← Back to Order</a>
       <header className="passport-header">
         <div>
           <div className="eyebrow">Machine Passport</div>

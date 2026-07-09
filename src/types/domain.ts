@@ -4,6 +4,8 @@ export type MachineStatus = 'QR Pending' | 'QR Generated' | 'QR Printed' | 'Wood
 export type MachineUnit = {
   id: string
   serialNumber: string
+  qrToken: string
+  orderId: string
   itemName: string
   sku: string
   customerName: string
@@ -31,3 +33,16 @@ export type Order = {
   lineItems: { itemName: string; sku: string; quantity: number; woodenPackingRequired: boolean; dimensions?: string }[]
   machines: MachineUnit[]
 }
+
+export const statusTabs: { label: string; status: MachineStatus }[] = [
+  { label: 'QR Pending', status: 'QR Pending' },
+  { label: 'QR Generated', status: 'QR Generated' },
+  { label: 'QR Printed', status: 'QR Printed' },
+  { label: 'Wooden Packing', status: 'Wooden Packing Pending' },
+  { label: 'Ready for Packaging', status: 'Ready for Packaging' },
+  { label: 'Packing Done', status: 'Packing Done' },
+  { label: 'Media Pending', status: 'Media Proof Pending' },
+  { label: 'Vehicle Booked', status: 'Vehicle Booked' },
+  { label: 'Dispatched', status: 'Dispatched' },
+  { label: 'Review Required', status: 'Review Required' },
+]

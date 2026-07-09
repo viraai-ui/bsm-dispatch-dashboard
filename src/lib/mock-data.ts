@@ -16,6 +16,8 @@ export const orders: Order[] = [
     machines: [1, 2, 3].map((n) => ({
       id: `mu-26270000${n}`,
       serialNumber: `26270000${n}`,
+      qrToken: `qr-26270000${n}`,
+      orderId: 'so-1001',
       itemName: 'Belt Conveyor',
       sku: 'BSM-BC-900',
       customerName: 'Arihant Foods Pvt Ltd',
@@ -41,6 +43,8 @@ export const orders: Order[] = [
     machines: [{
       id: 'mu-262700004',
       serialNumber: '262700004',
+      qrToken: 'qr-262700004',
+      orderId: 'so-1002',
       itemName: 'Bucket Elevator',
       sku: 'BSM-BE-1200',
       customerName: 'Delhi Packaging Co.',
@@ -64,7 +68,24 @@ export const orders: Order[] = [
     reviewRequired: false,
     lineItems: [{ itemName: 'Rotary Table', sku: 'BSM-RT-600', quantity: 1, woodenPackingRequired: true }],
     machines: [{
-      id: 'mu-262700005', serialNumber: '262700005', itemName: 'Rotary Table', sku: 'BSM-RT-600', customerName: 'Mumbai Foods LLP', salesOrderNumber: 'SO-1003', deliveryDate: '29/07/2026', status: 'Dispatched', woodenPacking: 'Completed', qrPasted: true, qcDone: true, mediaPhotos: 3, mediaVideos: 1, vehicleNumber: 'DL 1 AB 7731', warrantyStart: '10/07/2026', warrantyEnd: warrantyEnd('2026-07-10')
+      id: 'mu-262700005',
+      serialNumber: '262700005',
+      qrToken: 'qr-262700005',
+      orderId: 'so-1003',
+      itemName: 'Rotary Table',
+      sku: 'BSM-RT-600',
+      customerName: 'Mumbai Foods LLP',
+      salesOrderNumber: 'SO-1003',
+      deliveryDate: '29/07/2026',
+      status: 'Dispatched',
+      woodenPacking: 'Completed',
+      qrPasted: true,
+      qcDone: true,
+      mediaPhotos: 3,
+      mediaVideos: 1,
+      vehicleNumber: 'DL 1 AB 7731',
+      warrantyStart: '10/07/2026',
+      warrantyEnd: warrantyEnd('2026-07-10'),
     }],
   },
 ]
