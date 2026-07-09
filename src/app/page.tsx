@@ -25,7 +25,11 @@ export default function Home() {
 
       <section id="orders" className="card">
         <h2>Orders</h2>
-        <div className="tabs">{statusTabs.map((t) => <span className="pill" data-status={t.status} key={t.status}>{t.label}</span>)}</div>
+        <div className="tabs status-tabs">{statusTabs.map((t) => <span className="pill" data-status={t.status} key={t.status}>{t.label}</span>)}</div>
+        <div className="mobile-stage-card">
+          <span>Live flow</span>
+          <strong>Orders → QR → Packing → Media → Dispatch</strong>
+        </div>
 
         <div className="desktop-table table-wrap">
           <table className="table">
@@ -81,9 +85,9 @@ export default function Home() {
 }
 
 function Stat({ label, value }: { label: string; value: number }) {
-  return <div className="card stat"><span className="muted">{label}</span><b>{value}</b></div>
+  return <div className="card stat shine-card"><span className="muted">{label}</span><b>{value}</b></div>
 }
 
 function Module({ id, title, text, action }: { id: string; title: string; text: string; action: string }) {
-  return <div className="card" id={id}><h2>{title}</h2><p className="muted">{text}</p><a className="btn light full" style={{ marginTop: 16 }} href={`#${id}`}>{action}</a></div>
+  return <div className="card module-card" id={id}><h2>{title}</h2><p className="muted">{text}</p><a className="btn light full" style={{ marginTop: 16 }} href={`#${id}`}>{action}</a></div>
 }

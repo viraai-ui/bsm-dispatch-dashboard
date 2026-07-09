@@ -1,4 +1,6 @@
-const nav = [
+import { MobileMenu, type NavItem } from './MobileMenu'
+
+const nav: NavItem[] = [
   { label: 'Orders', href: '/' },
   { label: 'QR & Serial', href: '/#qr-serial' },
   { label: 'Wooden Packing', href: '/#wooden-packing' },
@@ -12,6 +14,7 @@ const nav = [
 export function DashboardShell({ children, active = 'Orders' }: { children: React.ReactNode; active?: string }) {
   return (
     <div className="shell">
+      <MobileMenu nav={nav} active={active} />
       <aside className="side">
         <div className="brand">
           <div className="logo">BSM</div>
