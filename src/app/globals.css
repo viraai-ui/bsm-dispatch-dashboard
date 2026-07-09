@@ -96,6 +96,7 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
   .side { display: none; }
   .mobile-appbar { display: flex; position: fixed; top: 10px; left: 10px; right: 10px; z-index: 50; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; min-height: 58px; border: 1px solid rgba(255,255,255,.78); border-radius: 24px; background: rgba(255,255,255,.72); backdrop-filter: blur(22px); box-shadow: 0 20px 55px rgba(15,23,42,.14); }
   .mobile-brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+  .mobile-brand { min-height: 44px; }
   .mobile-logo { width: 42px; height: 42px; border-radius: 15px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--red), #fb7185); font-weight: 950; box-shadow: 0 12px 28px rgba(200,16,46,.28); }
   .mobile-brand strong { display: block; line-height: 1; }
   .mobile-brand small { display: block; color: var(--muted); font-weight: 700; margin-top: 3px; }
