@@ -2,7 +2,8 @@ import { AuthGate } from './AuthGate'
 import { MobileMenu, type NavItem } from './MobileMenu'
 
 const nav: NavItem[] = [
-  { label: 'Orders', href: '/' },
+  { label: 'Dashboard', href: '/' },
+  { label: 'Orders', href: '/orders' },
   { label: 'QR & Serial', href: '/qr-serial' },
   { label: 'Wooden Packing', href: '/wooden-packing' },
   { label: 'Packaging TV', href: '/packaging-tv' },

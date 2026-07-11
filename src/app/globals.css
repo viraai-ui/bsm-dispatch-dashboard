@@ -97,6 +97,17 @@ input:focus, select:focus { border-color: rgba(200,16,46,.55); box-shadow: 0 0 0
 .search-panel, .user-add { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; }
 .user-add { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) 220px auto; }
 .user-list { margin-top: 14px; }
+.funnel-chart { display: grid; gap: 16px; margin-top: 16px; }
+.funnel-row { display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; align-items: center; gap: 12px; font-weight: 850; }
+.bar-track { height: 14px; border-radius: 999px; background: #eef2f7; overflow: hidden; }
+.bar-track i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--red), #fb7185); }
+.donut-wrap { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 18px; align-items: center; margin-top: 16px; }
+.donut { width: 170px; height: 170px; border-radius: 999px; display: grid; place-items: center; align-content: center; background: conic-gradient(var(--red) 0 var(--a), #f59e0b var(--a) var(--b), #22c55e var(--b) var(--c), #dbeafe var(--c) 100%); box-shadow: inset 0 0 0 28px #fff, 0 20px 45px rgba(15,23,42,.10); }
+.donut strong { font-size: 34px; letter-spacing: -.06em; }
+.donut span { color: var(--muted); font-weight: 850; }
+.legend { display: grid; gap: 10px; }
+.machine-row.compact { grid-template-columns: minmax(0,1fr) auto; padding: 11px 12px; }
+.big-number { font-size: 42px; font-weight: 950; letter-spacing: -.07em; margin-top: 12px; }
 button:disabled { opacity: .46; cursor: not-allowed; }
 
 @keyframes drawerIn { from { transform: translateX(18px); opacity: .55; } to { transform: translateX(0); opacity: 1; } }
@@ -145,6 +156,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .machine-row { grid-template-columns: 1fr; align-items: stretch; }
   .machine-row .btn { width: 100%; }
   .search-panel, .user-add { grid-template-columns: 1fr; }
+  .donut-wrap { grid-template-columns: 1fr; justify-items: center; }
+  .legend { width: 100%; }
+  .funnel-row { grid-template-columns: 76px minmax(0, 1fr) auto; gap: 8px; }
   .label-preview { width: 100%; }
 }
 
