@@ -23,7 +23,7 @@ export function DashboardShell({ children, active = 'Orders' }: { children: Reac
             <div className="logo">BSM</div>
             <div>
               <strong>Dispatch</strong>
-              <div className="muted">Machine Passport</div>
+              <div className="muted">Dashboard</div>
             </div>
           </div>
           <nav className="nav" aria-label="Dashboard navigation">

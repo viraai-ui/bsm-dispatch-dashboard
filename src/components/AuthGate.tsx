@@ -39,7 +39,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     event.preventDefault()
     const user = users.find((u) => u.email.toLowerCase() === email.trim().toLowerCase() && u.active)
     if (!user || password !== '1231') {
-      setError('Use a valid BSM user and password 1231 for this preview login.')
+      setError('Invalid login.')
       return
     }
     localStorage.setItem('bsm-dispatch-session', JSON.stringify(user))
@@ -53,9 +53,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
       <main className="login-screen">
         <section className="login-card card">
           <div className="logo big">BSM</div>
-          <div className="eyebrow">Secure access</div>
-          <h1 className="h1">Dispatch Dashboard Login</h1>
-          <p className="muted">Role-based preview access for Admin, Operations Manager and Dispatch Team.</p>
+          <h1 className="h1">Login</h1>
           <form className="form-grid" onSubmit={login}>
             <label>Email<select value={email} onChange={(e) => setEmail(e.target.value)}>{users.map((u) => <option value={u.email} key={u.id}>{u.email} · {u.role}</option>)}</select></label>
             <label>Password<input value={password} onChange={(e) => setPassword(e.target.value)} type="password" /></label>

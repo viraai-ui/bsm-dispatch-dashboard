@@ -14,7 +14,7 @@ export function MobileMenu({ nav, active }: { nav: NavItem[]; active: string }) 
           <span className="mobile-logo">BSM</span>
           <span>
             <strong>Dispatch</strong>
-            <small>Machine Passport</small>
+            <small>Dashboard</small>
           </span>
         </a>
         <button className="dots-trigger" aria-label="Open module menu" aria-expanded={open} onClick={() => setOpen(true)}>
@@ -30,8 +30,7 @@ export function MobileMenu({ nav, active }: { nav: NavItem[]; active: string }) 
         <div className="drawer-glow" />
         <div className="drawer-head">
           <div>
-            <div className="eyebrow">BSM Modules</div>
-            <h2>Move around</h2>
+            <h2>Modules</h2>
           </div>
           <button className="drawer-close" aria-label="Close menu" onClick={() => setOpen(false)}>×</button>
         </div>

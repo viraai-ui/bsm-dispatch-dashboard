@@ -8,9 +8,7 @@ export default function PackagingTv() {
     <main className="tv">
       <header className="top">
         <div>
-          <div className="eyebrow">Packaging TV View</div>
           <h1 className="h1">Today’s Packing Queue</h1>
-          <p className="muted">Auto-refresh operational screen. No pricing, GST, payment, invoice value or profit data.</p>
         </div>
         <Badge tone="green">Live · {queue.length} active</Badge>
       </header>

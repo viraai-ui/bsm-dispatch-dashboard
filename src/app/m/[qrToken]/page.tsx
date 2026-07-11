@@ -15,7 +15,6 @@ export default async function MachinePassport({ params }: { params: Promise<{ qr
       <a className="btn light back-link" href={`/orders/${order.id}`}>← Back to Order</a>
       <header className="passport-header">
         <div>
-          <div className="eyebrow">Machine Passport</div>
           <h1 className="h1">{machine.serialNumber}</h1>
           <p className="muted">{machine.itemName} · {machine.salesOrderNumber}</p>
         </div>
@@ -48,7 +47,7 @@ export default async function MachinePassport({ params }: { params: Promise<{ qr
 
       <section className="card" style={{ marginTop: 16 }}>
         <h2>Media Proof</h2>
-        <p className="muted">WorkDrive metadata only. Photos/videos stay in Zoho WorkDrive.</p>
+
         <div className="tabs">
           <Badge tone={machine.mediaPhotos >= 2 ? 'green' : 'amber'}>{machine.mediaPhotos}/2 photos</Badge>
           <Badge tone={machine.mediaVideos >= 1 ? 'green' : 'amber'}>{machine.mediaVideos}/1 video</Badge>
@@ -57,11 +56,11 @@ export default async function MachinePassport({ params }: { params: Promise<{ qr
       </section>
 
       <section className="card" style={{ marginTop: 16 }}>
-        <h2>Audit Timeline</h2>
+        <h2>Audit</h2>
         <div className="machine">
-          <div className="machine-row"><span>Serial generated from backend FY counter</span><span className="muted">System · pending live DB timestamp</span></div>
-          <div className="machine-row"><span>QR label print/reprint history</span><span className="muted">Tracked per print job</span></div>
-          <div className="machine-row"><span>Zoho sync status</span><Badge tone="amber">Pending sandbox test</Badge></div>
+          <div className="machine-row"><span>Serial generated</span><span className="muted">System</span></div>
+          <div className="machine-row"><span>QR label printed</span><span className="muted">Tracked</span></div>
+          <div className="machine-row"><span>Zoho sync</span><Badge tone="amber">Pending</Badge></div>
         </div>
       </section>
     </main>

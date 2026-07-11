@@ -10,9 +10,8 @@ export default async function OrderDetail({ params }: { params: Promise<{ id: st
 
   return (
     <DashboardShell active="Orders">
-      <header className="top">
+      <header className="top compact-top">
         <div>
-          <div className="eyebrow">Order detail</div>
           <h1 className="h1">{order.salesOrderNumber}</h1>
           <p className="muted">{order.customerName} · Delivery {order.deliveryDate}</p>
         </div>
@@ -22,8 +21,7 @@ export default async function OrderDetail({ params }: { params: Promise<{ id: st
       {order.reviewRequired && (
         <div className="card alert">
           <Badge tone="red">Review Required</Badge>
-          <h2>Zoho Sales Order changed after QR generation.</h2>
-          <p className="muted">Review the changed Zoho order. No generated serial will be deleted automatically.</p>
+          <h2>Zoho order changed.</h2>
           <div className="conflict-actions">
             <button className="btn light">Accept Zoho Changes</button>
             <button className="btn light">Ignore Changes</button>
@@ -54,7 +52,7 @@ export default async function OrderDetail({ params }: { params: Promise<{ id: st
         <div className="card">
           <h2>Actions</h2>
           <div className="machine">
-            <button className="btn">Preview QR Labels</button>
+            <button className="btn">QR Labels</button>
             <button className="btn light">Print QR Labels</button>
             <button className="btn light">Send to Packaging</button>
             <button className="btn light">Resolve Conflict</button>
@@ -69,7 +67,7 @@ export default async function OrderDetail({ params }: { params: Promise<{ id: st
             <div className="machine-row" key={m.id}>
               <div><strong>{m.serialNumber}</strong><div className="muted">{m.itemName} · {m.sku}</div></div>
               <Badge tone={m.status === 'Dispatched' ? 'green' : m.status === 'Review Required' ? 'red' : 'blue'}>{m.status}</Badge>
-              <a className="btn light" href={`/m/${m.serialNumber}`}>Open Machine Passport</a>
+              <a className="btn light" href={`/m/${m.serialNumber}`}>Open</a>
             </div>
           ))}
         </div>
