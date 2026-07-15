@@ -26,12 +26,16 @@ export async function GET(request: Request) {
       console.error('Zoho token exchange failed', data)
       return textPage('Zoho connected, but refresh token was not returned. Please revoke this app in Zoho and approve again.', false)
     }
-    console.log('ZOHO_REFRESH_TOKEN_TO_STORE', data.refresh_token)
-    return textPage('Zoho connected successfully. You can close this page and tell Vira to finish setup.', true)
+    return tokenPage(data.refresh_token)
   } catch (err) {
     console.error('Zoho callback error', err)
     return textPage('Zoho authorization failed during token exchange.', false)
   }
+}
+
+function tokenPage(refreshToken: string) {
+  const safe = refreshToken.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  return new NextResponse(`<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Zoho Connected</title><style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#f6f7fb;margin:0;display:grid;place-items:center;min-height:100vh;color:#111827}.card{background:white;border:1px solid #e2e8f0;border-radius:24px;padding:28px;max-width:720px;box-shadow:0 20px 60px rgba(15,23,42,.12)}.badge{display:inline-flex;border-radius:999px;padding:8px 12px;font-weight:800;background:#dcfce7;color:#166534}textarea{width:100%;min-height:110px;border:1px solid #e2e8f0;border-radius:14px;padding:12px;margin-top:12px;font-family:monospace}</style></head><body><main class="card"><span class="badge">Success</span><h1>Zoho connected successfully</h1><p>Copy the token below and send it to Vira to finish setup. This page can be closed after copying.</p><textarea readonly>${safe}</textarea></main></body></html>`, { headers: { 'content-type': 'text/html' } })
 }
 
 function textPage(message: string, ok: boolean) {
