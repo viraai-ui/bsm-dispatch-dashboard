@@ -150,7 +150,7 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .serial-list span { display: block; overflow-wrap: anywhere; }
 .packaging-complete { margin-top: 16px; border-radius: 18px; }
 .packaging-empty { min-height: 76px; display: flex; align-items: center; background: rgba(255,255,255,.72); color: var(--muted); border-style: dashed; box-shadow: none; }
-.vehicle-launcher-page { min-height: calc(100svh - 56px); display: grid; align-content: center; gap: 34px; padding: clamp(24px, 4vw, 54px); }
+.vehicle-launcher-page { min-height: calc(100svh - 56px); display: grid; align-content: start; gap: 34px; padding: clamp(24px, 4vw, 54px); }
 .vehicle-launcher-hero { text-align: center; max-width: 760px; margin: 0 auto; }
 .vehicle-launcher-hero .h1 { margin-bottom: 10px; }
 .vehicle-launcher-hero p { margin: 0; font-size: 17px; font-weight: 700; }
@@ -160,15 +160,20 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .vehicle-provider-card > * { position: relative; }
 .vehicle-provider-card.rapido::before { background: radial-gradient(circle at 78% 5%, rgba(250,204,21,.32), transparent 34%), linear-gradient(135deg, rgba(255,255,255,.72), transparent 42%); }
 .vehicle-provider-card:hover { transform: translateY(-6px); box-shadow: 0 34px 90px rgba(15,23,42,.14); border-color: rgba(148,163,184,.62); }
-.vehicle-logo-link { width: 100%; min-height: 118px; display: grid; place-items: center; border-radius: 26px; background: linear-gradient(180deg, rgba(248,250,252,.95), rgba(255,255,255,.84)); border: 1px solid rgba(226,232,240,.9); box-shadow: inset 0 1px 0 rgba(255,255,255,.9); }
-.vehicle-logo-mark { min-width: 178px; min-height: 74px; padding: 0 24px; border-radius: 24px; display: inline-grid; place-items: center; font-size: 31px; font-weight: 950; letter-spacing: -.06em; background: #fff; color: #111827; box-shadow: 0 16px 42px rgba(15,23,42,.09); }
-.vehicle-provider-card.porter .vehicle-logo-mark { color: #0f172a; border-bottom: 5px solid #2563eb; }
-.vehicle-provider-card.rapido .vehicle-logo-mark { color: #171717; border-bottom: 5px solid #facc15; }
+.vehicle-logo-link { width: 100%; min-height: 140px; display: grid; place-items: center; border-radius: 26px; background: linear-gradient(180deg, rgba(248,250,252,.95), rgba(255,255,255,.84)); border: 1px solid rgba(226,232,240,.9); box-shadow: inset 0 1px 0 rgba(255,255,255,.9); padding: 0; color: inherit; }
+.vehicle-logo-img { width: 116px; height: 116px; border-radius: 28px; object-fit: cover; box-shadow: 0 18px 46px rgba(15,23,42,.13); transition: transform .22s ease; }
+.vehicle-logo-link:hover .vehicle-logo-img { transform: scale(1.04); }
 .vehicle-provider-copy { display: grid; align-content: start; gap: 10px; text-align: center; }
 .vehicle-provider-copy h2 { margin: 0; font-size: clamp(28px, 3vw, 36px); letter-spacing: -.055em; }
 .vehicle-provider-copy p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; font-weight: 700; }
 .vehicle-open-btn { width: 100%; min-height: 54px; border-radius: 18px; font-size: 16px; }
 .vehicle-provider-card.rapido .vehicle-open-btn { background: linear-gradient(135deg, #111827, #334155); box-shadow: 0 16px 32px rgba(15,23,42,.16); }
+.vehicle-frame-card { width: min(100%, 1120px); margin: 0 auto; border: 1px solid rgba(226,232,240,.9); border-radius: 32px; background: rgba(255,255,255,.76); backdrop-filter: blur(22px); box-shadow: 0 24px 72px rgba(15,23,42,.09); overflow: hidden; }
+.vehicle-frame-head { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 18px 20px; border-bottom: 1px solid rgba(226,232,240,.9); background: rgba(248,250,252,.74); }
+.vehicle-frame-head h2 { margin: 0; font-size: 22px; letter-spacing: -.04em; }
+.vehicle-frame-head span { color: var(--muted); font-weight: 800; }
+.vehicle-booking-frame { display: block; width: 100%; height: min(68svh, 760px); min-height: 520px; border: 0; background: #fff; }
+.vehicle-frame-empty { min-height: 280px; display: grid; place-items: center; padding: 28px; color: var(--muted); font-weight: 850; text-align: center; background: linear-gradient(135deg, rgba(248,250,252,.9), rgba(255,255,255,.72)); }
 .passport { max-width: 960px; margin: 0 auto; }
 .passport-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
 .back-link { margin-bottom: 16px; }
