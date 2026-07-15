@@ -29,7 +29,7 @@ export async function uploadBufferToWorkDrive(fileName: string, buffer: Buffer, 
     method: 'POST',
     headers: {
       Authorization: `Zoho-oauthtoken ${token}`,
-      'x-filename': fileName,
+      'x-filename': encodeURIComponent(fileName),
       'x-parent_id': parentId,
       'x-streammode': '1',
       'content-type': mimeType || 'application/octet-stream',
@@ -37,8 +37,13 @@ export async function uploadBufferToWorkDrive(fileName: string, buffer: Buffer, 
     body: new Uint8Array(buffer),
     cache: 'no-store',
   })
-  const data = await response.json().catch(() => ({}))
-  if (!response.ok) throw new Error(data.message || data.errors?.[0]?.title || 'Zoho WorkDrive upload failed')
+  const raw = await response.text()
+  let data: any = {}
+  try { data = raw ? JSON.parse(raw) : {} } catch { data = { raw } }
+  if (!response.ok) {
+    const details = data.message || data.errors?.[0]?.title || data.errors?.[0]?.message || data.error || data.raw || `HTTP ${response.status}`
+    throw new Error(`Zoho WorkDrive upload failed: ${details}`)
+  }
   const first = Array.isArray(data.data) ? data.data[0] : data.data
   const attrs = first?.attributes || first || {}
   const fileId = String(first?.id || attrs.resource_id || attrs.id || '') || null
