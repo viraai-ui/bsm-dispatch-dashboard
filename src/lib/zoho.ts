@@ -196,13 +196,15 @@ export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   }
   if (!pagesFetched) throw new Error('Zoho returned no pagination data')
   const seen = new Set<string>()
+  const excludedStatuses = new Set(['draft', 'void', 'cancelled', 'canceled', 'closed'])
   const confirmed = summaries.filter((row) => {
     const id = String(row.salesorder_id || '')
     const status = String(row.status || row.current_sub_status || row.order_status || '').toLowerCase()
     if (!id || seen.has(id)) return false
     seen.add(id)
-    return status === 'confirmed'
+    return !excludedStatuses.has(status)
   })
+  if (summaries.length > 0 && confirmed.length === 0) throw new Error('Zoho confirmed-order view returned no usable sales orders')
   const detailed: Order[] = []
   for (const summary of confirmed) detailed.push(await fetchZohoOrderDetailWithToken(String(summary.salesorder_id), token))
   return detailed
