@@ -4,37 +4,72 @@ import { useEffect, useMemo, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { MachineUnit, Order } from '@/types/domain'
 
-const PROCESSED_ORDERS_KEY = 'bsm.processed.orders.v1'
 const PACKING_STATE_KEY = 'bsm.packing.state.v1'
-const MEDIA_QUEUE_KEY = 'bsm.media.queue.v1'
 
-type PackingState = Record<string, { packingComplete?: boolean; qrPasted?: boolean; qcDone?: boolean; issue?: boolean; urgent?: boolean }>
+type PackingState = Record<string, { urgent?: boolean }>
+type MachineGroup = { itemName: string; serials: string[]; quantity: number }
 
 export function PackagingTvClient() {
   const [orders, setOrders] = useState<Order[]>([])
   const [state, setState] = useState<PackingState>({})
   const [syncing, setSyncing] = useState(false)
+  const [error, setError] = useState('')
 
-  useEffect(() => { setOrders(readProcessed()); setState(readState()); void syncLocal() }, [])
+  useEffect(() => { setState(readState()); void syncLocal() }, [])
 
   const sorted = useMemo(() => [...orders].sort((a, b) => dateValue(a.deliveryDate) - dateValue(b.deliveryDate)), [orders])
-  const urgent = sorted.filter((order) => order.machines.some((machine) => state[machine.id]?.urgent))
-  const regular = sorted.filter((order) => !urgent.some((item) => item.id === order.id))
+  const urgent = sorted.filter((order) => isUrgent(order, state))
+  const regular = sorted.filter((order) => !isUrgent(order, state))
 
-  async function syncLocal() { setSyncing(true); try { const response = await fetch('/api/workflow/processed', { cache: 'no-store' }); const json = await response.json(); const processed = (json.data?.orders || []).map((item: any) => item.processedOrder).filter(Boolean); setOrders(processed.length ? processed : readProcessed()); } catch { setOrders(readProcessed()) } setState(readState()); setSyncing(false) }
-  function update(machineId: string, key: keyof PackingState[string]) { const next = { ...state, [machineId]: { ...(state[machineId] || {}), [key]: !state[machineId]?.[key] } }; setState(next); localStorage.setItem(PACKING_STATE_KEY, JSON.stringify(next)) }
-  function orderReady(order: Order) { return order.machines.every((m) => state[m.id]?.packingComplete && state[m.id]?.qrPasted && state[m.id]?.qcDone && !state[m.id]?.issue) }
-  function completeOrder(order: Order) { const queue = readMediaQueue().filter((item) => item.id !== order.id); queue.unshift({ ...order, dashboardStatus: 'Packing Done' }); localStorage.setItem(MEDIA_QUEUE_KEY, JSON.stringify(queue)); setOrders((prev) => { const next = prev.filter((item) => item.id !== order.id); localStorage.setItem(PROCESSED_ORDERS_KEY, JSON.stringify(next)); return next }) }
+  async function syncLocal() {
+    setSyncing(true); setError('')
+    try {
+      const response = await fetch('/api/packaging-tv', { cache: 'no-store' })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync Packaging TV')
+      setOrders(json.data?.orders || [])
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not sync Packaging TV')
+    } finally { setSyncing(false) }
+  }
 
-  return <main className="tv"><header className="top"><div><h1 className="h1">Packaging TV</h1></div><div className="tabs"><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'Syncing…' : 'Sync Zoho'}</button><Badge tone="green">{orders.length} orders</Badge></div></header><section className="tv-split"><DispatchColumn title="Urgent Dispatch" orders={urgent} state={state} update={update} orderReady={orderReady} completeOrder={completeOrder} /><DispatchColumn title="Regular Dispatch" orders={regular} state={state} update={update} orderReady={orderReady} completeOrder={completeOrder} /></section></main>
+  async function completeOrder(order: Order) {
+    if (!window.confirm(`Mark ${order.salesOrderNumber} as Packaging Completed?`)) return
+    const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ order }) })
+    const json = await response.json()
+    if (!response.ok || !json.ok) { setError(json.error || 'Could not complete packaging'); return }
+    setOrders((prev) => prev.filter((item) => item.id !== order.id))
+  }
+
+  return <main className="packaging-tv-light">
+    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Packaging TV</h1></div><div className="tabs"><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'Syncing…' : 'Sync Zoho'}</button><Badge tone="green">{orders.length} active orders</Badge></div></header>
+    {error && <div className="form-error">{error}</div>}
+    <DispatchSection title="Urgent Dispatch" orders={urgent} state={state} completeOrder={completeOrder} />
+    <hr className="packaging-divider" />
+    <DispatchSection title="Regular Dispatch" orders={regular} state={state} completeOrder={completeOrder} />
+  </main>
 }
 
-function DispatchColumn({ title, orders, state, update, orderReady, completeOrder }: { title: string; orders: Order[]; state: PackingState; update: (machineId: string, key: keyof PackingState[string]) => void; orderReady: (order: Order) => boolean; completeOrder: (order: Order) => void }) {
-  return <section className="card"><h2>{title}</h2><div className="machine">{orders.map((order) => <article className="card" key={order.id}><div className="modal-section-title"><div><h2>{order.salesOrderNumber}</h2><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><Badge tone={orderReady(order) ? 'green' : 'amber'}>{orderReady(order) ? 'Ready' : 'Packing'}</Badge></div><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Machine</th><th>Serial</th><th>Packing</th><th>QR</th><th>QC</th><th>Issue</th><th>Urgent</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber}</td><td><Toggle on={state[machine.id]?.packingComplete} label="Packing Complete" onClick={() => update(machine.id, 'packingComplete')} /></td><td><Toggle on={state[machine.id]?.qrPasted} label="QR Pasted" onClick={() => update(machine.id, 'qrPasted')} /></td><td><Toggle on={state[machine.id]?.qcDone} label="QC Done" onClick={() => update(machine.id, 'qcDone')} /></td><td><Toggle on={state[machine.id]?.issue} label="Issue" onClick={() => update(machine.id, 'issue')} /></td><td><Toggle on={state[machine.id]?.urgent} label="Urgent" onClick={() => update(machine.id, 'urgent')} /></td></tr>)}</tbody></table></div><button className="btn red full" disabled={!orderReady(order)} onClick={() => completeOrder(order)}>Mark Sales Order Packing Completed</button></article>)}</div></section>
+function DispatchSection({ title, orders, state, completeOrder }: { title: string; orders: Order[]; state: PackingState; completeOrder: (order: Order) => void }) {
+  return <section className="packaging-section"><h2>{title}</h2><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} />) : <div className="card packaging-empty">No active orders</div>}</div></section>
 }
 
-function Toggle({ on, label, onClick }: { on?: boolean; label: string; onClick: () => void }) { return <button className={on ? 'btn' : 'btn light'} onClick={onClick}>{label}</button> }
-function readProcessed(): Order[] { try { return JSON.parse(localStorage.getItem(PROCESSED_ORDERS_KEY) || '[]') as Order[] } catch { return [] } }
+function OrderCard({ order, urgent, completeOrder }: { order: Order; urgent: boolean; completeOrder: (order: Order) => void }) {
+  const groups = groupMachines(order.machines)
+  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine Name</span><span>Serial Number</span><span>Quantity</span></div>{groups.map((group) => <div className="packaging-row" key={group.itemName}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>)}</div><b>{group.quantity}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
+}
+
+function groupMachines(machines: MachineUnit[]) {
+  const map = new Map<string, MachineGroup>()
+  for (const machine of machines) {
+    const current = map.get(machine.itemName) || { itemName: machine.itemName, serials: [], quantity: 0 }
+    current.serials.push(machine.serialNumber || '')
+    current.quantity += 1
+    map.set(machine.itemName, current)
+  }
+  return [...map.values()]
+}
+function isUrgent(order: Order, state: PackingState) { return order.machines.some((machine) => state[machine.id]?.urgent) }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
-function readMediaQueue(): Order[] { try { return JSON.parse(localStorage.getItem(MEDIA_QUEUE_KEY) || '[]') as Order[] } catch { return [] } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }
+function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
