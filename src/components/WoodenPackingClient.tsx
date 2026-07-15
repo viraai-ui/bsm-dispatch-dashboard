@@ -5,12 +5,15 @@ import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 
 const WOODEN_CACHE_KEY = 'bsm.wooden.requirements.v1'
+const DETAIL_BATCH_SIZE = 10
+const DETAIL_LIMIT = 200
 
 type WoodenItem = { id: string; salesOrderNumber: string; customerName: string; itemName: string; requiredQuantity: number }
 
 export function WoodenPackingClient() {
   const [rows, setRows] = useState<WoodenItem[]>([])
   const [syncing, setSyncing] = useState(false)
+  const [scanning, setScanning] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -28,25 +31,46 @@ export function WoodenPackingClient() {
 
   async function syncZoho(showError = true) {
     setSyncing(true)
+    setScanning(false)
     setError('')
     try {
       const listResponse = await fetch('/api/orders', { cache: 'no-store' })
       const listJson = await listResponse.json()
-      const orders: Order[] = listJson.data?.orders || []
-      const details = await Promise.all(orders.map(async (order) => {
-        try {
-          const response = await fetch(`/api/orders/${order.zohoSalesOrderId || order.id}`, { cache: 'no-store' })
-          const json = await response.json()
-          return json.data?.order as Order | undefined
-        } catch { return undefined }
-      }))
-      const nextRows = details.filter(Boolean).flatMap((order) => order!.lineItems.filter((item) => item.woodenPackingRequired && item.pendingQuantity > 0).map((item) => ({ id: `${order!.id}-${item.id}`, salesOrderNumber: order!.salesOrderNumber, customerName: order!.customerName, itemName: item.itemName, requiredQuantity: item.pendingQuantity })))
-      const deduped = [...new Map(nextRows.map((row) => [row.id, row])).values()]
-      setRows(deduped)
-      localStorage.setItem(WOODEN_CACHE_KEY, JSON.stringify(deduped))
+      if (!listResponse.ok || !listJson.ok) throw new Error(listJson.error || 'Failed to fetch data from Zoho')
+      const openOrders: Order[] = (listJson.data?.orders || []).filter((order: Order) => order.status === 'open' || order.status === 'partially_shipped')
+      setSyncing(false)
+      setScanning(true)
+      await scanWoodenRequirements(openOrders.slice(0, DETAIL_LIMIT))
     } catch (err) {
-      if (showError) setError(err instanceof Error ? err.message : 'Could not sync wooden packing')
-    } finally { setSyncing(false) }
+      if (showError) setError(err instanceof Error ? err.message : 'Failed to fetch data from Zoho')
+      setSyncing(false)
+      setScanning(false)
+    }
+  }
+
+  async function scanWoodenRequirements(openOrders: Order[]) {
+    const found = new Map<string, WoodenItem>()
+    for (let index = 0; index < openOrders.length; index += DETAIL_BATCH_SIZE) {
+      const batch = openOrders.slice(index, index + DETAIL_BATCH_SIZE)
+      const details = await Promise.allSettled(batch.map(async (order) => {
+        const response = await fetch(`/api/orders/${order.zohoSalesOrderId || order.id}`, { cache: 'no-store' })
+        const json = await response.json()
+        if (!response.ok || !json.ok) throw new Error(json.error || 'Failed to fetch data from Zoho')
+        return json.data?.order as Order
+      }))
+      for (const result of details) {
+        if (result.status !== 'fulfilled' || !result.value) continue
+        const order = result.value
+        for (const item of order.lineItems) {
+          if (!item.woodenPackingRequired || item.pendingQuantity <= 0) continue
+          found.set(`${order.id}-${item.id}`, { id: `${order.id}-${item.id}`, salesOrderNumber: order.salesOrderNumber, customerName: order.customerName, itemName: item.itemName, requiredQuantity: item.pendingQuantity })
+        }
+      }
+      const nextRows = [...found.values()]
+      setRows(nextRows)
+      localStorage.setItem(WOODEN_CACHE_KEY, JSON.stringify(nextRows))
+    }
+    setScanning(false)
   }
 
   return <>
@@ -54,7 +78,7 @@ export function WoodenPackingClient() {
     {error && <div className="form-error">{error}</div>}
     <section className="grid two analytics-grid"><div className="card"><h2>Consolidated Summary</h2><div className="big-number">{rows.reduce((sum, row) => sum + row.requiredQuantity, 0)}</div><p className="muted">Machines requiring wooden packing</p></div><div className="card"><h2>Export</h2><div className="tabs"><button className="btn light" onClick={() => navigator.clipboard.writeText(summary)}>Copy List</button><button className="btn light" onClick={() => window.print()}>Print</button><button className="btn red" onClick={() => downloadText('wooden-packing-requirements.txt', summary)}>Download</button></div></div></section>
     <div style={{ height: 16 }} />
-    <section className="card"><h2>Pending Wooden Packing</h2>{syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}<div className="machine">{grouped.map(([so, items]) => <div className="machine-row" key={so}><div><strong>{so}</strong><p className="muted">{items[0]?.customerName}</p>{items.map((item) => <p key={item.id}>{item.itemName} — <strong>{item.requiredQuantity}</strong></p>)}</div><Badge tone="amber">Required</Badge></div>)}</div></section>
+    <section className="card"><h2>Pending Wooden Packing</h2>{syncing && <div className="machine-row compact"><span>Fetching open Zoho orders</span><Badge>Live</Badge></div>}{scanning && <div className="machine-row compact"><span>Checking open orders for wooden packing</span><Badge tone="amber">Background</Badge></div>}<div className="machine">{grouped.map(([so, items]) => <div className="machine-row" key={so}><div><strong>{so}</strong><p className="muted">{items[0]?.customerName}</p>{items.map((item) => <p key={item.id}>{item.itemName} — <strong>{item.requiredQuantity}</strong></p>)}</div><Badge tone="amber">Required</Badge></div>)}</div></section>
   </>
 }
 
