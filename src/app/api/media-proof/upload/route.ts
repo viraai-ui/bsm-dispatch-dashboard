@@ -4,7 +4,7 @@ import { saveMediaUploadBuffer } from '@/lib/media-proof'
 import { getSyncedOrder } from '@/lib/synced-orders'
 
 export const runtime = 'nodejs'
-export const maxDuration = 60
+export const maxDuration = 300
 
 export async function POST(request: Request) {
   const auth = await requireUser(['Admin', 'Operations'])

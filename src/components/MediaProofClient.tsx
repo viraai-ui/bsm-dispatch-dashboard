@@ -53,15 +53,11 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
     setBusy(machineId); setMessage(''); setProgressByMachine((prev) => ({ ...prev, [machineId]: 0 }))
     try {
       for (const file of Array.from(files)) {
-        const machine = order.machines.find((item) => item.id === machineId)
-        const fileName = `${safeFileName(order.salesOrderNumber)} - ${safeFileName(machine?.itemName || 'Machine')}${file.name.includes('.') ? `.${file.name.split('.').pop()}` : ''}`
-        const targetResponse = await fetch('/api/workdrive/upload-target', { cache: 'no-store' })
-        const targetJson = await targetResponse.json()
-        if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare WorkDrive upload')
-        const uploaded = await uploadToWorkDrive(targetJson.data, file, fileName, (percent) => setProgressByMachine((prev) => ({ ...prev, [machineId]: percent })))
-        const registerResponse = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'register_workdrive_video', orderId: order.id, machineId, name: fileName, type: file.type, workdriveFileId: uploaded.fileId, workdriveUrl: uploaded.url }) })
-        const json = await registerResponse.json()
-        if (!registerResponse.ok || !json.ok) throw new Error(json.error || 'Could not save media record')
+        const form = new FormData()
+        form.append('orderId', order.id)
+        form.append('machineId', machineId)
+        form.append('file', file)
+        const json = await uploadWithProgress(form, (percent) => setProgressByMachine((prev) => ({ ...prev, [machineId]: percent })))
         onChanged(json.data.record)
       }
       setProgressByMachine((prev) => ({ ...prev, [machineId]: 100 }))
@@ -85,5 +81,4 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
 }
 
 function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip">{files.map((file) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">View</a></span>)}</div> }
-function uploadToWorkDrive(target: { token: string; parentId: string; uploadUrl: string; dc: string }, file: File, fileName: string, onProgress: (percent: number) => void): Promise<{ fileId: string | null; url: string | null }> { return new Promise((resolve, reject) => { const xhr = new XMLHttpRequest(); xhr.open('POST', target.uploadUrl); xhr.setRequestHeader('Authorization', `Zoho-oauthtoken ${target.token}`); xhr.setRequestHeader('x-filename', fileName); xhr.setRequestHeader('x-parent_id', target.parentId); xhr.setRequestHeader('x-streammode', '1'); xhr.setRequestHeader('content-type', file.type || 'application/octet-stream'); xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }; xhr.onload = () => { try { const json = JSON.parse(xhr.responseText || '{}'); if (xhr.status < 200 || xhr.status >= 300) reject(new Error(json.message || json.errors?.[0]?.title || 'WorkDrive upload failed')); const first = Array.isArray(json.data) ? json.data[0] : json.data; const attrs = first?.attributes || first || {}; const fileId = first?.id || attrs.resource_id || attrs.id || null; const url = attrs.permalink || attrs.download_url || attrs.preview_url || (fileId ? `https://workdrive.zoho.${target.dc}/file/${fileId}` : null); resolve({ fileId, url }) } catch { reject(new Error('WorkDrive returned an invalid response')) } }; xhr.onerror = () => reject(new Error('WorkDrive upload failed: network/CORS error')); xhr.send(file) }) }
-function safeFileName(value: string) { return value.replace(/[\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() || 'Machine' }
+function uploadWithProgress(form: FormData, onProgress: (percent: number) => void): Promise<any> { return new Promise((resolve, reject) => { const xhr = new XMLHttpRequest(); xhr.open('POST', '/api/media-proof/upload'); xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }; xhr.onload = () => { try { const json = JSON.parse(xhr.responseText || '{}'); if (xhr.status < 200 || xhr.status >= 300 || !json.ok) reject(new Error(json.error || 'Upload failed')); else resolve(json) } catch { reject(new Error('Upload failed: server returned an invalid response')) } }; xhr.onerror = () => reject(new Error('Upload failed: network error')); xhr.send(form) }) }
