@@ -17,11 +17,14 @@ export function workDriveConfigured() {
 }
 
 export async function uploadVideoToWorkDrive(fileName: string, dataUrl: string, mimeType: string): Promise<WorkDriveUploadResult> {
+  return uploadBufferToWorkDrive(fileName, dataUrlToBuffer(dataUrl), mimeType)
+}
+
+export async function uploadBufferToWorkDrive(fileName: string, buffer: Buffer, mimeType: string): Promise<WorkDriveUploadResult> {
   const parentId = process.env.ZOHO_WORKDRIVE_PARENT_ID
   if (!parentId) throw new Error('Zoho WorkDrive folder is not configured. Add ZOHO_WORKDRIVE_PARENT_ID in Vercel first.')
 
   const token = await getZohoAccessToken()
-  const buffer = dataUrlToBuffer(dataUrl)
   const response = await fetch(`${uploadDomain()}/workdrive-api/v1/stream/upload`, {
     method: 'POST',
     headers: {
@@ -31,7 +34,7 @@ export async function uploadVideoToWorkDrive(fileName: string, dataUrl: string, 
       'x-streammode': '1',
       'content-type': mimeType || 'application/octet-stream',
     },
-    body: buffer,
+    body: new Uint8Array(buffer),
     cache: 'no-store',
   })
   const data = await response.json().catch(() => ({}))

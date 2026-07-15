@@ -1,6 +1,6 @@
 import type { Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
-import { uploadVideoToWorkDrive } from './workdrive'
+import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 
 export type MediaUpload = {
   id: string
@@ -55,6 +55,22 @@ export async function saveMediaUpload(order: Order, machineId: string, kind: 'ph
   }
   const key = kind === 'photo' ? 'photos' : 'videos'
   current.units[machineId] = { ...unit, [key]: [...unit[key], file] }
+  store.records[order.id] = current
+  await githubWriteJson(MEDIA_PROOF_PATH, store, `Save media proof for ${order.salesOrderNumber}`)
+  return current
+}
+
+
+export async function saveMediaUploadBuffer(order: Order, machineId: string, upload: { name: string; type: string; buffer: Buffer }) {
+  const store = await readMediaProofStore()
+  const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
+  const unit = current.units[machineId] || { photos: [], videos: [] }
+  const machine = order.machines.find((item) => item.id === machineId)
+  const extension = upload.name.includes('.') ? upload.name.split('.').pop() : mimeExtension(upload.type)
+  const generatedName = `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
+  const workDrive = await uploadBufferToWorkDrive(generatedName, upload.buffer, upload.type)
+  const file: MediaUpload = { id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, name: generatedName, type: upload.type, kind: 'video', url: workDrive.url || '', workdriveFileId: workDrive.fileId, workdriveUrl: workDrive.url, uploadedAt: new Date().toISOString() }
+  current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current
   await githubWriteJson(MEDIA_PROOF_PATH, store, `Save media proof for ${order.salesOrderNumber}`)
   return current
