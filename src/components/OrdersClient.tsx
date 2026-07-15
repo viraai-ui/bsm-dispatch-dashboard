@@ -23,7 +23,7 @@ type MachineRecord = {
   machine: MachineUnit
 }
 
-const ORDERS_CACHE_KEY = 'bsm.orders.cache.v1'
+const ORDERS_CACHE_KEY = 'bsm.orders.cache.v2'
 const MACHINE_DB_KEY = 'bsm.machine.database.v1'
 const PROCESSED_ORDERS_KEY = 'bsm.processed.orders.v1'
 
@@ -48,17 +48,18 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       const response = await fetch('/api/orders', { cache: 'no-store' })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync Zoho orders')
-      const nextRows = json.data?.orders || []
+      const nextRows = sanitizeOrders(json.data?.orders || [])
       setRows(nextRows)
       cacheOrders(nextRows)
     } catch (err) {
-      if (showErrors) setError(err instanceof Error ? err.message : 'Could not sync Zoho orders')
+      setRows([])
+      if (showErrors) setError('Failed to fetch data from Zoho')
     } finally {
       setSyncing(false)
     }
   }
 
-  const openOrders = useMemo(() => rows.filter((o) => o.status === 'open' || o.status === 'partially_shipped'), [rows])
+  const openOrders = useMemo(() => sanitizeOrders(rows), [rows])
   const pending = (o: Order) => o.lineItems.length ? o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0) : '—'
   const openOrder = async (order: Order) => {
     setError('')
@@ -129,8 +130,9 @@ function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
 }
 
 function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
-function readCachedOrders() { if (typeof window === 'undefined') return []; try { return JSON.parse(localStorage.getItem(ORDERS_CACHE_KEY) || '[]') as Order[] } catch { return [] } }
-function cacheOrders(orders: Order[]) { try { localStorage.setItem(ORDERS_CACHE_KEY, JSON.stringify(orders)) } catch {} }
+function sanitizeOrders(orders: Order[]) { return orders.filter((o) => o.status === 'open' || o.status === 'partially_shipped').slice(0, 200) }
+function readCachedOrders() { if (typeof window === 'undefined') return []; try { return sanitizeOrders(JSON.parse(localStorage.getItem(ORDERS_CACHE_KEY) || '[]') as Order[]) } catch { return [] } }
+function cacheOrders(orders: Order[]) { try { localStorage.setItem(ORDERS_CACHE_KEY, JSON.stringify(sanitizeOrders(orders))) } catch {} }
 function nextSerialNumber() { const key = 'bsm.serial.counter.v1'; const current = Number(localStorage.getItem(key) || '262700000') + 1; localStorage.setItem(key, String(current)); return String(current) }
 function safeFileName(value: string) { return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() || 'Machine' }
 function saveMachineRecord({ order, machine, qrCode, date }: { order: Order; machine: MachineUnit; qrCode: string; date: string }) { const records = readMachineRecords().filter((r) => r.serialNumber !== machine.serialNumber); const start = new Date(date); const end = new Date(start); end.setFullYear(end.getFullYear() + 1); const warrantyStatus = new Date() <= end ? `Active till ${end.toISOString().slice(0, 10)}` : 'Expired'; records.unshift({ id: machine.serialNumber, serialNumber: machine.serialNumber, qrCode, qrToken: machine.qrToken, salesOrderNumber: order.salesOrderNumber, customerName: order.customerName, customerAddress: order.shippingAddress || '', machineName: machine.itemName, salesperson: order.salesperson || '', dispatchDate: date, qrGenerationDate: date, expectedDeliveryDate: order.deliveryDate, warrantyStatus, order, machine }); localStorage.setItem(MACHINE_DB_KEY, JSON.stringify(records)) }

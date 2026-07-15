@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   try {
     const url = new URL(request.url)
     const full = url.searchParams.get('full') === '1'
-    const orders = await fetchZohoOpenOrders(full ? 100 : 2)
+    const orders = await fetchZohoOpenOrders(full ? 100 : 1)
     return apiOk({ source: 'zoho_inventory_live', rule: 'open_and_partially_shipped_only_closed_excluded', mode: full ? 'full' : 'fast', orders })
   } catch (error) {
     console.error('Zoho sync failed', error)

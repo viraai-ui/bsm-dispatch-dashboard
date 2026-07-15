@@ -3,6 +3,8 @@ import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 const dc = process.env.ZOHO_DC || 'in'
 const accountsDomain = `https://accounts.zoho.${dc}`
 const apiDomain = process.env.ZOHO_API_DOMAIN || `https://www.zohoapis.${dc}`
+let cachedAccessToken: { token: string; expiresAt: number } | null = null
+let pendingAccessToken: Promise<string> | null = null
 
 function hasZohoConfig() {
   return Boolean(process.env.ZOHO_CLIENT_ID && process.env.ZOHO_CLIENT_SECRET && process.env.ZOHO_REFRESH_TOKEN && process.env.ZOHO_ORGANIZATION_ID)
@@ -10,6 +12,13 @@ function hasZohoConfig() {
 
 async function getAccessToken() {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
+  if (cachedAccessToken && cachedAccessToken.expiresAt > Date.now() + 60_000) return cachedAccessToken.token
+  if (pendingAccessToken) return pendingAccessToken
+  pendingAccessToken = refreshAccessToken().finally(() => { pendingAccessToken = null })
+  return pendingAccessToken
+}
+
+async function refreshAccessToken() {
   const body = new URLSearchParams({
     refresh_token: process.env.ZOHO_REFRESH_TOKEN!,
     client_id: process.env.ZOHO_CLIENT_ID!,
@@ -19,7 +28,8 @@ async function getAccessToken() {
   const response = await fetch(`${accountsDomain}/oauth/v2/token`, { method: 'POST', body, cache: 'no-store' })
   const data = await response.json()
   if (!response.ok || !data.access_token) throw new Error(data.error || 'Unable to refresh Zoho token')
-  return data.access_token as string
+  cachedAccessToken = { token: data.access_token as string, expiresAt: Date.now() + Number(data.expires_in || 3600) * 1000 }
+  return cachedAccessToken.token
 }
 
 async function zohoGet(path: string, token: string) {
@@ -33,9 +43,10 @@ async function zohoGet(path: string, token: string) {
 
 const closedStatuses = new Set(['closed', 'void', 'cancelled', 'canceled'])
 function isOpenOrder(raw: any) {
-  const status = String(raw.status || raw.current_sub_status || '').toLowerCase()
+  const status = String(raw.status || raw.current_sub_status || raw.order_status || raw.salesorder_status || '').toLowerCase()
   const shipment = String(raw.shipment_status || '').toLowerCase()
-  return !closedStatuses.has(status) && shipment !== 'shipped'
+  const invoiced = String(raw.invoiced_status || '').toLowerCase()
+  return !closedStatuses.has(status) && shipment !== 'shipped' && invoiced !== 'invoiced'
 }
 
 function readCustomField(source: any, names: string[]) {
@@ -142,7 +153,7 @@ function mapOrder(order: any): Order {
   }
 }
 
-export async function fetchZohoOpenOrders(maxPages = 2): Promise<Order[]> {
+export async function fetchZohoOpenOrders(maxPages = 1): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getAccessToken()
   const allOrders: any[] = []
