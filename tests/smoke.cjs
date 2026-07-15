@@ -25,7 +25,7 @@ async function waitForServer() {
 async function run() {
   await waitForServer()
 
-  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/m/262700001', '/m/qr-262700001', '/packaging-tv', '/qr-serial', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/machine-lookup', '/sync-monitor', '/settings', '/api/orders', '/api/sync/status']) {
+  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/m/262700001', '/m/qr-262700001', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/sync-monitor', '/settings', '/api/orders', '/api/sync/status']) {
     const { response } = await fetchText(path)
     assert.equal(response.status, 200, `${path} should return 200`)
   }

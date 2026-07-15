@@ -4,12 +4,11 @@ import { MobileMenu, type NavItem } from './MobileMenu'
 const nav: NavItem[] = [
   { label: 'Dashboard', href: '/' },
   { label: 'Orders', href: '/orders' },
-  { label: 'QR & Serial', href: '/qr-serial' },
   { label: 'Wooden Packing', href: '/wooden-packing' },
   { label: 'Packaging TV', href: '/packaging-tv' },
   { label: 'Media Proof', href: '/media-proof' },
   { label: 'Vehicle / Dispatch', href: '/vehicle-dispatch' },
-  { label: 'Machine Lookup', href: '/machine-lookup' },
+  { label: 'Database', href: '/database' },
   { label: 'Sync Monitor', href: '/sync-monitor' },
   { label: 'Settings', href: '/settings' },
 ]
