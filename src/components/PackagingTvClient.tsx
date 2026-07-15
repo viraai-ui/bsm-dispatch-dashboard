@@ -44,14 +44,15 @@ export function PackagingTvClient() {
   return <main className="packaging-tv-light">
     <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Packaging TV</h1></div><div className="tabs"><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'Syncing…' : 'Sync Zoho'}</button><Badge tone="green">{orders.length} active orders</Badge></div></header>
     {error && <div className="form-error">{error}</div>}
-    <DispatchSection title="Urgent Dispatch" orders={urgent} state={state} completeOrder={completeOrder} />
-    <hr className="packaging-divider" />
-    <DispatchSection title="Regular Dispatch" orders={regular} state={state} completeOrder={completeOrder} />
+    <div className="packaging-dispatch-grid">
+      <DispatchSection title="Urgent Dispatch" tone="urgent" orders={urgent} state={state} completeOrder={completeOrder} />
+      <DispatchSection title="Regular Dispatch" tone="regular" orders={regular} state={state} completeOrder={completeOrder} />
+    </div>
   </main>
 }
 
-function DispatchSection({ title, orders, state, completeOrder }: { title: string; orders: Order[]; state: PackingState; completeOrder: (order: Order) => void }) {
-  return <section className="packaging-section"><h2>{title}</h2><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} />) : <div className="card packaging-empty">No active orders</div>}</div></section>
+function DispatchSection({ title, tone, orders, state, completeOrder }: { title: string; tone: 'urgent' | 'regular'; orders: Order[]; state: PackingState; completeOrder: (order: Order) => void }) {
+  return <section className={`packaging-section ${tone}`}><div className="packaging-section-head"><h2>{title}</h2><span>{orders.length}</span></div><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} />) : <div className="card packaging-empty">No active orders</div>}</div></section>
 }
 
 function OrderCard({ order, urgent, completeOrder }: { order: Order; urgent: boolean; completeOrder: (order: Order) => void }) {
