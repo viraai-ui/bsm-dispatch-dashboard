@@ -12,6 +12,7 @@ export async function GET(request: Request) {
     const orders = await fetchZohoOpenOrders(full ? 100 : 2)
     return apiOk({ source: 'zoho_inventory_live', rule: 'open_and_partially_shipped_only_closed_excluded', mode: full ? 'full' : 'fast', orders })
   } catch (error) {
-    return apiError(error instanceof Error ? `Zoho sync failed: ${error.message}` : 'Zoho sync failed', 502)
+    console.error('Zoho sync failed', error)
+    return apiError('Failed to fetch data from Zoho', 502)
   }
 }

@@ -42,7 +42,9 @@ export function WoodenPackingClient() {
       setScanning(true)
       await scanWoodenRequirements(openOrders.slice(0, DETAIL_LIMIT))
     } catch (err) {
-      if (showError) setError(err instanceof Error ? err.message : 'Failed to fetch data from Zoho')
+      setRows([])
+      localStorage.removeItem(WOODEN_CACHE_KEY)
+      if (showError) setError('Failed to fetch data from Zoho')
       setSyncing(false)
       setScanning(false)
     }
