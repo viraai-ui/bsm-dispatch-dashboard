@@ -38,8 +38,8 @@ async function run() {
   const invalidGenerate = await fetchText('/api/orders/not-real/generate-serials', { method: 'POST' })
   assert.equal(invalidGenerate.response.status, 404, 'invalid generate serial order should 404')
 
-  const reviewGenerate = await fetchText('/api/orders/so-1002/generate-serials', { method: 'POST' })
-  assert.equal(reviewGenerate.response.status, 409, 'review-required order should block serial generation')
+  const partialGenerate = await fetchText('/api/orders/so-1002/generate-serials', { method: 'POST' })
+  assert.equal(partialGenerate.response.status, 200, 'partially shipped open order can generate next batch serials')
 
   const validGenerate = await fetchText('/api/orders/so-1001/generate-serials', { method: 'POST' })
   assert.equal(validGenerate.response.status, 200, 'valid generate serial endpoint should 200')

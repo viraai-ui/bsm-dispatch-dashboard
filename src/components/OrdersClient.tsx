@@ -1,0 +1,28 @@
+'use client'
+
+import { useMemo, useState } from 'react'
+import { Badge } from '@/components/DashboardShell'
+import type { Order } from '@/types/domain'
+
+export function OrdersClient({ orders }: { orders: Order[] }) {
+  const [active, setActive] = useState<Order | null>(null)
+  const openOrders = useMemo(() => orders.filter((o) => o.status !== 'partially_shipped' || o.lineItems.some((i) => i.pendingQuantity > 0)), [orders])
+  return <>
+    <section className="card"><h2>Zoho Orders</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Pending</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson}</td><td>{o.deliveryDate}</td><td>{o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0)}</td><td><Badge tone={o.status === 'partially_shipped' ? 'amber' : 'blue'}>{o.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></td><td><button className="btn light" onClick={() => setActive(o)}>Open</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{o.deliveryDate}</strong></div><div><span>Pending</span><strong>{o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0)}</strong></div></div><button className="btn light full" onClick={() => setActive(o)}>Open</button></article>)}</div></section>
+    {active && <OrderModal order={active} onClose={() => setActive(null)} />}
+  </>
+}
+
+function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
+  const [selected, setSelected] = useState(() => new Set(order.machines.filter((m) => m.selectedForBatch).map((m) => m.id)))
+  const toggle = (id: string) => setSelected((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next })
+  const selectedCount = selected.size
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={order.status === 'partially_shipped' ? 'amber' : 'blue'}>{order.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
+    <div className="grid three details-grid"><Info k="Customer" v={order.customerName} /><Info k="Phone" v={order.customerPhone ?? '—'} /><Info k="Email" v={order.customerEmail ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Delivery" v={order.deliveryDate} /><Info k="Address" v={order.shippingAddress ?? '—'} /></div>
+    <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
+    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{order.machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber || 'Serial pending'}</small></span><Badge tone={m.status === 'Not Generated' ? 'amber' : m.status === 'Dispatched' ? 'green' : 'blue'}>{m.status}</Badge></label>)}</div></section>
+    <section className="modal-actions"><button className="btn red">Generate QR for {selectedCount}</button><button className="btn light">Print QR</button><button className="btn">Process Order</button></section>
+  </section></div>
+}
+
+function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
