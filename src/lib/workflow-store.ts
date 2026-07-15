@@ -44,14 +44,26 @@ async function githubRequest(path: string, init: RequestInit = {}) {
   return data
 }
 
-async function readStoreWithSha(): Promise<{ store: Store; sha?: string }> {
+export async function githubReadJson<T>(path: string, fallback: T): Promise<{ data: T; sha?: string }> {
   try {
-    const data = await githubRequest(`/contents/${STORE_PATH}`)
+    const data = await githubRequest(`/contents/${path}`)
     const json = Buffer.from(data.content || '', 'base64').toString('utf8')
-    return { store: JSON.parse(json || '{"orders":{}}'), sha: data.sha }
+    return { data: JSON.parse(json || JSON.stringify(fallback)), sha: data.sha }
   } catch (error) {
-    return { store: { orders: {} } }
+    return { data: fallback }
   }
+}
+
+export async function githubWriteJson<T>(path: string, data: T, message: string) {
+  const current = await githubReadJson<T>(path, data)
+  const body: Record<string, string> = { message, content: Buffer.from(JSON.stringify(data, null, 2)).toString('base64') }
+  if (current.sha) body.sha = current.sha
+  await githubRequest(`/contents/${path}`, { method: 'PUT', body: JSON.stringify(body) })
+}
+
+async function readStoreWithSha(): Promise<{ store: Store; sha?: string }> {
+  const result = await githubReadJson<Store>(STORE_PATH, { orders: {} })
+  return { store: result.data, sha: result.sha }
 }
 
 async function writeStore(store: Store, sha?: string) {
