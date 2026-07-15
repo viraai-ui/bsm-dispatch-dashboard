@@ -123,6 +123,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .unit-card input { width: 18px; min-height: 18px; }
 .unit-card span { display: grid; gap: 2px; }
 .unit-card em, .unit-card small { color: var(--muted); font-style: normal; font-weight: 700; }
+.unit-qr { width: 132px; height: 132px; margin-top: 10px; border: 10px solid #fff; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 12px 24px rgba(15,23,42,.08); background: #fff; }
 .modal-actions { position: sticky; bottom: -20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; padding-top: 16px; margin-top: 18px; background: linear-gradient(180deg, rgba(255,255,255,.72), #fff 42%); }
 
 @keyframes drawerIn { from { transform: translateX(18px); opacity: .55; } to { transform: translateX(0); opacity: 1; } }

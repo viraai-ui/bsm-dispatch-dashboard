@@ -82,6 +82,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
 function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
   const [selected, setSelected] = useState(() => new Set(order.machines.filter((m) => m.selectedForBatch).map((m) => m.id)))
   const [machines, setMachines] = useState(order.machines)
+  const [qrCodes, setQrCodes] = useState<Record<string, string>>({})
   const [generating, setGenerating] = useState(false)
   const toggle = (id: string) => setSelected((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next })
   const selectedCount = selected.size
@@ -91,25 +92,28 @@ function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
     setGenerating(true)
     const date = new Date().toISOString().slice(0, 10)
     const updated: MachineUnit[] = []
+    const nextQrCodes: Record<string, string> = { ...qrCodes }
     for (const machine of machines) {
       if (!selected.has(machine.id)) { updated.push(machine); continue }
       const serialNumber = machine.serialNumber || nextSerialNumber()
       const qrToken = machine.qrToken || serialNumber
-      const qrPayload = `${window.location.origin}/m/${encodeURIComponent(qrToken)}`
+      const qrPayload = buildQrPayload({ order, machine: { ...machine, serialNumber, qrToken }, date })
       const qrCode = await QRCode.toDataURL(qrPayload, { margin: 1, width: 480 })
       const nextMachine = { ...machine, serialNumber, qrToken, status: 'QR Generated' as const, warrantyStart: date }
       updated.push(nextMachine)
+      nextQrCodes[machine.id] = qrCode
       saveMachineRecord({ order, machine: nextMachine, qrCode, date })
-      downloadPdf(`${safeFileName(machine.itemName)} - ${serialNumber}.pdf`, buildQrPdf({ order, machine: nextMachine, qrCode, date }))
+      downloadDataUrl(`${safeFileName(machine.itemName)} - ${serialNumber}.png`, qrCode)
     }
     setMachines(updated)
+    setQrCodes(nextQrCodes)
     setGenerating(false)
   }
 
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={order.status === 'partially_shipped' ? 'amber' : 'blue'}>{order.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={order.deliveryDate} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
-    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber || 'Serial pending'}</small></span><Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'View QR' : 'Not Generated'}</Badge></label>)}</div></section>
+    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small>{qrCodes[m.id] && <img className="unit-qr" src={qrCodes[m.id]} alt={`QR for ${m.serialNumber}`} />}</span><Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'View QR' : 'Not Generated'}</Badge></label>)}</div></section>
     <section className="modal-actions"><button className="btn red" disabled={!selectedCount || generating} onClick={generateSelected}>{generating ? 'Generating…' : `Generate QR & Serial for ${selectedCount}`}</button><button className="btn">Process Order</button></section>
   </section></div>
 }
@@ -121,5 +125,5 @@ function nextSerialNumber() { const key = 'bsm.serial.counter.v1'; const current
 function safeFileName(value: string) { return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() || 'Machine' }
 function saveMachineRecord({ order, machine, qrCode, date }: { order: Order; machine: MachineUnit; qrCode: string; date: string }) { const records = readMachineRecords().filter((r) => r.serialNumber !== machine.serialNumber); const start = new Date(date); const end = new Date(start); end.setFullYear(end.getFullYear() + 1); const warrantyStatus = new Date() <= end ? `Active till ${end.toISOString().slice(0, 10)}` : 'Expired'; records.unshift({ id: machine.serialNumber, serialNumber: machine.serialNumber, qrCode, qrToken: machine.qrToken, salesOrderNumber: order.salesOrderNumber, customerName: order.customerName, customerAddress: order.shippingAddress || '', machineName: machine.itemName, salesperson: order.salesperson || '', dispatchDate: date, qrGenerationDate: date, expectedDeliveryDate: order.deliveryDate, warrantyStatus, order, machine }); localStorage.setItem(MACHINE_DB_KEY, JSON.stringify(records)) }
 function readMachineRecords(): MachineRecord[] { try { return JSON.parse(localStorage.getItem(MACHINE_DB_KEY) || '[]') as MachineRecord[] } catch { return [] } }
-function downloadPdf(fileName: string, content: string) { const blob = new Blob([content], { type: 'application/pdf' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = fileName; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url) }
-function buildQrPdf({ order, machine, qrCode, date }: { order: Order; machine: MachineUnit; qrCode: string; date: string }) { const text = [`BSM Machine QR`, `Serial: ${machine.serialNumber}`, `Machine: ${machine.itemName}`, `SO: ${order.salesOrderNumber}`, `Customer: ${order.customerName}`, `Generated: ${date}`].join('\\n'); return `%PDF-1.3\n1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj\n2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj\n3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 420 595] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj\n4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj\n5 0 obj << /Length 260 >> stream\nBT /F1 18 Tf 40 540 Td (BSM Machine QR) Tj /F1 12 Tf 0 -38 Td (Serial: ${machine.serialNumber}) Tj 0 -22 Td (Machine: ${machine.itemName.replace(/[()]/g, '')}) Tj 0 -22 Td (SO: ${order.salesOrderNumber}) Tj 0 -22 Td (Customer: ${order.customerName.replace(/[()]/g, '')}) Tj 0 -22 Td (Generated: ${date}) Tj 0 -42 Td (QR: ${machine.qrToken}) Tj ET\nendstream endobj\nxref\n0 6\n0000000000 65535 f \n0000000010 00000 n \n0000000059 00000 n \n0000000116 00000 n \n0000000266 00000 n \n0000000336 00000 n \ntrailer << /Root 1 0 R /Size 6 >>\nstartxref\n646\n%%EOF\n` }
+function downloadDataUrl(fileName: string, dataUrl: string) { const a = document.createElement('a'); a.href = dataUrl; a.download = fileName; document.body.appendChild(a); a.click(); a.remove() }
+function buildQrPayload({ order, machine, date }: { order: Order; machine: MachineUnit; date: string }) { return [`Sales Order Number: ${order.salesOrderNumber}`, `Customer Name: ${order.customerName}`, `Customer Address: ${order.shippingAddress || '—'}`, `Machine Name: ${machine.itemName}`, `Machine Serial Number: ${machine.serialNumber}`, `Date: ${date}`].join('\n') }
