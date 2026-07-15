@@ -11,6 +11,12 @@ async function fetchText(path, options) {
   return { response, text: await response.text() }
 }
 
+async function login(login = 'admin@bsmindia.com', password = '1231') {
+  const response = await fetch(base + '/api/auth/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ login, password }) })
+  assert.equal(response.status, 200, 'login should return 200')
+  return response.headers.get('set-cookie').split(';')[0]
+}
+
 async function waitForServer() {
   for (let i = 0; i < 30; i += 1) {
     try {
@@ -24,9 +30,10 @@ async function waitForServer() {
 
 async function run() {
   await waitForServer()
+  const cookie = await login()
 
   for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/m/262700001', '/m/qr-262700001', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/sync-monitor', '/settings', '/api/orders', '/api/sync/status']) {
-    const { response } = await fetchText(path)
+    const { response } = await fetchText(path, { headers: { cookie } })
     assert.equal(response.status, 200, `${path} should return 200`)
   }
 
@@ -35,13 +42,13 @@ async function run() {
     assert.equal(response.status, 404, `${path} should return 404`)
   }
 
-  const invalidGenerate = await fetchText('/api/orders/not-real/generate-serials', { method: 'POST' })
+  const invalidGenerate = await fetchText('/api/orders/not-real/generate-serials', { method: 'POST', headers: { cookie } })
   assert.equal(invalidGenerate.response.status, 404, 'invalid generate serial order should 404')
 
-  const partialGenerate = await fetchText('/api/orders/so-1002/generate-serials', { method: 'POST' })
+  const partialGenerate = await fetchText('/api/orders/so-1002/generate-serials', { method: 'POST', headers: { cookie } })
   assert.equal(partialGenerate.response.status, 200, 'partially shipped open order can generate next batch serials')
 
-  const validGenerate = await fetchText('/api/orders/so-1001/generate-serials', { method: 'POST' })
+  const validGenerate = await fetchText('/api/orders/so-1001/generate-serials', { method: 'POST', headers: { cookie } })
   assert.equal(validGenerate.response.status, 200, 'valid generate serial endpoint should 200')
   assert.match(validGenerate.text, /"mock":true/, 'mock action should declare mock mode')
 

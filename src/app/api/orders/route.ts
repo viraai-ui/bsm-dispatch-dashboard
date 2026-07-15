@@ -1,8 +1,11 @@
 import { apiError, apiOk } from '@/lib/api'
 import { orders as mockOrders } from '@/lib/mock-data'
 import { fetchZohoOpenOrders, zohoConfigured } from '@/lib/zoho'
+import { requireUser } from '@/lib/auth'
 
 export async function GET(request: Request) {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   if (!zohoConfigured()) {
     return apiOk({ source: 'mock_open_orders_until_zoho_credentials', orders: mockOrders })
   }

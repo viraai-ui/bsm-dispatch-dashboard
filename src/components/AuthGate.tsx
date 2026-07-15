@@ -1,68 +1,84 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import type { SafeUser } from '@/lib/auth'
 
-type Role = 'Admin' | 'Operations Manager' | 'Dispatch Team'
-type User = { id: string; name: string; email: string; role: Role; active: boolean }
+type AuthContextValue = { user: SafeUser; logout: () => Promise<void> }
+const AuthContext = createContext<AuthContextValue | null>(null)
+const dispatchOnlyPath = '/packaging-tv'
 
-const seedUsers: User[] = [
-  { id: 'u-admin', name: 'Admin User', email: 'admin@bsmindia.com', role: 'Admin', active: true },
-  { id: 'u-ops', name: 'Operations Manager', email: 'ops@bsmindia.com', role: 'Operations Manager', active: true },
-  { id: 'u-dispatch', name: 'Dispatch Team', email: 'dispatch@bsmindia.com', role: 'Dispatch Team', active: true },
-]
-
-export function getCurrentUser() {
-  if (typeof window === 'undefined') return null
-  try { return JSON.parse(localStorage.getItem('bsm-dispatch-session') || 'null') as User | null } catch { return null }
+export function useAuth() {
+  const value = useContext(AuthContext)
+  if (!value) throw new Error('useAuth must be used inside AuthGate')
+  return value
 }
 
 export function AuthGate({ children }: { children: React.ReactNode }) {
-  const [session, setSession] = useState<User | null>(null)
+  const [user, setUser] = useState<SafeUser | null>(null)
   const [ready, setReady] = useState(false)
-  const [email, setEmail] = useState('admin@bsmindia.com')
+  const [login, setLogin] = useState('admin@bsmindia.com')
   const [password, setPassword] = useState('1231')
   const [error, setError] = useState('')
-
-  const users = useMemo(() => {
-    if (typeof window === 'undefined') return seedUsers
-    const stored = localStorage.getItem('bsm-dispatch-users')
-    if (!stored) localStorage.setItem('bsm-dispatch-users', JSON.stringify(seedUsers))
-    return stored ? JSON.parse(stored) as User[] : seedUsers
-  }, [ready])
+  const [submitting, setSubmitting] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
-    setSession(getCurrentUser())
-    setReady(true)
+    void refreshSession()
   }, [])
 
-  const login = (event: React.FormEvent) => {
-    event.preventDefault()
-    const user = users.find((u) => u.email.toLowerCase() === email.trim().toLowerCase() && u.active)
-    if (!user || password !== '1231') {
-      setError('Invalid login.')
-      return
+  useEffect(() => {
+    if (!user) return
+    if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) router.replace(dispatchOnlyPath)
+  }, [pathname, router, user])
+
+  async function refreshSession() {
+    try {
+      const response = await fetch('/api/auth/me', { cache: 'no-store' })
+      const json = await response.json().catch(() => ({}))
+      setUser(response.ok && json.ok ? json.user : null)
+    } finally {
+      setReady(true)
     }
-    localStorage.setItem('bsm-dispatch-session', JSON.stringify(user))
-    window.dispatchEvent(new Event('bsm-session-changed'))
-    setSession(user)
+  }
+
+  async function submitLogin(event: React.FormEvent) {
+    event.preventDefault()
+    setSubmitting(true); setError('')
+    try {
+      const response = await fetch('/api/auth/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ login, password }) })
+      const json = await response.json().catch(() => ({}))
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Invalid login')
+      setUser(json.user)
+      router.replace(json.user.role === 'Dispatch' ? dispatchOnlyPath : '/')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Invalid login')
+    } finally { setSubmitting(false) }
+  }
+
+  async function logout() {
+    await fetch('/api/auth/logout', { method: 'POST' })
+    setUser(null)
+    router.replace('/')
   }
 
   if (!ready) return null
-  if (!session) {
-    return (
-      <main className="login-screen">
-        <section className="login-card card">
-          <div className="logo big">BSM</div>
-          <h1 className="h1">Login</h1>
-          <form className="form-grid" onSubmit={login}>
-            <label>Email<select value={email} onChange={(e) => setEmail(e.target.value)}>{users.map((u) => <option value={u.email} key={u.id}>{u.email} · {u.role}</option>)}</select></label>
-            <label>Password<input value={password} onChange={(e) => setPassword(e.target.value)} type="password" /></label>
-            {error && <div className="form-error">{error}</div>}
-            <button className="btn red" type="submit">Login</button>
-          </form>
-        </section>
-      </main>
-    )
+  if (!user) {
+    return <main className="login-screen">
+      <section className="login-card card">
+        <div className="logo big">BSM</div>
+        <h1 className="h1">Login</h1>
+        <form className="form-grid" onSubmit={submitLogin}>
+          <label>Email or Username<input value={login} onChange={(e) => setLogin(e.target.value)} autoComplete="username" /></label>
+          <label>Password<input value={password} onChange={(e) => setPassword(e.target.value)} type="password" autoComplete="current-password" /></label>
+          {error && <div className="form-error">{error}</div>}
+          <button className="btn red" type="submit" disabled={submitting}>{submitting ? 'Logging in…' : 'Login'}</button>
+        </form>
+      </section>
+    </main>
   }
-  return <>{children}</>
+
+  if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) return null
+  return <AuthContext.Provider value={{ user, logout }}>{children}</AuthContext.Provider>
 }

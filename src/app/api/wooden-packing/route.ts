@@ -1,16 +1,21 @@
 import { apiOk } from '@/lib/api'
 import { fetchZohoOpenOrders, fetchZohoOrderDetail } from '@/lib/zoho'
 import { githubReadJson, githubWriteJson } from '@/lib/workflow-store'
+import { requireUser } from '@/lib/auth'
 
 type WoodenQueue = { lastSuccessAt?: string; items: { id: string; salesOrderId: string; salesOrderNumber: string; customerName: string; itemName: string; requiredQuantity: number }[] }
 const PATH = 'data/wooden-packing-store.json'
 
 export async function GET() {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   const { data } = await githubReadJson<WoodenQueue>(PATH, { items: [] })
   return apiOk({ queue: data })
 }
 
 export async function POST() {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   try {
     const summaries = await fetchZohoOpenOrders(100)
     const items = [] as WoodenQueue['items']

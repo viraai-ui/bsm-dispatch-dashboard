@@ -1,14 +1,19 @@
 import { apiError, apiOk } from '@/lib/api'
+import { requireUser } from '@/lib/auth'
 import { getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import type { Order } from '@/types/domain'
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   const { id } = await params
   const workflow = await getOrderWorkflow(id)
   return apiOk({ workflow })
 }
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   try {
     const { id } = await params
     const body = await request.json()

@@ -1,32 +1,88 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useAuth } from './AuthGate'
+import type { AppRole, SafeUser } from '@/lib/auth'
 
-type Role = 'Admin' | 'Operations Manager' | 'Dispatch Team'
-type User = { id: string; name: string; email: string; role: Role; active: boolean }
-const roles: Role[] = ['Admin', 'Operations Manager', 'Dispatch Team']
-const seed: User[] = [
-  { id: 'u-admin', name: 'Admin User', email: 'admin@bsmindia.com', role: 'Admin', active: true },
-  { id: 'u-ops', name: 'Operations Manager', email: 'ops@bsmindia.com', role: 'Operations Manager', active: true },
-  { id: 'u-dispatch', name: 'Dispatch Team', email: 'dispatch@bsmindia.com', role: 'Dispatch Team', active: true },
-]
+const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch']
+type Draft = { name: string; email: string; username: string; role: AppRole; password: string; active: boolean }
+const emptyDraft: Draft = { name: '', email: '', username: '', role: 'Dispatch', password: '', active: true }
 
 export function SettingsClient() {
-  const [users, setUsers] = useState<User[]>(seed)
-  const [profile, setProfile] = useState<User>(seed[0])
-  const [draft, setDraft] = useState({ name: '', email: '', role: 'Dispatch Team' as Role })
-  useEffect(() => { const stored = JSON.parse(localStorage.getItem('bsm-dispatch-users') || 'null') || seed; const session = JSON.parse(localStorage.getItem('bsm-dispatch-session') || 'null') || stored[0]; setUsers(stored); setProfile(session) }, [])
-  const persist = (next: User[]) => { setUsers(next); localStorage.setItem('bsm-dispatch-users', JSON.stringify(next)) }
-  const addUser = () => { if (!draft.name || !draft.email) return; persist([...users, { id: `u-${Date.now()}`, ...draft, active: true }]); setDraft({ name: '', email: '', role: 'Dispatch Team' }) }
-  const deleteUser = (id: string) => persist(users.filter((u) => u.id !== id || u.id === profile.id))
-  const saveProfile = () => { localStorage.setItem('bsm-dispatch-session', JSON.stringify(profile)); persist(users.map((u) => u.id === profile.id ? profile : u)) }
-  const logout = () => { localStorage.removeItem('bsm-dispatch-session'); location.href = '/' }
+  const { user, logout } = useAuth()
+  const [users, setUsers] = useState<SafeUser[]>([])
+  const [draft, setDraft] = useState<Draft>(emptyDraft)
+  const [passwords, setPasswords] = useState<Record<string, string>>({})
+  const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  const admin = user.role === 'Admin'
+
+  useEffect(() => { if (admin) void loadUsers() }, [admin])
+
+  async function loadUsers() {
+    setLoading(true); setError('')
+    try {
+      const response = await fetch('/api/users', { cache: 'no-store' })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load users')
+      setUsers(json.users)
+    } catch (err) { setError(err instanceof Error ? err.message : 'Could not load users') }
+    finally { setLoading(false) }
+  }
+
+  async function addUser() {
+    setError(''); setMessage('')
+    const response = await fetch('/api/users', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(draft) })
+    const json = await response.json()
+    if (!response.ok || !json.ok) { setError(json.error || 'Could not create user'); return }
+    setMessage('User created securely.'); setDraft(emptyDraft); await loadUsers()
+  }
+
+  async function patchUser(id: string, patch: Partial<SafeUser> & { password?: string }) {
+    setError(''); setMessage('')
+    const response = await fetch('/api/users', { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id, ...patch }) })
+    const json = await response.json()
+    if (!response.ok || !json.ok) { setError(json.error || 'Could not update user'); return }
+    setMessage('User updated.'); setPasswords((prev) => ({ ...prev, [id]: '' })); await loadUsers()
+  }
+
+  async function deactivateUser(id: string) {
+    if (!window.confirm('Deactivate this user? Historical records will be preserved.')) return
+    setError(''); setMessage('')
+    const response = await fetch(`/api/users?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
+    const json = await response.json()
+    if (!response.ok || !json.ok) { setError(json.error || 'Could not deactivate user'); return }
+    setMessage('User deactivated.'); await loadUsers()
+  }
+
   return <>
     <header className="top compact-top"><div><h1 className="h1">Settings</h1></div><button className="btn light" onClick={logout}>Logout</button></header>
     <section className="grid two">
-      <div className="card"><h2>Profile</h2><div className="form-grid"><label>Name<input value={profile.name} onChange={(e) => setProfile({ ...profile, name: e.target.value })} /></label><label>Email<input value={profile.email} onChange={(e) => setProfile({ ...profile, email: e.target.value })} /></label><label>Role<select value={profile.role} onChange={(e) => setProfile({ ...profile, role: e.target.value as Role })}>{roles.map((r) => <option key={r}>{r}</option>)}</select></label><button className="btn red" onClick={saveProfile}>Save</button></div></div>
+      <div className="card"><h2>Profile</h2><div className="form-grid"><label>Name<input value={user.name} readOnly /></label><label>Email<input value={user.email} readOnly /></label><label>Role<input value={user.role} readOnly /></label></div></div>
       <div className="card"><h2>Zoho Sync</h2><div className="form-grid"><label>Webhook URL<input value="/api/webhooks/zoho/sales-order" readOnly /></label><label>Frequency<select defaultValue="15"><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option></select></label><label>Conflicts<select defaultValue="review"><option value="review">Admin review</option><option value="notify">Notify manager</option></select></label><button className="btn light">Save</button></div></div>
     </section>
-    <section className="card" style={{ marginTop: 16 }}><h2>Users</h2><div className="form-grid user-add"><input placeholder="Name" value={draft.name} onChange={(e) => setDraft({ ...draft, name: e.target.value })} /><input placeholder="Email" value={draft.email} onChange={(e) => setDraft({ ...draft, email: e.target.value })} /><select value={draft.role} onChange={(e) => setDraft({ ...draft, role: e.target.value as Role })}>{roles.map((r) => <option key={r}>{r}</option>)}</select><button className="btn red" onClick={addUser}>Add</button></div><div className="machine user-list">{users.map((u) => <div className="machine-row" key={u.id}><span><strong>{u.name}</strong><br /><small className="muted">{u.email}</small></span><span className={`badge ${u.role === 'Admin' ? 'red' : u.role === 'Operations Manager' ? 'blue' : 'green'}`}>{u.role}</span><button className="btn light" disabled={u.id === profile.id} onClick={() => deleteUser(u.id)}>Delete</button></div>)}</div></section>
+    {admin && <section className="card user-management-card" style={{ marginTop: 16 }}>
+      <div className="modal-section-title"><h2>User Management</h2><button className="btn light" onClick={loadUsers} disabled={loading}>{loading ? 'Loading…' : 'Refresh'}</button></div>
+      {message && <div className="form-success">{message}</div>}{error && <div className="form-error">{error}</div>}
+      <div className="form-grid user-add">
+        <input placeholder="Name" value={draft.name} onChange={(e) => setDraft({ ...draft, name: e.target.value })} />
+        <input placeholder="Email" value={draft.email} onChange={(e) => setDraft({ ...draft, email: e.target.value })} />
+        <input placeholder="Username" value={draft.username} onChange={(e) => setDraft({ ...draft, username: e.target.value })} />
+        <select value={draft.role} onChange={(e) => setDraft({ ...draft, role: e.target.value as AppRole })}>{roles.map((r) => <option key={r}>{r}</option>)}</select>
+        <input placeholder="Password" type="password" value={draft.password} onChange={(e) => setDraft({ ...draft, password: e.target.value })} />
+        <button className="btn red" onClick={addUser}>Create User</button>
+      </div>
+      <div className="user-admin-list">{users.map((u) => <div className="user-admin-row" key={u.id}>
+        <input value={u.name} onChange={(e) => setUsers((prev) => prev.map((item) => item.id === u.id ? { ...item, name: e.target.value } : item))} />
+        <input value={u.email} onChange={(e) => setUsers((prev) => prev.map((item) => item.id === u.id ? { ...item, email: e.target.value } : item))} />
+        <input value={u.username} onChange={(e) => setUsers((prev) => prev.map((item) => item.id === u.id ? { ...item, username: e.target.value } : item))} />
+        <select value={u.role} onChange={(e) => patchUser(u.id, { role: e.target.value as AppRole })}>{roles.map((r) => <option key={r}>{r}</option>)}</select>
+        <select value={u.active ? 'active' : 'inactive'} onChange={(e) => patchUser(u.id, { active: e.target.value === 'active' })}><option value="active">Active</option><option value="inactive">Inactive</option></select>
+        <input placeholder="New password" type="password" value={passwords[u.id] || ''} onChange={(e) => setPasswords((prev) => ({ ...prev, [u.id]: e.target.value }))} />
+        <button className="btn light" onClick={() => patchUser(u.id, { name: u.name, email: u.email, username: u.username, role: u.role, active: u.active, password: passwords[u.id] || undefined })}>Save</button>
+        <button className="btn light" onClick={() => deactivateUser(u.id)} disabled={u.id === user.id}>Deactivate</button>
+      </div>)}</div>
+    </section>}
   </>
 }

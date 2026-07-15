@@ -1,4 +1,5 @@
 import { apiOk } from '@/lib/api'
+import { requireUser } from '@/lib/auth'
 import { githubReadJson, githubWriteJson, listProcessedOrders } from '@/lib/workflow-store'
 import type { Order } from '@/types/domain'
 
@@ -8,6 +9,8 @@ const COMPLETED_PATH = 'data/packaging-completed-store.json'
 const MEDIA_PATH = 'data/media-proof-store.json'
 
 export async function GET() {
+  const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
+  if (!auth.ok) return auth.response
   const processed = await listProcessedOrders()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const orders = processed.map((item) => item.processedOrder).filter((order): order is Order => Boolean(order)).filter((order) => !completed.completed[order.id])
@@ -15,6 +18,8 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
+  if (!auth.ok) return auth.response
   const body = await request.json()
   const order = body.order as Order
   if (!order?.id) return Response.json({ ok: false, error: 'Missing order' }, { status: 400 })

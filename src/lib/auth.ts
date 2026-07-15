@@ -1,0 +1,124 @@
+import bcrypt from 'bcryptjs'
+import { SignJWT, jwtVerify } from 'jose'
+import { cookies } from 'next/headers'
+import { githubReadJson, githubWriteJson } from './workflow-store'
+
+export type AppRole = 'Admin' | 'Operations' | 'Dispatch'
+export type AppUser = {
+  id: string
+  name: string
+  email: string
+  username: string
+  role: AppRole
+  active: boolean
+  passwordHash: string
+  createdAt: string
+  updatedAt: string
+}
+export type SafeUser = Omit<AppUser, 'passwordHash'>
+type UserStore = { users: AppUser[] }
+
+const USERS_PATH = 'data/auth-users-store.json'
+const SESSION_COOKIE = 'bsm_dispatch_session'
+const SESSION_DAYS = 7
+const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch']
+
+function secretKey() {
+  const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
+  return new TextEncoder().encode(secret)
+}
+
+async function seedUsers(): Promise<AppUser[]> {
+  const now = new Date().toISOString()
+  const passwordHash = await bcrypt.hash('1231', 10)
+  return [
+    { id: 'u-admin', name: 'Admin', email: 'admin@bsmindia.com', username: 'admin', role: 'Admin', active: true, passwordHash, createdAt: now, updatedAt: now },
+    { id: 'u-ops', name: 'Operations', email: 'ops@bsmindia.com', username: 'operations', role: 'Operations', active: true, passwordHash, createdAt: now, updatedAt: now },
+    { id: 'u-dispatch', name: 'Dispatch', email: 'dispatch@bsmindia.com', username: 'dispatch', role: 'Dispatch', active: true, passwordHash, createdAt: now, updatedAt: now },
+  ]
+}
+
+export function safeUser(user: AppUser): SafeUser {
+  const { passwordHash: _passwordHash, ...safe } = user
+  return safe
+}
+
+export function isAdmin(role?: AppRole) { return role === 'Admin' }
+export function isFullAccess(role?: AppRole) { return role === 'Admin' || role === 'Operations' }
+export function isKnownRole(role: string): role is AppRole { return roles.includes(role as AppRole) }
+
+export async function getUserStore() {
+  const fallback = { users: await seedUsers() }
+  const { data } = await githubReadJson<UserStore>(USERS_PATH, fallback)
+  if (!data.users?.length) {
+    await githubWriteJson(USERS_PATH, fallback, 'Initialize dispatch users')
+    return fallback
+  }
+  return data
+}
+
+export async function saveUserStore(store: UserStore) {
+  await githubWriteJson(USERS_PATH, store, 'Update dispatch users')
+}
+
+export async function findUserByLogin(login: string) {
+  const normalized = login.trim().toLowerCase()
+  const { users } = await getUserStore()
+  return users.find((user) => user.email.toLowerCase() === normalized || user.username.toLowerCase() === normalized) || null
+}
+
+export async function authenticate(login: string, password: string) {
+  const user = await findUserByLogin(login)
+  if (!user || !user.active) return null
+  const ok = await bcrypt.compare(password, user.passwordHash)
+  return ok ? user : null
+}
+
+export async function createSessionToken(user: AppUser) {
+  return new SignJWT({ role: user.role, email: user.email })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setSubject(user.id)
+    .setIssuedAt()
+    .setExpirationTime(`${SESSION_DAYS}d`)
+    .sign(secretKey())
+}
+
+export async function setSessionCookie(user: AppUser) {
+  const token = await createSessionToken(user)
+  const jar = await cookies()
+  jar.set(SESSION_COOKIE, token, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: SESSION_DAYS * 24 * 60 * 60 })
+}
+
+export async function clearSessionCookie() {
+  const jar = await cookies()
+  jar.set(SESSION_COOKIE, '', { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 0 })
+}
+
+export async function getSessionUser() {
+  const jar = await cookies()
+  const token = jar.get(SESSION_COOKIE)?.value
+  if (!token) return null
+  try {
+    const { payload } = await jwtVerify(token, secretKey())
+    const userId = String(payload.sub || '')
+    const { users } = await getUserStore()
+    const user = users.find((item) => item.id === userId)
+    return user?.active ? user : null
+  } catch {
+    return null
+  }
+}
+
+export async function requireUser(allowed?: AppRole[]) {
+  const user = await getSessionUser()
+  if (!user) return { ok: false as const, response: Response.json({ ok: false, error: 'Unauthorized' }, { status: 401 }) }
+  if (allowed?.length && !allowed.includes(user.role)) return { ok: false as const, response: Response.json({ ok: false, error: 'Forbidden' }, { status: 403 }) }
+  return { ok: true as const, user }
+}
+
+export async function hashPassword(password: string) {
+  return bcrypt.hash(password, 10)
+}
+
+export const SESSION_COOKIE_NAME = SESSION_COOKIE
+export const APP_ROLES = roles

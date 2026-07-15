@@ -2,8 +2,11 @@ import type { NextRequest } from 'next/server'
 import { apiError, apiOk } from '@/lib/api'
 import { orders } from '@/lib/mock-data'
 import { formatSerial, getFinancialYearPrefix } from '@/lib/rules'
+import { requireUser } from '@/lib/auth'
 
 export async function POST(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   const { id } = await params
   const order = orders.find((item) => item.id === id)
   if (!order) return apiError('Order not found', 404)
