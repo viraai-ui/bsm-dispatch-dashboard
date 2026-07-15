@@ -5,14 +5,14 @@ import { Badge } from '@/components/DashboardShell'
 
 const WOODEN_CACHE_KEY = 'bsm.wooden.requirements.v2'
 type WoodenItem = { id: string; salesOrderNumber: string; customerName: string; itemName: string; requiredQuantity: number }
-type WoodenQueue = { lastSuccessAt?: string; items: WoodenItem[] }
+type WoodenQueue = { lastSuccessAt?: string | null; items: WoodenItem[] }
 
-export function WoodenPackingClient() {
-  const [queue, setQueue] = useState<WoodenQueue>({ items: [] })
+export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQueue?: WoodenQueue }) {
+  const [queue, setQueue] = useState<WoodenQueue>(initialQueue)
   const [syncing, setSyncing] = useState(false)
   const [error, setError] = useState('')
 
-  useEffect(() => { setQueue(readCache()); void loadSaved(); void syncZoho(false) }, [])
+  useEffect(() => { const cached = readCache(); if (cached.items.length > initialQueue.items.length) setQueue(cached); void loadSaved() }, [initialQueue.items.length])
   const rows = queue.items || []
   const grouped = useMemo(() => {
     const map = new Map<string, WoodenItem[]>()

@@ -1,3 +1,10 @@
 import { DashboardShell } from '@/components/DashboardShell'
 import { WoodenPackingClient } from '@/components/WoodenPackingClient'
-export default function WoodenPackingPage() { return <DashboardShell active="Wooden Packing"><WoodenPackingClient /></DashboardShell> }
+import { buildWoodenPackingQueue } from '@/lib/wooden-packing'
+
+export const dynamic = 'force-dynamic'
+
+export default async function WoodenPackingPage() {
+  const queue = await buildWoodenPackingQueue()
+  return <DashboardShell active="Wooden Packing"><WoodenPackingClient initialQueue={queue} /></DashboardShell>
+}

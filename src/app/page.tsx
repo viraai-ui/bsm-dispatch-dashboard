@@ -20,7 +20,7 @@ export default async function Home() {
   const mediaIds = new Set(Object.keys(media.orders || {}))
   const qrGenerated = processed.filter((item) => item.status === 'qr_generated' || item.status === 'processed').length
   const partiallyGenerated = processed.filter((item) => item.status === 'partially_generated').length
-  const pendingWooden = orders.reduce((sum, order) => sum + order.lineItems.filter((item) => item.woodenPackingRequired && item.pendingQuantity > 0).length, 0)
+  const pendingWooden = orders.reduce((sum, order) => sum + order.lineItems.filter((item) => item.woodenPackingRequired && item.quantity > 0).length, 0)
   const activePackaging = processed.filter((item) => item.status === 'processed' && !completedIds.has(item.salesOrderId)).length
   const mediaPending = Object.keys(media.orders || {}).length
   const recent = processed.filter((item) => item.processedAt).sort((a, b) => Date.parse(b.processedAt || '') - Date.parse(a.processedAt || '')).slice(0, 5)
