@@ -121,10 +121,11 @@ export async function fetchZohoOpenOrders(): Promise<Order[]> {
   const token = await getAccessToken()
   const list = await zohoGet('/inventory/v1/salesorders?per_page=100', token)
   const summaries = (list.salesorders || []).filter(isOpenOrder)
-  const detailed = await Promise.all(summaries.map(async (summary: any) => {
+  const detailed: Order[] = []
+  for (const summary of summaries.slice(0, 50)) {
     const detail = await zohoGet(`/inventory/v1/salesorders/${summary.salesorder_id}`, token)
-    return mapOrder(detail.salesorder || summary)
-  }))
+    detailed.push(mapOrder(detail.salesorder || summary))
+  }
   return detailed.filter((order: Order) => order.lineItems.some((item: OrderLineItem) => item.pendingQuantity > 0))
 }
 
