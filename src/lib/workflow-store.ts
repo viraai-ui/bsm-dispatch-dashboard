@@ -31,7 +31,7 @@ function ghConfig() {
   }
 }
 
-async function githubRequest(path: string, init: RequestInit = {}) {
+export async function githubRequest(path: string, init: RequestInit = {}) {
   const { token, owner, repo } = ghConfig()
   if (!token) throw new Error('Workflow database is not configured')
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}${path}`, {
