@@ -1,4 +1,4 @@
-import { apiOk } from '@/lib/api'
+import { apiError, apiOk } from '@/lib/api'
 import { orders as mockOrders } from '@/lib/mock-data'
 import { fetchZohoOpenOrders, zohoConfigured } from '@/lib/zoho'
 
@@ -10,6 +10,6 @@ export async function GET() {
     const orders = await fetchZohoOpenOrders()
     return apiOk({ source: 'zoho_inventory_live', rule: 'open_and_partially_shipped_only_closed_excluded', orders })
   } catch (error) {
-    return apiOk({ source: 'zoho_error_mock_fallback', error: error instanceof Error ? error.message : 'Zoho fetch failed', orders: mockOrders })
+    return apiError(error instanceof Error ? `Zoho sync failed: ${error.message}` : 'Zoho sync failed', 502)
   }
 }

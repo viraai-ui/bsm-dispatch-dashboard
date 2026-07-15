@@ -12,8 +12,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     const order = await fetchZohoOrderDetail(id)
     return apiOk({ source: 'zoho_inventory_live', order })
   } catch (error) {
-    const fallback = mockOrders.find((item) => item.id === id || item.zohoSalesOrderId === id)
-    if (fallback) return apiOk({ source: 'zoho_error_mock_fallback', error: error instanceof Error ? error.message : 'Zoho fetch failed', order: fallback })
-    return apiError(error instanceof Error ? error.message : 'Order not found', 404)
+    return apiError(error instanceof Error ? `Zoho order detail failed: ${error.message}` : 'Order not found', 502)
   }
 }

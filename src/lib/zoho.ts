@@ -145,8 +145,14 @@ function mapOrder(order: any): Order {
 export async function fetchZohoOpenOrders(): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getAccessToken()
-  const list = await zohoGet('/inventory/v1/salesorders?per_page=100', token)
-  const summaries = (list.salesorders || []).filter(isOpenOrder)
+  const allOrders: any[] = []
+  for (let page = 1; page <= 20; page += 1) {
+    const list = await zohoGet(`/inventory/v1/salesorders?per_page=200&page=${page}`, token)
+    allOrders.push(...(list.salesorders || []))
+    const pageContext = list.page_context || {}
+    if (!pageContext.has_more_page) break
+  }
+  const summaries = allOrders.filter(isOpenOrder)
   return summaries.map(mapOrderSummary)
 }
 
