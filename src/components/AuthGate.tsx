@@ -31,6 +31,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!user) return
     if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) router.replace(dispatchOnlyPath)
+    if (user.role === 'Operations' && pathname === '/settings') router.replace('/')
   }, [pathname, router, user])
 
   async function refreshSession() {

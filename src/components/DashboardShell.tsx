@@ -11,14 +11,13 @@ const nav: NavItem[] = [
   { label: 'Media Proof', href: '/media-proof' },
   { label: 'Vehicle / Dispatch', href: '/vehicle-dispatch' },
   { label: 'Database', href: '/database' },
-  { label: 'Sync Monitor', href: '/sync-monitor' },
   { label: 'Settings', href: '/settings' },
 ]
 
 function ShellBody({ children, active }: { children: React.ReactNode; active: string }) {
   const { user, logout } = useAuth()
   const dispatchOnly = user.role === 'Dispatch'
-  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : nav
+  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
   return <div className={dispatchOnly ? 'shell dispatch-shell' : 'shell'}>
     {!dispatchOnly && <MobileMenu nav={visibleNav} active={active} />}
     {!dispatchOnly && <aside className="side">

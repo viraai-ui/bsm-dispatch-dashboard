@@ -1,21 +1,24 @@
-import { apiError, apiOk } from '@/lib/api'
-import { orders as mockOrders } from '@/lib/mock-data'
-import { fetchZohoOpenOrders, zohoConfigured } from '@/lib/zoho'
+import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
+import { readSyncedOrdersStore, syncConfirmedOrders } from '@/lib/synced-orders'
 
-export async function GET(request: Request) {
+export async function GET() {
   const auth = await requireUser(['Admin', 'Operations'])
   if (!auth.ok) return auth.response
-  if (!zohoConfigured()) {
-    return apiOk({ source: 'mock_open_orders_until_zoho_credentials', orders: mockOrders })
-  }
+  const store = await readSyncedOrdersStore()
+  const orders = store.orderIds.map((id) => store.orders[id]).filter(Boolean)
+  return apiOk({ source: 'local_confirmed_sales_orders', orders, lastSuccessfulSyncAt: store.lastSuccessfulSyncAt, lastError: store.lastError || null, syncing: Boolean(store.syncing) })
+}
+
+export async function POST() {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
   try {
-    const url = new URL(request.url)
-    const full = url.searchParams.get('full') === '1'
-    const orders = await fetchZohoOpenOrders(full ? 100 : 1)
-    return apiOk({ source: 'zoho_inventory_live', rule: 'open_and_partially_shipped_only_closed_excluded', mode: full ? 'full' : 'fast', orders })
+    const store = await syncConfirmedOrders()
+    const orders = store.orderIds.map((id) => store.orders[id]).filter(Boolean)
+    return apiOk({ source: 'zoho_confirmed_sales_orders', orders, lastSuccessfulSyncAt: store.lastSuccessfulSyncAt })
   } catch (error) {
-    console.error('Zoho sync failed', error)
-    return apiError('Failed to fetch data from Zoho', 502)
+    const store = await readSyncedOrdersStore()
+    return Response.json({ ok: false, error: error instanceof Error ? `${error.message}. Showing last successfully synchronized data.` : 'Confirmed order sync failed. Showing last successfully synchronized data.', data: { orders: store.orderIds.map((id) => store.orders[id]).filter(Boolean), lastSuccessfulSyncAt: store.lastSuccessfulSyncAt } }, { status: 502 })
   }
 }

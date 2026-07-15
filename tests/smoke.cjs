@@ -32,7 +32,7 @@ async function run() {
   await waitForServer()
   const cookie = await login()
 
-  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/m/262700001', '/m/qr-262700001', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/sync-monitor', '/settings', '/api/orders', '/api/sync/status']) {
+  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/m/262700001', '/m/qr-262700001', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/settings', '/api/orders', '/api/sync/status']) {
     const { response } = await fetchText(path, { headers: { cookie } })
     assert.equal(response.status, 200, `${path} should return 200`)
   }

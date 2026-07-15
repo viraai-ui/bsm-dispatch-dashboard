@@ -1,5 +1,5 @@
 import { Badge } from '@/components/DashboardShell'
-import { machines, mediaQueue, orders, packagingQueue, vehicleQueue } from '@/lib/mock-data'
+import { machines, mediaQueue, packagingQueue, vehicleQueue } from '@/lib/mock-data'
 
 export const moduleCopy = {
   qr: { active: 'QR & Serial', title: 'QR & Serial' },
@@ -7,7 +7,7 @@ export const moduleCopy = {
   media: { active: 'Media Proof', title: 'Media Proof' },
   vehicle: { active: 'Vehicle / Dispatch', title: 'Vehicle Dispatch' },
   lookup: { active: 'Machine Lookup', title: 'Machine Lookup' },
-  sync: { active: 'Sync Monitor', title: 'Sync Monitor' },
+
 }
 
 export function ModuleHeader({ moduleKey }: { moduleKey: keyof typeof moduleCopy }) {
@@ -15,7 +15,7 @@ export function ModuleHeader({ moduleKey }: { moduleKey: keyof typeof moduleCopy
   return <header className="top compact-top"><div><h1 className="h1">{item.title}</h1></div><button className="btn red">Sync Zoho</button></header>
 }
 
-export function QueueTable({ kind }: { kind: 'qr' | 'wooden' | 'media' | 'vehicle' | 'lookup' | 'sync' }) {
+export function QueueTable({ kind }: { kind: 'qr' | 'wooden' | 'media' | 'vehicle' | 'lookup' }) {
   const rows = kind === 'media' ? mediaQueue : kind === 'vehicle' ? vehicleQueue : kind === 'wooden' ? packagingQueue : machines
   return (
     <section className="card">
@@ -26,6 +26,4 @@ export function QueueTable({ kind }: { kind: 'qr' | 'wooden' | 'media' | 'vehicl
   )
 }
 
-export function SyncSettingsCard() {
-  return <section className="card"><h2>Sync Health</h2><div className="machine"><div className="machine-row"><span>Zoho Inventory</span><Badge tone={process.env.ZOHO_CLIENT_ID ? 'green' : 'amber'}>{process.env.ZOHO_CLIENT_ID ? 'Ready' : 'Mock'}</Badge></div><div className="machine-row"><span>Fetch rule</span><Badge>Open only</Badge></div><div className="machine-row"><span>Closed orders</span><Badge tone="green">Excluded</Badge></div><div className="machine-row"><span>Conflicts</span><Badge tone={orders.some((o) => o.reviewRequired) ? 'red' : 'green'}>{orders.filter((o) => o.reviewRequired).length}</Badge></div></div></section>
-}
+

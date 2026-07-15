@@ -41,6 +41,17 @@ async function zohoGet(path: string, token: string) {
   return data
 }
 
+async function zohoGetWithRetry(path: string, token: string, retries = 3) {
+  let lastError: unknown
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try { return await zohoGet(path, token) } catch (error) {
+      lastError = error
+      if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, attempt * 800))
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error(`Zoho request failed: ${path}`)
+}
+
 const closedStatuses = new Set(['closed', 'void', 'cancelled', 'canceled'])
 function isOpenOrder(raw: any) {
   const status = String(raw.status || raw.current_sub_status || raw.order_status || raw.salesorder_status || '').toLowerCase()
@@ -165,6 +176,23 @@ export async function fetchZohoOpenOrders(maxPages = 1): Promise<Order[]> {
   }
   const summaries = allOrders.filter(isOpenOrder)
   return summaries.map(mapOrderSummary)
+}
+
+export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
+  if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
+  const token = await getAccessToken()
+  const summaries: any[] = []
+  for (let page = 1; page <= 500; page += 1) {
+    const list = await zohoGetWithRetry(`/inventory/v1/salesorders?filter_by=Status.Confirmed&per_page=200&page=${page}&sort_column=created_time&sort_order=D`, token)
+    const rows = list.salesorders || []
+    summaries.push(...rows)
+    const pageContext = list.page_context || {}
+    if (!pageContext.has_more_page || rows.length === 0) break
+  }
+  const confirmed = summaries.filter((row) => String(row.status || row.current_sub_status || row.order_status || '').toLowerCase() === 'confirmed')
+  const detailed: Order[] = []
+  for (const summary of confirmed) detailed.push(await fetchZohoOrderDetail(String(summary.salesorder_id)))
+  return detailed
 }
 
 export async function fetchZohoOrderDetail(id: string): Promise<Order> {
