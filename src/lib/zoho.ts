@@ -182,24 +182,42 @@ export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getAccessToken()
   const summaries: any[] = []
+  let pagesFetched = 0
   for (let page = 1; page <= 500; page += 1) {
     const list = await zohoGetWithRetry(`/inventory/v1/salesorders?filter_by=Status.Confirmed&per_page=200&page=${page}&sort_column=created_time&sort_order=D`, token)
     const rows = list.salesorders || []
+    if (!Array.isArray(rows)) throw new Error(`Invalid Zoho sales order page ${page}`)
     summaries.push(...rows)
+    pagesFetched = page
     const pageContext = list.page_context || {}
+    if (Number(pageContext.page || page) !== page && pageContext.page) throw new Error(`Unexpected Zoho pagination response on page ${page}`)
     if (!pageContext.has_more_page || rows.length === 0) break
+    if (page === 500) throw new Error('Zoho pagination limit reached before completion')
   }
-  const confirmed = summaries.filter((row) => String(row.status || row.current_sub_status || row.order_status || '').toLowerCase() === 'confirmed')
+  if (!pagesFetched) throw new Error('Zoho returned no pagination data')
+  const seen = new Set<string>()
+  const confirmed = summaries.filter((row) => {
+    const id = String(row.salesorder_id || '')
+    const status = String(row.status || row.current_sub_status || row.order_status || '').toLowerCase()
+    if (!id || seen.has(id)) return false
+    seen.add(id)
+    return status === 'confirmed'
+  })
   const detailed: Order[] = []
-  for (const summary of confirmed) detailed.push(await fetchZohoOrderDetail(String(summary.salesorder_id)))
+  for (const summary of confirmed) detailed.push(await fetchZohoOrderDetailWithToken(String(summary.salesorder_id), token))
   return detailed
+}
+
+async function fetchZohoOrderDetailWithToken(id: string, token: string): Promise<Order> {
+  const detail = await zohoGetWithRetry(`/inventory/v1/salesorders/${id}`, token)
+  if (!detail.salesorder?.salesorder_id) throw new Error(`Invalid Zoho sales order detail for ${id}`)
+  return mapOrder(detail.salesorder)
 }
 
 export async function fetchZohoOrderDetail(id: string): Promise<Order> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getAccessToken()
-  const detail = await zohoGet(`/inventory/v1/salesorders/${id}`, token)
-  return mapOrder(detail.salesorder)
+  return fetchZohoOrderDetailWithToken(id, token)
 }
 
 export function zohoConfigured() { return hasZohoConfig() }

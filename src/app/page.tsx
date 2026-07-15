@@ -1,7 +1,7 @@
 import { Badge, DashboardShell } from '@/components/DashboardShell'
 export const dynamic = 'force-dynamic'
 import { githubReadJson, listProcessedOrders } from '@/lib/workflow-store'
-import { readSyncedOrdersStore } from '@/lib/synced-orders'
+import { listSyncedOrders, readSyncedOrdersStore } from '@/lib/synced-orders'
 import type { Order } from '@/types/domain'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order }> }
@@ -11,7 +11,7 @@ const MEDIA_PATH = 'data/media-proof-store.json'
 
 export default async function Home() {
   const store = await readSyncedOrdersStore()
-  const orders = store.orderIds.map((id) => store.orders[id]).filter(Boolean)
+  const orders = await listSyncedOrders()
   const processed = await listProcessedOrders()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const { data: media } = await githubReadJson<MediaStore>(MEDIA_PATH, { orders: {} })

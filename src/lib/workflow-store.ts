@@ -77,6 +77,11 @@ export async function getOrderWorkflow(orderId: string) {
   return store.orders[orderId] || null
 }
 
+export async function listWorkflows() {
+  const { store } = await readStoreWithSha()
+  return store.orders || {}
+}
+
 export async function listProcessedOrders() {
   const { store } = await readStoreWithSha()
   return Object.values(store.orders).filter((order) => order.status === 'processed')

@@ -10,7 +10,7 @@ function secretKey() {
   return new TextEncoder().encode(secret)
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   if (!protectedRoutes.some((route) => pathname === route || (route !== '/' && pathname.startsWith(`${route}/`)))) return NextResponse.next()
   const token = request.cookies.get(cookieName)?.value

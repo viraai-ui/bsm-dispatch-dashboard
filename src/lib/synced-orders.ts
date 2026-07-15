@@ -1,6 +1,6 @@
-import type { Order } from '@/types/domain'
+import type { MachineUnit, Order } from '@/types/domain'
 import { fetchZohoConfirmedOrders } from './zoho'
-import { githubReadJson, githubWriteJson } from './workflow-store'
+import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
 
 export type SyncedOrdersStore = {
   orders: Record<string, Order>
@@ -33,12 +33,15 @@ export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message =
 
 export async function listSyncedOrders() {
   const store = await readSyncedOrdersStore()
-  return store.orderIds.map((id) => store.orders[id]).filter(Boolean)
+  const workflows = await listWorkflows()
+  return store.orderIds.map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null).filter(Boolean) as Order[]
 }
 
 export async function getSyncedOrder(id: string) {
   const store = await readSyncedOrdersStore()
-  return store.orders[id] || Object.values(store.orders).find((order) => order.zohoSalesOrderId === id || order.salesOrderNumber === id) || null
+  const workflows = await listWorkflows()
+  const order = store.orders[id] || Object.values(store.orders).find((item) => item.zohoSalesOrderId === id || item.salesOrderNumber === id) || null
+  return order ? applyWorkflow(order, workflows[order.id]) : null
 }
 
 export async function syncConfirmedOrders() {
@@ -49,13 +52,19 @@ export async function syncConfirmedOrders() {
 
 async function performSync() {
   const previous = await readSyncedOrdersStore()
+  if (previous.syncing && previous.lastAttemptAt && Date.now() - new Date(previous.lastAttemptAt).getTime() < 10 * 60 * 1000) {
+    throw new Error('A confirmed order sync is already running')
+  }
   await writeSyncedOrdersStore({ ...previous, syncing: true, lastAttemptAt: new Date().toISOString(), lastError: null }, 'Start confirmed sales order sync')
   try {
     const fetched = await fetchZohoConfirmedOrders()
     if (!Array.isArray(fetched)) throw new Error('Invalid Zoho response')
+    if (fetched.some((order) => !order.id || !order.zohoSalesOrderId)) throw new Error('Zoho sync returned invalid sales order IDs')
     const orders: Record<string, Order> = {}
     for (const order of fetched) orders[order.id] = order
-    const next: SyncedOrdersStore = { orders, orderIds: fetched.map((order) => order.id), lastSuccessfulSyncAt: new Date().toISOString(), lastAttemptAt: new Date().toISOString(), lastError: null, syncing: false }
+    const orderIds = fetched.map((order) => order.id)
+    if (new Set(orderIds).size !== orderIds.length) throw new Error('Zoho sync returned duplicate sales order IDs')
+    const next: SyncedOrdersStore = { orders, orderIds, lastSuccessfulSyncAt: new Date().toISOString(), lastAttemptAt: new Date().toISOString(), lastError: null, syncing: false }
     await writeSyncedOrdersStore(next, 'Complete confirmed sales order sync')
     return next
   } catch (error) {
@@ -63,5 +72,27 @@ async function performSync() {
     const safe = { ...previous, syncing: false, lastAttemptAt: new Date().toISOString(), lastError: message }
     await writeSyncedOrdersStore(safe, 'Confirmed sales order sync failed')
     throw new Error(message)
+  }
+}
+
+function applyWorkflow(order: Order, workflow?: OrderWorkflow): Order {
+  if (!workflow) return order
+  const machines = order.machines.map((machine) => applyMachineWorkflow(machine, workflow))
+  const status = deriveWorkflowStatus(workflow, machines.length)
+  return {
+    ...order,
+    machines,
+    dashboardStatus: status === 'processed' ? 'Processed' : status === 'qr_generated' ? 'QR Generated' : status === 'partially_generated' ? 'QR Generated' : order.dashboardStatus,
+  }
+}
+
+function applyMachineWorkflow(machine: MachineUnit, workflow: OrderWorkflow): MachineUnit {
+  const saved = workflow.machines?.[machine.id]
+  if (!saved) return machine
+  return {
+    ...machine,
+    serialNumber: saved.serialNumber || machine.serialNumber,
+    qrToken: saved.qrToken || machine.qrToken,
+    status: workflow.status === 'processed' ? 'Processed' : saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status,
   }
 }
