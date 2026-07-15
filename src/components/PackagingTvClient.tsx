@@ -7,7 +7,7 @@ import type { MachineUnit, Order } from '@/types/domain'
 const PACKING_STATE_KEY = 'bsm.packing.state.v1'
 
 type PackingState = Record<string, { urgent?: boolean }>
-type MachineGroup = { itemName: string; serials: string[]; quantity: number }
+type MachineGroup = { itemName: string; serials: string[]; quantity: number; woodenPackingRequired: boolean }
 
 export function PackagingTvClient() {
   const [orders, setOrders] = useState<Order[]>([])
@@ -57,15 +57,16 @@ function DispatchSection({ title, tone, orders, state, completeOrder }: { title:
 
 function OrderCard({ order, urgent, completeOrder }: { order: Order; urgent: boolean; completeOrder: (order: Order) => void }) {
   const groups = groupMachines(order.machines)
-  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine Name</span><span>Serial Number</span><span>Quantity</span></div>{groups.map((group) => <div className="packaging-row" key={group.itemName}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>)}</div><b>{group.quantity}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
+  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine Name</span><span>Serial Number</span><span>Quantity</span><span>Wooden Packing</span></div>{groups.map((group) => <div className="packaging-row" key={group.itemName}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>)}</div><b>{group.quantity}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
 }
 
 function groupMachines(machines: MachineUnit[]) {
   const map = new Map<string, MachineGroup>()
   for (const machine of machines) {
-    const current = map.get(machine.itemName) || { itemName: machine.itemName, serials: [], quantity: 0 }
+    const current = map.get(machine.itemName) || { itemName: machine.itemName, serials: [], quantity: 0, woodenPackingRequired: false }
     current.serials.push(machine.serialNumber || '')
     current.quantity += 1
+    current.woodenPackingRequired ||= machine.woodenPacking !== 'Not Required'
     map.set(machine.itemName, current)
   }
   return [...map.values()]
