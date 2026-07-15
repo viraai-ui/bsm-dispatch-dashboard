@@ -1,7 +1,7 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { getSyncedOrder } from '@/lib/synced-orders'
-import { listMediaProofOrders, saveMediaUpload, submitMediaProof } from '@/lib/media-proof'
+import { listMediaProofOrders, registerWorkDriveVideo, saveMediaUpload, submitMediaProof } from '@/lib/media-proof'
 
 export async function GET() {
   const auth = await requireUser(['Admin', 'Operations'])
@@ -17,6 +17,10 @@ export async function POST(request: Request) {
     if (body.action === 'submit') return apiOk({ record: await submitMediaProof(String(body.orderId || '')) })
     const order = await getSyncedOrder(String(body.orderId || ''))
     if (!order) return apiError('Order not found', 404)
+    if (body.action === 'register_workdrive_video') {
+      if (!body.machineId || !body.name || !body.workdriveUrl) return apiError('Missing WorkDrive video data', 400)
+      return apiOk({ record: await registerWorkDriveVideo(order, String(body.machineId), { name: String(body.name), type: String(body.type || 'video/mp4'), fileId: body.workdriveFileId ? String(body.workdriveFileId) : null, url: String(body.workdriveUrl) }) })
+    }
     if (!body.machineId || !body.kind || !body.dataUrl) return apiError('Missing media upload data', 400)
     if (body.kind !== 'video') return apiError('Only video upload is required for media proof', 400)
     const record = await saveMediaUpload(order, String(body.machineId), 'video', { name: String(body.name || 'media'), type: String(body.type || ''), dataUrl: String(body.dataUrl) })

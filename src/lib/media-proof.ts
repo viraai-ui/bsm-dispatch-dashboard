@@ -76,6 +76,24 @@ export async function saveMediaUploadBuffer(order: Order, machineId: string, upl
   return current
 }
 
+
+export async function registerWorkDriveVideo(order: Order, machineId: string, upload: { name: string; type: string; fileId: string | null; url: string | null }) {
+  const store = await readMediaProofStore()
+  const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
+  const unit = current.units[machineId] || { photos: [], videos: [] }
+  const file: MediaUpload = { id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, name: upload.name, type: upload.type, kind: 'video', url: upload.url || '', workdriveFileId: upload.fileId, workdriveUrl: upload.url, uploadedAt: new Date().toISOString() }
+  current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
+  store.records[order.id] = current
+  await githubWriteJson(MEDIA_PROOF_PATH, store, `Save media proof for ${order.salesOrderNumber}`)
+  return current
+}
+
+export function mediaVideoFileName(order: Order, machineId: string, originalName: string, mimeType: string) {
+  const machine = order.machines.find((item) => item.id === machineId)
+  const extension = originalName.includes('.') ? originalName.split('.').pop() : mimeExtension(mimeType)
+  return `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
+}
+
 export async function submitMediaProof(orderId: string) {
   const store = await readMediaProofStore()
   const record = store.records[orderId]
