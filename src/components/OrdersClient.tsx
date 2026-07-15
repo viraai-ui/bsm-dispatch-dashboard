@@ -1,14 +1,29 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 
-export function OrdersClient({ orders }: { orders: Order[] }) {
+export function OrdersClient({ orders, live = false }: { orders: Order[]; live?: boolean }) {
+  const [rows, setRows] = useState<Order[]>(orders)
   const [active, setActive] = useState<Order | null>(null)
   const [loadingId, setLoadingId] = useState<string | null>(null)
+  const [loadingOrders, setLoadingOrders] = useState(live)
   const [error, setError] = useState('')
-  const openOrders = useMemo(() => orders.filter((o) => o.status === 'open' || o.status === 'partially_shipped'), [orders])
+  useEffect(() => {
+    if (!live) return
+    let cancelled = false
+    setLoadingOrders(true)
+    fetch('/api/orders', { cache: 'no-store' }).then((response) => response.json()).then((json) => {
+      if (!cancelled) setRows(json.data?.orders || [])
+    }).catch((err) => {
+      if (!cancelled) setError(err instanceof Error ? err.message : 'Could not load orders')
+    }).finally(() => {
+      if (!cancelled) setLoadingOrders(false)
+    })
+    return () => { cancelled = true }
+  }, [live])
+  const openOrders = useMemo(() => rows.filter((o) => o.status === 'open' || o.status === 'partially_shipped'), [rows])
   const pending = (o: Order) => o.lineItems.length ? o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0) : '—'
   const openOrder = async (order: Order) => {
     setError('')
@@ -25,7 +40,7 @@ export function OrdersClient({ orders }: { orders: Order[] }) {
     }
   }
   return <>
-    <section className="card"><h2>Zoho Orders</h2>{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Pending</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{o.deliveryDate}</td><td>{pending(o)}</td><td><Badge tone={o.status === 'partially_shipped' ? 'amber' : 'blue'}>{o.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'Open'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{o.deliveryDate}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div></div><button className="btn light full" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'Open'}</button></article>)}</div></section>
+    <section className="card"><h2>Zoho Orders</h2>{loadingOrders && <div className="machine-row compact"><span>Loading Zoho orders…</span><Badge>Live</Badge></div>}{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Pending</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{o.deliveryDate}</td><td>{pending(o)}</td><td><Badge tone={o.status === 'partially_shipped' ? 'amber' : 'blue'}>{o.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'Open'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{o.deliveryDate}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div></div><button className="btn light full" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'Open'}</button></article>)}</div></section>
     {active && <OrderModal order={active} onClose={() => setActive(null)} />}
   </>
 }
