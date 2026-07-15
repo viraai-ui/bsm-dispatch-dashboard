@@ -6,6 +6,8 @@ import { Badge } from '@/components/DashboardShell'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
 
+type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'dispatched' | 'closed'
+
 type MachineRecord = {
   id: string
   serialNumber: string
@@ -37,6 +39,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [notice, setNotice] = useState('')
   const [lastSyncAt, setLastSyncAt] = useState<string | null>(null)
   const [workflowByOrder, setWorkflowByOrder] = useState<Record<string, OrderWorkflow>>({})
+  const [stageByOrder, setStageByOrder] = useState<Record<string, OrderStage>>({})
 
   useEffect(() => {
     const cached = readCachedOrders()
@@ -57,6 +60,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load saved orders')
       const nextRows = sanitizeOrders(json.data?.orders || [])
+      setStageByOrder(json.data?.stages || {})
       setRows(nextRows); cacheOrders(nextRows); setLastSyncAt(json.data?.lastSuccessfulSyncAt || null)
     } catch (err) { if (showErrors) setError(err instanceof Error ? err.message : 'Could not load saved orders') }
   }
@@ -70,6 +74,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync Zoho orders')
       const nextRows = sanitizeOrders(json.data?.orders || [])
+      setStageByOrder(json.data?.stages || {})
       setRows(nextRows)
       cacheOrders(nextRows)
       setLastSyncAt(json.data?.lastSuccessfulSyncAt || null)
@@ -101,7 +106,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
     }
   }
   return <>
-    <section className="card"><div className="modal-section-title"><div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div><button className="btn red" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div>{syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}{notice && <div className="form-success">{notice}</div>}{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={workflowByOrder[o.id]?.status === 'processed' ? 'green' : o.status === 'partially_shipped' ? 'amber' : 'blue'}>{statusLabel(workflowByOrder[o.id]?.status || o.status)}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Status</span><strong>{statusLabel(workflowByOrder[o.id]?.status || o.status)}</strong></div></div><button className="btn light full" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></article>)}</div></section>
+    <section className="card"><div className="modal-section-title"><div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div><button className="btn red" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div>{syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}{notice && <div className="form-success">{notice}</div>}{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}>{stageLabel(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Status</span><strong>{stageLabel(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}</strong></div></div><button className="btn light full" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></article>)}</div></section>
     {active && <OrderModal order={active} onClose={() => setActive(null)} />}
   </>
 }
@@ -169,6 +174,8 @@ function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
 function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
 function sanitizeOrders(orders: Order[]) { return orders }
 function statusLabel(status: string) { return ({ open: 'Open', partially_shipped: 'Partially Shipped', partially_generated: 'Partially Generated', qr_generated: 'QR Generated', qr_not_required: 'QR Not Required', processed: 'Processed' } as Record<string, string>)[status] || status }
+function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', dispatched: 'Dispatched', closed: 'Closed' } as Record<string, string>)[stage] || stage }
+function stageTone(stage: string): 'red' | 'green' | 'amber' | 'blue' { return stage === 'dispatched' || stage === 'closed' ? 'green' : stage === 'processed' ? 'amber' : stage === 'packed' ? 'blue' : stage === 'media_uploaded' ? 'green' : 'blue' }
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
 function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
 async function saveWorkflow(orderId: string, payload: unknown) { const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save workflow'); return json }
