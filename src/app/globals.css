@@ -81,6 +81,9 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .tv { background: #08111f; color: #fff; min-height: 100svh; padding: 28px; overflow-x: hidden; }
 .tv .card { background: rgba(17, 28, 47, .88); border-color: #263449; color: #fff; }
 .tv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.tv-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.preview-strip { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.preview-strip span { display: inline-flex; gap: 6px; align-items: center; padding: 6px; border-radius: 12px; background: #f8fafc; }
 .tv h2 { font-size: 32px; margin: 0; }
 .passport { max-width: 960px; margin: 0 auto; }
 .passport-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
@@ -156,7 +159,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .main { padding: 16px; }
   .top { position: relative; padding: 18px; border: 1px solid rgba(255,255,255,.86); border-radius: 30px; background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,241,243,.82)); box-shadow: 0 24px 70px rgba(15,23,42,.12); overflow: hidden; }
   .top::after { content: ''; position: absolute; right: -50px; top: -70px; width: 170px; height: 170px; background: radial-gradient(circle, rgba(200,16,46,.20), transparent 68%); }
-  .stats, .two, .three, .tv-grid { grid-template-columns: 1fr; }
+  .stats, .two, .three, .tv-grid, .tv-split { grid-template-columns: 1fr; }
   .top, .passport-header { flex-direction: column; }
   .top .btn { width: 100%; }
   .h1 { font-size: 30px; }

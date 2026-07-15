@@ -25,6 +25,7 @@ type MachineRecord = {
 
 const ORDERS_CACHE_KEY = 'bsm.orders.cache.v1'
 const MACHINE_DB_KEY = 'bsm.machine.database.v1'
+const PROCESSED_ORDERS_KEY = 'bsm.processed.orders.v1'
 
 export function OrdersClient({ orders, live = false }: { orders: Order[]; live?: boolean }) {
   const [rows, setRows] = useState<Order[]>(orders)
@@ -110,11 +111,20 @@ function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
     setGenerating(false)
   }
 
+  const processOrder = () => {
+    const processedMachines = machines.filter((machine) => machine.serialNumber && machine.qrToken)
+    if (!processedMachines.length) return
+    const records = readProcessedOrders().filter((item) => item.id !== order.id)
+    records.unshift({ ...order, machines: processedMachines, dashboardStatus: 'Processed' })
+    localStorage.setItem(PROCESSED_ORDERS_KEY, JSON.stringify(records))
+    onClose()
+  }
+
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={order.status === 'partially_shipped' ? 'amber' : 'blue'}>{order.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={order.deliveryDate} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
     <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small>{qrCodes[m.id] && <img className="unit-qr" src={qrCodes[m.id]} alt={`QR for ${m.serialNumber}`} />}</span><Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'View QR' : 'Not Generated'}</Badge></label>)}</div></section>
-    <section className="modal-actions"><button className="btn red" disabled={!selectedCount || generating} onClick={generateSelected}>{generating ? 'Generating…' : `Generate QR & Serial for ${selectedCount}`}</button><button className="btn">Process Order</button></section>
+    <section className="modal-actions"><button className="btn red" disabled={!selectedCount || generating} onClick={generateSelected}>{generating ? 'Generating…' : `Generate QR & Serial for ${selectedCount}`}</button><button className="btn" onClick={processOrder}>Process Order</button></section>
   </section></div>
 }
 
@@ -125,5 +135,6 @@ function nextSerialNumber() { const key = 'bsm.serial.counter.v1'; const current
 function safeFileName(value: string) { return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() || 'Machine' }
 function saveMachineRecord({ order, machine, qrCode, date }: { order: Order; machine: MachineUnit; qrCode: string; date: string }) { const records = readMachineRecords().filter((r) => r.serialNumber !== machine.serialNumber); const start = new Date(date); const end = new Date(start); end.setFullYear(end.getFullYear() + 1); const warrantyStatus = new Date() <= end ? `Active till ${end.toISOString().slice(0, 10)}` : 'Expired'; records.unshift({ id: machine.serialNumber, serialNumber: machine.serialNumber, qrCode, qrToken: machine.qrToken, salesOrderNumber: order.salesOrderNumber, customerName: order.customerName, customerAddress: order.shippingAddress || '', machineName: machine.itemName, salesperson: order.salesperson || '', dispatchDate: date, qrGenerationDate: date, expectedDeliveryDate: order.deliveryDate, warrantyStatus, order, machine }); localStorage.setItem(MACHINE_DB_KEY, JSON.stringify(records)) }
 function readMachineRecords(): MachineRecord[] { try { return JSON.parse(localStorage.getItem(MACHINE_DB_KEY) || '[]') as MachineRecord[] } catch { return [] } }
+function readProcessedOrders(): Order[] { try { return JSON.parse(localStorage.getItem(PROCESSED_ORDERS_KEY) || '[]') as Order[] } catch { return [] } }
 function downloadDataUrl(fileName: string, dataUrl: string) { const a = document.createElement('a'); a.href = dataUrl; a.download = fileName; document.body.appendChild(a); a.click(); a.remove() }
 function buildQrPayload({ order, machine, date }: { order: Order; machine: MachineUnit; date: string }) { return [`Sales Order Number: ${order.salesOrderNumber}`, `Customer Name: ${order.customerName}`, `Customer Address: ${order.shippingAddress || '—'}`, `Machine Name: ${machine.itemName}`, `Machine Serial Number: ${machine.serialNumber}`, `Date: ${date}`].join('\n') }
