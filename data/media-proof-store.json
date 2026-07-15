@@ -1,0 +1,52 @@
+{
+  "orders": {
+    "1154219000034260003": {
+      "movedAt": "2026-07-15T15:15:32.721Z",
+      "order": {
+        "id": "1154219000034260003",
+        "zohoSalesOrderId": "1154219000034260003",
+        "salesOrderNumber": "SO-07488",
+        "status": "open",
+        "customerName": "MAGNAS",
+        "shippingAddress": "ROOM NO. 3, DAMU HARI SAWANT CHAWL, CHIMATPADA, MAROL NAKA, ANDHERI EAST, MUMBAI",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-16",
+        "dashboardStatus": "Packing Done",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034260006",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034260003-1154219000034260006-1",
+            "unitNumber": 1,
+            "serialNumber": "262700001",
+            "qrToken": "262700001",
+            "orderId": "1154219000034260003",
+            "lineItemId": "1154219000034260006",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "MAGNAS",
+            "salesOrderNumber": "SO-07488",
+            "deliveryDate": "2026-07-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-15"
+          }
+        ]
+      }
+    }
+  }
+}
