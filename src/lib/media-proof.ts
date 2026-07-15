@@ -1,5 +1,6 @@
 import type { Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
+import { uploadVideoToWorkDrive } from './workdrive'
 
 export type MediaUpload = {
   id: string
@@ -41,14 +42,15 @@ export async function saveMediaUpload(order: Order, machineId: string, kind: 'ph
   const machine = order.machines.find((item) => item.id === machineId)
   const extension = upload.name.includes('.') ? upload.name.split('.').pop() : mimeExtension(upload.type)
   const generatedName = `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
+  const workDrive = kind === 'video' ? await uploadVideoToWorkDrive(generatedName, upload.dataUrl, upload.type) : { fileId: null, url: null, storedInWorkDrive: false }
   const file: MediaUpload = {
     id: `${machineId}-${kind}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     name: kind === 'video' ? generatedName : upload.name,
     type: upload.type,
     kind,
-    url: upload.dataUrl,
-    workdriveFileId: null,
-    workdriveUrl: null,
+    url: workDrive.url || upload.dataUrl,
+    workdriveFileId: workDrive.fileId,
+    workdriveUrl: workDrive.url,
     uploadedAt: new Date().toISOString(),
   }
   const key = kind === 'photo' ? 'photos' : 'videos'

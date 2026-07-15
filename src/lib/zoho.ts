@@ -10,7 +10,7 @@ function hasZohoConfig() {
   return Boolean(process.env.ZOHO_CLIENT_ID && process.env.ZOHO_CLIENT_SECRET && process.env.ZOHO_REFRESH_TOKEN && process.env.ZOHO_ORGANIZATION_ID)
 }
 
-async function getAccessToken() {
+export async function getZohoAccessToken() {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   if (cachedAccessToken && cachedAccessToken.expiresAt > Date.now() + 60_000) return cachedAccessToken.token
   if (pendingAccessToken) return pendingAccessToken
@@ -166,7 +166,7 @@ function mapOrder(order: any): Order {
 
 export async function fetchZohoOpenOrders(maxPages = 1): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
-  const token = await getAccessToken()
+  const token = await getZohoAccessToken()
   const allOrders: any[] = []
   for (let page = 1; page <= maxPages; page += 1) {
     const list = await zohoGet(`/inventory/v1/salesorders?per_page=200&page=${page}`, token)
@@ -180,7 +180,7 @@ export async function fetchZohoOpenOrders(maxPages = 1): Promise<Order[]> {
 
 export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
-  const token = await getAccessToken()
+  const token = await getZohoAccessToken()
   const summaries: any[] = []
   let pagesFetched = 0
   for (let page = 1; page <= 500; page += 1) {
@@ -218,7 +218,7 @@ async function fetchZohoOrderDetailWithToken(id: string, token: string): Promise
 
 export async function fetchZohoOrderDetail(id: string): Promise<Order> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
-  const token = await getAccessToken()
+  const token = await getZohoAccessToken()
   return fetchZohoOrderDetailWithToken(id, token)
 }
 
