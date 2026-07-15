@@ -18,7 +18,8 @@ export async function POST(request: Request) {
     const order = await getSyncedOrder(String(body.orderId || ''))
     if (!order) return apiError('Order not found', 404)
     if (!body.machineId || !body.kind || !body.dataUrl) return apiError('Missing media upload data', 400)
-    const record = await saveMediaUpload(order, String(body.machineId), body.kind === 'video' ? 'video' : 'photo', { name: String(body.name || 'media'), type: String(body.type || ''), dataUrl: String(body.dataUrl) })
+    if (body.kind !== 'video') return apiError('Only video upload is required for media proof', 400)
+    const record = await saveMediaUpload(order, String(body.machineId), 'video', { name: String(body.name || 'media'), type: String(body.type || ''), dataUrl: String(body.dataUrl) })
     return apiOk({ record })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Media proof update failed', 400)

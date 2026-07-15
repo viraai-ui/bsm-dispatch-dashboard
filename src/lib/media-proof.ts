@@ -38,9 +38,12 @@ export async function saveMediaUpload(order: Order, machineId: string, kind: 'ph
   const store = await readMediaProofStore()
   const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
   const unit = current.units[machineId] || { photos: [], videos: [] }
+  const machine = order.machines.find((item) => item.id === machineId)
+  const extension = upload.name.includes('.') ? upload.name.split('.').pop() : mimeExtension(upload.type)
+  const generatedName = `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
   const file: MediaUpload = {
     id: `${machineId}-${kind}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-    name: upload.name,
+    name: kind === 'video' ? generatedName : upload.name,
     type: upload.type,
     kind,
     url: upload.dataUrl,
@@ -63,4 +66,15 @@ export async function submitMediaProof(orderId: string) {
   store.records[orderId] = record
   await githubWriteJson(MEDIA_PROOF_PATH, store, `Submit media proof for ${record.salesOrderNumber}`)
   return record
+}
+
+function safeName(value: string) {
+  return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim()
+}
+
+function mimeExtension(type: string) {
+  if (type.includes('mp4')) return 'mp4'
+  if (type.includes('quicktime')) return 'mov'
+  if (type.includes('webm')) return 'webm'
+  return ''
 }

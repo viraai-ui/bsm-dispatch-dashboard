@@ -30,7 +30,7 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { 
 
   function status(order: Order) {
     const record = records[order.id]
-    const done = order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.photos?.length || 0) > 0 && (record?.units?.[machine.id]?.videos?.length || 0) > 0)
+    const done = order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.videos?.length || 0) > 0)
     return record?.submittedAt ? 'Submitted' : done ? 'Ready' : 'Pending'
   }
 
@@ -45,7 +45,7 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { 
 function MediaModal({ order, record, onClose, onChanged }: { order: Order; record?: MediaProofRecord; onClose: () => void; onChanged: (record: MediaProofRecord) => void }) {
   const [busy, setBusy] = useState('')
   const [message, setMessage] = useState('')
-  const ready = useMemo(() => order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.photos?.length || 0) > 0 && (record?.units?.[machine.id]?.videos?.length || 0) > 0), [order, record])
+  const ready = useMemo(() => order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.videos?.length || 0) > 0), [order, record])
 
   async function upload(machineId: string, kind: 'photo' | 'video', files: FileList | null) {
     if (!files?.length) return
@@ -74,7 +74,7 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
     finally { setBusy('') }
   }
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Photos</th><th>Videos</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.photos || []} /></td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Picture<input hidden type="file" accept="image/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'photo', event.target.files)} /></label><label className="btn light" style={{ marginLeft: 8 }}>Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading…</span>}</td></tr>)}</tbody></table></div><section className="modal-actions"><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit Media Proof'}</button></section></section></div>
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading…</span>}</td></tr>)}</tbody></table></div><section className="modal-actions"><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit Media Proof'}</button></section></section></div>
 }
 
 function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip">{files.map((file) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">View</a></span>)}</div> }
