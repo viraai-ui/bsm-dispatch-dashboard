@@ -6,9 +6,26 @@ import type { Order } from '@/types/domain'
 
 export function OrdersClient({ orders }: { orders: Order[] }) {
   const [active, setActive] = useState<Order | null>(null)
-  const openOrders = useMemo(() => orders.filter((o) => o.status !== 'partially_shipped' || o.lineItems.some((i) => i.pendingQuantity > 0)), [orders])
+  const [loadingId, setLoadingId] = useState<string | null>(null)
+  const [error, setError] = useState('')
+  const openOrders = useMemo(() => orders.filter((o) => o.status === 'open' || o.status === 'partially_shipped'), [orders])
+  const pending = (o: Order) => o.lineItems.length ? o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0) : '—'
+  const openOrder = async (order: Order) => {
+    setError('')
+    setLoadingId(order.id)
+    try {
+      const response = await fetch(`/api/orders/${order.zohoSalesOrderId || order.id}`, { cache: 'no-store' })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not open order')
+      setActive(json.data.order)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not open order')
+    } finally {
+      setLoadingId(null)
+    }
+  }
   return <>
-    <section className="card"><h2>Zoho Orders</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Pending</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson}</td><td>{o.deliveryDate}</td><td>{o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0)}</td><td><Badge tone={o.status === 'partially_shipped' ? 'amber' : 'blue'}>{o.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></td><td><button className="btn light" onClick={() => setActive(o)}>Open</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{o.deliveryDate}</strong></div><div><span>Pending</span><strong>{o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0)}</strong></div></div><button className="btn light full" onClick={() => setActive(o)}>Open</button></article>)}</div></section>
+    <section className="card"><h2>Zoho Orders</h2>{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Pending</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{o.deliveryDate}</td><td>{pending(o)}</td><td><Badge tone={o.status === 'partially_shipped' ? 'amber' : 'blue'}>{o.status === 'partially_shipped' ? 'Partially Shipped' : 'Open'}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'Open'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{o.deliveryDate}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div></div><button className="btn light full" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'Open'}</button></article>)}</div></section>
     {active && <OrderModal order={active} onClose={() => setActive(null)} />}
   </>
 }

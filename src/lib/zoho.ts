@@ -95,6 +95,25 @@ function buildUnits(order: any, lineItems: OrderLineItem[]): MachineUnit[] {
   return units
 }
 
+function mapOrderSummary(order: any): Order {
+  return {
+    id: String(order.salesorder_id),
+    zohoSalesOrderId: String(order.salesorder_id),
+    salesOrderNumber: String(order.salesorder_number || order.reference_number || ''),
+    status: String(order.shipment_status || '').toLowerCase() === 'partially_shipped' ? 'partially_shipped' : 'open',
+    customerName: String(order.customer_name || ''),
+    customerEmail: order.email,
+    customerPhone: order.phone,
+    shippingAddress: order.shipping_address?.address || order.shipping_address?.street2 || order.billing_address?.address,
+    salesperson: order.salesperson_name || order.salesperson || order.sales_person_name,
+    deliveryDate: String(order.shipment_date || order.delivery_date || order.date || ''),
+    dashboardStatus: 'Not Generated',
+    reviewRequired: false,
+    lineItems: [],
+    machines: [],
+  }
+}
+
 function mapOrder(order: any): Order {
   const lineItems = mapLineItems(order)
   const machines = buildUnits(order, lineItems)
@@ -121,12 +140,14 @@ export async function fetchZohoOpenOrders(): Promise<Order[]> {
   const token = await getAccessToken()
   const list = await zohoGet('/inventory/v1/salesorders?per_page=100', token)
   const summaries = (list.salesorders || []).filter(isOpenOrder)
-  const detailed: Order[] = []
-  for (const summary of summaries.slice(0, 50)) {
-    const detail = await zohoGet(`/inventory/v1/salesorders/${summary.salesorder_id}`, token)
-    detailed.push(mapOrder(detail.salesorder || summary))
-  }
-  return detailed.filter((order: Order) => order.lineItems.some((item: OrderLineItem) => item.pendingQuantity > 0))
+  return summaries.map(mapOrderSummary)
+}
+
+export async function fetchZohoOrderDetail(id: string): Promise<Order> {
+  if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
+  const token = await getAccessToken()
+  const detail = await zohoGet(`/inventory/v1/salesorders/${id}`, token)
+  return mapOrder(detail.salesorder)
 }
 
 export function zohoConfigured() { return hasZohoConfig() }
