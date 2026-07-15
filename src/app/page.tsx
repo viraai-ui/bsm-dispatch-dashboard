@@ -2,27 +2,26 @@ import { Badge, DashboardShell } from '@/components/DashboardShell'
 export const dynamic = 'force-dynamic'
 import { githubReadJson, listProcessedOrders } from '@/lib/workflow-store'
 import { listSyncedOrders, readSyncedOrdersStore } from '@/lib/synced-orders'
+import { readMediaProofStore } from '@/lib/media-proof'
 import type { Order } from '@/types/domain'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order }> }
-type MediaStore = { orders: Record<string, { movedAt: string; order: Order }> }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
-const MEDIA_PATH = 'data/media-proof-store.json'
 
 export default async function Home() {
   const store = await readSyncedOrdersStore()
   const orders = await listSyncedOrders()
   const processed = await listProcessedOrders()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
-  const { data: media } = await githubReadJson<MediaStore>(MEDIA_PATH, { orders: {} })
+  const media = await readMediaProofStore()
   const processedIds = new Set(processed.map((item) => item.salesOrderId))
   const completedIds = new Set(Object.keys(completed.completed || {}))
-  const mediaIds = new Set(Object.keys(media.orders || {}))
+  const mediaIds = new Set(Object.keys(media.records || {}))
   const qrGenerated = processed.filter((item) => item.status === 'qr_generated' || item.status === 'processed').length
   const partiallyGenerated = processed.filter((item) => item.status === 'partially_generated').length
   const pendingWooden = orders.reduce((sum, order) => sum + order.lineItems.filter((item) => item.woodenPackingRequired && item.quantity > 0).length, 0)
   const activePackaging = processed.filter((item) => item.status === 'processed' && !completedIds.has(item.salesOrderId)).length
-  const mediaPending = Object.keys(media.orders || {}).length
+  const mediaPending = Object.values(media.records || {}).filter((record) => !record.submittedAt).length
   const recent = processed.filter((item) => item.processedAt).sort((a, b) => Date.parse(b.processedAt || '') - Date.parse(a.processedAt || '')).slice(0, 5)
 
   return <DashboardShell active="Dashboard">

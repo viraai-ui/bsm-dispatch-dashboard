@@ -4,9 +4,7 @@ import { githubReadJson, githubWriteJson, listProcessedOrders } from '@/lib/work
 import type { Order } from '@/types/domain'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order }> }
-type MediaStore = { orders: Record<string, { movedAt: string; order: Order }> }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
-const MEDIA_PATH = 'data/media-proof-store.json'
 
 export async function GET() {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
@@ -27,8 +25,5 @@ export async function POST(request: Request) {
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   completed.completed[order.id] = { completedAt, order }
   await githubWriteJson(COMPLETED_PATH, completed, 'Mark packaging completed')
-  const { data: media } = await githubReadJson<MediaStore>(MEDIA_PATH, { orders: {} })
-  media.orders[order.id] = { movedAt: completedAt, order: { ...order, dashboardStatus: 'Packing Done' } }
-  await githubWriteJson(MEDIA_PATH, media, 'Move order to media proof')
   return apiOk({ completedAt })
 }

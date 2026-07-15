@@ -3,49 +3,79 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
+import type { MediaProofRecord, MediaUpload } from '@/lib/media-proof'
 
-const MEDIA_QUEUE_KEY = 'bsm.media.queue.v1'
-const MEDIA_STATE_KEY = 'bsm.media.state.v1'
-const DISPATCH_QUEUE_KEY = 'bsm.dispatch.queue.v1'
+type MediaRecords = Record<string, MediaProofRecord>
 
-type Upload = { name: string; url: string; type: string }
-type MediaState = Record<string, { photos: Upload[]; videos: Upload[] }>
-
-export function MediaProofClient() {
-  const [orders, setOrders] = useState<Order[]>([])
-  const [state, setState] = useState<MediaState>({})
+export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { initialOrders?: Order[]; initialRecords?: MediaRecords }) {
+  const [orders, setOrders] = useState<Order[]>(initialOrders)
+  const [records, setRecords] = useState<MediaRecords>(initialRecords)
   const [active, setActive] = useState<Order | null>(null)
   const [syncing, setSyncing] = useState(false)
+  const [error, setError] = useState('')
 
-  useEffect(() => { syncLocal() }, [])
-  function syncLocal() { setSyncing(true); setOrders(readOrders()); setState(readState()); setTimeout(() => setSyncing(false), 150) }
-  function complete(order: Order) { const dispatch = readDispatch().filter((item) => item.id !== order.id); dispatch.unshift({ ...order, dashboardStatus: 'Media Done' }); localStorage.setItem(DISPATCH_QUEUE_KEY, JSON.stringify(dispatch)); const nextOrders = orders.filter((item) => item.id !== order.id); setOrders(nextOrders); localStorage.setItem(MEDIA_QUEUE_KEY, JSON.stringify(nextOrders)); setActive(null) }
-  function status(order: Order) { const done = order.machines.every((machine) => (state[machine.id]?.photos?.length || 0) > 0 && (state[machine.id]?.videos?.length || 0) > 0); return done ? 'Complete' : 'Pending' }
+  useEffect(() => { void loadQueue() }, [])
+
+  async function loadQueue() {
+    setSyncing(true); setError('')
+    try {
+      const response = await fetch('/api/media-proof', { cache: 'no-store' })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load media proof queue')
+      setOrders(json.data.orders || [])
+      setRecords(json.data.records || {})
+    } catch (err) { setError(err instanceof Error ? err.message : 'Could not load media proof queue') }
+    finally { setSyncing(false) }
+  }
+
+  function status(order: Order) {
+    const record = records[order.id]
+    const done = order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.photos?.length || 0) > 0 && (record?.units?.[machine.id]?.videos?.length || 0) > 0)
+    return record?.submittedAt ? 'Submitted' : done ? 'Ready' : 'Pending'
+  }
 
   return <>
-    <header className="top compact-top"><div><h1 className="h1">Media Proof</h1></div><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'Syncing…' : 'Sync Zoho'}</button></header>
-    <section className="card"><h2>Media Queue</h2>{syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Delivery</th><th>Media Upload Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.customerName}</td><td>{order.deliveryDate}</td><td><Badge tone={status(order) === 'Complete' ? 'green' : 'amber'}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{orders.map((order) => <article className="card mobile-order-card" key={order.id}><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><Badge tone={status(order) === 'Complete' ? 'green' : 'amber'}>{status(order)}</Badge><button className="btn light full" onClick={() => setActive(order)}>View</button></article>)}</div></section>
-    {active && <MediaModal order={active} state={state} setState={setState} onClose={() => setActive(null)} onComplete={() => complete(active)} />}
+    <header className="top compact-top"><div><h1 className="h1">Media Proof</h1></div><button className="btn red" onClick={loadQueue} disabled={syncing}>{syncing ? 'Syncing…' : 'Refresh'}</button></header>
+    {error && <div className="form-error">{error}</div>}
+    <section className="card"><h2>Media Queue</h2>{syncing && <div className="machine-row compact"><span>Loading media queue</span><Badge>Live</Badge></div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Delivery</th><th>Media Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.customerName}</td><td>{order.deliveryDate}</td><td><Badge tone={status(order) === 'Submitted' ? 'green' : status(order) === 'Ready' ? 'blue' : 'amber'}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{orders.map((order) => <article className="card mobile-order-card" key={order.id}><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><Badge tone={status(order) === 'Submitted' ? 'green' : status(order) === 'Ready' ? 'blue' : 'amber'}>{status(order)}</Badge><button className="btn light full" onClick={() => setActive(order)}>View</button></article>)}</div></section>
+    {active && <MediaModal order={active} record={records[active.id]} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} />}
   </>
 }
 
-function MediaModal({ order, state, setState, onClose, onComplete }: { order: Order; state: MediaState; setState: (state: MediaState) => void; onClose: () => void; onComplete: () => void }) {
-  const ready = useMemo(() => order.machines.every((machine) => (state[machine.id]?.photos?.length || 0) > 0 && (state[machine.id]?.videos?.length || 0) > 0), [order, state])
-  function addFiles(machineId: string, type: 'photos' | 'videos', files: FileList | null) {
-    if (!files) return
-    const existing = state[machineId] || { photos: [], videos: [] }
-    const uploads = Array.from(files).map((file) => ({ name: file.name, type: file.type, url: URL.createObjectURL(file) }))
-    const nextList = type === 'videos' ? [...existing.videos, ...uploads].slice(0, 3) : [...existing.photos, ...uploads]
-    const next = { ...state, [machineId]: { ...existing, [type]: nextList } }
-    setState(next)
-    localStorage.setItem(MEDIA_STATE_KEY, JSON.stringify(next))
-  }
-  function remove(machineId: string, type: 'photos' | 'videos', index: number) { const existing = state[machineId] || { photos: [], videos: [] }; const nextList = existing[type].filter((_, i) => i !== index); const next = { ...state, [machineId]: { ...existing, [type]: nextList } }; setState(next); localStorage.setItem(MEDIA_STATE_KEY, JSON.stringify(next)) }
+function MediaModal({ order, record, onClose, onChanged }: { order: Order; record?: MediaProofRecord; onClose: () => void; onChanged: (record: MediaProofRecord) => void }) {
+  const [busy, setBusy] = useState('')
+  const [message, setMessage] = useState('')
+  const ready = useMemo(() => order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.photos?.length || 0) > 0 && (record?.units?.[machine.id]?.videos?.length || 0) > 0), [order, record])
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Machine</th><th>Serial</th><th>Photos</th><th>Videos</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber}</td><td><Previews files={state[machine.id]?.photos || []} onRemove={(index) => remove(machine.id, 'photos', index)} /></td><td><Previews files={state[machine.id]?.videos || []} onRemove={(index) => remove(machine.id, 'videos', index)} /></td><td><label className="btn light">+ Upload Pictures<input hidden type="file" accept="image/*" capture="environment" multiple onChange={(event) => addFiles(machine.id, 'photos', event.target.files)} /></label><label className="btn light" style={{ marginLeft: 8 }}>+ Upload Videos<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => addFiles(machine.id, 'videos', event.target.files)} /></label></td></tr>)}</tbody></table></div><section className="modal-actions"><button className="btn red" disabled={!ready} onClick={onComplete}>Process to Next Stage</button></section></section></div>
+  async function upload(machineId: string, kind: 'photo' | 'video', files: FileList | null) {
+    if (!files?.length) return
+    setBusy(machineId); setMessage('')
+    try {
+      for (const file of Array.from(files)) {
+        const dataUrl = await fileToDataUrl(file)
+        const response = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId, kind, name: file.name, type: file.type, dataUrl }) })
+        const json = await response.json()
+        if (!response.ok || !json.ok) throw new Error(json.error || 'Upload failed')
+        onChanged(json.data.record)
+      }
+    } catch (err) { setMessage(err instanceof Error ? err.message : 'Upload failed') }
+    finally { setBusy('') }
+  }
+
+  async function submit() {
+    setBusy('submit'); setMessage('')
+    try {
+      const response = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'submit', orderId: order.id }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Submit failed')
+      onChanged(json.data.record)
+      setMessage('Submitted successfully')
+    } catch (err) { setMessage(err instanceof Error ? err.message : 'Submit failed') }
+    finally { setBusy('') }
+  }
+
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Photos</th><th>Videos</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.photos || []} /></td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Picture<input hidden type="file" accept="image/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'photo', event.target.files)} /></label><label className="btn light" style={{ marginLeft: 8 }}>Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading…</span>}</td></tr>)}</tbody></table></div><section className="modal-actions"><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit Media Proof'}</button></section></section></div>
 }
 
-function Previews({ files, onRemove }: { files: Upload[]; onRemove: (index: number) => void }) { return <div className="preview-strip">{files.map((file, index) => <span key={`${file.name}-${index}`}><a href={file.url} target="_blank">View</a><button className="btn light" onClick={() => onRemove(index)}>Remove</button></span>)}</div> }
-function readOrders(): Order[] { try { return JSON.parse(localStorage.getItem(MEDIA_QUEUE_KEY) || '[]') as Order[] } catch { return [] } }
-function readState(): MediaState { try { return JSON.parse(localStorage.getItem(MEDIA_STATE_KEY) || '{}') as MediaState } catch { return {} } }
-function readDispatch(): Order[] { try { return JSON.parse(localStorage.getItem(DISPATCH_QUEUE_KEY) || '[]') as Order[] } catch { return [] } }
+function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip">{files.map((file) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">View</a></span>)}</div> }
+function fileToDataUrl(file: File) { return new Promise<string>((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(String(reader.result)); reader.onerror = () => reject(reader.error); reader.readAsDataURL(file) }) }
