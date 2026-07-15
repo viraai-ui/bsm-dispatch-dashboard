@@ -21,7 +21,7 @@ export function PackagingTvClient() {
   const urgent = sorted.filter((order) => order.machines.some((machine) => state[machine.id]?.urgent))
   const regular = sorted.filter((order) => !urgent.some((item) => item.id === order.id))
 
-  function syncLocal() { setSyncing(true); setOrders(readProcessed()); setState(readState()); setTimeout(() => setSyncing(false), 150) }
+  async function syncLocal() { setSyncing(true); try { const response = await fetch('/api/workflow/processed', { cache: 'no-store' }); const json = await response.json(); const processed = (json.data?.orders || []).map((item: any) => item.processedOrder).filter(Boolean); setOrders(processed.length ? processed : readProcessed()); } catch { setOrders(readProcessed()) } setState(readState()); setSyncing(false) }
   function update(machineId: string, key: keyof PackingState[string]) { const next = { ...state, [machineId]: { ...(state[machineId] || {}), [key]: !state[machineId]?.[key] } }; setState(next); localStorage.setItem(PACKING_STATE_KEY, JSON.stringify(next)) }
   function orderReady(order: Order) { return order.machines.every((m) => state[m.id]?.packingComplete && state[m.id]?.qrPasted && state[m.id]?.qcDone && !state[m.id]?.issue) }
   function completeOrder(order: Order) { const queue = readMediaQueue().filter((item) => item.id !== order.id); queue.unshift({ ...order, dashboardStatus: 'Packing Done' }); localStorage.setItem(MEDIA_QUEUE_KEY, JSON.stringify(queue)); setOrders((prev) => { const next = prev.filter((item) => item.id !== order.id); localStorage.setItem(PROCESSED_ORDERS_KEY, JSON.stringify(next)); return next }) }
