@@ -254,6 +254,16 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .vehicle-app-toolbar h2 { margin: 0; font-size: 22px; letter-spacing: -.04em; }
 .vehicle-app-toolbar span { display: block; margin-top: 3px; color: var(--muted); font-weight: 800; font-size: 12px; }
 .vehicle-booking-frame { display: block; width: 100%; height: 100%; min-height: 650px; border: 0; background: #fff; }
+.vehicle-order-list { gap: 10px; }
+.vehicle-order-row { border: 1px solid rgba(226,232,240,.92); border-radius: 18px; background: rgba(248,250,252,.72); overflow: hidden; }
+.vehicle-order-row.expanded { background: #fff; box-shadow: 0 14px 36px rgba(15,23,42,.07); }
+.vehicle-order-head { border: 0; background: transparent; }
+.vehicle-order-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.vehicle-machine-panel { margin: 0 14px 14px; padding: 14px; border-radius: 16px; background: rgba(248,250,252,.94); border: 1px solid rgba(226,232,240,.92); display: grid; gap: 8px; }
+.vehicle-machine-head, .vehicle-machine-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.vehicle-machine-row { padding: 10px 0; border-top: 1px solid rgba(226,232,240,.8); }
+.vehicle-machine-row span { font-weight: 900; }
+.vehicle-machine-row small { color: var(--muted); font-weight: 800; text-align: right; }
 .passport { max-width: 960px; margin: 0 auto; }
 .passport-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
 .back-link { margin-bottom: 16px; }
@@ -367,6 +377,11 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .vehicle-app-toolbar .btn { width: 100%; }
   .vehicle-app-toolbar span { overflow-wrap: anywhere; }
   .vehicle-booking-frame { min-height: 620px; }
+  .vehicle-order-head { align-items: stretch; }
+  .vehicle-order-actions { width: 100%; justify-content: stretch; }
+  .vehicle-order-actions .btn { flex: 1 1 150px; min-height: 44px; }
+  .vehicle-machine-row { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .vehicle-machine-row small { text-align: left; }
   .top, .passport-header { flex-direction: column; }
   .top .btn { width: 100%; }
   .h1 { font-size: 30px; }

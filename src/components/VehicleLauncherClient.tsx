@@ -25,8 +25,8 @@ const providers = [
 ]
 
 export function VehicleLauncherClient({ initialOrders = [] }: { initialOrders?: Order[] }) {
-  const [active, setActive] = useState<(typeof providers)[number] | null>(null)
   const [orders, setOrders] = useState<Order[]>(initialOrders)
+  const [expandedOrderId, setExpandedOrderId] = useState<string | null>(initialOrders[0]?.id || null)
 
   async function markDispatched(order: Order) {
     const response = await fetch('/api/dispatch', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id }) })
@@ -34,29 +34,40 @@ export function VehicleLauncherClient({ initialOrders = [] }: { initialOrders?: 
     if (response.ok && json.ok) setOrders((prev) => prev.filter((item) => item.id !== order.id))
   }
 
-  if (active) return <section className="vehicle-app-view" aria-label={`${active.name} booking app`}>
-    <div className="vehicle-app-toolbar">
-      <button className="btn light" type="button" onClick={() => setActive(null)}>← Back</button>
-      <div>
-        <h2>{active.name}</h2>
-        <span>{active.url}</span>
-      </div>
-      <a className="btn red" href={active.url} target="_blank" rel="noreferrer">Open New Tab</a>
-    </div>
-    <iframe key={active.url} src={active.url} title={`${active.name} booking app`} className="vehicle-booking-frame" />
-  </section>
-
   return <>
-    <section className="card" style={{ marginBottom: 16 }}><h2>Ready for Dispatch</h2><div className="machine">{orders.length ? orders.map((order) => <div className="machine-row compact" key={order.id}><span><strong>{order.salesOrderNumber}</strong> · {order.customerName}</span><button className="btn red" onClick={() => markDispatched(order)}>Mark Dispatched</button></div>) : <div className="machine-row compact"><span>No orders ready</span><Badge tone="green">Clear</Badge></div>}</div></section>
+    <section className="card vehicle-dispatch-card" style={{ marginBottom: 16 }}>
+      <h2>Ready for Dispatch</h2>
+      <div className="machine vehicle-order-list">
+        {orders.length ? orders.map((order) => {
+          const expanded = expandedOrderId === order.id
+          return <div className={`vehicle-order-row ${expanded ? 'expanded' : ''}`} key={order.id}>
+            <div className="machine-row compact vehicle-order-head">
+              <span><strong>{order.salesOrderNumber}</strong> · {order.customerName}</span>
+              <div className="vehicle-order-actions">
+                <button className="btn light" type="button" onClick={() => setExpandedOrderId(expanded ? null : order.id)}>{expanded ? 'Hide Machines' : 'View Order'}</button>
+                <button className="btn red" onClick={() => markDispatched(order)}>Mark Dispatched</button>
+              </div>
+            </div>
+            {expanded && <div className="vehicle-machine-panel">
+              <div className="vehicle-machine-head"><strong>Machines</strong><Badge tone="blue">{order.machines.length}</Badge></div>
+              {order.machines.map((machine) => <div className="vehicle-machine-row" key={machine.id}>
+                <span>{machine.itemName}</span>
+                <small>{machine.serialNumber || 'No serial'} · Unit {machine.unitNumber}</small>
+              </div>)}
+            </div>}
+          </div>
+        }) : <div className="machine-row compact"><span>No orders ready</span><Badge tone="green">Clear</Badge></div>}
+      </div>
+    </section>
     <section className="vehicle-provider-grid" aria-label="Vehicle booking applications">
       {providers.map((provider) => <article className={`vehicle-provider-card ${provider.accent}`} key={provider.key}>
-        <button className="vehicle-logo-link" type="button" onClick={() => setActive(provider)} aria-label={`Open ${provider.name} inside dashboard`}>
+        <a className="vehicle-logo-link" href={provider.url} target="_blank" rel="noreferrer" aria-label={`Open ${provider.name}`}>
           <Image className="vehicle-logo-img" src={provider.logoSrc} width={220} height={220} alt={`${provider.name} logo`} priority />
-        </button>
+        </a>
         <div className="vehicle-provider-copy">
           <h2>{provider.name}</h2>
         </div>
-        <button className="btn red vehicle-open-btn" type="button" onClick={() => setActive(provider)}>{provider.button}</button>
+        <a className="btn red vehicle-open-btn" href={provider.url} target="_blank" rel="noreferrer">{provider.button}</a>
       </article>)}
     </section>
   </>
