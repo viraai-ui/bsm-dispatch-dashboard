@@ -275,9 +275,9 @@ async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; 
     }
     doc.setFont('helvetica', 'bold')
     doc.setFontSize(9.6)
-    doc.text('SERVICE WARRANTY', 34.5, 6.7)
-    doc.setFontSize(4.1)
-    doc.text('BUILD SCALE MANUFACTURE PVT. LTD.', 34.5, 10.1)
+    doc.text('SERVICE WARRANTY', 52.6, 6.7, { align: 'center' })
+    doc.setFontSize(3.9)
+    doc.text('BUILD SCALE MANUFACTURE PVT. LTD.', 52.6, 10.1, { align: 'center' })
     doc.setLineWidth(0.55)
     doc.line(32.2, 12.4, 71.5, 12.4)
 
@@ -308,19 +308,29 @@ async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; 
     doc.line(33.0, 36.0, 71.2, 36.0)
 
     doc.roundedRect(33.0, 37.6, 38.5, 5.2, 0.9, 0.9)
-    drawPhoneIcon(doc, 37.2, 40.2)
-    doc.setLineWidth(0.3)
-    doc.line(42.0, 38.4, 42.0, 42.1)
     doc.setFont('helvetica', 'bold')
-    doc.setFontSize(7.5)
-    doc.text('9310823242', 44.0, 41.5)
+    doc.setFontSize(4.7)
+    doc.text('HELPLINE', 37.6, 41.1, { align: 'center' })
+    doc.setLineWidth(0.35)
+    doc.line(43.2, 38.5, 43.2, 42.0)
+    doc.setFontSize(7.2)
+    doc.text('9310823242', 57.3, 41.25, { align: 'center' })
 
     doc.setFillColor(0, 0, 0)
     doc.rect(0.9, 44.2, 73.2, 4.9, 'F')
+    if (logo) {
+      doc.setFillColor(255, 255, 255)
+      doc.roundedRect(3.0, 45.25, 7.0, 2.8, 0.45, 0.45, 'F')
+      doc.addImage(logo, 'PNG', 3.55, 45.65, 5.9, 1.9)
+    } else {
+      doc.setTextColor(255, 255, 255)
+      doc.setFontSize(3.8)
+      doc.text('BSM', 3.2, 47.3)
+    }
     doc.setTextColor(255, 255, 255)
-    doc.setFontSize(4.2)
-    doc.text('✓', 3.0, 47.6)
-    doc.text('KEEP THIS LABEL INTACT FOR SERVICE & WARRANTY', 8.0, 47.5)
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(3.9)
+    doc.text('KEEP THIS LABEL INTACT FOR SERVICE & WARRANTY', 12.0, 47.4)
   })
 
   doc.save(`${safeFileName(order.salesOrderNumber)}-barcodes.pdf`)
@@ -338,16 +348,6 @@ async function imageToDataUrl(src: string) {
       reader.readAsDataURL(blob)
     })
   } catch { return '' }
-}
-
-function drawPhoneIcon(doc: jsPDF, x: number, y: number) {
-  doc.setDrawColor(0, 0, 0)
-  doc.setLineWidth(0.65)
-  doc.roundedRect(x - 2.1, y - 2.0, 4.2, 4.0, 1.0, 1.0)
-  doc.setLineWidth(0.45)
-  doc.line(x - 0.9, y - 0.9, x + 0.8, y + 0.8)
-  doc.line(x - 1.0, y - 1.0, x - 1.6, y - 0.35)
-  doc.line(x + 0.8, y + 0.8, x + 1.45, y + 0.15)
 }
 
 function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
