@@ -161,7 +161,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
     setMachines(updated)
     setQrCodes(nextQrCodes)
-    generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
+    await generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
     setMessage(`Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.`)
     setGenerating(false)
   }
@@ -191,7 +191,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
       await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
       setMachines(updated)
       setQrCodes(nextQrCodes)
-      generateBarcodePdf({ order, machines: updated, qrCodes: nextQrCodes })
+      await generateBarcodePdf({ order, machines: updated, qrCodes: nextQrCodes })
       setMessage(`Barcode PDF generated with ${updated.length} page${updated.length === 1 ? '' : 's'}.`)
     } catch (err) {
       setMessage(err instanceof Error ? err.message : 'Could not generate barcode PDF')
@@ -246,9 +246,10 @@ function initialQrCodes(order: Order, workflow: OrderWorkflow | null) {
   return codes
 }
 
-function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machines: MachineUnit[]; qrCodes: Record<string, string> }) {
+async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machines: MachineUnit[]; qrCodes: Record<string, string> }) {
   const widthMm = 75
   const heightMm = 50
+  const logo = await imageToDataUrl('/bsm-label-logo.png')
   const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [widthMm, heightMm], compress: true })
   doc.setProperties({ title: `${order.salesOrderNumber} barcode labels`, subject: 'BSM service warranty QR labels' })
 
@@ -265,9 +266,14 @@ function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machin
     doc.roundedRect(0.9, 0.9, 73.2, 48.2, 2.4, 2.4)
 
     doc.setTextColor(0, 0, 0)
+    if (logo) {
+      doc.addImage(logo, 'PNG', 4.0, 4.6, 25.0, 7.2)
+    } else {
+      doc.setFont('helvetica', 'bold')
+      doc.setFontSize(19)
+      doc.text('BSM', 3.8, 10.5)
+    }
     doc.setFont('helvetica', 'bold')
-    doc.setFontSize(19)
-    doc.text('BSM', 3.8, 10.5)
     doc.setFontSize(9.6)
     doc.text('SERVICE WARRANTY', 34.5, 6.7)
     doc.setFontSize(4.1)
@@ -302,10 +308,10 @@ function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machin
     doc.line(33.0, 36.0, 71.2, 36.0)
 
     doc.roundedRect(33.0, 37.6, 38.5, 5.2, 0.9, 0.9)
-    doc.setFontSize(7.4)
-    doc.text('☎', 36.4, 41.4)
+    drawPhoneIcon(doc, 37.2, 40.2)
     doc.setLineWidth(0.3)
     doc.line(42.0, 38.4, 42.0, 42.1)
+    doc.setFont('helvetica', 'bold')
     doc.setFontSize(7.5)
     doc.text('9310823242', 44.0, 41.5)
 
@@ -318,6 +324,30 @@ function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machin
   })
 
   doc.save(`${safeFileName(order.salesOrderNumber)}-barcodes.pdf`)
+}
+
+async function imageToDataUrl(src: string) {
+  try {
+    const response = await fetch(src)
+    if (!response.ok) return ''
+    const blob = await response.blob()
+    return await new Promise<string>((resolve) => {
+      const reader = new FileReader()
+      reader.onloadend = () => resolve(String(reader.result || ''))
+      reader.onerror = () => resolve('')
+      reader.readAsDataURL(blob)
+    })
+  } catch { return '' }
+}
+
+function drawPhoneIcon(doc: jsPDF, x: number, y: number) {
+  doc.setDrawColor(0, 0, 0)
+  doc.setLineWidth(0.65)
+  doc.roundedRect(x - 2.1, y - 2.0, 4.2, 4.0, 1.0, 1.0)
+  doc.setLineWidth(0.45)
+  doc.line(x - 0.9, y - 0.9, x + 0.8, y + 0.8)
+  doc.line(x - 1.0, y - 1.0, x - 1.6, y - 0.35)
+  doc.line(x + 0.8, y + 0.8, x + 1.45, y + 0.15)
 }
 
 function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
