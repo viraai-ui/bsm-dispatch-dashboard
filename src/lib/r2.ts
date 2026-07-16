@@ -34,7 +34,7 @@ export function buildR2Key(parts: { salesOrderNumber: string; machineName: strin
 }
 
 export function createR2UploadTarget(key: string, contentType: string, expiresInSeconds = 900): R2UploadTarget {
-  const { accessKeyId, secretAccessKey, bucket, endpoint, publicBaseUrl } = r2Config()
+  const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
   const amzDate = toAmzDate(now)
   const dateStamp = amzDate.slice(0, 8)
@@ -55,7 +55,31 @@ export function createR2UploadTarget(key: string, contentType: string, expiresIn
   const stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, sha256Hex(canonicalRequest)].join('\n')
   const signature = hmacHex(signingKey(secretAccessKey, dateStamp), stringToSign)
   const uploadUrl = `${endpoint}${canonicalUri}?${canonicalQuery}&X-Amz-Signature=${signature}`
-  return { key, uploadUrl, publicUrl: `${publicBaseUrl}/${encodedKey}`, expiresAt: mediaExpiresAt(now), storageProvider: 'r2' }
+  return { key, uploadUrl, publicUrl: `/api/r2/view?key=${encodeURIComponent(key)}`, expiresAt: mediaExpiresAt(now), storageProvider: 'r2' }
+}
+
+export function createR2ViewUrl(key: string, expiresInSeconds = 3600) {
+  const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
+  const now = new Date()
+  const amzDate = toAmzDate(now)
+  const dateStamp = amzDate.slice(0, 8)
+  const host = new URL(endpoint).host
+  const credentialScope = `${dateStamp}/${REGION}/${SERVICE}/aws4_request`
+  const encodedKey = key.split('/').map(encodeURIComponent).join('/')
+  const canonicalUri = `/${bucket}/${encodedKey}`
+  const query: Record<string, string> = {
+    'X-Amz-Algorithm': 'AWS4-HMAC-SHA256',
+    'X-Amz-Credential': `${accessKeyId}/${credentialScope}`,
+    'X-Amz-Date': amzDate,
+    'X-Amz-Expires': String(expiresInSeconds),
+    'X-Amz-SignedHeaders': 'host',
+  }
+  const canonicalQuery = canonicalQueryString(query)
+  const canonicalHeaders = `host:${host}\n`
+  const canonicalRequest = ['GET', canonicalUri, canonicalQuery, canonicalHeaders, 'host', 'UNSIGNED-PAYLOAD'].join('\n')
+  const stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, sha256Hex(canonicalRequest)].join('\n')
+  const signature = hmacHex(signingKey(secretAccessKey, dateStamp), stringToSign)
+  return `${endpoint}${canonicalUri}?${canonicalQuery}&X-Amz-Signature=${signature}`
 }
 
 export async function deleteR2Object(key: string | null | undefined) {
