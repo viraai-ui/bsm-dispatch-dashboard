@@ -280,15 +280,10 @@ async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; 
 
     doc.setFillColor(0, 0, 0)
     doc.rect(0.9, 44.2, 73.2, 4.9, 'F')
-    if (logo) {
-      doc.setFillColor(255, 255, 255)
-      doc.roundedRect(3.0, 45.25, 7.0, 2.8, 0.45, 0.45, 'F')
-      doc.addImage(logo, 'PNG', 3.55, 45.65, 5.9, 1.9)
-    } else {
-      doc.setTextColor(255, 255, 255)
-      doc.setFontSize(3.8)
-      doc.text('BSM', 3.2, 47.3)
-    }
+    doc.setDrawColor(255, 255, 255)
+    doc.setLineWidth(0.75)
+    doc.line(4.0, 46.8, 5.2, 47.8)
+    doc.line(5.2, 47.8, 7.4, 45.7)
     doc.setTextColor(255, 255, 255)
     doc.setFont('helvetica', 'bold')
     doc.setFontSize(3.9)
