@@ -42,13 +42,10 @@ export default async function Home() {
     <section className="command-dashboard">
       <header className="command-hero">
         <div className="hero-copy">
-          <span className="eyebrow">Operations command center</span>
           <h1>Dispatch Dashboard</h1>
-          <p>One clean view of confirmed orders, packaging, media proof, wooden packing, and dispatch readiness.</p>
           <div className="hero-chips"><Badge tone="green">Live data</Badge><span>Last sync: {lastSync}</span></div>
         </div>
         <div className="hero-score-card">
-          <span>Operational Flow</span>
           <strong>{progressPercent}%</strong>
           <div className="premium-progress"><i style={{ width: `${progressPercent}%` }} /></div>
           <em>{completedIds.size} packed · {submittedMedia} media · {dispatchedIds.size} dispatched</em>
@@ -63,18 +60,18 @@ export default async function Home() {
       </section>
 
       <section className="command-grid">
-        <div className="premium-panel lifecycle-panel"><PanelHead title="Order Lifecycle" sub="Live movement across operational stages" accent={`${progressPercent}% flow`} /><div className="stage-chart premium-stage-chart">{stageCounts.map((item) => <div className="stage-bar-row" key={item.label}><span>{item.label}</span><div><i className={item.tone} style={{ width: `${percent(item.value, confirmed)}%` }} /></div><strong>{item.value}</strong></div>)}</div></div>
-        <div className="premium-panel fulfillment-panel"><PanelHead title="Fulfilment Mix" sub="Packed, media and dispatch completion" /><Donut completed={completedIds.size} media={submittedMedia} dispatched={dispatchedIds.size} total={confirmed} /><div className="legend compact-legend"><span><i className="green-dot" />Packed</span><span><i className="purple-dot" />Media</span><span><i className="blue-dot" />Dispatched</span></div></div>
-        <div className="premium-panel wooden-panel"><PanelHead title="Wooden Packing" sub="Top live requirements from synced orders" accent={`${pendingWooden} units`} /><div className="mini-bars">{woodenTop.length ? woodenTop.map((item) => <div className="mini-bar" key={item.name}><span>{item.name}</span><div><i style={{ width: `${percent(item.qty, woodenTop[0]?.qty || 1)}%` }} /></div><strong>{item.qty}</strong></div>) : <p className="muted">No wooden packing pending</p>}</div></div>
-        <div className="premium-panel media-panel"><PanelHead title="Media Proof Health" sub="Actual upload and submission records" /><div className="media-health premium-health"><div><strong>{mediaUploads}</strong><span>Total uploads</span></div><div><strong>{mediaIds.size}</strong><span>Orders with media</span></div><div><strong>{submittedMedia}</strong><span>Submitted</span></div></div></div>
-        <div className="premium-panel recent-panel"><PanelHead title="Recently Processed Orders" sub="Latest completed QR/process actions" /><div className="machine recent-list">{recent.length ? recent.map((item) => <div className="machine-row compact" key={item.salesOrderId}><span><strong>{item.salesOrderNumber}</strong></span><Badge tone="green">Processed</Badge><strong>{item.processedAt ? new Date(item.processedAt).toLocaleString() : '—'}</strong></div>) : <div className="machine-row compact"><span>No processed orders yet</span><strong>—</strong></div>}</div></div>
+        <div className="premium-panel lifecycle-panel"><PanelHead title="Order Lifecycle" accent={`${progressPercent}% flow`} /><div className="stage-chart premium-stage-chart">{stageCounts.map((item) => <div className="stage-bar-row" key={item.label}><span>{item.label}</span><div><i className={item.tone} style={{ width: `${percent(item.value, confirmed)}%` }} /></div><strong>{item.value}</strong></div>)}</div></div>
+        <div className="premium-panel fulfillment-panel"><PanelHead title="Fulfilment Mix" /><Donut completed={completedIds.size} media={submittedMedia} dispatched={dispatchedIds.size} total={confirmed} /><div className="legend compact-legend"><span><i className="green-dot" />Packed</span><span><i className="purple-dot" />Media</span><span><i className="blue-dot" />Dispatched</span></div></div>
+        <div className="premium-panel wooden-panel"><PanelHead title="Wooden Packing" accent={`${pendingWooden} units`} /><div className="mini-bars">{woodenTop.length ? woodenTop.map((item) => <div className="mini-bar" key={item.name}><span>{item.name}</span><div><i style={{ width: `${percent(item.qty, woodenTop[0]?.qty || 1)}%` }} /></div><strong>{item.qty}</strong></div>) : <p className="muted">No wooden packing pending</p>}</div></div>
+        <div className="premium-panel media-panel"><PanelHead title="Media Proof Health" /><div className="media-health premium-health"><div><strong>{mediaUploads}</strong><span>Total uploads</span></div><div><strong>{mediaIds.size}</strong><span>Orders with media</span></div><div><strong>{submittedMedia}</strong><span>Submitted</span></div></div></div>
+        <div className="premium-panel recent-panel"><PanelHead title="Recently Processed Orders" /><div className="machine recent-list">{recent.length ? recent.map((item) => <div className="machine-row compact" key={item.salesOrderId}><span><strong>{item.salesOrderNumber}</strong></span><Badge tone="green">Processed</Badge><strong>{item.processedAt ? new Date(item.processedAt).toLocaleString() : '—'}</strong></div>) : <div className="machine-row compact"><span>No processed orders yet</span><strong>—</strong></div>}</div></div>
       </section>
     </section>
   </DashboardShell>
 }
 
 function Metric({ icon, label, value, sub, tone }: { icon: string; label: string; value: number; sub: string; tone: 'red' | 'blue' | 'green' | 'purple' }) { return <article className={`metric-card metric-${tone}`}><div className="metric-icon">{icon}</div><div><span>{label}</span><strong>{value}</strong><em>{sub}</em></div></article> }
-function PanelHead({ title, sub, accent }: { title: string; sub: string; accent?: string }) { return <div className="panel-head premium-panel-head"><div><h2>{title}</h2><p>{sub}</p></div>{accent && <Badge tone="blue">{accent}</Badge>}</div> }
+function PanelHead({ title, accent }: { title: string; accent?: string }) { return <div className="panel-head premium-panel-head"><div><h2>{title}</h2></div>{accent && <Badge tone="blue">{accent}</Badge>}</div> }
 function percent(value: number, total: number) { return Math.max(value ? 4 : 0, Math.min(100, total ? Math.round((value / total) * 100) : 0)) }
 function countStages(orders: Order[], stages: Record<string, string>) {
   const rows = [
