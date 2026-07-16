@@ -1,3 +1,5 @@
+import { readFile } from 'fs/promises'
+import path from 'path'
 import type { MachineUnit, Order } from '@/types/domain'
 import { fetchZohoConfirmedOrders } from './zoho'
 import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
@@ -18,7 +20,18 @@ const fallbackStore: SyncedOrdersStore = { orders: {}, orderIds: [], lastSuccess
 
 export async function readSyncedOrdersStore() {
   const { data } = await githubReadJson<SyncedOrdersStore>(SYNCED_ORDERS_PATH, fallbackStore)
-  return normalizeStore(data)
+  const store = normalizeStore(data)
+  if (store.orderIds.length) return store
+  return readBundledSyncedOrdersStore()
+}
+
+async function readBundledSyncedOrdersStore() {
+  try {
+    const local = await readFile(path.join(process.cwd(), SYNCED_ORDERS_PATH), 'utf8')
+    return normalizeStore(JSON.parse(local || JSON.stringify(fallbackStore)) as SyncedOrdersStore)
+  } catch {
+    return fallbackStore
+  }
 }
 
 function normalizeStore(store: SyncedOrdersStore): SyncedOrdersStore {
