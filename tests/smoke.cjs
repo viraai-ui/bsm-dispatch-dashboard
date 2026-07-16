@@ -37,6 +37,16 @@ async function run() {
     assert.equal(response.status, 200, `${path} should return 200`)
   }
 
+  const ordersApi = await fetchText('/api/orders', { headers: { cookie } })
+  const ordersJson = JSON.parse(ordersApi.text)
+  assert.ok(ordersJson.data.orderStatuses, 'orders API should expose canonical orderStatuses')
+  const packedPendingMedia = ordersJson.data.orders.find((order) => ordersJson.data.orderStatuses[order.id]?.lifecycleStage === 'packed' && ordersJson.data.orderStatuses[order.id]?.mediaStatus === 'Pending')
+  if (packedPendingMedia) {
+    const database = await fetchText('/database', { headers: { cookie } })
+    assert.match(database.text, /Order Stage/, 'database should show lifecycle Order Stage column')
+    assert.match(database.text, /Media/, 'database should keep Media status visible separately')
+  }
+
   for (const path of ['/orders/not-real', '/m/not-real']) {
     const { response } = await fetchText(path)
     assert.equal(response.status, 404, `${path} should return 404`)

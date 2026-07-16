@@ -102,7 +102,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       const workflowJson = await workflowResponse.json()
       const workflow = workflowJson.data?.workflow || null
       setActiveWorkflow(workflow)
-      setActiveStage(stageByOrder[order.id] || stageByOrder[orderData.id] || (workflow?.status === 'processed' ? 'processed' : 'open'))
+      setActiveStage(json.data?.stage || json.data?.status?.lifecycleStage || stageByOrder[order.id] || stageByOrder[orderData.id] || (workflow?.status === 'processed' ? 'processed' : 'open'))
       setActive(applyWorkflow(orderData, workflow))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not open order')
