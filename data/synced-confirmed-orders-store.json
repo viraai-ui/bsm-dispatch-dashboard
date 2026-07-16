@@ -5360,50 +5360,6 @@
         }
       ]
     },
-    "1154219000034242192": {
-      "id": "1154219000034242192",
-      "zohoSalesOrderId": "1154219000034242192",
-      "salesOrderNumber": "SO-07495",
-      "status": "open",
-      "customerName": "Hitesh Enterprises",
-      "shippingAddress": "Ground Floor, Khasra No.76/24, Plot No.06, Galo No.01, Nangloi, Bakarwala, Delhi, 110041",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-16",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034242197",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034242192-1154219000034242197-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034242192",
-          "lineItemId": "1154219000034242197",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "customerName": "Hitesh Enterprises",
-          "salesOrderNumber": "SO-07495",
-          "deliveryDate": "2026-07-16",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0
-        }
-      ]
-    },
     "1154219000034270012": {
       "id": "1154219000034270012",
       "zohoSalesOrderId": "1154219000034270012",
@@ -26200,78 +26156,6 @@
         }
       ]
     },
-    "1154219000034170002": {
-      "id": "1154219000034170002",
-      "zohoSalesOrderId": "1154219000034170002",
-      "salesOrderNumber": "SO-07468",
-      "status": "open",
-      "customerName": "MUTHUVEL V",
-      "shippingAddress": "234-A,1st Floor , Near B-8 Police Station, Opp. Water Tank, Variety Hall Road, Coimbatore - 641001",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-13",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034170005",
-          "itemName": "Shoe repairing machine (5%)",
-          "sku": "2971 (5%)",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true
-        },
-        {
-          "id": "1154219000034170006",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034170002-1154219000034170005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034170002",
-          "lineItemId": "1154219000034170005",
-          "itemName": "Shoe repairing machine (5%)",
-          "sku": "2971 (5%)",
-          "customerName": "MUTHUVEL V",
-          "salesOrderNumber": "SO-07468",
-          "deliveryDate": "2026-07-13",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0
-        },
-        {
-          "id": "1154219000034170002-1154219000034170006-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034170002",
-          "lineItemId": "1154219000034170006",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "customerName": "MUTHUVEL V",
-          "salesOrderNumber": "SO-07468",
-          "deliveryDate": "2026-07-13",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0
-        }
-      ]
-    },
     "1154219000034172001": {
       "id": "1154219000034172001",
       "zohoSalesOrderId": "1154219000034172001",
@@ -30337,7 +30221,6 @@
     "1154219000034259035",
     "1154219000034265011",
     "1154219000034254007",
-    "1154219000034242192",
     "1154219000034270012",
     "1154219000034286003",
     "1154219000034276003",
@@ -30350,7 +30233,6 @@
     "1154219000034141024",
     "1154219000034176001",
     "1154219000034165015",
-    "1154219000034170002",
     "1154219000034172001",
     "1154219000034142002",
     "1154219000034058018",
@@ -30374,8 +30256,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-16T12:55:31.742Z",
-  "lastAttemptAt": "2026-07-16T13:10:14.703Z",
+  "lastSuccessfulSyncAt": "2026-07-16T13:10:32.396Z",
+  "lastAttemptAt": "2026-07-16T13:10:32.396Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
