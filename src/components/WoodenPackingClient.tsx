@@ -73,12 +73,14 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
 function consolidateRows(rows: WoodenItem[], statuses: Record<string, WoodenStatus>): ConsolidatedRow[] {
   const map = new Map<string, { itemName: string; totalQuantity: number; salesOrders: Set<string>; customers: Set<string>; statuses: Set<string> }>()
   for (const row of rows) {
+    const status = statuses[row.id] || 'Required'
+    if (status === 'Ordered') continue
     const key = row.itemName.trim().toLowerCase()
     const entry = map.get(key) || { itemName: row.itemName, totalQuantity: 0, salesOrders: new Set<string>(), customers: new Set<string>(), statuses: new Set<string>() }
     entry.totalQuantity += Number(row.requiredQuantity || 0)
     entry.salesOrders.add(row.salesOrderNumber)
     if (row.customerName) entry.customers.add(row.customerName)
-    entry.statuses.add(statuses[row.id] || 'Required')
+    entry.statuses.add(status)
     map.set(key, entry)
   }
   return [...map.values()].sort((a, b) => a.itemName.localeCompare(b.itemName)).map((entry) => ({ itemName: entry.itemName, totalQuantity: entry.totalQuantity, salesOrders: [...entry.salesOrders].join(', '), customers: [...entry.customers].join(', '), status: [...entry.statuses].join(', ') }))
