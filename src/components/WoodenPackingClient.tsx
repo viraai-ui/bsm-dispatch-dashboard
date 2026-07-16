@@ -4,8 +4,9 @@ import { useEffect, useMemo, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 
 const WOODEN_CACHE_KEY = 'bsm.wooden.requirements.v2'
-const WOODEN_STATUS_KEY = 'bsm.wooden.status.v1'
-type WoodenStatus = 'Required' | 'Ordered' | 'Completed'
+const WOODEN_STATUS_KEY = 'bsm.wooden.status.v2'
+const OLD_WOODEN_STATUS_KEY = 'bsm.wooden.status.v1'
+type WoodenStatus = 'Required' | 'Ordered'
 type WoodenItem = { id: string; salesOrderNumber: string; customerName: string; itemName: string; requiredQuantity: number }
 type WoodenQueue = { lastSuccessAt?: string | null; items: WoodenItem[] }
 type ConsolidatedRow = { itemName: string; totalQuantity: number; salesOrders: string; customers: string; status: string }
@@ -19,18 +20,24 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   useEffect(() => {
     const cached = readCache()
     if (cached.items.length > initialQueue.items.length) setQueue(cached)
-    setStatuses(readStatuses())
+    setStatuses(readStatuses(cached.items.length ? cached.items : initialQueue.items))
     void loadSaved()
-  }, [initialQueue.items.length])
+  }, [initialQueue.items])
 
   const rows = queue.items || []
   const grouped = useMemo(() => {
     const map = new Map<string, WoodenItem[]>()
     rows.forEach((row) => map.set(row.salesOrderNumber, [...(map.get(row.salesOrderNumber) || []), row]))
-    return [...map.entries()]
-  }, [rows])
-  const consolidated = useMemo(() => consolidateRows(rows, statuses), [rows, statuses])
-  const pendingRequiredTotal = useMemo(() => rows.reduce((sum, row) => (statuses[row.id] || 'Required') === 'Required' ? sum + Number(row.requiredQuantity || 0) : sum, 0), [rows, statuses])
+    return [...map.entries()].sort(([a, aItems], [b, bItems]) => {
+      const aStatus = statuses[a] || 'Required'
+      const bStatus = statuses[b] || 'Required'
+      if (aStatus !== bStatus) return aStatus === 'Required' ? -1 : 1
+      return a.localeCompare(b) || (aItems[0]?.customerName || '').localeCompare(bItems[0]?.customerName || '')
+    })
+  }, [rows, statuses])
+  const requiredRows = useMemo(() => rows.filter((row) => (statuses[row.salesOrderNumber] || 'Required') === 'Required'), [rows, statuses])
+  const consolidated = useMemo(() => consolidateRows(requiredRows), [requiredRows])
+  const pendingRequiredTotal = useMemo(() => requiredRows.reduce((sum, row) => sum + Number(row.requiredQuantity || 0), 0), [requiredRows])
 
   async function loadSaved() {
     try {
@@ -38,6 +45,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
       const json = await response.json()
       const saved = json.data?.queue || { items: [] }
       setQueue(saved); localStorage.setItem(WOODEN_CACHE_KEY, JSON.stringify(saved))
+      setStatuses((current) => ({ ...readStatuses(saved.items), ...current }))
     } catch {}
   }
 
@@ -56,8 +64,8 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
     } finally { setSyncing(false) }
   }
 
-  function updateStatus(item: WoodenItem, status: WoodenStatus) {
-    const next = { ...statuses, [item.id]: status }
+  function updateStatus(salesOrderNumber: string, status: WoodenStatus) {
+    const next = { ...statuses, [salesOrderNumber]: status }
     setStatuses(next)
     localStorage.setItem(WOODEN_STATUS_KEY, JSON.stringify(next))
   }
@@ -67,24 +75,21 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
     {error && <div className="form-error">{error}</div>}
     <section className="grid two analytics-grid"><div className="card"><h2>Consolidated Summary</h2><div className="big-number">{pendingRequiredTotal}</div><p className="muted">Required wooden packing still pending order</p><p className="muted">Last successful sync: {queue.lastSuccessAt ? new Date(queue.lastSuccessAt).toLocaleString() : 'Not synced yet'}</p></div><div className="card"><h2>Export</h2><div className="tabs"><button className="btn light" onClick={() => printConsolidated(consolidated)}>Print</button><button className="btn red" onClick={() => downloadXls('wooden-packing-consolidated-requirements.xls', consolidated)}>Download</button></div></div></section>
     <div style={{ height: 16 }} />
-    <section className="card"><h2>Pending Wooden Packing</h2>{syncing && <div className="machine-row compact"><span>Syncing complete Zoho wooden packing queue</span><Badge>Live</Badge></div>}<div className="machine">{grouped.map(([so, items]) => <div className="machine-row" key={so}><div><strong>{so}</strong><p className="muted">{items[0]?.customerName}</p>{items.map((item) => <p key={item.id}>{item.itemName} — <strong>{item.requiredQuantity}</strong></p>)}</div><div className="wooden-status-list">{items.map((item) => <select key={item.id} className="status-select" value={statuses[item.id] || 'Required'} onChange={(event) => updateStatus(item, event.target.value as WoodenStatus)} aria-label={`Wooden packing status for ${item.itemName}`}><option>Required</option><option>Ordered</option><option>Completed</option></select>)}</div></div>)}</div></section>
+    <section className="card"><h2>Pending Wooden Packing</h2>{syncing && <div className="machine-row compact"><span>Syncing complete Zoho wooden packing queue</span><Badge>Live</Badge></div>}<div className="machine">{grouped.map(([so, items]) => { const status = statuses[so] || 'Required'; return <div className={`machine-row wooden-order-row ${status === 'Ordered' ? 'ordered' : 'required'}`} key={so}><div><strong>{so}</strong><p className="muted">{items[0]?.customerName}</p>{items.map((item) => <p key={item.id}>{item.itemName} — <strong>{item.requiredQuantity}</strong></p>)}</div><select className={`status-select ${status === 'Ordered' ? 'green' : 'required'}`} value={status} onChange={(event) => updateStatus(so, event.target.value as WoodenStatus)} aria-label={`Wooden packing status for ${so}`}><option>Required</option><option>Ordered</option></select></div> })}</div></section>
   </>
 }
 
-function consolidateRows(rows: WoodenItem[], statuses: Record<string, WoodenStatus>): ConsolidatedRow[] {
-  const map = new Map<string, { itemName: string; totalQuantity: number; salesOrders: Set<string>; customers: Set<string>; statuses: Set<string> }>()
+function consolidateRows(rows: WoodenItem[]): ConsolidatedRow[] {
+  const map = new Map<string, { itemName: string; totalQuantity: number; salesOrders: Set<string>; customers: Set<string> }>()
   for (const row of rows) {
-    const status = statuses[row.id] || 'Required'
-    if (status !== 'Required') continue
     const key = row.itemName.trim().toLowerCase()
-    const entry = map.get(key) || { itemName: row.itemName, totalQuantity: 0, salesOrders: new Set<string>(), customers: new Set<string>(), statuses: new Set<string>() }
+    const entry = map.get(key) || { itemName: row.itemName, totalQuantity: 0, salesOrders: new Set<string>(), customers: new Set<string>() }
     entry.totalQuantity += Number(row.requiredQuantity || 0)
     entry.salesOrders.add(row.salesOrderNumber)
     if (row.customerName) entry.customers.add(row.customerName)
-    entry.statuses.add(status)
     map.set(key, entry)
   }
-  return [...map.values()].sort((a, b) => a.itemName.localeCompare(b.itemName)).map((entry) => ({ itemName: entry.itemName, totalQuantity: entry.totalQuantity, salesOrders: [...entry.salesOrders].join(', '), customers: [...entry.customers].join(', '), status: [...entry.statuses].join(', ') }))
+  return [...map.values()].sort((a, b) => a.itemName.localeCompare(b.itemName)).map((entry) => ({ itemName: entry.itemName, totalQuantity: entry.totalQuantity, salesOrders: [...entry.salesOrders].join(', '), customers: [...entry.customers].join(', '), status: 'Required' }))
 }
 
 function xlsTable(rows: ConsolidatedRow[]) {
@@ -107,4 +112,16 @@ function printConsolidated(rows: ConsolidatedRow[]) {
 }
 
 function readCache(): WoodenQueue { try { return JSON.parse(localStorage.getItem(WOODEN_CACHE_KEY) || '{"items":[]}') as WoodenQueue } catch { return { items: [] } } }
-function readStatuses(): Record<string, WoodenStatus> { try { return JSON.parse(localStorage.getItem(WOODEN_STATUS_KEY) || '{}') as Record<string, WoodenStatus> } catch { return {} } }
+function readStatuses(rows: WoodenItem[] = []): Record<string, WoodenStatus> {
+  try {
+    const current = JSON.parse(localStorage.getItem(WOODEN_STATUS_KEY) || '{}') as Record<string, WoodenStatus>
+    if (Object.keys(current).length) return current
+    const old = JSON.parse(localStorage.getItem(OLD_WOODEN_STATUS_KEY) || '{}') as Record<string, string>
+    const migrated: Record<string, WoodenStatus> = {}
+    for (const [salesOrderNumber, items] of rows.reduce((map, row) => map.set(row.salesOrderNumber, [...(map.get(row.salesOrderNumber) || []), row]), new Map<string, WoodenItem[]>())) {
+      migrated[salesOrderNumber] = items.some((item) => old[item.id] === 'Ordered' || old[item.id] === 'Completed') ? 'Ordered' : 'Required'
+    }
+    if (Object.keys(migrated).length) localStorage.setItem(WOODEN_STATUS_KEY, JSON.stringify(migrated))
+    return migrated
+  } catch { return {} }
+}
