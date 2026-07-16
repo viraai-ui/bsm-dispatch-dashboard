@@ -175,7 +175,16 @@ function Info({ k, v }: { k: string; v: string }) { return <div className="info-
 function sanitizeOrders(orders: Order[]) { return orders }
 function statusLabel(status: string) { return ({ open: 'Open', partially_shipped: 'Partially Shipped', partially_generated: 'Partially Generated', qr_generated: 'QR Generated', qr_not_required: 'QR Not Required', processed: 'Processed' } as Record<string, string>)[status] || status }
 function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', dispatched: 'Dispatched', closed: 'Closed' } as Record<string, string>)[stage] || stage }
-function stageTone(stage: string): 'red' | 'green' | 'amber' | 'blue' { return stage === 'dispatched' || stage === 'closed' ? 'green' : stage === 'processed' ? 'amber' : stage === 'packed' ? 'blue' : stage === 'media_uploaded' ? 'green' : 'blue' }
+function stageTone(stage: string): 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple' {
+  return ({
+    open: 'gray',
+    processed: 'amber',
+    packed: 'blue',
+    media_uploaded: 'purple',
+    dispatched: 'green',
+    closed: 'red',
+  } as Record<string, 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple'>)[stage] || 'gray'
+}
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
 function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
 async function saveWorkflow(orderId: string, payload: unknown) { const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save workflow'); return json }

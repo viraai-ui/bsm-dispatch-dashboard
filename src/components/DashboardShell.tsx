@@ -46,6 +46,6 @@ export function DashboardShell({ children, active = 'Orders' }: { children: Reac
   return <AuthGate><ShellBody active={active}>{children}</ShellBody></AuthGate>
 }
 
-export function Badge({ children, tone = 'blue' }: { children: React.ReactNode; tone?: 'red' | 'green' | 'amber' | 'blue' }) {
+export function Badge({ children, tone = 'blue' }: { children: React.ReactNode; tone?: 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple' }) {
   return <span className={`badge ${tone}`}>{children}</span>
 }
