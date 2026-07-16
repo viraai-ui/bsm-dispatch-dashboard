@@ -156,12 +156,13 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
       updated.push(nextMachine)
       nextQrCodes[machine.id] = qrCode
       saveMachineRecord({ order, machine: nextMachine, qrCode, date })
-      downloadDataUrl(`${safeFileName(machine.itemName)} - ${serialNumber}.png`, qrCode)
     }
     const workflowMachines: MachineWorkflow[] = updated.filter((machine) => selected.has(machine.id)).map((machine) => ({ machineUnitId: machine.id, lineItemId: machine.lineItemId, serialNumber: machine.serialNumber, qrCode: nextQrCodes[machine.id], qrToken: machine.qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() }))
     await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
     setMachines(updated)
     setQrCodes(nextQrCodes)
+    generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
+    setMessage(`Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.`)
     setGenerating(false)
   }
 
@@ -221,7 +222,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
     <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div></section>
-    <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn light" disabled={!machines.length || generating || printing} onClick={printBarcodes}>{printing ? 'Generating PDF…' : 'Print Barcodes'}</button><button className="btn red" disabled={!selectedCount || generating || processed || printing} onClick={generateSelected}>{generating ? 'Generating…' : `Generate QR & Serial for ${selectedCount}`}</button><button className="btn" disabled={processed || printing} onClick={processOrder}>{processed ? 'Processed' : 'Process Order'}</button></section>
+    <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn light" disabled={!machines.length || generating || printing} onClick={printBarcodes}>{printing ? 'Generating PDF…' : 'Print Saved Barcodes'}</button><button className="btn red" disabled={!selectedCount || generating || processed || printing} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed || printing} onClick={processOrder}>{processed ? 'Processed' : 'Process Order'}</button></section>
   </section></div>
 }
 
@@ -249,7 +250,7 @@ function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machin
   const widthMm = 75
   const heightMm = 50
   const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [widthMm, heightMm], compress: true })
-  doc.setProperties({ title: `${order.salesOrderNumber} barcode labels`, subject: 'BSM machine QR barcode labels' })
+  doc.setProperties({ title: `${order.salesOrderNumber} barcode labels`, subject: 'BSM service warranty QR labels' })
 
   machines.forEach((machine, index) => {
     if (index > 0) doc.addPage([widthMm, heightMm], 'landscape')
@@ -259,44 +260,61 @@ function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; machin
 
     doc.setFillColor(255, 255, 255)
     doc.rect(0, 0, widthMm, heightMm, 'F')
-    doc.setDrawColor(17, 24, 39)
-    doc.setLineWidth(0.6)
-    doc.roundedRect(2.5, 2.5, 70, 45, 2, 2)
+    doc.setDrawColor(0, 0, 0)
+    doc.setLineWidth(1.25)
+    doc.roundedRect(0.9, 0.9, 73.2, 48.2, 2.4, 2.4)
 
-    doc.setFillColor(200, 16, 46)
-    doc.roundedRect(4.5, 4.5, 66, 7, 1.4, 1.4, 'F')
+    doc.setTextColor(0, 0, 0)
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(19)
+    doc.text('BSM', 3.8, 10.5)
+    doc.setFontSize(9.6)
+    doc.text('SERVICE WARRANTY', 34.5, 6.7)
+    doc.setFontSize(4.1)
+    doc.text('BUILD SCALE MANUFACTURE PVT. LTD.', 34.5, 10.1)
+    doc.setLineWidth(0.55)
+    doc.line(32.2, 12.4, 71.5, 12.4)
+
+    doc.setLineWidth(0.35)
+    doc.roundedRect(2.5, 14.0, 27.0, 28.8, 1.2, 1.2)
+    if (qrCode) doc.addImage(qrCode, 'PNG', 5.1, 16.0, 21.8, 21.8)
+    doc.setFontSize(4.3)
+    doc.text('S C A N   F O R   D E T A I L S', 5.0, 40.6)
+
+    doc.line(31.0, 14.0, 31.0, 42.8)
+    doc.roundedRect(33.0, 14.2, 38.5, 6.8, 1.1, 1.1)
+    doc.setFillColor(0, 0, 0)
+    doc.roundedRect(34.3, 15.6, 15.0, 4.0, 0.8, 0.8, 'F')
     doc.setTextColor(255, 255, 255)
-    doc.setFont('helvetica', 'bold')
-    doc.setFontSize(8)
-    doc.text('BSM INDIA', 7, 9.3)
-    doc.setFontSize(5.5)
-    doc.text('MACHINE QR LABEL', 69, 9.3, { align: 'right' })
+    doc.setFontSize(3.9)
+    doc.text('S E R I A L  N O.', 35.1, 18.2)
+    doc.setTextColor(0, 0, 0)
+    doc.setFontSize(9.0)
+    doc.text(serial, 52.0, 19.1)
 
-    if (qrCode) doc.addImage(qrCode, 'PNG', 5.5, 14, 27, 27)
-    doc.setDrawColor(226, 232, 240)
-    doc.rect(5.5, 14, 27, 27)
+    doc.setLineWidth(0.4)
+    doc.line(33.0, 23.0, 71.2, 23.0)
+    doc.setFontSize(4.0)
+    doc.text('M O D E L', 33.0, 26.3)
+    doc.setFontSize(name.length > 32 ? 6.1 : 7.0)
+    const lines = doc.splitTextToSize(name, 37).slice(0, 2)
+    doc.text(lines, 33.0, 30.1)
+    doc.line(33.0, 36.0, 71.2, 36.0)
 
-    doc.setTextColor(15, 23, 42)
-    doc.setFont('helvetica', 'bold')
-    doc.setFontSize(5.2)
-    doc.text('SERIAL NUMBER', 35, 17)
-    doc.setFontSize(9.5)
-    doc.text(serial, 35, 22)
+    doc.roundedRect(33.0, 37.6, 38.5, 5.2, 0.9, 0.9)
+    doc.setFontSize(7.4)
+    doc.text('☎', 36.4, 41.4)
+    doc.setLineWidth(0.3)
+    doc.line(42.0, 38.4, 42.0, 42.1)
+    doc.setFontSize(7.5)
+    doc.text('9310823242', 44.0, 41.5)
 
-    doc.setDrawColor(226, 232, 240)
-    doc.line(35, 25, 69, 25)
-    doc.setFontSize(5.2)
-    doc.text('MACHINE NAME', 35, 29)
-    doc.setFont('helvetica', 'normal')
-    doc.setFontSize(7)
-    const lines = doc.splitTextToSize(name, 33).slice(0, 3)
-    doc.text(lines, 35, 34)
-
-    doc.setFont('helvetica', 'bold')
-    doc.setFontSize(5.2)
-    doc.setTextColor(71, 85, 105)
-    doc.text(`SO: ${order.salesOrderNumber}`, 5.5, 45)
-    doc.text(`Unit ${machine.unitNumber}`, 69, 45, { align: 'right' })
+    doc.setFillColor(0, 0, 0)
+    doc.rect(0.9, 44.2, 73.2, 4.9, 'F')
+    doc.setTextColor(255, 255, 255)
+    doc.setFontSize(4.2)
+    doc.text('✓', 3.0, 47.6)
+    doc.text('KEEP THIS LABEL INTACT FOR SERVICE & WARRANTY', 8.0, 47.5)
   })
 
   doc.save(`${safeFileName(order.salesOrderNumber)}-barcodes.pdf`)
