@@ -18,6 +18,7 @@ export type MediaProofRecord = {
   orderId: string
   salesOrderNumber: string
   submittedAt?: string | null
+  videoNotRequired?: boolean
   units: Record<string, { photos: MediaUpload[]; videos: MediaUpload[] }>
 }
 
@@ -109,6 +110,16 @@ export async function submitMediaProof(orderId: string) {
   store.records[orderId] = record
   await githubWriteJson(MEDIA_PROOF_PATH, store, `Submit media proof for ${record.salesOrderNumber}`)
   return record
+}
+
+export async function proceedWithoutVideo(order: Order) {
+  const store = await readMediaProofStore()
+  const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
+  current.submittedAt = new Date().toISOString()
+  current.videoNotRequired = true
+  store.records[order.id] = current
+  await githubWriteJson(MEDIA_PROOF_PATH, store, `Proceed without video for ${order.salesOrderNumber}`)
+  return current
 }
 
 function safeName(value: string) {

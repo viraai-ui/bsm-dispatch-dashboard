@@ -76,7 +76,20 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
     finally { setBusy('') }
   }
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByMachine[machine.id] || 0}%</span>}{busy === machine.id && <progress value={progressByMachine[machine.id] || 0} max={100} style={{ width: 120, marginLeft: 8 }} />}</td></tr>)}</tbody></table></div><section className="modal-actions"><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit Media Proof'}</button></section></section></div>
+  async function proceedWithoutVideo() {
+    if (!window.confirm(`Proceed ${order.salesOrderNumber} without video and move it to delivery stage?`)) return
+    setBusy('skip'); setMessage('')
+    try {
+      const response = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'proceed_without_video', orderId: order.id }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Proceed without video failed')
+      onChanged(json.data.record)
+      setMessage('Moved to delivery stage')
+    } catch (err) { setMessage(err instanceof Error ? err.message : 'Proceed without video failed') }
+    finally { setBusy('') }
+  }
+
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') || message.includes('delivery') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByMachine[machine.id] || 0}%</span>}{busy === machine.id && <progress value={progressByMachine[machine.id] || 0} max={100} style={{ width: 120, marginLeft: 8 }} />}</td></tr>)}</tbody></table></div><section className="modal-actions"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>{busy === 'skip' ? 'Processing…' : 'Proceed Without Video'}</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit Media Proof'}</button></section></section></div>
 }
 
 function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip">{files.map((file) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">View</a></span>)}</div> }
