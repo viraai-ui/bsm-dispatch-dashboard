@@ -81,7 +81,53 @@
     "1154219000034276003": {
       "salesOrderId": "1154219000034276003",
       "salesOrderNumber": "SO-07491",
-      "status": "qr_generated",
+      "status": "processed",
+      "processedAt": "2026-07-16T09:43:55.567Z",
+      "processedOrder": {
+        "id": "1154219000034276003",
+        "zohoSalesOrderId": "1154219000034276003",
+        "salesOrderNumber": "SO-07491",
+        "status": "open",
+        "customerName": "Aqdus Enterprises",
+        "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034276006",
+            "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
+            "sku": "917 [HH]",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034276003-1154219000034276006-1",
+            "unitNumber": 1,
+            "serialNumber": "262700003",
+            "qrToken": "262700003",
+            "orderId": "1154219000034276003",
+            "lineItemId": "1154219000034276006",
+            "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
+            "sku": "917 [HH]",
+            "customerName": "Aqdus Enterprises",
+            "salesOrderNumber": "SO-07491",
+            "deliveryDate": "2026-08-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-16"
+          }
+        ]
+      },
       "machines": {
         "1154219000034276003-1154219000034276006-1": {
           "machineUnitId": "1154219000034276003-1154219000034276006-1",
