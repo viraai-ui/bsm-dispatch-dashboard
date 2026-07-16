@@ -1,7 +1,7 @@
 'use client'
 
 import QRCode from 'qrcode'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
@@ -29,6 +29,7 @@ type MachineRecord = {
 const ORDERS_CACHE_KEY = 'bsm.orders.cache.v2'
 const MACHINE_DB_KEY = 'bsm.machine.database.v1'
 const PROCESSED_ORDERS_KEY = 'bsm.processed.orders.v1'
+const ORDERS_AUTO_SYNC_MS = 15 * 60 * 1000
 
 export function OrdersClient({ orders, live = false }: { orders: Order[]; live?: boolean }) {
   const [rows, setRows] = useState<Order[]>(orders)
@@ -37,6 +38,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [activeWorkflow, setActiveWorkflow] = useState<OrderWorkflow | null>(null)
   const [loadingId, setLoadingId] = useState<string | null>(null)
   const [syncing, setSyncing] = useState(false)
+  const syncingRef = useRef(false)
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
   const [lastSyncAt, setLastSyncAt] = useState<string | null>(null)
@@ -55,6 +57,12 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [live])
 
+  useEffect(() => {
+    const timer = window.setInterval(() => { void syncOrders(false) }, ORDERS_AUTO_SYNC_MS)
+    return () => window.clearInterval(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const loadOrders = async (showErrors = true) => {
     setError(''); setNotice('')
     try {
@@ -68,8 +76,9 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   }
 
   const syncOrders = async (showErrors = true) => {
-    if (syncing) return
+    if (syncingRef.current) return
     setError(''); setNotice('')
+    syncingRef.current = true
     setSyncing(true)
     try {
       const response = await fetch('/api/orders', { method: 'POST', cache: 'no-store' })
@@ -80,10 +89,11 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       setRows(nextRows)
       cacheOrders(nextRows)
       setLastSyncAt(json.data?.lastSuccessfulSyncAt || null)
-      setNotice('Sync completed successfully.')
+      if (showErrors) setNotice('Sync completed successfully.')
     } catch (err) {
       if (showErrors) setError(err instanceof Error ? err.message : 'Failed to sync Zoho. Showing last saved data.')
     } finally {
+      syncingRef.current = false
       setSyncing(false)
     }
   }

@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 
 const WOODEN_CACHE_KEY = 'bsm.wooden.requirements.v2'
 const WOODEN_STATUS_KEY = 'bsm.wooden.status.v2'
 const OLD_WOODEN_STATUS_KEY = 'bsm.wooden.status.v1'
+const WOODEN_AUTO_SYNC_MS = 30 * 60 * 1000
 type WoodenStatus = 'Required' | 'Ordered'
 type WoodenItem = { id: string; salesOrderNumber: string; customerName: string; itemName: string; requiredQuantity: number }
 type WoodenQueue = { lastSuccessAt?: string | null; items: WoodenItem[] }
@@ -15,6 +16,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   const [queue, setQueue] = useState<WoodenQueue>(initialQueue)
   const [statuses, setStatuses] = useState<Record<string, WoodenStatus>>({})
   const [syncing, setSyncing] = useState(false)
+  const syncingRef = useRef(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -23,6 +25,12 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
     setStatuses(readStatuses(cached.items.length ? cached.items : initialQueue.items))
     void loadSaved()
   }, [initialQueue.items])
+
+  useEffect(() => {
+    const timer = window.setInterval(() => { void syncZoho(false) }, WOODEN_AUTO_SYNC_MS)
+    return () => window.clearInterval(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const rows = queue.items || []
   const grouped = useMemo(() => {
@@ -50,7 +58,8 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   }
 
   async function syncZoho(showError = true) {
-    if (syncing) return
+    if (syncingRef.current) return
+    syncingRef.current = true
     setSyncing(true); setError('')
     try {
       const response = await fetch('/api/wooden-packing', { method: 'POST', cache: 'no-store' })
@@ -61,7 +70,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
     } catch (err) {
       if (showError) setError(err instanceof Error ? err.message : 'Wooden Packing sync failed. Showing the last successfully synced data.')
       await loadSaved()
-    } finally { setSyncing(false) }
+    } finally { syncingRef.current = false; setSyncing(false) }
   }
 
   function updateStatus(salesOrderNumber: string, status: WoodenStatus) {
