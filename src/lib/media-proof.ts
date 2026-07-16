@@ -2,6 +2,7 @@ import type { Order } from '@/types/domain'
 import { uploadBufferToGithubMedia } from './github-media'
 import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
+import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 
 export type MediaUpload = {
   id: string
@@ -11,7 +12,9 @@ export type MediaUpload = {
   url: string
   workdriveFileId?: string | null
   workdriveUrl?: string | null
+  storageProvider?: 'workdrive' | 'github' | 'inline'
   uploadedAt: string
+  expiresAt?: string
 }
 
 export type MediaProofRecord = {
@@ -27,7 +30,16 @@ const MEDIA_PROOF_PATH = 'data/media-proof-store.json'
 
 export async function readMediaProofStore() {
   const { data } = await githubReadJson<MediaProofStore>(MEDIA_PROOF_PATH, { records: {} })
-  return { records: data.records || {} }
+  const cleaned = await cleanupExpiredMediaProofStore({ records: data.records || {} })
+  if (cleaned.changed) await githubWriteJson(MEDIA_PROOF_PATH, cleaned.store, 'Cleanup expired media proof files')
+  return { records: cleaned.store.records || {} }
+}
+
+export async function cleanupExpiredMediaProofs() {
+  const { data } = await githubReadJson<MediaProofStore>(MEDIA_PROOF_PATH, { records: {} })
+  const cleaned = await cleanupExpiredMediaProofStore({ records: data.records || {} })
+  if (cleaned.changed) await githubWriteJson(MEDIA_PROOF_PATH, cleaned.store, 'Cleanup expired media proof files')
+  return cleaned.result
 }
 
 export async function listMediaProofOrders() {
@@ -45,6 +57,7 @@ export async function saveMediaUpload(order: Order, machineId: string, kind: 'ph
   const extension = upload.name.includes('.') ? upload.name.split('.').pop() : mimeExtension(upload.type)
   const generatedName = `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
   const workDrive = kind === 'video' ? await uploadVideoToWorkDrive(generatedName, upload.dataUrl, upload.type) : { fileId: null, url: null, storedInWorkDrive: false }
+  const uploadedAt = new Date().toISOString()
   const file: MediaUpload = {
     id: `${machineId}-${kind}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     name: kind === 'video' ? generatedName : upload.name,
@@ -53,7 +66,9 @@ export async function saveMediaUpload(order: Order, machineId: string, kind: 'ph
     url: workDrive.url || upload.dataUrl,
     workdriveFileId: workDrive.fileId,
     workdriveUrl: workDrive.url,
-    uploadedAt: new Date().toISOString(),
+    storageProvider: workDrive.storedInWorkDrive ? 'workdrive' : 'inline',
+    uploadedAt,
+    expiresAt: mediaExpiresAt(uploadedAt),
   }
   const key = kind === 'photo' ? 'photos' : 'videos'
   current.units[machineId] = { ...unit, [key]: [...unit[key], file] }
@@ -77,7 +92,19 @@ export async function saveMediaUploadBuffer(order: Order, machineId: string, upl
     storage = await uploadBufferToGithubMedia(generatedName, upload.buffer, upload.type)
   }
   if (!storage.url) storage = await uploadBufferToGithubMedia(generatedName, upload.buffer, upload.type)
-  const file: MediaUpload = { id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, name: generatedName, type: upload.type, kind: 'video', url: storage.url || '', workdriveFileId: storage.storedInWorkDrive ? storage.fileId : null, workdriveUrl: storage.storedInWorkDrive ? storage.url : null, uploadedAt: new Date().toISOString() }
+  const uploadedAt = new Date().toISOString()
+  const file: MediaUpload = {
+    id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    name: generatedName,
+    type: upload.type,
+    kind: 'video',
+    url: storage.url || '',
+    workdriveFileId: storage.storedInWorkDrive ? storage.fileId : null,
+    workdriveUrl: storage.storedInWorkDrive ? storage.url : null,
+    storageProvider: storage.storedInWorkDrive ? 'workdrive' : 'github',
+    uploadedAt,
+    expiresAt: mediaExpiresAt(uploadedAt),
+  }
   current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current
   await githubWriteJson(MEDIA_PROOF_PATH, store, `Save media proof for ${order.salesOrderNumber}`)
@@ -89,7 +116,19 @@ export async function registerWorkDriveVideo(order: Order, machineId: string, up
   const store = await readMediaProofStore()
   const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
   const unit = current.units[machineId] || { photos: [], videos: [] }
-  const file: MediaUpload = { id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, name: upload.name, type: upload.type, kind: 'video', url: upload.url || '', workdriveFileId: upload.fileId, workdriveUrl: upload.url, uploadedAt: new Date().toISOString() }
+  const uploadedAt = new Date().toISOString()
+  const file: MediaUpload = {
+    id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    name: upload.name,
+    type: upload.type,
+    kind: 'video',
+    url: upload.url || '',
+    workdriveFileId: upload.fileId,
+    workdriveUrl: upload.url,
+    storageProvider: 'workdrive',
+    uploadedAt,
+    expiresAt: mediaExpiresAt(uploadedAt),
+  }
   current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current
   await githubWriteJson(MEDIA_PROOF_PATH, store, `Save media proof for ${order.salesOrderNumber}`)

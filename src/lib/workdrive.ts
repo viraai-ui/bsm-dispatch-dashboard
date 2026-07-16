@@ -12,6 +12,11 @@ function uploadDomain() {
   return process.env.ZOHO_WORKDRIVE_UPLOAD_DOMAIN || `https://upload.zoho.${dc}`
 }
 
+function apiDomain() {
+  const dc = process.env.ZOHO_DC || 'in'
+  return process.env.ZOHO_WORKDRIVE_API_DOMAIN || `https://www.zohoapis.${dc}`
+}
+
 export function workDriveConfigured() {
   return Boolean(process.env.ZOHO_WORKDRIVE_PARENT_ID)
 }
@@ -49,6 +54,22 @@ export async function uploadBufferToWorkDrive(fileName: string, buffer: Buffer, 
   const fileId = String(first?.id || attrs.resource_id || attrs.id || '') || null
   const url = attrs.permalink || attrs.download_url || attrs.preview_url || (fileId ? `https://workdrive.zoho.${process.env.ZOHO_DC || 'in'}/file/${fileId}` : null)
   return { fileId, url, storedInWorkDrive: true }
+}
+
+export async function deleteWorkDriveFile(fileId: string | null | undefined) {
+  if (!fileId || fileId.startsWith('github:')) return false
+  const token = await getZohoAccessToken()
+  const response = await fetch(`${apiDomain()}/workdrive/api/v1/files/${encodeURIComponent(fileId)}`, {
+    method: 'DELETE',
+    headers: { Authorization: `Zoho-oauthtoken ${token}`, Accept: 'application/vnd.api+json' },
+    cache: 'no-store',
+  })
+  if (response.status === 404) return false
+  if (!response.ok) {
+    const raw = await response.text().catch(() => '')
+    throw new Error(`Zoho WorkDrive delete failed: ${raw || `HTTP ${response.status}`}`)
+  }
+  return true
 }
 
 function dataUrlToBuffer(dataUrl: string) {
