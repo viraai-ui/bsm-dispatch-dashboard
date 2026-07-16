@@ -1,5 +1,6 @@
 import type { MediaProofStore, MediaUpload } from './media-proof'
 import { deleteGithubMediaFile } from './github-media'
+import { deleteR2Object } from './r2'
 import { deleteWorkDriveFile } from './workdrive'
 
 export const MEDIA_RETENTION_DAYS = 30
@@ -64,7 +65,8 @@ export async function cleanupExpiredMediaProofStore(store: MediaProofStore, now 
 
 async function deleteStoredMedia(file: MediaUpload) {
   try {
-    if (file.workdriveFileId) await deleteWorkDriveFile(file.workdriveFileId)
+    if (file.storageProvider === 'r2' || file.r2Key) await deleteR2Object(file.r2Key)
+    else if (file.workdriveFileId) await deleteWorkDriveFile(file.workdriveFileId)
     else if (file.url || file.workdriveFileId) await deleteGithubMediaFile(file.workdriveFileId || file.url)
   } catch (error) {
     return error instanceof Error ? error.message : 'Could not delete expired media file'

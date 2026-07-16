@@ -12,7 +12,8 @@ export type MediaUpload = {
   url: string
   workdriveFileId?: string | null
   workdriveUrl?: string | null
-  storageProvider?: 'workdrive' | 'github' | 'inline'
+  storageProvider?: 'r2' | 'workdrive' | 'github' | 'inline'
+  r2Key?: string | null
   uploadedAt: string
   expiresAt?: string
 }
@@ -113,6 +114,14 @@ export async function saveMediaUploadBuffer(order: Order, machineId: string, upl
 
 
 export async function registerWorkDriveVideo(order: Order, machineId: string, upload: { name: string; type: string; fileId: string | null; url: string | null }) {
+  return registerStoredVideo(order, machineId, { ...upload, provider: 'workdrive' })
+}
+
+export async function registerR2Video(order: Order, machineId: string, upload: { name: string; type: string; key: string; url: string; expiresAt?: string | null }) {
+  return registerStoredVideo(order, machineId, { name: upload.name, type: upload.type, fileId: null, url: upload.url, key: upload.key, expiresAt: upload.expiresAt, provider: 'r2' })
+}
+
+async function registerStoredVideo(order: Order, machineId: string, upload: { name: string; type: string; fileId: string | null; url: string | null; key?: string | null; expiresAt?: string | null; provider: 'r2' | 'workdrive' }) {
   const store = await readMediaProofStore()
   const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
   const unit = current.units[machineId] || { photos: [], videos: [] }
@@ -123,11 +132,12 @@ export async function registerWorkDriveVideo(order: Order, machineId: string, up
     type: upload.type,
     kind: 'video',
     url: upload.url || '',
-    workdriveFileId: upload.fileId,
-    workdriveUrl: upload.url,
-    storageProvider: 'workdrive',
+    workdriveFileId: upload.provider === 'workdrive' ? upload.fileId : null,
+    workdriveUrl: upload.provider === 'workdrive' ? upload.url : null,
+    r2Key: upload.provider === 'r2' ? upload.key || null : null,
+    storageProvider: upload.provider,
     uploadedAt,
-    expiresAt: mediaExpiresAt(uploadedAt),
+    expiresAt: upload.expiresAt || mediaExpiresAt(uploadedAt),
   }
   current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current

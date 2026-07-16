@@ -92,7 +92,7 @@ function Previews({ files }: { files: MediaUpload[] }) { return <div className="
 
 async function uploadVideoFile(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
   try {
-    return await uploadDirectToWorkDrive(order, machineId, file, onProgress)
+    return await uploadDirectToR2(order, machineId, file, onProgress)
   } catch {
     const form = new FormData()
     form.append('orderId', order.id)
@@ -102,56 +102,32 @@ async function uploadVideoFile(order: Order, machineId: string, file: File, onPr
   }
 }
 
-async function uploadDirectToWorkDrive(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
-  const targetResponse = await fetch('/api/workdrive/upload-target', { cache: 'no-store' })
+async function uploadDirectToR2(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
+  const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId, name: file.name, type: file.type }) })
   const targetJson = await targetResponse.json()
-  if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'WorkDrive upload target unavailable')
+  if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'R2 upload target unavailable')
   const target = targetJson.data
-  const machine = order.machines.find((item) => item.id === machineId)
-  const fileName = mediaVideoFileName(order.salesOrderNumber, machine?.itemName || 'Machine', file.name, file.type)
-  const uploaded = await uploadBlobToWorkDrive(target.uploadUrl, target.token, target.parentId, fileName, file, onProgress)
+  await uploadBlobToR2(target.uploadUrl, file, onProgress)
   const registered = await fetch('/api/media-proof', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ action: 'register_workdrive_video', orderId: order.id, machineId, name: fileName, type: file.type, workdriveFileId: uploaded.fileId, workdriveUrl: uploaded.url }),
+    body: JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId, name: file.name, type: file.type, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt }),
   })
   const json = await registered.json()
-  if (!registered.ok || !json.ok) throw new Error(json.error || 'Could not register WorkDrive video')
+  if (!registered.ok || !json.ok) throw new Error(json.error || 'Could not register R2 video')
   return json
 }
 
-function uploadBlobToWorkDrive(uploadUrl: string, token: string, parentId: string, fileName: string, file: File, onProgress: (percent: number) => void): Promise<{ fileId: string | null; url: string | null }> {
+function uploadBlobToR2(uploadUrl: string, file: File, onProgress: (percent: number) => void): Promise<void> {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
-    xhr.open('POST', uploadUrl)
-    xhr.setRequestHeader('Authorization', `Zoho-oauthtoken ${token}`)
-    xhr.setRequestHeader('x-filename', encodeURIComponent(fileName))
-    xhr.setRequestHeader('x-parent_id', parentId)
-    xhr.setRequestHeader('x-streammode', '1')
+    xhr.open('PUT', uploadUrl)
     xhr.setRequestHeader('content-type', file.type || 'application/octet-stream')
     xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }
-    xhr.onload = () => {
-      try {
-        const json = JSON.parse(xhr.responseText || '{}')
-        if (xhr.status < 200 || xhr.status >= 300) throw new Error(json.message || json.errors?.[0]?.message || 'WorkDrive upload failed')
-        const first = Array.isArray(json.data) ? json.data[0] : json.data
-        const attrs = first?.attributes || first || {}
-        const fileId = String(first?.id || attrs.resource_id || attrs.id || '') || null
-        const url = attrs.permalink || attrs.download_url || attrs.preview_url || (fileId ? `https://workdrive.zoho.${attrs.dc || 'in'}/file/${fileId}` : null)
-        resolve({ fileId, url })
-      } catch (error) { reject(error instanceof Error ? error : new Error('WorkDrive upload failed')) }
-    }
-    xhr.onerror = () => reject(new Error('WorkDrive direct upload blocked'))
+    xhr.onload = () => { if (xhr.status >= 200 && xhr.status < 300) resolve(); else reject(new Error(`R2 upload failed: HTTP ${xhr.status}`)) }
+    xhr.onerror = () => reject(new Error('R2 upload failed: network error'))
     xhr.send(file)
   })
 }
-
-function mediaVideoFileName(salesOrderNumber: string, machineName: string, originalName: string, mimeType: string) {
-  const extension = originalName.includes('.') ? originalName.split('.').pop() : mimeExtension(mimeType)
-  return `${safeMediaName(salesOrderNumber)} - ${safeMediaName(machineName)}${extension ? `.${extension}` : ''}`
-}
-
-function safeMediaName(value: string) { return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() }
-function mimeExtension(type: string) { if (type.includes('mp4')) return 'mp4'; if (type.includes('quicktime')) return 'mov'; if (type.includes('webm')) return 'webm'; return '' }
 
 function uploadWithProgress(form: FormData, onProgress: (percent: number) => void): Promise<any> { return new Promise((resolve, reject) => { const xhr = new XMLHttpRequest(); xhr.open('POST', '/api/media-proof/upload'); xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }; xhr.onload = () => { try { const json = JSON.parse(xhr.responseText || '{}'); if (xhr.status < 200 || xhr.status >= 300 || !json.ok) reject(new Error(json.error || 'Upload failed')); else resolve(json) } catch { reject(new Error('Upload failed: server returned an invalid response')) } }; xhr.onerror = () => reject(new Error('Upload failed: network error')); xhr.send(form) }) }
