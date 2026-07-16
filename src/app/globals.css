@@ -92,6 +92,8 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .meta-grid strong { display: block; margin-top: 3px; }
 .machine { display: grid; gap: 12px; }
 .machine-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 16px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255,255,255,.88); }
+.wooden-status-list { display: grid; gap: 8px; justify-items: end; }
+.status-select { min-height: 36px; border: 0; border-radius: 999px; padding: 0 34px 0 12px; background: #fef3c7; color: #92400e; font-weight: 850; font-size: 12px; box-shadow: inset 0 0 0 1px rgba(146,64,14,.08); }
 .alert { border-color: #fecaca; margin-bottom: 16px; padding: 18px; }
 .alert h2 { margin: 12px 0 8px; }
 .conflict-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
