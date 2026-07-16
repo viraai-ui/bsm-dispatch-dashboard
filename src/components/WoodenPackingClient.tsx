@@ -30,6 +30,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
     return [...map.entries()]
   }, [rows])
   const consolidated = useMemo(() => consolidateRows(rows, statuses), [rows, statuses])
+  const pendingRequiredTotal = useMemo(() => rows.reduce((sum, row) => (statuses[row.id] || 'Required') === 'Required' ? sum + Number(row.requiredQuantity || 0) : sum, 0), [rows, statuses])
 
   async function loadSaved() {
     try {
@@ -64,7 +65,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   return <>
     <header className="top compact-top"><div><h1 className="h1">Wooden Packing</h1></div><button className="btn red" onClick={() => syncZoho(true)} disabled={syncing}>{syncing ? 'Syncing…' : 'Sync Zoho'}</button></header>
     {error && <div className="form-error">{error}</div>}
-    <section className="grid two analytics-grid"><div className="card"><h2>Consolidated Summary</h2><div className="big-number">{rows.reduce((sum, row) => sum + row.requiredQuantity, 0)}</div><p className="muted">Machines requiring wooden packing</p><p className="muted">Last successful sync: {queue.lastSuccessAt ? new Date(queue.lastSuccessAt).toLocaleString() : 'Not synced yet'}</p></div><div className="card"><h2>Export</h2><div className="tabs"><button className="btn light" onClick={() => printConsolidated(consolidated)}>Print</button><button className="btn red" onClick={() => downloadXls('wooden-packing-consolidated-requirements.xls', consolidated)}>Download</button></div></div></section>
+    <section className="grid two analytics-grid"><div className="card"><h2>Consolidated Summary</h2><div className="big-number">{pendingRequiredTotal}</div><p className="muted">Required wooden packing still pending order</p><p className="muted">Last successful sync: {queue.lastSuccessAt ? new Date(queue.lastSuccessAt).toLocaleString() : 'Not synced yet'}</p></div><div className="card"><h2>Export</h2><div className="tabs"><button className="btn light" onClick={() => printConsolidated(consolidated)}>Print</button><button className="btn red" onClick={() => downloadXls('wooden-packing-consolidated-requirements.xls', consolidated)}>Download</button></div></div></section>
     <div style={{ height: 16 }} />
     <section className="card"><h2>Pending Wooden Packing</h2>{syncing && <div className="machine-row compact"><span>Syncing complete Zoho wooden packing queue</span><Badge>Live</Badge></div>}<div className="machine">{grouped.map(([so, items]) => <div className="machine-row" key={so}><div><strong>{so}</strong><p className="muted">{items[0]?.customerName}</p>{items.map((item) => <p key={item.id}>{item.itemName} — <strong>{item.requiredQuantity}</strong></p>)}</div><div className="wooden-status-list">{items.map((item) => <select key={item.id} className="status-select" value={statuses[item.id] || 'Required'} onChange={(event) => updateStatus(item, event.target.value as WoodenStatus)} aria-label={`Wooden packing status for ${item.itemName}`}><option>Required</option><option>Ordered</option><option>Completed</option></select>)}</div></div>)}</div></section>
   </>
@@ -74,7 +75,7 @@ function consolidateRows(rows: WoodenItem[], statuses: Record<string, WoodenStat
   const map = new Map<string, { itemName: string; totalQuantity: number; salesOrders: Set<string>; customers: Set<string>; statuses: Set<string> }>()
   for (const row of rows) {
     const status = statuses[row.id] || 'Required'
-    if (status === 'Ordered') continue
+    if (status !== 'Required') continue
     const key = row.itemName.trim().toLowerCase()
     const entry = map.get(key) || { itemName: row.itemName, totalQuantity: 0, salesOrders: new Set<string>(), customers: new Set<string>(), statuses: new Set<string>() }
     entry.totalQuantity += Number(row.requiredQuantity || 0)
