@@ -75,6 +75,16 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .btn.green { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 16px 32px rgba(22,163,74,.20); }
 .btn.light { background: rgba(255,255,255,.86); color: #0f172a; border: 1px solid var(--line); box-shadow: 0 10px 24px rgba(15,23,42,.06); }
 .btn.full { width: 100%; }
+.unit-action { min-height: 36px; padding: 0 12px; border-radius: 999px; font-size: 12px; }
+.stage-tracker { margin: 12px 0 18px; padding: 16px; border: 1px solid var(--line); border-radius: 22px; background: rgba(248,250,252,.82); }
+.stage-bar { height: 8px; border-radius: 999px; background: #e2e8f0; overflow: hidden; margin-bottom: 12px; }
+.stage-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #94a3b8, #2563eb, #16a34a); transition: width .2s ease; }
+.stage-steps { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.stage-step { display: grid; gap: 6px; justify-items: center; text-align: center; color: #94a3b8; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
+.stage-step i { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 999px; background: #e2e8f0; color: #64748b; font-style: normal; }
+.stage-step.done { color: #334155; }
+.stage-step.done i { background: #dbeafe; color: #1e40af; }
+.stage-step.active i { background: #0f172a; color: #fff; box-shadow: 0 8px 18px rgba(15,23,42,.18); }
 .mobile-cards, .mobile-stage-card { display: none; }
 .mobile-order-card { display: grid; gap: 12px; }
 .meta-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
@@ -287,6 +297,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .search-panel, .user-add { grid-template-columns: 1fr; }
   .donut-wrap { grid-template-columns: 1fr; justify-items: center; }
   .unit-grid { grid-template-columns: 1fr; }
+  .stage-tracker { padding: 12px; overflow-x: auto; }
+  .stage-steps { min-width: 560px; }
+  .unit-action { width: 100%; }
   .modal-backdrop { padding: 10px; align-items: start; }
   .order-modal { max-height: 96svh; border-radius: 22px; }
   .modal-actions { justify-content: stretch; }

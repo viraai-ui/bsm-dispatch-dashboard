@@ -33,6 +33,8 @@ const PROCESSED_ORDERS_KEY = 'bsm.processed.orders.v1'
 export function OrdersClient({ orders, live = false }: { orders: Order[]; live?: boolean }) {
   const [rows, setRows] = useState<Order[]>(orders)
   const [active, setActive] = useState<Order | null>(null)
+  const [activeStage, setActiveStage] = useState<OrderStage>('open')
+  const [activeWorkflow, setActiveWorkflow] = useState<OrderWorkflow | null>(null)
   const [loadingId, setLoadingId] = useState<string | null>(null)
   const [syncing, setSyncing] = useState(false)
   const [error, setError] = useState('')
@@ -98,7 +100,10 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       const orderData = json.data.order as Order
       const workflowResponse = await fetch(`/api/workflow/orders/${orderData.id}`, { cache: 'no-store' })
       const workflowJson = await workflowResponse.json()
-      setActive(applyWorkflow(orderData, workflowJson.data?.workflow || null))
+      const workflow = workflowJson.data?.workflow || null
+      setActiveWorkflow(workflow)
+      setActiveStage(stageByOrder[order.id] || stageByOrder[orderData.id] || (workflow?.status === 'processed' ? 'processed' : 'open'))
+      setActive(applyWorkflow(orderData, workflow))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not open order')
     } finally {
@@ -107,19 +112,21 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   }
   return <>
     <section className="card"><div className="modal-section-title"><div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div><button className="btn red" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div>{syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}{notice && <div className="form-success">{notice}</div>}{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}>{stageLabel(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card" key={o.id}><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="meta-grid"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Status</span><strong>{stageLabel(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}</strong></div></div><button className="btn light full" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></article>)}</div></section>
-    {active && <OrderModal order={active} onClose={() => setActive(null)} />}
+    {active && <OrderModal order={active} stage={activeStage} workflow={activeWorkflow} onClose={() => setActive(null)} />}
   </>
 }
 
-function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
+function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: OrderStage; workflow: OrderWorkflow | null; onClose: () => void }) {
   const [selected, setSelected] = useState(() => new Set(order.machines.filter((m) => m.selectedForBatch).map((m) => m.id)))
   const [machines, setMachines] = useState(order.machines)
-  const [qrCodes, setQrCodes] = useState<Record<string, string>>({})
+  const [qrCodes, setQrCodes] = useState<Record<string, string>>(() => initialQrCodes(order, workflow))
   const [generating, setGenerating] = useState(false)
   const [processed, setProcessed] = useState(false)
   const [message, setMessage] = useState('')
   const toggle = (id: string) => setSelected((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next })
   const selectedCount = selected.size
+  const modalStage = processed ? 'processed' : stage
+  const canDownloadQr = modalStage !== 'closed'
 
   const generateSelected = async () => {
     if (!selectedCount) return
@@ -162,13 +169,34 @@ function OrderModal({ order, onClose }: { order: Order; onClose: () => void }) {
     setMessage('QR Not Required saved. You can now process this order.')
   }
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={processed ? 'green' : machines.every((m) => m.serialNumber) ? 'green' : machines.some((m) => m.serialNumber) ? 'amber' : 'blue'}>{processed ? 'Processed' : machines.every((m) => m.serialNumber) ? 'QR Generated' : machines.some((m) => m.serialNumber) ? 'Partially Generated' : 'Open'}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
     {message && <div className="form-error">{message}</div>}
+    <StageTracker stage={modalStage} />
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
-    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small>{qrCodes[m.id] && <img className="unit-qr" src={qrCodes[m.id]} alt={`QR for ${m.serialNumber}`} />}</span><Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'View QR' : 'Not Generated'}</Badge></label>)}</div></section>
+    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div></section>
     <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating…' : `Generate QR & Serial for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={processOrder}>{processed ? 'Processed' : 'Process Order'}</button></section>
   </section></div>
+}
+
+
+const STAGE_FLOW: OrderStage[] = ['open', 'processed', 'packed', 'media_uploaded', 'dispatched', 'closed']
+
+function StageTracker({ stage }: { stage: OrderStage }) {
+  const current = Math.max(0, STAGE_FLOW.indexOf(stage))
+  return <section className="stage-tracker" aria-label="Order stage timeline">
+    <div className="stage-bar"><span style={{ width: `${(current / (STAGE_FLOW.length - 1)) * 100}%` }} /></div>
+    <div className="stage-steps">{STAGE_FLOW.map((item, index) => <div key={item} className={`stage-step ${index <= current ? 'done' : ''} ${item === stage ? 'active' : ''}`}><i>{index + 1}</i><strong>{stageLabel(item)}</strong></div>)}</div>
+  </section>
+}
+
+function initialQrCodes(order: Order, workflow: OrderWorkflow | null) {
+  const codes: Record<string, string> = {}
+  for (const machine of order.machines) {
+    const saved = workflow?.machines?.[machine.id]?.qrCode || readMachineRecords().find((record) => record.serialNumber === machine.serialNumber)?.qrCode
+    if (saved) codes[machine.id] = saved
+  }
+  return codes
 }
 
 function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
