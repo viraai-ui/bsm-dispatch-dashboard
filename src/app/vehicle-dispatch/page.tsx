@@ -11,9 +11,9 @@ export default async function VehicleDispatchPage() {
   const media = await readMediaProofStore()
   const dispatch = await readDispatchStore()
   const ready = orders.filter((order) => media.records[order.id]?.submittedAt && !dispatch.dispatched[order.id])
-  return <DashboardShell active="Vehicle / Dispatch">
+  return <DashboardShell active="Vehicle & Transportation">
     <main className="vehicle-launcher-page">
-      <section className="vehicle-launcher-hero"><h1 className="h1">Vehicle / Dispatch</h1></section>
+      <section className="vehicle-launcher-hero"><h1 className="h1">Vehicle & Transportation</h1></section>
       <VehicleLauncherClient initialOrders={ready} />
     </main>
   </DashboardShell>

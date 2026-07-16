@@ -11,7 +11,7 @@ export function MobileMenu({ nav, active }: { nav: NavItem[]; active: string }) 
     <>
       <div className="mobile-appbar">
         <a className="mobile-brand" href="/" aria-label="BSM Dispatch home">
-          <span className="mobile-logo">BSM</span>
+          <img className="mobile-logo bsm-brand-logo" src="/brand/bsm-logo.png" alt="BSM" />
           <span>
             <strong>Dispatch</strong>
             <small>Dashboard</small>

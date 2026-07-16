@@ -45,7 +45,7 @@ export function PackagingTvClient() {
   }
 
   return <main className="packaging-tv-light">
-    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Packaging TV</h1></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div></header>
+    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
     <div className="packaging-dispatch-grid">

@@ -7,9 +7,9 @@ const nav: NavItem[] = [
   { label: 'Dashboard', href: '/' },
   { label: 'Orders', href: '/orders' },
   { label: 'Wooden Packing', href: '/wooden-packing' },
-  { label: 'Packaging TV', href: '/packaging-tv' },
-  { label: 'Media Proof', href: '/media-proof' },
-  { label: 'Vehicle / Dispatch', href: '/vehicle-dispatch' },
+  { label: 'Dispatch View', href: '/packaging-tv' },
+  { label: 'Video Upload', href: '/media-proof' },
+  { label: 'Vehicle & Transportation', href: '/vehicle-dispatch' },
   { label: 'Database', href: '/database' },
   { label: 'Settings', href: '/settings' },
 ]
@@ -22,7 +22,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
     {!dispatchOnly && <MobileMenu nav={visibleNav} active={active} />}
     {!dispatchOnly && <aside className="side">
       <div className="brand">
-        <div className="logo">BSM</div>
+        <img className="logo bsm-brand-logo" src="/brand/bsm-logo.png" alt="BSM" />
         <div>
           <strong>Dispatch</strong>
           <div className="muted">Dashboard</div>

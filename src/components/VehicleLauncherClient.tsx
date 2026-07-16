@@ -34,6 +34,18 @@ export function VehicleLauncherClient({ initialOrders = [] }: { initialOrders?: 
     if (response.ok && json.ok) setOrders((prev) => prev.filter((item) => item.id !== order.id))
   }
 
+  if (active) return <section className="vehicle-app-view" aria-label={`${active.name} booking app`}>
+    <div className="vehicle-app-toolbar">
+      <button className="btn light" type="button" onClick={() => setActive(null)}>← Back</button>
+      <div>
+        <h2>{active.name}</h2>
+        <span>{active.url}</span>
+      </div>
+      <a className="btn red" href={active.url} target="_blank" rel="noreferrer">Open New Tab</a>
+    </div>
+    <iframe key={active.url} src={active.url} title={`${active.name} booking app`} className="vehicle-booking-frame" />
+  </section>
+
   return <>
     <section className="card" style={{ marginBottom: 16 }}><h2>Ready for Dispatch</h2><div className="machine">{orders.length ? orders.map((order) => <div className="machine-row compact" key={order.id}><span><strong>{order.salesOrderNumber}</strong> · {order.customerName}</span><button className="btn red" onClick={() => markDispatched(order)}>Mark Dispatched</button></div>) : <div className="machine-row compact"><span>No orders ready</span><Badge tone="green">Clear</Badge></div>}</div></section>
     <section className="vehicle-provider-grid" aria-label="Vehicle booking applications">
@@ -46,14 +58,6 @@ export function VehicleLauncherClient({ initialOrders = [] }: { initialOrders?: 
         </div>
         <button className="btn red vehicle-open-btn" type="button" onClick={() => setActive(provider)}>{provider.button}</button>
       </article>)}
-    </section>
-
-    <section className="vehicle-frame-card" aria-label="Embedded vehicle booking app">
-      <div className="vehicle-frame-head">
-        <h2>{active ? active.name : 'Booking App'}</h2>
-        <span>{active ? active.url : ''}</span>
-      </div>
-      {active ? <iframe key={active.url} src={active.url} title={`${active.name} booking app`} className="vehicle-booking-frame" /> : <div className="vehicle-frame-empty">Select Porter or Rapido</div>}
     </section>
   </>
 }

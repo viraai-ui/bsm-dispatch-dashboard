@@ -6,5 +6,5 @@ export const dynamic = 'force-dynamic'
 
 export default async function MediaProofPage() {
   const { orders, records } = await listMediaProofOrders()
-  return <DashboardShell active="Media Proof"><MediaProofClient initialOrders={orders} initialRecords={records} /></DashboardShell>
+  return <DashboardShell active="Video Upload"><MediaProofClient initialOrders={orders} initialRecords={records} /></DashboardShell>
 }

@@ -31,6 +31,7 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .side { background: linear-gradient(180deg, #0f172a, #111827); color: #fff; padding: 24px; position: sticky; top: 0; height: 100svh; min-width: 0; display: flex; flex-direction: column; overflow: hidden; }
 .brand { display: flex; gap: 12px; align-items: center; margin-bottom: 28px; flex: 0 0 auto; }
 .logo { width: 48px; height: 48px; flex: 0 0 48px; border-radius: 16px; background: #fff; color: var(--red); display: grid; place-items: center; font-weight: 950; box-shadow: 0 18px 40px rgba(0,0,0,.22); }
+.bsm-brand-logo { object-fit: contain; padding: 7px; }
 .nav { display: grid; gap: 7px; min-height: 0; overflow-y: auto; padding-right: 2px; }
 .nav a { display: flex; align-items: center; padding: 10px 14px; border-radius: 14px; color: #cbd5e1; font-weight: 750; }
 .nav a:hover, .nav a.active { background: rgba(255,255,255,.1); color: #fff; }
@@ -248,12 +249,11 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .vehicle-provider-copy p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; font-weight: 700; }
 .vehicle-open-btn { width: 100%; min-height: 54px; border-radius: 18px; font-size: 16px; }
 .vehicle-provider-card.rapido .vehicle-open-btn { background: linear-gradient(135deg, #111827, #334155); box-shadow: 0 16px 32px rgba(15,23,42,.16); }
-.vehicle-frame-card { width: min(100%, 1120px); margin: 0 auto; border: 1px solid rgba(226,232,240,.9); border-radius: 32px; background: rgba(255,255,255,.76); backdrop-filter: blur(22px); box-shadow: 0 24px 72px rgba(15,23,42,.09); overflow: hidden; }
-.vehicle-frame-head { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 18px 20px; border-bottom: 1px solid rgba(226,232,240,.9); background: rgba(248,250,252,.74); }
-.vehicle-frame-head h2 { margin: 0; font-size: 22px; letter-spacing: -.04em; }
-.vehicle-frame-head span { color: var(--muted); font-weight: 800; }
-.vehicle-booking-frame { display: block; width: 100%; height: min(68svh, 760px); min-height: 520px; border: 0; background: #fff; }
-.vehicle-frame-empty { min-height: 280px; display: grid; place-items: center; padding: 28px; color: var(--muted); font-weight: 850; text-align: center; background: linear-gradient(135deg, rgba(248,250,252,.9), rgba(255,255,255,.72)); }
+.vehicle-app-view { width: 100%; min-height: calc(100svh - 140px); display: grid; grid-template-rows: auto minmax(520px, 1fr); border: 1px solid rgba(226,232,240,.9); border-radius: 32px; background: rgba(255,255,255,.86); backdrop-filter: blur(22px); box-shadow: 0 24px 72px rgba(15,23,42,.09); overflow: hidden; }
+.vehicle-app-toolbar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 16px; border-bottom: 1px solid rgba(226,232,240,.9); background: rgba(248,250,252,.86); }
+.vehicle-app-toolbar h2 { margin: 0; font-size: 22px; letter-spacing: -.04em; }
+.vehicle-app-toolbar span { display: block; margin-top: 3px; color: var(--muted); font-weight: 800; font-size: 12px; }
+.vehicle-booking-frame { display: block; width: 100%; height: 100%; min-height: 650px; border: 0; background: #fff; }
 .passport { max-width: 960px; margin: 0 auto; }
 .passport-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
 .back-link { margin-bottom: 16px; }
@@ -312,7 +312,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .mobile-appbar { display: flex; position: fixed; top: 10px; left: 10px; right: 10px; z-index: 50; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; min-height: 58px; border: 1px solid rgba(255,255,255,.78); border-radius: 24px; background: rgba(255,255,255,.72); backdrop-filter: blur(22px); box-shadow: 0 20px 55px rgba(15,23,42,.14); }
   .mobile-brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
   .mobile-brand { min-height: 44px; }
-  .mobile-logo { width: 42px; height: 42px; border-radius: 15px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--red), #fb7185); font-weight: 950; box-shadow: 0 12px 28px rgba(200,16,46,.28); }
+  .mobile-logo { width: 42px; height: 42px; border-radius: 15px; display: block; color: #fff; background: #fff; font-weight: 950; box-shadow: 0 12px 28px rgba(200,16,46,.20); }
   .mobile-brand strong { display: block; line-height: 1; }
   .mobile-brand small { display: block; color: var(--muted); font-weight: 700; margin-top: 3px; }
   .dots-trigger { width: 48px; height: 48px; border: 0; border-radius: 18px; background: #0f172a; display: grid; place-items: center; gap: 0; box-shadow: 0 14px 30px rgba(15,23,42,.24); }
@@ -362,6 +362,11 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .vehicle-launcher-page { align-content: start; padding: 22px 0; }
   .vehicle-provider-grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; }
   .vehicle-provider-card { min-height: 330px; }
+  .vehicle-app-view { border-radius: 26px; min-height: calc(100svh - 100px); grid-template-rows: auto minmax(520px, 1fr); }
+  .vehicle-app-toolbar { grid-template-columns: 1fr; align-items: stretch; }
+  .vehicle-app-toolbar .btn { width: 100%; }
+  .vehicle-app-toolbar span { overflow-wrap: anywhere; }
+  .vehicle-booking-frame { min-height: 620px; }
   .top, .passport-header { flex-direction: column; }
   .top .btn { width: 100%; }
   .h1 { font-size: 30px; }
