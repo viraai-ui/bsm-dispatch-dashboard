@@ -132,7 +132,6 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const [machines, setMachines] = useState(order.machines)
   const [qrCodes, setQrCodes] = useState<Record<string, string>>(() => initialQrCodes(order, workflow))
   const [generating, setGenerating] = useState(false)
-  const [printing, setPrinting] = useState(false)
   const [processed, setProcessed] = useState(false)
   const [message, setMessage] = useState('')
   const toggle = (id: string) => setSelected((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next })
@@ -166,40 +165,6 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     setGenerating(false)
   }
 
-  const printBarcodes = async () => {
-    if (!machines.length) return
-    setPrinting(true)
-    setMessage('')
-    try {
-      const date = new Date().toISOString().slice(0, 10)
-      const updated: MachineUnit[] = []
-      const nextQrCodes: Record<string, string> = { ...qrCodes }
-      const workflowMachines: MachineWorkflow[] = []
-
-      for (const machine of machines) {
-        const serialNumber = machine.serialNumber || nextSerialNumber()
-        const qrToken = machine.qrToken || serialNumber
-        const nextMachine = { ...machine, serialNumber, qrToken, status: 'QR Generated' as const, warrantyStart: machine.warrantyStart || date }
-        const qrPayload = buildQrPayload({ order, machine: nextMachine, date })
-        const qrCode = nextQrCodes[machine.id] || await QRCode.toDataURL(qrPayload, { margin: 1, width: 480 })
-        nextQrCodes[machine.id] = qrCode
-        updated.push(nextMachine)
-        workflowMachines.push({ machineUnitId: nextMachine.id, lineItemId: nextMachine.lineItemId, serialNumber, qrCode, qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() })
-        saveMachineRecord({ order, machine: nextMachine, qrCode, date })
-      }
-
-      await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
-      setMachines(updated)
-      setQrCodes(nextQrCodes)
-      await generateBarcodePdf({ order, machines: updated, qrCodes: nextQrCodes })
-      setMessage(`Barcode PDF generated with ${updated.length} page${updated.length === 1 ? '' : 's'}.`)
-    } catch (err) {
-      setMessage(err instanceof Error ? err.message : 'Could not generate barcode PDF')
-    } finally {
-      setPrinting(false)
-    }
-  }
-
   const processOrder = async () => {
     setMessage('')
     const incomplete = machines.filter((machine) => !machine.serialNumber && machine.status !== 'QR Printed')
@@ -222,7 +187,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
     <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div></section>
-    <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn light" disabled={!machines.length || generating || printing} onClick={printBarcodes}>{printing ? 'Generating PDF…' : 'Print Saved Barcodes'}</button><button className="btn red" disabled={!selectedCount || generating || processed || printing} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed || printing} onClick={processOrder}>{processed ? 'Processed' : 'Process Order'}</button></section>
+    <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={processOrder}>{processed ? 'Processed' : 'Process Order'}</button></section>
   </section></div>
 }
 
@@ -261,9 +226,6 @@ async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; 
 
     doc.setFillColor(255, 255, 255)
     doc.rect(0, 0, widthMm, heightMm, 'F')
-    doc.setDrawColor(0, 0, 0)
-    doc.setLineWidth(1.25)
-    doc.roundedRect(0.9, 0.9, 73.2, 48.2, 2.4, 2.4)
 
     doc.setTextColor(0, 0, 0)
     if (logo) {
@@ -309,28 +271,23 @@ async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; 
 
     doc.roundedRect(33.0, 37.6, 38.5, 5.2, 0.9, 0.9)
     doc.setFont('helvetica', 'bold')
-    doc.setFontSize(4.7)
-    doc.text('HELPLINE', 37.6, 41.1, { align: 'center' })
+    doc.setFontSize(4.2)
+    doc.text('HELPLINE', 39.2, 41.1, { align: 'center' })
     doc.setLineWidth(0.35)
-    doc.line(43.2, 38.5, 43.2, 42.0)
+    doc.line(47.0, 38.5, 47.0, 42.0)
     doc.setFontSize(7.2)
-    doc.text('9310823242', 57.3, 41.25, { align: 'center' })
+    doc.text('9310823242', 59.3, 41.25, { align: 'center' })
 
     doc.setFillColor(0, 0, 0)
     doc.rect(0.9, 44.2, 73.2, 4.9, 'F')
-    if (logo) {
-      doc.setFillColor(255, 255, 255)
-      doc.roundedRect(3.0, 45.25, 7.0, 2.8, 0.45, 0.45, 'F')
-      doc.addImage(logo, 'PNG', 3.55, 45.65, 5.9, 1.9)
-    } else {
-      doc.setTextColor(255, 255, 255)
-      doc.setFontSize(3.8)
-      doc.text('BSM', 3.2, 47.3)
-    }
+    doc.setDrawColor(255, 255, 255)
+    doc.setLineWidth(0.75)
+    doc.line(4.0, 46.8, 5.2, 47.8)
+    doc.line(5.2, 47.8, 7.4, 45.7)
     doc.setTextColor(255, 255, 255)
     doc.setFont('helvetica', 'bold')
     doc.setFontSize(3.9)
-    doc.text('KEEP THIS LABEL INTACT FOR SERVICE & WARRANTY', 12.0, 47.4)
+    doc.text('KEEP THIS LABEL INTACT FOR SERVICE & WARRANTY', 10.0, 47.4)
   })
 
   doc.save(`${safeFileName(order.salesOrderNumber)}-barcodes.pdf`)
