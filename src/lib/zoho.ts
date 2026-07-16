@@ -124,6 +124,23 @@ function buildUnits(order: any, lineItems: OrderLineItem[]): MachineUnit[] {
   return units
 }
 
+function formatZohoAddress(address: any) {
+  if (!address) return undefined
+  const parts = [
+    address.address,
+    address.street2,
+    address.city,
+    address.state,
+    address.zip || address.zipcode || address.pin_code || address.postal_code,
+    address.country,
+  ].map((part) => String(part || '').trim()).filter(Boolean)
+  return [...new Set(parts)].join(', ') || undefined
+}
+
+function orderShippingAddress(order: any) {
+  return formatZohoAddress(order.shipping_address) || formatZohoAddress(order.billing_address)
+}
+
 function mapOrderSummary(order: any): Order {
   return {
     id: String(order.salesorder_id),
@@ -133,7 +150,7 @@ function mapOrderSummary(order: any): Order {
     customerName: String(order.customer_name || ''),
     customerEmail: order.email,
     customerPhone: order.phone,
-    shippingAddress: order.shipping_address?.address || order.shipping_address?.street2 || order.billing_address?.address,
+    shippingAddress: orderShippingAddress(order),
     salesperson: order.salesperson_name || order.salesperson || order.sales_person_name,
     deliveryDate: String(order.shipment_date || order.delivery_date || order.date || ''),
     dashboardStatus: 'Not Generated',
@@ -154,7 +171,7 @@ function mapOrder(order: any): Order {
     customerName: String(order.customer_name || ''),
     customerEmail: order.email,
     customerPhone: order.phone,
-    shippingAddress: order.shipping_address?.address || order.shipping_address?.street2 || order.billing_address?.address,
+    shippingAddress: orderShippingAddress(order),
     salesperson: order.salesperson_name || order.salesperson || order.sales_person_name,
     deliveryDate: String(order.shipment_date || order.delivery_date || order.date || ''),
     dashboardStatus: machines.length ? 'Not Generated' : 'Review Required',

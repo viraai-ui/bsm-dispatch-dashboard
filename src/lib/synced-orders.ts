@@ -59,6 +59,7 @@ async function performSync() {
   try {
     const fetched = await fetchZohoConfirmedOrders()
     if (!Array.isArray(fetched)) throw new Error('Invalid Zoho response')
+    if (!fetched.length) throw new Error('Zoho sync returned zero confirmed sales orders; keeping last saved data')
     if (fetched.some((order) => !order.id || !order.zohoSalesOrderId)) throw new Error('Zoho sync returned invalid sales order IDs')
     const orders: Record<string, Order> = {}
     for (const order of fetched) orders[order.id] = order
