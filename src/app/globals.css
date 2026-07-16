@@ -28,12 +28,12 @@ button { cursor: pointer; }
 h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 
 .shell { display: grid; grid-template-columns: 280px minmax(0, 1fr); min-height: 100svh; width: 100%; }
-.side { background: linear-gradient(180deg, #0f172a, #111827); color: #fff; padding: 24px; position: sticky; top: 0; height: 100svh; min-width: 0; display: flex; flex-direction: column; overflow: hidden; }
-.brand { display: flex; gap: 12px; align-items: center; margin-bottom: 28px; flex: 0 0 auto; }
+.side { background: linear-gradient(180deg, #0f172a, #111827); color: #fff; padding: 24px; position: sticky; top: 0; height: 100svh; min-width: 0; display: flex; flex-direction: column; overflow-y: auto; overflow-x: hidden; }
+.brand { display: flex; gap: 12px; align-items: center; margin-bottom: 22px; flex: 0 0 auto; }
 .logo { width: 48px; height: 48px; flex: 0 0 48px; border-radius: 16px; background: #fff; color: var(--red); display: grid; place-items: center; font-weight: 950; box-shadow: 0 18px 40px rgba(0,0,0,.22); }
 .bsm-brand-logo { object-fit: contain; padding: 7px; }
-.nav { display: grid; gap: 7px; min-height: 0; overflow-y: auto; padding-right: 2px; }
-.nav a { display: flex; align-items: center; padding: 10px 14px; border-radius: 14px; color: #cbd5e1; font-weight: 750; }
+.nav { display: grid; gap: 6px; min-height: 0; overflow-y: auto; padding-right: 2px; flex: 1 1 auto; align-content: start; }
+.nav a { display: flex; align-items: center; padding: 9px 14px; border-radius: 14px; color: #cbd5e1; font-weight: 750; line-height: 1.22; }
 .nav a:hover, .nav a.active { background: rgba(255,255,255,.1); color: #fff; }
 .side-user { margin-top: auto; display: grid; gap: 8px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); flex: 0 0 auto; }
 .side-user span { color: #cbd5e1; font-size: 13px; font-weight: 800; }
