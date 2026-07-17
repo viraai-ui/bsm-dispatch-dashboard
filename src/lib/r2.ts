@@ -58,6 +58,36 @@ export function createR2UploadTarget(key: string, contentType: string, expiresIn
   return { key, uploadUrl, publicUrl: `/api/r2/view?key=${encodeURIComponent(key)}`, expiresAt: mediaExpiresAt(now), storageProvider: 'r2' }
 }
 
+export async function ensureR2Cors() {
+  const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
+  const now = new Date()
+  const amzDate = toAmzDate(now)
+  const dateStamp = amzDate.slice(0, 8)
+  const host = new URL(endpoint).host
+  const canonicalUri = `/${bucket}`
+  const credentialScope = `${dateStamp}/${REGION}/${SERVICE}/aws4_request`
+  const body = `<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><CORSRule><AllowedOrigin>https://dispatch.bsmindia.com</AllowedOrigin><AllowedOrigin>https://bsm-dispatch-dashboard.vercel.app</AllowedOrigin><AllowedOrigin>http://localhost:3000</AllowedOrigin><AllowedMethod>GET</AllowedMethod><AllowedMethod>PUT</AllowedMethod><AllowedMethod>HEAD</AllowedMethod><AllowedHeader>*</AllowedHeader><ExposeHeader>ETag</ExposeHeader><MaxAgeSeconds>3600</MaxAgeSeconds></CORSRule></CORSConfiguration>`
+  const payloadHash = sha256Hex(body)
+  const canonicalQuery = 'cors='
+  const canonicalHeaders = `host:${host}\nx-amz-content-sha256:${payloadHash}\nx-amz-date:${amzDate}\n`
+  const signedHeaders = 'host;x-amz-content-sha256;x-amz-date'
+  const canonicalRequest = ['PUT', canonicalUri, canonicalQuery, canonicalHeaders, signedHeaders, payloadHash].join('\n')
+  const stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, sha256Hex(canonicalRequest)].join('\n')
+  const signature = hmacHex(signingKey(secretAccessKey, dateStamp), stringToSign)
+  const response = await fetch(`${endpoint}${canonicalUri}?cors`, {
+    method: 'PUT',
+    headers: {
+      Authorization: `AWS4-HMAC-SHA256 Credential=${accessKeyId}/${credentialScope}, SignedHeaders=${signedHeaders}, Signature=${signature}`,
+      'content-type': 'application/xml',
+      'x-amz-content-sha256': payloadHash,
+      'x-amz-date': amzDate,
+    },
+    body,
+    cache: 'no-store',
+  })
+  if (!response.ok) throw new Error(`Cloudflare R2 CORS setup failed: HTTP ${response.status}`)
+}
+
 export function createR2ViewUrl(key: string, expiresInSeconds = 3600) {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
