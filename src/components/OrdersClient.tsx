@@ -231,6 +231,11 @@ async function generateBarcodePdf({ order, machines, qrCodes }: { order: Order; 
     doc.setFillColor(255, 255, 255)
     doc.rect(0, 0, widthMm, heightMm, 'F')
 
+    // Reset drawing state on every page. jsPDF keeps draw/fill/text colors
+    // between pages; the white footer tick on page 1 was making later label
+    // borders and divider lines print white/invisible.
+    doc.setDrawColor(0, 0, 0)
+    doc.setLineWidth(0.35)
     doc.setTextColor(0, 0, 0)
     if (logo) {
       doc.addImage(logo, 'PNG', 4.0, 4.6, 25.0, 7.2)
