@@ -290,7 +290,54 @@
     "1154219000034058018": {
       "salesOrderId": "1154219000034058018",
       "salesOrderNumber": "SO-07459",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "urgent",
+      "processedAt": "2026-07-17T09:29:18.505Z",
+      "processedOrder": {
+        "id": "1154219000034058018",
+        "zohoSalesOrderId": "1154219000034058018",
+        "salesOrderNumber": "SO-07459",
+        "status": "open",
+        "customerName": "BAMBOOZZ INDUSTRY",
+        "shippingAddress": "BAWALI, SOUTH BAWALI, BAWALI, NODAKHALI, SOUTH 24 PARGANAS,, South Twenty Four Parganas, West Bengal, 743384",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-07-13",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034058021",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034058018-1154219000034058021-1",
+            "unitNumber": 1,
+            "serialNumber": "262700006",
+            "qrToken": "262700006",
+            "orderId": "1154219000034058018",
+            "lineItemId": "1154219000034058021",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "BAMBOOZZ INDUSTRY",
+            "salesOrderNumber": "SO-07459",
+            "deliveryDate": "2026-07-13",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-17"
+          }
+        ]
+      },
       "machines": {
         "1154219000034058018-1154219000034058021-1": {
           "machineUnitId": "1154219000034058018-1154219000034058021-1",
