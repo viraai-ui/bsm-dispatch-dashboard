@@ -37,11 +37,11 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { 
     <header className="top compact-top"><div><h1 className="h1">Video Upload</h1></div><button className="btn red" onClick={loadQueue} disabled={syncing}>{syncing ? 'Syncing…' : 'Refresh'}</button></header>
     {error && <div className="form-error">{error}</div>}
     <section className="card"><h2>Media Queue</h2>{syncing && <div className="machine-row compact"><span>Loading media queue</span><Badge>Live</Badge></div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Delivery</th><th>Media Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.customerName}</td><td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{orders.map((order) => <article className="card mobile-order-card" key={order.id}><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><Badge tone={mediaTone(status(order))}>{status(order)}</Badge><button className="btn light full" onClick={() => setActive(order)}>View</button></article>)}</div></section>
-    {active && <MediaModal order={active} record={records[active.id]} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} />}
+    {active && <MediaModal order={active} record={records[active.id]} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} onSubmitted={(orderId) => { setOrders((prev) => prev.filter((order) => order.id !== orderId)); setActive(null) }} />}
   </>
 }
 
-function MediaModal({ order, record, onClose, onChanged }: { order: Order; record?: MediaProofRecord; onClose: () => void; onChanged: (record: MediaProofRecord) => void }) {
+function MediaModal({ order, record, onClose, onChanged, onSubmitted }: { order: Order; record?: MediaProofRecord; onClose: () => void; onChanged: (record: MediaProofRecord) => void; onSubmitted: (orderId: string) => void }) {
   const [busy, setBusy] = useState('')
   const [message, setMessage] = useState('')
   const [progressByMachine, setProgressByMachine] = useState<Record<string, number>>({})
@@ -69,6 +69,7 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
       if (!response.ok || !json.ok) throw new Error(json.error || 'Submit failed')
       onChanged(json.data.record)
       setMessage('Submitted successfully')
+      onSubmitted(order.id)
     } catch (err) { setMessage(err instanceof Error ? err.message : 'Submit failed') }
     finally { setBusy('') }
   }
@@ -82,6 +83,7 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
       if (!response.ok || !json.ok) throw new Error(json.error || 'Proceed without video failed')
       onChanged(json.data.record)
       setMessage('Moved to delivery stage')
+      onSubmitted(order.id)
     } catch (err) { setMessage(err instanceof Error ? err.message : 'Proceed without video failed') }
     finally { setBusy('') }
   }

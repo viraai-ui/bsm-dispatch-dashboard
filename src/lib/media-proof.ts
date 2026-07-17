@@ -47,7 +47,10 @@ export async function cleanupExpiredMediaProofs() {
 export async function listMediaProofOrders() {
   const processed = await listProcessedOrders()
   const store = await readMediaProofStore()
-  const orders = processed.map((item) => item.processedOrder).filter((order): order is Order => Boolean(order))
+  const orders = processed
+    .map((item) => item.processedOrder)
+    .filter((order): order is Order => Boolean(order))
+    .filter((order) => !store.records[order.id]?.submittedAt)
   return { orders, records: store.records }
 }
 
