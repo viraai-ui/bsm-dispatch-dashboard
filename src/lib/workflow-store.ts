@@ -16,6 +16,7 @@ export type OrderWorkflow = {
   salesOrderNumber: string
   status: 'open' | 'partially_generated' | 'qr_generated' | 'qr_not_required' | 'processed'
   processedAt?: string
+  dispatchPriority?: 'urgent' | 'regular'
   processedOrder?: Order
   machines: Record<string, MachineWorkflow>
 }

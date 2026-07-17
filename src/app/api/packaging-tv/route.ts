@@ -11,7 +11,10 @@ export async function GET() {
   if (!auth.ok) return auth.response
   const processed = await listProcessedOrders()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
-  const orders = processed.map((item) => item.processedOrder).filter((order): order is Order => Boolean(order)).filter((order) => !completed.completed[order.id])
+  const orders = processed
+    .filter((item) => Boolean(item.processedOrder))
+    .map((item) => ({ ...(item.processedOrder as Order), dispatchPriority: item.dispatchPriority || 'regular' }))
+    .filter((order) => !completed.completed[order.id])
   return apiOk({ orders, completedCount: Object.keys(completed.completed).length })
 }
 

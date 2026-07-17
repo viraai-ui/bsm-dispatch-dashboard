@@ -134,6 +134,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const [qrCodes, setQrCodes] = useState<Record<string, string>>(() => initialQrCodes(order, workflow))
   const [generating, setGenerating] = useState(false)
   const [processed, setProcessed] = useState(false)
+  const [priorityPrompt, setPriorityPrompt] = useState(false)
   const [message, setMessage] = useState('')
   const toggle = (id: string) => setSelected((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next })
   const selectedCount = selected.size
@@ -168,14 +169,19 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     setGenerating(false)
   }
 
-  const processOrder = async () => {
+  const openPriorityPrompt = () => {
     setMessage('')
     const incomplete = machines.filter((machine) => !machine.serialNumber && machine.status !== 'QR Printed')
     if (incomplete.length) { setMessage(`Cannot process. Incomplete: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`); return }
-    if (!window.confirm('Process this sales order and move it to Dispatch View?')) return
-    const workflow = await saveWorkflow(order.id, { action: 'process', order: { ...order, machines } })
+    setPriorityPrompt(true)
+  }
+
+  const processOrder = async (dispatchPriority: 'urgent' | 'regular') => {
+    setMessage('')
+    setPriorityPrompt(false)
+    const workflow = await saveWorkflow(order.id, { action: 'process', order: { ...order, machines }, dispatchPriority })
     setProcessed(true)
-    setMessage(`Processed successfully at ${new Date(workflow.data.workflow.processedAt).toLocaleString()}`)
+    setMessage(`${dispatchPriority === 'urgent' ? 'Urgent' : 'Regular'} order processed successfully at ${new Date(workflow.data.workflow.processedAt).toLocaleString()}`)
   }
 
   const proceedWithoutQr = async () => {
@@ -191,7 +197,8 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
     <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div><div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div></section>
-    <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={processOrder}>{processed ? 'Processed' : 'Process Order'}</button></section>
+    <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={openPriorityPrompt}>{processed ? 'Processed' : 'Process Order'}</button></section>
+    {priorityPrompt && <div className="modal-backdrop nested" role="dialog" aria-modal="true"><section className="card process-type-modal"><button className="drawer-close" onClick={() => setPriorityPrompt(false)}>×</button><h2>Please select the order type</h2><p className="muted">Should this order appear in Urgent Dispatch or Regular Dispatch?</p><div className="process-type-actions"><button className="btn red" onClick={() => processOrder('urgent')}>Urgent Order</button><button className="btn" onClick={() => processOrder('regular')}>Regular Order</button></div></section></div>}
   </section></div>
 }
 

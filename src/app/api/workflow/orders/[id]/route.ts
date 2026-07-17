@@ -39,9 +39,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       if (action === 'process') {
         const incomplete = order.machines.filter((machine) => !['generated', 'not_required'].includes(machines[machine.id]?.qrStatus || 'pending'))
         if (incomplete.length) throw new Error(`Incomplete machines: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
+        if (!['urgent', 'regular'].includes(String(body.dispatchPriority || ''))) throw new Error('Please select urgent or regular order type')
         status = 'processed'
       }
-      return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, processedAt: action === 'process' ? now : current?.processedAt, processedOrder: action === 'process' ? order : current?.processedOrder, machines }
+      return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, dispatchPriority: action === 'process' ? body.dispatchPriority : current?.dispatchPriority, processedAt: action === 'process' ? now : current?.processedAt, processedOrder: action === 'process' ? order : current?.processedOrder, machines }
     })
     return apiOk({ workflow })
   } catch (error) {

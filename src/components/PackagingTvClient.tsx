@@ -8,9 +8,10 @@ const PACKING_STATE_KEY = 'bsm.packing.state.v1'
 
 type PackingState = Record<string, { urgent?: boolean }>
 type MachineGroup = { itemName: string; serials: string[]; quantity: number; woodenPackingRequired: boolean }
+type DispatchOrder = Order & { dispatchPriority?: 'urgent' | 'regular' }
 
 export function PackagingTvClient() {
-  const [orders, setOrders] = useState<Order[]>([])
+  const [orders, setOrders] = useState<DispatchOrder[]>([])
   const [state, setState] = useState<PackingState>({})
   const [syncing, setSyncing] = useState(false)
   const [error, setError] = useState('')
@@ -55,11 +56,11 @@ export function PackagingTvClient() {
   </main>
 }
 
-function DispatchSection({ title, tone, orders, state, completeOrder }: { title: string; tone: 'urgent' | 'regular'; orders: Order[]; state: PackingState; completeOrder: (order: Order) => void }) {
+function DispatchSection({ title, tone, orders, state, completeOrder }: { title: string; tone: 'urgent' | 'regular'; orders: DispatchOrder[]; state: PackingState; completeOrder: (order: DispatchOrder) => void }) {
   return <section className={`packaging-section ${tone}`}><div className="packaging-section-head"><h2>{title}</h2><span>{orders.length}</span></div><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} />) : <div className="card packaging-empty">No active orders</div>}</div></section>
 }
 
-function OrderCard({ order, urgent, completeOrder }: { order: Order; urgent: boolean; completeOrder: (order: Order) => void }) {
+function OrderCard({ order, urgent, completeOrder }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void }) {
   const groups = groupMachines(order.machines)
   return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine Name</span><span>Serial Number</span><span>Quantity</span><span>Wooden Packing</span></div>{groups.map((group) => <div className="packaging-row" key={group.itemName}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>)}</div><b>{group.quantity}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
 }
@@ -75,7 +76,7 @@ function groupMachines(machines: MachineUnit[]) {
   }
   return [...map.values()]
 }
-function isUrgent(order: Order, state: PackingState) { return order.machines.some((machine) => state[machine.id]?.urgent) }
+function isUrgent(order: DispatchOrder, state: PackingState) { return order.dispatchPriority === 'urgent' || order.machines.some((machine) => state[machine.id]?.urgent) }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
