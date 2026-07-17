@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { MachineUnit, Order } from '@/types/domain'
 
@@ -14,27 +14,34 @@ export function PackagingTvClient() {
   const [orders, setOrders] = useState<DispatchOrder[]>([])
   const [state, setState] = useState<PackingState>({})
   const [syncing, setSyncing] = useState(false)
+  const syncingRef = useRef(false)
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
 
-  useEffect(() => { setState(readState()); void syncLocal() }, [])
+  useEffect(() => {
+    setState(readState())
+    void syncLocal()
+    const timer = window.setInterval(() => { void syncLocal(true) }, 15 * 60 * 1000)
+    return () => window.clearInterval(timer)
+  }, [])
 
   const sorted = useMemo(() => [...orders].sort((a, b) => dateValue(a.deliveryDate) - dateValue(b.deliveryDate)), [orders])
   const urgent = sorted.filter((order) => isUrgent(order, state))
   const regular = sorted.filter((order) => !isUrgent(order, state))
 
-  async function syncLocal() {
-    if (syncing) return
-    setSyncing(true); setError(''); setNotice('')
+  async function syncLocal(silent = false) {
+    if (syncingRef.current) return
+    syncingRef.current = true
+    setSyncing(true); setError(''); if (!silent) setNotice('')
     try {
       const response = await fetch('/api/packaging-tv', { cache: 'no-store' })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync Packaging TV')
       setOrders(json.data?.orders || [])
-      setNotice('Sync completed successfully.')
+      if (!silent) setNotice('Sync completed successfully.')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not sync Packaging TV')
-    } finally { setSyncing(false) }
+    } finally { syncingRef.current = false; setSyncing(false) }
   }
 
   async function completeOrder(order: Order) {
@@ -46,7 +53,7 @@ export function PackagingTvClient() {
   }
 
   return <main className="packaging-tv-light">
-    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn red" onClick={syncLocal} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div></header>
+    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1></div><div className="tabs packaging-sync-actions"><Badge tone="blue">Auto-sync 15m</Badge><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn red" onClick={() => syncLocal()} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
     <div className="packaging-dispatch-grid">
