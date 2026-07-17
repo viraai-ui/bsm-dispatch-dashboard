@@ -92,43 +92,43 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
 function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip">{files.map((file) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">View</a>{file.expiresAt && <small className="muted"> expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}</span>)}</div> }
 
 async function uploadVideoFile(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
-  try {
-    return await uploadDirectToR2(order, machineId, file, onProgress)
-  } catch {
-    const form = new FormData()
-    form.append('orderId', order.id)
-    form.append('machineId', machineId)
-    form.append('file', file)
-    return uploadWithProgress(form, onProgress)
-  }
+  // Videos must go directly to Cloudflare R2. The old server proxy fallback posts the
+  // entire video through a Vercel function, which returns a non-JSON 413/timeout page
+  // for real phone videos and surfaces as "server returned an invalid response".
+  return uploadDirectToR2(order, machineId, file, onProgress)
 }
 
 async function uploadDirectToR2(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
-  const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId, name: file.name, type: file.type }) })
-  const targetJson = await targetResponse.json()
+  const contentType = file.type || 'video/mp4'
+  const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId, name: file.name, type: contentType }) })
+  const targetJson = await parseJsonResponse(targetResponse, 'R2 upload target unavailable')
   if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'R2 upload target unavailable')
   const target = targetJson.data
-  await uploadBlobToR2(target.uploadUrl, file, onProgress)
+  if (target.corsReady === false) throw new Error(target.corsError || 'Cloudflare R2 bucket CORS is not configured for dispatch.bsmindia.com. Please add the R2 CORS policy and try again.')
+  await uploadBlobToR2(target.uploadUrl, file, contentType, onProgress)
   const registered = await fetch('/api/media-proof', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId, name: file.name, type: file.type, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt }),
+    body: JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId, name: file.name, type: contentType, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt }),
   })
-  const json = await registered.json()
+  const json = await parseJsonResponse(registered, 'Could not register R2 video')
   if (!registered.ok || !json.ok) throw new Error(json.error || 'Could not register R2 video')
   return json
 }
 
-function uploadBlobToR2(uploadUrl: string, file: File, onProgress: (percent: number) => void): Promise<void> {
+async function parseJsonResponse(response: Response, fallback: string): Promise<any> {
+  try { return await response.json() }
+  catch { return { ok: false, error: `${fallback}: server returned an invalid response (HTTP ${response.status})` } }
+}
+
+function uploadBlobToR2(uploadUrl: string, file: File, contentType: string, onProgress: (percent: number) => void): Promise<void> {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     xhr.open('PUT', uploadUrl)
-    xhr.setRequestHeader('content-type', file.type || 'application/octet-stream')
+    xhr.setRequestHeader('content-type', contentType)
     xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }
-    xhr.onload = () => { if (xhr.status >= 200 && xhr.status < 300) resolve(); else reject(new Error(`R2 upload failed: HTTP ${xhr.status}`)) }
-    xhr.onerror = () => reject(new Error('R2 upload failed: network error'))
+    xhr.onload = () => { if (xhr.status >= 200 && xhr.status < 300) resolve(); else reject(new Error(`Cloudflare R2 upload failed: HTTP ${xhr.status}. Check the R2 bucket CORS policy and presigned URL configuration.`)) }
+    xhr.onerror = () => reject(new Error('Cloudflare R2 upload failed before the request completed. This is usually caused by missing/incorrect R2 CORS for https://dispatch.bsmindia.com.'))
     xhr.send(file)
   })
 }
-
-function uploadWithProgress(form: FormData, onProgress: (percent: number) => void): Promise<any> { return new Promise((resolve, reject) => { const xhr = new XMLHttpRequest(); xhr.open('POST', '/api/media-proof/upload'); xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }; xhr.onload = () => { try { const json = JSON.parse(xhr.responseText || '{}'); if (xhr.status < 200 || xhr.status >= 300 || !json.ok) reject(new Error(json.error || 'Upload failed')); else resolve(json) } catch { reject(new Error('Upload failed: server returned an invalid response')) } }; xhr.onerror = () => reject(new Error('Upload failed: network error')); xhr.send(form) }) }
