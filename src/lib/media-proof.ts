@@ -3,6 +3,7 @@ import { uploadBufferToGithubMedia } from './github-media'
 import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
+import { buildR2Key, r2Configured, uploadBufferToR2 } from './r2'
 
 export type MediaUpload = {
   id: string
@@ -86,11 +87,18 @@ export async function saveMediaUploadBuffer(order: Order, machineId: string, upl
   const machine = order.machines.find((item) => item.id === machineId)
   const extension = upload.name.includes('.') ? upload.name.split('.').pop() : mimeExtension(upload.type)
   const generatedName = `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
-  let storage
+  let storage: any
   try {
-    storage = await uploadBufferToWorkDrive(generatedName, upload.buffer, upload.type)
+    if (r2Configured()) {
+      const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: machine?.itemName || 'Machine', machineId, originalName: upload.name, mimeType: upload.type })
+      const r2 = await uploadBufferToR2(key, upload.type, upload.buffer)
+      storage = { storedInR2: true, key: r2.key, url: r2.publicUrl, expiresAt: r2.expiresAt }
+    } else {
+      storage = await uploadBufferToWorkDrive(generatedName, upload.buffer, upload.type)
+    }
   } catch {
-    storage = await uploadBufferToGithubMedia(generatedName, upload.buffer, upload.type)
+    try { storage = await uploadBufferToWorkDrive(generatedName, upload.buffer, upload.type) }
+    catch { storage = await uploadBufferToGithubMedia(generatedName, upload.buffer, upload.type) }
   }
   if (!storage.url) storage = await uploadBufferToGithubMedia(generatedName, upload.buffer, upload.type)
   const uploadedAt = new Date().toISOString()
@@ -102,9 +110,10 @@ export async function saveMediaUploadBuffer(order: Order, machineId: string, upl
     url: storage.url || '',
     workdriveFileId: storage.storedInWorkDrive ? storage.fileId : null,
     workdriveUrl: storage.storedInWorkDrive ? storage.url : null,
-    storageProvider: storage.storedInWorkDrive ? 'workdrive' : 'github',
+    r2Key: storage.storedInR2 ? storage.key : null,
+    storageProvider: storage.storedInR2 ? 'r2' : storage.storedInWorkDrive ? 'workdrive' : 'github',
     uploadedAt,
-    expiresAt: mediaExpiresAt(uploadedAt),
+    expiresAt: storage.expiresAt || mediaExpiresAt(uploadedAt),
   }
   current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current

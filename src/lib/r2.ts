@@ -58,6 +58,18 @@ export function createR2UploadTarget(key: string, contentType: string, expiresIn
   return { key, uploadUrl, publicUrl: `/api/r2/view?key=${encodeURIComponent(key)}`, expiresAt: mediaExpiresAt(now), storageProvider: 'r2' }
 }
 
+export async function uploadBufferToR2(key: string, contentType: string, buffer: Buffer) {
+  const target = createR2UploadTarget(key, contentType)
+  const response = await fetch(target.uploadUrl, {
+    method: 'PUT',
+    headers: { 'content-type': contentType || 'application/octet-stream' },
+    body: new Uint8Array(buffer),
+    cache: 'no-store',
+  })
+  if (!response.ok) throw new Error(`Cloudflare R2 upload failed: HTTP ${response.status}`)
+  return target
+}
+
 export async function ensureR2Cors() {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()

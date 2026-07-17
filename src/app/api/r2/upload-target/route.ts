@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     if (!machine) return apiError('Machine not found for this order', 404)
     const type = String(body.type || 'video/mp4')
     if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)
-    await ensureR2Cors()
+    await ensureR2Cors().catch(() => {})
     const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: machine.itemName, machineId, originalName: String(body.name || 'video.mp4'), mimeType: type })
     return apiOk(createR2UploadTarget(key, type))
   } catch (error) {
