@@ -39,7 +39,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
         <button className="btn light" onClick={logout}>Logout</button>
       </div>
     </aside>}
-    {singleModule && <button className="dispatch-floating-logout" aria-label="Logout" title="Logout" onClick={logout}>⎋</button>}
+    {singleModule && <button className="dispatch-floating-logout" aria-label="Logout" title="Logout" onClick={logout}>⏻</button>}
     <main className="main">{children}</main>
   </div>
 }

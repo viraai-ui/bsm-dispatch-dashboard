@@ -20,7 +20,7 @@ type UserStore = { users: AppUser[] }
 
 const USERS_PATH = 'data/auth-users-store.json'
 const SESSION_COOKIE = 'bsm_dispatch_session'
-const SESSION_DAYS = 7
+const SESSION_DAYS = 365
 const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media']
 
 function secretKey() {

@@ -20,7 +20,7 @@ export function PackagingTvClient() {
 
   useEffect(() => {
     setState(readState())
-    void syncLocal()
+    void syncLocal(true)
     const timer = window.setInterval(() => { void syncLocal(true) }, 15 * 60 * 1000)
     return () => window.clearInterval(timer)
   }, [])
@@ -53,7 +53,7 @@ export function PackagingTvClient() {
   }
 
   return <main className="packaging-tv-light">
-    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1></div><div className="tabs packaging-sync-actions"><Badge tone="blue">Auto-sync 15m</Badge><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn red" onClick={() => syncLocal()} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div></header>
+    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn red" onClick={() => syncLocal()} disabled={syncing}>{syncing ? 'SYNCING…' : 'SYNC'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
     <div className="packaging-dispatch-grid">
