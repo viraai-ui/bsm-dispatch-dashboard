@@ -1,3 +1,81 @@
 {
-  "completed": {}
+  "completed": {
+    "1154219000034254007": {
+      "completedAt": "2026-07-17T06:53:17.293Z",
+      "order": {
+        "id": "1154219000034254007",
+        "zohoSalesOrderId": "1154219000034254007",
+        "salesOrderNumber": "SO-07496",
+        "status": "open",
+        "customerName": "Flamingo Designs Pvt Ltd",
+        "shippingAddress": "C-49, Sector-81, Phase-2, Noida, Uttar Pradesh, 201305",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034254010",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          },
+          {
+            "id": "1154219000034254011",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034254007-1154219000034254010-1",
+            "unitNumber": 1,
+            "serialNumber": "262700001",
+            "qrToken": "262700001",
+            "orderId": "1154219000034254007",
+            "lineItemId": "1154219000034254010",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07496",
+            "deliveryDate": "2026-07-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-17"
+          },
+          {
+            "id": "1154219000034254007-1154219000034254011-1",
+            "unitNumber": 2,
+            "serialNumber": "262700002",
+            "qrToken": "262700002",
+            "orderId": "1154219000034254007",
+            "lineItemId": "1154219000034254011",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07496",
+            "deliveryDate": "2026-07-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-17"
+          }
+        ]
+      }
+    }
+  }
 }
