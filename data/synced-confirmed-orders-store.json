@@ -1,5 +1,121 @@
 {
   "orders": {
+    "1154219000034279018": {
+      "id": "1154219000034279018",
+      "zohoSalesOrderId": "1154219000034279018",
+      "salesOrderNumber": "SO-07500",
+      "status": "open",
+      "customerName": "ARIVANT LABELS",
+      "shippingAddress": "GROUND FLOOR, PLOT NO. 38-39, KH NO. 54/11/1 AND 54/4/1, PKT -D, Uttam Nagar Sub Post Office, VIDYA VIHAR VILLAGE, HASTSAL, Delhi, 110059, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034279021",
+          "itemName": "360Â° Rotary Post Bed Single Needle Sewing Machine",
+          "sku": "8365-360",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false
+        },
+        {
+          "id": "1154219000034279022",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034279018-1154219000034279021-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034279018",
+          "lineItemId": "1154219000034279021",
+          "itemName": "360Â° Rotary Post Bed Single Needle Sewing Machine",
+          "sku": "8365-360",
+          "customerName": "ARIVANT LABELS",
+          "salesOrderNumber": "SO-07500",
+          "deliveryDate": "2026-07-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0
+        },
+        {
+          "id": "1154219000034279018-1154219000034279022-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034279018",
+          "lineItemId": "1154219000034279022",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "customerName": "ARIVANT LABELS",
+          "salesOrderNumber": "SO-07500",
+          "deliveryDate": "2026-07-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0
+        }
+      ]
+    },
+    "1154219000034259048": {
+      "id": "1154219000034259048",
+      "zohoSalesOrderId": "1154219000034259048",
+      "salesOrderNumber": "SO-07499",
+      "status": "open",
+      "customerName": "VKC SHOES AND ALLIED PRODUCTS INDIA PRIVATE LIMITED",
+      "shippingAddress": "108/40, Kinfra small industries park, Kalpetta, Chundale, Wayanad, Kerala, 673123, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-16",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034259051",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034259048-1154219000034259051-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034259048",
+          "lineItemId": "1154219000034259051",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "VKC SHOES AND ALLIED PRODUCTS INDIA PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07499",
+          "deliveryDate": "2026-07-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0
+        }
+      ]
+    },
     "1154219000034259035": {
       "id": "1154219000034259035",
       "zohoSalesOrderId": "1154219000034259035",
@@ -28817,7 +28933,7 @@
           "itemName": "Steamer (6 nozzles) (SS body)",
           "sku": "360",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false
         },
         {
@@ -29479,28 +29595,8 @@
           "mediaVideos": 0
         },
         {
-          "id": "1154219000032135005-1154219000032135048-1",
-          "unitNumber": 33,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032135005",
-          "lineItemId": "1154219000032135048",
-          "itemName": "Steamer (6 nozzles) (SS body)",
-          "sku": "360",
-          "customerName": "YZ buyer International Pvt. Ltd.",
-          "salesOrderNumber": "SO-07178",
-          "deliveryDate": "2026-05-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0
-        },
-        {
           "id": "1154219000032135005-1154219000032135049-1",
-          "unitNumber": 34,
+          "unitNumber": 33,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -29520,7 +29616,7 @@
         },
         {
           "id": "1154219000032135005-1154219000032135050-1",
-          "unitNumber": 35,
+          "unitNumber": 34,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -30218,6 +30314,8 @@
     }
   },
   "orderIds": [
+    "1154219000034279018",
+    "1154219000034259048",
     "1154219000034259035",
     "1154219000034265011",
     "1154219000034254007",
@@ -30256,8 +30354,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-16T17:07:31.274Z",
-  "lastAttemptAt": "2026-07-17T06:48:15.042Z",
+  "lastSuccessfulSyncAt": "2026-07-17T06:48:38.483Z",
+  "lastAttemptAt": "2026-07-17T06:48:38.483Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
