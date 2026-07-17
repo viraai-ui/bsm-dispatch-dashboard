@@ -14,9 +14,9 @@ export async function POST(request: Request) {
   if (!auth.ok) return auth.response
   try {
     const body = await request.json()
-    if (body.action === 'submit') return apiOk({ record: await submitMediaProof(String(body.orderId || '')) })
     const order = await getSyncedOrder(String(body.orderId || ''))
     if (!order) return apiError('Order not found', 404)
+    if (body.action === 'submit') return apiOk({ record: await submitMediaProof(order) })
     if (body.action === 'proceed_without_video') return apiOk({ record: await proceedWithoutVideo(order) })
     if (body.action === 'register_r2_video') {
       if (!body.machineId || !body.name || !body.r2Key || !body.url) return apiError('Missing R2 video data', 400)

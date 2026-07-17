@@ -151,12 +151,16 @@ export function mediaVideoFileName(order: Order, machineId: string, originalName
   return `${safeName(order.salesOrderNumber)} - ${safeName(machine?.itemName || 'Machine')}${extension ? `.${extension}` : ''}`
 }
 
-export async function submitMediaProof(orderId: string) {
+export async function submitMediaProof(order: Order) {
   const store = await readMediaProofStore()
-  const record = store.records[orderId]
+  const record = store.records[order.id]
   if (!record) throw new Error('No media proof found for this order')
+  if (!record.videoNotRequired) {
+    const missing = order.machines.filter((machine) => !(record.units[machine.id]?.videos || []).length)
+    if (missing.length) throw new Error(`Missing videos for: ${missing.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
+  }
   record.submittedAt = new Date().toISOString()
-  store.records[orderId] = record
+  store.records[order.id] = record
   await githubWriteJson(MEDIA_PROOF_PATH, store, `Submit media proof for ${record.salesOrderNumber}`)
   return record
 }

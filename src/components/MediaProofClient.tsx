@@ -61,6 +61,7 @@ function MediaModal({ order, record, onClose, onChanged }: { order: Order; recor
   }
 
   async function submit() {
+    if (!window.confirm(`Submit video proof for ${order.salesOrderNumber}?`)) return
     setBusy('submit'); setMessage('')
     try {
       const response = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'submit', orderId: order.id }) })

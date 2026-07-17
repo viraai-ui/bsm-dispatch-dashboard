@@ -77,6 +77,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   }
 
   const syncOrders = async (showErrors = true) => {
+    if (showErrors && !window.confirm('Sync confirmed orders from Zoho now?')) return
     if (syncingRef.current) return
     setError(''); setNotice('')
     syncingRef.current = true
