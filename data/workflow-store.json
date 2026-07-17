@@ -129,7 +129,80 @@
     "1154219000034279018": {
       "salesOrderId": "1154219000034279018",
       "salesOrderNumber": "SO-07500",
-      "status": "qr_generated",
+      "status": "processed",
+      "processedAt": "2026-07-17T07:20:25.396Z",
+      "processedOrder": {
+        "id": "1154219000034279018",
+        "zohoSalesOrderId": "1154219000034279018",
+        "salesOrderNumber": "SO-07500",
+        "status": "open",
+        "customerName": "ARIVANT LABELS",
+        "shippingAddress": "GROUND FLOOR, PLOT NO. 38-39, KH NO. 54/11/1 AND 54/4/1, PKT -D, Uttam Nagar Sub Post Office, VIDYA VIHAR VILLAGE, HASTSAL, Delhi, 110059, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-17",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034279021",
+            "itemName": "360Â° Rotary Post Bed Single Needle Sewing Machine",
+            "sku": "8365-360",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          },
+          {
+            "id": "1154219000034279022",
+            "itemName": "Skiving Machine For Leather",
+            "sku": "801",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034279018-1154219000034279021-1",
+            "unitNumber": 1,
+            "serialNumber": "262700003",
+            "qrToken": "262700003",
+            "orderId": "1154219000034279018",
+            "lineItemId": "1154219000034279021",
+            "itemName": "360Â° Rotary Post Bed Single Needle Sewing Machine",
+            "sku": "8365-360",
+            "customerName": "ARIVANT LABELS",
+            "salesOrderNumber": "SO-07500",
+            "deliveryDate": "2026-07-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0
+          },
+          {
+            "id": "1154219000034279018-1154219000034279022-1",
+            "unitNumber": 2,
+            "serialNumber": "262700004",
+            "qrToken": "262700004",
+            "orderId": "1154219000034279018",
+            "lineItemId": "1154219000034279022",
+            "itemName": "Skiving Machine For Leather",
+            "sku": "801",
+            "customerName": "ARIVANT LABELS",
+            "salesOrderNumber": "SO-07500",
+            "deliveryDate": "2026-07-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0
+          }
+        ]
+      },
       "machines": {
         "1154219000034279018-1154219000034279021-1": {
           "machineUnitId": "1154219000034279018-1154219000034279021-1",
