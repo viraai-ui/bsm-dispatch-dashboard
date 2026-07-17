@@ -1,14 +1,15 @@
 import { Badge } from '@/components/DashboardShell'
-import { machines, orders } from '@/lib/mock-data'
+import { listSyncedOrders } from '@/lib/synced-orders'
 import { notFound } from 'next/navigation'
 
 export default async function MachinePassport({ params }: { params: Promise<{ qrToken: string }> }) {
   const { qrToken } = await params
-  const machine = machines.find((m) => m.qrToken === qrToken || m.serialNumber === qrToken)
-  if (!machine) notFound()
-  const order = orders.find((item) => item.id === machine.orderId)
+  const orders = await listSyncedOrders()
+  const order = orders.find((item) => item.machines.some((m) => m.qrToken === qrToken || m.serialNumber === qrToken))
   if (!order) notFound()
-  const completeMedia = machine.mediaPhotos >= 2 && machine.mediaVideos >= 1
+  const machine = order.machines.find((m) => m.qrToken === qrToken || m.serialNumber === qrToken)
+  if (!machine) notFound()
+  const completeMedia = ((machine.mediaPhotos || 0) || 0) >= 2 && ((machine.mediaVideos || 0) || 0) >= 1
 
   return (
     <main className="main passport">
@@ -49,8 +50,8 @@ export default async function MachinePassport({ params }: { params: Promise<{ qr
         <h2>Media Proof</h2>
 
         <div className="tabs">
-          <Badge tone={machine.mediaPhotos >= 2 ? 'green' : 'amber'}>{machine.mediaPhotos}/2 photos</Badge>
-          <Badge tone={machine.mediaVideos >= 1 ? 'green' : 'amber'}>{machine.mediaVideos}/1 video</Badge>
+          <Badge tone={(machine.mediaPhotos || 0) >= 2 ? 'green' : 'amber'}>{(machine.mediaPhotos || 0)}/2 photos</Badge>
+          <Badge tone={(machine.mediaVideos || 0) >= 1 ? 'green' : 'amber'}>{(machine.mediaVideos || 0)}/1 video</Badge>
           <Badge tone={completeMedia ? 'green' : 'red'}>{completeMedia ? 'Dispatch allowed' : 'Dispatch blocked'}</Badge>
         </div>
       </section>

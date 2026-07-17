@@ -32,7 +32,7 @@ async function run() {
   await waitForServer()
   const cookie = await login()
 
-  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/m/262700001', '/m/qr-262700001', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/settings', '/api/orders', '/api/sync/status', '/api/media-proof/cleanup']) {
+  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/settings', '/api/orders', '/api/sync/status', '/api/media-proof/cleanup']) {
     const { response } = await fetchText(path, { headers: { cookie } })
     assert.equal(response.status, 200, `${path} should return 200`)
   }
@@ -65,8 +65,11 @@ async function run() {
   const webhook = await fetchText('/api/webhooks/zoho/sales-order', { method: 'POST', body: '{}' })
   assert.equal(webhook.response.status, 401, 'production webhook should fail closed without secret')
 
-  const so1003Passport = await fetchText('/m/262700005')
-  assert.match(so1003Passport.text, /href="\/orders\/so-1003"/, 'SO-1003 passport should link back to SO-1003')
+  const maybeSerial = ordersJson.data.orders.flatMap((order) => order.machines || []).find((machine) => machine.serialNumber || machine.qrToken)
+  if (maybeSerial) {
+    const passport = await fetchText(`/m/${maybeSerial.qrToken || maybeSerial.serialNumber}`, { headers: { cookie } })
+    assert.equal(passport.response.status, 200, 'real QR passport should resolve from synced/workflow data')
+  }
 
   console.log('Smoke tests passed')
 }

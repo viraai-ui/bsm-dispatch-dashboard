@@ -20,8 +20,9 @@ export type OrderWorkflow = {
   machines: Record<string, MachineWorkflow>
 }
 
-type Store = { orders: Record<string, OrderWorkflow> }
+type Store = { orders: Record<string, OrderWorkflow>; serialCounter?: number }
 const STORE_PATH = 'data/workflow-store.json'
+const INITIAL_SERIAL_COUNTER = 262700000
 
 function ghConfig() {
   return {
@@ -50,7 +51,9 @@ export async function githubReadJson<T>(path: string, fallback: T): Promise<{ da
     const json = Buffer.from(data.content || '', 'base64').toString('utf8')
     return { data: JSON.parse(json || JSON.stringify(fallback)), sha: data.sha }
   } catch (error) {
-    return { data: fallback }
+    const message = error instanceof Error ? error.message : ''
+    if (message.includes('Not Found') || message.includes('not configured')) return { data: fallback }
+    throw error
   }
 }
 
@@ -62,8 +65,8 @@ export async function githubWriteJson<T>(path: string, data: T, message: string)
 }
 
 async function readStoreWithSha(): Promise<{ store: Store; sha?: string }> {
-  const result = await githubReadJson<Store>(STORE_PATH, { orders: {} })
-  return { store: result.data, sha: result.sha }
+  const result = await githubReadJson<Store>(STORE_PATH, { orders: {}, serialCounter: INITIAL_SERIAL_COUNTER })
+  return { store: { serialCounter: INITIAL_SERIAL_COUNTER, ...result.data, orders: result.data.orders || {} }, sha: result.sha }
 }
 
 async function writeStore(store: Store, sha?: string) {
@@ -87,12 +90,49 @@ export async function listProcessedOrders() {
   return Object.values(store.orders).filter((order) => order.status === 'processed')
 }
 
-export async function upsertOrderWorkflow(orderId: string, updater: (current: OrderWorkflow | null) => OrderWorkflow) {
-  const { store, sha } = await readStoreWithSha()
-  const next = updater(store.orders[orderId] || null)
-  store.orders[orderId] = next
-  await writeStore(store, sha)
-  return next
+export async function upsertOrderWorkflow(orderId: string, updater: (current: OrderWorkflow | null, store: Store) => OrderWorkflow) {
+  let lastError: unknown
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const { store, sha } = await readStoreWithSha()
+    const next = updater(store.orders[orderId] || null, store)
+    store.orders[orderId] = next
+    try {
+      await writeStore(store, sha)
+      return next
+    } catch (error) {
+      lastError = error
+      const message = error instanceof Error ? error.message : ''
+      if (!message.includes('sha') && !message.includes('409') && !message.includes('does not match')) break
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error('Workflow update conflict')
+}
+
+export async function allocateSerialNumbers(orderId: string, machineIds: string[]) {
+  const uniqueIds = Array.from(new Set(machineIds.filter(Boolean)))
+  if (!uniqueIds.length) return {} as Record<string, string>
+  let allocated: Record<string, string> = {}
+  await upsertOrderWorkflow(orderId, (current, store) => {
+    const machines = { ...(current?.machines || {}) }
+    let counter = Math.max(Number(store.serialCounter || INITIAL_SERIAL_COUNTER), INITIAL_SERIAL_COUNTER)
+    allocated = {}
+    for (const machineUnitId of uniqueIds) {
+      const existing = machines[machineUnitId]?.serialNumber
+      const serialNumber = existing || String(++counter)
+      machines[machineUnitId] = {
+        ...machines[machineUnitId],
+        machineUnitId,
+        lineItemId: machines[machineUnitId]?.lineItemId || '',
+        serialNumber,
+        qrToken: machines[machineUnitId]?.qrToken || serialNumber,
+        qrStatus: machines[machineUnitId]?.qrStatus || 'pending',
+      }
+      allocated[machineUnitId] = serialNumber
+    }
+    store.serialCounter = counter
+    return current ? { ...current, machines } : { salesOrderId: orderId, salesOrderNumber: '', status: 'open', machines }
+  })
+  return allocated
 }
 
 export function deriveWorkflowStatus(workflow: OrderWorkflow | null, totalMachines: number): OrderWorkflow['status'] {

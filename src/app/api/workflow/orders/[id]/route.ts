@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
+import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import type { Order } from '@/types/domain'
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -19,10 +19,17 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const body = await request.json()
     const action = body.action as string
     const order = body.order as Order
+    if (action === 'allocate_serials') {
+      const serials = await allocateSerialNumbers(id, body.machineIds || [])
+      return apiOk({ serials })
+    }
     const now = new Date().toISOString()
     const workflow = await upsertOrderWorkflow(id, (current) => {
       const machines = { ...(current?.machines || {}) }
-      if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) machines[item.machineUnitId] = item
+      if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) {
+        const existing = machines[item.machineUnitId]
+        machines[item.machineUnitId] = { ...item, serialNumber: item.serialNumber || existing?.serialNumber, qrToken: item.qrToken || existing?.qrToken || item.serialNumber || existing?.serialNumber, qrStatus: 'generated' }
+      }
       if (action === 'not_required') for (const machine of order.machines) machines[machine.id] = { machineUnitId: machine.id, lineItemId: machine.lineItemId, qrStatus: 'not_required', qrNotRequiredAt: now }
       const generated = Object.values(machines).filter((m) => m.qrStatus === 'generated').length
       let status = current?.status || 'open'
@@ -34,7 +41,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         if (incomplete.length) throw new Error(`Incomplete machines: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         status = 'processed'
       }
-      return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber, status, processedAt: action === 'process' ? now : current?.processedAt, processedOrder: action === 'process' ? order : current?.processedOrder, machines }
+      return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, processedAt: action === 'process' ? now : current?.processedAt, processedOrder: action === 'process' ? order : current?.processedOrder, machines }
     })
     return apiOk({ workflow })
   } catch (error) {
