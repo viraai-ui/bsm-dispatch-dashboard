@@ -7,6 +7,8 @@ import type { SafeUser } from '@/lib/auth'
 type AuthContextValue = { user: SafeUser; logout: () => Promise<void> }
 const AuthContext = createContext<AuthContextValue | null>(null)
 const dispatchOnlyPath = '/packaging-tv'
+const mediaOnlyPath = '/media-proof'
+function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : '/' }
 
 export function useAuth() {
   const value = useContext(AuthContext)
@@ -31,6 +33,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!user) return
     if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) router.replace(dispatchOnlyPath)
+    if (user.role === 'Media' && pathname !== mediaOnlyPath) router.replace(mediaOnlyPath)
     if (user.role === 'Operations' && pathname === '/settings') router.replace('/')
   }, [pathname, router, user])
 
@@ -52,7 +55,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Invalid login')
       setUser(json.user)
-      router.replace(json.user.role === 'Dispatch' ? dispatchOnlyPath : '/')
+      router.replace(homeForRole(json.user.role))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Invalid login')
     } finally { setSubmitting(false) }
@@ -81,5 +84,6 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   }
 
   if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) return null
+  if (user.role === 'Media' && pathname !== mediaOnlyPath) return null
   return <AuthContext.Provider value={{ user, logout }}>{children}</AuthContext.Provider>
 }

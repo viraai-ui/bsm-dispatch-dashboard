@@ -3,6 +3,7 @@ import { jwtVerify } from 'jose'
 
 const cookieName = 'bsm_dispatch_session'
 const dispatchOnly = '/packaging-tv'
+const mediaOnly = '/media-proof'
 const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/vehicle-dispatch', '/database', '/machine-lookup', '/settings']
 
 function secretKey() {
@@ -19,6 +20,9 @@ export async function proxy(request: NextRequest) {
     const { payload } = await jwtVerify(token, secretKey())
     if (payload.role === 'Dispatch' && pathname !== dispatchOnly) {
       return NextResponse.redirect(new URL(dispatchOnly, request.url))
+    }
+    if (payload.role === 'Media' && pathname !== mediaOnly) {
+      return NextResponse.redirect(new URL(mediaOnly, request.url))
     }
     if (payload.role === 'Operations' && pathname === '/settings') {
       return NextResponse.redirect(new URL('/', request.url))

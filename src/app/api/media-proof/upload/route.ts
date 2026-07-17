@@ -7,7 +7,7 @@ export const runtime = 'nodejs'
 export const maxDuration = 300
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Admin', 'Operations'])
+  const auth = await requireUser(['Admin', 'Operations', 'Media'])
   if (!auth.ok) return auth.response
   try {
     const form = await request.formData()

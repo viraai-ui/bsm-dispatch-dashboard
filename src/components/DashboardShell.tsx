@@ -17,10 +17,12 @@ const nav: NavItem[] = [
 function ShellBody({ children, active }: { children: React.ReactNode; active: string }) {
   const { user, logout } = useAuth()
   const dispatchOnly = user.role === 'Dispatch'
-  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
-  return <div className={dispatchOnly ? 'shell dispatch-shell' : 'shell'}>
-    {!dispatchOnly && <MobileMenu nav={visibleNav} active={active} />}
-    {!dispatchOnly && <aside className="side">
+  const mediaOnly = user.role === 'Media'
+  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
+  const singleModule = dispatchOnly || mediaOnly
+  return <div className={singleModule ? 'shell dispatch-shell single-module-shell' : 'shell'}>
+    {!singleModule && <MobileMenu nav={visibleNav} active={active} />}
+    {!singleModule && <aside className="side">
       <div className="brand">
         <img className="logo bsm-brand-logo" src="/brand/bsm-logo.png" alt="BSM" />
         <div>
@@ -37,7 +39,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
         <button className="btn light" onClick={logout}>Logout</button>
       </div>
     </aside>}
-    {dispatchOnly && <button className="btn light dispatch-floating-logout" onClick={logout}>Logout</button>}
+    {singleModule && <button className="btn light dispatch-floating-logout" onClick={logout}>Logout</button>}
     <main className="main">{children}</main>
   </div>
 }

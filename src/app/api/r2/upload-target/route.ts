@@ -6,7 +6,7 @@ import { getSyncedOrder } from '@/lib/synced-orders'
 export const runtime = 'nodejs'
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Admin', 'Operations'])
+  const auth = await requireUser(['Admin', 'Operations', 'Media'])
   if (!auth.ok) return auth.response
   try {
     const body = await request.json()

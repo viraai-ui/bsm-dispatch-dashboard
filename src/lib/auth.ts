@@ -3,7 +3,7 @@ import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
 import { githubReadJson, githubWriteJson } from './workflow-store'
 
-export type AppRole = 'Admin' | 'Operations' | 'Dispatch'
+export type AppRole = 'Admin' | 'Operations' | 'Dispatch' | 'Media'
 export type AppUser = {
   id: string
   name: string
@@ -21,7 +21,7 @@ type UserStore = { users: AppUser[] }
 const USERS_PATH = 'data/auth-users-store.json'
 const SESSION_COOKIE = 'bsm_dispatch_session'
 const SESSION_DAYS = 7
-const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch']
+const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media']
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
@@ -33,8 +33,9 @@ async function seedUsers(): Promise<AppUser[]> {
   const passwordHash = await bcrypt.hash('1231', 10)
   return [
     { id: 'u-admin', name: 'Admin', email: 'admin@bsmindia.com', username: 'admin', role: 'Admin', active: true, passwordHash, createdAt: now, updatedAt: now },
-    { id: 'u-ops', name: 'Operations', email: 'ops@bsmindia.com', username: 'operations', role: 'Operations', active: true, passwordHash, createdAt: now, updatedAt: now },
+    { id: 'u-ops', name: 'Operations', email: 'operations@bsmindia.com', username: 'operations', role: 'Operations', active: true, passwordHash, createdAt: now, updatedAt: now },
     { id: 'u-dispatch', name: 'Dispatch', email: 'dispatch@bsmindia.com', username: 'dispatch', role: 'Dispatch', active: true, passwordHash, createdAt: now, updatedAt: now },
+    { id: 'u-media', name: 'Media', email: 'media@bsmindia.com', username: 'media', role: 'Media', active: true, passwordHash, createdAt: now, updatedAt: now },
   ]
 }
 
@@ -54,7 +55,18 @@ export async function getUserStore() {
     await githubWriteJson(USERS_PATH, fallback, 'Initialize dispatch users')
     return fallback
   }
-  return data
+  const store = { users: data.users }
+  const now = new Date().toISOString()
+  let changed = false
+  const operations = store.users.find((user) => user.username === 'operations' || user.id === 'u-ops' || user.email === 'ops@bsmindia.com')
+  if (operations && operations.email !== 'operations@bsmindia.com') { operations.email = 'operations@bsmindia.com'; operations.updatedAt = now; changed = true }
+  if (!store.users.some((user) => user.role === 'Media' || user.username === 'media' || user.email === 'media@bsmindia.com')) {
+    const passwordHash = await bcrypt.hash('1231', 10)
+    store.users.push({ id: 'u-media', name: 'Media', email: 'media@bsmindia.com', username: 'media', role: 'Media', active: true, passwordHash, createdAt: now, updatedAt: now })
+    changed = true
+  }
+  if (changed) await githubWriteJson(USERS_PATH, store, 'Update default dispatch users')
+  return store
 }
 
 export async function saveUserStore(store: UserStore) {
