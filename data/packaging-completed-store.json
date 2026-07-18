@@ -343,6 +343,55 @@
         ],
         "dispatchPriority": "regular"
       }
+    },
+    "1154219000034261004": {
+      "completedAt": "2026-07-18T07:19:08.972Z",
+      "order": {
+        "id": "1154219000034261004",
+        "zohoSalesOrderId": "1154219000034261004",
+        "salesOrderNumber": "SO-07501",
+        "status": "open",
+        "customerName": "Assert Footwears",
+        "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034261007",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034261004-1154219000034261007-1",
+            "unitNumber": 1,
+            "serialNumber": "262700005",
+            "qrToken": "262700005",
+            "orderId": "1154219000034261004",
+            "lineItemId": "1154219000034261007",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Assert Footwears",
+            "salesOrderNumber": "SO-07501",
+            "deliveryDate": "2026-07-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-17"
+          }
+        ],
+        "dispatchPriority": "regular"
+      }
     }
   }
 }
