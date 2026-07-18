@@ -353,9 +353,9 @@
     "1154219000034252004": {
       "salesOrderId": "1154219000034252004",
       "salesOrderNumber": "SO-07490",
-      "status": "qr_generated",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-07-18T06:41:21.302Z",
+      "processedAt": "2026-07-18T07:15:50.233Z",
       "processedOrder": {
         "id": "1154219000034252004",
         "zohoSalesOrderId": "1154219000034252004",
@@ -365,7 +365,7 @@
         "shippingAddress": "C-149, SECTOR 63, NOIDA, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
         "salesperson": "Anuj Kumar",
         "deliveryDate": "2026-07-15",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "Processed",
         "reviewRequired": false,
         "lineItems": [
           {
