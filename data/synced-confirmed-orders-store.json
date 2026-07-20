@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034272047": {
+      "id": "1154219000034272047",
+      "zohoSalesOrderId": "1154219000034272047",
+      "salesOrderNumber": "SO-07522",
+      "status": "open",
+      "customerName": "Maxlite Polymers Pvt. Ltd.",
+      "shippingAddress": "Ground Floor, Plot No. 27, HSIIDC, sec-16, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034272050",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034272047-1154219000034272050-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034272047",
+          "lineItemId": "1154219000034272050",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "Maxlite Polymers Pvt. Ltd.",
+          "salesOrderNumber": "SO-07522",
+          "deliveryDate": "2026-07-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034268031": {
       "id": "1154219000034268031",
       "zohoSalesOrderId": "1154219000034268031",
@@ -4088,6 +4135,7 @@
     }
   },
   "orderIds": [
+    "1154219000034272047",
     "1154219000034268031",
     "1154219000034252050",
     "1154219000034268016",
@@ -4127,8 +4175,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-20T10:30:19.735Z",
-  "lastAttemptAt": "2026-07-20T10:44:36.745Z",
+  "lastSuccessfulSyncAt": "2026-07-20T10:45:19.259Z",
+  "lastAttemptAt": "2026-07-20T10:45:19.259Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
