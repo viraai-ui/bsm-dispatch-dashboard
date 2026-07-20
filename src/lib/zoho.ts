@@ -266,7 +266,7 @@ async function enrichZohoLineItemDescriptions(order: any, token: string) {
       try {
         const detail = await zohoGetWithRetry(`/inventory/v1/items/${itemId}`, token, 2)
         const zohoItem = detail.item || {}
-        itemDescriptionCache.set(itemId, cleanDescription(zohoItem.description || zohoItem.sales_description || zohoItem.purchase_description || zohoItem.name))
+        itemDescriptionCache.set(itemId, cleanDescription(zohoItem.description || zohoItem.sales_description || zohoItem.purchase_description))
       } catch {
         itemDescriptionCache.set(itemId, '')
       }

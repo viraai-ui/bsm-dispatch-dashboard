@@ -98,7 +98,13 @@ function groupDispatchLineItems(lineItems: OrderLineItem[]) {
   }))
 }
 function formatQty(quantity: number, category?: string) { return category === 'Adhesive' ? `${quantity} kgs` : quantity }
-function ItemName({ name, description }: { name: string; description?: string }) { return <div className="item-name-stack"><strong>{name}</strong>{description && <small className="item-description">{description}</small>}</div> }
+function ItemName({ name, description }: { name: string; description?: string }) { const cleanDescription = displayDescription(name, description); return <div className="item-name-stack"><strong>{name}</strong>{cleanDescription && <small className="item-description">{cleanDescription}</small>}</div> }
+function displayDescription(name: string, description?: string) {
+  const clean = String(description || '').replace(/\s+/g, ' ').trim()
+  if (!clean) return ''
+  if (clean.toLowerCase() === String(name || '').replace(/\s+/g, ' ').trim().toLowerCase()) return ''
+  return clean
+}
 function isUrgent(order: DispatchOrder, state: PackingState) { return order.dispatchPriority === 'urgent' || order.machines.some((machine) => state[machine.id]?.urgent) }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }
