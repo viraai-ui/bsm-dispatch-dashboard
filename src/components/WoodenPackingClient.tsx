@@ -61,8 +61,10 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
     if (syncingRef.current) return
     syncingRef.current = true
     setSyncing(true); setError('')
+    const visibleSpin = showError ? new Promise((resolve) => window.setTimeout(resolve, 800)) : Promise.resolve()
     try {
       const response = await fetch('/api/wooden-packing', { method: 'POST', cache: 'no-store' })
+      await visibleSpin
       const json = await response.json()
       const next = json.data?.queue
       if (!response.ok || !json.ok) throw new Error(json.error || 'Wooden Packing sync failed. Showing the last successfully synced data.')
@@ -80,7 +82,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   }
 
   return <>
-    <header className="top compact-top wooden-mobile-head"><div><h1 className="h1">Wooden Packing</h1></div><button type="button" className="btn light wooden-sync-btn" aria-label="Sync wooden packing" title="Sync wooden packing" onClick={() => syncZoho(true)} disabled={syncing}>{syncing ? '↻' : '⟳'}</button></header>
+    <header className="top compact-top wooden-mobile-head"><div><h1 className="h1">Wooden Packing</h1></div><button type="button" className={`btn light wooden-sync-btn${syncing ? ' syncing' : ''}`} aria-label="Sync wooden packing" title="Sync wooden packing" onClick={() => syncZoho(true)} disabled={syncing}><span aria-hidden="true">⟳</span></button></header>
     {error && <div className="form-error">{error}</div>}
     <section className="card wooden-summary-export"><div><span>Pending</span><strong>{pendingRequiredTotal}</strong></div><div className="tabs wooden-export-actions"><button className="btn light" onClick={() => printConsolidated(consolidated)}>Print</button><button className="btn red" onClick={() => downloadXlsx('wooden-packing-consolidated-requirements.xlsx', consolidated)}>Download</button></div></section>
     <section className="card"><h2>Pending Wooden Packing</h2>{syncing && <div className="machine-row compact"><span>Syncing complete Zoho wooden packing queue</span><Badge>Live</Badge></div>}<div className="machine">{grouped.map(([so, items]) => { const status = statuses[so] || 'Required'; return <div className={`machine-row wooden-order-row ${status === 'Ordered' ? 'ordered' : 'required'}`} key={so}><div><strong>{so}</strong><p className="muted">{items[0]?.customerName}</p>{items.map((item) => <p key={item.id}>{item.itemName} — <strong>{item.requiredQuantity}</strong></p>)}</div><select className={`status-select ${status === 'Ordered' ? 'green' : 'required'}`} value={status} onChange={(event) => updateStatus(so, event.target.value as WoodenStatus)} aria-label={`Wooden packing status for ${so}`}><option>Required</option><option>Ordered</option></select></div> })}</div></section>
