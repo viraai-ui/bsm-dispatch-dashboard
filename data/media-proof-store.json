@@ -1,3 +1,29 @@
 {
-  "records": {}
+  "records": {
+    "1154219000034270046": {
+      "orderId": "1154219000034270046",
+      "salesOrderNumber": "SO-07518",
+      "submittedAt": null,
+      "units": {
+        "1154219000034270046-1154219000034270049-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000034270046-1154219000034270049-1-video-1784534365323-8xynl0",
+              "name": "WhatsApp Video 2026-05-02 at 11.44.32 AM.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-07-20%2FSO-07518%2FFoil%20Stamping%20machine-1154219000034270046-1154219000034270049-1-2026-07-20T07-59-22-872Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-07-20/SO-07518/Foil Stamping machine-1154219000034270046-1154219000034270049-1-2026-07-20T07-59-22-872Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-07-20T07:59:25.323Z",
+              "expiresAt": "2026-08-19T07:59:22.873Z"
+            }
+          ]
+        }
+      }
+    }
+  }
 }
