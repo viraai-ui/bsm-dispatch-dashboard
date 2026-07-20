@@ -560,10 +560,23 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .modal-section-title h2, .database-list-card h2, .media-queue-head h2 { font-size: 17px; margin: 0; }
   .modal-section-title .muted { display: none; }
   .mobile-cards { gap: 8px; }
-  .mobile-order-card { position: relative; border-radius: 18px; padding: 12px; background: #fff; box-shadow: 0 8px 20px rgba(15,23,42,.06); animation: none !important; }
+  .mobile-order-card { position: relative; border-radius: 16px; padding: 10px 12px; background: #fff; box-shadow: 0 6px 16px rgba(15,23,42,.05); animation: none !important; }
+  .compact-operational-card { display: grid; grid-template-columns: minmax(0, 1fr) 104px; gap: 10px; align-items: center; min-height: 98px; }
+  .compact-card-main { min-width: 0; display: grid; gap: 6px; align-content: center; }
+  .compact-card-main strong { font-size: 17px; line-height: 1.05; letter-spacing: -.035em; }
+  .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .compact-card-main .badge { justify-self: start; font-size: 10px; padding: 4px 8px; }
+  .compact-card-side { display: grid; gap: 5px; align-content: center; }
+  .compact-card-side > div { padding: 7px 8px; border-radius: 12px; background: #f8fafc; }
+  .compact-card-side span { display: block; font-size: 9px; color: #64748b; font-weight: 950; text-transform: uppercase; letter-spacing: .055em; line-height: 1; }
+  .compact-card-side strong { display: block; margin-top: 3px; font-size: 12px; line-height: 1.05; letter-spacing: -.01em; }
+  .compact-operational-card .compact-view-btn { margin-top: 2px; min-height: 30px; padding: 0 10px; border-radius: 999px; font-size: 12px; box-shadow: none; }
   .mobile-order-card strong { font-size: 16px; line-height: 1.1; letter-spacing: -.02em; }
   .mobile-order-card p { margin: 3px 0 0; font-size: 12px; line-height: 1.25; }
   .mobile-order-card .badge { font-size: 10px; padding: 4px 7px; }
+  .compact-card-main strong { font-size: 17px; line-height: 1.05; letter-spacing: -.035em; }
+  .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .compact-card-main .badge { justify-self: start; padding: 4px 8px; }
   .meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 8px; }
   .meta-grid > div { padding: 8px; border-radius: 12px; background: #f8fafc; }
   .meta-grid span { font-size: 10px; color: #64748b; font-weight: 900; text-transform: uppercase; letter-spacing: .05em; }
