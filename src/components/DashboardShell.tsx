@@ -23,7 +23,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const mobileNav = visibleNav.filter((item) => !mobileHidden.has(item.href))
   const singleModule = dispatchOnly
   return <div className={singleModule ? 'shell dispatch-shell single-module-shell' : 'shell'}>
-    {!singleModule && <MobileMenu nav={mobileNav} active={active} />}
+    {!singleModule && <MobileMenu nav={mobileNav} active={active} onLogout={logout} />}
     {!singleModule && <aside className="side">
       <div className="brand">
         <img className="logo bsm-brand-logo" src="/brand/bsm-logo.png" alt="BSM" />

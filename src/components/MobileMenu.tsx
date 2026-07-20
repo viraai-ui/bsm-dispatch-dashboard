@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export type NavItem = { label: string; href: string }
 
-export function MobileMenu({ nav, active }: { nav: NavItem[]; active: string }) {
+export function MobileMenu({ nav, active, onLogout }: { nav: NavItem[]; active: string; onLogout: () => void | Promise<void> }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -43,6 +43,10 @@ export function MobileMenu({ nav, active }: { nav: NavItem[]; active: string }) 
             </a>
           ))}
         </nav>
+        <button className="drawer-logout" type="button" onClick={() => { setOpen(false); void onLogout() }}>
+          <span className="module-orb">⏻</span>
+          <span>Logout</span>
+        </button>
       </aside>
     </>
   )
