@@ -371,8 +371,10 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .mobile-logo { width: 42px; height: 42px; border-radius: 15px; display: block; color: #fff; background: #fff; font-weight: 950; box-shadow: 0 12px 28px rgba(200,16,46,.20); }
   .mobile-brand strong { display: block; line-height: 1; }
   .mobile-brand small { display: block; color: var(--muted); font-weight: 700; margin-top: 3px; }
-  .dots-trigger { width: 48px; height: 48px; border: 0; border-radius: 18px; background: #0f172a; display: grid; place-items: center; gap: 0; box-shadow: 0 14px 30px rgba(15,23,42,.24); }
-  .dots-trigger span { width: 5px; height: 5px; display: block; border-radius: 99px; background: #fff; }
+  .dots-trigger { width: 48px; height: 48px; border: 1px solid rgba(15,23,42,.08); border-radius: 18px; background: linear-gradient(135deg, #0f172a, #1e293b); display: grid; place-content: center; gap: 5px; box-shadow: 0 14px 30px rgba(15,23,42,.20); }
+  .dots-trigger span { width: 20px; height: 2px; display: block; border-radius: 99px; background: #fff; box-shadow: 0 1px 0 rgba(255,255,255,.18); }
+  .dots-trigger span:nth-child(2) { width: 14px; justify-self: end; }
+  .dots-trigger span:nth-child(3) { width: 20px; }
   .drawer-scrim { display: block; position: fixed; inset: 0; z-index: 80; border: 0; background: rgba(15,23,42,.36); backdrop-filter: blur(3px); }
   .mobile-drawer { display: block; position: fixed; z-index: 90; top: 12px; right: 12px; bottom: 12px; width: min(86vw, 360px); padding: 18px; border-radius: 30px; overflow: hidden auto; background: rgba(15,23,42,.92); color: #fff; border: 1px solid rgba(255,255,255,.16); box-shadow: -26px 28px 80px rgba(2,6,23,.36); transform: translateX(110%); transition: transform .24s ease, opacity .24s ease; opacity: 0; }
   .mobile-drawer.open { transform: translateX(0); opacity: 1; animation: drawerIn .28s ease both; }
