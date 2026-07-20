@@ -8,7 +8,7 @@ import { dispatchCategoryLabel } from '@/lib/item-classification'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
 
-type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'closed'
+type OrderStage = 'open' | 'processed' | 'packed' | 'packing_video' | 'loading_video' | 'closed'
 
 type MachineRecord = {
   id: string
@@ -225,7 +225,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
 }
 
 
-const STAGE_FLOW: OrderStage[] = ['open', 'processed', 'packed', 'media_uploaded', 'closed']
+const STAGE_FLOW: OrderStage[] = ['open', 'processed', 'packed', 'packing_video', 'loading_video', 'closed']
 
 function StageTracker({ stage }: { stage: OrderStage }) {
   const current = Math.max(0, STAGE_FLOW.indexOf(stage))
@@ -350,13 +350,14 @@ function Info({ k, v }: { k: string; v: string }) { return <div className="info-
 function ItemName({ name, description }: { name: string; description?: string }) { const cleanDescription = displayDescription(name, description); return <div className="item-name-stack"><strong>{name}</strong>{cleanDescription && <small className="item-description">{cleanDescription}</small>}</div> }
 function sanitizeOrders(orders: Order[]) { return orders }
 function statusLabel(status: string) { return ({ open: 'Open', partially_shipped: 'Partially Shipped', partially_generated: 'Partially Generated', qr_generated: 'QR Generated', qr_not_required: 'QR Not Required', processed: 'Processed' } as Record<string, string>)[status] || status }
-function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', closed: 'Closed' } as Record<string, string>)[stage] || stage }
+function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', packing_video: 'Packing Video', loading_video: 'Loading Video', closed: 'Closed' } as Record<string, string>)[stage] || stage }
 function stageTone(stage: string): 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple' {
   return ({
     open: 'gray',
     processed: 'amber',
     packed: 'blue',
-    media_uploaded: 'purple',
+    packing_video: 'purple',
+    loading_video: 'purple',
     closed: 'red',
   } as Record<string, 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple'>)[stage] || 'gray'
 }

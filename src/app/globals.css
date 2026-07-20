@@ -146,9 +146,9 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .btn.full { width: 100%; }
 .unit-action { min-height: 36px; padding: 0 12px; border-radius: 999px; font-size: 12px; }
 .stage-tracker { margin: 12px 0 18px; padding: 16px; border: 1px solid var(--line); border-radius: 22px; background: rgba(248,250,252,.82); }
-.stage-bar { height: 8px; border-radius: 999px; background: #e2e8f0; overflow: hidden; margin: 0 calc(100% / 10) 12px; }
+.stage-bar { height: 8px; border-radius: 999px; background: #e2e8f0; overflow: hidden; margin: 0 calc(100% / 12) 12px; }
 .stage-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #94a3b8, #2563eb, #16a34a); transition: width .2s ease; }
-.stage-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.stage-steps { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
 .stage-step { display: grid; gap: 6px; justify-items: center; text-align: center; color: #94a3b8; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
 .stage-step i { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 999px; background: #e2e8f0; color: #64748b; font-style: normal; }
 .stage-step.done { color: #334155; }

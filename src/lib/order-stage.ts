@@ -2,7 +2,7 @@ import type { Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson, type OrderWorkflow } from './workflow-store'
 import { readMediaProofStore } from './media-proof'
 
-export type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'closed'
+export type OrderStage = 'open' | 'processed' | 'packed' | 'packing_video' | 'loading_video' | 'closed'
 export type DispatchStore = { dispatched: Record<string, { dispatchedAt: string; order: Order }> }
 export type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 
@@ -21,13 +21,15 @@ export async function readDispatchStore() {
 
 export async function buildStageMap(workflows: Record<string, OrderWorkflow> = {}) {
   const completed = await readCompletedStore()
-  const media = await readMediaProofStore()
-  const ids = new Set([...Object.keys(workflows), ...Object.keys(completed.completed), ...Object.keys(media.records)])
+  const packing = await readMediaProofStore('packing')
+  const loading = await readMediaProofStore('loading')
+  const ids = new Set([...Object.keys(workflows), ...Object.keys(completed.completed), ...Object.keys(packing.records), ...Object.keys(loading.records)])
   const stages: Record<string, OrderStage> = {}
   for (const id of ids) {
     const workflow = workflows[id]
-    if (media.records[id]?.submittedAt) stages[id] = 'closed'
-    else if (completed.completed[id]) stages[id] = 'packed'
+    if (loading.records[id]?.submittedAt) stages[id] = 'closed'
+    else if (packing.records[id]?.submittedAt) stages[id] = 'loading_video'
+    else if (completed.completed[id]) stages[id] = 'packing_video'
     else if (workflow?.status === 'processed' || Object.values(workflow?.machines || {}).some((machine) => machine.processedAt)) stages[id] = 'processed'
     else stages[id] = 'open'
   }

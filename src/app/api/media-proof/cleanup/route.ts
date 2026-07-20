@@ -16,7 +16,9 @@ export async function GET(request: NextRequest) {
     if (!auth.ok) return auth.response
   }
   try {
-    return apiOk(await cleanupExpiredMediaProofs())
+    const packing = await cleanupExpiredMediaProofs('packing')
+    const loading = await cleanupExpiredMediaProofs('loading')
+    return apiOk({ packing, loading })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Media cleanup failed', 500)
   }

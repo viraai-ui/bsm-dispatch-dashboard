@@ -17,11 +17,11 @@ export type OrderStatusProjection = {
 }
 
 export function lifecycleLabel(stage: OrderStage) {
-  return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', closed: 'Closed' } as Record<OrderStage, string>)[stage]
+  return ({ open: 'Open', processed: 'Processed', packed: 'Packed', packing_video: 'Packing Video', loading_video: 'Loading Video', closed: 'Closed' } as Record<OrderStage, string>)[stage]
 }
 
 export function lifecycleTone(stage: OrderStage): StatusTone {
-  return ({ open: 'gray', processed: 'amber', packed: 'blue', media_uploaded: 'purple', closed: 'red' } as Record<OrderStage, StatusTone>)[stage]
+  return ({ open: 'gray', processed: 'amber', packed: 'blue', packing_video: 'purple', loading_video: 'purple', closed: 'red' } as Record<OrderStage, StatusTone>)[stage]
 }
 
 export function mediaStatusForOrder(order: Order, record?: MediaProofRecord): MediaStatus {
@@ -50,8 +50,10 @@ export function projectOrderStatus(order: Order, lifecycleStage: OrderStage = 'o
 export async function buildOrderStatusMap(orders: Order[], workflows?: Record<string, OrderWorkflow>) {
   const workflowMap = workflows || await listWorkflows()
   const stages = await buildStageMap(workflowMap)
-  const media = await readMediaProofStore()
+  const packing = await readMediaProofStore('packing')
+  const loading = await readMediaProofStore('loading')
+  const mediaRecords = { ...packing.records, ...loading.records }
   const statuses: Record<string, OrderStatusProjection> = {}
-  for (const order of orders) statuses[order.id] = projectOrderStatus(order, stages[order.id] || 'open', media.records[order.id])
-  return { statuses, stages, mediaRecords: media.records }
+  for (const order of orders) statuses[order.id] = projectOrderStatus(order, stages[order.id] || 'open', mediaRecords[order.id])
+  return { statuses, stages, mediaRecords }
 }

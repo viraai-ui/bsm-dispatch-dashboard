@@ -4,7 +4,7 @@ import { machines, mediaQueue, packagingQueue, vehicleQueue } from '@/lib/mock-d
 export const moduleCopy = {
   qr: { active: 'QR & Serial', title: 'QR & Serial' },
   wooden: { active: 'Wooden Packing', title: 'Wooden Packing' },
-  media: { active: 'Video Upload', title: 'Video Upload' },
+  media: { active: 'Packing Video', title: 'Packing Video' },
   vehicle: { active: 'Vehicle & Transportation', title: 'Vehicle & Transportation' },
   lookup: { active: 'Machine Lookup', title: 'Machine Lookup' },
 

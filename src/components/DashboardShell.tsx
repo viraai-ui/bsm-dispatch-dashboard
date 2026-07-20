@@ -8,7 +8,8 @@ const nav: NavItem[] = [
   { label: 'Orders', href: '/orders' },
   { label: 'Wooden Packing', href: '/wooden-packing' },
   { label: 'Dispatch View', href: '/packaging-tv' },
-  { label: 'Video Upload', href: '/media-proof' },
+  { label: 'Packing Video', href: '/media-proof' },
+  { label: 'Loading Video', href: '/loading-video' },
   { label: 'Database', href: '/database' },
   { label: 'Settings', href: '/settings' },
 ]
@@ -17,8 +18,8 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const { user, logout } = useAuth()
   const dispatchOnly = user.role === 'Dispatch'
   const mediaOnly = user.role === 'Media'
-  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
-  const singleModule = dispatchOnly || mediaOnly
+  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof' || item.href === '/loading-video') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
+  const singleModule = dispatchOnly
   return <div className={singleModule ? 'shell dispatch-shell single-module-shell' : 'shell'}>
     {!singleModule && <MobileMenu nav={visibleNav} active={active} />}
     {!singleModule && <aside className="side">

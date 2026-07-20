@@ -8,7 +8,7 @@ import { mediaStatusForOrder, mediaTone } from '@/lib/status-projection'
 
 type MediaRecords = Record<string, MediaProofRecord>
 
-export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { initialOrders?: Order[]; initialRecords?: MediaRecords }) {
+export function MediaProofClient({ initialOrders = [], initialRecords = {}, title = 'Packing Video', apiPath = '/api/media-proof' }: { initialOrders?: Order[]; initialRecords?: MediaRecords; title?: string; apiPath?: string }) {
   const [orders, setOrders] = useState<Order[]>(initialOrders)
   const [records, setRecords] = useState<MediaRecords>(initialRecords)
   const [active, setActive] = useState<Order | null>(null)
@@ -20,7 +20,7 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { 
   async function loadQueue() {
     setSyncing(true); setError('')
     try {
-      const response = await fetch('/api/media-proof', { cache: 'no-store' })
+      const response = await fetch(apiPath, { cache: 'no-store' })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load media proof queue')
       setOrders(json.data.orders || [])
@@ -34,14 +34,14 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {} }: { 
   }
 
   return <>
-    <header className="top compact-top"><div><h1 className="h1">Video Upload</h1></div><button className="btn red" onClick={loadQueue} disabled={syncing}>{syncing ? 'Syncing…' : 'Refresh'}</button></header>
+    <header className="top compact-top"><div><h1 className="h1">{title}</h1></div><button className="btn red" onClick={loadQueue} disabled={syncing}>{syncing ? 'Syncing…' : 'Refresh'}</button></header>
     {error && <div className="form-error">{error}</div>}
-    <section className="card"><h2>Media Queue</h2>{syncing && <div className="machine-row compact"><span>Loading media queue</span><Badge>Live</Badge></div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Delivery</th><th>Media Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{orders.map((order) => <article className="card mobile-order-card" key={order.id}><strong>{order.salesOrderNumber}</strong><Badge tone={mediaTone(status(order))}>{status(order)}</Badge><button className="btn light full" onClick={() => setActive(order)}>View</button></article>)}</div></section>
-    {active && <MediaModal order={active} record={records[active.id]} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} onSubmitted={(orderId) => { setOrders((prev) => prev.filter((order) => order.id !== orderId)); setActive(null) }} />}
+    <section className="card"><h2>{title} Queue</h2>{syncing && <div className="machine-row compact"><span>Loading media queue</span><Badge>Live</Badge></div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Delivery</th><th>Media Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{orders.map((order) => <article className="card mobile-order-card" key={order.id}><strong>{order.salesOrderNumber}</strong><Badge tone={mediaTone(status(order))}>{status(order)}</Badge><button className="btn light full" onClick={() => setActive(order)}>View</button></article>)}</div></section>
+    {active && <MediaModal order={active} record={records[active.id]} apiPath={apiPath} title={title} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} onSubmitted={(orderId) => { setOrders((prev) => prev.filter((order) => order.id !== orderId)); setActive(null) }} />}
   </>
 }
 
-function MediaModal({ order, record, onClose, onChanged, onSubmitted }: { order: Order; record?: MediaProofRecord; onClose: () => void; onChanged: (record: MediaProofRecord) => void; onSubmitted: (orderId: string) => void }) {
+function MediaModal({ order, record, apiPath, title, onClose, onChanged, onSubmitted }: { order: Order; record?: MediaProofRecord; apiPath: string; title: string; onClose: () => void; onChanged: (record: MediaProofRecord) => void; onSubmitted: (orderId: string) => void }) {
   const [busy, setBusy] = useState('')
   const [message, setMessage] = useState('')
   const [progressByMachine, setProgressByMachine] = useState<Record<string, number>>({})
@@ -52,7 +52,7 @@ function MediaModal({ order, record, onClose, onChanged, onSubmitted }: { order:
     setBusy(machineId); setMessage(''); setProgressByMachine((prev) => ({ ...prev, [machineId]: 0 }))
     try {
       for (const file of Array.from(files)) {
-        const json = await uploadVideoFile(order, machineId, file, (percent) => setProgressByMachine((prev) => ({ ...prev, [machineId]: percent })))
+        const json = await uploadVideoFile(order, machineId, file, apiPath, (percent) => setProgressByMachine((prev) => ({ ...prev, [machineId]: percent })))
         onChanged(json.data.record)
       }
       setProgressByMachine((prev) => ({ ...prev, [machineId]: 100 }))
@@ -61,10 +61,10 @@ function MediaModal({ order, record, onClose, onChanged, onSubmitted }: { order:
   }
 
   async function submit() {
-    if (!window.confirm(`Submit video proof for ${order.salesOrderNumber}?`)) return
+    if (!window.confirm(`Submit ${title.toLowerCase()} proof for ${order.salesOrderNumber}?`)) return
     setBusy('submit'); setMessage('')
     try {
-      const response = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'submit', orderId: order.id }) })
+      const response = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'submit', orderId: order.id }) })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Submit failed')
       onChanged(json.data.record)
@@ -78,7 +78,7 @@ function MediaModal({ order, record, onClose, onChanged, onSubmitted }: { order:
     if (!window.confirm(`Proceed ${order.salesOrderNumber} without video and move it to delivery stage?`)) return
     setBusy('skip'); setMessage('')
     try {
-      const response = await fetch('/api/media-proof', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'proceed_without_video', orderId: order.id }) })
+      const response = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'proceed_without_video', orderId: order.id }) })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Proceed without video failed')
       onChanged(json.data.record)
@@ -88,19 +88,19 @@ function MediaModal({ order, record, onClose, onChanged, onSubmitted }: { order:
     finally { setBusy('') }
   }
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') || message.includes('delivery') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByMachine[machine.id] || 0}%</span>}{busy === machine.id && <progress value={progressByMachine[machine.id] || 0} max={100} style={{ width: 120, marginLeft: 8 }} />}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine) => <article className="media-unit-card" key={machine.id}><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div><Previews files={record?.units?.[machine.id]?.videos || []} /><label className="btn red full">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByMachine[machine.id] || 0}%</span><progress value={progressByMachine[machine.id] || 0} max={100} /></div>}</article>)}</div><section className="modal-actions"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>{busy === 'skip' ? 'Processing…' : 'Proceed Without Video'}</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit Media Proof'}</button></section></section></div>
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName} · {order.deliveryDate}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>{message && <div className={message.includes('success') || message.includes('delivery') ? 'form-success' : 'form-error'}>{message}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByMachine[machine.id] || 0}%</span>}{busy === machine.id && <progress value={progressByMachine[machine.id] || 0} max={100} style={{ width: 120, marginLeft: 8 }} />}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine) => <article className="media-unit-card" key={machine.id}><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div><Previews files={record?.units?.[machine.id]?.videos || []} /><label className="btn red full">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => upload(machine.id, 'video', event.target.files)} /></label>{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByMachine[machine.id] || 0}%</span><progress value={progressByMachine[machine.id] || 0} max={100} /></div>}</article>)}</div><section className="modal-actions"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>{busy === 'skip' ? 'Processing…' : 'Proceed Without Video'}</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : `Submit ${title}`}</button></section></section></div>
 }
 
 function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip">{files.map((file) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">View</a>{file.expiresAt && <small className="muted"> expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}</span>)}</div> }
 
-async function uploadVideoFile(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
+async function uploadVideoFile(order: Order, machineId: string, file: File, apiPath: string, onProgress: (percent: number) => void): Promise<any> {
   // Videos must go directly to Cloudflare R2. The old server proxy fallback posts the
   // entire video through a Vercel function, which returns a non-JSON 413/timeout page
   // for real phone videos and surfaces as "server returned an invalid response".
-  return uploadDirectToR2(order, machineId, file, onProgress)
+  return uploadDirectToR2(order, machineId, file, apiPath, onProgress)
 }
 
-async function uploadDirectToR2(order: Order, machineId: string, file: File, onProgress: (percent: number) => void): Promise<any> {
+async function uploadDirectToR2(order: Order, machineId: string, file: File, apiPath: string, onProgress: (percent: number) => void): Promise<any> {
   const contentType = file.type || 'video/mp4'
   const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId, name: file.name, type: contentType }) })
   const targetJson = await parseJsonResponse(targetResponse, 'R2 upload target unavailable')
@@ -108,7 +108,7 @@ async function uploadDirectToR2(order: Order, machineId: string, file: File, onP
   const target = targetJson.data
   if (target.corsReady === false) throw new Error(target.corsError || 'Cloudflare R2 bucket CORS is not configured for dispatch.bsmindia.com. Please add the R2 CORS policy and try again.')
   await uploadBlobToR2(target.uploadUrl, file, contentType, onProgress)
-  const registered = await fetch('/api/media-proof', {
+  const registered = await fetch(apiPath, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId, name: file.name, type: contentType, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt }),
