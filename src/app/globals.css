@@ -643,3 +643,10 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .media-top .h1 { white-space: nowrap; font-size: clamp(18px, 6.2vw, 22px); line-height: 1; margin: 0; letter-spacing: -.055em; }
   .media-top .sync-icon-btn { justify-self: end; }
 }
+
+@media (max-width: 720px) {
+  .order-modal > .modal-actions:not(.media-submit-bar) { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .order-modal > .modal-actions:not(.media-submit-bar) .btn:nth-child(1) { order: 2; grid-column: 1; }
+  .order-modal > .modal-actions:not(.media-submit-bar) .btn:nth-child(2) { order: 1; grid-column: 1 / -1; }
+  .order-modal > .modal-actions:not(.media-submit-bar) .btn:nth-child(3) { order: 3; grid-column: 2; }
+}
