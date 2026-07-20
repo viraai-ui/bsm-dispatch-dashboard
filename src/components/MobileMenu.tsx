@@ -44,7 +44,13 @@ export function MobileMenu({ nav, active, onLogout }: { nav: NavItem[]; active: 
           ))}
         </nav>
         <button className="drawer-logout" type="button" onClick={() => { setOpen(false); void onLogout() }}>
-          <span className="module-orb">⏻</span>
+          <span className="module-orb drawer-logout-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              <path d="M10 17l5-5-5-5" />
+              <path d="M15 12H3" />
+            </svg>
+          </span>
           <span>Logout</span>
         </button>
       </aside>
