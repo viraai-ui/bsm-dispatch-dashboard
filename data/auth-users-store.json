@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "Admin",
+      "email": "admin@bsmindia.com",
+      "username": "admin",
+      "role": "Admin",
+      "active": true,
+      "passwordHash": "$2b$10$9UqkjLsbHybne/9W/B2m2.0FGI4klBojKhE.F4AusmOfSD01vWXz6",
+      "createdAt": "2026-07-20T07:37:30.313Z",
+      "updatedAt": "2026-07-20T07:37:30.313Z"
+    },
+    {
+      "id": "u-ops",
+      "name": "Operations",
+      "email": "operations@bsmindia.com",
+      "username": "operations",
+      "role": "Operations",
+      "active": true,
+      "passwordHash": "$2b$10$uH6TkLtMkao9nO9NWvqhSeIipo3ABm8tcdDI64JUZWnItj01Bkm0C",
+      "createdAt": "2026-07-20T07:37:30.313Z",
+      "updatedAt": "2026-07-20T07:37:30.573Z"
+    },
+    {
+      "id": "u-dispatch",
+      "name": "Dispatch",
+      "email": "dispatch@bsmindia.com",
+      "username": "dispatch",
+      "role": "Dispatch",
+      "active": true,
+      "passwordHash": "$2b$10$9UqkjLsbHybne/9W/B2m2.0FGI4klBojKhE.F4AusmOfSD01vWXz6",
+      "createdAt": "2026-07-20T07:37:30.313Z",
+      "updatedAt": "2026-07-20T07:37:30.313Z"
+    },
+    {
+      "id": "u-media",
+      "name": "Media",
+      "email": "media@bsmindia.com",
+      "username": "media",
+      "role": "Media",
+      "active": true,
+      "passwordHash": "$2b$10$9UqkjLsbHybne/9W/B2m2.0FGI4klBojKhE.F4AusmOfSD01vWXz6",
+      "createdAt": "2026-07-20T07:37:30.313Z",
+      "updatedAt": "2026-07-20T07:37:30.313Z"
+    }
+  ]
+}
