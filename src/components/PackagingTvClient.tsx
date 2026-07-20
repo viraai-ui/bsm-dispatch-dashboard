@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
-import type { MachineUnit, Order } from '@/types/domain'
+import { dispatchCategoryLabel, isMachineLineItem } from '@/lib/item-classification'
+import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 
 const PACKING_STATE_KEY = 'bsm.packing.state.v1'
 
 type PackingState = Record<string, { urgent?: boolean }>
-type MachineGroup = { itemName: string; serials: string[]; quantity: number; woodenPackingRequired: boolean }
+type MachineGroup = { itemName: string; sku?: string; serials: string[]; quantity: number; woodenPackingRequired: boolean; category?: string }
 type DispatchOrder = Order & { dispatchPriority?: 'urgent' | 'regular' }
 
 export function PackagingTvClient() {
@@ -68,14 +69,14 @@ function DispatchSection({ title, tone, orders, state, completeOrder }: { title:
 }
 
 function OrderCard({ order, urgent, completeOrder }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void }) {
-  const groups = groupMachines(order.machines)
-  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine Name</span><span>Serial Number</span><span>Quantity</span><span>Wooden Packing</span></div>{groups.map((group) => <div className="packaging-row" key={group.itemName}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>)}</div><b>{group.quantity}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
+  const groups = [...groupMachines(order.machines), ...groupDispatchLineItems(order.lineItems)]
+  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Item</span><span>SKU / Serial</span><span>Quantity</span><span>Type</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}`}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.length ? group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>) : <span>{group.sku || '—'}</span>}</div><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.category || (group.woodenPackingRequired ? 'Wooden' : 'Machine')}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
 }
 
 function groupMachines(machines: MachineUnit[]) {
   const map = new Map<string, MachineGroup>()
   for (const machine of machines) {
-    const current = map.get(machine.itemName) || { itemName: machine.itemName, serials: [], quantity: 0, woodenPackingRequired: false }
+    const current = map.get(machine.itemName) || { itemName: machine.itemName, sku: machine.sku, serials: [], quantity: 0, woodenPackingRequired: false, category: 'Machine' }
     current.serials.push(machine.serialNumber || '')
     current.quantity += 1
     current.woodenPackingRequired ||= machine.woodenPacking !== 'Not Required'
@@ -83,6 +84,18 @@ function groupMachines(machines: MachineUnit[]) {
   }
   return [...map.values()]
 }
+
+function groupDispatchLineItems(lineItems: OrderLineItem[]) {
+  return lineItems.filter((item) => !isMachineLineItem(item)).map((item) => ({
+    itemName: item.itemName,
+    sku: item.sku,
+    serials: [],
+    quantity: item.quantity,
+    woodenPackingRequired: false,
+    category: dispatchCategoryLabel(item.dispatchCategory),
+  }))
+}
+function formatQty(quantity: number, category?: string) { return category === 'Adhesive' ? `${quantity} kgs` : quantity }
 function isUrgent(order: DispatchOrder, state: PackingState) { return order.dispatchPriority === 'urgent' || order.machines.some((machine) => state[machine.id]?.urgent) }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }

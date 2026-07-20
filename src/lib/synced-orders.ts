@@ -1,6 +1,7 @@
 import { readFile } from 'fs/promises'
 import path from 'path'
 import type { MachineUnit, Order } from '@/types/domain'
+import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { fetchZohoConfirmedOrders } from './zoho'
 import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
 
@@ -35,9 +36,19 @@ async function readBundledSyncedOrdersStore() {
 }
 
 function normalizeStore(store: SyncedOrdersStore): SyncedOrdersStore {
-  const orders = store.orders || {}
+  const rawOrders = store.orders || {}
+  const orders = Object.fromEntries(Object.entries(rawOrders).map(([id, order]) => [id, normalizeOrder(order)]))
   const orderIds = (store.orderIds?.length ? store.orderIds : Object.keys(orders)).filter((id) => Boolean(orders[id]))
   return { ...fallbackStore, ...store, orders, orderIds }
+}
+
+function normalizeOrder(order: Order): Order {
+  const lineItems = (order.lineItems || []).map((item) => {
+    const withCategory = { ...item, dispatchCategory: item.dispatchCategory || classifyDispatchItem(item) }
+    return withCategory
+  })
+  const machineLineIds = new Set(lineItems.filter(isMachineLineItem).map((item) => item.id))
+  return { ...order, lineItems, machines: (order.machines || []).filter((machine) => machineLineIds.has(machine.lineItemId)) }
 }
 
 export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message = 'Update confirmed sales order sync store') {

@@ -2,6 +2,8 @@ export type Role = 'SUPER_ADMIN' | 'ADMIN' | 'PACKAGING_TEAM' | 'DISPATCH_TEAM' 
 export type OrderStatus = 'open' | 'partially_shipped'
 export type MachineStatus = 'Not Generated' | 'QR Generated' | 'QR Printed' | 'Processed' | 'Packing Done' | 'Media Done' | 'Vehicle Booked' | 'Dispatched' | 'Review Required'
 
+export type DispatchCategory = 'machine' | 'adhesive' | 'other'
+
 export type OrderLineItem = {
   id: string
   itemName: string
@@ -9,6 +11,7 @@ export type OrderLineItem = {
   quantity: number
   pendingQuantity: number
   woodenPackingRequired: boolean
+  dispatchCategory?: DispatchCategory
   dimensions?: string
 }
 

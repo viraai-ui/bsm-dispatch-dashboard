@@ -1,4 +1,5 @@
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
+import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 
 const dc = process.env.ZOHO_DC || 'in'
 const accountsDomain = `https://accounts.zoho.${dc}`
@@ -87,7 +88,7 @@ function mapLineItems(order: any): OrderLineItem[] {
     const quantity = Number(item.quantity || 0)
     const shipped = Number(item.quantity_shipped || item.shipped_quantity || 0)
     const woodenRequired = isWoodenPackingLineItem(item)
-    return {
+    const lineItem = {
       id: String(item.line_item_id || item.item_id || `line-${index}`),
       itemName: String(item.name || item.item_name || 'Machine'),
       sku: String(item.sku || ''),
@@ -96,12 +97,14 @@ function mapLineItems(order: any): OrderLineItem[] {
       woodenPackingRequired: woodenRequired,
       dimensions: item.dimensions,
     }
+    return { ...lineItem, dispatchCategory: classifyDispatchItem(lineItem) }
   })
 }
 
 function buildUnits(order: any, lineItems: OrderLineItem[]): MachineUnit[] {
   const units: MachineUnit[] = []
   for (const item of lineItems) {
+    if (!isMachineLineItem(item)) continue
     for (let i = 1; i <= item.pendingQuantity; i += 1) {
       units.push({
         id: `${order.salesorder_id}-${item.id}-${i}`,
