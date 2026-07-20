@@ -72,7 +72,10 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   if (!user) {
     return <main className="login-screen">
       <section className="login-card card">
-        <div className="logo big">BSM</div>
+        <div className="login-brand-box">
+          <img className="login-brand-logo" src="/brand/bsm-logo.png" alt="BSM" />
+          <span>DISPATCH DASHBOARD</span>
+        </div>
         <h1 className="h1">Login</h1>
         <form className="form-grid" onSubmit={submitLogin}>
           <label>Email or Username<input value={login} onChange={(e) => setLogin(e.target.value)} autoComplete="username" /></label>
