@@ -742,7 +742,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
     box-shadow: none !important;
   }
   .wooden-mobile-head .h1 { white-space: nowrap; font-size: clamp(28px, 8.2vw, 34px); line-height: 1; margin: 0; }
-  .wooden-mobile-head .wooden-sync-btn { width: 32px; min-width: 32px; height: 32px; border-radius: 999px; font-size: 13px; justify-self: start; margin-left: -8px; color: #0f172a; background: rgba(255,255,255,.92); border: 1px solid #d8dee8; box-shadow: 0 8px 18px rgba(15,23,42,.08); display: grid; place-items: center; }
+  .wooden-mobile-head .wooden-sync-btn { width: 36px !important; min-width: 36px !important; max-width: 36px !important; height: 36px !important; min-height: 36px !important; max-height: 36px !important; aspect-ratio: 1 / 1; padding: 0 !important; border-radius: 50% !important; font-size: 15px; line-height: 1; justify-self: start; margin-left: -8px; color: #0f172a; background: rgba(255,255,255,.96); border: 1px solid #cbd5e1; box-shadow: 0 8px 18px rgba(15,23,42,.08); display: inline-grid; place-items: center; overflow: hidden; flex: 0 0 36px; }
   .wooden-summary-export { margin-bottom: 10px; padding: 12px; border-radius: 18px; }
   .wooden-summary-export strong { font-size: 30px; }
   .wooden-summary-export .btn { min-height: 34px; padding: 0 12px; border-radius: 12px; font-size: 12px; }
