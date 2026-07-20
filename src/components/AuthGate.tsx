@@ -19,8 +19,8 @@ export function useAuth() {
 export function AuthGate({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<SafeUser | null>(null)
   const [ready, setReady] = useState(false)
-  const [login, setLogin] = useState('admin@bsmindia.com')
-  const [password, setPassword] = useState('1231')
+  const [login, setLogin] = useState('')
+  const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const router = useRouter()
