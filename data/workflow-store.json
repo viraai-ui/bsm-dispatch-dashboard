@@ -1197,13 +1197,81 @@
     "TEST-LOCK-VIRA": {
       "salesOrderId": "TEST-LOCK-VIRA",
       "salesOrderNumber": "TEST-LOCK-VIRA",
-      "status": "qr_not_required",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-07-20T09:32:09.143Z",
+      "processedOrder": {
+        "id": "TEST-LOCK-VIRA",
+        "zohoSalesOrderId": "TEST-LOCK-VIRA",
+        "salesOrderNumber": "TEST-LOCK-VIRA",
+        "status": "open",
+        "customerName": "Vira Test",
+        "deliveryDate": "2026-07-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "line-1",
+            "itemName": "Conveyor",
+            "sku": "TEST",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "description": "Visible regression description"
+          }
+        ],
+        "machines": [
+          {
+            "id": "TEST-LOCK-VIRA-line-1-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "TEST-LOCK-VIRA",
+            "lineItemId": "line-1",
+            "itemName": "Conveyor",
+            "sku": "TEST",
+            "customerName": "Vira Test",
+            "salesOrderNumber": "TEST-LOCK-VIRA",
+            "deliveryDate": "2026-07-20",
+            "status": "QR Printed",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Visible regression description"
+          },
+          {
+            "id": "TEST-LOCK-VIRA-line-1-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "TEST-LOCK-VIRA",
+            "lineItemId": "line-1",
+            "itemName": "Conveyor",
+            "sku": "TEST",
+            "customerName": "Vira Test",
+            "salesOrderNumber": "TEST-LOCK-VIRA",
+            "deliveryDate": "2026-07-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Visible regression description"
+          }
+        ]
+      },
       "machines": {
         "TEST-LOCK-VIRA-line-1-1": {
           "machineUnitId": "TEST-LOCK-VIRA-line-1-1",
           "lineItemId": "line-1",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-07-20T09:32:07.405Z"
+          "qrNotRequiredAt": "2026-07-20T09:32:07.405Z",
+          "processedAt": "2026-07-20T09:32:09.143Z"
         }
       }
     }
