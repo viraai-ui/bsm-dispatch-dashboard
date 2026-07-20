@@ -1,7 +1,8 @@
 import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { githubReadJson, githubWriteJson, listProcessedOrders, upsertOrderWorkflow } from '@/lib/workflow-store'
-import type { MachineUnit, Order } from '@/types/domain'
+import { readSyncedOrdersStore } from '@/lib/synced-orders'
+import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
@@ -10,12 +11,13 @@ export async function GET() {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
   if (!auth.ok) return auth.response
   const processed = await listProcessedOrders()
+  const synced = await readSyncedOrdersStore()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const orders = processed
     .filter((item) => Boolean(item.processedOrder))
     .map((item) => {
       const processedIds = new Set(Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId))
-      const order = item.processedOrder as Order
+      const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId])
       return { ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular' }
     })
     .filter((order) => order.machines.length > 0)
@@ -55,4 +57,23 @@ function mergeCompletedMachines(existing: MachineUnit[] = [], next: MachineUnit[
   const byId = new Map(existing.map((machine) => [machine.id, machine]))
   for (const machine of next) byId.set(machine.id, machine)
   return [...byId.values()]
+}
+
+function enrichDescriptions(order: Order, synced?: Order): Order {
+  if (!synced) return order
+  const lineDescriptions = new Map((synced.lineItems || []).map((item) => [item.id, item.description || '']))
+  const liveMachines = new Map((synced.machines || []).map((machine) => [machine.id, machine]))
+  return {
+    ...order,
+    lineItems: mergeLineItemDescriptions(order.lineItems || [], synced.lineItems || []),
+    machines: (order.machines || []).map((machine) => {
+      const live = liveMachines.get(machine.id)
+      return { ...machine, itemDescription: machine.itemDescription || live?.itemDescription || lineDescriptions.get(machine.lineItemId) || '' }
+    }),
+  }
+}
+
+function mergeLineItemDescriptions(current: OrderLineItem[], synced: OrderLineItem[]) {
+  const syncedById = new Map(synced.map((item) => [item.id, item]))
+  return current.map((item) => ({ ...item, description: item.description || syncedById.get(item.id)?.description || '' }))
 }
