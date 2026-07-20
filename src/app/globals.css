@@ -535,7 +535,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 
 
 /* BSM mobile app redesign pass */
-.sync-icon-btn { width: 42px; min-width: 42px; height: 42px; padding: 0; border-radius: 14px; font-size: 20px; line-height: 1; color: #1e40af; background: #eff6ff; border-color: #bfdbfe; }
+.sync-icon-btn { width: 34px; min-width: 34px; height: 34px; padding: 0; border-radius: 12px; font-size: 16px; line-height: 1; color: #1e40af; background: #eff6ff; border-color: #bfdbfe; }
 .compact-view-btn, .tiny-view { width: auto; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 12px; }
 .mobile-card-topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .mobile-order-tap-card { cursor: pointer; }
@@ -636,4 +636,10 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 @media (max-width: 720px) {
   .media-unit-card .upload-check { grid-column: 2; grid-row: 1; align-self: end; justify-self: end; margin-top: 28px; position: relative; z-index: 2; }
   .media-unit-card:has(.upload-check) label.btn::after { content: ''; position: absolute; }
+}
+
+@media (max-width: 720px) {
+  .media-top { display: grid; grid-template-columns: minmax(0, 1fr) 34px; align-items: center; }
+  .media-top .h1 { white-space: nowrap; font-size: clamp(18px, 6.2vw, 22px); line-height: 1; margin: 0; letter-spacing: -.055em; }
+  .media-top .sync-icon-btn { justify-self: end; }
 }
