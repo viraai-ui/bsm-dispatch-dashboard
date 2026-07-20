@@ -781,9 +781,13 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .wooden-order-row { padding: 10px 12px; border-radius: 16px; gap: 10px; }
   .wooden-order-row > div { display: grid; gap: 3px; min-width: 0; }
   .wooden-order-row > div > strong { font-size: 16px; line-height: 1.1; letter-spacing: -.02em; }
-  .wooden-order-row .muted { margin: 0; font-size: 12px; line-height: 1.2; font-weight: 650; }
-  .wooden-order-row p:not(.muted) { margin: 0; font-size: 12px; line-height: 1.25; color: #475569; }
-  .wooden-order-row p:not(.muted) strong { font-size: 12px; line-height: 1.25; }
+  .wooden-order-row .muted { margin: 0 0 8px; font-size: 12px; line-height: 1.2; font-weight: 650; }
+  .wooden-item-list { display: grid; gap: 4px; padding-top: 4px; border-top: 1px solid rgba(226,232,240,.72); }
+  .wooden-item-line { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: baseline; margin: 0; font-size: 12px; line-height: 1.25; color: #475569; }
+  .wooden-item-line span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .wooden-item-line strong { min-width: 24px; text-align: right; font-size: 12px; line-height: 1.25; color: #0f172a; }
+  .wooden-order-row p:not(.muted):not(.wooden-item-line) { margin: 0; font-size: 12px; line-height: 1.25; color: #475569; }
+  .wooden-order-row p:not(.muted):not(.wooden-item-line) strong { font-size: 12px; line-height: 1.25; }
   .wooden-order-row .status-select { min-height: 34px; padding: 0 28px 0 10px; font-size: 11px; }
 }
 
