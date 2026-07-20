@@ -472,53 +472,6 @@
         }
       ]
     },
-    "1154219000034275026": {
-      "id": "1154219000034275026",
-      "zohoSalesOrderId": "1154219000034275026",
-      "salesOrderNumber": "SO-07510",
-      "status": "open",
-      "customerName": "NAGINA MARKETING",
-      "shippingAddress": "E-45C, RIICO INDL AREA,PHASE-II, BHIWADI,, Alwar,, Rajasthan, 301019, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034275029",
-          "itemName": "UV Curing machine",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034275026-1154219000034275029-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034275026",
-          "lineItemId": "1154219000034275029",
-          "itemName": "UV Curing machine",
-          "sku": "",
-          "customerName": "NAGINA MARKETING",
-          "salesOrderNumber": "SO-07510",
-          "deliveryDate": "2026-07-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034276023": {
       "id": "1154219000034276023",
       "zohoSalesOrderId": "1154219000034276023",
@@ -4142,7 +4095,6 @@
     "1154219000034273023",
     "1154219000034263026",
     "1154219000034254047",
-    "1154219000034275026",
     "1154219000034276023",
     "1154219000034301018",
     "1154219000034259048",
@@ -4175,8 +4127,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-20T10:45:19.259Z",
-  "lastAttemptAt": "2026-07-20T10:52:24.548Z",
+  "lastSuccessfulSyncAt": "2026-07-20T10:53:03.213Z",
+  "lastAttemptAt": "2026-07-20T10:53:03.213Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
