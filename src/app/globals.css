@@ -250,7 +250,7 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .inline-serials { display: inline-flex; width: fit-content; margin-top: 2px; padding: 3px 7px; border-radius: 999px; background: #ecfdf5; color: #047857; border: 1px solid #bbf7d0; font-size: 11px; line-height: 1.15; font-weight: 700; overflow-wrap: anywhere; }
 .dispatch-sku, .dispatch-notes { font-size: 12px; color: #334155; line-height: 1.35; overflow-wrap: anywhere; }
 .dispatch-notes { color: #64748b; }
-.process-confirm-modal { width: min(1080px, 94vw); max-height: 88vh; overflow: auto; padding: 24px; }
+.process-confirm-modal { position: relative; width: min(1040px, calc(100vw - 44px)); max-height: min(82svh, 720px); overflow: auto; padding: 26px 26px 22px; border: 1px solid rgba(255,255,255,.72); background: rgba(255,255,255,.97); box-shadow: 0 38px 110px rgba(2,6,23,.36); }
 .confirm-table-wrap { width: 100%; overflow-x: auto; margin-top: 14px; }
 .confirm-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; min-width: 860px; }
 .confirm-table th { text-align: left; color: #64748b; font-size: 10px; text-transform: uppercase; letter-spacing: .07em; padding: 0 10px; }
@@ -259,6 +259,8 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .confirm-table td:last-child { border-right: 1px solid var(--line); border-radius: 0 14px 14px 0; width: 25%; }
 .dispatch-note-input { width: 100%; min-height: 58px; resize: vertical; border: 1px solid var(--line); border-radius: 12px; padding: 9px 10px; font: inherit; font-size: 12px; outline: none; }
 .dispatch-note-input:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.16); }
+.process-confirm-modal .modal-actions { position: sticky; bottom: 0; margin: 18px -26px -22px; padding: 16px 26px 0; background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.98) 36%, rgba(255,255,255,.98)); border-top: 1px solid rgba(226,232,240,.74); box-shadow: none; justify-content: flex-end; }
+.process-confirm-modal .modal-actions .btn { width: auto; min-width: 104px; box-shadow: 0 10px 22px rgba(15,23,42,.10); }
 .success-animation { display: grid; place-items: center; gap: 12px; min-height: 260px; text-align: center; }
 .success-animation span { display: grid; place-items: center; width: 86px; height: 86px; border-radius: 999px; background: #16a34a; color: #fff; font-size: 48px; font-weight: 900; animation: success-pop .65s ease both; box-shadow: 0 20px 45px rgba(22,163,74,.28); }
 .success-animation h2 { margin: 0; color: #166534; }
@@ -330,7 +332,7 @@ input:focus, select:focus { border-color: rgba(200,16,46,.55); box-shadow: 0 0 0
 .big-number { font-size: 42px; font-weight: 950; letter-spacing: -.07em; margin-top: 12px; }
 button:disabled { opacity: .46; cursor: not-allowed; }
 .modal-backdrop { position: fixed; inset: 0; z-index: 120; background: rgba(15,23,42,.55); backdrop-filter: blur(8px); display: grid; place-items: center; padding: 22px; }
-.modal-backdrop.nested { z-index: 180; background: rgba(15,23,42,.76); backdrop-filter: blur(14px); }
+.modal-backdrop.nested { z-index: 180; background: rgba(15,23,42,.72); backdrop-filter: blur(16px); place-items: center; align-items: center; padding: 24px; }
 .process-type-modal { position: relative; width: min(430px, calc(100vw - 32px)); display: grid; gap: 16px; text-align: center; padding: 30px 24px 24px; border: 1px solid rgba(255,255,255,.72); background: rgba(255,255,255,.96); box-shadow: 0 34px 90px rgba(2,6,23,.32); }
 .process-type-modal h2 { margin: 4px 32px 0; font-size: 22px; letter-spacing: -.035em; }
 .process-type-modal p { max-width: 310px; margin: 0 auto; line-height: 1.45; }
@@ -453,6 +455,11 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .stage-steps { min-width: 560px; }
   .unit-action { width: 100%; }
   .modal-backdrop { padding: 10px; align-items: start; }
+  .modal-backdrop.nested { padding: 14px; align-items: center; place-items: center; }
+  .process-confirm-modal { width: min(100%, calc(100vw - 20px)); max-height: 84svh; padding: 18px 14px 16px; }
+  .process-confirm-modal .modal-actions { margin: 14px -14px -16px; padding: 14px; }
+  .process-confirm-modal .modal-actions .btn { width: auto; flex: 1; }
+  .confirm-table { min-width: 760px; }
   .order-modal { max-height: 96svh; border-radius: 22px; }
   .modal-actions { justify-content: stretch; }
   .modal-actions .btn { width: 100%; }
