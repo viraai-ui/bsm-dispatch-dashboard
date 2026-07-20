@@ -572,16 +572,18 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .compact-card-side span { display: block; font-size: 9px; color: #64748b; font-weight: 950; text-transform: uppercase; letter-spacing: .055em; line-height: 1; }
   .compact-card-side strong { display: block; margin-top: 3px; font-size: 12px; line-height: 1.05; letter-spacing: -.01em; }
   .compact-operational-card .compact-view-btn { margin-top: 2px; min-height: 30px; padding: 0 10px; border-radius: 999px; font-size: 12px; box-shadow: none; }
-  .orders-list-card .compact-operational-card { align-items: stretch; min-height: 116px; }
-  .orders-list-card .compact-card-main { display: flex; flex-direction: column; align-self: stretch; justify-content: flex-start; }
-  .orders-list-card .compact-card-main .badge { margin-top: auto; font-size: 11px; padding: 6px 10px; border-radius: 999px; line-height: 1.05; box-shadow: 0 6px 14px rgba(15,23,42,.06); }
+  .orders-list-card .compact-operational-card, .database-list-card .compact-operational-card { align-items: stretch; min-height: 116px; }
+  .orders-list-card .compact-card-main, .database-list-card .compact-card-main { display: flex; flex-direction: column; align-self: stretch; justify-content: flex-start; }
+  .orders-list-card .compact-card-main .badge, .database-list-card .compact-card-main .badge { margin-top: auto; width: fit-content; min-height: 30px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; padding: 0 10px; border-radius: 999px; line-height: 1.05; box-shadow: 0 6px 14px rgba(15,23,42,.06); }
+  .database-list-card .compact-card-side strong { font-size: 12px; line-height: 1.05; }
+  .database-list-card .compact-card-side span { font-size: 9px; }
   .mobile-order-card strong { font-size: 16px; line-height: 1.1; letter-spacing: -.02em; }
   .mobile-order-card p { margin: 3px 0 0; font-size: 12px; line-height: 1.25; }
   .mobile-order-card .badge { font-size: 10px; padding: 4px 7px; }
   .compact-card-main strong { font-size: 17px; line-height: 1.05; letter-spacing: -.035em; }
   .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
   .compact-card-main .badge { justify-self: start; padding: 4px 8px; }
-  .orders-list-card .compact-card-main .badge { margin-top: auto; font-size: 11px; padding: 6px 10px; border-radius: 999px; line-height: 1.05; box-shadow: 0 6px 14px rgba(15,23,42,.06); }
+  .orders-list-card .compact-card-main .badge, .database-list-card .compact-card-main .badge { margin-top: auto; width: fit-content; min-height: 30px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; padding: 0 10px; border-radius: 999px; line-height: 1.05; box-shadow: 0 6px 14px rgba(15,23,42,.06); }
   .meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 8px; }
   .meta-grid > div { padding: 8px; border-radius: 12px; background: #f8fafc; }
   .meta-grid span { font-size: 10px; color: #64748b; font-weight: 900; text-transform: uppercase; letter-spacing: .05em; }
@@ -771,17 +773,18 @@ button:disabled { opacity: .46; cursor: not-allowed; }
     border: 1px solid rgba(226,232,240,.92) !important;
     box-shadow: 0 8px 22px rgba(15,23,42,.06) !important;
   }
-  .wooden-mobile-head .h1 { white-space: nowrap; font-size: 22px; line-height: 1; margin: 0; }
+  .wooden-mobile-head .h1 { white-space: nowrap; font-size: 18px; line-height: 1; margin: 0; }
   .wooden-mobile-head::after { display: none !important; content: none !important; }
   .wooden-mobile-head .wooden-sync-btn { width: 36px !important; min-width: 36px !important; max-width: 36px !important; height: 36px !important; min-height: 36px !important; max-height: 36px !important; aspect-ratio: 1 / 1; padding: 0 !important; border-radius: 50% !important; font-size: 15px; line-height: 1; justify-self: start; margin-left: -8px; color: #0f172a; background: rgba(255,255,255,.96); border: 1px solid #cbd5e1; box-shadow: 0 8px 18px rgba(15,23,42,.08); display: inline-flex; align-items: center; justify-content: center; overflow: hidden; flex: 0 0 36px; }
   .wooden-mobile-head .wooden-sync-btn span { display: block; width: 15px; height: 15px; line-height: 15px; text-align: center; transform-origin: 50% 50%; }
   .wooden-mobile-head .wooden-sync-btn.syncing span { animation: wooden-sync-spin .75s linear infinite; }
-  .wooden-summary-export { margin-bottom: 10px; padding: 12px; border-radius: 18px; }
-  .wooden-summary-export strong { font-size: 26px; }
+  .wooden-summary-export { margin-bottom: 8px; padding: 10px 12px; border-radius: 18px; }
+  .wooden-summary-export span { font-size: 18px; line-height: 1; text-transform: none; letter-spacing: -.02em; }
+  .wooden-summary-export strong { font-size: 18px; line-height: 1; letter-spacing: -.02em; }
   .wooden-summary-export .btn { min-height: 34px; padding: 0 12px; border-radius: 12px; font-size: 12px; }
   .wooden-export-actions { flex-wrap: nowrap; }
-  .wooden-summary-export + .card { margin-top: 0; }
-  .wooden-summary-export + .card h2 { font-size: 20px; margin-bottom: 12px; }
+  .wooden-summary-export + .card { margin-top: 0; padding-top: 10px; }
+  .wooden-summary-export + .card h2 { display: none; }
   .wooden-order-row { padding: 10px 12px; border-radius: 16px; gap: 10px; }
   .wooden-order-row > div { display: grid; gap: 3px; min-width: 0; }
   .wooden-order-row > div > strong { font-size: 16px; line-height: 1.1; letter-spacing: -.02em; }
