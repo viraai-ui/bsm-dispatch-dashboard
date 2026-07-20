@@ -88,7 +88,7 @@ function groupMachines(machines: MachineUnit[]) {
 }
 
 function groupDispatchLineItems(lineItems: OrderLineItem[]) {
-  return lineItems.filter((item) => !isMachineLineItem(item)).map((item) => ({
+  return lineItems.filter((item) => !isMachineLineItem(item) && item.dispatchCategory !== 'freight').map((item) => ({
     itemName: item.itemName,
     description: item.description,
     sku: item.sku,

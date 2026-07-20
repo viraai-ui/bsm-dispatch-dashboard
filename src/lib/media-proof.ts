@@ -3,6 +3,7 @@ import { uploadBufferToGithubMedia } from './github-media'
 import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
+import { isMachineLineItem } from './item-classification'
 import { buildR2Key, r2Configured, uploadBufferToR2 } from './r2'
 
 export type MediaUpload = {
@@ -47,11 +48,28 @@ export async function cleanupExpiredMediaProofs() {
 export async function listMediaProofOrders() {
   const processed = await listProcessedOrders()
   const store = await readMediaProofStore()
-  const orders = processed
-    .map((item) => item.processedOrder)
-    .filter((order): order is Order => Boolean(order))
+  let changed = false
+  const sourceOrders = processed.map((item) => item.processedOrder).filter((order): order is Order => Boolean(order))
+  for (const order of sourceOrders) {
+    if (videoRequiredMachines(order).length === 0 && !store.records[order.id]?.submittedAt) {
+      store.records[order.id] = { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: new Date().toISOString(), videoNotRequired: true, units: {} }
+      changed = true
+    }
+  }
+  if (changed) await githubWriteJson(MEDIA_PROOF_PATH, store, 'Auto-close video-not-required orders')
+  const orders = sourceOrders
+    .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))
+    .filter((order) => order.machines.length > 0)
     .filter((order) => !store.records[order.id]?.submittedAt)
   return { orders, records: store.records }
+}
+
+function videoRequiredMachines(order: Order) {
+  const lineItemsById = new Map((order.lineItems || []).map((item) => [item.id, item]))
+  return (order.machines || []).filter((machine) => {
+    const lineItem = lineItemsById.get(machine.lineItemId)
+    return Boolean(lineItem && isMachineLineItem(lineItem))
+  })
 }
 
 export async function saveMediaUpload(order: Order, machineId: string, kind: 'photo' | 'video', upload: { name: string; type: string; dataUrl: string }) {
@@ -168,7 +186,7 @@ export async function submitMediaProof(order: Order) {
   const record = store.records[order.id]
   if (!record) throw new Error('No media proof found for this order')
   if (!record.videoNotRequired) {
-    const missing = order.machines.filter((machine) => !(record.units[machine.id]?.videos || []).length)
+    const missing = videoRequiredMachines(order).filter((machine) => !(record.units[machine.id]?.videos || []).length)
     if (missing.length) throw new Error(`Missing videos for: ${missing.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
   }
   record.submittedAt = new Date().toISOString()

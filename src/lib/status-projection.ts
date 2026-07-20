@@ -17,11 +17,11 @@ export type OrderStatusProjection = {
 }
 
 export function lifecycleLabel(stage: OrderStage) {
-  return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', partially_dispatched: 'Partially Dispatched', dispatched: 'Dispatched', closed: 'Closed' } as Record<OrderStage, string>)[stage]
+  return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', closed: 'Closed' } as Record<OrderStage, string>)[stage]
 }
 
 export function lifecycleTone(stage: OrderStage): StatusTone {
-  return ({ open: 'gray', processed: 'amber', packed: 'blue', media_uploaded: 'purple', partially_dispatched: 'amber', dispatched: 'green', closed: 'red' } as Record<OrderStage, StatusTone>)[stage]
+  return ({ open: 'gray', processed: 'amber', packed: 'blue', media_uploaded: 'purple', closed: 'red' } as Record<OrderStage, StatusTone>)[stage]
 }
 
 export function mediaStatusForOrder(order: Order, record?: MediaProofRecord): MediaStatus {

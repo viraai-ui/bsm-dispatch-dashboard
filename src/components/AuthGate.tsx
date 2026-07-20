@@ -6,7 +6,7 @@ import type { SafeUser } from '@/lib/auth'
 
 type AuthContextValue = { user: SafeUser; logout: () => Promise<void> }
 const AuthContext = createContext<AuthContextValue | null>(null)
-const dispatchOnlyPath = '/packaging-tv'
+const dispatchOnlyPath = '/media-proof'
 const mediaOnlyPath = '/media-proof'
 function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : '/' }
 

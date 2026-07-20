@@ -8,7 +8,7 @@ import { dispatchCategoryLabel } from '@/lib/item-classification'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
 
-type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'partially_dispatched' | 'dispatched' | 'closed'
+type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'closed'
 
 type MachineRecord = {
   id: string
@@ -200,7 +200,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
 
   const proceedWithoutQr = async () => {
     if (!selectedCount) { setMessage('Please select at least one machine.'); return }
-    if (!window.confirm(`Proceed without QR & Serial and move ${selectedCount} selected machine${selectedCount === 1 ? '' : 's'} to Dispatch View?`)) return
+    if (!window.confirm(`Proceed without QR & Serial and move ${selectedCount} selected machine${selectedCount === 1 ? '' : 's'} to Video Upload?`)) return
     await saveWorkflow(order.id, { action: 'not_required', order: { ...order, machines }, selectedMachineIds: [...selected] })
     const updated = machines.map((machine) => selected.has(machine.id) ? { ...machine, status: 'QR Printed' as const } : machine)
     await saveWorkflow(order.id, { action: 'process', order: { ...order, machines: updated }, selectedMachineIds: [...selected], dispatchPriority: 'regular' })
@@ -222,12 +222,13 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
 }
 
 
-const STAGE_FLOW: OrderStage[] = ['open', 'processed', 'packed', 'media_uploaded', 'dispatched', 'closed']
+const STAGE_FLOW: OrderStage[] = ['open', 'processed', 'packed', 'media_uploaded', 'closed']
 
 function StageTracker({ stage }: { stage: OrderStage }) {
   const current = Math.max(0, STAGE_FLOW.indexOf(stage))
+  const progressWidth = `calc(${(current / (STAGE_FLOW.length - 1)) * 100}% - ${current === 0 ? '0px' : '0px'})`
   return <section className="stage-tracker" aria-label="Order stage timeline">
-    <div className="stage-bar"><span style={{ width: `${(current / (STAGE_FLOW.length - 1)) * 100}%` }} /></div>
+    <div className="stage-bar"><span style={{ width: progressWidth }} /></div>
     <div className="stage-steps">{STAGE_FLOW.map((item, index) => <div key={item} className={`stage-step ${index <= current ? 'done' : ''} ${item === stage ? 'active' : ''}`}><i>{index + 1}</i><strong>{stageLabel(item)}</strong></div>)}</div>
   </section>
 }
@@ -346,15 +347,13 @@ function Info({ k, v }: { k: string; v: string }) { return <div className="info-
 function ItemName({ name, description }: { name: string; description?: string }) { const cleanDescription = displayDescription(name, description); return <div className="item-name-stack"><strong>{name}</strong>{cleanDescription && <small className="item-description">{cleanDescription}</small>}</div> }
 function sanitizeOrders(orders: Order[]) { return orders }
 function statusLabel(status: string) { return ({ open: 'Open', partially_shipped: 'Partially Shipped', partially_generated: 'Partially Generated', qr_generated: 'QR Generated', qr_not_required: 'QR Not Required', processed: 'Processed' } as Record<string, string>)[status] || status }
-function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', partially_dispatched: 'Partially Dispatched', dispatched: 'Dispatched', closed: 'Closed' } as Record<string, string>)[stage] || stage }
+function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', closed: 'Closed' } as Record<string, string>)[stage] || stage }
 function stageTone(stage: string): 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple' {
   return ({
     open: 'gray',
     processed: 'amber',
     packed: 'blue',
     media_uploaded: 'purple',
-    partially_dispatched: 'amber',
-    dispatched: 'green',
     closed: 'red',
   } as Record<string, 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple'>)[stage] || 'gray'
 }
