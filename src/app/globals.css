@@ -565,7 +565,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .compact-operational-card { display: grid; grid-template-columns: minmax(0, 1fr) 104px; gap: 10px; align-items: center; min-height: 98px; }
   .compact-card-main { min-width: 0; display: grid; gap: 6px; align-content: center; }
   .compact-card-main strong { font-size: 17px; line-height: 1.05; letter-spacing: -.035em; }
-  .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
   .compact-card-main .badge { justify-self: start; font-size: 10px; padding: 4px 8px; }
   .compact-card-side { display: grid; gap: 5px; align-content: center; }
   .compact-card-side > div { padding: 7px 8px; border-radius: 12px; background: #f8fafc; }
@@ -576,7 +576,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .mobile-order-card p { margin: 3px 0 0; font-size: 12px; line-height: 1.25; }
   .mobile-order-card .badge { font-size: 10px; padding: 4px 7px; }
   .compact-card-main strong { font-size: 17px; line-height: 1.05; letter-spacing: -.035em; }
-  .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .compact-card-main p { margin: 0; font-size: 12px; line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
   .compact-card-main .badge { justify-self: start; padding: 4px 8px; }
   .meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 8px; }
   .meta-grid > div { padding: 8px; border-radius: 12px; background: #f8fafc; }
