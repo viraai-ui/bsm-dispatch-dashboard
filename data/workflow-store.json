@@ -994,7 +994,54 @@
     "1154219000034273023": {
       "salesOrderId": "1154219000034273023",
       "salesOrderNumber": "SO-07516",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "urgent",
+      "processedAt": "2026-07-20T08:12:55.605Z",
+      "processedOrder": {
+        "id": "1154219000034273023",
+        "zohoSalesOrderId": "1154219000034273023",
+        "salesOrderNumber": "SO-07516",
+        "status": "open",
+        "customerName": "Dilip Kumar (URP)",
+        "shippingAddress": "Ramjee Chak, post bataganj, Dinapur-Cum- Khagaul, Patna, Bataganj, Bihar - 800018",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-07-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034273026",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034273023-1154219000034273026-1",
+            "unitNumber": 1,
+            "serialNumber": "262700034",
+            "qrToken": "262700034",
+            "orderId": "1154219000034273023",
+            "lineItemId": "1154219000034273026",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "Dilip Kumar (URP)",
+            "salesOrderNumber": "SO-07516",
+            "deliveryDate": "2026-07-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "warrantyStart": "2026-07-20"
+          }
+        ]
+      },
       "machines": {
         "1154219000034273023-1154219000034273026-1": {
           "machineUnitId": "1154219000034273023-1154219000034273026-1",
