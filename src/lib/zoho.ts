@@ -6,6 +6,7 @@ const accountsDomain = `https://accounts.zoho.${dc}`
 const apiDomain = process.env.ZOHO_API_DOMAIN || `https://www.zohoapis.${dc}`
 let cachedAccessToken: { token: string; expiresAt: number } | null = null
 let pendingAccessToken: Promise<string> | null = null
+const itemDescriptionCache = new Map<string, string>()
 
 function hasZohoConfig() {
   return Boolean(process.env.ZOHO_CLIENT_ID && process.env.ZOHO_CLIENT_SECRET && process.env.ZOHO_REFRESH_TOKEN && process.env.ZOHO_ORGANIZATION_ID)
@@ -73,6 +74,26 @@ function readCustomField(source: any, names: string[]) {
   return undefined
 }
 
+function cleanDescription(value: unknown) {
+  return String(value || '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function lineItemDescription(item: any) {
+  return cleanDescription(
+    item.description
+    || item.item_description
+    || item.sales_description
+    || item.long_description
+    || item.item_custom_fields?.description
+    || readCustomField(item, ['description', 'specification', 'specifications'])
+  )
+}
+
 function isWoodenPackingLineItem(item: any) {
   const itemWooden = readCustomField(item, ['wooden packing', 'wooden', 'packing'])
   const itemWoodenText = String(itemWooden || '').toLowerCase().trim()
@@ -92,7 +113,7 @@ function mapLineItems(order: any): OrderLineItem[] {
       id: String(item.line_item_id || item.item_id || `line-${index}`),
       itemName: String(item.name || item.item_name || 'Machine'),
       sku: String(item.sku || ''),
-      description: String(item.description || item.item_description || item.sales_description || '').trim(),
+      description: lineItemDescription(item),
       quantity,
       pendingQuantity: Math.max(0, quantity - shipped),
       woodenPackingRequired: woodenRequired,
@@ -236,9 +257,29 @@ export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   return detailed
 }
 
+async function enrichZohoLineItemDescriptions(order: any, token: string) {
+  for (const item of order.line_items || []) {
+    if (lineItemDescription(item)) continue
+    const itemId = String(item.item_id || '')
+    if (!itemId) continue
+    if (!itemDescriptionCache.has(itemId)) {
+      try {
+        const detail = await zohoGetWithRetry(`/inventory/v1/items/${itemId}`, token, 2)
+        const zohoItem = detail.item || {}
+        itemDescriptionCache.set(itemId, cleanDescription(zohoItem.description || zohoItem.sales_description || zohoItem.purchase_description || zohoItem.name))
+      } catch {
+        itemDescriptionCache.set(itemId, '')
+      }
+    }
+    const description = itemDescriptionCache.get(itemId)
+    if (description) item.description = description
+  }
+}
+
 async function fetchZohoOrderDetailWithToken(id: string, token: string): Promise<Order> {
   const detail = await zohoGetWithRetry(`/inventory/v1/salesorders/${id}`, token)
   if (!detail.salesorder?.salesorder_id) throw new Error(`Invalid Zoho sales order detail for ${id}`)
+  await enrichZohoLineItemDescriptions(detail.salesorder, token)
   return mapOrder(detail.salesorder)
 }
 

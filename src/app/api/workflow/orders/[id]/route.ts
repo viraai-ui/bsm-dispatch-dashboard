@@ -39,8 +39,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       if (action === 'process') {
         const selected = selectedMachines(order, body.selectedMachineIds)
         if (!selected.length) throw new Error('Please select at least one machine to process')
-        const alreadyDispatched = selected.filter((machine) => machines[machine.id]?.dispatchedAt)
-        if (alreadyDispatched.length) throw new Error(`Already dispatched: ${alreadyDispatched.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
+        const alreadyLocked = selected.filter((machine) => machines[machine.id]?.processedAt || machines[machine.id]?.dispatchedAt)
+        if (alreadyLocked.length) throw new Error(`Already processed: ${alreadyLocked.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         const incomplete = selected.filter((machine) => !['generated', 'not_required'].includes(machines[machine.id]?.qrStatus || 'pending'))
         if (incomplete.length) throw new Error(`Incomplete selected machines: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         if (!['urgent', 'regular'].includes(String(body.dispatchPriority || ''))) throw new Error('Please select urgent or regular order type')
