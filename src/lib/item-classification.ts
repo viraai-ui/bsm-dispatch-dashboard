@@ -19,7 +19,9 @@ export function normalizeSku(sku: string) {
 
 export function classifyDispatchItem(item: Pick<OrderLineItem, 'sku' | 'itemName'>): DispatchCategory {
   const sku = normalizeSku(item.sku)
+  const name = String(item.itemName || '').toLowerCase()
   if (ADHESIVE_SKUS.has(sku)) return 'adhesive'
+  if (name.includes('freight') || name.includes('transportation charges')) return 'freight'
   return 'machine'
 }
 
@@ -28,5 +30,5 @@ export function isMachineLineItem(item: Pick<OrderLineItem, 'sku' | 'itemName' |
 }
 
 export function dispatchCategoryLabel(category?: DispatchCategory) {
-  return category === 'adhesive' ? 'Adhesive' : category === 'other' ? 'Other' : 'Machine'
+  return category === 'adhesive' ? 'Adhesive' : category === 'freight' ? 'Freight' : category === 'other' ? 'Other' : 'Machine'
 }
