@@ -549,6 +549,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .main { padding: 10px; }
   .card { border-radius: 18px; padding: 12px; box-shadow: 0 8px 22px rgba(15,23,42,.06); }
   .top, .passport-header { flex-direction: row; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .orders-page-title { display: none; }
+  .orders-list-card .modal-section-title { margin-bottom: 12px; align-items: flex-start; }
+  .orders-list-card .sync-icon-btn { margin: 4px 2px 4px 12px; flex: 0 0 auto; }
   .top .btn:not(.sync-icon-btn) { width: auto; }
   .h1 { font-size: 24px; letter-spacing: -.04em; }
   .modal-section-title { align-items: center; gap: 8px; }
