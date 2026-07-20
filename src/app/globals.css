@@ -628,15 +628,21 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .info-tile span { font-size: 9px; }
   .info-tile strong { font-size: 12px; line-height: 1.2; }
   .modal-section { margin-top: 10px; }
-  .modal-section h2 { font-size: 15px; margin-bottom: 8px; }
+  .modal-section h2 { font-size: 15px; margin-bottom: 8px; line-height: 1.15; }
+  .modal-section-title { align-items: center; }
   .line-items-wrap { display: block !important; overflow-x: auto; border-radius: 14px; }
   .line-items-table { min-width: 620px; font-size: 11px; }
-  .line-items-table th, .line-items-table td { padding: 7px; }
+  .line-items-table th, .line-items-table td { padding: 7px; font-size: 11px; line-height: 1.25; }
+  .line-items-table td strong { font-size: 12px; line-height: 1.25; }
+  .line-items-table .item-description { font-size: 10px; line-height: 1.2; font-weight: 500; }
   .unit-grid { gap: 7px; }
   .unit-card { min-height: 0; padding: 9px; border-radius: 14px; grid-template-columns: 22px minmax(0,1fr) auto; gap: 8px; }
   .unit-card span strong { font-size: 12px; }
   .unit-card span em, .unit-card small { font-size: 11px; line-height: 1.2; }
   .unit-card .badge, .unit-card .unit-action { font-size: 10px; padding: 5px 7px; width: auto; min-height: 28px; }
+  .modal-section .machine-row.compact { grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; padding: 12px; border-radius: 16px; }
+  .modal-section .machine-row.compact span { font-size: 13px; line-height: 1.35; font-weight: 650; color: #334155; }
+  .modal-section .machine-row.compact .badge { min-height: 34px; padding: 7px 10px; font-size: 10px; line-height: 1.1; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; }
   .machine-select-actions .btn { min-height: 32px; padding: 0 10px; font-size: 12px; width: auto; }
   .modal-actions:not(.media-submit-bar) { position: sticky; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 10px -10px -10px; padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); border-top: 1px solid #e2e8f0; }
   .modal-actions:not(.media-submit-bar) .btn { width: 100%; min-height: 40px; border-radius: 12px; font-size: 12px; padding: 0 8px; }
