@@ -72,17 +72,21 @@ function readCustomField(source: any, names: string[]) {
   return undefined
 }
 
+function isWoodenPackingLineItem(item: any) {
+  const itemWooden = readCustomField(item, ['wooden packing', 'wooden', 'packing'])
+  const itemWoodenText = String(itemWooden || '').toLowerCase().trim()
+  const itemWoodenQty = Number(String(itemWooden || '').replace(/[^0-9.]/g, ''))
+
+  return itemWoodenText === 'yes'
+    || itemWoodenText.includes('wooden packing')
+    || itemWoodenQty > 0
+}
+
 function mapLineItems(order: any): OrderLineItem[] {
-  const orderWooden = readCustomField(order, ['wooden packing', 'wooden', 'packing'])
-  const orderWoodenText = String(orderWooden || '').toLowerCase()
-  const orderWoodenQty = Number(String(orderWooden || '').replace(/[^0-9.]/g, ''))
   return (order.line_items || []).map((item: any, index: number) => {
     const quantity = Number(item.quantity || 0)
     const shipped = Number(item.quantity_shipped || item.shipped_quantity || 0)
-    const itemWooden = readCustomField(item, ['wooden packing', 'wooden', 'packing'])
-    const itemWoodenText = String(itemWooden || '').toLowerCase()
-    const itemWoodenQty = Number(String(itemWooden || '').replace(/[^0-9.]/g, ''))
-    const woodenRequired = itemWoodenText.includes('yes') || itemWoodenQty > 0 || orderWoodenText.includes('yes') || orderWoodenQty > 0
+    const woodenRequired = isWoodenPackingLineItem(item)
     return {
       id: String(item.line_item_id || item.item_id || `line-${index}`),
       itemName: String(item.name || item.item_name || 'Machine'),
