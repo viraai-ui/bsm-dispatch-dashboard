@@ -16,6 +16,47 @@
           "qrGeneratedAt": "2026-07-20T08:59:52.337Z"
         }
       }
+    },
+    "1154219000034268016": {
+      "salesOrderId": "1154219000034268016",
+      "salesOrderNumber": "SO-07519",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-07-20T09:03:17.349Z",
+      "processedOrder": {
+        "id": "1154219000034268016",
+        "zohoSalesOrderId": "1154219000034268016",
+        "salesOrderNumber": "SO-07519",
+        "status": "open",
+        "customerName": "RNB Global Impex",
+        "shippingAddress": "589, Artoni, Mathura Road, Agra, Uttar Pradesh, 282007",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-20",
+        "dashboardStatus": "Review Required",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034268019",
+            "itemName": "Hotmelt Polyamide Granules",
+            "sku": "7160",
+            "quantity": 25,
+            "pendingQuantity": 25,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          },
+          {
+            "id": "1154219000034268020",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": []
+      },
+      "machines": {}
     }
   }
 }
