@@ -39,6 +39,7 @@ export type MachineUnit = {
   vehicleNumber?: string
   warrantyStart?: string
   warrantyEnd?: string
+  dispatchNote?: string
 }
 
 export type Order = {

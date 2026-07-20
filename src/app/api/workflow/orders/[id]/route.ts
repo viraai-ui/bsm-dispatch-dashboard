@@ -44,11 +44,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         const incomplete = selected.filter((machine) => !['generated', 'not_required'].includes(machines[machine.id]?.qrStatus || 'pending'))
         if (incomplete.length) throw new Error(`Incomplete selected machines: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         if (!['urgent', 'regular'].includes(String(body.dispatchPriority || ''))) throw new Error('Please select urgent or regular order type')
-        for (const machine of selected) machines[machine.id] = { ...machines[machine.id], machineUnitId: machine.id, lineItemId: machine.lineItemId, processedAt: now }
+        const notes = (body.dispatchNotes || {}) as Record<string, string>
+        for (const machine of selected) machines[machine.id] = { ...machines[machine.id], machineUnitId: machine.id, lineItemId: machine.lineItemId, processedAt: now, dispatchNote: String(notes[machine.id] || '').trim() }
         status = 'processed'
       }
       const processedOrder = action === 'process'
-        ? { ...order, machines: order.machines.map((machine) => ({ ...machine, ...(machines[machine.id]?.qrStatus === 'not_required' ? { status: 'QR Printed' as const } : {}) })) }
+        ? { ...order, machines: order.machines.map((machine) => ({ ...machine, dispatchNote: machines[machine.id]?.dispatchNote || machine.dispatchNote || '', ...(machines[machine.id]?.qrStatus === 'not_required' ? { status: 'QR Printed' as const } : {}) })) }
         : current?.processedOrder
       return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, dispatchPriority: action === 'process' ? body.dispatchPriority : current?.dispatchPriority, processedAt: action === 'process' ? now : current?.processedAt, processedOrder, machines }
     })

@@ -11,6 +11,7 @@ export type MachineWorkflow = {
   qrNotRequiredAt?: string
   processedAt?: string
   dispatchedAt?: string
+  dispatchNote?: string
 }
 
 export type OrderWorkflow = {

@@ -1,6 +1,6 @@
 import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { githubReadJson, githubWriteJson, listProcessedOrders, upsertOrderWorkflow } from '@/lib/workflow-store'
+import { githubReadJson, githubWriteJson, listProcessedOrders, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { readSyncedOrdersStore } from '@/lib/synced-orders'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 
@@ -17,7 +17,7 @@ export async function GET() {
     .filter((item) => Boolean(item.processedOrder))
     .map((item) => {
       const processedIds = new Set(Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId))
-      const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId])
+      const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId], item.machines || {})
       return { ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular' }
     })
     .filter((order) => order.machines.length > 0)
@@ -59,7 +59,7 @@ function mergeCompletedMachines(existing: MachineUnit[] = [], next: MachineUnit[
   return [...byId.values()]
 }
 
-function enrichDescriptions(order: Order, synced?: Order): Order {
+function enrichDescriptions(order: Order, synced?: Order, workflowMachines: Record<string, MachineWorkflow> = {}): Order {
   if (!synced) return order
   const lineDescriptions = new Map((synced.lineItems || []).map((item) => [item.id, item.description || '']))
   const liveMachines = new Map((synced.machines || []).map((machine) => [machine.id, machine]))
@@ -68,7 +68,8 @@ function enrichDescriptions(order: Order, synced?: Order): Order {
     lineItems: mergeLineItemDescriptions(order.lineItems || [], synced.lineItems || []),
     machines: (order.machines || []).map((machine) => {
       const live = liveMachines.get(machine.id)
-      return { ...machine, itemDescription: machine.itemDescription || live?.itemDescription || lineDescriptions.get(machine.lineItemId) || '' }
+      const saved = workflowMachines[machine.id]
+      return { ...machine, itemDescription: machine.itemDescription || live?.itemDescription || lineDescriptions.get(machine.lineItemId) || '', dispatchNote: saved?.dispatchNote || machine.dispatchNote || '' }
     }),
   }
 }

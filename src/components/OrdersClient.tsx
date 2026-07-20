@@ -135,7 +135,10 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const [qrCodes, setQrCodes] = useState<Record<string, string>>(() => initialQrCodes(order, workflow))
   const [generating, setGenerating] = useState(false)
   const [processed, setProcessed] = useState(false)
-  const [priorityPrompt, setPriorityPrompt] = useState(false)
+  const [processConfirm, setProcessConfirm] = useState(false)
+  const [processSuccess, setProcessSuccess] = useState(false)
+  const [dispatchPriority, setDispatchPriority] = useState<'urgent' | 'regular'>('regular')
+  const [dispatchNotes, setDispatchNotes] = useState<Record<string, string>>({})
   const [message, setMessage] = useState('')
   const toggle = (id: string) => setSelected((prev) => {
     if (isLockedMachine(machines.find((machine) => machine.id === id))) return prev
@@ -177,18 +180,22 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     setMessage('')
     const incomplete = machines.filter((machine) => selected.has(machine.id) && machine.status !== 'Dispatched' && !machine.serialNumber && machine.status !== 'QR Printed')
     if (incomplete.length) { setMessage(`Cannot process. Incomplete: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`); return }
-    setPriorityPrompt(true)
+    const initialNotes: Record<string, string> = {}
+    machines.filter((machine) => selected.has(machine.id)).forEach((machine) => { initialNotes[machine.id] = machine.dispatchNote || workflow?.machines?.[machine.id]?.dispatchNote || '' })
+    setDispatchNotes(initialNotes)
+    setDispatchPriority('regular')
+    setProcessConfirm(true)
   }
 
-  const processOrder = async (dispatchPriority: 'urgent' | 'regular') => {
+  const processOrder = async () => {
     setMessage('')
-    setPriorityPrompt(false)
     if (!selectedCount) { setMessage('Please select at least one machine.'); return }
-    const workflow = await saveWorkflow(order.id, { action: 'process', order: { ...order, machines }, selectedMachineIds: [...selected], dispatchPriority })
-    setMachines((prev) => prev.map((machine) => selected.has(machine.id) ? { ...machine, status: 'Processed' as const } : machine))
+    const workflow = await saveWorkflow(order.id, { action: 'process', order: { ...order, machines }, selectedMachineIds: [...selected], dispatchPriority, dispatchNotes })
+    setMachines((prev) => prev.map((machine) => selected.has(machine.id) ? { ...machine, status: 'Processed' as const, dispatchNote: dispatchNotes[machine.id] || '' } : machine))
     setSelected(new Set())
     setProcessed(false)
-    setMessage(`${dispatchPriority === 'urgent' ? 'Urgent' : 'Regular'} order processed successfully at ${new Date(workflow.data.workflow.processedAt).toLocaleString()}`)
+    setProcessSuccess(true)
+    window.setTimeout(() => { setProcessSuccess(false); setProcessConfirm(false); setMessage(`Order processed successfully at ${new Date(workflow.data.workflow.processedAt).toLocaleString()}`) }, 1400)
   }
 
   const proceedWithoutQr = async () => {
@@ -210,7 +217,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap line-items-wrap"><table className="table line-items-table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Type</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td><ItemName name={item.itemName} description={item.description} /></td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{dispatchCategoryLabel(item.dispatchCategory)}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
     <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div>{machines.length ? <div className="unit-grid">{machines.map((m) => <label className={`unit-card ${isLockedMachine(m) ? 'unit-card-disabled' : ''}`} key={m.id}><input type="checkbox" disabled={isLockedMachine(m)} checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em>{displayDescription(m.itemName, m.itemDescription) && <small className="item-description">{displayDescription(m.itemName, m.itemDescription)}</small>}<small>{m.status === 'Dispatched' ? 'Already dispatched' : m.status === 'Processed' ? 'Already processed' : m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.status === 'Dispatched' ? <Badge tone="green">Dispatched</Badge> : m.status === 'Processed' ? <Badge tone="amber">Processed</Badge> : m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div> : <div className="machine-row compact"><span>No machine units for adhesive/consumable-only items.</span><Badge tone="gray">QR Not Required</Badge></div>}</section>
     <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={openPriorityPrompt}>{processed ? 'Processed' : 'Process Order'}</button></section>
-    {priorityPrompt && <div className="modal-backdrop nested" role="dialog" aria-modal="true"><section className="card process-type-modal"><button className="process-close" aria-label="Close" onClick={() => setPriorityPrompt(false)}>×</button><h2>Please select the order type</h2><p className="muted">Should this order appear in Urgent Dispatch or Regular Dispatch?</p><div className="process-type-actions"><button className="btn red" onClick={() => processOrder('urgent')}>Urgent Order</button><button className="btn" onClick={() => processOrder('regular')}>Regular Order</button></div></section></div>}
+    {processConfirm && <div className="modal-backdrop nested" role="dialog" aria-modal="true"><section className="card process-confirm-modal"><button className="process-close" aria-label="Close" disabled={processSuccess} onClick={() => setProcessConfirm(false)}>×</button>{processSuccess ? <div className="success-animation"><span>✓</span><h2>Order Processed Successfully</h2></div> : <><h2>Process Order Confirmation</h2><p className="muted">Review the selected machines and add dispatch notes before moving them to Dispatch View.</p><div className="process-type-actions"><button className={`btn ${dispatchPriority === 'urgent' ? 'red' : 'light'}`} onClick={() => setDispatchPriority('urgent')}>Urgent Order</button><button className={`btn ${dispatchPriority === 'regular' ? '' : 'light'}`} onClick={() => setDispatchPriority('regular')}>Regular Order</button></div><div className="confirm-table-wrap"><table className="confirm-table"><thead><tr><th>Machine Name</th><th>Serial Number</th><th>SKU</th><th>Qty</th><th>Wooden Packing</th><th>Notes</th></tr></thead><tbody>{machines.filter((machine) => selected.has(machine.id)).map((machine) => <tr key={machine.id}><td><ItemName name={machine.itemName} description={machine.itemDescription} /></td><td><span className="inline-serials">{machine.serialNumber || 'QR Not Required'}</span></td><td>{machine.sku || '—'}</td><td>1</td><td>{machine.woodenPacking !== 'Not Required' ? 'Yes' : 'No'}</td><td><textarea className="dispatch-note-input" placeholder="Add dispatch note…" value={dispatchNotes[machine.id] || ''} onChange={(event) => setDispatchNotes((prev) => ({ ...prev, [machine.id]: event.target.value }))} /></td></tr>)}</tbody></table></div><div className="modal-actions"><button className="btn light" onClick={() => setProcessConfirm(false)}>Cancel</button><button className="btn green" onClick={processOrder}>Proceed</button></div></>}</section></div>}
   </section></div>
 }
 
