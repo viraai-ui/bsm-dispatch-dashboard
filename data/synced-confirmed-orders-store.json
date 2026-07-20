@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034422001": {
+      "id": "1154219000034422001",
+      "zohoSalesOrderId": "1154219000034422001",
+      "salesOrderNumber": "SO-07524",
+      "status": "open",
+      "customerName": "Kainyz Enterprises",
+      "shippingAddress": "D-293, Tripathi Enclave Prem Nagar 2nd Kirari Suleman Nagar, Nangloi, Delhi, 110086, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034422004",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034422001-1154219000034422004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034422001",
+          "lineItemId": "1154219000034422004",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "Kainyz Enterprises",
+          "salesOrderNumber": "SO-07524",
+          "deliveryDate": "2026-07-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034411076": {
       "id": "1154219000034411076",
       "zohoSalesOrderId": "1154219000034411076",
@@ -4422,6 +4469,7 @@
     }
   },
   "orderIds": [
+    "1154219000034422001",
     "1154219000034411076",
     "1154219000034268031",
     "1154219000034252050",
@@ -4461,8 +4509,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-20T12:12:19.089Z",
-  "lastAttemptAt": "2026-07-20T12:17:27.276Z",
+  "lastSuccessfulSyncAt": "2026-07-20T12:18:16.747Z",
+  "lastAttemptAt": "2026-07-20T12:18:16.747Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
