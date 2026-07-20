@@ -4,7 +4,53 @@
     "1154219000034270046": {
       "salesOrderId": "1154219000034270046",
       "salesOrderNumber": "SO-07518",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-07-20T07:57:50.605Z",
+      "processedOrder": {
+        "id": "1154219000034270046",
+        "zohoSalesOrderId": "1154219000034270046",
+        "salesOrderNumber": "SO-07518",
+        "status": "open",
+        "customerName": "INTEGRATED SOLUTION",
+        "shippingAddress": "3RD FLOOR, T-67A, CHAPPAR WALI MASJID, OKHLA, JAMIA NAGAR, South Delhi, 110025",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-20",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034270049",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034270046-1154219000034270049-1",
+            "unitNumber": 1,
+            "serialNumber": "262700001",
+            "qrToken": "262700001",
+            "orderId": "1154219000034270046",
+            "lineItemId": "1154219000034270049",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "INTEGRATED SOLUTION",
+            "salesOrderNumber": "SO-07518",
+            "deliveryDate": "2026-07-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0
+          }
+        ]
+      },
       "machines": {
         "1154219000034270046-1154219000034270049-1": {
           "machineUnitId": "1154219000034270046-1154219000034270049-1",
