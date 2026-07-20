@@ -7,8 +7,8 @@ const nav: NavItem[] = [
   { label: 'Dashboard', href: '/' },
   { label: 'Orders', href: '/orders' },
   { label: 'Wooden Packing', href: '/wooden-packing' },
+  { label: 'Dispatch View', href: '/packaging-tv' },
   { label: 'Video Upload', href: '/media-proof' },
-  { label: 'Vehicle & Transportation', href: '/vehicle-dispatch' },
   { label: 'Database', href: '/database' },
   { label: 'Settings', href: '/settings' },
 ]
@@ -17,7 +17,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const { user, logout } = useAuth()
   const dispatchOnly = user.role === 'Dispatch'
   const mediaOnly = user.role === 'Media'
-  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/media-proof') : mediaOnly ? nav.filter((item) => item.href === '/media-proof') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
+  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
   const singleModule = dispatchOnly || mediaOnly
   return <div className={singleModule ? 'shell dispatch-shell single-module-shell' : 'shell'}>
     {!singleModule && <MobileMenu nav={visibleNav} active={active} />}

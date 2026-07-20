@@ -2,9 +2,9 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { jwtVerify } from 'jose'
 
 const cookieName = 'bsm_dispatch_session'
-const dispatchOnly = '/media-proof'
+const dispatchOnly = '/packaging-tv'
 const mediaOnly = '/media-proof'
-const protectedRoutes = ['/', '/orders', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/database', '/machine-lookup', '/settings']
+const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/database', '/machine-lookup', '/settings']
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'

@@ -348,6 +348,8 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .info-tile span { color: var(--muted); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
 .modal-section { margin-top: 18px; }
 .modal-section-title { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.machine-select-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+.machine-select-actions .btn { min-height: 36px; padding: 0 14px; font-size: 12px; }
 .unit-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 12px; }
 .unit-card { display: grid; grid-template-columns: 22px minmax(0,1fr) auto; gap: 12px; align-items: center; border: 1px solid var(--line); background: #fff; border-radius: 18px; padding: 14px; }
 .unit-card input { width: 18px; min-height: 18px; }

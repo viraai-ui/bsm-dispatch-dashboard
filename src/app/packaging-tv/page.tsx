@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation'
+import { PackagingTvClient } from '@/components/PackagingTvClient'
 
-export default function PackagingTvRemovedPage() {
-  redirect('/media-proof')
+export default function PackagingTv() {
+  return <PackagingTvClient />
 }
