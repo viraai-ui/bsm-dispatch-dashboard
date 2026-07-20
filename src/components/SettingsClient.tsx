@@ -63,7 +63,7 @@ export function SettingsClient() {
       <div className="card"><h2>Zoho Sync</h2><div className="form-grid"><label>Webhook URL<input value="/api/webhooks/zoho/sales-order" readOnly /></label><label>Frequency<select defaultValue="15"><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option></select></label><label>Conflicts<select defaultValue="review"><option value="review">Admin review</option><option value="notify">Notify manager</option></select></label><button className="btn light">Save</button></div></div>
     </section>
     {admin && <section className="card user-management-card" style={{ marginTop: 16 }}>
-      <div className="modal-section-title"><h2>User Management</h2><button className="btn light" onClick={loadUsers} disabled={loading}>{loading ? 'Loading…' : 'Refresh'}</button></div>
+      <div className="modal-section-title"><h2>User Management</h2><button className="btn light sync-icon-btn" aria-label="Refresh users" title="Refresh users" onClick={loadUsers} disabled={loading}>{loading ? '↻' : '⟳'}</button></div>
       {message && <div className="form-success">{message}</div>}{error && <div className="form-error">{error}</div>}
       <div className="form-grid user-add">
         <input placeholder="Name" value={draft.name} onChange={(e) => setDraft({ ...draft, name: e.target.value })} />

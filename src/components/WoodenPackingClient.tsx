@@ -80,7 +80,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   }
 
   return <>
-    <header className="top compact-top"><div><h1 className="h1">Wooden Packing</h1></div><button className="btn red" onClick={() => syncZoho(true)} disabled={syncing}>{syncing ? 'Syncing…' : 'Sync Zoho'}</button></header>
+    <header className="top compact-top"><div><h1 className="h1">Wooden Packing</h1></div><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncZoho(true)} disabled={syncing}>{syncing ? '↻' : '⟳'}</button></header>
     {error && <div className="form-error">{error}</div>}
     <section className="grid two analytics-grid"><div className="card"><h2>Consolidated Summary</h2><div className="big-number">{pendingRequiredTotal}</div><p className="muted">Required wooden packing still pending order</p><p className="muted">Last successful sync: {queue.lastSuccessAt ? new Date(queue.lastSuccessAt).toLocaleString() : 'Not synced yet'}</p></div><div className="card"><h2>Export</h2><div className="tabs"><button className="btn light" onClick={() => printConsolidated(consolidated)}>Print</button><button className="btn red" onClick={() => downloadXlsx('wooden-packing-consolidated-requirements.xlsx', consolidated)}>Download</button></div></div></section>
     <div style={{ height: 16 }} />

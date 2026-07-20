@@ -12,7 +12,7 @@ export const moduleCopy = {
 
 export function ModuleHeader({ moduleKey }: { moduleKey: keyof typeof moduleCopy }) {
   const item = moduleCopy[moduleKey]
-  return <header className="top compact-top"><div><h1 className="h1">{item.title}</h1></div><button className="btn red">Sync Zoho</button></header>
+  return <header className="top compact-top"><div><h1 className="h1">{item.title}</h1></div><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync">⟳</button></header>
 }
 
 export function QueueTable({ kind }: { kind: 'qr' | 'wooden' | 'media' | 'vehicle' | 'lookup' }) {

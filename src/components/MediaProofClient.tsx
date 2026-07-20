@@ -38,7 +38,7 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
   }
 
   return <>
-    <header className="top compact-top media-top"><div><h1 className="h1">{title}</h1><p className="muted mobile-media-hint">Open order → Upload video → Submit</p></div><button className="btn red" onClick={loadQueue} disabled={syncing}>{syncing ? 'Syncing…' : 'Refresh'}</button></header>
+    <header className="top compact-top media-top"><div><h1 className="h1">{title}</h1><p className="muted mobile-media-hint">Open order → Upload video → Submit</p></div><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={loadQueue} disabled={syncing}>{syncing ? '↻' : '⟳'}</button></header>
     {error && <div className="form-error">{error}</div>}
     <section className="card media-queue-card">
       <div className="media-queue-head"><h2>{title} Queue</h2><Badge tone="blue">{orders.length} orders</Badge></div>
@@ -55,9 +55,9 @@ function OrderCard({ order, record, mode, status, onOpen }: { order: Order; reco
   const uploaded = mode === 'loading' ? (record?.units?.[LOADING_ORDER_UNIT_ID]?.videos?.length || 0) : order.machines.reduce((sum, machine) => sum + Math.min(1, record?.units?.[machine.id]?.videos?.length || 0), 0)
   const total = mode === 'loading' ? MAX_LOADING_VIDEOS : order.machines.length
   return <article className="card mobile-order-card media-mobile-order-card" onClick={onOpen}>
-    <div><strong>{order.salesOrderNumber}</strong><span>{mode === 'loading' ? 'Order loading videos' : `${order.machines.length} item videos`}</span></div>
-    <div className="media-card-meta"><Badge tone={mediaTone(status as any)}>{status}</Badge><small>{uploaded}/{total} uploaded</small></div>
-    <button className="btn red full">Open</button>
+    <div><strong>{order.salesOrderNumber}</strong><span>{mode === 'loading' ? 'Order loading' : 'Item upload'}</span></div><small className="media-count-pill">{mode === 'loading' ? `${uploaded}/${total} videos` : `${total} Item Videos`}</small>
+    <div className="media-card-meta"><Badge tone={mediaTone(status as any)}>{status}</Badge></div>
+    <button className="btn light tiny-view" onClick={(event) => { event.stopPropagation(); onOpen() }}>View</button>
   </article>
 }
 
@@ -118,7 +118,7 @@ function LoadingVideoPanel({ videos, busy, progress, onUpload }: { videos: Media
 }
 
 function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload }: { order: Order; record?: MediaProofRecord; busy: string; progressByUnit: Record<string, number>; onUpload: (unitId: string, files: FileList | null) => void }) {
-  return <><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(machine.id, event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByUnit[machine.id] || 0}%</span>}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine, index) => <article className="media-unit-card" key={machine.id}><div className="media-unit-top"><i>{index + 1}</i><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div></div><Previews files={record?.units?.[machine.id]?.videos || []} /><label className="btn red full">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(machine.id, event.target.files)} /></label>{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByUnit[machine.id] || 0}%</span><progress value={progressByUnit[machine.id] || 0} max={100} /></div>}</article>)}</div></>
+  return <><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(machine.id, event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByUnit[machine.id] || 0}%</span>}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine, index) => <article className="media-unit-card" key={machine.id}><div className="media-unit-top"><i>{index + 1}</i><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div></div>{(record?.units?.[machine.id]?.videos?.length || 0) > 0 && <span className="upload-check">✓</span>}<Previews files={record?.units?.[machine.id]?.videos || []} /><label className="btn red full">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(machine.id, event.target.files)} /></label>{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByUnit[machine.id] || 0}%</span><progress value={progressByUnit[machine.id] || 0} max={100} /></div>}</article>)}</div></>
 }
 
 function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}</span>) : <em>No videos yet</em>}</div> }
