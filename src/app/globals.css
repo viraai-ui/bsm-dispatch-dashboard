@@ -709,3 +709,11 @@ button:disabled { opacity: .46; cursor: not-allowed; }
     grid-column: 2;
   }
 }
+
+/* Database mobile title/search spacing polish */
+@media (max-width: 720px) {
+  .database-search-panel { margin: 4px 0 12px; }
+  .database-list-card { margin-top: 0; padding-top: 14px; }
+  .database-list-card > h2 { margin: 0 0 12px; padding-left: 2px; font-size: 19px; line-height: 1.1; }
+  .database-list-card .mobile-cards { gap: 10px; }
+}
