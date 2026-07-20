@@ -717,3 +717,33 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .database-list-card > h2 { margin: 0 0 12px; padding-left: 2px; font-size: 19px; line-height: 1.1; }
   .database-list-card .mobile-cards { gap: 10px; }
 }
+
+/* Wooden Packing mobile warehouse polish */
+.wooden-summary-export { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.wooden-summary-export > div:first-child { display: grid; gap: 2px; }
+.wooden-summary-export span { color: var(--muted); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.wooden-summary-export strong { font-size: 34px; line-height: .95; letter-spacing: -.05em; }
+.wooden-export-actions { gap: 8px; }
+.wooden-sync-btn { width: 36px; min-width: 36px; height: 36px; padding: 0; border-radius: 999px; font-size: 15px; line-height: 1; color: #0f172a; background: transparent; border: 1px solid #d8dee8; box-shadow: none; }
+
+@media (max-width: 720px) {
+  .wooden-mobile-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 26px;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 2px 10px;
+    padding: 0;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .wooden-mobile-head .h1 { white-space: nowrap; font-size: clamp(28px, 8.2vw, 34px); line-height: 1; margin: 0; }
+  .wooden-mobile-head .wooden-sync-btn { width: 24px; min-width: 24px; height: 24px; border-radius: 999px; font-size: 12px; justify-self: end; }
+  .wooden-summary-export { margin-bottom: 10px; padding: 12px; border-radius: 18px; }
+  .wooden-summary-export strong { font-size: 30px; }
+  .wooden-summary-export .btn { min-height: 34px; padding: 0 12px; border-radius: 12px; font-size: 12px; }
+  .wooden-export-actions { flex-wrap: nowrap; }
+  .wooden-summary-export + .card { margin-top: 0; }
+  .wooden-summary-export + .card h2 { font-size: 20px; margin-bottom: 12px; }
+}
