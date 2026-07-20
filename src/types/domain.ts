@@ -12,6 +12,7 @@ export type OrderLineItem = {
   pendingQuantity: number
   woodenPackingRequired: boolean
   dispatchCategory?: DispatchCategory
+  description?: string
   dimensions?: string
 }
 
@@ -34,6 +35,7 @@ export type MachineUnit = {
   qcDone: boolean
   mediaPhotos: number
   mediaVideos: number
+  itemDescription?: string
   vehicleNumber?: string
   warrantyStart?: string
   warrantyEnd?: string

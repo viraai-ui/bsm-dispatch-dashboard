@@ -9,6 +9,8 @@ export type MachineWorkflow = {
   qrStatus: 'pending' | 'generated' | 'not_required'
   qrGeneratedAt?: string
   qrNotRequiredAt?: string
+  processedAt?: string
+  dispatchedAt?: string
 }
 
 export type OrderWorkflow = {
@@ -88,7 +90,7 @@ export async function listWorkflows() {
 
 export async function listProcessedOrders() {
   const { store } = await readStoreWithSha()
-  return Object.values(store.orders).filter((order) => order.status === 'processed')
+  return Object.values(store.orders).filter((order) => Object.values(order.machines || {}).some((machine) => machine.processedAt && !machine.dispatchedAt))
 }
 
 export async function upsertOrderWorkflow(orderId: string, updater: (current: OrderWorkflow | null, store: Store) => OrderWorkflow) {
@@ -138,8 +140,11 @@ export async function allocateSerialNumbers(orderId: string, machineIds: string[
 
 export function deriveWorkflowStatus(workflow: OrderWorkflow | null, totalMachines: number): OrderWorkflow['status'] {
   if (!workflow) return 'open'
-  if (workflow.status === 'processed') return 'processed'
   const machines = Object.values(workflow.machines || {})
+  const dispatched = machines.filter((machine) => machine.dispatchedAt).length
+  const processed = machines.filter((machine) => machine.processedAt).length
+  if (totalMachines > 0 && dispatched >= totalMachines) return 'processed'
+  if (processed > 0) return 'processed'
   const generated = machines.filter((machine) => machine.qrStatus === 'generated').length
   const notRequired = machines.filter((machine) => machine.qrStatus === 'not_required').length
   if (notRequired && generated === 0) return 'qr_not_required'

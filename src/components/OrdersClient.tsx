@@ -8,7 +8,7 @@ import { dispatchCategoryLabel } from '@/lib/item-classification'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
 
-type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'dispatched' | 'closed'
+type OrderStage = 'open' | 'processed' | 'packed' | 'media_uploaded' | 'partially_dispatched' | 'dispatched' | 'closed'
 
 type MachineRecord = {
   id: string
@@ -137,7 +137,10 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const [processed, setProcessed] = useState(false)
   const [priorityPrompt, setPriorityPrompt] = useState(false)
   const [message, setMessage] = useState('')
-  const toggle = (id: string) => setSelected((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next })
+  const toggle = (id: string) => setSelected((prev) => {
+    if (machines.find((machine) => machine.id === id)?.status === 'Dispatched') return prev
+    const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next
+  })
   const selectedCount = selected.size
   const modalStage = processed ? 'processed' : stage
   const canDownloadQr = modalStage !== 'closed'
@@ -172,7 +175,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
 
   const openPriorityPrompt = () => {
     setMessage('')
-    const incomplete = machines.filter((machine) => !machine.serialNumber && machine.status !== 'QR Printed')
+    const incomplete = machines.filter((machine) => selected.has(machine.id) && machine.status !== 'Dispatched' && !machine.serialNumber && machine.status !== 'QR Printed')
     if (incomplete.length) { setMessage(`Cannot process. Incomplete: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`); return }
     setPriorityPrompt(true)
   }
@@ -180,24 +183,29 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const processOrder = async (dispatchPriority: 'urgent' | 'regular') => {
     setMessage('')
     setPriorityPrompt(false)
-    const workflow = await saveWorkflow(order.id, { action: 'process', order: { ...order, machines }, dispatchPriority })
+    if (!selectedCount) { setMessage('Please select at least one machine.'); return }
+    const workflow = await saveWorkflow(order.id, { action: 'process', order: { ...order, machines }, selectedMachineIds: [...selected], dispatchPriority })
     setProcessed(true)
     setMessage(`${dispatchPriority === 'urgent' ? 'Urgent' : 'Regular'} order processed successfully at ${new Date(workflow.data.workflow.processedAt).toLocaleString()}`)
   }
 
   const proceedWithoutQr = async () => {
-    if (!window.confirm('Proceed without QR & Serial for this sales order?')) return
-    await saveWorkflow(order.id, { action: 'not_required', order: { ...order, machines } })
-    setMachines(machines.map((machine) => ({ ...machine, status: 'QR Printed' as const })))
-    setMessage('QR Not Required saved. You can now process this order.')
+    if (!selectedCount) { setMessage('Please select at least one machine.'); return }
+    if (!window.confirm(`Proceed without QR & Serial and move ${selectedCount} selected machine${selectedCount === 1 ? '' : 's'} to Dispatch View?`)) return
+    await saveWorkflow(order.id, { action: 'not_required', order: { ...order, machines }, selectedMachineIds: [...selected] })
+    const updated = machines.map((machine) => selected.has(machine.id) ? { ...machine, status: 'QR Printed' as const } : machine)
+    setMachines(updated)
+    await saveWorkflow(order.id, { action: 'process', order: { ...order, machines: updated }, selectedMachineIds: [...selected], dispatchPriority: 'regular' })
+    setProcessed(true)
+    setMessage(`Selected machine${selectedCount === 1 ? '' : 's'} moved to Regular Dispatch without QR & Serial.`)
   }
 
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
     {message && <div className={message.toLowerCase().includes('success') ? 'form-success process-success-tape' : 'form-error'}>{message}</div>}
     <StageTracker stage={modalStage} />
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
-    <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Type</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td>{item.itemName}</td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{dispatchCategoryLabel(item.dispatchCategory)}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
-    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div>{machines.length ? <div className="unit-grid">{machines.map((m) => <label className="unit-card" key={m.id}><input type="checkbox" checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em><small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div> : <div className="machine-row compact"><span>No machine units for adhesive/consumable-only items.</span><Badge tone="gray">QR Not Required</Badge></div>}</section>
+    <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Type</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td><ItemName name={item.itemName} description={item.description} /></td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{dispatchCategoryLabel(item.dispatchCategory)}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
+    <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><Badge tone="blue">{selectedCount} selected</Badge></div>{machines.length ? <div className="unit-grid">{machines.map((m) => <label className={`unit-card ${m.status === 'Dispatched' ? 'unit-card-disabled' : ''}`} key={m.id}><input type="checkbox" disabled={m.status === 'Dispatched'} checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em>{m.itemDescription && <small className="item-description">{m.itemDescription}</small>}<small>{m.status === 'Dispatched' ? 'Already dispatched' : m.serialNumber ? `Serial Number: ${m.serialNumber}` : 'Serial pending'}</small></span>{m.status === 'Dispatched' ? <Badge tone="green">Dispatched</Badge> : m.serialNumber && qrCodes[m.id] && canDownloadQr ? <button type="button" className="btn light unit-action" onClick={(event) => { event.preventDefault(); downloadDataUrl(`${safeFileName(m.itemName)} - ${m.serialNumber}.png`, qrCodes[m.id]) }}>Download QR</button> : <Badge tone={m.serialNumber ? 'green' : 'amber'}>{m.serialNumber ? 'QR Saved' : 'Not Generated'}</Badge>}</label>)}</div> : <div className="machine-row compact"><span>No machine units for adhesive/consumable-only items.</span><Badge tone="gray">QR Not Required</Badge></div>}</section>
     <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={openPriorityPrompt}>{processed ? 'Processed' : 'Process Order'}</button></section>
     {priorityPrompt && <div className="modal-backdrop nested" role="dialog" aria-modal="true"><section className="card process-type-modal"><button className="process-close" aria-label="Close" onClick={() => setPriorityPrompt(false)}>×</button><h2>Please select the order type</h2><p className="muted">Should this order appear in Urgent Dispatch or Regular Dispatch?</p><div className="process-type-actions"><button className="btn red" onClick={() => processOrder('urgent')}>Urgent Order</button><button className="btn" onClick={() => processOrder('regular')}>Regular Order</button></div></section></div>}
   </section></div>
@@ -325,21 +333,23 @@ async function imageToDataUrl(src: string) {
 }
 
 function Info({ k, v }: { k: string; v: string }) { return <div className="info-tile"><span>{k}</span><strong>{v}</strong></div> }
+function ItemName({ name, description }: { name: string; description?: string }) { return <div className="item-name-stack"><strong>{name}</strong>{description && <small className="item-description">{description}</small>}</div> }
 function sanitizeOrders(orders: Order[]) { return orders }
 function statusLabel(status: string) { return ({ open: 'Open', partially_shipped: 'Partially Shipped', partially_generated: 'Partially Generated', qr_generated: 'QR Generated', qr_not_required: 'QR Not Required', processed: 'Processed' } as Record<string, string>)[status] || status }
-function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', dispatched: 'Dispatched', closed: 'Closed' } as Record<string, string>)[stage] || stage }
+function stageLabel(stage: string) { return ({ open: 'Open', processed: 'Processed', packed: 'Packed', media_uploaded: 'Media Uploaded', partially_dispatched: 'Partially Dispatched', dispatched: 'Dispatched', closed: 'Closed' } as Record<string, string>)[stage] || stage }
 function stageTone(stage: string): 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple' {
   return ({
     open: 'gray',
     processed: 'amber',
     packed: 'blue',
     media_uploaded: 'purple',
+    partially_dispatched: 'amber',
     dispatched: 'green',
     closed: 'red',
   } as Record<string, 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple'>)[stage] || 'gray'
 }
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
-function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
+function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.dispatchedAt ? 'Dispatched' : saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
 async function saveWorkflow(orderId: string, payload: unknown) { const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save workflow'); return json }
 async function allocateSerials(orderId: string, machineIds: string[]) { if (!machineIds.length) return {} as Record<string, string>; const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'allocate_serials', machineIds }) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not allocate serial numbers'); return (json.data?.serials || {}) as Record<string, string> }
 function readCachedOrders() { if (typeof window === 'undefined') return []; try { return sanitizeOrders(JSON.parse(localStorage.getItem(ORDERS_CACHE_KEY) || '[]') as Order[]) } catch { return [] } }

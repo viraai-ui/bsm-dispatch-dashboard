@@ -8,7 +8,7 @@ import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 const PACKING_STATE_KEY = 'bsm.packing.state.v1'
 
 type PackingState = Record<string, { urgent?: boolean }>
-type MachineGroup = { itemName: string; sku?: string; serials: string[]; quantity: number; woodenPackingRequired: boolean; category?: string }
+type MachineGroup = { itemName: string; description?: string; sku?: string; serials: string[]; quantity: number; woodenPackingRequired: boolean; category?: string }
 type DispatchOrder = Order & { dispatchPriority?: 'urgent' | 'regular' }
 
 export function PackagingTvClient() {
@@ -47,7 +47,7 @@ export function PackagingTvClient() {
 
   async function completeOrder(order: Order) {
     if (!window.confirm(`Mark ${order.salesOrderNumber} as Packaging Completed?`)) return
-    const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ order }) })
+    const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ order, machineIds: order.machines.map((machine) => machine.id) }) })
     const json = await response.json()
     if (!response.ok || !json.ok) { setError(json.error || 'Could not complete packaging'); return }
     setOrders((prev) => prev.filter((item) => item.id !== order.id))
@@ -70,17 +70,18 @@ function DispatchSection({ title, tone, orders, state, completeOrder }: { title:
 
 function OrderCard({ order, urgent, completeOrder }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void }) {
   const groups = [...groupMachines(order.machines), ...groupDispatchLineItems(order.lineItems)]
-  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Item</span><span>SKU / Serial</span><span>Quantity</span><span>Type</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}`}><strong>{group.itemName}</strong><div className="serial-list">{group.serials.length ? group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>) : <span>{group.sku || '—'}</span>}</div><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.category || (group.woodenPackingRequired ? 'Wooden' : 'Machine')}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
+  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Item</span><span>SKU / Serial</span><span>Quantity</span><span>Type</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}`}><ItemName name={group.itemName} description={group.description} /><div className="serial-list">{group.serials.length ? group.serials.map((serial) => <span key={serial}>{serial || 'QR Not Required'}</span>) : <span>{group.sku || '—'}</span>}</div><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.category || (group.woodenPackingRequired ? 'Wooden' : 'Machine')}</b></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
 }
 
 function groupMachines(machines: MachineUnit[]) {
   const map = new Map<string, MachineGroup>()
   for (const machine of machines) {
-    const current = map.get(machine.itemName) || { itemName: machine.itemName, sku: machine.sku, serials: [], quantity: 0, woodenPackingRequired: false, category: 'Machine' }
+    const key = `${machine.itemName}::${machine.itemDescription || ''}`
+    const current = map.get(key) || { itemName: machine.itemName, description: machine.itemDescription, sku: machine.sku, serials: [], quantity: 0, woodenPackingRequired: false, category: 'Machine' }
     current.serials.push(machine.serialNumber || '')
     current.quantity += 1
     current.woodenPackingRequired ||= machine.woodenPacking !== 'Not Required'
-    map.set(machine.itemName, current)
+    map.set(key, current)
   }
   return [...map.values()]
 }
@@ -88,6 +89,7 @@ function groupMachines(machines: MachineUnit[]) {
 function groupDispatchLineItems(lineItems: OrderLineItem[]) {
   return lineItems.filter((item) => !isMachineLineItem(item)).map((item) => ({
     itemName: item.itemName,
+    description: item.description,
     sku: item.sku,
     serials: [],
     quantity: item.quantity,
@@ -96,6 +98,7 @@ function groupDispatchLineItems(lineItems: OrderLineItem[]) {
   }))
 }
 function formatQty(quantity: number, category?: string) { return category === 'Adhesive' ? `${quantity} kgs` : quantity }
+function ItemName({ name, description }: { name: string; description?: string }) { return <div className="item-name-stack"><strong>{name}</strong>{description && <small className="item-description">{description}</small>}</div> }
 function isUrgent(order: DispatchOrder, state: PackingState) { return order.dispatchPriority === 'urgent' || order.machines.some((machine) => state[machine.id]?.urgent) }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }

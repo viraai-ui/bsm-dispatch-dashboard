@@ -92,6 +92,7 @@ function mapLineItems(order: any): OrderLineItem[] {
       id: String(item.line_item_id || item.item_id || `line-${index}`),
       itemName: String(item.name || item.item_name || 'Machine'),
       sku: String(item.sku || ''),
+      description: String(item.description || item.item_description || item.sales_description || '').trim(),
       quantity,
       pendingQuantity: Math.max(0, quantity - shipped),
       woodenPackingRequired: woodenRequired,
@@ -125,6 +126,7 @@ function buildUnits(order: any, lineItems: OrderLineItem[]): MachineUnit[] {
         qcDone: false,
         mediaPhotos: 0,
         mediaVideos: 0,
+        itemDescription: item.description,
       })
     }
   }
