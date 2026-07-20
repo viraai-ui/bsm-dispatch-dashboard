@@ -16,13 +16,12 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
   const [orders, setOrders] = useState<Order[]>(initialOrders)
   const [records, setRecords] = useState<MediaRecords>(initialRecords)
   const [active, setActive] = useState<Order | null>(null)
-  const [syncing, setSyncing] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => { void loadQueue() }, [])
 
   async function loadQueue() {
-    setSyncing(true); setError('')
+    setError('')
     try {
       const response = await fetch(apiPath, { cache: 'no-store' })
       const json = await response.json()
@@ -30,7 +29,7 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
       setOrders(json.data.orders || [])
       setRecords(json.data.records || {})
     } catch (err) { setError(err instanceof Error ? err.message : 'Could not load video queue') }
-    finally { setSyncing(false) }
+
   }
 
   function status(order: Order) {
@@ -38,14 +37,12 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
   }
 
   return <>
-    <header className="top compact-top media-top"><div><h1 className="h1">{title}</h1><p className="muted mobile-media-hint">Open order → Upload video → Submit</p></div><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={loadQueue} disabled={syncing}>{syncing ? '↻' : '⟳'}</button></header>
     {error && <div className="form-error">{error}</div>}
     <section className="card media-queue-card">
       <div className="media-queue-head"><h2>{title} Queue</h2><Badge tone="blue">{orders.length} orders</Badge></div>
-      {syncing && <div className="machine-row compact"><span>Loading queue</span><Badge>Live</Badge></div>}
       <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>Open</button></td></tr>)}</tbody></table></div>
       <div className="mobile-cards media-order-list">{orders.map((order) => <OrderCard key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}</div>
-      {!orders.length && !syncing && <div className="empty-state"><strong>No orders pending</strong><span className="muted">Everything is clear here.</span></div>}
+      {!orders.length && <div className="empty-state"><strong>No orders pending</strong><span className="muted">Everything is clear here.</span></div>}
     </section>
     {active && <MediaModal order={active} record={records[active.id]} apiPath={apiPath} title={title} mode={mode} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} onSubmitted={(orderId) => { setOrders((prev) => prev.filter((order) => order.id !== orderId)); setActive(null) }} />}
   </>
