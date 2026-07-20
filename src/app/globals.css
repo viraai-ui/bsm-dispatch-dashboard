@@ -589,6 +589,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .mobile-media-hint { display: none; }
   .media-queue-card { padding: 0; gap: 8px; }
   .media-mobile-order-card { min-height: 92px; padding: 12px 96px 12px 12px; border-radius: 18px; }
+  .media-queue-card .empty-state { display: grid; gap: 4px; align-items: start; padding: 12px 0 2px; }
+  .media-queue-card .empty-state strong { display: block; font-size: 15px; line-height: 1.2; letter-spacing: -.02em; }
+  .media-queue-card .empty-state span { display: block; font-size: 13px; line-height: 1.35; font-weight: 650; }
   .media-mobile-order-card .tiny-view { position: absolute; right: 12px; bottom: 12px; }
   .media-card-meta { margin-top: 8px; justify-content: flex-start; }
   .media-mobile-modal { padding: 10px; gap: 0; }
