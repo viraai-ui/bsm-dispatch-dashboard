@@ -7,6 +7,8 @@ import { isMachineLineItem } from './item-classification'
 import { buildR2Key, r2Configured, uploadBufferToR2 } from './r2'
 
 export type MediaStage = 'packing' | 'loading'
+export const LOADING_ORDER_UNIT_ID = 'loading-order'
+const MAX_LOADING_VIDEOS = 5
 export type MediaUpload = {
   id: string
   name: string
@@ -177,6 +179,7 @@ async function registerStoredVideo(order: Order, machineId: string, upload: { na
   const store = await readMediaProofStore(stage)
   const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
   const unit = current.units[machineId] || { photos: [], videos: [] }
+  if (stage === 'loading' && machineId === LOADING_ORDER_UNIT_ID && unit.videos.length >= MAX_LOADING_VIDEOS) throw new Error(`Loading Video allows up to ${MAX_LOADING_VIDEOS} videos`)
   const uploadedAt = new Date().toISOString()
   const file: MediaUpload = {
     id: `${machineId}-video-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -209,8 +212,14 @@ export async function submitMediaProof(order: Order, stage: MediaStage = 'packin
   const record = store.records[order.id]
   if (!record) throw new Error(`No ${stageLabel(stage)} proof found for this order`)
   if (!record.videoNotRequired) {
-    const missing = videoRequiredMachines(order).filter((machine) => !(record.units[machine.id]?.videos || []).length)
-    if (missing.length) throw new Error(`Missing videos for: ${missing.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
+    if (stage === 'loading') {
+      const count = record.units[LOADING_ORDER_UNIT_ID]?.videos?.length || 0
+      if (count < 1) throw new Error('Upload at least 1 loading video before submitting')
+      if (count > MAX_LOADING_VIDEOS) throw new Error(`Loading Video allows up to ${MAX_LOADING_VIDEOS} videos`)
+    } else {
+      const missing = videoRequiredMachines(order).filter((machine) => !(record.units[machine.id]?.videos || []).length)
+      if (missing.length) throw new Error(`Missing videos for: ${missing.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
+    }
   }
   record.submittedAt = new Date().toISOString()
   store.records[order.id] = record

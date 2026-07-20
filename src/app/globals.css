@@ -484,3 +484,50 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .user-admin-row .btn { width: auto; white-space: nowrap; }
 .media-health span { word-break: normal; overflow-wrap: normal; white-space: nowrap; }
 @media (max-width: 1180px) { .user-admin-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } .user-admin-row .btn { width: 100%; } }
+
+
+/* Mobile-first Packing / Loading Video workflow */
+.media-queue-card { display: grid; gap: 14px; }
+.media-queue-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mobile-media-hint { display: none; margin-top: 4px; }
+.media-order-list { gap: 12px; }
+.media-mobile-order-card { cursor: pointer; grid-template-columns: minmax(0,1fr); border: 1px solid rgba(226,232,240,.95); }
+.media-mobile-order-card > div:first-child { display: grid; gap: 4px; }
+.media-mobile-order-card strong { font-size: 19px; letter-spacing: -.02em; }
+.media-mobile-order-card span { color: var(--muted); font-size: 13px; font-weight: 800; }
+.media-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.media-card-meta small { color: var(--muted); font-weight: 900; }
+.loading-video-panel { display: grid; gap: 14px; }
+.loading-video-drop { display: grid; gap: 14px; padding: 18px; border: 1px dashed rgba(220,38,38,.34); border-radius: 24px; background: linear-gradient(135deg,#fff7f7,#fff); }
+.loading-video-drop div:first-child { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.loading-video-drop strong { font-size: 20px; }
+.loading-video-drop span { color: var(--muted); font-size: 13px; font-weight: 900; }
+.media-unit-top { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 10px; align-items: start; }
+.media-unit-top i { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 12px; background: #fee2e2; color: #b91c1c; font-style: normal; font-weight: 950; }
+.media-preview-strip em { color: var(--muted); font-style: normal; font-size: 13px; font-weight: 800; }
+.media-preview-strip span { min-height: 38px; }
+.media-preview-strip a { font-weight: 900; color: #b91c1c; }
+.btn.disabled { opacity: .48; pointer-events: none; }
+
+@media (max-width: 720px) {
+  .media-top { position: sticky; top: 0; z-index: 20; margin: -14px -12px 8px; padding: 14px 12px 12px; background: rgba(248,250,252,.94); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(226,232,240,.78); }
+  .media-top .h1 { font-size: 25px; }
+  .mobile-media-hint { display: block; }
+  .media-queue-card { padding: 12px; border-radius: 24px; box-shadow: none; background: transparent; border: 0; }
+  .media-queue-head h2 { font-size: 18px; }
+  .media-mobile-order-card { min-height: 148px; padding: 18px; border-radius: 26px; background: #fff; box-shadow: 0 12px 30px rgba(15,23,42,.08); }
+  .media-mobile-order-card .btn { min-height: 54px; border-radius: 18px; font-size: 15px; }
+  .media-modal-backdrop { align-items: stretch; padding: 0; }
+  .media-mobile-modal { width: 100%; max-height: 100svh; min-height: 100svh; border-radius: 0; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+  .media-modal-head { position: sticky; top: -14px; z-index: 5; margin: -14px -14px 0; padding: 14px; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(226,232,240,.84); align-items: center; }
+  .media-modal-head h1 { font-size: 23px; }
+  .media-unit-cards { gap: 12px; padding-bottom: 86px; }
+  .media-unit-card { padding: 14px; border-radius: 22px; box-shadow: 0 8px 24px rgba(15,23,42,.07); }
+  .media-unit-card .btn, .loading-video-drop .btn { min-height: 58px; border-radius: 18px; font-size: 15px; }
+  .loading-video-panel { padding-bottom: 86px; }
+  .loading-video-drop { padding: 16px; border-radius: 22px; }
+  .media-preview-strip { display: grid; gap: 8px; }
+  .media-preview-strip span { justify-content: space-between; padding: 10px 12px; border-radius: 14px; }
+  .media-submit-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: .8fr 1.2fr; gap: 10px; margin: 0; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); border-top: 1px solid rgba(226,232,240,.9); box-shadow: 0 -12px 28px rgba(15,23,42,.10); }
+  .media-submit-bar .btn { width: 100%; min-height: 54px; border-radius: 17px; }
+}
