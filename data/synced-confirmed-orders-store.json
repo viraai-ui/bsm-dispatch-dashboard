@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000034252050": {
+      "id": "1154219000034252050",
+      "zohoSalesOrderId": "1154219000034252050",
+      "salesOrderNumber": "SO-07520",
+      "status": "open",
+      "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+      "shippingAddress": "Plot No 310, Sec-17 HSIDC FOOTWEAR PARK BAHADURGARH, Haryana",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034252053",
+          "itemName": "Drum type Sole Press (pneumatic)",
+          "sku": "2002",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034252054",
+          "itemName": "Edge grinding machine (vertical) (heavy duty)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034252050-1154219000034252053-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034252050",
+          "lineItemId": "1154219000034252053",
+          "itemName": "Drum type Sole Press (pneumatic)",
+          "sku": "2002",
+          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+          "salesOrderNumber": "SO-07520",
+          "deliveryDate": "2026-07-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034252050-1154219000034252054-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034252050",
+          "lineItemId": "1154219000034252054",
+          "itemName": "Edge grinding machine (vertical) (heavy duty)",
+          "sku": "",
+          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+          "salesOrderNumber": "SO-07520",
+          "deliveryDate": "2026-07-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034268016": {
       "id": "1154219000034268016",
       "zohoSalesOrderId": "1154219000034268016",
@@ -34,53 +112,6 @@
         }
       ],
       "machines": []
-    },
-    "1154219000034270046": {
-      "id": "1154219000034270046",
-      "zohoSalesOrderId": "1154219000034270046",
-      "salesOrderNumber": "SO-07518",
-      "status": "open",
-      "customerName": "INTEGRATED SOLUTION",
-      "shippingAddress": "3RD FLOOR, T-67A, CHAPPAR WALI MASJID, OKHLA, JAMIA NAGAR, South Delhi, 110025",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034270049",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034270046-1154219000034270049-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034270046",
-          "lineItemId": "1154219000034270049",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "INTEGRATED SOLUTION",
-          "salesOrderNumber": "SO-07518",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
     },
     "1154219000034273023": {
       "id": "1154219000034273023",
@@ -542,74 +573,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034295726": {
-      "id": "1154219000034295726",
-      "zohoSalesOrderId": "1154219000034295726",
-      "salesOrderNumber": "SO-07507",
-      "status": "open",
-      "customerName": "Relaxo Footwears Ltd. VII-B",
-      "shippingAddress": "PLOT NO.329, MIE,, BHADURGARH, Haryana,, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034295729",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Spray Nozzle 834-2",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034295726-1154219000034295729-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034295726",
-          "lineItemId": "1154219000034295729",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Relaxo Footwears Ltd. VII-B",
-          "salesOrderNumber": "SO-07507",
-          "deliveryDate": "2026-07-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Spray Nozzle 834-2"
-        },
-        {
-          "id": "1154219000034295726-1154219000034295729-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034295726",
-          "lineItemId": "1154219000034295729",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Relaxo Footwears Ltd. VII-B",
-          "salesOrderNumber": "SO-07507",
-          "deliveryDate": "2026-07-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Spray Nozzle 834-2"
         }
       ]
     },
@@ -4078,14 +4041,13 @@
     }
   },
   "orderIds": [
+    "1154219000034252050",
     "1154219000034268016",
-    "1154219000034270046",
     "1154219000034273023",
     "1154219000034263026",
     "1154219000034254047",
     "1154219000034275026",
     "1154219000034276023",
-    "1154219000034295726",
     "1154219000034301018",
     "1154219000034259048",
     "1154219000034265011",
@@ -4117,8 +4079,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-20T09:45:10.758Z",
-  "lastAttemptAt": "2026-07-20T09:59:26.874Z",
+  "lastSuccessfulSyncAt": "2026-07-20T10:00:10.472Z",
+  "lastAttemptAt": "2026-07-20T10:00:10.472Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
