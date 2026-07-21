@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034468001": {
+      "id": "1154219000034468001",
+      "zohoSalesOrderId": "1154219000034468001",
+      "salesOrderNumber": "SO-07525",
+      "status": "open",
+      "customerName": "ENA Footwear Pvt Ltd",
+      "shippingAddress": "284, Footwear Park, Sector-16, Bahadurgarh-124507, Haryana",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034468004",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034468001-1154219000034468004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034468001",
+          "lineItemId": "1154219000034468004",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "ENA Footwear Pvt Ltd",
+          "salesOrderNumber": "SO-07525",
+          "deliveryDate": "2026-07-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034411076": {
       "id": "1154219000034411076",
       "zohoSalesOrderId": "1154219000034411076",
@@ -4422,6 +4469,7 @@
     }
   },
   "orderIds": [
+    "1154219000034468001",
     "1154219000034411076",
     "1154219000034268031",
     "1154219000034252050",
@@ -4461,8 +4509,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T06:13:43.156Z",
-  "lastAttemptAt": "2026-07-21T06:57:12.877Z",
+  "lastSuccessfulSyncAt": "2026-07-21T06:58:16.171Z",
+  "lastAttemptAt": "2026-07-21T06:58:16.171Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
