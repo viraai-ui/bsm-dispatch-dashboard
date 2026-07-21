@@ -738,41 +738,6 @@
         }
       ]
     },
-    "1154219000034268016": {
-      "id": "1154219000034268016",
-      "zohoSalesOrderId": "1154219000034268016",
-      "salesOrderNumber": "SO-07519",
-      "status": "open",
-      "customerName": "RNB Global Impex",
-      "shippingAddress": "589, Artoni, Mathura Road, Agra, Uttar Pradesh, 282007",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-20",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034268019",
-          "itemName": "Hotmelt Polyamide Granules",
-          "sku": "7160",
-          "description": "",
-          "quantity": 25,
-          "pendingQuantity": 25,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        },
-        {
-          "id": "1154219000034268020",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Freight Cost Extra from BSM To VRL Logistics Delhi Godown for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": []
-    },
     "1154219000034273023": {
       "id": "1154219000034273023",
       "zohoSalesOrderId": "1154219000034273023",
@@ -4615,7 +4580,6 @@
     "1154219000034468014",
     "1154219000034411076",
     "1154219000034252050",
-    "1154219000034268016",
     "1154219000034273023",
     "1154219000034263026",
     "1154219000034254047",
@@ -4650,8 +4614,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T10:00:40.494Z",
-  "lastAttemptAt": "2026-07-21T10:14:24.197Z",
+  "lastSuccessfulSyncAt": "2026-07-21T10:15:40.035Z",
+  "lastAttemptAt": "2026-07-21T10:15:40.035Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
