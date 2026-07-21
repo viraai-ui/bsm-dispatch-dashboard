@@ -1,5 +1,112 @@
 {
   "orders": {
+    "1154219000034449002": {
+      "id": "1154219000034449002",
+      "zohoSalesOrderId": "1154219000034449002",
+      "salesOrderNumber": "SO-07528",
+      "status": "open",
+      "customerName": "FIDES FOOTWEAR PRIVATE LIMITED",
+      "shippingAddress": "147/R, West Chowbhaga Tiljala, Kolkata, West Bengal-700105, West Bengal",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034449005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 100,
+          "pendingQuantity": 100,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        },
+        {
+          "id": "1154219000034449006",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000034472001": {
+      "id": "1154219000034472001",
+      "zohoSalesOrderId": "1154219000034472001",
+      "salesOrderNumber": "SO-07527",
+      "status": "open",
+      "customerName": "EUROPLAK SV CUCINE INDIA LIMITED",
+      "shippingAddress": "Survey No. 37/1 to 4/3/1, Kondhwa Pisoli Road, Pisoli, Pune, Pune, Maharashtra - 411060",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034472004",
+          "itemName": "Skiving Machine @5%",
+          "sku": "801 @5%",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034472001-1154219000034472004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034472001",
+          "lineItemId": "1154219000034472004",
+          "itemName": "Skiving Machine @5%",
+          "sku": "801 @5%",
+          "customerName": "EUROPLAK SV CUCINE INDIA LIMITED",
+          "salesOrderNumber": "SO-07527",
+          "deliveryDate": "2026-07-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034468014": {
+      "id": "1154219000034468014",
+      "zohoSalesOrderId": "1154219000034468014",
+      "salesOrderNumber": "SO-07526",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034468017",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000034411076": {
       "id": "1154219000034411076",
       "zohoSalesOrderId": "1154219000034411076",
@@ -4328,6 +4435,9 @@
     }
   },
   "orderIds": [
+    "1154219000034449002",
+    "1154219000034472001",
+    "1154219000034468014",
     "1154219000034411076",
     "1154219000034252050",
     "1154219000034268016",
@@ -4365,8 +4475,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T08:45:24.677Z",
-  "lastAttemptAt": "2026-07-21T08:59:23.529Z",
+  "lastSuccessfulSyncAt": "2026-07-21T09:00:20.337Z",
+  "lastAttemptAt": "2026-07-21T09:00:20.337Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
