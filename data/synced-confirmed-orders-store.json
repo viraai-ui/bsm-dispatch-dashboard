@@ -1,5 +1,155 @@
 {
   "orders": {
+    "1154219000034480002": {
+      "id": "1154219000034480002",
+      "zohoSalesOrderId": "1154219000034480002",
+      "salesOrderNumber": "SO-07535",
+      "status": "open",
+      "customerName": "YZ buyer International Pvt. Ltd.",
+      "shippingAddress": "69, Sec-8, IMT Manesar, Haryana, 122002, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034480005",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034480002-1154219000034480005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034480002",
+          "lineItemId": "1154219000034480005",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "customerName": "YZ buyer International Pvt. Ltd.",
+          "salesOrderNumber": "SO-07535",
+          "deliveryDate": "2026-07-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034491001": {
+      "id": "1154219000034491001",
+      "zohoSalesOrderId": "1154219000034491001",
+      "salesOrderNumber": "SO-07533",
+      "status": "open",
+      "customerName": "LC FOOTWEAR",
+      "shippingAddress": "WZ 259, MADIPUR VILLAGE, MADIPUR, New Delhi, Delhi - 110063",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034491004",
+          "itemName": "Computerized Post Bed Single Needle Roller Feed",
+          "sku": "9910RTC",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034491005",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034491001-1154219000034491004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034491001",
+          "lineItemId": "1154219000034491004",
+          "itemName": "Computerized Post Bed Single Needle Roller Feed",
+          "sku": "9910RTC",
+          "customerName": "LC FOOTWEAR",
+          "salesOrderNumber": "SO-07533",
+          "deliveryDate": "2026-07-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034491001-1154219000034491005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034491001",
+          "lineItemId": "1154219000034491005",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "LC FOOTWEAR",
+          "salesOrderNumber": "SO-07533",
+          "deliveryDate": "2026-07-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034485003": {
+      "id": "1154219000034485003",
+      "zohoSalesOrderId": "1154219000034485003",
+      "salesOrderNumber": "SO-07532",
+      "status": "open",
+      "customerName": "ADDMAX TECHNOLOGIES PRIVATE LIMITED",
+      "shippingAddress": "J-23, Sector-63, Noida, Uttar Pradesh-201301, Uttar Pradesh",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-21",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034485006",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 37.5,
+          "pendingQuantity": 37.5,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000034463003": {
       "id": "1154219000034463003",
       "zohoSalesOrderId": "1154219000034463003",
@@ -4525,6 +4675,9 @@
     }
   },
   "orderIds": [
+    "1154219000034480002",
+    "1154219000034491001",
+    "1154219000034485003",
     "1154219000034463003",
     "1154219000034477001",
     "1154219000034476001",
@@ -4566,8 +4719,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T11:30:56.980Z",
-  "lastAttemptAt": "2026-07-21T11:44:24.207Z",
+  "lastSuccessfulSyncAt": "2026-07-21T11:45:38.196Z",
+  "lastAttemptAt": "2026-07-21T11:45:38.196Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
