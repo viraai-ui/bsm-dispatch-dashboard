@@ -28,6 +28,16 @@ export async function POST(request: Request) {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
   if (!auth.ok) return auth.response
   const body = await request.json()
+  if (body.action === 'priority') {
+    const orderId = String(body.orderId || '')
+    const priority = body.priority === 'urgent' ? 'urgent' : body.priority === 'regular' ? 'regular' : ''
+    if (!orderId || !priority) return Response.json({ ok: false, error: 'Missing priority update' }, { status: 400 })
+    await upsertOrderWorkflow(orderId, (current) => {
+      if (!current) throw new Error('Order workflow not found')
+      return { ...current, dispatchPriority: priority }
+    })
+    return apiOk({ orderId, dispatchPriority: priority })
+  }
   const order = body.order as Order
   if (!order?.id) return Response.json({ ok: false, error: 'Missing order' }, { status: 400 })
   const completedAt = new Date().toISOString()

@@ -216,7 +216,11 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
   overflow: hidden;
   backdrop-filter: blur(20px);
   box-shadow: 0 24px 72px rgba(15,23,42,.08);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
+.packaging-section.drag-ready { border-style: dashed; box-shadow: 0 24px 72px rgba(15,23,42,.12), inset 0 0 0 2px rgba(59,130,246,.10); }
+.packaging-section.drag-ready.urgent { border-color: rgba(248,113,113,.95); }
+.packaging-section.drag-ready.regular { border-color: rgba(96,165,250,.95); }
 .packaging-section.urgent { background: linear-gradient(145deg, rgba(255,245,246,.94), rgba(255,255,255,.78)); border-color: rgba(254,202,202,.95); }
 .packaging-section.regular { background: linear-gradient(145deg, rgba(239,248,255,.96), rgba(255,255,255,.80)); border-color: rgba(191,219,254,.88); }
 .packaging-section-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
@@ -232,7 +236,10 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 20px 55px rgba(15,23,42,.08);
+  cursor: grab;
 }
+.packaging-order-card:active { cursor: grabbing; }
+.packaging-order-card[draggable="true"] { user-select: none; }
 .packaging-section.urgent .packaging-order-card { box-shadow: 0 22px 60px rgba(185,28,28,.10); }
 .packaging-section.regular .packaging-order-card { box-shadow: 0 22px 60px rgba(37,99,235,.09); }
 .packaging-order-title { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 18px; }

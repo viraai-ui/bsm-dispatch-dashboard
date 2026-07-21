@@ -18,6 +18,7 @@ export function PackagingTvClient() {
   const syncingRef = useRef(false)
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
+  const [draggingOrderId, setDraggingOrderId] = useState<string | null>(null)
 
   useEffect(() => {
     setState(readState())
@@ -53,24 +54,48 @@ export function PackagingTvClient() {
     setOrders((prev) => prev.filter((item) => item.id !== order.id))
   }
 
+  async function moveOrderPriority(orderId: string, priority: 'urgent' | 'regular') {
+    const target = priority
+    const existing = orders.find((order) => order.id === orderId)
+    if (!existing || existing.dispatchPriority === target) return
+    setError(''); setNotice('')
+    setOrders((prev) => prev.map((order) => order.id === orderId ? { ...order, dispatchPriority: target } : order))
+    try {
+      const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'priority', orderId, priority: target }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not update dispatch priority')
+      setNotice(`${existing.salesOrderNumber} moved to ${target === 'urgent' ? 'Urgent' : 'Regular'} Dispatch.`)
+    } catch (err) {
+      setOrders((prev) => prev.map((order) => order.id === orderId ? { ...order, dispatchPriority: existing.dispatchPriority || 'regular' } : order))
+      setError(err instanceof Error ? err.message : 'Could not update dispatch priority')
+    }
+  }
+
+  function handleDrop(event: React.DragEvent, priority: 'urgent' | 'regular') {
+    event.preventDefault()
+    const orderId = event.dataTransfer.getData('text/plain') || draggingOrderId
+    setDraggingOrderId(null)
+    if (orderId) void moveOrderPriority(orderId, priority)
+  }
+
   return <main className="packaging-tv-light">
     <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncLocal()} disabled={syncing}>{syncing ? '↻' : '⟳'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
     <div className="packaging-dispatch-grid">
-      <DispatchSection title="Urgent Dispatch" tone="urgent" orders={urgent} state={state} completeOrder={completeOrder} />
-      <DispatchSection title="Regular Dispatch" tone="regular" orders={regular} state={state} completeOrder={completeOrder} />
+      <DispatchSection title="Urgent Dispatch" tone="urgent" orders={urgent} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} />
+      <DispatchSection title="Regular Dispatch" tone="regular" orders={regular} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} />
     </div>
   </main>
 }
 
-function DispatchSection({ title, tone, orders, state, completeOrder }: { title: string; tone: 'urgent' | 'regular'; orders: DispatchOrder[]; state: PackingState; completeOrder: (order: DispatchOrder) => void }) {
-  return <section className={`packaging-section ${tone}`}><div className="packaging-section-head"><h2>{title}</h2><span>{orders.length}</span></div><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} />) : <div className="card packaging-empty">No active orders</div>}</div></section>
+function DispatchSection({ title, tone, orders, state, completeOrder, draggingOrderId, onDragStart, onDrop }: { title: string; tone: 'urgent' | 'regular'; orders: DispatchOrder[]; state: PackingState; completeOrder: (order: DispatchOrder) => void; draggingOrderId: string | null; onDragStart: (orderId: string | null) => void; onDrop: (event: React.DragEvent, priority: 'urgent' | 'regular') => void }) {
+  return <section className={`packaging-section ${tone} ${draggingOrderId ? 'drag-ready' : ''}`} onDragOver={(event) => event.preventDefault()} onDrop={(event) => onDrop(event, tone)}><div className="packaging-section-head"><h2>{title}</h2><span>{orders.length}</span></div><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} onDragStart={onDragStart} />) : <div className="card packaging-empty">Drop orders here</div>}</div></section>
 }
 
-function OrderCard({ order, urgent, completeOrder }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void }) {
+function OrderCard({ order, urgent, completeOrder, onDragStart }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void; onDragStart: (orderId: string | null) => void }) {
   const groups = [...groupMachines(order.machines), ...groupDispatchLineItems(order.lineItems)]
-  return <article className="card packaging-order-card"><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine</span><span>SKU</span><span>Qty</span><span>Wooden Packing</span><span>Notes</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}-${group.serials.join('-')}`}><ItemName name={group.itemName} description={group.description} serials={group.serials} /><span className="dispatch-sku">{group.sku || '—'}</span><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b><span className="dispatch-notes">{group.notes.length ? group.notes.join(' • ') : '—'}</span></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
+  return <article className="card packaging-order-card" draggable onDragStart={(event) => { event.dataTransfer.effectAllowed = 'move'; event.dataTransfer.setData('text/plain', order.id); onDragStart(order.id) }} onDragEnd={() => onDragStart(null)}><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div>{urgent && <Badge tone="amber">Urgent</Badge>}</div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine</span><span>SKU</span><span>Qty</span><span>Wooden Packing</span><span>Notes</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}-${group.serials.join('-')}`}><ItemName name={group.itemName} description={group.description} serials={group.serials} /><span className="dispatch-sku">{group.sku || '—'}</span><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b><span className="dispatch-notes">{group.notes.length ? group.notes.join(' • ') : '—'}</span></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
 }
 
 function groupMachines(machines: MachineUnit[]) {
@@ -107,7 +132,7 @@ function displayDescription(name: string, description?: string) {
   if (clean.toLowerCase() === String(name || '').replace(/\s+/g, ' ').trim().toLowerCase()) return ''
   return clean
 }
-function isUrgent(order: DispatchOrder, state: PackingState) { return order.dispatchPriority === 'urgent' || order.machines.some((machine) => state[machine.id]?.urgent) }
+function isUrgent(order: DispatchOrder, state: PackingState) { if (order.dispatchPriority) return order.dispatchPriority === 'urgent'; return order.machines.some((machine) => state[machine.id]?.urgent) }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
