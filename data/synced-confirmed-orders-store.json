@@ -988,53 +988,6 @@
         }
       ]
     },
-    "1154219000034259048": {
-      "id": "1154219000034259048",
-      "zohoSalesOrderId": "1154219000034259048",
-      "salesOrderNumber": "SO-07499",
-      "status": "open",
-      "customerName": "VKC SHOES AND ALLIED PRODUCTS INDIA PRIVATE LIMITED",
-      "shippingAddress": "108/40, Kinfra small industries park, Kalpetta, Chundale, Wayanad, Kerala, 673123, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-16",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034259051",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034259048-1154219000034259051-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034259048",
-          "lineItemId": "1154219000034259051",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "VKC SHOES AND ALLIED PRODUCTS INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07499",
-          "deliveryDate": "2026-07-16",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034265011": {
       "id": "1154219000034265011",
       "zohoSalesOrderId": "1154219000034265011",
@@ -4383,7 +4336,6 @@
     "1154219000034254047",
     "1154219000034276023",
     "1154219000034301018",
-    "1154219000034259048",
     "1154219000034265011",
     "1154219000034276003",
     "1154219000034252004",
@@ -4413,8 +4365,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T08:15:23.021Z",
-  "lastAttemptAt": "2026-07-21T08:27:16.354Z",
+  "lastSuccessfulSyncAt": "2026-07-21T08:28:14.810Z",
+  "lastAttemptAt": "2026-07-21T08:28:14.810Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
