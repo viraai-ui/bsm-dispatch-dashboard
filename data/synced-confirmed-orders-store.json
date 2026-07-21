@@ -810,84 +810,6 @@
         }
       ]
     },
-    "1154219000034252050": {
-      "id": "1154219000034252050",
-      "zohoSalesOrderId": "1154219000034252050",
-      "salesOrderNumber": "SO-07520",
-      "status": "open",
-      "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
-      "shippingAddress": "Plot No 310, Sec-17 HSIDC FOOTWEAR PARK BAHADURGARH, Haryana",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034252053",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034252054",
-          "itemName": "Edge grinding machine (vertical) (heavy duty)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034252050-1154219000034252053-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034252050",
-          "lineItemId": "1154219000034252053",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
-          "salesOrderNumber": "SO-07520",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034252050-1154219000034252054-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034252050",
-          "lineItemId": "1154219000034252054",
-          "itemName": "Edge grinding machine (vertical) (heavy duty)",
-          "sku": "",
-          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
-          "salesOrderNumber": "SO-07520",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034273023": {
       "id": "1154219000034273023",
       "zohoSalesOrderId": "1154219000034273023",
@@ -4809,7 +4731,6 @@
     "1154219000034472001",
     "1154219000034468014",
     "1154219000034411076",
-    "1154219000034252050",
     "1154219000034273023",
     "1154219000034263026",
     "1154219000034254047",
@@ -4843,8 +4764,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T12:30:38.868Z",
-  "lastAttemptAt": "2026-07-21T12:44:24.396Z",
+  "lastSuccessfulSyncAt": "2026-07-21T12:45:35.801Z",
+  "lastAttemptAt": "2026-07-21T12:45:35.801Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
