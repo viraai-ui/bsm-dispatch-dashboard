@@ -381,53 +381,6 @@
         }
       ]
     },
-    "1154219000034268031": {
-      "id": "1154219000034268031",
-      "zohoSalesOrderId": "1154219000034268031",
-      "salesOrderNumber": "SO-07521",
-      "status": "open",
-      "customerName": "K P Industries",
-      "shippingAddress": "Kh No-44/21, Mundka, Mundka, Delhi, 110041",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034268034",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034268031-1154219000034268034-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034268031",
-          "lineItemId": "1154219000034268034",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "customerName": "K P Industries",
-          "salesOrderNumber": "SO-07521",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034252050": {
       "id": "1154219000034252050",
       "zohoSalesOrderId": "1154219000034252050",
@@ -4423,7 +4376,6 @@
   },
   "orderIds": [
     "1154219000034411076",
-    "1154219000034268031",
     "1154219000034252050",
     "1154219000034268016",
     "1154219000034273023",
@@ -4461,8 +4413,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-21T08:13:13.713Z",
-  "lastAttemptAt": "2026-07-21T08:14:23.583Z",
+  "lastSuccessfulSyncAt": "2026-07-21T08:15:23.021Z",
+  "lastAttemptAt": "2026-07-21T08:15:23.021Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
