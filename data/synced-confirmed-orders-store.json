@@ -33192,84 +33192,6 @@
         }
       ]
     },
-    "1154219000034491001": {
-      "id": "1154219000034491001",
-      "zohoSalesOrderId": "1154219000034491001",
-      "salesOrderNumber": "SO-07533",
-      "status": "open",
-      "customerName": "LC FOOTWEAR",
-      "shippingAddress": "WZ 259, MADIPUR VILLAGE, MADIPUR, New Delhi, Delhi - 110063",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034491004",
-          "itemName": "Computerized Post Bed Single Needle Roller Feed",
-          "sku": "9910RTC",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034491005",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034491001-1154219000034491004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034491001",
-          "lineItemId": "1154219000034491004",
-          "itemName": "Computerized Post Bed Single Needle Roller Feed",
-          "sku": "9910RTC",
-          "customerName": "LC FOOTWEAR",
-          "salesOrderNumber": "SO-07533",
-          "deliveryDate": "2026-07-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034491001-1154219000034491005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034491001",
-          "lineItemId": "1154219000034491005",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "customerName": "LC FOOTWEAR",
-          "salesOrderNumber": "SO-07533",
-          "deliveryDate": "2026-07-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034463003": {
       "id": "1154219000034463003",
       "zohoSalesOrderId": "1154219000034463003",
@@ -37419,7 +37341,6 @@
     "1154219000034523002",
     "1154219000034506002",
     "1154219000034527001",
-    "1154219000034491001",
     "1154219000034463003",
     "1154219000034477001",
     "1154219000034476001",
@@ -37457,8 +37378,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T12:22:31.322Z",
-  "lastAttemptAt": "2026-07-22T12:35:35.721Z",
+  "lastSuccessfulSyncAt": "2026-07-22T12:37:16.154Z",
+  "lastAttemptAt": "2026-07-22T12:37:16.154Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
