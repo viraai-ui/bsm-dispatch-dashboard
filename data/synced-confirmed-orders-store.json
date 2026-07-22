@@ -1,5 +1,77 @@
 {
   "orders": {
+    "1154219000034547004": {
+      "id": "1154219000034547004",
+      "zohoSalesOrderId": "1154219000034547004",
+      "salesOrderNumber": "SO-07543",
+      "status": "open",
+      "customerName": "VARDHMAN RIBBON PRINTERS",
+      "shippingAddress": "G/F, 487/68, PEERA GARHI VILLAGE, NEAR SHRI SAI AUTO,, PEERA GARHI VILLAGE, Delhi, 110087, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034547007",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034547004-1154219000034547007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034547004",
+          "lineItemId": "1154219000034547007",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "customerName": "VARDHMAN RIBBON PRINTERS",
+          "salesOrderNumber": "SO-07543",
+          "deliveryDate": "2026-07-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034540002": {
+      "id": "1154219000034540002",
+      "zohoSalesOrderId": "1154219000034540002",
+      "salesOrderNumber": "SO-07542",
+      "status": "open",
+      "customerName": "STAR GLOBAL",
+      "shippingAddress": "PHASE 6, PLOT NO 117, UDYOG VIHAR, SECTOR\n37, GURGAON, HARYANA-122004",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-22",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034540005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 100,
+          "pendingQuantity": 100,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000034546005": {
       "id": "1154219000034546005",
       "zohoSalesOrderId": "1154219000034546005",
@@ -37270,6 +37342,8 @@
     }
   },
   "orderIds": [
+    "1154219000034547004",
+    "1154219000034540002",
     "1154219000034546005",
     "1154219000034550003",
     "1154219000034533001",
@@ -37314,8 +37388,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T10:51:55.999Z",
-  "lastAttemptAt": "2026-07-22T11:05:36.633Z",
+  "lastSuccessfulSyncAt": "2026-07-22T11:06:59.295Z",
+  "lastAttemptAt": "2026-07-22T11:06:59.295Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
