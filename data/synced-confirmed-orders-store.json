@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034523002": {
+      "id": "1154219000034523002",
+      "zohoSalesOrderId": "1154219000034523002",
+      "salesOrderNumber": "SO-07538",
+      "status": "open",
+      "customerName": "SHREE GANESH INDUSTRIES (PUNJAB)",
+      "shippingAddress": "D-26, I.G.C. Mansa Road, Bathinda, Punjab-151001, Punjab",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034523005",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034523002-1154219000034523005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034523002",
+          "lineItemId": "1154219000034523005",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "customerName": "SHREE GANESH INDUSTRIES (PUNJAB)",
+          "salesOrderNumber": "SO-07538",
+          "deliveryDate": "2026-07-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034506002": {
       "id": "1154219000034506002",
       "zohoSalesOrderId": "1154219000034506002",
@@ -36867,6 +36914,7 @@
     }
   },
   "orderIds": [
+    "1154219000034523002",
     "1154219000034506002",
     "1154219000034527001",
     "1154219000034491001",
@@ -36908,8 +36956,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T06:36:39.226Z",
-  "lastAttemptAt": "2026-07-22T06:50:35.718Z",
+  "lastSuccessfulSyncAt": "2026-07-22T06:51:49.761Z",
+  "lastAttemptAt": "2026-07-22T06:51:49.761Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
