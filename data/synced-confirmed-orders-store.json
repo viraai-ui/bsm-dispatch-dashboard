@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000034533001": {
+      "id": "1154219000034533001",
+      "zohoSalesOrderId": "1154219000034533001",
+      "salesOrderNumber": "SO-07539",
+      "status": "open",
+      "customerName": "BOX MUSE (Uttarakhand)",
+      "shippingAddress": "F-102, UPSIDC, Near Ceasefire Industries, Industrial Area, Selaqui, Dehradun, Uttarakhand, 248011, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034533004",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034533005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Heater(Indian Thread Burenr)",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034533001-1154219000034533004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034533001",
+          "lineItemId": "1154219000034533004",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "BOX MUSE (Uttarakhand)",
+          "salesOrderNumber": "SO-07539",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034533001-1154219000034533005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034533001",
+          "lineItemId": "1154219000034533005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "BOX MUSE (Uttarakhand)",
+          "salesOrderNumber": "SO-07539",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heater(Indian Thread Burenr)"
+        }
+      ]
+    },
     "1154219000034523002": {
       "id": "1154219000034523002",
       "zohoSalesOrderId": "1154219000034523002",
@@ -36914,6 +36992,7 @@
     }
   },
   "orderIds": [
+    "1154219000034533001",
     "1154219000034523002",
     "1154219000034506002",
     "1154219000034527001",
@@ -36956,8 +37035,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T07:21:46.970Z",
-  "lastAttemptAt": "2026-07-22T07:35:35.936Z",
+  "lastSuccessfulSyncAt": "2026-07-22T07:36:46.512Z",
+  "lastAttemptAt": "2026-07-22T07:36:46.512Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
