@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000034527001": {
+      "id": "1154219000034527001",
+      "zohoSalesOrderId": "1154219000034527001",
+      "salesOrderNumber": "SO-07536",
+      "status": "open",
+      "customerName": "RAMESHWAR FABRICATOR",
+      "shippingAddress": "0, JAAR FACTORY KE PAAS, BITTHARIYO KA PURA, Girwai, Girwai,, Gwalior, Madhya Pradesh, 474002, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034527004",
+          "itemName": "Travel head cutting press (25 ton) Heavy-duty",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034527005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034527001-1154219000034527004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034527001",
+          "lineItemId": "1154219000034527004",
+          "itemName": "Travel head cutting press (25 ton) Heavy-duty",
+          "sku": "",
+          "customerName": "RAMESHWAR FABRICATOR",
+          "salesOrderNumber": "SO-07536",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034527001-1154219000034527005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034527001",
+          "lineItemId": "1154219000034527005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "RAMESHWAR FABRICATOR",
+          "salesOrderNumber": "SO-07536",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034491001": {
       "id": "1154219000034491001",
       "zohoSalesOrderId": "1154219000034491001",
@@ -4243,6 +4321,7 @@
     }
   },
   "orderIds": [
+    "1154219000034527001",
     "1154219000034491001",
     "1154219000034463003",
     "1154219000034477001",
@@ -4282,8 +4361,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T05:36:29.327Z",
-  "lastAttemptAt": "2026-07-22T05:50:35.624Z",
+  "lastSuccessfulSyncAt": "2026-07-22T05:51:41.028Z",
+  "lastAttemptAt": "2026-07-22T05:51:41.028Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
