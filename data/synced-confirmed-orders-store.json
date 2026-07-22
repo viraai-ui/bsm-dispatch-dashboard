@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034537002": {
+      "id": "1154219000034537002",
+      "zohoSalesOrderId": "1154219000034537002",
+      "salesOrderNumber": "SO-07544",
+      "status": "open",
+      "customerName": "KC ARTS",
+      "shippingAddress": "GALI NO C, C-24, KUMAWAT COLONY, KHATIPURA ROAD, JHOTWARA,, Jaipur,, Rajasthan, 302012, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034537005",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "Plain roller",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034537002-1154219000034537005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034537002",
+          "lineItemId": "1154219000034537005",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "KC ARTS",
+          "salesOrderNumber": "SO-07544",
+          "deliveryDate": "2026-07-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain roller"
+        }
+      ]
+    },
     "1154219000034547004": {
       "id": "1154219000034547004",
       "zohoSalesOrderId": "1154219000034547004",
@@ -37342,6 +37389,7 @@
     }
   },
   "orderIds": [
+    "1154219000034537002",
     "1154219000034547004",
     "1154219000034540002",
     "1154219000034546005",
@@ -37388,8 +37436,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T11:21:59.709Z",
-  "lastAttemptAt": "2026-07-22T11:35:36.213Z",
+  "lastSuccessfulSyncAt": "2026-07-22T11:37:20.049Z",
+  "lastAttemptAt": "2026-07-22T11:37:20.049Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
