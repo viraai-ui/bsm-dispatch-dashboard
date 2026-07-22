@@ -17,9 +17,9 @@
           "itemName": "Hotmelt Roller Coater (12 inch)",
           "sku": "831",
           "description": "Plain roller",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         }
       ],
@@ -38,7 +38,28 @@
           "deliveryDate": "2026-07-22",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain roller"
+        },
+        {
+          "id": "1154219000034537002-1154219000034537005-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034537002",
+          "lineItemId": "1154219000034537005",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "KC ARTS",
+          "salesOrderNumber": "SO-07544",
+          "deliveryDate": "2026-07-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -37436,8 +37457,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T11:52:36.921Z",
-  "lastAttemptAt": "2026-07-22T12:05:36.153Z",
+  "lastSuccessfulSyncAt": "2026-07-22T12:07:54.890Z",
+  "lastAttemptAt": "2026-07-22T12:07:54.890Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
