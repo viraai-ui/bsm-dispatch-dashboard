@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000034532009": {
+      "id": "1154219000034532009",
+      "zohoSalesOrderId": "1154219000034532009",
+      "salesOrderNumber": "SO-07546",
+      "status": "open",
+      "customerName": "GLOBAL OVERSEAS",
+      "shippingAddress": "FIRST FLOOR, K-96, UDYOG NAGAR,, ROHTAK ROAD, Delhi, 110041, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034532012",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034532009-1154219000034532012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034532009",
+          "lineItemId": "1154219000034532012",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "GLOBAL OVERSEAS",
+          "salesOrderNumber": "SO-07546",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034515009": {
+      "id": "1154219000034515009",
+      "zohoSalesOrderId": "1154219000034515009",
+      "salesOrderNumber": "SO-07545",
+      "status": "open",
+      "customerName": "PRACHI HANDICRAFT",
+      "shippingAddress": "GROUND FLOOR, PLOTE NO-268,KH NO-124/8, JAI VIHAR PHASE-2, B-BLOCK,GALI NO-22, Najafgarh, New Delhi, South West Delhi,, Delhi,, 110043, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034515012",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034515009-1154219000034515012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034515009",
+          "lineItemId": "1154219000034515012",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "customerName": "PRACHI HANDICRAFT",
+          "salesOrderNumber": "SO-07545",
+          "deliveryDate": "2026-07-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034537002": {
       "id": "1154219000034537002",
       "zohoSalesOrderId": "1154219000034537002",
@@ -37332,6 +37426,8 @@
     }
   },
   "orderIds": [
+    "1154219000034532009",
+    "1154219000034515009",
     "1154219000034537002",
     "1154219000034547004",
     "1154219000034540002",
@@ -37378,8 +37474,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T12:52:05.690Z",
-  "lastAttemptAt": "2026-07-22T13:05:35.868Z",
+  "lastSuccessfulSyncAt": "2026-07-22T13:07:06.150Z",
+  "lastAttemptAt": "2026-07-22T13:07:06.150Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
