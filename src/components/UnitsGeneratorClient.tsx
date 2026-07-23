@@ -126,7 +126,7 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
           <p className="unit-contact">Contact: {contact || '—'}</p>
           <h3>{unitMachines[0] || 'Machine / Item Name'}</h3>
           <div className="unit-count">1/{Math.max(1, totalUnits)}</div>
-          <div className="unit-from"><span>From: Bengal Shoe Machinery Pvt. Ltd.</span><strong>+91 9560603252</strong></div>
+          <div className="unit-from"><span>From: Build Scale Manufacture Pvt. Ltd.</span><strong>+91 9560603252</strong></div>
         </div>
       </div>
     </div>
@@ -183,13 +183,14 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   doc.setFontSize(labelSize === 'a5' ? (customerName.length > 34 ? 18 : 24) : (customerName.length > 34 ? 27 : 34))
   doc.text(customerName.toUpperCase(), centerX, contentTop, { align: 'center' })
 
-  doc.setFont('helvetica', 'normal')
-  doc.setFontSize(labelSize === 'a5' ? 12 : 18)
+  doc.setFont('helvetica', 'bold')
+  doc.setFontSize(labelSize === 'a5' ? 13 : 20)
   const addressLines = doc.splitTextToSize(address, labelW - (labelSize === 'a5' ? 42 : 58)).slice(0, labelSize === 'a5' ? 3 : 4)
   doc.text(addressLines, centerX, contentTop + (labelSize === 'a5' ? 16 : 22), { align: 'center', lineHeightFactor: 1.18 })
 
-  doc.setFontSize(labelSize === 'a5' ? 11 : 16)
-  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.48 : 0.45), { align: 'center' })
+  doc.setFont('helvetica', 'bold')
+  doc.setFontSize(labelSize === 'a5' ? 12.5 : 18)
+  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.50 : 0.49), { align: 'center' })
 
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 20 : 28) : (machineName.length > 42 ? 27 : 36))
@@ -205,6 +206,6 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   doc.line(x + 8, footerY - (labelSize === 'a5' ? 8 : 12), x + w - 8, footerY - (labelSize === 'a5' ? 8 : 12))
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(labelSize === 'a5' ? 11 : 15)
-  doc.text('From: Bengal Shoe Machinery Pvt. Ltd.', x + 10, footerY)
+  doc.text('From: Build Scale Manufacture Pvt. Ltd.', x + 10, footerY)
   doc.text('+91 9560603252', x + w - 10, footerY, { align: 'right' })
 }

@@ -375,10 +375,10 @@ input:focus, select:focus, textarea:focus { border-color: rgba(200,16,46,.55); b
 .unit-label-preview.a5-preview .unit-count { font-size: clamp(30px, 3.2vw, 44px); }
 .unit-label-preview.a5-preview .unit-from { padding-top: 6px; font-size: clamp(10px, .9vw, 13px); }
 .unit-to { font-size: clamp(14px, 1.4vw, 22px); padding-top: 4px; }
-.unit-label-body { min-width: 0; display: grid; align-content: center; justify-items: center; text-align: center; gap: clamp(7px, .9vw, 14px); border: 2px solid #111827; border-radius: 16px; padding: clamp(12px, 1.8vw, 22px); overflow: hidden; }
+.unit-label-body { min-width: 0; display: grid; align-content: center; justify-items: center; text-align: center; gap: clamp(8px, 1vw, 16px); border: 2px solid #111827; border-radius: 16px; padding: clamp(12px, 1.8vw, 22px); overflow: hidden; }
 .unit-label-body h2 { margin: 0; font-size: clamp(24px, 3vw, 42px); line-height: 1.02; letter-spacing: -.04em; }
-.unit-label-body p { margin: 0; max-width: 700px; color: #111827; font-size: clamp(14px, 1.35vw, 21px); line-height: 1.25; font-weight: 550; }
-.unit-label-body .unit-contact { font-weight: 800; }
+.unit-label-body p { margin: 0; max-width: 730px; color: #111827; font-size: clamp(15px, 1.48vw, 23px); line-height: 1.24; font-weight: 800; }
+.unit-label-body .unit-contact { font-size: clamp(14px, 1.35vw, 21px); font-weight: 950; margin: 6px 0; }
 .unit-label-body h3 { margin: 2px 0 0; font-size: clamp(26px, 3.1vw, 44px); letter-spacing: -.035em; line-height: 1.03; }
 .unit-count { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(30px, 3.6vw, 50px); font-weight: 900; letter-spacing: 0; }
 .unit-from { width: 100%; display: flex; justify-content: space-between; gap: 14px; align-self: end; border-top: 1px solid #111827; padding-top: 8px; font-weight: 900; font-size: clamp(11px, 1vw, 15px); text-align: left; }
