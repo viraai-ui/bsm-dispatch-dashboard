@@ -26,7 +26,7 @@ export type OrderWorkflow = {
 
 type Store = { orders: Record<string, OrderWorkflow>; serialCounter?: number }
 const STORE_PATH = 'data/workflow-store.json'
-const INITIAL_SERIAL_COUNTER = 262700000
+const INITIAL_SERIAL_COUNTER = 26270758
 
 function ghConfig() {
   return {
