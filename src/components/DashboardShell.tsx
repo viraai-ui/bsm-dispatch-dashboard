@@ -40,10 +40,8 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
       <nav className="nav" aria-label="Dashboard navigation">
         {visibleNav.map((item) => <a className={item.label === active ? 'active' : ''} href={item.href} key={item.label}>{item.label}</a>)}
       </nav>
-      {visibleUtilityNav.length > 0 && <nav className="nav utility-nav" aria-label="Dashboard utilities">
-        {visibleUtilityNav.map((item) => <a className={item.label === active ? 'active' : ''} href={item.href} key={item.label}>{item.label}</a>)}
-      </nav>}
       <div className="side-user">
+        {visibleUtilityNav.map((item) => <a className={`side-utility-link ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label}>{item.label}</a>)}
         <strong>{user.name}</strong>
         <span>{user.role}</span>
         <button className="btn light" onClick={logout}>Logout</button>
