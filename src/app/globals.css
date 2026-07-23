@@ -35,10 +35,10 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .nav { display: grid; gap: 3px; min-height: 0; overflow-y: auto; padding-right: 2px; flex: 1 1 auto; align-content: start; }
 .nav a { display: flex; align-items: center; min-height: 38px; padding: 6px 14px; border-radius: 14px; color: #cbd5e1; font-weight: 750; line-height: 1.15; }
 .nav a:hover, .nav a.active { background: rgba(255,255,255,.1); color: #fff; }
-.side-user { margin-top: 10px; display: grid; gap: 5px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.12); flex: 0 0 auto; }
+.side-user { margin-top: 10px; display: grid; gap: 5px; padding-top: 0; flex: 0 0 auto; }
 .side-user span { color: #cbd5e1; font-size: 13px; font-weight: 800; }
 .side-user .btn { width: 100%; min-height: 44px; }
-.side-utility-link { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-bottom: 12px; padding: 0 12px; border-radius: 14px; background: linear-gradient(135deg, #facc15, #f59e0b); color: #111827; font-weight: 950; box-shadow: 0 14px 32px rgba(250,204,21,.18); }
+.side-utility-link { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-bottom: 12px; padding: 0 12px 12px; border-bottom: 1px solid rgba(255,255,255,.12); border-radius: 14px 14px 0 0; background: linear-gradient(135deg, #facc15, #f59e0b) top/100% 44px no-repeat; color: #111827; font-weight: 950; box-shadow: 0 14px 32px rgba(250,204,21,.18); }
 .side-utility-link:hover, .side-utility-link.active { filter: brightness(1.04); transform: translateY(-1px); }
 .dispatch-shell { display: block; }
 .dispatch-shell .main { max-width: none; padding: 0; }

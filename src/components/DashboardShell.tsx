@@ -23,7 +23,8 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const dispatchOnly = user.role === 'Dispatch'
   const mediaOnly = user.role === 'Media'
   const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof' || item.href === '/loading-video') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
-  const visibleUtilityNav = dispatchOnly || mediaOnly ? [] : utilityNav
+  const canUseUtilities = user.role === 'Admin' || user.role === 'Operations'
+  const visibleUtilityNav = canUseUtilities ? utilityNav : []
   const mobileHidden = new Set(['/packaging-tv', '/settings'])
   const mobileNav = [...visibleNav, ...visibleUtilityNav].filter((item) => !mobileHidden.has(item.href))
   const singleModule = dispatchOnly
@@ -42,8 +43,8 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
       </nav>
       <div className="side-user">
         {visibleUtilityNav.map((item) => <a className={`side-utility-link ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label}>{item.label}</a>)}
-        <strong>{user.name}</strong>
-        <span>{user.role}</span>
+        <strong>{user.name || user.role}</strong>
+        {user.name !== user.role && <span>{user.role}</span>}
         <button className="btn light" onClick={logout}>Logout</button>
       </div>
     </aside>}
