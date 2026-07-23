@@ -1,5 +1,104 @@
 {
   "orders": {
+    "1154219000034625013": {
+      "id": "1154219000034625013",
+      "zohoSalesOrderId": "1154219000034625013",
+      "salesOrderNumber": "SO-07556",
+      "status": "open",
+      "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+      "shippingAddress": "B-116, RIICO Indl. Area,, Khairthal Alwar, Rajasthan, 301404, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034625016",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034625017",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034625013-1154219000034625016-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034625013",
+          "lineItemId": "1154219000034625016",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-07556",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034625013-1154219000034625016-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034625013",
+          "lineItemId": "1154219000034625016",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-07556",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034625013-1154219000034625017-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034625013",
+          "lineItemId": "1154219000034625017",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-07556",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034624004": {
       "id": "1154219000034624004",
       "zohoSalesOrderId": "1154219000034624004",
@@ -3679,6 +3778,7 @@
     }
   },
   "orderIds": [
+    "1154219000034625013",
     "1154219000034624004",
     "1154219000034626001",
     "1154219000034623006",
@@ -3720,8 +3820,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T11:25:56.420Z",
-  "lastAttemptAt": "2026-07-23T11:48:51.689Z",
+  "lastSuccessfulSyncAt": "2026-07-23T11:49:10.807Z",
+  "lastAttemptAt": "2026-07-23T11:49:10.807Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
