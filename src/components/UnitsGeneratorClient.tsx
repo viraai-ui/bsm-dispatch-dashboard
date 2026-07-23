@@ -20,7 +20,7 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
   const sortedOrders = useMemo(() => [...orders].sort((a, b) => b.salesOrderNumber.localeCompare(a.salesOrderNumber)), [orders])
   const [salesOrderInput, setSalesOrderInput] = useState('')
   const [salesOrderOpen, setSalesOrderOpen] = useState(false)
-  const [labelSize, setLabelSize] = useState<LabelSize>('a4')
+  const [labelSize, setLabelSize] = useState<LabelSize>('a5')
   const [customerName, setCustomerName] = useState('')
   const [address, setAddress] = useState('')
   const [contact, setContact] = useState('')
@@ -181,19 +181,19 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   const contentTop = y + (labelSize === 'a5' ? 24 : 34)
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(labelSize === 'a5' ? (customerName.length > 34 ? 18 : 24) : (customerName.length > 34 ? 27 : 34))
-  doc.text(customerName.toUpperCase(), centerX, contentTop, { align: 'center' })
+  doc.text(customerName, centerX, contentTop, { align: 'center' })
 
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? 13 : 20)
+  doc.setFontSize(labelSize === 'a5' ? 13.5 : 20)
   const addressLines = doc.splitTextToSize(address, labelW - (labelSize === 'a5' ? 42 : 58)).slice(0, labelSize === 'a5' ? 3 : 4)
   doc.text(addressLines, centerX, contentTop + (labelSize === 'a5' ? 16 : 22), { align: 'center', lineHeightFactor: 1.18 })
 
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? 12.5 : 18)
-  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.50 : 0.49), { align: 'center' })
+  doc.setFontSize(labelSize === 'a5' ? 13 : 18)
+  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.51 : 0.49), { align: 'center' })
 
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 20 : 28) : (machineName.length > 42 ? 27 : 36))
+  doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 20 : 29) : (machineName.length > 42 ? 27 : 36))
   const machineLines = doc.splitTextToSize(machineName, labelW - (labelSize === 'a5' ? 48 : 66)).slice(0, 2)
   doc.text(machineLines, centerX, y + h * (labelSize === 'a5' ? 0.62 : 0.61), { align: 'center', lineHeightFactor: 1.08 })
 
