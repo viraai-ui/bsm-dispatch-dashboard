@@ -1,5 +1,62 @@
 {
   "orders": {
+    "1154219000034652001": {
+      "id": "1154219000034652001",
+      "zohoSalesOrderId": "1154219000034652001",
+      "salesOrderNumber": "SO-07557",
+      "status": "open",
+      "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
+      "shippingAddress": "1st and 2nd floor, Bldg No.173, Indian Corporation Building, Mankoli Anjur Road, Mankoli Anjur Road, Tehsil Bhiwandi, Bhiwandi, Thane, Maharashtra, 421302",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-07-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034652004",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034652005",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charge from BSM to ABC Transport",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034652001-1154219000034652004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034652001",
+          "lineItemId": "1154219000034652004",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07557",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034625013": {
       "id": "1154219000034625013",
       "zohoSalesOrderId": "1154219000034625013",
@@ -3778,6 +3835,7 @@
     }
   },
   "orderIds": [
+    "1154219000034652001",
     "1154219000034625013",
     "1154219000034624004",
     "1154219000034626001",
@@ -3820,8 +3878,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T12:16:23.674Z",
-  "lastAttemptAt": "2026-07-23T12:30:08.002Z",
+  "lastSuccessfulSyncAt": "2026-07-23T12:30:27.880Z",
+  "lastAttemptAt": "2026-07-23T12:30:27.880Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
