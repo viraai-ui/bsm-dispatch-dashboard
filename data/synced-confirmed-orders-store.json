@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034618001": {
+      "id": "1154219000034618001",
+      "zohoSalesOrderId": "1154219000034618001",
+      "salesOrderNumber": "SO-07551",
+      "status": "open",
+      "customerName": "Nitin Kumar",
+      "shippingAddress": "S/o Sohan Pal, House No.69, Block-A, Harijan Basti, Sultanpuri, North West Delhi, 110086, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034618004",
+          "itemName": "Drum type Sole Press (pneumatic)",
+          "sku": "2002",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034618001-1154219000034618004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034618001",
+          "lineItemId": "1154219000034618004",
+          "itemName": "Drum type Sole Press (pneumatic)",
+          "sku": "2002",
+          "customerName": "Nitin Kumar",
+          "salesOrderNumber": "SO-07551",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034608001": {
       "id": "1154219000034608001",
       "zohoSalesOrderId": "1154219000034608001",
@@ -37025,6 +37072,7 @@
     }
   },
   "orderIds": [
+    "1154219000034618001",
     "1154219000034608001",
     "1154219000034515022",
     "1154219000034536002",
@@ -37070,8 +37118,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T06:42:52.407Z",
-  "lastAttemptAt": "2026-07-23T06:57:32.787Z",
+  "lastSuccessfulSyncAt": "2026-07-23T06:57:54.814Z",
+  "lastAttemptAt": "2026-07-23T06:57:54.814Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
