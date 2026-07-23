@@ -2,6 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { isMachineLineItem } from '@/lib/item-classification'
+import { backupGeneratedSerialsToZohoSheet } from '@/lib/serial-sheet-backup'
 import type { Order } from '@/types/domain'
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -25,6 +26,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       return apiOk({ serials })
     }
     const now = new Date().toISOString()
+    let sheetBackup: Awaited<ReturnType<typeof backupGeneratedSerialsToZohoSheet>> | null = null
     const workflow = await upsertOrderWorkflow(id, (current) => {
       const machines = { ...(current?.machines || {}) }
       if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) {
@@ -55,7 +57,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         : current?.processedOrder
       return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, dispatchPriority: action === 'process' ? body.dispatchPriority : current?.dispatchPriority, processedAt: action === 'process' ? now : current?.processedAt, processedOrder, machines }
     })
-    return apiOk({ workflow })
+    if (action === 'generate' && order?.id && Array.isArray(body.machines)) {
+      const generatedDate = new Date().toISOString().slice(0, 10)
+      const generatedById = new Map((body.machines as MachineWorkflow[]).map((machine) => [machine.machineUnitId, machine]))
+      const generatedMachines = (order.machines || []).map((machine) => {
+        const saved = generatedById.get(machine.id)
+        return saved ? { ...machine, serialNumber: saved.serialNumber || machine.serialNumber, qrToken: saved.qrToken || machine.qrToken } : machine
+      }).filter((machine) => generatedById.has(machine.id))
+      sheetBackup = await backupGeneratedSerialsToZohoSheet(order, generatedMachines, generatedDate)
+    }
+    return apiOk({ workflow, sheetBackup })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Workflow update failed', 400)
   }
