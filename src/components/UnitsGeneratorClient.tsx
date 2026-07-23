@@ -107,7 +107,7 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
       <label><span>Total Units / Boxes</span><input inputMode="numeric" pattern="[0-9]*" value={totalUnitsInput} onChange={(event) => setTotalUnitsInput(event.target.value.replace(/[^0-9]/g, ''))} placeholder="Enter units" /></label>
       <label><span>Label Size</span><select value={labelSize} onChange={(event) => setLabelSize(event.target.value as LabelSize)}><option value="a4">A4 — 1 label per sheet</option><option value="a5">A5 — 2 labels per sheet</option></select></label>
       <label><span>Customer Name</span><input value={customerName} onChange={(event) => setCustomerName(event.target.value)} placeholder="Customer / Receiver name" /></label>
-      <label><span>Contact Number</span><input value={contact} onChange={(event) => setContact(event.target.value)} placeholder="Customer contact" /></label>
+      <label className="contact-wide"><span>Contact Number</span><input value={contact} onChange={(event) => setContact(event.target.value)} placeholder="Customer contact" /></label>
       <label className="span-2"><span>Address</span><textarea value={address} onChange={(event) => setAddress(event.target.value)} placeholder="Delivery address" rows={2} /></label>
     </div>
 
@@ -188,23 +188,23 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   const addressLines = doc.splitTextToSize(address, labelW - (labelSize === 'a5' ? 42 : 58)).slice(0, labelSize === 'a5' ? 2 : 4)
   doc.text(addressLines, centerX, contentTop + (labelSize === 'a5' ? 11 : 22), { align: 'center', lineHeightFactor: 1.18 })
 
-  doc.setFontSize(labelSize === 'a5' ? 10 : 16)
-  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.50 : 0.45), { align: 'center' })
+  doc.setFontSize(labelSize === 'a5' ? 9.5 : 16)
+  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.48 : 0.45), { align: 'center' })
 
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 15 : 19) : (machineName.length > 42 ? 27 : 36))
+  doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 14 : 18) : (machineName.length > 42 ? 27 : 36))
   const machineLines = doc.splitTextToSize(machineName, labelW - (labelSize === 'a5' ? 44 : 66)).slice(0, 2)
-  doc.text(machineLines, centerX, y + h * (labelSize === 'a5' ? 0.64 : 0.61), { align: 'center', lineHeightFactor: 1.08 })
+  doc.text(machineLines, centerX, y + h * (labelSize === 'a5' ? 0.61 : 0.61), { align: 'center', lineHeightFactor: 1.05 })
 
   doc.setFont('helvetica', 'normal')
-  doc.setFontSize(labelSize === 'a5' ? 19 : 36)
-  doc.text(`${unitIndex}/${totalUnits}`, centerX, y + h * (labelSize === 'a5' ? 0.82 : 0.79), { align: 'center' })
+  doc.setFontSize(labelSize === 'a5' ? 17 : 36)
+  doc.text(`${unitIndex}/${totalUnits}`, centerX, y + h * (labelSize === 'a5' ? 0.77 : 0.79), { align: 'center' })
 
-  const footerY = y + h - (labelSize === 'a5' ? 9 : 15)
+  const footerY = y + h - (labelSize === 'a5' ? 7 : 15)
   doc.setLineWidth(0.4)
-  doc.line(x + 8, footerY - (labelSize === 'a5' ? 7 : 12), x + w - 8, footerY - (labelSize === 'a5' ? 7 : 12))
+  doc.line(x + 8, footerY - (labelSize === 'a5' ? 6 : 12), x + w - 8, footerY - (labelSize === 'a5' ? 6 : 12))
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? 9.5 : 15)
+  doc.setFontSize(labelSize === 'a5' ? 8.5 : 15)
   doc.text('From: Bengal Shoe Machinery Pvt. Ltd.', x + 10, footerY)
   doc.text('+91 9560603252', x + w - 10, footerY, { align: 'right' })
 }
