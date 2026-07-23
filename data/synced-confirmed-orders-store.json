@@ -353,53 +353,6 @@
         }
       ]
     },
-    "1154219000034515009": {
-      "id": "1154219000034515009",
-      "zohoSalesOrderId": "1154219000034515009",
-      "salesOrderNumber": "SO-07545",
-      "status": "open",
-      "customerName": "PRACHI HANDICRAFT",
-      "shippingAddress": "GROUND FLOOR, PLOTE NO-268,KH NO-124/8, JAI VIHAR PHASE-2, B-BLOCK,GALI NO-22, Najafgarh, New Delhi, South West Delhi,, Delhi,, 110043, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034515012",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034515009-1154219000034515012-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034515009",
-          "lineItemId": "1154219000034515012",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "customerName": "PRACHI HANDICRAFT",
-          "salesOrderNumber": "SO-07545",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034547004": {
       "id": "1154219000034547004",
       "zohoSalesOrderId": "1154219000034547004",
@@ -4212,7 +4165,6 @@
     "1154219000034515022",
     "1154219000034536002",
     "1154219000034532009",
-    "1154219000034515009",
     "1154219000034547004",
     "1154219000034550003",
     "1154219000034527001",
@@ -4245,8 +4197,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T09:49:48.741Z",
-  "lastAttemptAt": "2026-07-23T10:04:31.040Z",
+  "lastSuccessfulSyncAt": "2026-07-23T10:04:46.637Z",
+  "lastAttemptAt": "2026-07-23T10:04:46.637Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
