@@ -111,7 +111,7 @@ function nextSerialSheetNumber(records: any[]) {
 function rowDate(value: string) {
   const date = value ? new Date(value) : new Date()
   const safe = Number.isNaN(date.getTime()) ? new Date() : date
-  return `${String(safe.getDate()).padStart(2, '0')}-${String(safe.getMonth() + 1).padStart(2, '0')}-${String(safe.getFullYear()).slice(-2)}`
+  return `'${String(safe.getDate()).padStart(2, '0')}-${String(safe.getMonth() + 1).padStart(2, '0')}-${String(safe.getFullYear()).slice(-2)}`
 }
 
 function buildRows(order: Order, machines: MachineUnit[], date: string, firstSNo: string): SerialSheetRecord[] {
