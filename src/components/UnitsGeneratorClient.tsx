@@ -21,6 +21,7 @@ function clampUnits(value: string) {
 export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
   const sortedOrders = useMemo(() => [...orders].sort((a, b) => b.salesOrderNumber.localeCompare(a.salesOrderNumber)), [orders])
   const [salesOrderInput, setSalesOrderInput] = useState('')
+  const [salesOrderOpen, setSalesOrderOpen] = useState(false)
   const selectedOrder = sortedOrders.find((order) => order.salesOrderNumber === salesOrderInput || order.id === salesOrderInput) || null
   const [customerName, setCustomerName] = useState('')
   const [address, setAddress] = useState('')
@@ -32,6 +33,10 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
   const [message, setMessage] = useState('')
 
   const totalUnits = clampUnits(totalUnitsInput)
+  const filteredOrders = useMemo(() => {
+    const query = salesOrderInput.trim().toLowerCase()
+    return sortedOrders.filter((order) => !query || order.salesOrderNumber.toLowerCase().includes(query) || order.customerName.toLowerCase().includes(query)).slice(0, 12)
+  }, [salesOrderInput, sortedOrders])
   const machineOptions = useMemo(() => uniqueValues(selectedOrder ? [
     ...selectedOrder.machines.map((machine) => machine.itemName),
     ...selectedOrder.lineItems.map((item) => item.itemName),
@@ -44,6 +49,7 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
 
   const handleSalesOrderInput = (value: string) => {
     setSalesOrderInput(value)
+    setSalesOrderOpen(true)
     const order = sortedOrders.find((item) => item.salesOrderNumber === value || item.id === value)
     if (!order) return
     setCustomerName(order.customerName || '')
@@ -53,6 +59,11 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
     setMachineSelect(firstMachine)
     setManualMachine('')
     setMessage('')
+  }
+
+  const chooseSalesOrder = (order: Order) => {
+    handleSalesOrderInput(order.salesOrderNumber)
+    setSalesOrderOpen(false)
   }
 
   const fillAllUnits = () => {
@@ -107,7 +118,7 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
     {message && <div className={message.includes('Downloaded') || message.includes('filled') ? 'form-success' : 'form-error'}>{message}</div>}
 
     <div className="units-form-grid">
-      <label><span>Sales Order Number</span><input list="sales-order-options" value={salesOrderInput} onChange={(event) => handleSalesOrderInput(event.target.value)} placeholder="Type or select sales order" /><datalist id="sales-order-options">{sortedOrders.map((order) => <option key={order.id} value={order.salesOrderNumber}>{order.customerName}</option>)}</datalist></label>
+      <label className="sales-order-combo"><span>Sales Order Number</span><input value={salesOrderInput} onFocus={() => setSalesOrderOpen(true)} onBlur={() => window.setTimeout(() => setSalesOrderOpen(false), 140)} onChange={(event) => handleSalesOrderInput(event.target.value)} placeholder="Type or select sales order" />{salesOrderOpen && filteredOrders.length > 0 && <div className="sales-order-dropdown">{filteredOrders.map((order) => <button type="button" key={order.id} onMouseDown={(event) => event.preventDefault()} onClick={() => chooseSalesOrder(order)}><strong>{order.salesOrderNumber}</strong><span>{order.customerName}</span></button>)}</div>}</label>
       <label><span>Total Units / Boxes</span><input inputMode="numeric" pattern="[0-9]*" value={totalUnitsInput} onChange={(event) => setTotalUnitsInput(event.target.value.replace(/[^0-9]/g, ''))} placeholder="Enter units" /></label>
       <label><span>Customer Name</span><input value={customerName} onChange={(event) => setCustomerName(event.target.value)} placeholder="Customer / Receiver name" /></label>
       <label><span>Contact Number</span><input value={contact} onChange={(event) => setContact(event.target.value)} placeholder="Customer contact" /></label>
