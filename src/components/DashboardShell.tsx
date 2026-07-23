@@ -12,6 +12,7 @@ const nav: NavItem[] = [
   { label: 'Loading Video', href: '/loading-video' },
   { label: 'Database', href: '/database' },
   { label: 'Settings', href: '/settings' },
+  { label: 'Units Generator', href: '/units-generator' },
 ]
 
 function ShellBody({ children, active }: { children: React.ReactNode; active: string }) {
