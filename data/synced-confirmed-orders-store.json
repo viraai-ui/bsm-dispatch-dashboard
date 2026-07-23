@@ -614,53 +614,6 @@
         }
       ]
     },
-    "1154219000034477001": {
-      "id": "1154219000034477001",
-      "zohoSalesOrderId": "1154219000034477001",
-      "salesOrderNumber": "SO-07530",
-      "status": "open",
-      "customerName": "GPM ENTERPRISES",
-      "shippingAddress": "1390, MIE, MIE Part B,, Bahadurgarh, Haryana,, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034477004",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034477001-1154219000034477004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034477001",
-          "lineItemId": "1154219000034477004",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "customerName": "GPM ENTERPRISES",
-          "salesOrderNumber": "SO-07530",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034263026": {
       "id": "1154219000034263026",
       "zohoSalesOrderId": "1154219000034263026",
@@ -4263,7 +4216,6 @@
     "1154219000034547004",
     "1154219000034550003",
     "1154219000034527001",
-    "1154219000034477001",
     "1154219000034263026",
     "1154219000034254047",
     "1154219000034276023",
@@ -4293,8 +4245,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T09:05:37.823Z",
-  "lastAttemptAt": "2026-07-23T09:34:30.900Z",
+  "lastSuccessfulSyncAt": "2026-07-23T09:34:48.727Z",
+  "lastAttemptAt": "2026-07-23T09:34:48.727Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
