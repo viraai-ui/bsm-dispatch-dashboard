@@ -70,12 +70,12 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
   const generatePdf = () => {
     const error = validate()
     if (error) { setMessage(error); return }
-    const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4', compress: true })
-    const pageW = 297
-    const pageH = 210
+    const doc = new jsPDF({ orientation: labelSize === 'a5' ? 'portrait' : 'landscape', unit: 'mm', format: 'a4', compress: true })
+    const pageW = labelSize === 'a5' ? 210 : 297
+    const pageH = labelSize === 'a5' ? 297 : 210
     const labelsPerPage = labelSize === 'a5' ? 2 : 1
     for (let index = 0; index < totalUnits; index += 1) {
-      if (index > 0 && index % labelsPerPage === 0) doc.addPage('a4', 'landscape')
+      if (index > 0 && index % labelsPerPage === 0) doc.addPage('a4', labelSize === 'a5' ? 'portrait' : 'landscape')
       const slot = labelSize === 'a5' ? index % 2 : 0
       drawUnitLabel(doc, {
         pageW,
@@ -148,10 +148,10 @@ type DrawLabelInput = {
 
 function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   const { pageW, pageH, labelSize, slot, customerName, address, contact, machineName, unitIndex, totalUnits } = input
-  const labelX = labelSize === 'a5' ? slot * (pageW / 2) : 0
-  const labelY = 0
-  const labelW = labelSize === 'a5' ? pageW / 2 : pageW
-  const labelH = pageH
+  const labelX = 0
+  const labelY = labelSize === 'a5' ? slot * (pageH / 2) : 0
+  const labelW = pageW
+  const labelH = labelSize === 'a5' ? pageH / 2 : pageH
   const margin = labelSize === 'a5' ? 7 : 12
   const x = labelX + margin
   const y = labelY + margin
@@ -166,7 +166,7 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   if (labelSize === 'a5' && slot === 1) {
     doc.setDrawColor(180, 180, 180)
     doc.setLineWidth(0.25)
-    doc.line(pageW / 2, 8, pageW / 2, pageH - 8)
+    doc.line(8, pageH / 2, pageW - 8, pageH / 2)
   }
 
   doc.setDrawColor(10, 10, 10)
@@ -178,38 +178,33 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   doc.setFontSize(labelSize === 'a5' ? 13 : 18)
   doc.text('To,', x + 10, y + (labelSize === 'a5' ? 12 : 22))
 
-  const contentTop = y + (labelSize === 'a5' ? 32 : 34)
+  const contentTop = y + (labelSize === 'a5' ? 24 : 34)
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? (customerName.length > 34 ? 16 : 20) : (customerName.length > 34 ? 27 : 34))
+  doc.setFontSize(labelSize === 'a5' ? (customerName.length > 34 ? 18 : 24) : (customerName.length > 34 ? 27 : 34))
   doc.text(customerName.toUpperCase(), centerX, contentTop, { align: 'center' })
 
   doc.setFont('helvetica', 'normal')
   doc.setFontSize(labelSize === 'a5' ? 12 : 18)
-  const addressLines = doc.splitTextToSize(address, labelW - (labelSize === 'a5' ? 28 : 58)).slice(0, labelSize === 'a5' ? 5 : 4)
+  const addressLines = doc.splitTextToSize(address, labelW - (labelSize === 'a5' ? 42 : 58)).slice(0, labelSize === 'a5' ? 3 : 4)
   doc.text(addressLines, centerX, contentTop + (labelSize === 'a5' ? 16 : 22), { align: 'center', lineHeightFactor: 1.18 })
 
   doc.setFontSize(labelSize === 'a5' ? 11 : 16)
-  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.43 : 0.45), { align: 'center' })
+  doc.text(`Contact: ${contact || '—'}`, centerX, y + h * (labelSize === 'a5' ? 0.48 : 0.45), { align: 'center' })
 
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 17 : 23) : (machineName.length > 42 ? 27 : 36))
-  const machineLines = doc.splitTextToSize(machineName, labelW - (labelSize === 'a5' ? 30 : 66)).slice(0, 3)
-  doc.text(machineLines, centerX, y + h * (labelSize === 'a5' ? 0.58 : 0.61), { align: 'center', lineHeightFactor: 1.08 })
+  doc.setFontSize(labelSize === 'a5' ? (machineName.length > 42 ? 20 : 28) : (machineName.length > 42 ? 27 : 36))
+  const machineLines = doc.splitTextToSize(machineName, labelW - (labelSize === 'a5' ? 48 : 66)).slice(0, 2)
+  doc.text(machineLines, centerX, y + h * (labelSize === 'a5' ? 0.62 : 0.61), { align: 'center', lineHeightFactor: 1.08 })
 
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? 24 : 38)
-  doc.text(`${unitIndex}/${totalUnits}`, centerX, y + h * (labelSize === 'a5' ? 0.76 : 0.79), { align: 'center' })
+  doc.setFontSize(labelSize === 'a5' ? 28 : 38)
+  doc.text(`${unitIndex}/${totalUnits}`, centerX, y + h * (labelSize === 'a5' ? 0.80 : 0.79), { align: 'center' })
 
-  const footerY = y + h - (labelSize === 'a5' ? 12 : 15)
+  const footerY = y + h - (labelSize === 'a5' ? 10 : 15)
   doc.setLineWidth(0.4)
-  doc.line(x + 8, footerY - (labelSize === 'a5' ? 9 : 12), x + w - 8, footerY - (labelSize === 'a5' ? 9 : 12))
+  doc.line(x + 8, footerY - (labelSize === 'a5' ? 8 : 12), x + w - 8, footerY - (labelSize === 'a5' ? 8 : 12))
   doc.setFont('helvetica', 'bold')
-  doc.setFontSize(labelSize === 'a5' ? 8.2 : 15)
-  if (labelSize === 'a5') {
-    doc.text('From: Bengal Shoe Machinery Pvt. Ltd.', centerX, footerY - 3, { align: 'center' })
-    doc.text('+91 9560603252', centerX, footerY + 5, { align: 'center' })
-  } else {
-    doc.text('From: Bengal Shoe Machinery Pvt. Ltd.', x + 10, footerY)
-    doc.text('+91 9560603252', x + w - 10, footerY, { align: 'right' })
-  }
+  doc.setFontSize(labelSize === 'a5' ? 11 : 15)
+  doc.text('From: Bengal Shoe Machinery Pvt. Ltd.', x + 10, footerY)
+  doc.text('+91 9560603252', x + w - 10, footerY, { align: 'right' })
 }
