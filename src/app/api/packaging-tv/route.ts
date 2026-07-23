@@ -2,6 +2,7 @@ import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { githubReadJson, githubWriteJson, listProcessedOrders, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { readSyncedOrdersStore } from '@/lib/synced-orders'
+import { isMachineLineItem } from '@/lib/item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
@@ -20,7 +21,8 @@ export async function GET() {
       const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId], item.machines || {})
       return { ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular' }
     })
-    .filter((order) => order.machines.length > 0)
+    .filter((order) => !completed.completed[order.id])
+    .filter((order) => order.machines.length > 0 || hasDispatchLineItems(order))
   return apiOk({ orders, completedCount: Object.keys(completed.completed).length })
 }
 
@@ -43,7 +45,8 @@ export async function POST(request: Request) {
   if (!order?.id) return Response.json({ ok: false, error: 'Missing order' }, { status: 400 })
   const completedAt = new Date().toISOString()
   const machineIds = selectedMachineIds(order, body.machineIds)
-  if (!machineIds.length) return Response.json({ ok: false, error: 'Missing machine units' }, { status: 400 })
+  const nonMachineOnlyOrder = order.machines.length === 0 && hasDispatchLineItems(order)
+  if (!machineIds.length && !nonMachineOnlyOrder) return Response.json({ ok: false, error: 'Missing machine units' }, { status: 400 })
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const existingIds = new Set(completed.completed[order.id]?.machineIds || [])
   machineIds.forEach((id) => existingIds.add(id))
@@ -62,6 +65,10 @@ function selectedMachineIds(order: Order, ids?: string[]) {
   const requested = new Set((ids || []).filter(Boolean))
   const source = requested.size ? order.machines.filter((machine) => requested.has(machine.id)) : order.machines
   return source.map((machine) => machine.id)
+}
+
+function hasDispatchLineItems(order: Order) {
+  return (order.lineItems || []).some((item) => item.dispatchCategory !== 'freight' && !isMachineLineItem(item))
 }
 
 function mergeCompletedMachines(existing: MachineUnit[] = [], next: MachineUnit[] = []) {

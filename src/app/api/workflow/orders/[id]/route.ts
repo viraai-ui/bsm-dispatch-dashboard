@@ -1,6 +1,7 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
+import { isMachineLineItem } from '@/lib/item-classification'
 import type { Order } from '@/types/domain'
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -38,7 +39,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       else if (generated > 0) status = 'partially_generated'
       if (action === 'process') {
         const selected = selectedMachines(order, body.selectedMachineIds)
-        if (!selected.length) throw new Error('Please select at least one machine to process')
+        const nonMachineOnlyOrder = order.machines.length === 0 && (order.lineItems || []).some((item) => item.dispatchCategory !== 'freight' && !isMachineLineItem(item))
+        if (!selected.length && !nonMachineOnlyOrder) throw new Error('Please select at least one machine to process')
         const alreadyLocked = selected.filter((machine) => machines[machine.id]?.processedAt || machines[machine.id]?.dispatchedAt)
         if (alreadyLocked.length) throw new Error(`Already processed: ${alreadyLocked.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         const incomplete = selected.filter((machine) => !['generated', 'not_required'].includes(machines[machine.id]?.qrStatus || 'pending'))

@@ -91,7 +91,10 @@ export async function listWorkflows() {
 
 export async function listProcessedOrders() {
   const { store } = await readStoreWithSha()
-  return Object.values(store.orders).filter((order) => Object.values(order.machines || {}).some((machine) => machine.processedAt && !machine.dispatchedAt))
+  return Object.values(store.orders).filter((order) => {
+    const machines = Object.values(order.machines || {})
+    return machines.some((machine) => machine.processedAt && !machine.dispatchedAt) || (order.status === 'processed' && order.processedOrder && machines.length === 0)
+  })
 }
 
 export async function upsertOrderWorkflow(orderId: string, updater: (current: OrderWorkflow | null, store: Store) => OrderWorkflow) {

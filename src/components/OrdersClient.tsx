@@ -141,6 +141,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const [dispatchNotes, setDispatchNotes] = useState<Record<string, string>>({})
   const [message, setMessage] = useState('')
   const selectableMachines = machines.filter((machine) => !isLockedMachine(machine))
+  const nonMachineOnlyOrder = machines.length === 0 && order.lineItems.some((item) => item.dispatchCategory !== 'freight')
   const allSelectableSelected = selectableMachines.length > 0 && selectableMachines.every((machine) => selected.has(machine.id))
   const toggle = (id: string) => setSelected((prev) => {
     if (isLockedMachine(machines.find((machine) => machine.id === id))) return prev
@@ -202,15 +203,16 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   }
 
   const proceedWithoutQr = async () => {
-    if (!selectedCount) { setMessage('Please select at least one machine.'); return }
-    if (!window.confirm(`Proceed without QR & Serial and move ${selectedCount} selected machine${selectedCount === 1 ? '' : 's'} to Dispatch View?`)) return
+    if (!selectedCount && !nonMachineOnlyOrder) { setMessage('Please select at least one machine.'); return }
+    const targetLabel = nonMachineOnlyOrder ? 'this non-machine order' : `${selectedCount} selected machine${selectedCount === 1 ? '' : 's'}`
+    if (!window.confirm(`Proceed without QR & Serial and move ${targetLabel} to Dispatch View?`)) return
     await saveWorkflow(order.id, { action: 'not_required', order: { ...order, machines }, selectedMachineIds: [...selected] })
     const updated = machines.map((machine) => selected.has(machine.id) ? { ...machine, status: 'QR Printed' as const } : machine)
     await saveWorkflow(order.id, { action: 'process', order: { ...order, machines: updated }, selectedMachineIds: [...selected], dispatchPriority: 'regular' })
     setMachines(updated.map((machine) => selected.has(machine.id) ? { ...machine, status: 'Processed' as const } : machine))
     setSelected(new Set())
     setProcessed(false)
-    setMessage(`Selected machine${selectedCount === 1 ? '' : 's'} moved to Regular Dispatch without QR & Serial.`)
+    setMessage(`${nonMachineOnlyOrder ? 'Order' : `Selected machine${selectedCount === 1 ? '' : 's'}`} moved to Regular Dispatch without QR & Serial.`)
   }
 
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
