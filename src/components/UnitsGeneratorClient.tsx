@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { jsPDF } from 'jspdf'
 import type { Order } from '@/types/domain'
 
@@ -12,28 +12,39 @@ function uniqueValues(values: string[]) {
   return Array.from(new Set(values.map((value) => value.trim()).filter(Boolean)))
 }
 
+function clampUnits(value: string) {
+  const parsed = Number(value)
+  if (!Number.isFinite(parsed)) return 0
+  return Math.max(0, Math.min(200, Math.floor(parsed)))
+}
+
 export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
   const sortedOrders = useMemo(() => [...orders].sort((a, b) => b.salesOrderNumber.localeCompare(a.salesOrderNumber)), [orders])
-  const [orderId, setOrderId] = useState('')
-  const selectedOrder = sortedOrders.find((order) => order.id === orderId) || null
+  const [salesOrderInput, setSalesOrderInput] = useState('')
+  const selectedOrder = sortedOrders.find((order) => order.salesOrderNumber === salesOrderInput || order.id === salesOrderInput) || null
   const [customerName, setCustomerName] = useState('')
   const [address, setAddress] = useState('')
   const [contact, setContact] = useState('')
   const [machineSelect, setMachineSelect] = useState('')
   const [manualMachine, setManualMachine] = useState('')
-  const [totalUnits, setTotalUnits] = useState(1)
+  const [totalUnitsInput, setTotalUnitsInput] = useState('1')
+  const [unitMachines, setUnitMachines] = useState<string[]>([''])
   const [message, setMessage] = useState('')
 
+  const totalUnits = clampUnits(totalUnitsInput)
   const machineOptions = useMemo(() => uniqueValues(selectedOrder ? [
     ...selectedOrder.machines.map((machine) => machine.itemName),
     ...selectedOrder.lineItems.map((item) => item.itemName),
   ] : []), [selectedOrder])
+  const defaultMachineName = manualMachine.trim() || machineSelect.trim()
 
-  const machineName = manualMachine.trim() || machineSelect.trim()
+  useEffect(() => {
+    setUnitMachines((prev) => Array.from({ length: Math.max(0, totalUnits) }, (_, index) => prev[index] || defaultMachineName || ''))
+  }, [totalUnits, defaultMachineName])
 
-  const handleOrderChange = (nextId: string) => {
-    setOrderId(nextId)
-    const order = sortedOrders.find((item) => item.id === nextId)
+  const handleSalesOrderInput = (value: string) => {
+    setSalesOrderInput(value)
+    const order = sortedOrders.find((item) => item.salesOrderNumber === value || item.id === value)
     if (!order) return
     setCustomerName(order.customerName || '')
     setAddress(order.shippingAddress || '')
@@ -44,12 +55,23 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
     setMessage('')
   }
 
+  const fillAllUnits = () => {
+    const name = defaultMachineName
+    if (!name) { setMessage('Select or type a machine/item first.'); return }
+    setUnitMachines(Array.from({ length: totalUnits }, () => name))
+    setMessage('Machine/item filled for all units.')
+  }
+
+  const updateUnitMachine = (index: number, value: string) => {
+    setUnitMachines((prev) => prev.map((item, itemIndex) => itemIndex === index ? value : item))
+  }
+
   const validate = () => {
     if (!customerName.trim()) return 'Customer name is required.'
     if (!address.trim()) return 'Address is required.'
-    if (!machineName) return 'Select a machine/item or write it manually.'
-    if (!Number.isFinite(totalUnits) || totalUnits < 1) return 'Total units must be at least 1.'
+    if (totalUnits < 1) return 'Total units must be at least 1.'
     if (totalUnits > 200) return 'Please keep one PDF batch under 200 units.'
+    if (unitMachines.some((name) => !name.trim())) return 'Machine/item name is required for every unit.'
     return ''
   }
 
@@ -67,49 +89,47 @@ export function UnitsGeneratorClient({ orders }: { orders: Order[] }) {
         customerName: customerName.trim(),
         address: address.trim(),
         contact: contact.trim(),
-        machineName,
+        machineName: unitMachines[index - 1].trim(),
         unitIndex: index,
         totalUnits,
       })
     }
-    doc.save(`${safeFileName(selectedOrder?.salesOrderNumber || customerName)}-units-${totalUnits}.pdf`)
-    setMessage(`Generated ${totalUnits} A4 landscape page${totalUnits === 1 ? '' : 's'}.`)
+    doc.save(`${safeFileName(salesOrderInput || customerName)}-units-${totalUnits}.pdf`)
+    setMessage(`Downloaded ${totalUnits} A4 landscape page${totalUnits === 1 ? '' : 's'}.`)
   }
 
   return <section className="units-generator card">
     <div className="units-generator-head">
-      <div>
-        <span className="eyebrow">Transport labels</span>
-        <h1 className="h1">Units Generator</h1>
-        <p className="muted">Create numbered A4 landscape stickers for cartons, boxes and transport units.</p>
-      </div>
-      <button className="btn red" type="button" onClick={generatePdf}>Generate PDF</button>
+      <div><h1 className="h1">Units Generator</h1></div>
+      <button className="btn red units-primary-action" type="button" onClick={generatePdf}>Generate / Download PDF</button>
     </div>
 
-    {message && <div className={message.includes('Generated') ? 'form-success' : 'form-error'}>{message}</div>}
+    {message && <div className={message.includes('Downloaded') || message.includes('filled') ? 'form-success' : 'form-error'}>{message}</div>}
 
     <div className="units-form-grid">
-      <label><span>Sales Order Number</span><select value={orderId} onChange={(event) => handleOrderChange(event.target.value)}><option value="">Manual / Select Sales Order</option>{sortedOrders.map((order) => <option key={order.id} value={order.id}>{order.salesOrderNumber} — {order.customerName}</option>)}</select></label>
-      <label><span>Total Units / Boxes</span><input type="number" min="1" max="200" value={totalUnits} onChange={(event) => setTotalUnits(Math.max(1, Number(event.target.value || 1)))} /></label>
+      <label><span>Sales Order Number</span><input list="sales-order-options" value={salesOrderInput} onChange={(event) => handleSalesOrderInput(event.target.value)} placeholder="Type or select sales order" /><datalist id="sales-order-options">{sortedOrders.map((order) => <option key={order.id} value={order.salesOrderNumber}>{order.customerName}</option>)}</datalist></label>
+      <label><span>Total Units / Boxes</span><input inputMode="numeric" pattern="[0-9]*" value={totalUnitsInput} onChange={(event) => setTotalUnitsInput(event.target.value.replace(/[^0-9]/g, ''))} placeholder="Enter units" /></label>
       <label><span>Customer Name</span><input value={customerName} onChange={(event) => setCustomerName(event.target.value)} placeholder="Customer / Receiver name" /></label>
       <label><span>Contact Number</span><input value={contact} onChange={(event) => setContact(event.target.value)} placeholder="Customer contact" /></label>
-      <label className="span-2"><span>Address</span><textarea value={address} onChange={(event) => setAddress(event.target.value)} placeholder="Delivery address" rows={3} /></label>
+      <label className="span-2"><span>Address</span><textarea value={address} onChange={(event) => setAddress(event.target.value)} placeholder="Delivery address" rows={2} /></label>
       <label><span>Machine / Item Dropdown</span><select value={machineSelect} onChange={(event) => setMachineSelect(event.target.value)}><option value="">Select machine/item</option>{machineOptions.map((name) => <option key={name} value={name}>{name}</option>)}</select></label>
-      <label><span>Manual Machine / Item</span><input value={manualMachine} onChange={(event) => setManualMachine(event.target.value)} placeholder="Optional manual override" /></label>
+      <label><span>Manual Machine / Item</span><input value={manualMachine} onChange={(event) => setManualMachine(event.target.value)} placeholder="Manual machine/item" /></label>
+    </div>
+
+    <div className="units-table-head"><h2>Unit Level Machine Names</h2><button className="btn light" type="button" onClick={fillAllUnits}>Fill all units</button></div>
+    <div className="units-table-wrap">
+      <table className="units-table"><thead><tr><th>Unit</th><th>Machine / Item Name</th></tr></thead><tbody>{unitMachines.map((name, index) => <tr key={index}><td>{index + 1}/{Math.max(1, totalUnits)}</td><td><input value={name} onChange={(event) => updateUnitMachine(index, event.target.value)} placeholder={`Machine/item for unit ${index + 1}`} /></td></tr>)}</tbody></table>
     </div>
 
     <div className="units-preview-wrap">
-      <div className="units-preview-label">
-        <span>Preview</span>
-        <strong>{Math.max(1, totalUnits) ? `1/${Math.max(1, totalUnits)}` : '1/1'}</strong>
-      </div>
+      <div className="units-preview-label"><span>Preview</span><strong>1/{Math.max(1, totalUnits)}</strong></div>
       <div className="unit-label-preview">
         <div className="unit-to">To,</div>
         <div className="unit-label-body">
           <h2>{customerName || 'CUSTOMER NAME'}</h2>
           <p>{address || 'Customer address will appear here'}</p>
           <p className="unit-contact">Contact: {contact || '—'}</p>
-          <h3>{machineName || 'Machine / Item Name'}</h3>
+          <h3>{unitMachines[0] || defaultMachineName || 'Machine / Item Name'}</h3>
           <div className="unit-count">1/{Math.max(1, totalUnits)}</div>
           <div className="unit-from"><span>From: Bengal Shoe Machinery Pvt. Ltd.</span><strong>+91 9560603252</strong></div>
         </div>
@@ -159,6 +179,7 @@ function drawUnitLabel(doc: jsPDF, input: DrawLabelInput) {
   const machineLines = doc.splitTextToSize(machineName, pageW - 70).slice(0, 2)
   doc.text(machineLines, pageW / 2, 120, { align: 'center', lineHeightFactor: 1.15 })
 
+  doc.setFont('helvetica', 'normal')
   doc.setFontSize(34)
   doc.text(`${unitIndex}/${totalUnits}`, pageW / 2, 158, { align: 'center' })
 
