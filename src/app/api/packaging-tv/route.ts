@@ -29,6 +29,7 @@ export async function POST(request: Request) {
   if (!auth.ok) return auth.response
   const body = await request.json()
   if (body.action === 'priority') {
+    if (auth.user.role !== 'Admin' && auth.user.role !== 'Operations') return Response.json({ ok: false, error: 'Only Admin and Operations can move orders between dispatch columns' }, { status: 403 })
     const orderId = String(body.orderId || '')
     const priority = body.priority === 'urgent' ? 'urgent' : body.priority === 'regular' ? 'regular' : ''
     if (!orderId || !priority) return Response.json({ ok: false, error: 'Missing priority update' }, { status: 400 })
