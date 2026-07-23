@@ -252,8 +252,16 @@ export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
     return !excludedStatuses.has(status)
   })
   if (summaries.length > 0 && confirmed.length === 0) throw new Error('Zoho confirmed-order view returned no usable sales orders')
+  return fetchZohoOrderDetailsInBatches(confirmed.map((summary) => String(summary.salesorder_id)), token)
+}
+
+async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 8): Promise<Order[]> {
   const detailed: Order[] = []
-  for (const summary of confirmed) detailed.push(await fetchZohoOrderDetailWithToken(String(summary.salesorder_id), token))
+  for (let index = 0; index < ids.length; index += batchSize) {
+    const batch = ids.slice(index, index + batchSize)
+    const orders = await Promise.all(batch.map((id) => fetchZohoOrderDetailWithToken(id, token)))
+    detailed.push(...orders)
+  }
   return detailed
 }
 

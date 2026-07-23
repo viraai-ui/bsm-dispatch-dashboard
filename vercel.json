@@ -4,6 +4,10 @@
   "installCommand": "npm install",
   "crons": [
     {
+      "path": "/api/cron/sync-orders",
+      "schedule": "*/20 * * * *"
+    },
+    {
       "path": "/api/media-proof/cleanup",
       "schedule": "0 2 * * *"
     }
