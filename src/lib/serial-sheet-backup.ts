@@ -1,5 +1,4 @@
 import type { MachineUnit, Order } from '@/types/domain'
-import { getZohoAccessToken } from './zoho'
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
@@ -17,6 +16,9 @@ type SerialSheetRecord = {
 
 type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[] }
 
+let cachedSheetAccessToken: { token: string; expiresAt: number } | null = null
+let pendingSheetAccessToken: Promise<string> | null = null
+
 function sheetDomain() {
   const dc = process.env.ZOHO_DC || 'in'
   return process.env.ZOHO_SHEET_API_DOMAIN || `https://sheet.zoho.${dc}`
@@ -30,12 +32,42 @@ function sheetConfig() {
 }
 
 function serialSheetConfigured() {
-  return process.env.ZOHO_SERIAL_SHEET_ENABLED === 'true' && Boolean(process.env.ZOHO_CLIENT_ID && process.env.ZOHO_CLIENT_SECRET && process.env.ZOHO_REFRESH_TOKEN)
+  return process.env.ZOHO_SERIAL_SHEET_ENABLED === 'true' && Boolean(sheetClientId() && sheetClientSecret() && sheetRefreshToken())
+}
+
+function accountsDomain() {
+  const dc = process.env.ZOHO_DC || 'in'
+  return `https://accounts.zoho.${dc}`
+}
+
+function sheetClientId() { return process.env.ZOHO_SERIAL_SHEET_CLIENT_ID || process.env.ZOHO_CLIENT_ID || '' }
+function sheetClientSecret() { return process.env.ZOHO_SERIAL_SHEET_CLIENT_SECRET || process.env.ZOHO_CLIENT_SECRET || '' }
+function sheetRefreshToken() { return process.env.ZOHO_SERIAL_SHEET_REFRESH_TOKEN || '' }
+
+async function getSheetAccessToken() {
+  if (cachedSheetAccessToken && cachedSheetAccessToken.expiresAt > Date.now() + 60_000) return cachedSheetAccessToken.token
+  if (pendingSheetAccessToken) return pendingSheetAccessToken
+  pendingSheetAccessToken = refreshSheetAccessToken().finally(() => { pendingSheetAccessToken = null })
+  return pendingSheetAccessToken
+}
+
+async function refreshSheetAccessToken() {
+  const body = new URLSearchParams({
+    refresh_token: sheetRefreshToken(),
+    client_id: sheetClientId(),
+    client_secret: sheetClientSecret(),
+    grant_type: 'refresh_token',
+  })
+  const response = await fetch(`${accountsDomain()}/oauth/v2/token`, { method: 'POST', body, cache: 'no-store' })
+  const data = await response.json()
+  if (!response.ok || !data.access_token) throw new Error(data.error || 'Unable to refresh Zoho Sheet token')
+  cachedSheetAccessToken = { token: data.access_token as string, expiresAt: Date.now() + Number(data.expires_in || 3600) * 1000 }
+  return cachedSheetAccessToken.token
 }
 
 async function sheetPost(params: Record<string, string>) {
   const { resourceId } = sheetConfig()
-  const token = await getZohoAccessToken()
+  const token = await getSheetAccessToken()
   const response = await fetch(`${sheetDomain()}/api/v2/${resourceId}`, {
     method: 'POST',
     headers: { Authorization: `Zoho-oauthtoken ${token}`, 'content-type': 'application/x-www-form-urlencoded' },
