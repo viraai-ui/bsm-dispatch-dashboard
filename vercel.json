@@ -8,6 +8,10 @@
       "schedule": "*/20 * * * *"
     },
     {
+      "path": "/api/cron/sync-serial-sheet",
+      "schedule": "*/15 * * * *"
+    },
+    {
       "path": "/api/media-proof/cleanup",
       "schedule": "0 2 * * *"
     }

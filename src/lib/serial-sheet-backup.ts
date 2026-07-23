@@ -1,4 +1,5 @@
 import type { MachineUnit, Order } from '@/types/domain'
+import { githubReadJson, listWorkflows } from './workflow-store'
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
@@ -81,9 +82,20 @@ async function sheetPost(params: Record<string, string>) {
   return data
 }
 
+async function sheetPostWithRetry(params: Record<string, string>, retries = 3) {
+  let lastError: unknown
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try { return await sheetPost(params) } catch (error) {
+      lastError = error
+      if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, attempt * 1200))
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error('Zoho Sheet request failed')
+}
+
 async function fetchSerialRecords() {
   const { worksheetName } = sheetConfig()
-  const data = await sheetPost({ method: 'worksheet.records.fetch', worksheet_name: worksheetName })
+  const data = await sheetPostWithRetry({ method: 'worksheet.records.fetch', worksheet_name: worksheetName })
   return Array.isArray(data.records) ? data.records : Array.isArray(data.data) ? data.data : []
 }
 
@@ -119,7 +131,7 @@ function buildRows(order: Order, machines: MachineUnit[], date: string, firstSNo
 async function appendSerialRows(rows: SerialSheetRecord[]) {
   if (!rows.length) return
   const { worksheetName } = sheetConfig()
-  await sheetPost({
+  await sheetPostWithRetry({
     method: 'worksheet.jsondata.append',
     worksheet_name: worksheetName,
     json_data: JSON.stringify(rows),
@@ -142,6 +154,39 @@ export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: 
     return result
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet backup failed')
+    return result
+  }
+}
+
+export async function syncMissingGeneratedSerialsToZohoSheet(minSerial = 26270758): Promise<BackupResult> {
+  const result: BackupResult = { synced: 0, skipped: 0, configured: serialSheetConfigured(), errors: [] }
+  if (!result.configured) return result
+  try {
+    const workflows = await listWorkflows()
+    const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
+    for (const workflow of Object.values(workflows)) {
+      const order = workflow.processedOrder || synced.data.orders?.[workflow.salesOrderId]
+      if (!order) continue
+      const orderMachinesById = new Map((order.machines || []).map((machine) => [machine.id, machine]))
+      const machines: MachineUnit[] = []
+      let generatedAt = new Date().toISOString().slice(0, 10)
+      for (const machineWorkflow of Object.values(workflow.machines || {})) {
+        const serial = Number(machineWorkflow.serialNumber || 0)
+        if (!serial || serial <= minSerial) continue
+        const orderMachine = orderMachinesById.get(machineWorkflow.machineUnitId)
+        if (!orderMachine) continue
+        generatedAt = machineWorkflow.qrGeneratedAt || generatedAt
+        machines.push({ ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) })
+      }
+      if (!machines.length) continue
+      const backup = await backupGeneratedSerialsToZohoSheet(order, machines, generatedAt)
+      result.synced += backup.synced
+      result.skipped += backup.skipped
+      result.errors.push(...backup.errors)
+    }
+    return result
+  } catch (error) {
+    result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet serial sync failed')
     return result
   }
 }
