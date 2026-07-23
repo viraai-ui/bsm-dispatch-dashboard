@@ -379,31 +379,6 @@
         }
       ]
     },
-    "1154219000034540002": {
-      "id": "1154219000034540002",
-      "zohoSalesOrderId": "1154219000034540002",
-      "salesOrderNumber": "SO-07542",
-      "status": "open",
-      "customerName": "STAR GLOBAL",
-      "shippingAddress": "PHASE 6, PLOT NO 117, UDYOG VIHAR, SECTOR\n37, GURGAON, HARYANA-122004",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034540005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 100,
-          "pendingQuantity": 100,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000034550003": {
       "id": "1154219000034550003",
       "zohoSalesOrderId": "1154219000034550003",
@@ -4435,7 +4410,6 @@
     "1154219000034532009",
     "1154219000034515009",
     "1154219000034547004",
-    "1154219000034540002",
     "1154219000034550003",
     "1154219000034527001",
     "1154219000034477001",
@@ -4470,8 +4444,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T07:59:29.772Z",
-  "lastAttemptAt": "2026-07-23T08:10:09.714Z",
+  "lastSuccessfulSyncAt": "2026-07-23T08:10:28.132Z",
+  "lastAttemptAt": "2026-07-23T08:10:28.132Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
