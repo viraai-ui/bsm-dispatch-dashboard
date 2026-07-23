@@ -1,5 +1,149 @@
 {
   "orders": {
+    "1154219000034608001": {
+      "id": "1154219000034608001",
+      "zohoSalesOrderId": "1154219000034608001",
+      "salesOrderNumber": "SO-07550",
+      "status": "open",
+      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034608004",
+          "itemName": "ROLLER PRESSING MACHINE",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034608001-1154219000034608004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034608001",
+          "lineItemId": "1154219000034608004",
+          "itemName": "ROLLER PRESSING MACHINE",
+          "sku": "",
+          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+          "salesOrderNumber": "SO-07550",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034579003": {
+      "id": "1154219000034579003",
+      "zohoSalesOrderId": "1154219000034579003",
+      "salesOrderNumber": "SO-07549",
+      "status": "open",
+      "customerName": "KPL LEARNING ASSOCIATES",
+      "shippingAddress": "2ND, SS-18, Aditya Mega Mall, CBD GROUND,, KARKARDOOMA , COURT, New Delhi,, Shahdara, Delhi, 110032, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034579006",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000034515022": {
+      "id": "1154219000034515022",
+      "zohoSalesOrderId": "1154219000034515022",
+      "salesOrderNumber": "SO-07548",
+      "status": "open",
+      "customerName": "THE PURPLETREE",
+      "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi,, Delhi,, Delhi, 110092, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034515025",
+          "itemName": "Single Needle High Post Bed (Direct Drive)",
+          "sku": "8365D",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034515022-1154219000034515025-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034515022",
+          "lineItemId": "1154219000034515025",
+          "itemName": "Single Needle High Post Bed (Direct Drive)",
+          "sku": "8365D",
+          "customerName": "THE PURPLETREE",
+          "salesOrderNumber": "SO-07548",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034536002": {
+      "id": "1154219000034536002",
+      "zohoSalesOrderId": "1154219000034536002",
+      "salesOrderNumber": "SO-07547",
+      "status": "open",
+      "customerName": "SHASHWAT HERBAL",
+      "shippingAddress": "B/H ADIT CAMPUS, 409 1 2, NEW V V NAGAR GANA ROAD, GANA ROAD BIOTECH COLLEGE, ANAND, Gujarat, 388120, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034536005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000034532009": {
       "id": "1154219000034532009",
       "zohoSalesOrderId": "1154219000034532009",
@@ -37426,6 +37570,10 @@
     }
   },
   "orderIds": [
+    "1154219000034608001",
+    "1154219000034579003",
+    "1154219000034515022",
+    "1154219000034536002",
     "1154219000034532009",
     "1154219000034515009",
     "1154219000034537002",
@@ -37474,8 +37622,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-22T13:07:06.150Z",
-  "lastAttemptAt": "2026-07-23T05:56:26.432Z",
+  "lastSuccessfulSyncAt": "2026-07-23T05:57:34.858Z",
+  "lastAttemptAt": "2026-07-23T05:57:34.858Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
