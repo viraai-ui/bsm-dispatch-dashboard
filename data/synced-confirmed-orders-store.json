@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000034626001": {
+      "id": "1154219000034626001",
+      "zohoSalesOrderId": "1154219000034626001",
+      "salesOrderNumber": "SO-07554",
+      "status": "open",
+      "customerName": "LAKSHMI FOOTWEAR",
+      "shippingAddress": "Ground Floor, 1st, 2nd, 3rd, and 4th Floors, 1-26, PALAGANI STREET, AMBAPURAM PANCHAYATI, Inner Ring Road, Prasada Raju Builders,, Vijayawada, NTR, Andhra Pradesh, 520012, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034626004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034626001-1154219000034626004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034626001",
+          "lineItemId": "1154219000034626004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "LAKSHMI FOOTWEAR",
+          "salesOrderNumber": "SO-07554",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034626001-1154219000034626004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034626001",
+          "lineItemId": "1154219000034626004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "LAKSHMI FOOTWEAR",
+          "salesOrderNumber": "SO-07554",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034623006": {
       "id": "1154219000034623006",
       "zohoSalesOrderId": "1154219000034623006",
@@ -590,224 +658,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034476001": {
-      "id": "1154219000034476001",
-      "zohoSalesOrderId": "1154219000034476001",
-      "salesOrderNumber": "SO-07529",
-      "status": "open",
-      "customerName": "RADHA KRISHNA POLYMERS (MIE PART B)",
-      "shippingAddress": "Plot No. 2085, M.I.E. Part-B Old State Bank Road, Bahadurgarh., Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034476004",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "description": "with folder 28mm",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034476001-1154219000034476004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034476001",
-          "lineItemId": "1154219000034476004",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "customerName": "RADHA KRISHNA POLYMERS (MIE PART B)",
-          "salesOrderNumber": "SO-07529",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "with folder 28mm"
-        }
-      ]
-    },
-    "1154219000034273023": {
-      "id": "1154219000034273023",
-      "zohoSalesOrderId": "1154219000034273023",
-      "salesOrderNumber": "SO-07516",
-      "status": "open",
-      "customerName": "Dilip Kumar (URP)",
-      "shippingAddress": "Ramjee Chak, post bataganj, Dinapur-Cum- Khagaul, Patna, Bataganj, Bihar - 800018",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034273026",
-          "itemName": "Round Blade Edge trimming Machine (5 %)",
-          "sku": "902 (5%)",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034461080",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Round Blade for Trimming Machine",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034461081",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Straight Blade for Trimming Machine",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034461082",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Belt for Trimming Machine",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034461083",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "local Transportation Charge from BSM to Bokaro Transport (Mangolpuri)",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034273023-1154219000034273026-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034273023",
-          "lineItemId": "1154219000034273026",
-          "itemName": "Round Blade Edge trimming Machine (5 %)",
-          "sku": "902 (5%)",
-          "customerName": "Dilip Kumar (URP)",
-          "salesOrderNumber": "SO-07516",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034273023-1154219000034461080-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034273023",
-          "lineItemId": "1154219000034461080",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Dilip Kumar (URP)",
-          "salesOrderNumber": "SO-07516",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Round Blade for Trimming Machine"
-        },
-        {
-          "id": "1154219000034273023-1154219000034461080-2",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034273023",
-          "lineItemId": "1154219000034461080",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Dilip Kumar (URP)",
-          "salesOrderNumber": "SO-07516",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Round Blade for Trimming Machine"
-        },
-        {
-          "id": "1154219000034273023-1154219000034461081-1",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034273023",
-          "lineItemId": "1154219000034461081",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Dilip Kumar (URP)",
-          "salesOrderNumber": "SO-07516",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Straight Blade for Trimming Machine"
-        },
-        {
-          "id": "1154219000034273023-1154219000034461082-1",
-          "unitNumber": 5,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034273023",
-          "lineItemId": "1154219000034461082",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Dilip Kumar (URP)",
-          "salesOrderNumber": "SO-07516",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Belt for Trimming Machine"
         }
       ]
     },
@@ -4401,6 +4251,7 @@
     }
   },
   "orderIds": [
+    "1154219000034626001",
     "1154219000034623006",
     "1154219000034619002",
     "1154219000034618001",
@@ -4413,8 +4264,6 @@
     "1154219000034550003",
     "1154219000034527001",
     "1154219000034477001",
-    "1154219000034476001",
-    "1154219000034273023",
     "1154219000034263026",
     "1154219000034254047",
     "1154219000034276023",
@@ -4444,8 +4293,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T08:14:29.771Z",
-  "lastAttemptAt": "2026-07-23T08:29:50.819Z",
+  "lastSuccessfulSyncAt": "2026-07-23T08:30:09.181Z",
+  "lastAttemptAt": "2026-07-23T08:30:09.181Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
