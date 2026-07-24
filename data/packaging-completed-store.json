@@ -223,6 +223,62 @@
       "machineIds": [
         "1154219000034515009-1154219000034515012-1"
       ]
+    },
+    "1154219000034643003": {
+      "completedAt": "2026-07-24T08:24:37.266Z",
+      "order": {
+        "id": "1154219000034643003",
+        "zohoSalesOrderId": "1154219000034643003",
+        "salesOrderNumber": "SO-07559",
+        "status": "open",
+        "customerName": "JAI SHRI MAHAVIR CHEM POLYMERS PVT LTD",
+        "shippingAddress": "T4/45 MANGOLPURI INDUSTRIAL AREA PHASE-1,North West Delhi, Delhi, 110083",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-23",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034643006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034643003-1154219000034643006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270775",
+            "qrToken": "26270775",
+            "orderId": "1154219000034643003",
+            "lineItemId": "1154219000034643006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "JAI SHRI MAHAVIR CHEM POLYMERS PVT LTD",
+            "salesOrderNumber": "SO-07559",
+            "deliveryDate": "2026-07-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034643003-1154219000034643006-1"
+      ]
     }
   }
 }
