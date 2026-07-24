@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034703020": {
+      "id": "1154219000034703020",
+      "zohoSalesOrderId": "1154219000034703020",
+      "salesOrderNumber": "SO-07566",
+      "status": "open",
+      "customerName": "Vivek Gupta (URP)",
+      "shippingAddress": "Plot No.732, MIE Part-A, Bahadurgarh, Haryana, 124507",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034703023",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "String Lasting Machine",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034703020-1154219000034703023-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034703020",
+          "lineItemId": "1154219000034703023",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "Vivek Gupta (URP)",
+          "salesOrderNumber": "SO-07566",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "String Lasting Machine"
+        }
+      ]
+    },
     "1154219000034693002": {
       "id": "1154219000034693002",
       "zohoSalesOrderId": "1154219000034693002",
@@ -735,95 +782,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034550003": {
-      "id": "1154219000034550003",
-      "zohoSalesOrderId": "1154219000034550003",
-      "salesOrderNumber": "SO-07540",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034550006",
-          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
-          "sku": "103",
-          "description": "",
-          "quantity": 3,
-          "pendingQuantity": 3,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034550003-1154219000034550006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034550003",
-          "lineItemId": "1154219000034550006",
-          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
-          "sku": "103",
-          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-          "salesOrderNumber": "SO-07540",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034550003-1154219000034550006-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034550003",
-          "lineItemId": "1154219000034550006",
-          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
-          "sku": "103",
-          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-          "salesOrderNumber": "SO-07540",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034550003-1154219000034550006-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034550003",
-          "lineItemId": "1154219000034550006",
-          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
-          "sku": "103",
-          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-          "salesOrderNumber": "SO-07540",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -3631,6 +3589,7 @@
     }
   },
   "orderIds": [
+    "1154219000034703020",
     "1154219000034693002",
     "1154219000034690004",
     "1154219000034684003",
@@ -3644,7 +3603,6 @@
     "1154219000034608001",
     "1154219000034536002",
     "1154219000034547004",
-    "1154219000034550003",
     "1154219000034527001",
     "1154219000034263026",
     "1154219000034254047",
@@ -3673,8 +3631,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-24T11:34:05.690Z",
-  "lastAttemptAt": "2026-07-24T11:54:35.829Z",
+  "lastSuccessfulSyncAt": "2026-07-24T11:54:51.282Z",
+  "lastAttemptAt": "2026-07-24T11:54:51.282Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
