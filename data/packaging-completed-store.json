@@ -55,6 +55,62 @@
       "machineIds": [
         "1154219000034532009-1154219000034532012-1"
       ]
+    },
+    "1154219000034624004": {
+      "completedAt": "2026-07-24T07:59:32.192Z",
+      "order": {
+        "id": "1154219000034624004",
+        "zohoSalesOrderId": "1154219000034624004",
+        "salesOrderNumber": "SO-07555",
+        "status": "open",
+        "customerName": "Lakshmi Handicrafts",
+        "shippingAddress": "37b, Udyog Vihar, Phase VI, Gurugram, Haryana, 122001",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-23",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034624007",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034624004-1154219000034624007-1",
+            "unitNumber": 1,
+            "serialNumber": "26270767",
+            "qrToken": "26270767",
+            "orderId": "1154219000034624004",
+            "lineItemId": "1154219000034624007",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "customerName": "Lakshmi Handicrafts",
+            "salesOrderNumber": "SO-07555",
+            "deliveryDate": "2026-07-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-23",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034624004-1154219000034624007-1"
+      ]
     }
   }
 }
