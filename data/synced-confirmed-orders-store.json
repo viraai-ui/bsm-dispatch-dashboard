@@ -141,110 +141,6 @@
         }
       ]
     },
-    "1154219000034680001": {
-      "id": "1154219000034680001",
-      "zohoSalesOrderId": "1154219000034680001",
-      "salesOrderNumber": "SO-07562",
-      "status": "open",
-      "customerName": "M/S JAVA SPORTS PRIVATE LIMITED",
-      "shippingAddress": "Ground Floor, Trina Mukherjee, Post Office Building, Jamal Road, Exhibition Road, Phulwari, Patna, Bihar, 800001, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034680004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "SSR",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034680005",
-          "itemName": "Freight Charge",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034680001-1154219000034680004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034680001",
-          "lineItemId": "1154219000034680004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "M/S JAVA SPORTS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07562",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "SSR"
-        }
-      ]
-    },
-    "1154219000034677001": {
-      "id": "1154219000034677001",
-      "zohoSalesOrderId": "1154219000034677001",
-      "salesOrderNumber": "SO-07561",
-      "status": "open",
-      "customerName": "MAA AAVARA FOOTCARE",
-      "shippingAddress": "FIRST FLOOR LEFT SIDE, C-9 , KH NO. 53/12, GALI NO-4, SHIV BUX PARK, NANGLOI, OLD NO. 114-A, New Delhi, West Delhi,, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034677004",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034677001-1154219000034677004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034677001",
-          "lineItemId": "1154219000034677004",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "MAA AAVARA FOOTCARE",
-          "salesOrderNumber": "SO-07561",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034633005": {
       "id": "1154219000034633005",
       "zohoSalesOrderId": "1154219000034633005",
@@ -315,53 +211,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034643003": {
-      "id": "1154219000034643003",
-      "zohoSalesOrderId": "1154219000034643003",
-      "salesOrderNumber": "SO-07559",
-      "status": "open",
-      "customerName": "JAI SHRI MAHAVIR CHEM POLYMERS PVT LTD",
-      "shippingAddress": "T4/45 MANGOLPURI INDUSTRIAL AREA PHASE-1,North West Delhi, Delhi, 110083",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034643006",
-          "itemName": "Flesh trimming Machine",
-          "sku": "206",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034643003-1154219000034643006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034643003",
-          "lineItemId": "1154219000034643006",
-          "itemName": "Flesh trimming Machine",
-          "sku": "206",
-          "customerName": "JAI SHRI MAHAVIR CHEM POLYMERS PVT LTD",
-          "salesOrderNumber": "SO-07559",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -3832,10 +3681,7 @@
     "1154219000034693002",
     "1154219000034690004",
     "1154219000034684003",
-    "1154219000034680001",
-    "1154219000034677001",
     "1154219000034633005",
-    "1154219000034643003",
     "1154219000034654006",
     "1154219000034652001",
     "1154219000034625013",
@@ -3875,8 +3721,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-24T11:08:50.263Z",
-  "lastAttemptAt": "2026-07-24T11:15:27.975Z",
+  "lastSuccessfulSyncAt": "2026-07-24T11:15:45.015Z",
+  "lastAttemptAt": "2026-07-24T11:15:45.015Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
