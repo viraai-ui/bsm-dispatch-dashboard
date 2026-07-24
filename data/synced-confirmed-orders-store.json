@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000034693002": {
+      "id": "1154219000034693002",
+      "zohoSalesOrderId": "1154219000034693002",
+      "salesOrderNumber": "SO-07565",
+      "status": "open",
+      "customerName": "GARWA GRAPHICS",
+      "shippingAddress": "E-6 DAL MIL ROAD, AMAR COLONY,KAMRUDDIN NAGAR, NANGLOI, West Delhi,, Delhi,, 110041, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034693005",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034693002-1154219000034693005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034693002",
+          "lineItemId": "1154219000034693005",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "GARWA GRAPHICS",
+          "salesOrderNumber": "SO-07565",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034690004": {
+      "id": "1154219000034690004",
+      "zohoSalesOrderId": "1154219000034690004",
+      "salesOrderNumber": "SO-07564",
+      "status": "open",
+      "customerName": "A.P. MFG. CO",
+      "shippingAddress": "Plot No 547 F, Pace City -II, Sector-37, Gurugram, Haryana, 122001, India",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034690007",
+          "itemName": "Beam cutting Press (4 column) (40 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034690004-1154219000034690007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034690004",
+          "lineItemId": "1154219000034690007",
+          "itemName": "Beam cutting Press (4 column) (40 ton)",
+          "sku": "",
+          "customerName": "A.P. MFG. CO",
+          "salesOrderNumber": "SO-07564",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034684003": {
       "id": "1154219000034684003",
       "zohoSalesOrderId": "1154219000034684003",
@@ -13,10 +107,10 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034663180",
-          "itemName": "Grinding & Roughing Machine (With dust collector)",
-          "sku": "707",
-          "description": "Without dust collector",
+          "id": "1154219000034663299",
+          "itemName": "Grinding & Roughing Machine (Without dust collector)",
+          "sku": "707m",
+          "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
@@ -25,14 +119,14 @@
       ],
       "machines": [
         {
-          "id": "1154219000034684003-1154219000034663180-1",
+          "id": "1154219000034684003-1154219000034663299-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000034684003",
-          "lineItemId": "1154219000034663180",
-          "itemName": "Grinding & Roughing Machine (With dust collector)",
-          "sku": "707",
+          "lineItemId": "1154219000034663299",
+          "itemName": "Grinding & Roughing Machine (Without dust collector)",
+          "sku": "707m",
           "customerName": "UNISTAR FOOTWEARS PVT. LTD.",
           "salesOrderNumber": "SO-07563",
           "deliveryDate": "2026-07-24",
@@ -43,7 +137,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": "Without dust collector"
+          "itemDescription": ""
         }
       ]
     },
@@ -3735,6 +3829,8 @@
     }
   },
   "orderIds": [
+    "1154219000034693002",
+    "1154219000034690004",
     "1154219000034684003",
     "1154219000034680001",
     "1154219000034677001",
@@ -3779,8 +3875,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-24T10:53:50.633Z",
-  "lastAttemptAt": "2026-07-24T11:08:34.343Z",
+  "lastSuccessfulSyncAt": "2026-07-24T11:08:50.263Z",
+  "lastAttemptAt": "2026-07-24T11:08:50.263Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
