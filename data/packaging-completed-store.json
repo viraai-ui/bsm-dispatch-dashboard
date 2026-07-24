@@ -1,3 +1,60 @@
 {
-  "completed": {}
+  "completed": {
+    "1154219000034532009": {
+      "completedAt": "2026-07-24T07:59:16.425Z",
+      "order": {
+        "id": "1154219000034532009",
+        "zohoSalesOrderId": "1154219000034532009",
+        "salesOrderNumber": "SO-07546",
+        "status": "open",
+        "customerName": "GLOBAL OVERSEAS",
+        "shippingAddress": "FIRST FLOOR, K-96, UDYOG NAGAR,, ROHTAK ROAD, Delhi, 110041, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-23",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034532012",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034532009-1154219000034532012-1",
+            "unitNumber": 1,
+            "serialNumber": "26270759",
+            "qrToken": "26270759",
+            "orderId": "1154219000034532009",
+            "lineItemId": "1154219000034532012",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "customerName": "GLOBAL OVERSEAS",
+            "salesOrderNumber": "SO-07546",
+            "deliveryDate": "2026-07-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-23",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034532009-1154219000034532012-1"
+      ]
+    }
+  }
 }
