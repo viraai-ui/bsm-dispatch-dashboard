@@ -167,6 +167,62 @@
       "machineIds": [
         "1154219000034677001-1154219000034677004-1"
       ]
+    },
+    "1154219000034515009": {
+      "completedAt": "2026-07-24T08:24:20.239Z",
+      "order": {
+        "id": "1154219000034515009",
+        "zohoSalesOrderId": "1154219000034515009",
+        "salesOrderNumber": "SO-07545",
+        "status": "open",
+        "customerName": "PRACHI HANDICRAFT",
+        "shippingAddress": "GROUND FLOOR, PLOTE NO-268,KH NO-124/8, JAI VIHAR PHASE-2, B-BLOCK,GALI NO-22, Najafgarh, New Delhi, South West Delhi,, Delhi,, 110043, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-22",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034515012",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034515009-1154219000034515012-1",
+            "unitNumber": 1,
+            "serialNumber": "26270761",
+            "qrToken": "26270761",
+            "orderId": "1154219000034515009",
+            "lineItemId": "1154219000034515012",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "customerName": "PRACHI HANDICRAFT",
+            "salesOrderNumber": "SO-07545",
+            "deliveryDate": "2026-07-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-23",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034515009-1154219000034515012-1"
+      ]
     }
   }
 }
