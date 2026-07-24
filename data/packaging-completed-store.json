@@ -111,6 +111,62 @@
       "machineIds": [
         "1154219000034624004-1154219000034624007-1"
       ]
+    },
+    "1154219000034677001": {
+      "completedAt": "2026-07-24T08:24:01.710Z",
+      "order": {
+        "id": "1154219000034677001",
+        "zohoSalesOrderId": "1154219000034677001",
+        "salesOrderNumber": "SO-07561",
+        "status": "open",
+        "customerName": "MAA AAVARA FOOTCARE",
+        "shippingAddress": "FIRST FLOOR LEFT SIDE, C-9 , KH NO. 53/12, GALI NO-4, SHIV BUX PARK, NANGLOI, OLD NO. 114-A, New Delhi, West Delhi,, Delhi,, 110041, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034677004",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034677001-1154219000034677004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270776",
+            "qrToken": "26270776",
+            "orderId": "1154219000034677001",
+            "lineItemId": "1154219000034677004",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "MAA AAVARA FOOTCARE",
+            "salesOrderNumber": "SO-07561",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034677001-1154219000034677004-1"
+      ]
     }
   }
 }
