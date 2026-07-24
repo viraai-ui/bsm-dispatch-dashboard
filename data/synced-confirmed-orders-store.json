@@ -910,84 +910,6 @@
         }
       ]
     },
-    "1154219000034463003": {
-      "id": "1154219000034463003",
-      "zohoSalesOrderId": "1154219000034463003",
-      "salesOrderNumber": "SO-07531",
-      "status": "open",
-      "customerName": "SHRI SHYAM UPPER",
-      "shippingAddress": "1st floor, KH NO 535, Rohtak Road, Mundka, New Delhi, West Delhi,, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034665189",
-          "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034463007",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034463003-1154219000034665189-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034463003",
-          "lineItemId": "1154219000034665189",
-          "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
-          "sku": "",
-          "customerName": "SHRI SHYAM UPPER",
-          "salesOrderNumber": "SO-07531",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034463003-1154219000034463007-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034463003",
-          "lineItemId": "1154219000034463007",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "customerName": "SHRI SHYAM UPPER",
-          "salesOrderNumber": "SO-07531",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034263026": {
       "id": "1154219000034263026",
       "zohoSalesOrderId": "1154219000034263026",
@@ -4068,7 +3990,6 @@
     "1154219000034547004",
     "1154219000034550003",
     "1154219000034527001",
-    "1154219000034463003",
     "1154219000034263026",
     "1154219000034254047",
     "1154219000034276023",
@@ -4098,8 +4019,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-24T08:00:11.763Z",
-  "lastAttemptAt": "2026-07-24T08:21:32.672Z",
+  "lastSuccessfulSyncAt": "2026-07-24T08:21:48.401Z",
+  "lastAttemptAt": "2026-07-24T08:21:48.401Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
