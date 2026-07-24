@@ -13,10 +13,10 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034703014",
-          "itemName": "Grinding & Roughing Machine (Without dust collector)",
-          "sku": "707m",
-          "description": "",
+          "id": "1154219000034663180",
+          "itemName": "Grinding & Roughing Machine (With dust collector)",
+          "sku": "707",
+          "description": "Without dust collector",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
@@ -25,14 +25,14 @@
       ],
       "machines": [
         {
-          "id": "1154219000034684003-1154219000034703014-1",
+          "id": "1154219000034684003-1154219000034663180-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000034684003",
-          "lineItemId": "1154219000034703014",
-          "itemName": "Grinding & Roughing Machine (Without dust collector)",
-          "sku": "707m",
+          "lineItemId": "1154219000034663180",
+          "itemName": "Grinding & Roughing Machine (With dust collector)",
+          "sku": "707",
           "customerName": "UNISTAR FOOTWEARS PVT. LTD.",
           "salesOrderNumber": "SO-07563",
           "deliveryDate": "2026-07-24",
@@ -43,7 +43,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "Without dust collector"
         }
       ]
     },
@@ -3931,8 +3931,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-24T10:21:07.152Z",
-  "lastAttemptAt": "2026-07-24T10:38:42.667Z",
+  "lastSuccessfulSyncAt": "2026-07-24T10:38:58.695Z",
+  "lastAttemptAt": "2026-07-24T10:38:58.695Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
