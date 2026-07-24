@@ -1,5 +1,239 @@
 {
   "orders": {
+    "1154219000034633005": {
+      "id": "1154219000034633005",
+      "zohoSalesOrderId": "1154219000034633005",
+      "salesOrderNumber": "SO-07560",
+      "status": "open",
+      "customerName": "THREE STAR FOOTWEARS",
+      "shippingAddress": "C-3 ROOP, COMPOUND SANWER ROAD INDUSTRIAL AREA, Sanwer, Indore, Madhya Pradesh, 453551, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034633008",
+          "itemName": "Chiller (Conveyor type) (5 Ton)",
+          "sku": "chiller 5 ton",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034633009",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034633005-1154219000034633008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034633005",
+          "lineItemId": "1154219000034633008",
+          "itemName": "Chiller (Conveyor type) (5 Ton)",
+          "sku": "chiller 5 ton",
+          "customerName": "THREE STAR FOOTWEARS",
+          "salesOrderNumber": "SO-07560",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034633005-1154219000034633009-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034633005",
+          "lineItemId": "1154219000034633009",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "THREE STAR FOOTWEARS",
+          "salesOrderNumber": "SO-07560",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034643003": {
+      "id": "1154219000034643003",
+      "zohoSalesOrderId": "1154219000034643003",
+      "salesOrderNumber": "SO-07559",
+      "status": "open",
+      "customerName": "JAI SHRI MAHAVIR CHEM POLYMERS PVT LTD",
+      "shippingAddress": "T4/45 MANGOLPURI INDUSTRIAL AREA PHASE-1,North West Delhi, Delhi, 110083",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034643006",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034643003-1154219000034643006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034643003",
+          "lineItemId": "1154219000034643006",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "customerName": "JAI SHRI MAHAVIR CHEM POLYMERS PVT LTD",
+          "salesOrderNumber": "SO-07559",
+          "deliveryDate": "2026-07-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034654006": {
+      "id": "1154219000034654006",
+      "zohoSalesOrderId": "1154219000034654006",
+      "salesOrderNumber": "SO-07558",
+      "status": "open",
+      "customerName": "SUPER SPEED SHOES COMPONENTS",
+      "shippingAddress": "Plot No. 507, Mundka, West Delhi, Delhi-110041, Delhi",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034654009",
+          "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
+          "sku": "601 - 8",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034654010",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034654011",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034654006-1154219000034654009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034654006",
+          "lineItemId": "1154219000034654009",
+          "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
+          "sku": "601 - 8",
+          "customerName": "SUPER SPEED SHOES COMPONENTS",
+          "salesOrderNumber": "SO-07558",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034654006-1154219000034654010-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034654006",
+          "lineItemId": "1154219000034654010",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "SUPER SPEED SHOES COMPONENTS",
+          "salesOrderNumber": "SO-07558",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034654006-1154219000034654011-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034654006",
+          "lineItemId": "1154219000034654011",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "SUPER SPEED SHOES COMPONENTS",
+          "salesOrderNumber": "SO-07558",
+          "deliveryDate": "2026-07-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034652001": {
       "id": "1154219000034652001",
       "zohoSalesOrderId": "1154219000034652001",
@@ -343,53 +577,6 @@
       ],
       "machines": []
     },
-    "1154219000034618001": {
-      "id": "1154219000034618001",
-      "zohoSalesOrderId": "1154219000034618001",
-      "salesOrderNumber": "SO-07551",
-      "status": "open",
-      "customerName": "Nitin Kumar",
-      "shippingAddress": "S/o Sohan Pal, House No.69, Block-A, Harijan Basti, Sultanpuri, North West Delhi, 110086, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034618004",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034618001-1154219000034618004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034618001",
-          "lineItemId": "1154219000034618004",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "Nitin Kumar",
-          "salesOrderNumber": "SO-07551",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034608001": {
       "id": "1154219000034608001",
       "zohoSalesOrderId": "1154219000034608001",
@@ -429,53 +616,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034515022": {
-      "id": "1154219000034515022",
-      "zohoSalesOrderId": "1154219000034515022",
-      "salesOrderNumber": "SO-07548",
-      "status": "open",
-      "customerName": "THE PURPLETREE",
-      "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi,, Delhi,, Delhi, 110092, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034515025",
-          "itemName": "Single Needle High Post Bed (Direct Drive)",
-          "sku": "8365D",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034515022-1154219000034515025-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034515022",
-          "lineItemId": "1154219000034515025",
-          "itemName": "Single Needle High Post Bed (Direct Drive)",
-          "sku": "8365D",
-          "customerName": "THE PURPLETREE",
-          "salesOrderNumber": "SO-07548",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -3835,15 +3975,16 @@
     }
   },
   "orderIds": [
+    "1154219000034633005",
+    "1154219000034643003",
+    "1154219000034654006",
     "1154219000034652001",
     "1154219000034625013",
     "1154219000034624004",
     "1154219000034626001",
     "1154219000034623006",
     "1154219000034619002",
-    "1154219000034618001",
     "1154219000034608001",
-    "1154219000034515022",
     "1154219000034536002",
     "1154219000034532009",
     "1154219000034547004",
@@ -3878,8 +4019,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-23T13:01:24.885Z",
-  "lastAttemptAt": "2026-07-24T04:49:45.397Z",
+  "lastSuccessfulSyncAt": "2026-07-24T04:50:02.035Z",
+  "lastAttemptAt": "2026-07-24T04:50:02.035Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
