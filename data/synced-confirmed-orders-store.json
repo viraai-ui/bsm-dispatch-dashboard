@@ -1,5 +1,124 @@
 {
   "orders": {
+    "1154219000034725002": {
+      "id": "1154219000034725002",
+      "zohoSalesOrderId": "1154219000034725002",
+      "salesOrderNumber": "SO-07571",
+      "status": "open",
+      "customerName": "KOUSHAL ENTERPRISES",
+      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-25",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034725005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000034739001": {
+      "id": "1154219000034739001",
+      "zohoSalesOrderId": "1154219000034739001",
+      "salesOrderNumber": "SO-07570",
+      "status": "open",
+      "customerName": "AGGARWAL ENTERPRISES",
+      "shippingAddress": "FIRST FLOOR, C-241, MAIN 100 FUTA ROAD, Hardev Puri, New Delhi,, Shahdara, Delhi, 110093, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034739004",
+          "itemName": "Cover Type Sole Press Double Station (pneumatic)",
+          "sku": "2003-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034739001-1154219000034739004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034739001",
+          "lineItemId": "1154219000034739004",
+          "itemName": "Cover Type Sole Press Double Station (pneumatic)",
+          "sku": "2003-2",
+          "customerName": "AGGARWAL ENTERPRISES",
+          "salesOrderNumber": "SO-07570",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034726002": {
+      "id": "1154219000034726002",
+      "zohoSalesOrderId": "1154219000034726002",
+      "salesOrderNumber": "SO-07569",
+      "status": "open",
+      "customerName": "Footwell Exim Pvt. Ltd.",
+      "shippingAddress": "2/194 A, New Bazar Aravankara, Pookkottur, Kerala, 676517",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034726005",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034726002-1154219000034726005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034726002",
+          "lineItemId": "1154219000034726005",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "Footwell Exim Pvt. Ltd.",
+          "salesOrderNumber": "SO-07569",
+          "deliveryDate": "2026-07-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034717002": {
       "id": "1154219000034717002",
       "zohoSalesOrderId": "1154219000034717002",
@@ -3558,6 +3677,9 @@
     }
   },
   "orderIds": [
+    "1154219000034725002",
+    "1154219000034739001",
+    "1154219000034726002",
     "1154219000034717002",
     "1154219000034718002",
     "1154219000034690004",
@@ -3598,8 +3720,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-25T05:44:54.705Z",
-  "lastAttemptAt": "2026-07-25T06:42:01.723Z",
+  "lastSuccessfulSyncAt": "2026-07-25T06:42:17.394Z",
+  "lastAttemptAt": "2026-07-25T06:42:17.394Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
