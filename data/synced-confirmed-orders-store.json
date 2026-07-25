@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000034750001": {
+      "id": "1154219000034750001",
+      "zohoSalesOrderId": "1154219000034750001",
+      "salesOrderNumber": "SO-07575",
+      "status": "open",
+      "customerName": "Chandra and Associates Leather Industries",
+      "shippingAddress": "C-3, Site A Industrial Area, Sikandra, Agra, Uttar Pradesh, 282007, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034750004",
+          "itemName": "Outsole Grinding Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034750005",
+          "itemName": "Vertical Edge Buffing & Grinding Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034750001-1154219000034750004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034750001",
+          "lineItemId": "1154219000034750004",
+          "itemName": "Outsole Grinding Machine",
+          "sku": "",
+          "customerName": "Chandra and Associates Leather Industries",
+          "salesOrderNumber": "SO-07575",
+          "deliveryDate": "2026-09-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034750001-1154219000034750005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034750001",
+          "lineItemId": "1154219000034750005",
+          "itemName": "Vertical Edge Buffing & Grinding Machine",
+          "sku": "",
+          "customerName": "Chandra and Associates Leather Industries",
+          "salesOrderNumber": "SO-07575",
+          "deliveryDate": "2026-09-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034743020": {
       "id": "1154219000034743020",
       "zohoSalesOrderId": "1154219000034743020",
@@ -6034,6 +6112,7 @@
     }
   },
   "orderIds": [
+    "1154219000034750001",
     "1154219000034743020",
     "1154219000034744001",
     "1154219000034731006",
@@ -6078,8 +6157,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-25T09:28:29.772Z",
-  "lastAttemptAt": "2026-07-25T09:43:16.638Z",
+  "lastSuccessfulSyncAt": "2026-07-25T09:43:32.011Z",
+  "lastAttemptAt": "2026-07-25T09:43:32.011Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
