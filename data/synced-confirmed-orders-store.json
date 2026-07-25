@@ -1,41 +1,41 @@
 {
   "orders": {
-    "1154219000034703020": {
-      "id": "1154219000034703020",
-      "zohoSalesOrderId": "1154219000034703020",
-      "salesOrderNumber": "SO-07566",
+    "1154219000034717002": {
+      "id": "1154219000034717002",
+      "zohoSalesOrderId": "1154219000034717002",
+      "salesOrderNumber": "SO-07568",
       "status": "open",
-      "customerName": "Vivek Gupta (URP)",
-      "shippingAddress": "Plot No.732, MIE Part-A, Bahadurgarh, Haryana, 124507",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-24",
+      "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+      "shippingAddress": "7/313, NH 17, P.O. KOLATHARA, Kozhikode, Kerala, 673655, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-25",
       "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034703023",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "description": "String Lasting Machine",
-          "quantity": 1,
-          "pendingQuantity": 1,
+          "id": "1154219000034717005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "DRUM TYPE BLADDER",
+          "quantity": 4,
+          "pendingQuantity": 4,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         }
       ],
       "machines": [
         {
-          "id": "1154219000034703020-1154219000034703023-1",
+          "id": "1154219000034717002-1154219000034717005-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
-          "orderId": "1154219000034703020",
-          "lineItemId": "1154219000034703023",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "customerName": "Vivek Gupta (URP)",
-          "salesOrderNumber": "SO-07566",
-          "deliveryDate": "2026-07-24",
+          "orderId": "1154219000034717002",
+          "lineItemId": "1154219000034717005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07568",
+          "deliveryDate": "2026-07-25",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
@@ -43,56 +43,97 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": "String Lasting Machine"
-        }
-      ]
-    },
-    "1154219000034693002": {
-      "id": "1154219000034693002",
-      "zohoSalesOrderId": "1154219000034693002",
-      "salesOrderNumber": "SO-07565",
-      "status": "open",
-      "customerName": "GARWA GRAPHICS",
-      "shippingAddress": "E-6 DAL MIL ROAD, AMAR COLONY,KAMRUDDIN NAGAR, NANGLOI, West Delhi,, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
+          "itemDescription": "DRUM TYPE BLADDER"
+        },
         {
-          "id": "1154219000034693005",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034693002-1154219000034693005-1",
-          "unitNumber": 1,
+          "id": "1154219000034717002-1154219000034717005-2",
+          "unitNumber": 2,
           "serialNumber": "",
           "qrToken": "",
-          "orderId": "1154219000034693002",
-          "lineItemId": "1154219000034693005",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "GARWA GRAPHICS",
-          "salesOrderNumber": "SO-07565",
-          "deliveryDate": "2026-07-24",
+          "orderId": "1154219000034717002",
+          "lineItemId": "1154219000034717005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07568",
+          "deliveryDate": "2026-07-25",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "DRUM TYPE BLADDER"
+        },
+        {
+          "id": "1154219000034717002-1154219000034717005-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034717002",
+          "lineItemId": "1154219000034717005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07568",
+          "deliveryDate": "2026-07-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "DRUM TYPE BLADDER"
+        },
+        {
+          "id": "1154219000034717002-1154219000034717005-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034717002",
+          "lineItemId": "1154219000034717005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07568",
+          "deliveryDate": "2026-07-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "DRUM TYPE BLADDER"
         }
       ]
+    },
+    "1154219000034718002": {
+      "id": "1154219000034718002",
+      "zohoSalesOrderId": "1154219000034718002",
+      "salesOrderNumber": "SO-07567",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-25",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034718005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
     },
     "1154219000034690004": {
       "id": "1154219000034690004",
@@ -138,53 +179,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034684003": {
-      "id": "1154219000034684003",
-      "zohoSalesOrderId": "1154219000034684003",
-      "salesOrderNumber": "SO-07563",
-      "status": "open",
-      "customerName": "UNISTAR FOOTWEARS PVT. LTD.",
-      "shippingAddress": "E-7. MIE, Part-II, Bahadurgarh, Haryana-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034663631",
-          "itemName": "Grinding & Roughing Machine (With dust collector)",
-          "sku": "707",
-          "description": "Without dust collector",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034684003-1154219000034663631-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034684003",
-          "lineItemId": "1154219000034663631",
-          "itemName": "Grinding & Roughing Machine (With dust collector)",
-          "sku": "707",
-          "customerName": "UNISTAR FOOTWEARS PVT. LTD.",
-          "salesOrderNumber": "SO-07563",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Without dust collector"
         }
       ]
     },
@@ -717,31 +711,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000034536002": {
-      "id": "1154219000034536002",
-      "zohoSalesOrderId": "1154219000034536002",
-      "salesOrderNumber": "SO-07547",
-      "status": "open",
-      "customerName": "SHASHWAT HERBAL",
-      "shippingAddress": "B/H ADIT CAMPUS, 409 1 2, NEW V V NAGAR GANA ROAD, GANA ROAD BIOTECH COLLEGE, ANAND, Gujarat, 388120, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034536005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 12.5,
-          "pendingQuantity": 12.5,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000034547004": {
       "id": "1154219000034547004",
@@ -3589,10 +3558,9 @@
     }
   },
   "orderIds": [
-    "1154219000034703020",
-    "1154219000034693002",
+    "1154219000034717002",
+    "1154219000034718002",
     "1154219000034690004",
-    "1154219000034684003",
     "1154219000034633005",
     "1154219000034654006",
     "1154219000034652001",
@@ -3601,7 +3569,6 @@
     "1154219000034623006",
     "1154219000034619002",
     "1154219000034608001",
-    "1154219000034536002",
     "1154219000034547004",
     "1154219000034527001",
     "1154219000034263026",
@@ -3631,8 +3598,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-24T12:39:33.788Z",
-  "lastAttemptAt": "2026-07-25T05:44:40.580Z",
+  "lastSuccessfulSyncAt": "2026-07-25T05:44:54.705Z",
+  "lastAttemptAt": "2026-07-25T05:44:54.705Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
