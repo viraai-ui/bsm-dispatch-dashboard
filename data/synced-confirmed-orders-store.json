@@ -1,5 +1,155 @@
 {
   "orders": {
+    "1154219000034737009": {
+      "id": "1154219000034737009",
+      "zohoSalesOrderId": "1154219000034737009",
+      "salesOrderNumber": "SO-07578",
+      "status": "open",
+      "customerName": "Star Impact Pvt. Ltd.",
+      "shippingAddress": "Rehman Nagar, Ludhiana Road, Opp. Power Grid, Melerkotla, Punjab, 148023, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034737012",
+          "itemName": "Electric Scissor",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034737009-1154219000034737012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034737009",
+          "lineItemId": "1154219000034737012",
+          "itemName": "Electric Scissor",
+          "sku": "",
+          "customerName": "Star Impact Pvt. Ltd.",
+          "salesOrderNumber": "SO-07578",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034756004": {
+      "id": "1154219000034756004",
+      "zohoSalesOrderId": "1154219000034756004",
+      "salesOrderNumber": "SO-07577",
+      "status": "open",
+      "customerName": "Leefong Exim Pvt. Ltd.",
+      "shippingAddress": "7/717-A, Rahiman Bazar,, Kolathara, Calicut, Kerala, 673655",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-07-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034756007",
+          "itemName": "Travel head cutting press (25 ton) Heavy-duty",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034756008",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034756004-1154219000034756007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034756004",
+          "lineItemId": "1154219000034756007",
+          "itemName": "Travel head cutting press (25 ton) Heavy-duty",
+          "sku": "",
+          "customerName": "Leefong Exim Pvt. Ltd.",
+          "salesOrderNumber": "SO-07577",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034756004-1154219000034756008-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034756004",
+          "lineItemId": "1154219000034756008",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "Leefong Exim Pvt. Ltd.",
+          "salesOrderNumber": "SO-07577",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034757003": {
+      "id": "1154219000034757003",
+      "zohoSalesOrderId": "1154219000034757003",
+      "salesOrderNumber": "SO-07576",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034757006",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000034750001": {
       "id": "1154219000034750001",
       "zohoSalesOrderId": "1154219000034750001",
@@ -2528,31 +2678,6 @@
         }
       ]
     },
-    "1154219000034725002": {
-      "id": "1154219000034725002",
-      "zohoSalesOrderId": "1154219000034725002",
-      "salesOrderNumber": "SO-07571",
-      "status": "open",
-      "customerName": "KOUSHAL ENTERPRISES",
-      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-25",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034725005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 50,
-          "pendingQuantity": 50,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000034739001": {
       "id": "1154219000034739001",
       "zohoSalesOrderId": "1154219000034739001",
@@ -2644,116 +2769,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034717002": {
-      "id": "1154219000034717002",
-      "zohoSalesOrderId": "1154219000034717002",
-      "salesOrderNumber": "SO-07568",
-      "status": "open",
-      "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
-      "shippingAddress": "7/313, NH 17, P.O. KOLATHARA, Kozhikode, Kerala, 673655, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034717005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "DRUM TYPE BLADDER",
-          "quantity": 4,
-          "pendingQuantity": 4,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034717002-1154219000034717005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034717002",
-          "lineItemId": "1154219000034717005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
-          "salesOrderNumber": "SO-07568",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "DRUM TYPE BLADDER"
-        },
-        {
-          "id": "1154219000034717002-1154219000034717005-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034717002",
-          "lineItemId": "1154219000034717005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
-          "salesOrderNumber": "SO-07568",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "DRUM TYPE BLADDER"
-        },
-        {
-          "id": "1154219000034717002-1154219000034717005-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034717002",
-          "lineItemId": "1154219000034717005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
-          "salesOrderNumber": "SO-07568",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "DRUM TYPE BLADDER"
-        },
-        {
-          "id": "1154219000034717002-1154219000034717005-4",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034717002",
-          "lineItemId": "1154219000034717005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
-          "salesOrderNumber": "SO-07568",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "DRUM TYPE BLADDER"
         }
       ]
     },
@@ -3008,162 +3023,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034652001": {
-      "id": "1154219000034652001",
-      "zohoSalesOrderId": "1154219000034652001",
-      "salesOrderNumber": "SO-07557",
-      "status": "open",
-      "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
-      "shippingAddress": "1st and 2nd floor, Bldg No.173, Indian Corporation Building, Mankoli Anjur Road, Mankoli Anjur Road, Tehsil Bhiwandi, Bhiwandi, Thane, Maharashtra, 421302",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034652004",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034652005",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charge from BSM to ABC Transport",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034652001-1154219000034652004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034652001",
-          "lineItemId": "1154219000034652004",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07557",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034625013": {
-      "id": "1154219000034625013",
-      "zohoSalesOrderId": "1154219000034625013",
-      "salesOrderNumber": "SO-07556",
-      "status": "open",
-      "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
-      "shippingAddress": "B-116, RIICO Indl. Area,, Khairthal Alwar, Rajasthan, 301404, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034625016",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034625017",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
-          "sku": "335",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034625013-1154219000034625016-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034625013",
-          "lineItemId": "1154219000034625016",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
-          "salesOrderNumber": "SO-07556",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034625013-1154219000034625016-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034625013",
-          "lineItemId": "1154219000034625016",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
-          "salesOrderNumber": "SO-07556",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034625013-1154219000034625017-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034625013",
-          "lineItemId": "1154219000034625017",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
-          "sku": "335",
-          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
-          "salesOrderNumber": "SO-07556",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -6112,20 +5971,19 @@
     }
   },
   "orderIds": [
+    "1154219000034737009",
+    "1154219000034756004",
+    "1154219000034757003",
     "1154219000034750001",
     "1154219000034743020",
     "1154219000034744001",
     "1154219000034731006",
-    "1154219000034725002",
     "1154219000034739001",
     "1154219000034726002",
-    "1154219000034717002",
     "1154219000034718002",
     "1154219000034690004",
     "1154219000034633005",
     "1154219000034654006",
-    "1154219000034652001",
-    "1154219000034625013",
     "1154219000034623006",
     "1154219000034619002",
     "1154219000034608001",
@@ -6157,8 +6015,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-25T09:43:32.011Z",
-  "lastAttemptAt": "2026-07-27T05:38:08.604Z",
+  "lastSuccessfulSyncAt": "2026-07-27T05:38:26.165Z",
+  "lastAttemptAt": "2026-07-27T05:38:26.165Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
