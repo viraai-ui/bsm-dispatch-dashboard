@@ -1,52 +1,5 @@
 {
   "orders": {
-    "1154219000034737009": {
-      "id": "1154219000034737009",
-      "zohoSalesOrderId": "1154219000034737009",
-      "salesOrderNumber": "SO-07578",
-      "status": "open",
-      "customerName": "Star Impact Pvt. Ltd.",
-      "shippingAddress": "Rehman Nagar, Ludhiana Road, Opp. Power Grid, Melerkotla, Punjab, 148023, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034737012",
-          "itemName": "Electric Scissor",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034737009-1154219000034737012-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034737009",
-          "lineItemId": "1154219000034737012",
-          "itemName": "Electric Scissor",
-          "sku": "",
-          "customerName": "Star Impact Pvt. Ltd.",
-          "salesOrderNumber": "SO-07578",
-          "deliveryDate": "2026-07-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034756004": {
       "id": "1154219000034756004",
       "zohoSalesOrderId": "1154219000034756004",
@@ -5971,7 +5924,6 @@
     }
   },
   "orderIds": [
-    "1154219000034737009",
     "1154219000034756004",
     "1154219000034757003",
     "1154219000034750001",
@@ -6015,8 +5967,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-27T05:38:26.165Z",
-  "lastAttemptAt": "2026-07-27T05:53:04.386Z",
+  "lastSuccessfulSyncAt": "2026-07-27T05:53:21.182Z",
+  "lastAttemptAt": "2026-07-27T05:53:21.182Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
