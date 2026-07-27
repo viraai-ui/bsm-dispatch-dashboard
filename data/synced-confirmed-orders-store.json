@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034717020": {
+      "id": "1154219000034717020",
+      "zohoSalesOrderId": "1154219000034717020",
+      "salesOrderNumber": "SO-07581",
+      "status": "open",
+      "customerName": "NEW GOBIND ENTERPRISES",
+      "shippingAddress": "Plot No. 1358, M.I.E., Part-B, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034717023",
+          "itemName": "Thread Burner (Chinese)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034717020-1154219000034717023-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034717020",
+          "lineItemId": "1154219000034717023",
+          "itemName": "Thread Burner (Chinese)",
+          "sku": "",
+          "customerName": "NEW GOBIND ENTERPRISES",
+          "salesOrderNumber": "SO-07581",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034737027": {
       "id": "1154219000034737027",
       "zohoSalesOrderId": "1154219000034737027",
@@ -46,31 +93,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000034723016": {
-      "id": "1154219000034723016",
-      "zohoSalesOrderId": "1154219000034723016",
-      "salesOrderNumber": "SO-07579",
-      "status": "open",
-      "customerName": "Saarthi Footwear",
-      "shippingAddress": "B-290, Phase-1, Mangolpuri, Delhi, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034723019",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 12.5,
-          "pendingQuantity": 12.5,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000034756004": {
       "id": "1154219000034756004",
@@ -149,31 +171,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000034757003": {
-      "id": "1154219000034757003",
-      "zohoSalesOrderId": "1154219000034757003",
-      "salesOrderNumber": "SO-07576",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034757006",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000034750001": {
       "id": "1154219000034750001",
@@ -2797,31 +2794,6 @@
         }
       ]
     },
-    "1154219000034718002": {
-      "id": "1154219000034718002",
-      "zohoSalesOrderId": "1154219000034718002",
-      "salesOrderNumber": "SO-07567",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-25",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034718005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000034690004": {
       "id": "1154219000034690004",
       "zohoSalesOrderId": "1154219000034690004",
@@ -3942,94 +3914,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "TC of Hot Melt Roller Machine"
-        }
-      ]
-    },
-    "1154219000034142002": {
-      "id": "1154219000034142002",
-      "zohoSalesOrderId": "1154219000034142002",
-      "salesOrderNumber": "SO-07462",
-      "status": "open",
-      "customerName": "Netplast Pvt. Ltd.",
-      "shippingAddress": "2 and 4 Uptron Estate, Panki Industrial Area, Kanpur, Uttar Pradesh, 208022, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-07-13",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034142005",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034171129",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Wooden for Tape Cutting",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034142006",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charge Up to 10KM From BSM to Transport",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034142002-1154219000034142005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034142002",
-          "lineItemId": "1154219000034142005",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "Netplast Pvt. Ltd.",
-          "salesOrderNumber": "SO-07462",
-          "deliveryDate": "2026-07-13",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034142002-1154219000034171129-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034142002",
-          "lineItemId": "1154219000034171129",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Netplast Pvt. Ltd.",
-          "salesOrderNumber": "SO-07462",
-          "deliveryDate": "2026-07-13",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Wooden for Tape Cutting"
         }
       ]
     },
@@ -5996,17 +5880,15 @@
     }
   },
   "orderIds": [
+    "1154219000034717020",
     "1154219000034737027",
-    "1154219000034723016",
     "1154219000034756004",
-    "1154219000034757003",
     "1154219000034750001",
     "1154219000034743020",
     "1154219000034744001",
     "1154219000034731006",
     "1154219000034739001",
     "1154219000034726002",
-    "1154219000034718002",
     "1154219000034690004",
     "1154219000034633005",
     "1154219000034654006",
@@ -6023,7 +5905,6 @@
     "1154219000034156012",
     "1154219000034153022",
     "1154219000034176001",
-    "1154219000034142002",
     "1154219000034008004",
     "1154219000034015059",
     "1154219000033890006",
@@ -6041,8 +5922,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-27T07:00:05.316Z",
-  "lastAttemptAt": "2026-07-27T08:04:24.061Z",
+  "lastSuccessfulSyncAt": "2026-07-27T08:04:39.800Z",
+  "lastAttemptAt": "2026-07-27T08:04:39.800Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
