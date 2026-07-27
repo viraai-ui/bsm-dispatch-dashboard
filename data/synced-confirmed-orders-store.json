@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034737027": {
+      "id": "1154219000034737027",
+      "zohoSalesOrderId": "1154219000034737027",
+      "salesOrderNumber": "SO-07580",
+      "status": "open",
+      "customerName": "KRISHNA DEVI ENTERPRISES",
+      "shippingAddress": "PLOT NO K 22,23,24, KH NO 13/16, Adhyapak Ngr, New Delhi, West, Delhi, Delhi,, 110041, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034737030",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034737027-1154219000034737030-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034737027",
+          "lineItemId": "1154219000034737030",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "customerName": "KRISHNA DEVI ENTERPRISES",
+          "salesOrderNumber": "SO-07580",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034723016": {
       "id": "1154219000034723016",
       "zohoSalesOrderId": "1154219000034723016",
@@ -5949,6 +5996,7 @@
     }
   },
   "orderIds": [
+    "1154219000034737027",
     "1154219000034723016",
     "1154219000034756004",
     "1154219000034757003",
@@ -5993,8 +6041,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-27T06:59:18.651Z",
-  "lastAttemptAt": "2026-07-27T06:59:48.325Z",
+  "lastSuccessfulSyncAt": "2026-07-27T07:00:05.316Z",
+  "lastAttemptAt": "2026-07-27T07:00:05.316Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
