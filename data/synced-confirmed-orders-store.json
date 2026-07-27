@@ -1,52 +1,5 @@
 {
   "orders": {
-    "1154219000034717020": {
-      "id": "1154219000034717020",
-      "zohoSalesOrderId": "1154219000034717020",
-      "salesOrderNumber": "SO-07581",
-      "status": "open",
-      "customerName": "NEW GOBIND ENTERPRISES",
-      "shippingAddress": "Plot No. 1358, M.I.E., Part-B, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034717023",
-          "itemName": "Thread Burner (Chinese)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034717020-1154219000034717023-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034717020",
-          "lineItemId": "1154219000034717023",
-          "itemName": "Thread Burner (Chinese)",
-          "sku": "",
-          "customerName": "NEW GOBIND ENTERPRISES",
-          "salesOrderNumber": "SO-07581",
-          "deliveryDate": "2026-07-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034737027": {
       "id": "1154219000034737027",
       "zohoSalesOrderId": "1154219000034737027",
@@ -3568,6 +3521,53 @@
         }
       ]
     },
+    "1154219000034286021": {
+      "id": "1154219000034286021",
+      "zohoSalesOrderId": "1154219000034286021",
+      "salesOrderNumber": "SO-07503",
+      "status": "open",
+      "customerName": "Tarif Ahmad",
+      "shippingAddress": "Abdul Ajij Marora VTC Marora (38), Mandikhera, Firozepur, Jhirka, Mewat, Haryana, 122108, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034743812",
+          "itemName": "Flatbed Single Walking Foot [Computerized]",
+          "sku": "0302 C",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034286021-1154219000034743812-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034286021",
+          "lineItemId": "1154219000034743812",
+          "itemName": "Flatbed Single Walking Foot [Computerized]",
+          "sku": "0302 C",
+          "customerName": "Tarif Ahmad",
+          "salesOrderNumber": "SO-07503",
+          "deliveryDate": "2026-07-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034276003": {
       "id": "1154219000034276003",
       "zohoSalesOrderId": "1154219000034276003",
@@ -5880,7 +5880,6 @@
     }
   },
   "orderIds": [
-    "1154219000034717020",
     "1154219000034737027",
     "1154219000034756004",
     "1154219000034750001",
@@ -5900,6 +5899,7 @@
     "1154219000034263026",
     "1154219000034254047",
     "1154219000034301018",
+    "1154219000034286021",
     "1154219000034276003",
     "1154219000034255003",
     "1154219000034156012",
@@ -5922,8 +5922,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-27T08:04:39.800Z",
-  "lastAttemptAt": "2026-07-27T08:19:19.160Z",
+  "lastSuccessfulSyncAt": "2026-07-27T08:19:34.630Z",
+  "lastAttemptAt": "2026-07-27T08:19:34.630Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
