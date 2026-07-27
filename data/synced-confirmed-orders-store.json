@@ -1,5 +1,30 @@
 {
   "orders": {
+    "1154219000034723016": {
+      "id": "1154219000034723016",
+      "zohoSalesOrderId": "1154219000034723016",
+      "salesOrderNumber": "SO-07579",
+      "status": "open",
+      "customerName": "Saarthi Footwear",
+      "shippingAddress": "B-290, Phase-1, Mangolpuri, Delhi, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034723019",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000034756004": {
       "id": "1154219000034756004",
       "zohoSalesOrderId": "1154219000034756004",
@@ -5924,6 +5949,7 @@
     }
   },
   "orderIds": [
+    "1154219000034723016",
     "1154219000034756004",
     "1154219000034757003",
     "1154219000034750001",
@@ -5967,8 +5993,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-27T06:08:21.217Z",
-  "lastAttemptAt": "2026-07-27T06:29:02.615Z",
+  "lastSuccessfulSyncAt": "2026-07-27T06:29:19.565Z",
+  "lastAttemptAt": "2026-07-27T06:29:19.565Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
