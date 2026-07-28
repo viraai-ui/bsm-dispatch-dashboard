@@ -1,7 +1,7 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { getSyncedOrder } from '@/lib/synced-orders'
-import { listMediaProofOrders, proceedWithoutVideo, registerR2Video, submitMediaProof, type MediaStage } from '@/lib/media-proof'
+import { deleteMediaVideo, listMediaProofOrders, proceedWithoutVideo, registerR2Video, submitMediaProof, type MediaStage } from '@/lib/media-proof'
 
 const stage: MediaStage = 'loading'
 
@@ -20,6 +20,10 @@ export async function POST(request: Request) {
     if (!order) return apiError('Order not found', 404)
     if (body.action === 'submit') return apiOk({ record: await submitMediaProof(order, stage) })
     if (body.action === 'proceed_without_video') return apiOk({ record: await proceedWithoutVideo(order, stage) })
+    if (body.action === 'delete_video') {
+      if (!body.machineId || !body.videoId) return apiError('Missing video delete data', 400)
+      return apiOk({ record: await deleteMediaVideo(order, String(body.machineId), String(body.videoId), stage) })
+    }
     if (body.action === 'register_r2_video') {
       if (!body.machineId || !body.name || !body.r2Key || !body.url) return apiError('Missing R2 video data', 400)
       return apiOk({ record: await registerR2Video(order, String(body.machineId), { name: String(body.name), type: String(body.type || 'video/mp4'), key: String(body.r2Key), url: String(body.url), expiresAt: body.expiresAt ? String(body.expiresAt) : null }, stage) })

@@ -29,7 +29,6 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
       setOrders(json.data.orders || [])
       setRecords(json.data.records || {})
     } catch (err) { setError(err instanceof Error ? err.message : 'Could not load video queue') }
-
   }
 
   function status(order: Order) {
@@ -80,6 +79,18 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
     finally { setBusy('') }
   }
 
+  async function deleteVideo(unitId: string, videoId: string) {
+    if (!window.confirm('Delete this uploaded video?')) return
+    setBusy(`delete-${videoId}`); setMessage('')
+    try {
+      const response = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'delete_video', orderId: order.id, machineId: unitId, videoId }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Delete failed')
+      onChanged(json.data.record)
+    } catch (err) { setMessage(err instanceof Error ? err.message : 'Delete failed') }
+    finally { setBusy('') }
+  }
+
   async function submit() {
     if (!window.confirm(`Submit ${title.toLowerCase()} for ${order.salesOrderNumber}?`)) return
     setBusy('submit'); setMessage('')
@@ -106,19 +117,23 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
     finally { setBusy('') }
   }
 
-  return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card media-mobile-modal"><div className="modal-head media-modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{title}</p></div><button className="drawer-close" onClick={onClose}>×</button></div><div className="media-modal-body">{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}{mode === 'loading' ? <LoadingVideoPanel videos={loadingVideos} busy={busy} progress={progressByUnit[LOADING_ORDER_UNIT_ID] || 0} onUpload={(files) => upload(LOADING_ORDER_UNIT_ID, files)} /> : <PackingVideoPanel order={order} record={record} busy={busy} progressByUnit={progressByUnit} onUpload={upload} />}</div><section className="modal-actions media-submit-bar"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>Skip</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit'}</button></section></section></div>
+  return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card media-mobile-modal"><div className="modal-head media-modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{title}</p></div><button className="drawer-close" onClick={onClose}>×</button></div><div className="media-modal-body">{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}{mode === 'loading' ? <LoadingVideoPanel videos={loadingVideos} busy={busy} progress={progressByUnit[LOADING_ORDER_UNIT_ID] || 0} onUpload={(files) => upload(LOADING_ORDER_UNIT_ID, files)} onDelete={(videoId) => deleteVideo(LOADING_ORDER_UNIT_ID, videoId)} /> : <PackingVideoPanel order={order} record={record} busy={busy} progressByUnit={progressByUnit} onUpload={upload} onDelete={deleteVideo} />}</div><section className="modal-actions media-submit-bar"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>Skip</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit'}</button></section></section></div>
 }
 
-function LoadingVideoPanel({ videos, busy, progress, onUpload }: { videos: MediaUpload[]; busy: string; progress: number; onUpload: (files: FileList | null) => void }) {
+function LoadingVideoPanel({ videos, busy, progress, onUpload, onDelete }: { videos: MediaUpload[]; busy: string; progress: number; onUpload: (files: FileList | null) => void; onDelete: (videoId: string) => void }) {
   const remaining = MAX_LOADING_VIDEOS - videos.length
-  return <section className="loading-video-panel"><div className="loading-video-drop"><div><strong>Loading Videos</strong><span>{videos.length}/{MAX_LOADING_VIDEOS} uploaded</span></div><label className={`btn red full ${remaining <= 0 ? 'disabled' : ''}`}>Upload Loading Video<input hidden disabled={remaining <= 0 || Boolean(busy)} type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(event.target.files)} /></label>{busy === LOADING_ORDER_UNIT_ID && <div className="mobile-upload-progress"><span>Uploading {progress || 0}%</span><progress value={progress || 0} max={100} /></div>}</div><Previews files={videos} /></section>
+  return <section className="loading-video-panel"><div className="loading-video-drop"><div><strong>Loading Videos</strong><span>{videos.length}/{MAX_LOADING_VIDEOS} uploaded</span></div><VideoUploadChoices disabled={remaining <= 0 || Boolean(busy)} onUpload={onUpload} galleryMultiple />{busy === LOADING_ORDER_UNIT_ID && <div className="mobile-upload-progress"><span>Uploading {progress || 0}%</span><progress value={progress || 0} max={100} /></div>}</div><Previews files={videos} onDelete={onDelete} busy={busy} /></section>
 }
 
-function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload }: { order: Order; record?: MediaProofRecord; busy: string; progressByUnit: Record<string, number>; onUpload: (unitId: string, files: FileList | null) => void }) {
-  return <><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} /></td><td><label className="btn light">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(machine.id, event.target.files)} /></label>{busy === machine.id && <span className="muted"> Uploading {progressByUnit[machine.id] || 0}%</span>}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine, index) => <article className="media-unit-card" key={machine.id}><div className="media-unit-top"><i>{index + 1}</i><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div></div>{(record?.units?.[machine.id]?.videos?.length || 0) > 0 && <span className="upload-check">✓</span>}<Previews files={record?.units?.[machine.id]?.videos || []} /><label className="btn red full">Upload Video<input hidden type="file" accept="video/*" capture="environment" multiple onChange={(event) => onUpload(machine.id, event.target.files)} /></label>{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByUnit[machine.id] || 0}%</span><progress value={progressByUnit[machine.id] || 0} max={100} /></div>}</article>)}</div></>
+function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDelete }: { order: Order; record?: MediaProofRecord; busy: string; progressByUnit: Record<string, number>; onUpload: (unitId: string, files: FileList | null) => void; onDelete: (unitId: string, videoId: string) => void }) {
+  return <><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} onDelete={(videoId) => onDelete(machine.id, videoId)} busy={busy} /></td><td><VideoUploadChoices disabled={Boolean(busy)} onUpload={(files) => onUpload(machine.id, files)} galleryMultiple />{busy === machine.id && <span className="muted"> Uploading {progressByUnit[machine.id] || 0}%</span>}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine, index) => <article className="media-unit-card" key={machine.id}><div className="media-unit-top"><i>{index + 1}</i><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div></div>{(record?.units?.[machine.id]?.videos?.length || 0) > 0 && <span className="upload-check">✓</span>}<Previews files={record?.units?.[machine.id]?.videos || []} onDelete={(videoId) => onDelete(machine.id, videoId)} busy={busy} /><VideoUploadChoices disabled={Boolean(busy)} onUpload={(files) => onUpload(machine.id, files)} galleryMultiple />{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByUnit[machine.id] || 0}%</span><progress value={progressByUnit[machine.id] || 0} max={100} /></div>}</article>)}</div></>
 }
 
-function Previews({ files }: { files: MediaUpload[] }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id}><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}</span>) : <em>No videos yet</em>}</div> }
+function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | null) => void; galleryMultiple?: boolean }) {
+  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => onUpload(event.target.files)} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => onUpload(event.target.files)} /></label></div>
+}
+
+function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
 
 async function uploadVideoFile(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
   return uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)

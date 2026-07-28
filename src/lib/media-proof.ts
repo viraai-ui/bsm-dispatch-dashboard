@@ -174,6 +174,24 @@ export async function registerR2Video(order: Order, machineId: string, upload: {
   return registerStoredVideo(order, machineId, { name: upload.name, type: upload.type, fileId: null, url: upload.url, key: upload.key, expiresAt: upload.expiresAt, provider: 'r2' }, stage)
 }
 
+export async function deleteMediaVideo(order: Order, machineId: string, videoId: string, stage: MediaStage = 'packing') {
+  const path = mediaPath(stage)
+  const store = await readMediaProofStore(stage)
+  const record = store.records[order.id]
+  if (!record) throw new Error(`No ${stageLabel(stage)} record found for this order`)
+  const unit = record.units[machineId]
+  if (!unit) throw new Error('Video not found')
+  const nextVideos = (unit.videos || []).filter((video) => video.id !== videoId)
+  if (nextVideos.length === (unit.videos || []).length) throw new Error('Video not found')
+  record.units[machineId] = { ...unit, videos: nextVideos }
+  if (!record.units[machineId].photos.length && !record.units[machineId].videos.length) delete record.units[machineId]
+  record.submittedAt = null
+  record.videoNotRequired = false
+  store.records[order.id] = record
+  await githubWriteJson(path, store, `Delete ${stageLabel(stage)} video for ${order.salesOrderNumber}`)
+  return record
+}
+
 async function registerStoredVideo(order: Order, machineId: string, upload: { name: string; type: string; fileId: string | null; url: string | null; key?: string | null; expiresAt?: string | null; provider: 'r2' | 'workdrive' }, stage: MediaStage) {
   const path = mediaPath(stage)
   const store = await readMediaProofStore(stage)
