@@ -631,6 +631,15 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .orders-status-filter { display: flex; align-items: center; gap: 8px; min-width: 214px; padding: 6px 8px 6px 12px; border: 1px solid #e2e8f0; border-radius: 16px; background: #f8fafc; box-shadow: inset 0 1px 0 rgba(255,255,255,.82); }
 .orders-status-filter span { color: #64748b; font-size: 11px; font-weight: 950; letter-spacing: .08em; text-transform: uppercase; }
 .orders-status-filter select { flex: 1; min-width: 0; height: 32px; border: 0; outline: 0; background: transparent; color: #0f172a; font-size: 13px; font-weight: 900; cursor: pointer; }
+.warranty-date-cell { color: #0f172a; font-weight: 900; }
+.public-database-shell { min-height: 100svh; padding: 22px; background: radial-gradient(circle at top left, rgba(200,16,46,.10), transparent 30rem), #f8fafc; }
+.public-database-brand { max-width: 1240px; margin: 0 auto 16px; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 22px; background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 16px 42px rgba(15,23,42,.07); }
+.public-database-brand img { width: 42px; height: 42px; object-fit: contain; border-radius: 14px; }
+.public-database-brand strong { display: block; color: #0f172a; font-size: 18px; letter-spacing: -.03em; }
+.public-database-brand span { display: block; color: #64748b; font-size: 12px; font-weight: 850; }
+.public-database-view { max-width: 1240px; margin: 0 auto; display: grid; gap: 14px; }
+.public-database-view .search-panel { margin-bottom: 0; }
+.public-database-view .database-list-card { margin: 0; }
 .compact-view-btn, .tiny-view { width: auto; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 12px; }
 .mobile-card-topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .mobile-order-tap-card { cursor: pointer; }
