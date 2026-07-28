@@ -630,7 +630,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .orders-list-controls { display: flex; align-items: center; gap: 12px; }
 .orders-status-filter { display: flex; align-items: center; gap: 8px; min-width: 150px; height: 46px; min-height: 46px; max-height: 46px; padding: 0 14px; border: 1px solid #e2e8f0; border-radius: 16px; background: #f8fafc; box-shadow: inset 0 1px 0 rgba(255,255,255,.82); }
 .orders-status-filter span { color: #64748b; font-size: 11px; font-weight: 950; letter-spacing: .08em; text-transform: uppercase; }
-.orders-status-filter select { flex: 1; min-width: 0; height: 32px; border: 0; outline: 0; background: transparent; color: #0f172a; font-size: 13px; font-weight: 900; cursor: pointer; }
+.orders-status-filter select { flex: 1; width: 100%; min-width: 0; height: 32px; border: 0; outline: 0; background: transparent; color: #0f172a; font-size: 13px; font-weight: 900; cursor: pointer; }
 .warranty-date-cell { color: #0f172a; font-weight: 900; }
 .public-database-shell { min-height: 100svh; padding: 22px; background: radial-gradient(circle at top left, rgba(200,16,46,.10), transparent 30rem), #f8fafc; }
 .public-database-brand { max-width: 1240px; margin: 0 auto 16px; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 22px; background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 16px 42px rgba(15,23,42,.07); }
@@ -655,9 +655,10 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .top, .passport-header { flex-direction: row; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
   .orders-page-title { display: none; }
   .orders-list-card .modal-section-title { margin-bottom: 12px; align-items: flex-start; }
-  .orders-list-controls { gap: 8px; align-items: flex-start; }
-  .orders-status-filter { min-width: 0; flex: 1 1 auto; max-width: 230px; }
-  .orders-list-card .sync-icon-btn { margin: 4px 2px 4px 0; flex: 0 0 auto; }
+  .orders-list-controls { gap: 8px; align-items: center; align-self: flex-start; }
+  .orders-status-filter { min-width: 164px; width: 164px; flex: 0 0 164px; height: 46px; min-height: 46px; padding: 0 8px 0 12px; }
+  .orders-status-filter select { height: 44px; font-size: 12px; line-height: 1; text-overflow: clip; }
+  .orders-list-card .sync-icon-btn { margin: 0 2px 0 0; flex: 0 0 46px; }
   .top .btn:not(.sync-icon-btn) { width: auto; }
   .h1 { font-size: 24px; letter-spacing: -.04em; }
   .modal-section-title { align-items: center; gap: 8px; }
