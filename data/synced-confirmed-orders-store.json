@@ -296,53 +296,6 @@
         }
       ]
     },
-    "1154219000034749017": {
-      "id": "1154219000034749017",
-      "zohoSalesOrderId": "1154219000034749017",
-      "salesOrderNumber": "SO-07583",
-      "status": "open",
-      "customerName": "Walkaroo International Pvt. Ltd. (Bangalore)",
-      "shippingAddress": "Plot No. 29-A16, Avverahalli Industrial Area, 4th and 5th Phase Badaspet, Honnenahalli, Nelamangala, Bangalore, Karnataka, 562111, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034749020",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Cover Type Bladder",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034749017-1154219000034749020-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034749017",
-          "lineItemId": "1154219000034749020",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Walkaroo International Pvt. Ltd. (Bangalore)",
-          "salesOrderNumber": "SO-07583",
-          "deliveryDate": "2026-07-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Cover Type Bladder"
-        }
-      ]
-    },
     "1154219000034729015": {
       "id": "1154219000034729015",
       "zohoSalesOrderId": "1154219000034729015",
@@ -5869,7 +5822,6 @@
     "1154219000034730016",
     "1154219000034749030",
     "1154219000034787959",
-    "1154219000034749017",
     "1154219000034729015",
     "1154219000034756004",
     "1154219000034750001",
@@ -5907,8 +5859,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-28T08:21:55.078Z",
-  "lastAttemptAt": "2026-07-28T08:35:42.389Z",
+  "lastSuccessfulSyncAt": "2026-07-28T08:35:59.805Z",
+  "lastAttemptAt": "2026-07-28T08:35:59.805Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
