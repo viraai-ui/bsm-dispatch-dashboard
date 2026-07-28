@@ -58,13 +58,21 @@ export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message =
 export async function listSyncedOrders() {
   const store = await readSyncedOrdersStore()
   const workflows = await listWorkflows()
-  return store.orderIds.map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null).filter(Boolean) as Order[]
+  const orders = store.orderIds.map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null).filter(Boolean) as Order[]
+  const seen = new Set(orders.map((order) => order.id))
+  for (const workflow of Object.values(workflows)) {
+    if (!workflow.processedOrder || seen.has(workflow.processedOrder.id)) continue
+    orders.push(applyWorkflow(workflow.processedOrder, workflow))
+    seen.add(workflow.processedOrder.id)
+  }
+  return orders
 }
 
 export async function getSyncedOrder(id: string) {
   const store = await readSyncedOrdersStore()
   const workflows = await listWorkflows()
-  const order = store.orders[id] || Object.values(store.orders).find((item) => item.zohoSalesOrderId === id || item.salesOrderNumber === id) || null
+  const workflowMatch = Object.values(workflows).find((item) => item.processedOrder && (item.processedOrder.id === id || item.processedOrder.zohoSalesOrderId === id || item.processedOrder.salesOrderNumber === id))
+  const order = store.orders[id] || Object.values(store.orders).find((item) => item.zohoSalesOrderId === id || item.salesOrderNumber === id) || workflowMatch?.processedOrder || null
   return order ? applyWorkflow(order, workflows[order.id]) : null
 }
 
