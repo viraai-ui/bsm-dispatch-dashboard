@@ -1,5 +1,94 @@
 {
   "orders": {
+    "1154219000034758010": {
+      "id": "1154219000034758010",
+      "zohoSalesOrderId": "1154219000034758010",
+      "salesOrderNumber": "SO-07590",
+      "status": "open",
+      "customerName": "SEET KAMAL PRIVATE LIMITED",
+      "shippingAddress": "3A, KAMANI ROAD, JHOTWARA INDUSTRIAL AREA,, Jaipur, Rajasthan, 302012, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034758013",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Blade set Tape cuttiing",
+          "quantity": 3,
+          "pendingQuantity": 3,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034758010-1154219000034758013-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034758010",
+          "lineItemId": "1154219000034758013",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "SEET KAMAL PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07590",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Blade set Tape cuttiing"
+        },
+        {
+          "id": "1154219000034758010-1154219000034758013-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034758010",
+          "lineItemId": "1154219000034758013",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "SEET KAMAL PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07590",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Blade set Tape cuttiing"
+        },
+        {
+          "id": "1154219000034758010-1154219000034758013-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034758010",
+          "lineItemId": "1154219000034758013",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "SEET KAMAL PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07590",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Blade set Tape cuttiing"
+        }
+      ]
+    },
     "1154219000034734027": {
       "id": "1154219000034734027",
       "zohoSalesOrderId": "1154219000034734027",
@@ -5817,6 +5906,7 @@
     }
   },
   "orderIds": [
+    "1154219000034758010",
     "1154219000034734027",
     "1154219000034731047",
     "1154219000034730016",
@@ -5859,8 +5949,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-28T09:21:01.652Z",
-  "lastAttemptAt": "2026-07-28T09:35:43.234Z",
+  "lastSuccessfulSyncAt": "2026-07-28T09:36:01.796Z",
+  "lastAttemptAt": "2026-07-28T09:36:01.796Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
