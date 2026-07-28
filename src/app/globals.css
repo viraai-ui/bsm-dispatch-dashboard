@@ -628,7 +628,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .sync-icon-btn { width: 46px; min-width: 46px; max-width: 46px; height: 46px; min-height: 46px; max-height: 46px; padding: 0; border-radius: 16px; display: inline-grid; place-items: center; aspect-ratio: 1 / 1; font-size: 18px; line-height: 1; color: #1e40af; background: #eff6ff; border-color: #bfdbfe; }
 .orders-list-head { align-items: flex-start; }
 .orders-list-controls { display: flex; align-items: center; gap: 12px; }
-.orders-status-filter { display: flex; align-items: center; gap: 8px; min-width: 150px; padding: 6px 10px; border: 1px solid #e2e8f0; border-radius: 16px; background: #f8fafc; box-shadow: inset 0 1px 0 rgba(255,255,255,.82); }
+.orders-status-filter { display: flex; align-items: center; gap: 8px; min-width: 150px; height: 46px; min-height: 46px; max-height: 46px; padding: 0 14px; border: 1px solid #e2e8f0; border-radius: 16px; background: #f8fafc; box-shadow: inset 0 1px 0 rgba(255,255,255,.82); }
 .orders-status-filter span { color: #64748b; font-size: 11px; font-weight: 950; letter-spacing: .08em; text-transform: uppercase; }
 .orders-status-filter select { flex: 1; min-width: 0; height: 32px; border: 0; outline: 0; background: transparent; color: #0f172a; font-size: 13px; font-weight: 900; cursor: pointer; }
 .warranty-date-cell { color: #0f172a; font-weight: 900; }
