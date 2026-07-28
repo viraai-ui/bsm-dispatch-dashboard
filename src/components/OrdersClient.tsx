@@ -131,7 +131,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       <div className="modal-section-title orders-list-head">
         <div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div>
         <div className="orders-list-controls">
-          <label className="orders-status-filter"><span>Status</span><select value={statusFilter} onChange={(event) => setStatusFilter(event.target.value as OrderStage | 'all')}><option value="all">All statuses</option>{ORDER_STAGE_OPTIONS.map((stage) => <option value={stage} key={stage}>{stageLabel(stage)}</option>)}</select></label>
+          <label className="orders-status-filter" aria-label="Filter orders by status"><select value={statusFilter} onChange={(event) => setStatusFilter(event.target.value as OrderStage | 'all')}><option value="all">All statuses</option>{ORDER_STAGE_OPTIONS.map((stage) => <option value={stage} key={stage}>{stageLabel(stage)}</option>)}</select></label>
           <button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? '↻' : '⟳'}</button>
         </div>
       </div>
