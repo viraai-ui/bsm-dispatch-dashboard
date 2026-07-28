@@ -1,5 +1,280 @@
 {
   "orders": {
+    "1154219000034731047": {
+      "id": "1154219000034731047",
+      "zohoSalesOrderId": "1154219000034731047",
+      "salesOrderNumber": "SO-07587",
+      "status": "open",
+      "customerName": "Y S Automotive Pvt. Ltd.",
+      "shippingAddress": "MI 1A, Kh. No. 122, Industrial Area, Haripur Road, Selaqui, Dehradun, Uttarakhand, 248011",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034731050",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034731051",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost from BSM to Nitco Logistics Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034731047-1154219000034731050-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034731047",
+          "lineItemId": "1154219000034731050",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "Y S Automotive Pvt. Ltd.",
+          "salesOrderNumber": "SO-07587",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034730016": {
+      "id": "1154219000034730016",
+      "zohoSalesOrderId": "1154219000034730016",
+      "salesOrderNumber": "SO-07586",
+      "status": "open",
+      "customerName": "T.A. Enterprise",
+      "shippingAddress": "Ground Floor, C/O-Haripada Bhunia, Kotmukha, Alukaranbarh, Alukaranbarh, Purba Medinipur, West Bengal, 721454, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034730019",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 300,
+          "pendingQuantity": 300,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000034749030": {
+      "id": "1154219000034749030",
+      "zohoSalesOrderId": "1154219000034749030",
+      "salesOrderNumber": "SO-07585",
+      "status": "open",
+      "customerName": "Relaxo Footwears Ltd-IX (Bhiwadi)",
+      "shippingAddress": "SP-6 and SP-7, Industrial Area, Kaharani, RICO Industrial Area-(Bhiwadi Extension), Rajasthan, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034749033",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Motor with speed controller (831)",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034749034",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "motor with card (glass jar)",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034749030-1154219000034749033-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034749030",
+          "lineItemId": "1154219000034749033",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Ltd-IX (Bhiwadi)",
+          "salesOrderNumber": "SO-07585",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Motor with speed controller (831)"
+        },
+        {
+          "id": "1154219000034749030-1154219000034749034-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034749030",
+          "lineItemId": "1154219000034749034",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Ltd-IX (Bhiwadi)",
+          "salesOrderNumber": "SO-07585",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "motor with card (glass jar)"
+        },
+        {
+          "id": "1154219000034749030-1154219000034749034-2",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034749030",
+          "lineItemId": "1154219000034749034",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Ltd-IX (Bhiwadi)",
+          "salesOrderNumber": "SO-07585",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "motor with card (glass jar)"
+        }
+      ]
+    },
+    "1154219000034787959": {
+      "id": "1154219000034787959",
+      "zohoSalesOrderId": "1154219000034787959",
+      "salesOrderNumber": "SO-07584",
+      "status": "open",
+      "customerName": "CR CREATIVE",
+      "shippingAddress": "TC 67/486,CRA-153, Aishwarya Nagar, Manacaud P.O, Kallattumukku, Thiruvananthapuram, Thiruvananthapuram, Kerala, 695009",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-07-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034787964",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed) (Large Hook)",
+          "sku": "335L",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034787959-1154219000034787964-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034787959",
+          "lineItemId": "1154219000034787964",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed) (Large Hook)",
+          "sku": "335L",
+          "customerName": "CR CREATIVE",
+          "salesOrderNumber": "SO-07584",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034749017": {
+      "id": "1154219000034749017",
+      "zohoSalesOrderId": "1154219000034749017",
+      "salesOrderNumber": "SO-07583",
+      "status": "open",
+      "customerName": "Walkaroo International Pvt. Ltd. (Bangalore)",
+      "shippingAddress": "Plot No. 29-A16, Avverahalli Industrial Area, 4th and 5th Phase Badaspet, Honnenahalli, Nelamangala, Bangalore, Karnataka, 562111, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034749020",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Cover Type Bladder",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034749017-1154219000034749020-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034749017",
+          "lineItemId": "1154219000034749020",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Walkaroo International Pvt. Ltd. (Bangalore)",
+          "salesOrderNumber": "SO-07583",
+          "deliveryDate": "2026-07-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover Type Bladder"
+        }
+      ]
+    },
     "1154219000034729015": {
       "id": "1154219000034729015",
       "zohoSalesOrderId": "1154219000034729015",
@@ -5833,6 +6108,11 @@
     }
   },
   "orderIds": [
+    "1154219000034731047",
+    "1154219000034730016",
+    "1154219000034749030",
+    "1154219000034787959",
+    "1154219000034749017",
     "1154219000034729015",
     "1154219000034737027",
     "1154219000034756004",
@@ -5874,8 +6154,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-27T10:56:03.979Z",
-  "lastAttemptAt": "2026-07-28T05:12:24.003Z",
+  "lastSuccessfulSyncAt": "2026-07-28T05:12:45.043Z",
+  "lastAttemptAt": "2026-07-28T05:12:45.043Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
