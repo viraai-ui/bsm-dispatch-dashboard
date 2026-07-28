@@ -61,9 +61,10 @@ export async function listSyncedOrders() {
   const orders = store.orderIds.map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null).filter(Boolean) as Order[]
   const seen = new Set(orders.map((order) => order.id))
   for (const workflow of Object.values(workflows)) {
-    if (!workflow.processedOrder || seen.has(workflow.processedOrder.id)) continue
-    orders.push(applyWorkflow(workflow.processedOrder, workflow))
-    seen.add(workflow.processedOrder.id)
+    const workflowOrder = workflow.processedOrder || buildWorkflowOnlyOrder(workflow)
+    if (!workflowOrder || seen.has(workflowOrder.id)) continue
+    orders.push(applyWorkflow(workflowOrder, workflow))
+    seen.add(workflowOrder.id)
   }
   return orders
 }
@@ -71,8 +72,11 @@ export async function listSyncedOrders() {
 export async function getSyncedOrder(id: string) {
   const store = await readSyncedOrdersStore()
   const workflows = await listWorkflows()
-  const workflowMatch = Object.values(workflows).find((item) => item.processedOrder && (item.processedOrder.id === id || item.processedOrder.zohoSalesOrderId === id || item.processedOrder.salesOrderNumber === id))
-  const order = store.orders[id] || Object.values(store.orders).find((item) => item.zohoSalesOrderId === id || item.salesOrderNumber === id) || workflowMatch?.processedOrder || null
+  const workflowMatch = Object.values(workflows).find((item) => {
+    const workflowOrder = item.processedOrder || buildWorkflowOnlyOrder(item)
+    return workflowOrder && (workflowOrder.id === id || workflowOrder.zohoSalesOrderId === id || workflowOrder.salesOrderNumber === id)
+  })
+  const order = store.orders[id] || Object.values(store.orders).find((item) => item.zohoSalesOrderId === id || item.salesOrderNumber === id) || workflowMatch?.processedOrder || (workflowMatch ? buildWorkflowOnlyOrder(workflowMatch) : null)
   return order ? applyWorkflow(order, workflows[order.id]) : null
 }
 
@@ -127,5 +131,46 @@ function applyMachineWorkflow(machine: MachineUnit, workflow: OrderWorkflow): Ma
     serialNumber: saved.serialNumber || machine.serialNumber,
     qrToken: saved.qrToken || machine.qrToken,
     status: workflow.status === 'processed' ? 'Processed' : saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status,
+  }
+}
+
+function buildWorkflowOnlyOrder(workflow: OrderWorkflow): Order | null {
+  const workflowMachines = Object.values(workflow.machines || {}).filter((machine) => machine.serialNumber)
+  if (!workflowMachines.length || !workflow.salesOrderId || !workflow.salesOrderNumber) return null
+  const lineItemIds = Array.from(new Set(workflowMachines.map((machine) => machine.lineItemId || machine.machineUnitId).filter(Boolean)))
+  return {
+    id: workflow.salesOrderId,
+    zohoSalesOrderId: workflow.salesOrderId,
+    salesOrderNumber: workflow.salesOrderNumber,
+    status: 'open',
+    customerName: 'Workflow record',
+    shippingAddress: 'Recovered from workflow serial database',
+    salesperson: '—',
+    deliveryDate: workflow.processedAt || workflowMachines[0]?.qrGeneratedAt || '',
+    dashboardStatus: workflow.status === 'processed' ? 'Processed' : 'QR Generated',
+    reviewRequired: false,
+    lineItems: lineItemIds.map((lineItemId) => ({ id: lineItemId, itemName: 'Machine unit', sku: '—', quantity: workflowMachines.filter((machine) => (machine.lineItemId || machine.machineUnitId) === lineItemId).length || 1, pendingQuantity: 0, woodenPackingRequired: false, dispatchCategory: 'machine' })),
+    machines: workflowMachines.map((machine, index) => ({
+      id: machine.machineUnitId,
+      unitNumber: index + 1,
+      serialNumber: machine.serialNumber || '',
+      qrToken: machine.qrToken || machine.serialNumber || '',
+      orderId: workflow.salesOrderId,
+      lineItemId: machine.lineItemId || machine.machineUnitId,
+      itemName: 'Machine unit',
+      sku: '—',
+      customerName: 'Workflow record',
+      salesOrderNumber: workflow.salesOrderNumber,
+      deliveryDate: workflow.processedAt || machine.qrGeneratedAt || '',
+      status: machine.dispatchedAt ? 'Dispatched' : machine.processedAt ? 'Processed' : machine.qrStatus === 'generated' ? 'QR Generated' : 'QR Printed',
+      selectedForBatch: false,
+      woodenPacking: 'Not Required',
+      qrPasted: false,
+      qcDone: false,
+      mediaPhotos: 0,
+      mediaVideos: 0,
+      warrantyStart: machine.qrGeneratedAt?.slice(0, 10),
+      dispatchNote: machine.dispatchNote,
+    })),
   }
 }
