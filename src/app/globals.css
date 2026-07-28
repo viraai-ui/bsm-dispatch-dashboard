@@ -71,11 +71,11 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .hero-copy .eyebrow { color: #fecaca; margin-bottom: 12px; }
 .hero-copy h1 { margin: 0; font-size: clamp(42px, 5vw, 72px); letter-spacing: -.075em; line-height: .92; }
 .hero-copy p { max-width: 720px; margin: 18px 0 0; color: rgba(255,255,255,.82); font-weight: 700; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.55; }
-.hero-chips { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 22px; color: rgba(255,255,255,.78); font-weight: 850; }
+.hero-chips { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 22px; color: rgba(255,255,255,.78); font-weight: 400; }
 .hero-score-card { align-self: stretch; display: grid; align-content: center; gap: 12px; border: 1px solid rgba(255,255,255,.20); border-radius: 28px; padding: 24px; background: rgba(255,255,255,.12); backdrop-filter: blur(18px); box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 24px 50px rgba(0,0,0,.16); }
 .hero-score-card span { color: rgba(255,255,255,.78); font-size: 13px; text-transform: uppercase; letter-spacing: .12em; font-weight: 950; }
 .hero-score-card strong { font-size: clamp(54px, 6vw, 86px); letter-spacing: -.08em; line-height: .9; color: #fff; }
-.hero-score-card em { color: rgba(255,255,255,.78); font-style: normal; font-weight: 850; }
+.hero-score-card em { color: rgba(255,255,255,.78); font-style: normal; font-weight: 400; }
 .premium-progress { height: 12px; border-radius: 999px; overflow: hidden; background: rgba(255,255,255,.18); }
 .premium-progress i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #fecaca, #facc15, #22c55e); box-shadow: 0 0 24px rgba(34,197,94,.42); }
 .metric-ribbon { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
