@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270791,
+  "serialCounter": 26270797,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -2018,6 +2018,55 @@
           "qrGeneratedAt": "2026-07-28T10:19:39.405Z",
           "processedAt": "2026-07-28T10:21:07.179Z",
           "dispatchNote": "Local"
+        }
+      }
+    },
+    "1154219000034827001": {
+      "salesOrderId": "1154219000034827001",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000034827001-1154219000034827004-1": {
+          "machineUnitId": "1154219000034827001-1154219000034827004-1",
+          "lineItemId": "",
+          "serialNumber": "26270792",
+          "qrToken": "26270792",
+          "qrStatus": "pending"
+        },
+        "1154219000034827001-1154219000034827004-2": {
+          "machineUnitId": "1154219000034827001-1154219000034827004-2",
+          "lineItemId": "",
+          "serialNumber": "26270793",
+          "qrToken": "26270793",
+          "qrStatus": "pending"
+        },
+        "1154219000034827001-1154219000034827004-3": {
+          "machineUnitId": "1154219000034827001-1154219000034827004-3",
+          "lineItemId": "",
+          "serialNumber": "26270794",
+          "qrToken": "26270794",
+          "qrStatus": "pending"
+        },
+        "1154219000034827001-1154219000034827004-4": {
+          "machineUnitId": "1154219000034827001-1154219000034827004-4",
+          "lineItemId": "",
+          "serialNumber": "26270795",
+          "qrToken": "26270795",
+          "qrStatus": "pending"
+        },
+        "1154219000034827001-1154219000034827004-5": {
+          "machineUnitId": "1154219000034827001-1154219000034827004-5",
+          "lineItemId": "",
+          "serialNumber": "26270796",
+          "qrToken": "26270796",
+          "qrStatus": "pending"
+        },
+        "1154219000034827001-1154219000034827004-6": {
+          "machineUnitId": "1154219000034827001-1154219000034827004-6",
+          "lineItemId": "",
+          "serialNumber": "26270797",
+          "qrToken": "26270797",
+          "qrStatus": "pending"
         }
       }
     }
