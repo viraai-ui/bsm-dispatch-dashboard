@@ -322,53 +322,6 @@
         }
       ]
     },
-    "1154219000034737027": {
-      "id": "1154219000034737027",
-      "zohoSalesOrderId": "1154219000034737027",
-      "salesOrderNumber": "SO-07580",
-      "status": "open",
-      "customerName": "KRISHNA DEVI ENTERPRISES",
-      "shippingAddress": "PLOT NO K 22,23,24, KH NO 13/16, Adhyapak Ngr, New Delhi, West, Delhi, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034737030",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034737027-1154219000034737030-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034737027",
-          "lineItemId": "1154219000034737030",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
-          "customerName": "KRISHNA DEVI ENTERPRISES",
-          "salesOrderNumber": "SO-07580",
-          "deliveryDate": "2026-07-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034756004": {
       "id": "1154219000034756004",
       "zohoSalesOrderId": "1154219000034756004",
@@ -3022,53 +2975,6 @@
         }
       ]
     },
-    "1154219000034726002": {
-      "id": "1154219000034726002",
-      "zohoSalesOrderId": "1154219000034726002",
-      "salesOrderNumber": "SO-07569",
-      "status": "open",
-      "customerName": "Footwell Exim Pvt. Ltd.",
-      "shippingAddress": "2/194 A, New Bazar Aravankara, Pookkottur, Kerala, 676517",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034726005",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034726002-1154219000034726005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034726002",
-          "lineItemId": "1154219000034726005",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "customerName": "Footwell Exim Pvt. Ltd.",
-          "salesOrderNumber": "SO-07569",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034690004": {
       "id": "1154219000034690004",
       "zohoSalesOrderId": "1154219000034690004",
@@ -3349,31 +3255,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000034619002": {
-      "id": "1154219000034619002",
-      "zohoSalesOrderId": "1154219000034619002",
-      "salesOrderNumber": "SO-07552",
-      "status": "open",
-      "customerName": "DAANI.COM",
-      "shippingAddress": "35, KALWAR ROAD,HATHOJ, GURUKRIPA, Jaipur, Rajasthan-302012",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034619005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 75,
-          "pendingQuantity": 75,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000034608001": {
       "id": "1154219000034608001",
@@ -6114,19 +5995,16 @@
     "1154219000034787959",
     "1154219000034749017",
     "1154219000034729015",
-    "1154219000034737027",
     "1154219000034756004",
     "1154219000034750001",
     "1154219000034743020",
     "1154219000034744001",
     "1154219000034731006",
     "1154219000034739001",
-    "1154219000034726002",
     "1154219000034690004",
     "1154219000034633005",
     "1154219000034654006",
     "1154219000034623006",
-    "1154219000034619002",
     "1154219000034608001",
     "1154219000034547004",
     "1154219000034527001",
@@ -6154,8 +6032,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-28T05:12:45.043Z",
-  "lastAttemptAt": "2026-07-28T06:31:27.560Z",
+  "lastSuccessfulSyncAt": "2026-07-28T06:31:48.290Z",
+  "lastAttemptAt": "2026-07-28T06:31:48.290Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
