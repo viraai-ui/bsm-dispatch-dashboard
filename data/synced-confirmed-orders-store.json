@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034709015": {
+      "id": "1154219000034709015",
+      "zohoSalesOrderId": "1154219000034709015",
+      "salesOrderNumber": "SO-07591",
+      "status": "open",
+      "customerName": "BALAJI IMPEX",
+      "shippingAddress": "PLOT NO 484-485, NA, MIE Part A, Bahadurgarh,, Jhajjar, Haryana,, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034709018",
+          "itemName": "Side wall Stitching (sole stitch)",
+          "sku": "168",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034709015-1154219000034709018-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034709015",
+          "lineItemId": "1154219000034709018",
+          "itemName": "Side wall Stitching (sole stitch)",
+          "sku": "168",
+          "customerName": "BALAJI IMPEX",
+          "salesOrderNumber": "SO-07591",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034758010": {
       "id": "1154219000034758010",
       "zohoSalesOrderId": "1154219000034758010",
@@ -5906,6 +5953,7 @@
     }
   },
   "orderIds": [
+    "1154219000034709015",
     "1154219000034758010",
     "1154219000034734027",
     "1154219000034731047",
@@ -5949,8 +5997,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-28T10:06:02.597Z",
-  "lastAttemptAt": "2026-07-28T10:18:55.984Z",
+  "lastSuccessfulSyncAt": "2026-07-28T10:19:15.040Z",
+  "lastAttemptAt": "2026-07-28T10:19:15.040Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
