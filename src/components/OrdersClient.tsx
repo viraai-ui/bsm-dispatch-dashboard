@@ -46,6 +46,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [lastSyncAt, setLastSyncAt] = useState<string | null>(null)
   const [workflowByOrder, setWorkflowByOrder] = useState<Record<string, OrderWorkflow>>({})
   const [stageByOrder, setStageByOrder] = useState<Record<string, OrderStage>>({})
+  const [statusFilter, setStatusFilter] = useState<OrderStage | 'all'>('all')
 
   useEffect(() => {
     const cached = readCachedOrders()
@@ -102,6 +103,8 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   }
 
   const openOrders = useMemo(() => sanitizeOrders(rows), [rows])
+  const orderStage = (order: Order) => stageByOrder[order.id] || (workflowByOrder[order.id]?.status === 'processed' ? 'processed' : 'open')
+  const filteredOrders = useMemo(() => openOrders.filter((order) => statusFilter === 'all' || orderStage(order) === statusFilter), [openOrders, statusFilter, stageByOrder, workflowByOrder])
   const pending = (o: Order) => o.lineItems.length ? o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0) : '—'
   const openOrder = async (order: Order) => {
     setError('')
@@ -124,7 +127,20 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
     }
   }
   return <>
-    <section className="card orders-list-card"><div className="modal-section-title"><div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? '↻' : '⟳'}</button></div>{syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}{notice && <div className="form-success">{notice}</div>}{error && <div className="form-error">{error}</div>}<div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{openOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}>{stageLabel(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div><div className="mobile-cards">{openOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><Badge tone={stageTone(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}>{stageLabel(stageByOrder[o.id] || (workflowByOrder[o.id]?.status === 'processed' ? 'processed' : 'open'))}</Badge></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" disabled={loadingId === o.id} onClick={(event) => { event.stopPropagation(); openOrder(o) }}>{loadingId === o.id ? 'Opening…' : 'View'}</button></div></article>)}</div></section>
+    <section className="card orders-list-card">
+      <div className="modal-section-title orders-list-head">
+        <div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div>
+        <div className="orders-list-controls">
+          <label className="orders-status-filter"><span>Status</span><select value={statusFilter} onChange={(event) => setStatusFilter(event.target.value as OrderStage | 'all')}><option value="all">All statuses</option>{ORDER_STAGE_OPTIONS.map((stage) => <option value={stage} key={stage}>{stageLabel(stage)}</option>)}</select></label>
+          <button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? '↻' : '⟳'}</button>
+        </div>
+      </div>
+      {syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}
+      {notice && <div className="form-success">{notice}</div>}
+      {error && <div className="form-error">{error}</div>}
+      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{filteredOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div>
+      <div className="mobile-cards">{filteredOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" disabled={loadingId === o.id} onClick={(event) => { event.stopPropagation(); openOrder(o) }}>{loadingId === o.id ? 'Opening…' : 'View'}</button></div></article>)}</div>
+    </section>
     {active && <OrderModal order={active} stage={activeStage} workflow={activeWorkflow} onClose={() => setActive(null)} />}
   </>
 }
@@ -227,7 +243,8 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
 }
 
 
-const STAGE_FLOW: OrderStage[] = ['open', 'processed', 'packed', 'packing_video', 'loading_video', 'closed']
+const ORDER_STAGE_OPTIONS: OrderStage[] = ['open', 'processed', 'packed', 'packing_video', 'loading_video', 'closed']
+const STAGE_FLOW: OrderStage[] = ORDER_STAGE_OPTIONS
 
 function StageTracker({ stage }: { stage: OrderStage }) {
   const current = Math.max(0, STAGE_FLOW.indexOf(stage))
