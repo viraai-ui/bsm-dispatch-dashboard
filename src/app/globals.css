@@ -630,7 +630,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .video-record-error { grid-column: 1 / -1; margin: 0; padding: 8px 10px; }
 .recorder-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(2,6,23,.82); display: grid; place-items: center; padding: 14px; }
 .recorder-box { width: min(520px, 96vw); max-height: 96dvh; background: #0f172a; color: #fff; border-radius: 24px; padding: 12px; box-shadow: 0 28px 90px rgba(0,0,0,.45); display: grid; gap: 12px; }
-.recorder-box video { width: 100%; height: min(78dvh, 820px); background: #000; border-radius: 18px; object-fit: cover; aspect-ratio: 9 / 16; }
+.recorder-box video { width: 100%; height: min(78dvh, 820px); background: #000; border-radius: 18px; object-fit: contain; }
 .recorder-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .recorder-box small { color: #cbd5e1; text-align: center; font-weight: 700; }
 .media-preview-chip { position: relative; }
