@@ -115,6 +115,7 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
       const address = String(row.Address || '').trim()
       const dispatchDate = parseSheetDate(String(row['D.O.P.'] || row.DOP || row.Date || '').trim())
       const itemName = String(row['Model No.'] || row.Model || row['Machine Name'] || '').trim() || 'Machine'
+      const vendor = String(row.Make || row.make || '').trim()
       const machine: MachineUnit = {
         id: `${id}-unit`,
         unitNumber: 1,
@@ -135,6 +136,7 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
         mediaPhotos: 0,
         mediaVideos: 0,
         warrantyStart: dispatchDate,
+        vendor,
       }
       result.orders.push({
         id,
@@ -146,7 +148,7 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
         deliveryDate: dispatchDate,
         dashboardStatus: 'Dispatched',
         reviewRequired: false,
-        lineItems: [{ id: `${id}-line`, itemName, sku: '', quantity: 1, pendingQuantity: 0, woodenPackingRequired: false, dispatchCategory: 'machine', description: String(row.Remark || row.Make || '').trim() }],
+        lineItems: [{ id: `${id}-line`, itemName, sku: '', quantity: 1, pendingQuantity: 0, woodenPackingRequired: false, dispatchCategory: 'machine', description: String(row.Remark || '').trim() }],
         machines: [machine],
       })
       result.warrantyDates[id] = dispatchDate
@@ -160,11 +162,18 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
 
 function parseSheetDate(value: string) {
   const clean = value.replace(/^'/, '').trim()
+  if (/^\d{4,6}$/.test(clean)) return excelSerialDate(Number(clean))
   const match = clean.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/)
   if (!match) return clean
-  const [, dd, mm, yy] = match
+  const [, mm, dd, yy] = match
   const year = yy.length === 2 ? `20${yy}` : yy
   return `${year}-${String(mm).padStart(2, '0')}-${String(dd).padStart(2, '0')}`
+}
+
+function excelSerialDate(serial: number) {
+  const epoch = Date.UTC(1899, 11, 30)
+  const date = new Date(epoch + serial * 24 * 60 * 60 * 1000)
+  return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`
 }
 
 function safeId(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'row' }

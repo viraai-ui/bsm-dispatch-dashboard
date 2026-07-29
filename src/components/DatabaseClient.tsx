@@ -14,7 +14,21 @@ export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase()
     if (!needle) return orders
-    return orders.filter((order) => { const warranty = warrantyInfo(warrantyDates[order.id]); return [order.salesOrderNumber, order.customerName, order.salesperson, statuses[order.id]?.lifecycleLabel, statuses[order.id]?.mediaLabel, warranty.label, warranty.startLabel, warranty.endLabel, ...order.machines.map((m) => `${m.serialNumber} ${m.itemName}`)].some((value) => String(value || '').toLowerCase().includes(needle)) })
+    return orders.filter((order) => {
+      const warranty = warrantyInfo(warrantyDates[order.id])
+      return [
+        order.salesOrderNumber,
+        order.customerName,
+        order.salesperson,
+        order.deliveryDate,
+        statuses[order.id]?.lifecycleLabel,
+        statuses[order.id]?.mediaLabel,
+        warranty.label,
+        warranty.startLabel,
+        warranty.endLabel,
+        ...order.machines.map((machine) => `${machine.serialNumber} ${machine.itemName} ${machine.vendor || ''}`),
+      ].some((value) => String(value || '').toLowerCase().includes(needle))
+    })
   }, [query, orders, statuses, warrantyDates])
 
   return <div className={publicMode ? 'public-database-view' : undefined}>
@@ -26,9 +40,10 @@ export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, 
 
 function RecordModal({ order, media, status, warrantyDate, onClose }: { order: Order; media?: MediaProofRecord; status?: OrderStatusProjection; warrantyDate?: string; onClose: () => void }) {
   const warranty = warrantyInfo(warrantyDate)
+  const vendors = [...new Set(order.machines.map((machine) => machine.vendor).filter(Boolean))].join(', ')
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
-    <div className="grid two details-grid"><Info k="Order Stage" v={status?.lifecycleLabel || 'Open'} /><Info k="Media" v={status?.mediaLabel || 'No Media'} /><Info k="Warranty Until" v={warranty.endLabel} /><Info k="Warranty Status" v={warranty.label} /><Info k="Customer" v={order.customerName} /><Info k="Salesperson" v={order.salesperson || '—'} /><Info k="Address" v={order.shippingAddress || '—'} /><Info k="Delivery" v={order.deliveryDate || '—'} /></div>
-    <section className="modal-section"><h2>Units & Media</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Warranty</th><th>Valid Until</th><th>Videos</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Warranty Valid' : warranty.label}</Badge></td><td>{warranty.endLabel}</td><td>{(media?.units?.[machine.id]?.videos || []).map((file) => <a key={file.id} href={file.workdriveUrl || file.url} target="_blank">{file.name} </a>)}</td></tr>)}</tbody></table></div><div className="mobile-cards database-unit-cards">{order.machines.map((machine) => <article className="card mobile-order-card" key={machine.id}><strong>{machine.itemName}</strong><p className="muted">Serial: {machine.serialNumber || '—'}</p><div className="meta-grid"><div><span>Warranty</span><strong><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Valid' : warranty.label}</Badge></strong></div><div><span>Valid Until</span><strong>{warranty.endLabel}</strong></div></div></article>)}</div></section>
+    <div className="grid two details-grid"><Info k="Order Stage" v={status?.lifecycleLabel || 'Open'} /><Info k="Media" v={status?.mediaLabel || 'No Media'} /><Info k="Warranty Until" v={warranty.endLabel} /><Info k="Warranty Status" v={warranty.label} /><Info k="Customer" v={order.customerName} /><Info k="Salesperson" v={order.salesperson || '—'} /><Info k="Address" v={order.shippingAddress || '—'} /><Info k="Delivery" v={order.deliveryDate || '—'} />{vendors && <Info k="Vendor" v={vendors} />}</div>
+    <section className="modal-section"><h2>Units & Media</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Vendor</th><th>Warranty</th><th>Valid Until</th><th>Videos</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td>{machine.vendor || ''}</td><td><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Warranty Valid' : warranty.label}</Badge></td><td>{warranty.endLabel}</td><td>{(media?.units?.[machine.id]?.videos || []).map((file) => <a key={file.id} href={file.workdriveUrl || file.url} target="_blank">{file.name} </a>)}</td></tr>)}</tbody></table></div><div className="mobile-cards database-unit-cards">{order.machines.map((machine) => <article className="card mobile-order-card" key={machine.id}><strong>{machine.itemName}</strong><p className="muted">Serial: {machine.serialNumber || '—'}</p><div className="meta-grid"><div><span>Vendor</span><strong>{machine.vendor || ''}</strong></div><div><span>Warranty</span><strong><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Valid' : warranty.label}</Badge></strong></div><div><span>Valid Until</span><strong>{warranty.endLabel}</strong></div></div></article>)}</div></section>
   </section></div>
 }
 
@@ -44,15 +59,29 @@ function warrantyInfo(value?: string): WarrantyInfo {
 
 function parseDate(value?: string) {
   if (!value) return null
-  const text = String(value).trim()
+  const text = String(value).replace(/^'/, '').trim()
   if (!text) return null
-  const iso = Date.parse(text)
-  if (Number.isFinite(iso)) return new Date(iso)
+  if (/^\d{4,6}$/.test(text)) return excelSerialToDate(Number(text))
+  const isoMatch = text.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)
+  if (isoMatch) return safeDate(Number(isoMatch[1]), Number(isoMatch[2]), Number(isoMatch[3]))
   const match = text.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/)
-  if (!match) return null
-  const [, dd, mm, yy] = match
-  const year = Number(yy.length === 2 ? `20${yy}` : yy)
-  const parsed = new Date(year, Number(mm) - 1, Number(dd))
+  if (match) {
+    const [, mm, dd, yy] = match
+    const year = Number(yy.length === 2 ? `20${yy}` : yy)
+    return safeDate(year, Number(mm), Number(dd))
+  }
+  const parsed = Date.parse(text)
+  return Number.isFinite(parsed) ? new Date(parsed) : null
+}
+
+function excelSerialToDate(serial: number) {
+  const epoch = Date.UTC(1899, 11, 30)
+  const date = new Date(epoch + serial * 24 * 60 * 60 * 1000)
+  return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
+}
+
+function safeDate(year: number, month: number, day: number) {
+  const parsed = new Date(year, month - 1, day)
   return Number.isNaN(parsed.getTime()) ? null : parsed
 }
 
