@@ -12,6 +12,7 @@ export type MachineWorkflow = {
   processedAt?: string
   dispatchedAt?: string
   dispatchNote?: string
+  vendor?: string
 }
 
 export type OrderWorkflow = {

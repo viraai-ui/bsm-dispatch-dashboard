@@ -277,8 +277,59 @@ function buildRows(order: Order, machines: MachineUnit[], date: string, firstSNo
     'Serial No.': machine.serialNumber,
     'Model No.': machine.itemName || '',
     Remark: '',
-    Make: '',
+    Make: titleCaseVendor(machine.vendor || ''),
   }))
+}
+
+async function fetchWorksheetContent(worksheetName: string) {
+  const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName, range: 'A1:Z5000' })
+  return Array.isArray(data.range_details) ? data.range_details : []
+}
+
+function headerMapFromContent(rows: any[]) {
+  const headers = new Map<string, number>()
+  const first = rows.find((row) => Number(row.row_index) === 1)
+  for (const cell of first?.row_details || []) {
+    const header = String(cell.content || '').trim()
+    if (header) headers.set(normalizeSheetKey(header), Number(cell.column_index))
+  }
+  return headers
+}
+
+async function setCellContent(worksheetName: string, row: number, column: number, content: string) {
+  await sheetPostWithRetry({ method: 'cell.content.set', worksheet_name: worksheetName, row: String(row), column: String(column), content })
+}
+
+export async function updateSerialVendorsInZohoSheet(machines: MachineUnit[]): Promise<BackupResult> {
+  const result: BackupResult = { synced: 0, skipped: 0, configured: serialSheetConfigured(), errors: [] }
+  if (!result.configured) return result
+  const updates = machines.map((machine) => ({ serial: String(machine.serialNumber || '').trim(), vendor: titleCaseVendor(machine.vendor || '') })).filter((item) => item.serial && item.vendor)
+  if (!updates.length) return result
+  try {
+    const { worksheetName } = sheetConfig()
+    const rows = await fetchWorksheetContent(worksheetName)
+    const headers = headerMapFromContent(rows)
+    const serialColumn = headers.get(normalizeSheetKey('Serial No.')) || headers.get(normalizeSheetKey('Serial No'))
+    const makeColumn = headers.get(normalizeSheetKey('Make'))
+    if (!serialColumn || !makeColumn) throw new Error('Serial No. or Make column not found in serial sheet')
+    const bySerial = new Map(updates.map((item) => [item.serial, item.vendor]))
+    for (const row of rows) {
+      const rowIndex = Number(row.row_index)
+      if (rowIndex <= 1) continue
+      const serialCell = (row.row_details || []).find((cell: any) => Number(cell.column_index) === serialColumn)
+      const serial = String(serialCell?.content || '').trim()
+      const vendor = bySerial.get(serial)
+      if (!vendor) continue
+      await setCellContent(worksheetName, rowIndex, makeColumn, vendor)
+      result.synced += 1
+      bySerial.delete(serial)
+    }
+    result.skipped = bySerial.size
+    return result
+  } catch (error) {
+    result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet vendor update failed')
+    return result
+  }
 }
 
 async function appendSerialRows(rows: SerialSheetRecord[]) {

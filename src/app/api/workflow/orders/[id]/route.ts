@@ -2,7 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { isMachineLineItem } from '@/lib/item-classification'
-import { backupGeneratedSerialsToZohoSheet } from '@/lib/serial-sheet-backup'
+import { backupGeneratedSerialsToZohoSheet, updateSerialVendorsInZohoSheet } from '@/lib/serial-sheet-backup'
 import type { Order } from '@/types/domain'
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -49,11 +49,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         if (incomplete.length) throw new Error(`Incomplete selected machines: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         if (!['urgent', 'regular'].includes(String(body.dispatchPriority || ''))) throw new Error('Please select urgent or regular order type')
         const notes = (body.dispatchNotes || {}) as Record<string, string>
-        for (const machine of selected) machines[machine.id] = { ...machines[machine.id], machineUnitId: machine.id, lineItemId: machine.lineItemId, processedAt: now, dispatchNote: String(notes[machine.id] || '').trim() }
+        const vendors = (body.dispatchVendors || {}) as Record<string, string>
+        for (const machine of selected) machines[machine.id] = { ...machines[machine.id], machineUnitId: machine.id, lineItemId: machine.lineItemId, processedAt: now, dispatchNote: String(notes[machine.id] || '').trim(), vendor: titleCaseVendor(String(vendors[machine.id] || machine.vendor || '').trim()) }
         status = 'processed'
       }
       const processedOrder = action === 'process'
-        ? { ...order, machines: order.machines.map((machine) => ({ ...machine, dispatchNote: machines[machine.id]?.dispatchNote || machine.dispatchNote || '', ...(machines[machine.id]?.qrStatus === 'not_required' ? { status: 'QR Printed' as const } : {}) })) }
+        ? { ...order, machines: order.machines.map((machine) => ({ ...machine, dispatchNote: machines[machine.id]?.dispatchNote || machine.dispatchNote || '', vendor: machines[machine.id]?.vendor || machine.vendor || '', ...(machines[machine.id]?.qrStatus === 'not_required' ? { status: 'QR Printed' as const } : {}) })) }
         : current?.processedOrder
       return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, dispatchPriority: action === 'process' ? body.dispatchPriority : current?.dispatchPriority, processedAt: action === 'process' ? now : current?.processedAt, processedOrder, machines }
     })
@@ -66,6 +67,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       }).filter((machine) => generatedById.has(machine.id))
       sheetBackup = await backupGeneratedSerialsToZohoSheet(order, generatedMachines, generatedDate)
     }
+    if (action === 'process' && order?.id) {
+      const selectedIds = new Set((body.selectedMachineIds || []).filter(Boolean))
+      const vendorBackup = await updateSerialVendorsInZohoSheet((workflow.processedOrder?.machines || order.machines || []).filter((machine) => selectedIds.has(machine.id)))
+      sheetBackup = vendorBackup.synced || vendorBackup.skipped || vendorBackup.errors.length ? vendorBackup : sheetBackup
+    }
     return apiOk({ workflow, sheetBackup })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Workflow update failed', 400)
@@ -76,3 +82,5 @@ function selectedMachines(order: Order, selectedMachineIds?: string[]) {
   const ids = new Set((selectedMachineIds || []).filter(Boolean))
   return order.machines.filter((machine) => ids.has(machine.id))
 }
+
+function titleCaseVendor(value: string) { return value.toLowerCase().replace(/\b[a-z]/g, (letter) => letter.toUpperCase()) }

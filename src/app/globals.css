@@ -303,13 +303,14 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .dispatch-notes { color: #64748b; font-weight: 900; }
 .process-confirm-modal { position: relative; width: min(1040px, calc(100vw - 44px)); max-height: min(82svh, 720px); overflow: auto; padding: 26px 26px 22px; border: 1px solid rgba(255,255,255,.72); background: rgba(255,255,255,.97); box-shadow: 0 38px 110px rgba(2,6,23,.36); }
 .confirm-table-wrap { width: 100%; overflow-x: auto; margin-top: 14px; }
-.confirm-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; min-width: 860px; }
+.confirm-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; min-width: 980px; }
 .confirm-table th { text-align: left; color: #64748b; font-size: 10px; text-transform: uppercase; letter-spacing: .07em; padding: 0 10px; }
 .confirm-table td { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 10px; vertical-align: top; font-size: 12px; }
 .confirm-table td:first-child { border-left: 1px solid var(--line); border-radius: 14px 0 0 14px; width: 28%; }
 .confirm-table td:last-child { border-right: 1px solid var(--line); border-radius: 0 14px 14px 0; width: 25%; }
 .dispatch-note-input { width: 100%; min-height: 58px; resize: vertical; border: 1px solid var(--line); border-radius: 12px; padding: 9px 10px; font: inherit; font-size: 12px; outline: none; }
-.dispatch-note-input:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.16); }
+.vendor-input { width: 150px; min-height: 42px; border: 1px solid var(--line); border-radius: 12px; padding: 9px 10px; font: inherit; font-size: 12px; outline: none; }
+.dispatch-note-input:focus, .vendor-input:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.16); }
 .process-confirm-modal .modal-actions { position: sticky; bottom: 0; margin: 18px -26px -22px; padding: 16px 26px 0; background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.98) 36%, rgba(255,255,255,.98)); border-top: 1px solid rgba(226,232,240,.74); box-shadow: none; justify-content: flex-end; }
 .process-confirm-modal .modal-actions .btn { width: auto; min-width: 104px; box-shadow: 0 10px 22px rgba(15,23,42,.10); }
 .success-animation { display: grid; place-items: center; gap: 12px; min-height: 260px; text-align: center; }
