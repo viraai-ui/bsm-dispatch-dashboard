@@ -469,6 +469,62 @@
         "1154219000034626001-1154219000034626004-1",
         "1154219000034626001-1154219000034626004-2"
       ]
+    },
+    "1154219000034726002": {
+      "completedAt": "2026-07-29T04:59:00.883Z",
+      "order": {
+        "id": "1154219000034726002",
+        "zohoSalesOrderId": "1154219000034726002",
+        "salesOrderNumber": "SO-07569",
+        "status": "open",
+        "customerName": "Footwell Exim Pvt. Ltd.",
+        "shippingAddress": "2/194 A, New Bazar Aravankara, Pookkottur, Kerala, 676517",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034726005",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034726002-1154219000034726005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270780",
+            "qrToken": "26270780",
+            "orderId": "1154219000034726002",
+            "lineItemId": "1154219000034726005",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "Footwell Exim Pvt. Ltd.",
+            "salesOrderNumber": "SO-07569",
+            "deliveryDate": "2026-07-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-25",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034726002-1154219000034726005-1"
+      ]
     }
   }
 }
