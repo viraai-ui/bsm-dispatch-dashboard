@@ -693,6 +693,62 @@
       "machineIds": [
         "1154219000034737027-1154219000034737030-1"
       ]
+    },
+    "1154219000034703020": {
+      "completedAt": "2026-07-29T05:00:14.093Z",
+      "order": {
+        "id": "1154219000034703020",
+        "zohoSalesOrderId": "1154219000034703020",
+        "salesOrderNumber": "SO-07566",
+        "status": "open",
+        "customerName": "Vivek Gupta (URP)",
+        "shippingAddress": "Plot No.732, MIE Part-A, Bahadurgarh, Haryana, 124507",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034703023",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "String Lasting Machine",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034703020-1154219000034703023-1",
+            "unitNumber": 1,
+            "serialNumber": "26270779",
+            "qrToken": "26270779",
+            "orderId": "1154219000034703020",
+            "lineItemId": "1154219000034703023",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "Vivek Gupta (URP)",
+            "salesOrderNumber": "SO-07566",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "String Lasting Machine",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034703020-1154219000034703023-1"
+      ]
     }
   }
 }
