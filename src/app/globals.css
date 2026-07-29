@@ -627,6 +627,12 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .video-choice-btn.record { background: #eff6ff; border-color: #bfdbfe; }
 .video-choice-btn.gallery { background: #fff; border-color: #dbeafe; }
 .video-choice-btn.disabled { opacity: .48; pointer-events: none; }
+.video-record-error { grid-column: 1 / -1; margin: 0; padding: 8px 10px; }
+.recorder-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(2,6,23,.82); display: grid; place-items: center; padding: 14px; }
+.recorder-box { width: min(520px, 100%); background: #0f172a; color: #fff; border-radius: 24px; padding: 14px; box-shadow: 0 28px 90px rgba(0,0,0,.45); display: grid; gap: 12px; }
+.recorder-box video { width: 100%; max-height: 62dvh; background: #000; border-radius: 18px; object-fit: cover; }
+.recorder-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.recorder-box small { color: #cbd5e1; text-align: center; font-weight: 700; }
 .media-preview-chip { position: relative; }
 .media-delete-video { width: 28px; min-width: 28px; height: 28px; min-height: 28px; border: 0; border-radius: 999px; background: #fee2e2; color: #991b1b; font-size: 18px; font-weight: 800; line-height: 1; display: inline-grid; place-items: center; padding: 0; cursor: pointer; }
 .media-delete-video:disabled { opacity: .5; cursor: not-allowed; }

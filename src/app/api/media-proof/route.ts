@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { getSyncedOrder } from '@/lib/synced-orders'
+import { getMediaOrder } from '@/lib/media-order-resolver'
 import { deleteMediaVideo, listMediaProofOrders, proceedWithoutVideo, registerR2Video, registerWorkDriveVideo, saveMediaUpload, submitMediaProof, type MediaStage } from '@/lib/media-proof'
 
 const stage: MediaStage = 'packing'
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   if (!auth.ok) return auth.response
   try {
     const body = await request.json()
-    const order = await getSyncedOrder(String(body.orderId || ''))
+    const order = await getMediaOrder(String(body.orderId || ''))
     if (!order) return apiError('Order not found', 404)
     if (body.action === 'submit') return apiOk({ record: await submitMediaProof(order, stage) })
     if (body.action === 'proceed_without_video') return apiOk({ record: await proceedWithoutVideo(order, stage) })

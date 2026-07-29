@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 import type { MediaProofRecord, MediaUpload } from '@/lib/media-proof'
@@ -64,7 +64,7 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
   const loadingVideos = record?.units?.[LOADING_ORDER_UNIT_ID]?.videos || []
   const ready = useMemo(() => mode === 'loading' ? loadingVideos.length > 0 && loadingVideos.length <= MAX_LOADING_VIDEOS : order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.videos?.length || 0) > 0), [mode, loadingVideos.length, order, record])
 
-  async function upload(unitId: string, files: FileList | null) {
+  async function upload(unitId: string, files: FileList | File[] | null) {
     if (!files?.length) return
     const selected = Array.from(files).map((file, index) => normalizeCameraVideoFile(file, order.salesOrderNumber, unitId, index))
     if (mode === 'loading' && loadingVideos.length + selected.length > MAX_LOADING_VIDEOS) { setMessage(`Maximum ${MAX_LOADING_VIDEOS} loading videos allowed`); return }
@@ -123,18 +123,87 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
   return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card media-mobile-modal"><div className="modal-head media-modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{title}</p></div><button className="drawer-close" onClick={onClose}>×</button></div><div className="media-modal-body">{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}{mode === 'loading' ? <LoadingVideoPanel videos={loadingVideos} busy={busy} progress={progressByUnit[LOADING_ORDER_UNIT_ID] || 0} onUpload={(files) => upload(LOADING_ORDER_UNIT_ID, files)} onDelete={(videoId) => deleteVideo(LOADING_ORDER_UNIT_ID, videoId)} /> : <PackingVideoPanel order={order} record={record} busy={busy} progressByUnit={progressByUnit} onUpload={upload} onDelete={deleteVideo} />}</div><section className="modal-actions media-submit-bar"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>Skip</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit'}</button></section></section></div>
 }
 
-function LoadingVideoPanel({ videos, busy, progress, onUpload, onDelete }: { videos: MediaUpload[]; busy: string; progress: number; onUpload: (files: FileList | null) => void; onDelete: (videoId: string) => void }) {
+function LoadingVideoPanel({ videos, busy, progress, onUpload, onDelete }: { videos: MediaUpload[]; busy: string; progress: number; onUpload: (files: FileList | File[] | null) => void; onDelete: (videoId: string) => void }) {
   const remaining = MAX_LOADING_VIDEOS - videos.length
   return <section className="loading-video-panel"><div className="loading-video-drop"><div><strong>Loading Videos</strong><span>{videos.length}/{MAX_LOADING_VIDEOS} uploaded</span></div><VideoUploadChoices disabled={remaining <= 0 || Boolean(busy)} onUpload={onUpload} galleryMultiple />{busy === LOADING_ORDER_UNIT_ID && <div className="mobile-upload-progress"><span>Uploading {progress || 0}%</span><progress value={progress || 0} max={100} /></div>}</div><Previews files={videos} onDelete={onDelete} busy={busy} /></section>
 }
 
-function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDelete }: { order: Order; record?: MediaProofRecord; busy: string; progressByUnit: Record<string, number>; onUpload: (unitId: string, files: FileList | null) => void; onDelete: (unitId: string, videoId: string) => void }) {
+function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDelete }: { order: Order; record?: MediaProofRecord; busy: string; progressByUnit: Record<string, number>; onUpload: (unitId: string, files: FileList | File[] | null) => void; onDelete: (unitId: string, videoId: string) => void }) {
   return <><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Unit</th><th>Serial</th><th>Video</th><th>Upload</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td>{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td><Previews files={record?.units?.[machine.id]?.videos || []} onDelete={(videoId) => onDelete(machine.id, videoId)} busy={busy} /></td><td><VideoUploadChoices disabled={Boolean(busy)} onUpload={(files) => onUpload(machine.id, files)} galleryMultiple />{busy === machine.id && <span className="muted"> Uploading {progressByUnit[machine.id] || 0}%</span>}</td></tr>)}</tbody></table></div><div className="media-unit-cards">{order.machines.map((machine, index) => <article className="media-unit-card" key={machine.id}><div className="media-unit-top"><i>{index + 1}</i><div><strong>{machine.itemName}</strong><span>Serial: {machine.serialNumber || '—'}</span></div></div>{(record?.units?.[machine.id]?.videos?.length || 0) > 0 && <span className="upload-check">✓</span>}<Previews files={record?.units?.[machine.id]?.videos || []} onDelete={(videoId) => onDelete(machine.id, videoId)} busy={busy} /><VideoUploadChoices disabled={Boolean(busy)} onUpload={(files) => onUpload(machine.id, files)} galleryMultiple />{busy === machine.id && <div className="mobile-upload-progress"><span>Uploading {progressByUnit[machine.id] || 0}%</span><progress value={progressByUnit[machine.id] || 0} max={100} /></div>}</article>)}</div></>
 }
 
-function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | null) => void; galleryMultiple?: boolean }) {
-  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label></div>
+function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | File[] | null) => void; galleryMultiple?: boolean }) {
+  const [recording, setRecording] = useState(false)
+  const [stream, setStream] = useState<MediaStream | null>(null)
+  const [error, setError] = useState('')
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const recorderRef = useRef<MediaRecorder | null>(null)
+  const chunksRef = useRef<Blob[]>([])
+  const cancelledRef = useRef(false)
+
+  useEffect(() => {
+    if (videoRef.current && stream) videoRef.current.srcObject = stream
+    return () => {}
+  }, [stream])
+
+  async function startRecording() {
+    if (disabled || recording) return
+    setError('')
+    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
+      setError('In-app camera is not supported on this browser. Please use Gallery.')
+      return
+    }
+    try {
+      const nextStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } }, audio: true })
+      const mimeType = bestRecorderMimeType()
+      chunksRef.current = []
+      cancelledRef.current = false
+      const recorder = new MediaRecorder(nextStream, mimeType ? { mimeType } : undefined)
+      recorder.ondataavailable = (event) => { if (event.data.size > 0) chunksRef.current.push(event.data) }
+      recorder.onstop = () => {
+        const type = recorder.mimeType || mimeType || 'video/webm'
+        const blob = new Blob(chunksRef.current, { type })
+        const file = new File([blob], `recorded-video-${Date.now()}.${extensionForVideoType(type)}`, { type, lastModified: Date.now() })
+        stopStream(nextStream)
+        setStream(null)
+        setRecording(false)
+        if (cancelledRef.current) return
+        if (file.size > 0) onUpload([file])
+        else setError('Recording was empty. Please record again.')
+      }
+      recorderRef.current = recorder
+      setStream(nextStream)
+      setRecording(true)
+      recorder.start(1000)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Camera permission failed')
+    }
+  }
+
+  function stopRecording() {
+    if (recorderRef.current?.state === 'recording') recorderRef.current.stop()
+  }
+
+  function cancelRecording() {
+    const current = recorderRef.current
+    recorderRef.current = null
+    cancelledRef.current = true
+    if (current?.state === 'recording') current.stop()
+    if (stream) stopStream(stream)
+    chunksRef.current = []
+    setStream(null)
+    setRecording(false)
+  }
+
+  return <div className="video-upload-choices"><button type="button" className={`video-choice-btn record ${disabled ? 'disabled' : ''}`} disabled={disabled} onClick={startRecording}><span aria-hidden="true">📹</span><strong>Record Video</strong></button><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label>{error && <small className="form-error video-record-error">{error}</small>}{recording && <div className="recorder-overlay"><div className="recorder-box"><video ref={videoRef} autoPlay playsInline muted /><div className="recorder-actions"><button type="button" className="btn light" onClick={cancelRecording}>Cancel</button><button type="button" className="btn red" onClick={stopRecording}>Stop & Upload</button></div><small>Recording inside app — not saved to Gallery.</small></div></div>}</div>
 }
+
+function bestRecorderMimeType() {
+  const types = ['video/webm;codecs=vp9,opus', 'video/webm;codecs=vp8,opus', 'video/webm', 'video/mp4']
+  return types.find((type) => MediaRecorder.isTypeSupported(type)) || ''
+}
+
+function stopStream(stream: MediaStream) { stream.getTracks().forEach((track) => track.stop()) }
 
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
 
