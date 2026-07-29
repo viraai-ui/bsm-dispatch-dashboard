@@ -359,6 +359,36 @@
         "1154219000032974004-1154219000032974007-1",
         "1154219000032974004-1154219000032974007-2"
       ]
+    },
+    "1154219000034536002": {
+      "completedAt": "2026-07-29T04:58:19.665Z",
+      "order": {
+        "id": "1154219000034536002",
+        "zohoSalesOrderId": "1154219000034536002",
+        "salesOrderNumber": "SO-07547",
+        "status": "open",
+        "customerName": "SHASHWAT HERBAL",
+        "shippingAddress": "B/H ADIT CAMPUS, 409 1 2, NEW V V NAGAR GANA ROAD, GANA ROAD BIOTECH COLLEGE, ANAND, Gujarat, 388120, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-23",
+        "dashboardStatus": "Review Required",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034536005",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": []
     }
   }
 }
