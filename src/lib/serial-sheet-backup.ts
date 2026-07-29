@@ -3,6 +3,7 @@ import { githubReadJson, listWorkflows } from './workflow-store'
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
+const DEFAULT_DATABASE_WORKSHEETS = ['Sr.No.26-27', 'Sr. No.25-26', 'Sr.No.25-26']
 
 type SerialSheetRecord = {
   'S.No.': string
@@ -94,17 +95,26 @@ async function sheetPostWithRetry(params: Record<string, string>, retries = 3) {
   throw lastError instanceof Error ? lastError : new Error('Zoho Sheet request failed')
 }
 
-async function fetchSerialRecords() {
-  const { worksheetName } = sheetConfig()
+async function fetchSerialRecords(worksheetName = sheetConfig().worksheetName) {
   const data = await sheetPostWithRetry({ method: 'worksheet.records.fetch', worksheet_name: worksheetName })
   return Array.isArray(data.records) ? data.records : Array.isArray(data.data) ? data.data : []
+}
+
+async function fetchDatabaseSerialRecords() {
+  const configured = process.env.ZOHO_SERIAL_DATABASE_SHEET_NAMES
+    ? process.env.ZOHO_SERIAL_DATABASE_SHEET_NAMES.split(',').map((name) => name.trim()).filter(Boolean)
+    : DEFAULT_DATABASE_WORKSHEETS
+  const records = await Promise.all([...new Set(configured)].map(async (worksheetName) => {
+    try { return await fetchSerialRecords(worksheetName) } catch { return [] }
+  }))
+  return records.flat()
 }
 
 export async function listSerialSheetDatabaseOrders(existingSerials = new Set<string>()): Promise<SerialSheetDatabaseResult> {
   const result: SerialSheetDatabaseResult = { orders: [], warrantyDates: {}, configured: serialSheetConfigured(), errors: [] }
   if (!result.configured) return result
   try {
-    const records = await fetchSerialRecords()
+    const records = await fetchDatabaseSerialRecords()
     const usedIds = new Set<string>()
     for (const row of records) {
       const serialNumber = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()
@@ -153,6 +163,7 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
       })
       result.warrantyDates[id] = dispatchDate
     }
+    result.orders.sort((a, b) => serialValue(b) - serialValue(a))
     return result
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet database import failed')
@@ -171,6 +182,7 @@ function sheetValue(row: Record<string, unknown>, names: string[]) {
 }
 
 function normalizeSheetKey(value: string) { return value.toLowerCase().replace(/[^a-z0-9]/g, '') }
+function serialValue(order: Order) { return Number(String(order.machines[0]?.serialNumber || order.salesOrderNumber || '').replace(/[^0-9]/g, '')) || 0 }
 
 function parseSheetDate(value: string) {
   const clean = value.replace(/^'/, '').trim()
