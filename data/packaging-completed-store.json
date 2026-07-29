@@ -973,6 +973,130 @@
       "machineIds": [
         "1154219000034874001-1154219000034874004-1"
       ]
+    },
+    "1154219000034654006": {
+      "completedAt": "2026-07-29T07:39:35.722Z",
+      "order": {
+        "id": "1154219000034654006",
+        "zohoSalesOrderId": "1154219000034654006",
+        "salesOrderNumber": "SO-07558",
+        "status": "open",
+        "customerName": "SUPER SPEED SHOES COMPONENTS",
+        "shippingAddress": "Plot No. 507, Mundka, West Delhi, Delhi-110041, Delhi",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034654009",
+            "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
+            "sku": "601 - 8",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034654010",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034654011",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034654006-1154219000034654009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270772",
+            "qrToken": "26270772",
+            "orderId": "1154219000034654006",
+            "lineItemId": "1154219000034654009",
+            "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
+            "sku": "601 - 8",
+            "customerName": "SUPER SPEED SHOES COMPONENTS",
+            "salesOrderNumber": "SO-07558",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": ""
+          },
+          {
+            "id": "1154219000034654006-1154219000034654010-1",
+            "unitNumber": 2,
+            "serialNumber": "26270773",
+            "qrToken": "26270773",
+            "orderId": "1154219000034654006",
+            "lineItemId": "1154219000034654010",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "SUPER SPEED SHOES COMPONENTS",
+            "salesOrderNumber": "SO-07558",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": ""
+          },
+          {
+            "id": "1154219000034654006-1154219000034654011-1",
+            "unitNumber": 3,
+            "serialNumber": "26270774",
+            "qrToken": "26270774",
+            "orderId": "1154219000034654006",
+            "lineItemId": "1154219000034654011",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "SUPER SPEED SHOES COMPONENTS",
+            "salesOrderNumber": "SO-07558",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034654006-1154219000034654009-1",
+        "1154219000034654006-1154219000034654010-1",
+        "1154219000034654006-1154219000034654011-1"
+      ]
     }
   }
 }
