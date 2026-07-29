@@ -1209,6 +1209,96 @@
       "machineIds": [
         "1154219000034838001-1154219000034838004-1"
       ]
+    },
+    "1154219000034832001": {
+      "completedAt": "2026-07-29T07:40:58.545Z",
+      "order": {
+        "id": "1154219000034832001",
+        "zohoSalesOrderId": "1154219000034832001",
+        "salesOrderNumber": "SO-07594",
+        "status": "open",
+        "customerName": "HANDTEX HOME",
+        "shippingAddress": "GROUND FLOOR, PLOT NO. 10, OFFICE NO. 1, RISALU ROAD, NEAR INDO FARM, Panipat,, Panipat, Haryana, 132103, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034832004",
+            "itemName": "Tape Cutting Machine [Mechanical Model]",
+            "sku": "817",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034832005",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034832001-1154219000034832004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270798",
+            "qrToken": "26270798",
+            "orderId": "1154219000034832001",
+            "lineItemId": "1154219000034832004",
+            "itemName": "Tape Cutting Machine [Mechanical Model]",
+            "sku": "817",
+            "customerName": "HANDTEX HOME",
+            "salesOrderNumber": "SO-07594",
+            "deliveryDate": "2026-07-28",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000034832001-1154219000034832005-1",
+            "unitNumber": 2,
+            "serialNumber": "26270799",
+            "qrToken": "26270799",
+            "orderId": "1154219000034832001",
+            "lineItemId": "1154219000034832005",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "HANDTEX HOME",
+            "salesOrderNumber": "SO-07594",
+            "deliveryDate": "2026-07-28",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034832001-1154219000034832004-1",
+        "1154219000034832001-1154219000034832005-1"
+      ]
     }
   }
 }
