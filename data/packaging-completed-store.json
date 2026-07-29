@@ -389,6 +389,86 @@
         "dispatchPriority": "regular"
       },
       "machineIds": []
+    },
+    "1154219000034626001": {
+      "completedAt": "2026-07-29T04:58:48.491Z",
+      "order": {
+        "id": "1154219000034626001",
+        "zohoSalesOrderId": "1154219000034626001",
+        "salesOrderNumber": "SO-07554",
+        "status": "open",
+        "customerName": "LAKSHMI FOOTWEAR",
+        "shippingAddress": "Ground Floor, 1st, 2nd, 3rd, and 4th Floors, 1-26, PALAGANI STREET, AMBAPURAM PANCHAYATI, Inner Ring Road, Prasada Raju Builders,, Vijayawada, NTR, Andhra Pradesh, 520012, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034626004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034626001-1154219000034626004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270764",
+            "qrToken": "26270764",
+            "orderId": "1154219000034626001",
+            "lineItemId": "1154219000034626004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "LAKSHMI FOOTWEAR",
+            "salesOrderNumber": "SO-07554",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-23",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000034626001-1154219000034626004-2",
+            "unitNumber": 2,
+            "serialNumber": "26270765",
+            "qrToken": "26270765",
+            "orderId": "1154219000034626001",
+            "lineItemId": "1154219000034626004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "LAKSHMI FOOTWEAR",
+            "salesOrderNumber": "SO-07554",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-23",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034626001-1154219000034626004-1",
+        "1154219000034626001-1154219000034626004-2"
+      ]
     }
   }
 }
