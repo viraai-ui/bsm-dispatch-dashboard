@@ -1299,6 +1299,62 @@
         "1154219000034832001-1154219000034832004-1",
         "1154219000034832001-1154219000034832005-1"
       ]
+    },
+    "1154219000034729015": {
+      "completedAt": "2026-07-29T07:41:24.259Z",
+      "order": {
+        "id": "1154219000034729015",
+        "zohoSalesOrderId": "1154219000034729015",
+        "salesOrderNumber": "SO-07582",
+        "status": "open",
+        "customerName": "DWARKA FOOTCARE",
+        "shippingAddress": "GROUND, 1st FLOOR, 11ND FLOOR, C-535, DSIDC INDUSTRIAL AREA, NARELA, North West Delhi, Delhi, 110040, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034729018",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034729015-1154219000034729018-1",
+            "unitNumber": 1,
+            "serialNumber": "26270787",
+            "qrToken": "26270787",
+            "orderId": "1154219000034729015",
+            "lineItemId": "1154219000034729018",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "DWARKA FOOTCARE",
+            "salesOrderNumber": "SO-07582",
+            "deliveryDate": "2026-07-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-27",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034729015-1154219000034729018-1"
+      ]
     }
   }
 }
