@@ -1,39 +1,45 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useDeferredValue, useMemo, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 import type { MediaProofRecord } from '@/lib/media-proof'
 import type { OrderStatusProjection } from '@/lib/status-projection'
 
 type WarrantyInfo = { label: 'Warranty Valid' | 'Warranty Ended' | 'Warranty Not Started'; tone: 'green' | 'red' | 'gray'; startLabel: string; endLabel: string }
+const MAX_VISIBLE_ROWS = 250
 
 export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, warrantyDates = {}, publicMode = false }: { orders?: Order[]; mediaRecords?: Record<string, MediaProofRecord>; statuses?: Record<string, OrderStatusProjection>; warrantyDates?: Record<string, string>; publicMode?: boolean }) {
   const [query, setQuery] = useState('')
+  const deferredQuery = useDeferredValue(query)
   const [active, setActive] = useState<Order | null>(null)
+  const searchableOrders = useMemo(() => orders.map((order) => {
+    const warranty = warrantyInfo(warrantyDates[order.id])
+    const haystack = [
+      order.salesOrderNumber,
+      order.customerName,
+      order.salesperson,
+      order.deliveryDate,
+      statuses[order.id]?.lifecycleLabel,
+      statuses[order.id]?.mediaLabel,
+      warranty.label,
+      warranty.startLabel,
+      warranty.endLabel,
+      ...order.machines.map((machine) => `${machine.serialNumber} ${machine.itemName} ${machine.vendor || ''}`),
+    ].join(' ').toLowerCase()
+    return { order, haystack }
+  }), [orders, statuses, warrantyDates])
   const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase()
+    const needle = deferredQuery.trim().toLowerCase()
     if (!needle) return orders
-    return orders.filter((order) => {
-      const warranty = warrantyInfo(warrantyDates[order.id])
-      return [
-        order.salesOrderNumber,
-        order.customerName,
-        order.salesperson,
-        order.deliveryDate,
-        statuses[order.id]?.lifecycleLabel,
-        statuses[order.id]?.mediaLabel,
-        warranty.label,
-        warranty.startLabel,
-        warranty.endLabel,
-        ...order.machines.map((machine) => `${machine.serialNumber} ${machine.itemName} ${machine.vendor || ''}`),
-      ].some((value) => String(value || '').toLowerCase().includes(needle))
-    })
-  }, [query, orders, statuses, warrantyDates])
+    return searchableOrders.filter((item) => item.haystack.includes(needle)).map((item) => item.order)
+  }, [deferredQuery, orders, searchableOrders])
+  const visibleRows = useMemo(() => filtered.slice(0, MAX_VISIBLE_ROWS), [filtered])
+  const hiddenCount = Math.max(0, filtered.length - visibleRows.length)
 
   return <div className={publicMode ? 'public-database-view' : undefined}>
-    <section className="card search-panel database-search-panel"><input placeholder="Search SO, serial, customer…" value={query} onChange={(event) => setQuery(event.target.value)} /><Badge tone="blue">{filtered.length}</Badge></section>
-    <section className="card database-list-card"><h2>Database</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Units</th><th>Warranty Valid Till</th><th>Media</th><th>Action</th></tr></thead><tbody>{filtered.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); return <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.customerName}</td><td>{order.machines.length}</td><td><strong className="warranty-date-cell">{warranty.endLabel}</strong></td><td><Badge tone={status?.mediaTone || 'gray'}>{status?.mediaLabel || 'No Media'}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr> })}</tbody></table></div><div className="mobile-cards">{filtered.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); return <article className="card mobile-order-card database-mobile-card mobile-order-tap-card compact-operational-card" key={order.id} onClick={() => setActive(order)}><div className="compact-card-main"><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><Badge tone={warranty.tone}>{warranty.endLabel}</Badge></div><div className="compact-card-side"><div><span>Units</span><strong>{order.machines.length}</strong></div><div><span>Media</span><strong>{status?.mediaLabel || 'No Media'}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); setActive(order) }}>View</button></div></article> })}</div></section>
+    <section className="card search-panel database-search-panel"><input placeholder="Search SO, serial, customer…" value={query} onChange={(event) => setQuery(event.target.value)} /><Badge tone="blue">{filtered.length}</Badge>{hiddenCount > 0 && <span className="database-result-note">Showing first {MAX_VISIBLE_ROWS}. Search serial/customer to narrow.</span>}</section>
+    <section className="card database-list-card"><h2>Database</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Units</th><th>Warranty Valid Till</th><th>Media</th><th>Action</th></tr></thead><tbody>{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); return <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.customerName}</td><td>{order.machines.length}</td><td><strong className="warranty-date-cell">{warranty.endLabel}</strong></td><td><Badge tone={status?.mediaTone || 'gray'}>{status?.mediaLabel || 'No Media'}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr> })}</tbody></table></div><div className="mobile-cards">{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); return <article className="card mobile-order-card database-mobile-card mobile-order-tap-card compact-operational-card" key={order.id} onClick={() => setActive(order)}><div className="compact-card-main"><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><Badge tone={warranty.tone}>{warranty.endLabel}</Badge></div><div className="compact-card-side"><div><span>Units</span><strong>{order.machines.length}</strong></div><div><span>Media</span><strong>{status?.mediaLabel || 'No Media'}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); setActive(order) }}>View</button></div></article> })}</div></section>
     {active && <RecordModal order={active} media={mediaRecords[active.id]} status={statuses[active.id]} warrantyDate={warrantyDates[active.id]} onClose={() => setActive(null)} />}
   </div>
 }
