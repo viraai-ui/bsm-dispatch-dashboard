@@ -4,8 +4,9 @@ import { jwtVerify } from 'jose'
 const cookieName = 'bsm_dispatch_session'
 const dispatchOnly = '/packaging-tv'
 const mediaOnly = '/media-proof'
+const databaseOnly = '/database'
 const mediaAllowed = ['/media-proof', '/loading-video']
-const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/loading-video', '/database', '/machine-lookup', '/settings']
+const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/loading-video', '/database', '/machine-lookup', '/settings', '/units-generator']
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
@@ -24,6 +25,9 @@ export async function proxy(request: NextRequest) {
     }
     if (payload.role === 'Media' && !mediaAllowed.includes(pathname)) {
       return NextResponse.redirect(new URL(mediaOnly, request.url))
+    }
+    if (payload.role === 'Database' && pathname !== databaseOnly) {
+      return NextResponse.redirect(new URL(databaseOnly, request.url))
     }
     if (payload.role === 'Operations' && pathname === '/settings') {
       return NextResponse.redirect(new URL('/', request.url))

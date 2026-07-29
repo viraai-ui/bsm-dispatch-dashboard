@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useAuth } from './AuthGate'
 import type { AppRole, SafeUser } from '@/lib/auth'
 
-const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media']
+const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media', 'Database']
 type Draft = { name: string; email: string; username: string; role: AppRole; password: string; active: boolean }
 const emptyDraft: Draft = { name: '', email: '', username: '', role: 'Dispatch', password: '', active: true }
 

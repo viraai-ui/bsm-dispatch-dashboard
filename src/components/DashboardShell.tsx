@@ -22,11 +22,12 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const { user, logout } = useAuth()
   const dispatchOnly = user.role === 'Dispatch'
   const mediaOnly = user.role === 'Media'
-  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof' || item.href === '/loading-video') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
+  const databaseOnly = user.role === 'Database'
+  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof' || item.href === '/loading-video') : databaseOnly ? nav.filter((item) => item.href === '/database') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings') : nav
   const canUseUtilities = user.role === 'Admin' || user.role === 'Operations'
   const visibleUtilityNav = canUseUtilities ? utilityNav : []
   const mobileHidden = new Set(['/packaging-tv', '/settings'])
-  const mobileNav = [...visibleNav, ...visibleUtilityNav].filter((item) => !mobileHidden.has(item.href))
+  const mobileNav = visibleNav.filter((item) => !mobileHidden.has(item.href))
   const singleModule = dispatchOnly
   return <div className={singleModule ? 'shell dispatch-shell single-module-shell' : 'shell'}>
     {!singleModule && <MobileMenu nav={mobileNav} active={active} onLogout={logout} />}
