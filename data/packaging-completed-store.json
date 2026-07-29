@@ -749,6 +749,62 @@
       "machineIds": [
         "1154219000034703020-1154219000034703023-1"
       ]
+    },
+    "1154219000034693002": {
+      "completedAt": "2026-07-29T05:00:36.336Z",
+      "order": {
+        "id": "1154219000034693002",
+        "zohoSalesOrderId": "1154219000034693002",
+        "salesOrderNumber": "SO-07565",
+        "status": "open",
+        "customerName": "GARWA GRAPHICS",
+        "shippingAddress": "E-6 DAL MIL ROAD, AMAR COLONY,KAMRUDDIN NAGAR, NANGLOI, West Delhi,, Delhi,, 110041, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034693005",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034693002-1154219000034693005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270778",
+            "qrToken": "26270778",
+            "orderId": "1154219000034693002",
+            "lineItemId": "1154219000034693005",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "GARWA GRAPHICS",
+            "salesOrderNumber": "SO-07565",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034693002-1154219000034693005-1"
+      ]
     }
   }
 }
