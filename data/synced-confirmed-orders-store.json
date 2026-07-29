@@ -6856,7 +6856,7 @@
           "sku": "",
           "description": "",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         },
@@ -6886,36 +6886,15 @@
           "sku": "",
           "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "freight"
         }
       ],
       "machines": [
         {
-          "id": "1154219000031849013-1154219000031849016-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000031849013",
-          "lineItemId": "1154219000031849016",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "SUN LEATHER",
-          "salesOrderNumber": "SO-07154",
-          "deliveryDate": "2026-05-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
           "id": "1154219000031849013-1154219000031849017-1",
-          "unitNumber": 2,
+          "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000031849013",
@@ -6936,7 +6915,7 @@
         },
         {
           "id": "1154219000031849013-1154219000031849018-1",
-          "unitNumber": 3,
+          "unitNumber": 2,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000031849013",
@@ -7478,8 +7457,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T11:06:36.290Z",
-  "lastAttemptAt": "2026-07-29T11:20:01.842Z",
+  "lastSuccessfulSyncAt": "2026-07-29T11:20:21.659Z",
+  "lastAttemptAt": "2026-07-29T11:20:21.659Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
