@@ -1,5 +1,125 @@
 {
   "orders": {
+    "1154219000034924001": {
+      "id": "1154219000034924001",
+      "zohoSalesOrderId": "1154219000034924001",
+      "salesOrderNumber": "SO-07603",
+      "status": "open",
+      "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
+      "shippingAddress": "Plot no. 333, Sec-17, HSIIDC Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034924004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Timer",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034924005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "CAPACITOR 15KVA 500PF",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034924001-1154219000034924004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034924001",
+          "lineItemId": "1154219000034924004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
+          "salesOrderNumber": "SO-07603",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Timer"
+        },
+        {
+          "id": "1154219000034924001-1154219000034924004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034924001",
+          "lineItemId": "1154219000034924004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
+          "salesOrderNumber": "SO-07603",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Timer"
+        },
+        {
+          "id": "1154219000034924001-1154219000034924005-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034924001",
+          "lineItemId": "1154219000034924005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
+          "salesOrderNumber": "SO-07603",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "CAPACITOR 15KVA 500PF"
+        },
+        {
+          "id": "1154219000034924001-1154219000034924005-2",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034924001",
+          "lineItemId": "1154219000034924005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
+          "salesOrderNumber": "SO-07603",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "CAPACITOR 15KVA 500PF"
+        }
+      ]
+    },
     "1154219000034923001": {
       "id": "1154219000034923001",
       "zohoSalesOrderId": "1154219000034923001",
@@ -864,53 +984,6 @@
           "customerName": "CR CREATIVE",
           "salesOrderNumber": "SO-07584",
           "deliveryDate": "2026-07-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034729015": {
-      "id": "1154219000034729015",
-      "zohoSalesOrderId": "1154219000034729015",
-      "salesOrderNumber": "SO-07582",
-      "status": "open",
-      "customerName": "DWARKA FOOTCARE",
-      "shippingAddress": "GROUND, 1st FLOOR, 11ND FLOOR, C-535, DSIDC INDUSTRIAL AREA, NARELA, North West Delhi, Delhi, 110040, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034729018",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034729015-1154219000034729018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034729015",
-          "lineItemId": "1154219000034729018",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "DWARKA FOOTCARE",
-          "salesOrderNumber": "SO-07582",
-          "deliveryDate": "2026-07-27",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
@@ -7522,6 +7595,7 @@
     }
   },
   "orderIds": [
+    "1154219000034924001",
     "1154219000034923001",
     "1154219000034910004",
     "1154219000034918002",
@@ -7536,7 +7610,6 @@
     "1154219000034730016",
     "1154219000034749030",
     "1154219000034787959",
-    "1154219000034729015",
     "1154219000034756004",
     "1154219000034750001",
     "1154219000034743020",
@@ -7574,8 +7647,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T12:10:38.461Z",
-  "lastAttemptAt": "2026-07-29T12:20:01.155Z",
+  "lastSuccessfulSyncAt": "2026-07-29T12:20:21.018Z",
+  "lastAttemptAt": "2026-07-29T12:20:21.018Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
