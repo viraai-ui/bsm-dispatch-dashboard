@@ -116,10 +116,12 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
   try {
     const records = await fetchDatabaseSerialRecords()
     const usedIds = new Set<string>()
+    const seenSerials = new Set(existingSerials)
     for (const row of records) {
       const sNo = String(sheetValue(row, ['S.No.', 'S.No', 'S No', 'SNo', 's_no']) ?? '').trim()
       const serialNumber = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || legacySerialFromRow(row, sNo)).trim()
-      if (!serialNumber || existingSerials.has(serialNumber)) continue
+      if (!serialNumber || seenSerials.has(serialNumber)) continue
+      seenSerials.add(serialNumber)
       const id = uniqueId(`serial-sheet-${safeId(serialNumber || sNo)}`, usedIds)
       const customerName = String(sheetValue(row, ['Company Name', 'Company', 'Customer']) || '').trim() || 'Legacy customer'
       const address = String(sheetValue(row, ['Address']) || '').trim()
