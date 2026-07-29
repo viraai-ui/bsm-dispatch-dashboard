@@ -6,7 +6,7 @@ import type { Order } from '@/types/domain'
 import type { MediaProofRecord } from '@/lib/media-proof'
 import type { OrderStatusProjection } from '@/lib/status-projection'
 
-type WarrantyInfo = { label: 'Warranty Valid' | 'Warranty Ended' | 'Warranty Not Started'; tone: 'green' | 'red' | 'gray'; startLabel: string; endLabel: string }
+type WarrantyInfo = { label: 'Warranty Valid' | 'Warranty Void'; tone: 'green' | 'red'; startLabel: string; endLabel: string }
 const MAX_VISIBLE_ROWS = 250
 
 export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, warrantyDates = {}, publicMode = false }: { orders?: Order[]; mediaRecords?: Record<string, MediaProofRecord>; statuses?: Record<string, OrderStatusProjection>; warrantyDates?: Record<string, string>; publicMode?: boolean }) {
@@ -46,21 +46,21 @@ export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, 
 
 function RecordModal({ order, media, status, warrantyDate, onClose }: { order: Order; media?: MediaProofRecord; status?: OrderStatusProjection; warrantyDate?: string; onClose: () => void }) {
   const warranty = warrantyInfo(warrantyDate)
-  const vendors = [...new Set(order.machines.map((machine) => machine.vendor).filter(Boolean))].join(', ')
+  const vendors = [...new Set(order.machines.map((machine) => formatVendor(machine.vendor || '')).filter(Boolean))].join(', ')
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="grid two details-grid"><Info k="Order Stage" v={status?.lifecycleLabel || 'Open'} /><Info k="Media" v={status?.mediaLabel || 'No Media'} /><Info k="Warranty Until" v={warranty.endLabel} /><Info k="Warranty Status" v={warranty.label} /><Info k="Customer" v={order.customerName} /><Info k="Salesperson" v={order.salesperson || '—'} /><Info k="Address" v={order.shippingAddress || '—'} /><Info k="Delivery" v={formatDisplayDate(order.deliveryDate)} />{vendors && <Info k="Vendor" v={vendors} />}</div>
-    <section className="modal-section"><h2>Units & Media</h2><div className="desktop-table table-wrap"><table className="table database-units-table"><thead><tr><th>Unit</th><th>Serial</th><th>Vendor</th><th>Warranty</th><th>Valid Until</th><th>Videos</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td className="database-unit-name">{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td>{machine.vendor || ''}</td><td><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Warranty Valid' : warranty.label}</Badge></td><td>{warranty.endLabel}</td><td>{(media?.units?.[machine.id]?.videos || []).map((file) => <a key={file.id} href={file.workdriveUrl || file.url} target="_blank">{file.name} </a>)}</td></tr>)}</tbody></table></div><div className="mobile-cards database-unit-cards">{order.machines.map((machine) => <article className="card mobile-order-card" key={machine.id}><strong>{machine.itemName}</strong><p className="muted">Serial: {machine.serialNumber || '—'}</p><div className="meta-grid"><div><span>Vendor</span><strong>{machine.vendor || ''}</strong></div><div><span>Warranty</span><strong><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Valid' : warranty.label}</Badge></strong></div><div><span>Valid Until</span><strong>{warranty.endLabel}</strong></div></div></article>)}</div></section>
+    <section className="modal-section"><h2>Units & Media</h2><div className="desktop-table table-wrap"><table className="table database-units-table"><thead><tr><th>Unit</th><th>Serial</th><th>Vendor</th><th>Warranty</th><th>Valid Until</th><th>Videos</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td className="database-unit-name">{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td>{formatVendor(machine.vendor || '')}</td><td><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Warranty Valid' : warranty.label}</Badge></td><td>{warranty.endLabel}</td><td>{(media?.units?.[machine.id]?.videos || []).map((file) => <a key={file.id} href={file.workdriveUrl || file.url} target="_blank">{file.name} </a>)}</td></tr>)}</tbody></table></div><div className="mobile-cards database-unit-cards">{order.machines.map((machine) => <article className="card mobile-order-card" key={machine.id}><strong>{machine.itemName}</strong><p className="muted">Serial: {machine.serialNumber || '—'}</p><div className="meta-grid"><div><span>Vendor</span><strong>{formatVendor(machine.vendor || '')}</strong></div><div><span>Warranty</span><strong><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Valid' : warranty.label}</Badge></strong></div><div><span>Valid Until</span><strong>{warranty.endLabel}</strong></div></div></article>)}</div></section>
   </section></div>
 }
 
 function warrantyInfo(value?: string): WarrantyInfo {
   const start = parseDate(value)
-  if (!start) return { label: 'Warranty Not Started', tone: 'gray', startLabel: '—', endLabel: '—' }
+  if (!start) return { label: 'Warranty Void', tone: 'red', startLabel: '—', endLabel: '—' }
   const end = new Date(start)
   end.setMonth(end.getMonth() + 13)
   end.setHours(23, 59, 59, 999)
   const valid = Date.now() <= end.getTime()
-  return { label: valid ? 'Warranty Valid' : 'Warranty Ended', tone: valid ? 'green' : 'red', startLabel: formatDate(start), endLabel: formatDate(end) }
+  return { label: valid ? 'Warranty Valid' : 'Warranty Void', tone: valid ? 'green' : 'red', startLabel: formatDate(start), endLabel: formatDate(end) }
 }
 
 function parseDate(value?: string) {
@@ -68,6 +68,13 @@ function parseDate(value?: string) {
   const text = String(value).replace(/^'/, '').trim()
   if (!text) return null
   if (/^\d{4,6}$/.test(text)) return excelSerialToDate(Number(text))
+  const monthMatch = text.match(/^(\d{1,2})[-\s/]([a-z]{3,9})[-\s/](\d{2,4})$/i)
+  if (monthMatch) {
+    const [, dd, mon, yy] = monthMatch
+    const month = monthNumber(mon)
+    const year = Number(yy.length === 2 ? `20${yy}` : yy)
+    return month ? safeDate(year, month, Number(dd)) : null
+  }
   const isoMatch = text.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)
   if (isoMatch) return safeDate(Number(isoMatch[1]), Number(isoMatch[2]), Number(isoMatch[3]))
   const match = text.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/)
@@ -90,6 +97,10 @@ function safeDate(year: number, month: number, day: number) {
   const parsed = new Date(year, month - 1, day)
   return Number.isNaN(parsed.getTime()) ? null : parsed
 }
+
+function monthNumber(value: string) { return ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'].indexOf(value.slice(0, 3).toLowerCase()) + 1 }
+
+function formatVendor(value: string) { return value.trim().toLowerCase().replace(/\b[a-z]/g, (letter) => letter.toUpperCase()) }
 
 function formatDate(date: Date) { return `${String(date.getDate()).padStart(2, '0')}-${String(date.getMonth() + 1).padStart(2, '0')}-${date.getFullYear()}` }
 

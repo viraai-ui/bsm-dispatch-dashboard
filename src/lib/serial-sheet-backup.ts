@@ -96,8 +96,33 @@ async function sheetPostWithRetry(params: Record<string, string>, retries = 3) {
 }
 
 async function fetchSerialRecords(worksheetName = sheetConfig().worksheetName) {
+  if (/25\s*-\s*26/.test(worksheetName)) return fetchSerialContentRecords(worksheetName)
   const data = await sheetPostWithRetry({ method: 'worksheet.records.fetch', worksheet_name: worksheetName })
   return Array.isArray(data.records) ? data.records : Array.isArray(data.data) ? data.data : []
+}
+
+async function fetchSerialContentRecords(worksheetName: string) {
+  const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName, range: 'A1:Z5000' })
+  const rows = Array.isArray(data.range_details) ? data.range_details : []
+  const headers = new Map<number, string>()
+  const records: Record<string, unknown>[] = []
+  for (const row of rows) {
+    const rowDetails = Array.isArray(row.row_details) ? row.row_details : []
+    if (Number(row.row_index) === 1) {
+      for (const cell of rowDetails) {
+        const header = String(cell.content || '').trim()
+        if (header) headers.set(Number(cell.column_index), header)
+      }
+      continue
+    }
+    const record: Record<string, unknown> = { row_index: row.row_index }
+    for (const cell of rowDetails) {
+      const header = headers.get(Number(cell.column_index))
+      if (header) record[header] = cell.content
+    }
+    records.push(record)
+  }
+  return records
 }
 
 async function fetchDatabaseSerialRecords() {
@@ -125,9 +150,9 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
       const id = uniqueId(`serial-sheet-${safeId(serialNumber || sNo)}`, usedIds)
       const customerName = String(sheetValue(row, ['Company Name', 'Company', 'Customer']) || '').trim() || 'Legacy customer'
       const address = String(sheetValue(row, ['Address']) || '').trim()
-      const dispatchDate = parseSheetDate(String(sheetValue(row, ['D.O.P.', 'DOP', 'Date']) || '').trim())
+      const dispatchDate = parseSheetDate(String(sheetValue(row, ['D.O.P.', 'D.O.P', 'DOP', 'D.O.P ', 'Date', 'Delivery Date']) || '').trim())
       const itemName = String(sheetValue(row, ['Model No.', 'Model', 'Machine Name']) || '').trim() || 'Machine'
-      const vendor = String(sheetValue(row, ['Make', 'Vendor']) || '').trim()
+      const vendor = titleCaseVendor(String(sheetValue(row, ['Make', 'Vendor']) || '').trim())
       const machine: MachineUnit = {
         id: `${id}-unit`,
         unitNumber: 1,
@@ -195,6 +220,13 @@ function serialValue(order: Order) { return Number(String(order.machines[0]?.ser
 function parseSheetDate(value: string) {
   const clean = value.replace(/^'/, '').trim()
   if (/^\d{4,6}$/.test(clean)) return excelSerialDate(Number(clean))
+  const monthMatch = clean.match(/^(\d{1,2})[-\s/]([a-z]{3,9})[-\s/](\d{2,4})$/i)
+  if (monthMatch) {
+    const [, dd, mon, yy] = monthMatch
+    const month = monthNumber(mon)
+    const year = yy.length === 2 ? `20${yy}` : yy
+    if (month) return `${year}-${String(month).padStart(2, '0')}-${String(dd).padStart(2, '0')}`
+  }
   const match = clean.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/)
   if (!match) return clean
   const [, mm, dd, yy] = match
@@ -206,6 +238,15 @@ function excelSerialDate(serial: number) {
   const epoch = Date.UTC(1899, 11, 30)
   const date = new Date(epoch + serial * 24 * 60 * 60 * 1000)
   return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`
+}
+
+function monthNumber(value: string) {
+  const key = value.slice(0, 3).toLowerCase()
+  return ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'].indexOf(key) + 1
+}
+
+function titleCaseVendor(value: string) {
+  return value.toLowerCase().replace(/\b[a-z]/g, (letter) => letter.toUpperCase())
 }
 
 function safeId(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'row' }
