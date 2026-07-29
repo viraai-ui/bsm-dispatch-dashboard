@@ -157,7 +157,7 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .database-units-table th:nth-child(4), .database-units-table td:nth-child(4) { width: 17%; }
 .database-units-table th:nth-child(5), .database-units-table td:nth-child(5) { width: 12%; }
 .database-units-table th:nth-child(6), .database-units-table td:nth-child(6) { width: 12%; }
-.database-units-table .database-unit-name { white-space: normal; line-height: 1.28; overflow: visible; display: table-cell; word-break: normal; overflow-wrap: anywhere; max-width: 0; }
+.database-units-table td.database-unit-name { white-space: normal !important; line-height: 1.28; overflow: visible; display: table-cell; word-break: normal; overflow-wrap: anywhere; max-width: 0; }
 .database-result-note { color: var(--muted); font-size: 12px; font-weight: 650; }
 .btn { border: 0; border-radius: 15px; padding: 0 16px; background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; font-weight: 850; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; white-space: nowrap; box-shadow: 0 12px 24px rgba(15,23,42,.12); }
 .btn.red { background: linear-gradient(135deg, var(--red), #ef4444); box-shadow: 0 16px 32px rgba(200,16,46,.22); }
