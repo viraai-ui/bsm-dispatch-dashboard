@@ -1577,6 +1577,62 @@
         "1154219000034867284-1154219000034867289-1",
         "1154219000034867284-1154219000034867289-2"
       ]
+    },
+    "1154219000034547004": {
+      "completedAt": "2026-07-29T09:27:31.099Z",
+      "order": {
+        "id": "1154219000034547004",
+        "zohoSalesOrderId": "1154219000034547004",
+        "salesOrderNumber": "SO-07543",
+        "status": "open",
+        "customerName": "VARDHMAN RIBBON PRINTERS",
+        "shippingAddress": "G/F, 487/68, PEERA GARHI VILLAGE, NEAR SHRI SAI AUTO,, PEERA GARHI VILLAGE, Delhi, 110087, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034547007",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034547004-1154219000034547007-1",
+            "unitNumber": 1,
+            "serialNumber": "26270766",
+            "qrToken": "26270766",
+            "orderId": "1154219000034547004",
+            "lineItemId": "1154219000034547007",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "VARDHMAN RIBBON PRINTERS",
+            "salesOrderNumber": "SO-07543",
+            "deliveryDate": "2026-07-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-23",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034547004-1154219000034547007-1"
+      ]
     }
   }
 }
