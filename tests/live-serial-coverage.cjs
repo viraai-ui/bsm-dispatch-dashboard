@@ -6,7 +6,7 @@ const login = process.env.BSM_ADMIN_LOGIN || 'admin@bsmindia.com'
 const password = process.env.BSM_ADMIN_PASSWORD || '1231'
 
 function githubJson(path) {
-  const output = execFileSync('gh', ['api', `repos/viraai-ui/bsm-dispatch-dashboard/contents/${path}`, '--jq', '.content'], { encoding: 'utf8' })
+  const output = execFileSync('gh', ['api', `repos/viraai-ui/bsm-dispatch-dashboard/contents/${path}`, '--jq', '.content'], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 })
   return JSON.parse(Buffer.from(output.trim(), 'base64').toString('utf8'))
 }
 
