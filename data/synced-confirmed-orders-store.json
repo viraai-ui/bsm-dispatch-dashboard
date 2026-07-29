@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000034910004": {
+      "id": "1154219000034910004",
+      "zohoSalesOrderId": "1154219000034910004",
+      "salesOrderNumber": "SO-07601",
+      "status": "open",
+      "customerName": "JASMINE KNITTING INDUSTRIES PVT LTD.",
+      "shippingAddress": "929/2, Beharampur Road, 38 Mile Stone, Delhi Jaipur Highway, Village Khandsa, Gurgaon 122001, Gurugram, Haryana, 122001, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034910007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Travel Head Seal",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034910004-1154219000034910007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034910004",
+          "lineItemId": "1154219000034910007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "JASMINE KNITTING INDUSTRIES PVT LTD.",
+          "salesOrderNumber": "SO-07601",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Travel Head Seal"
+        },
+        {
+          "id": "1154219000034910004-1154219000034910007-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034910004",
+          "lineItemId": "1154219000034910007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "JASMINE KNITTING INDUSTRIES PVT LTD.",
+          "salesOrderNumber": "SO-07601",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Travel Head Seal"
+        }
+      ]
+    },
     "1154219000034918002": {
       "id": "1154219000034918002",
       "zohoSalesOrderId": "1154219000034918002",
@@ -7407,6 +7475,7 @@
     }
   },
   "orderIds": [
+    "1154219000034910004",
     "1154219000034918002",
     "1154219000034890001",
     "1154219000034867284",
@@ -7457,8 +7526,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T11:20:21.659Z",
-  "lastAttemptAt": "2026-07-29T11:35:01.487Z",
+  "lastSuccessfulSyncAt": "2026-07-29T11:35:21.562Z",
+  "lastAttemptAt": "2026-07-29T11:35:21.562Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
