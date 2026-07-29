@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000034867284": {
+      "id": "1154219000034867284",
+      "zohoSalesOrderId": "1154219000034867284",
+      "salesOrderNumber": "SO-07598",
+      "status": "open",
+      "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+      "shippingAddress": "PO Bastara, 13th Milestone, G.T. Road, Libertypuram, Kutali, Karnal-132114, Haryana",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-07-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034867289",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034867290",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034867284-1154219000034867289-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034867284",
+          "lineItemId": "1154219000034867289",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+          "salesOrderNumber": "SO-07598",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034867284-1154219000034867289-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034867284",
+          "lineItemId": "1154219000034867289",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+          "salesOrderNumber": "SO-07598",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034874001": {
       "id": "1154219000034874001",
       "zohoSalesOrderId": "1154219000034874001",
@@ -7235,6 +7313,7 @@
     }
   },
   "orderIds": [
+    "1154219000034867284",
     "1154219000034874001",
     "1154219000034838001",
     "1154219000034836001",
@@ -7282,8 +7361,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T06:39:16.378Z",
-  "lastAttemptAt": "2026-07-29T08:10:40.472Z",
+  "lastSuccessfulSyncAt": "2026-07-29T08:10:55.929Z",
+  "lastAttemptAt": "2026-07-29T08:10:55.929Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
