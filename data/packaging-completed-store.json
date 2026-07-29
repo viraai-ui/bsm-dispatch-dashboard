@@ -1153,6 +1153,62 @@
       "machineIds": [
         "1154219000034743020-1154219000034743025-1"
       ]
+    },
+    "1154219000034838001": {
+      "completedAt": "2026-07-29T07:40:12.198Z",
+      "order": {
+        "id": "1154219000034838001",
+        "zohoSalesOrderId": "1154219000034838001",
+        "salesOrderNumber": "SO-07596",
+        "status": "open",
+        "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+        "shippingAddress": "10, Chowbagha Road, Kolkata, West Bengal, 700039, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034838004",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034838001-1154219000034838004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270800",
+            "qrToken": "26270800",
+            "orderId": "1154219000034838001",
+            "lineItemId": "1154219000034838004",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+            "salesOrderNumber": "SO-07596",
+            "deliveryDate": "2026-07-30",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034838001-1154219000034838004-1"
+      ]
     }
   }
 }
