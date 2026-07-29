@@ -105,7 +105,7 @@ async function fetchDatabaseSerialRecords() {
     ? process.env.ZOHO_SERIAL_DATABASE_SHEET_NAMES.split(',').map((name) => name.trim()).filter(Boolean)
     : DEFAULT_DATABASE_WORKSHEETS
   const records = await Promise.all([...new Set(configured)].map(async (worksheetName) => {
-    try { return await fetchSerialRecords(worksheetName) } catch { return [] }
+    try { return (await fetchSerialRecords(worksheetName)).map((row: Record<string, unknown>) => ({ ...row, __worksheetName: worksheetName })) } catch { return [] }
   }))
   return records.flat()
 }
@@ -117,9 +117,9 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
     const records = await fetchDatabaseSerialRecords()
     const usedIds = new Set<string>()
     for (const row of records) {
-      const serialNumber = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()
+      const sNo = String(sheetValue(row, ['S.No.', 'S.No', 'S No', 'SNo', 's_no']) ?? '').trim()
+      const serialNumber = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || legacySerialFromRow(row, sNo)).trim()
       if (!serialNumber || existingSerials.has(serialNumber)) continue
-      const sNo = String(sheetValue(row, ['S.No.', 'S.No', 'S No', 'SNo', 's_no']) ?? serialNumber).trim()
       const id = uniqueId(`serial-sheet-${safeId(serialNumber || sNo)}`, usedIds)
       const customerName = String(sheetValue(row, ['Company Name', 'Company', 'Customer']) || '').trim() || 'Legacy customer'
       const address = String(sheetValue(row, ['Address']) || '').trim()
@@ -182,6 +182,12 @@ function sheetValue(row: Record<string, unknown>, names: string[]) {
 }
 
 function normalizeSheetKey(value: string) { return value.toLowerCase().replace(/[^a-z0-9]/g, '') }
+function legacySerialFromRow(row: Record<string, unknown>, sNo: string) {
+  const worksheetName = String(row.__worksheetName || '')
+  const serial = Number(String(sNo || '').replace(/[^0-9]/g, ''))
+  if (!serial || !/25\s*-\s*26/.test(worksheetName)) return ''
+  return `2526${String(serial).padStart(4, '0')}`
+}
 function serialValue(order: Order) { return Number(String(order.machines[0]?.serialNumber || order.salesOrderNumber || '').replace(/[^0-9]/g, '')) || 0 }
 
 function parseSheetDate(value: string) {
