@@ -581,6 +581,62 @@
       "machineIds": [
         "1154219000034717020-1154219000034717023-1"
       ]
+    },
+    "1154219000034709015": {
+      "completedAt": "2026-07-29T04:59:39.662Z",
+      "order": {
+        "id": "1154219000034709015",
+        "zohoSalesOrderId": "1154219000034709015",
+        "salesOrderNumber": "SO-07591",
+        "status": "open",
+        "customerName": "BALAJI IMPEX",
+        "shippingAddress": "PLOT NO 484-485, NA, MIE Part A, Bahadurgarh,, Jhajjar, Haryana,, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034709018",
+            "itemName": "Side wall Stitching (sole stitch)",
+            "sku": "168",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034709015-1154219000034709018-1",
+            "unitNumber": 1,
+            "serialNumber": "26270791",
+            "qrToken": "26270791",
+            "orderId": "1154219000034709015",
+            "lineItemId": "1154219000034709018",
+            "itemName": "Side wall Stitching (sole stitch)",
+            "sku": "168",
+            "customerName": "BALAJI IMPEX",
+            "salesOrderNumber": "SO-07591",
+            "deliveryDate": "2026-07-28",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-28",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034709015-1154219000034709018-1"
+      ]
     }
   }
 }
