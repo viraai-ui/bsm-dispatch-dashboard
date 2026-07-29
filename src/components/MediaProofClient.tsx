@@ -155,7 +155,7 @@ function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { d
       return
     }
     try {
-      const nextStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' }, width: { ideal: 854, max: 1280 }, height: { ideal: 480, max: 720 }, frameRate: { ideal: 24, max: 30 } }, audio: true })
+      const nextStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' }, width: { ideal: 1080, max: 1920 }, height: { ideal: 1920, max: 1920 }, aspectRatio: { ideal: 9 / 16 }, frameRate: { ideal: 30, max: 30 } }, audio: true })
       setStream(nextStream)
       setCameraOpen(true)
     } catch (err) {
