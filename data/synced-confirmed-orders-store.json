@@ -1,125 +1,5 @@
 {
   "orders": {
-    "1154219000034924001": {
-      "id": "1154219000034924001",
-      "zohoSalesOrderId": "1154219000034924001",
-      "salesOrderNumber": "SO-07603",
-      "status": "open",
-      "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
-      "shippingAddress": "Plot no. 333, Sec-17, HSIIDC Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034924004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Timer",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034924005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "CAPACITOR 15KVA 500PF",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034924001-1154219000034924004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034924001",
-          "lineItemId": "1154219000034924004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
-          "salesOrderNumber": "SO-07603",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Timer"
-        },
-        {
-          "id": "1154219000034924001-1154219000034924004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034924001",
-          "lineItemId": "1154219000034924004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
-          "salesOrderNumber": "SO-07603",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Timer"
-        },
-        {
-          "id": "1154219000034924001-1154219000034924005-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034924001",
-          "lineItemId": "1154219000034924005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
-          "salesOrderNumber": "SO-07603",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "CAPACITOR 15KVA 500PF"
-        },
-        {
-          "id": "1154219000034924001-1154219000034924005-2",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034924001",
-          "lineItemId": "1154219000034924005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Walkaroo International Pvt. Ltd. (Plot No. 333)",
-          "salesOrderNumber": "SO-07603",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "CAPACITOR 15KVA 500PF"
-        }
-      ]
-    },
     "1154219000034923001": {
       "id": "1154219000034923001",
       "zohoSalesOrderId": "1154219000034923001",
@@ -164,74 +44,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034910004": {
-      "id": "1154219000034910004",
-      "zohoSalesOrderId": "1154219000034910004",
-      "salesOrderNumber": "SO-07601",
-      "status": "open",
-      "customerName": "JASMINE KNITTING INDUSTRIES PVT LTD.",
-      "shippingAddress": "929/2, Beharampur Road, 38 Mile Stone, Delhi Jaipur Highway, Village Khandsa, Gurgaon 122001, Gurugram, Haryana, 122001, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034910007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Travel Head Seal",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034910004-1154219000034910007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034910004",
-          "lineItemId": "1154219000034910007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "JASMINE KNITTING INDUSTRIES PVT LTD.",
-          "salesOrderNumber": "SO-07601",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Travel Head Seal"
-        },
-        {
-          "id": "1154219000034910004-1154219000034910007-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034910004",
-          "lineItemId": "1154219000034910007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "JASMINE KNITTING INDUSTRIES PVT LTD.",
-          "salesOrderNumber": "SO-07601",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Travel Head Seal"
         }
       ]
     },
@@ -7595,9 +7407,7 @@
     }
   },
   "orderIds": [
-    "1154219000034924001",
     "1154219000034923001",
-    "1154219000034910004",
     "1154219000034918002",
     "1154219000034890001",
     "1154219000034867284",
@@ -7647,8 +7457,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T12:20:21.018Z",
-  "lastAttemptAt": "2026-07-29T12:35:01.653Z",
+  "lastSuccessfulSyncAt": "2026-07-29T12:35:20.705Z",
+  "lastAttemptAt": "2026-07-29T12:35:20.705Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
