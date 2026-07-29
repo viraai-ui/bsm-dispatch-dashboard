@@ -805,6 +805,62 @@
       "machineIds": [
         "1154219000034693002-1154219000034693005-1"
       ]
+    },
+    "1154219000034684003": {
+      "completedAt": "2026-07-29T05:00:50.459Z",
+      "order": {
+        "id": "1154219000034684003",
+        "zohoSalesOrderId": "1154219000034684003",
+        "salesOrderNumber": "SO-07563",
+        "status": "open",
+        "customerName": "UNISTAR FOOTWEARS PVT. LTD.",
+        "shippingAddress": "E-7. MIE, Part-II, Bahadurgarh, Haryana-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034703014",
+            "itemName": "Grinding & Roughing Machine (Without dust collector)",
+            "sku": "707m",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034684003-1154219000034703014-1",
+            "unitNumber": 1,
+            "serialNumber": "26270777",
+            "qrToken": "26270777",
+            "orderId": "1154219000034684003",
+            "lineItemId": "1154219000034703014",
+            "itemName": "Grinding & Roughing Machine (Without dust collector)",
+            "sku": "707m",
+            "customerName": "UNISTAR FOOTWEARS PVT. LTD.",
+            "salesOrderNumber": "SO-07563",
+            "deliveryDate": "2026-07-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034684003-1154219000034703014-1"
+      ]
     }
   }
 }
