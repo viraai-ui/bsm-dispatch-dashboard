@@ -107,15 +107,15 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
     const records = await fetchSerialRecords()
     const usedIds = new Set<string>()
     for (const row of records) {
-      const serialNumber = String(row['Serial No.'] || row['Serial No'] || row.Serial || '').trim()
+      const serialNumber = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()
       if (!serialNumber || existingSerials.has(serialNumber)) continue
-      const sNo = String(row['S.No.'] ?? row['S.No'] ?? row['S No'] ?? row.SNo ?? row.s_no ?? serialNumber).trim()
+      const sNo = String(sheetValue(row, ['S.No.', 'S.No', 'S No', 'SNo', 's_no']) ?? serialNumber).trim()
       const id = uniqueId(`serial-sheet-${safeId(serialNumber || sNo)}`, usedIds)
-      const customerName = String(row['Company Name'] || row.Company || row.Customer || '').trim() || 'Legacy customer'
-      const address = String(row.Address || '').trim()
-      const dispatchDate = parseSheetDate(String(row['D.O.P.'] || row.DOP || row.Date || '').trim())
-      const itemName = String(row['Model No.'] || row.Model || row['Machine Name'] || '').trim() || 'Machine'
-      const vendor = String(row.Make || row.make || '').trim()
+      const customerName = String(sheetValue(row, ['Company Name', 'Company', 'Customer']) || '').trim() || 'Legacy customer'
+      const address = String(sheetValue(row, ['Address']) || '').trim()
+      const dispatchDate = parseSheetDate(String(sheetValue(row, ['D.O.P.', 'DOP', 'Date']) || '').trim())
+      const itemName = String(sheetValue(row, ['Model No.', 'Model', 'Machine Name']) || '').trim() || 'Machine'
+      const vendor = String(sheetValue(row, ['Make', 'Vendor']) || '').trim()
       const machine: MachineUnit = {
         id: `${id}-unit`,
         unitNumber: 1,
@@ -148,7 +148,7 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
         deliveryDate: dispatchDate,
         dashboardStatus: 'Dispatched',
         reviewRequired: false,
-        lineItems: [{ id: `${id}-line`, itemName, sku: '', quantity: 1, pendingQuantity: 0, woodenPackingRequired: false, dispatchCategory: 'machine', description: String(row.Remark || '').trim() }],
+        lineItems: [{ id: `${id}-line`, itemName, sku: '', quantity: 1, pendingQuantity: 0, woodenPackingRequired: false, dispatchCategory: 'machine', description: String(sheetValue(row, ['Remark']) || '').trim() }],
         machines: [machine],
       })
       result.warrantyDates[id] = dispatchDate
@@ -159,6 +159,18 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
     return result
   }
 }
+
+function sheetValue(row: Record<string, unknown>, names: string[]) {
+  for (const name of names) {
+    if (row[name] !== undefined && row[name] !== null) return row[name]
+    const normalized = normalizeSheetKey(name)
+    const match = Object.keys(row).find((key) => normalizeSheetKey(key) === normalized)
+    if (match && row[match] !== undefined && row[match] !== null) return row[match]
+  }
+  return ''
+}
+
+function normalizeSheetKey(value: string) { return value.toLowerCase().replace(/[^a-z0-9]/g, '') }
 
 function parseSheetDate(value: string) {
   const clean = value.replace(/^'/, '').trim()
