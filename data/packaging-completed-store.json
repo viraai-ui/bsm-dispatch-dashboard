@@ -1355,6 +1355,72 @@
       "machineIds": [
         "1154219000034729015-1154219000034729018-1"
       ]
+    },
+    "1154219000034731047": {
+      "completedAt": "2026-07-29T07:41:43.237Z",
+      "order": {
+        "id": "1154219000034731047",
+        "zohoSalesOrderId": "1154219000034731047",
+        "salesOrderNumber": "SO-07587",
+        "status": "open",
+        "customerName": "Y S Automotive Pvt. Ltd.",
+        "shippingAddress": "MI 1A, Kh. No. 122, Industrial Area, Haripur Road, Selaqui, Dehradun, Uttarakhand, 248011",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034731050",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034731051",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight Cost from BSM to Nitco Logistics Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034731047-1154219000034731050-1",
+            "unitNumber": 1,
+            "serialNumber": "26270788",
+            "qrToken": "26270788",
+            "orderId": "1154219000034731047",
+            "lineItemId": "1154219000034731050",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "Y S Automotive Pvt. Ltd.",
+            "salesOrderNumber": "SO-07587",
+            "deliveryDate": "2026-07-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-28",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034731047-1154219000034731050-1"
+      ]
     }
   }
 }
