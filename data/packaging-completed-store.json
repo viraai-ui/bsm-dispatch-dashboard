@@ -1097,6 +1097,62 @@
         "1154219000034654006-1154219000034654010-1",
         "1154219000034654006-1154219000034654011-1"
       ]
+    },
+    "1154219000034743020": {
+      "completedAt": "2026-07-29T07:39:56.588Z",
+      "order": {
+        "id": "1154219000034743020",
+        "zohoSalesOrderId": "1154219000034743020",
+        "salesOrderNumber": "SO-07574",
+        "status": "open",
+        "customerName": "Shri Banke Bihari Footwear",
+        "shippingAddress": "Plot No. 82, Sector-17, HSIIDC,, Industrial Estate, Bahadurgarh, Haryana, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034743025",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034743020-1154219000034743025-1",
+            "unitNumber": 1,
+            "serialNumber": "26270781",
+            "qrToken": "26270781",
+            "orderId": "1154219000034743020",
+            "lineItemId": "1154219000034743025",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "Shri Banke Bihari Footwear",
+            "salesOrderNumber": "SO-07574",
+            "deliveryDate": "2026-07-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-25",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034743020-1154219000034743025-1"
+      ]
     }
   }
 }
