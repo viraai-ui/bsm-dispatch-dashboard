@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034923001": {
+      "id": "1154219000034923001",
+      "zohoSalesOrderId": "1154219000034923001",
+      "salesOrderNumber": "SO-07602",
+      "status": "open",
+      "customerName": "Assert Footwears",
+      "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034923004",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034923001-1154219000034923004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034923001",
+          "lineItemId": "1154219000034923004",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "Assert Footwears",
+          "salesOrderNumber": "SO-07602",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034910004": {
       "id": "1154219000034910004",
       "zohoSalesOrderId": "1154219000034910004",
@@ -7475,6 +7522,7 @@
     }
   },
   "orderIds": [
+    "1154219000034923001",
     "1154219000034910004",
     "1154219000034918002",
     "1154219000034890001",
@@ -7526,8 +7574,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T12:05:21.499Z",
-  "lastAttemptAt": "2026-07-29T12:10:19.032Z",
+  "lastSuccessfulSyncAt": "2026-07-29T12:10:38.461Z",
+  "lastAttemptAt": "2026-07-29T12:10:38.461Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
