@@ -2,8 +2,11 @@ const assert = require('node:assert/strict')
 const { spawn } = require('node:child_process')
 
 const base = 'http://127.0.0.1:4178'
-const env = { ...process.env, PORT: '4178' }
-const server = spawn('npm', ['run', 'start', '--', '-p', '4178'], { env, stdio: ['ignore', 'pipe', 'pipe'] })
+const env = { ...process.env, PORT: '4178', GITHUB_TOKEN: '' }
+const server = spawn(process.platform === 'win32' ? 'node_modules/.bin/next.cmd' : 'node_modules/.bin/next', ['start', '-p', '4178'], { env, stdio: ['ignore', 'pipe', 'pipe'] })
+let serverOutput = ''
+server.stdout.on('data', (chunk) => { serverOutput += chunk.toString() })
+server.stderr.on('data', (chunk) => { serverOutput += chunk.toString() })
 
 function wait(ms) { return new Promise((resolve) => setTimeout(resolve, ms)) }
 async function fetchText(path, options) {
@@ -25,7 +28,7 @@ async function waitForServer() {
     } catch {}
     await wait(500)
   }
-  throw new Error('Server did not start')
+  throw new Error(`Server did not start. Output: ${serverOutput.slice(-1200) || '(no output)'}`)
 }
 
 async function run() {

@@ -66,15 +66,18 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
 
   async function upload(unitId: string, files: FileList | null) {
     if (!files?.length) return
-    const selected = Array.from(files)
+    const selected = Array.from(files).map((file, index) => normalizeCameraVideoFile(file, order.salesOrderNumber, unitId, index))
     if (mode === 'loading' && loadingVideos.length + selected.length > MAX_LOADING_VIDEOS) { setMessage(`Maximum ${MAX_LOADING_VIDEOS} loading videos allowed`); return }
-    setBusy(unitId); setMessage(''); setProgressByUnit((prev) => ({ ...prev, [unitId]: 0 }))
+    setBusy(unitId); setMessage('Preparing video upload…'); setProgressByUnit((prev) => ({ ...prev, [unitId]: 0 }))
     try {
       for (const file of selected) {
+        if (!file.size) throw new Error('The recorded video file is empty. Please record again or choose it from Gallery.')
+        if (!file.type.startsWith('video/')) throw new Error('This file is not detected as a video. Please try Gallery if camera upload fails.')
         const json = await uploadVideoFile(order, unitId, file, apiPath, mode, (percent) => setProgressByUnit((prev) => ({ ...prev, [unitId]: percent })))
         onChanged(json.data.record)
       }
       setProgressByUnit((prev) => ({ ...prev, [unitId]: 100 }))
+      setMessage('Video uploaded successfully.')
     } catch (err) { setMessage(err instanceof Error ? err.message : 'Upload failed') }
     finally { setBusy('') }
   }
@@ -130,13 +133,29 @@ function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDe
 }
 
 function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | null) => void; galleryMultiple?: boolean }) {
-  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => onUpload(event.target.files)} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => onUpload(event.target.files)} /></label></div>
+  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label></div>
 }
 
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
 
 async function uploadVideoFile(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
   return uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)
+}
+
+function normalizeCameraVideoFile(file: File, salesOrderNumber: string, unitId: string, index: number) {
+  const type = file.type && file.type.startsWith('video/') ? file.type : 'video/mp4'
+  const extension = extensionForVideoType(type)
+  const originalName = file.name && file.name.trim() ? file.name.trim() : ''
+  const safeName = originalName && /\.[a-z0-9]{2,5}$/i.test(originalName) ? originalName : `${salesOrderNumber}-${unitId}-${Date.now()}-${index + 1}.${extension}`
+  if (file.name === safeName && file.type === type) return file
+  return new File([file], safeName, { type, lastModified: file.lastModified || Date.now() })
+}
+
+function extensionForVideoType(type: string) {
+  if (type.includes('quicktime')) return 'mov'
+  if (type.includes('webm')) return 'webm'
+  if (type.includes('3gpp')) return '3gp'
+  return 'mp4'
 }
 
 async function uploadDirectToR2(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
