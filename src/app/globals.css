@@ -159,6 +159,10 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .database-units-table th:nth-child(6), .database-units-table td:nth-child(6) { width: 12%; }
 .database-units-table td.database-unit-name { white-space: normal !important; line-height: 1.28; overflow: visible; display: table-cell; word-break: normal; overflow-wrap: anywhere; max-width: 0; }
 .database-result-note { color: var(--muted); font-size: 12px; font-weight: 650; }
+.database-search-input-wrap { position: relative; flex: 1 1 260px; min-width: 220px; }
+.database-search-input-wrap input { width: 100%; padding-right: 48px; }
+.database-clear-x { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border: 0; border-radius: 999px; background: #fee2e2; color: #b91c1c; font-size: 22px; line-height: 1; font-weight: 950; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px rgba(185,28,28,.14); }
+.database-clear-x:active { transform: translateY(-50%) scale(.96); }
 .btn { border: 0; border-radius: 15px; padding: 0 16px; background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; font-weight: 850; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; white-space: nowrap; box-shadow: 0 12px 24px rgba(15,23,42,.12); }
 .btn.red { background: linear-gradient(135deg, var(--red), #ef4444); box-shadow: 0 16px 32px rgba(200,16,46,.22); }
 .btn.green { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 16px 32px rgba(22,163,74,.20); }
