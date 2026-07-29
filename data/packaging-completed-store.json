@@ -1633,6 +1633,72 @@
       "machineIds": [
         "1154219000034547004-1154219000034547007-1"
       ]
+    },
+    "1154219000034156012": {
+      "completedAt": "2026-07-29T10:34:26.993Z",
+      "order": {
+        "id": "1154219000034156012",
+        "zohoSalesOrderId": "1154219000034156012",
+        "salesOrderNumber": "SO-07483",
+        "status": "open",
+        "customerName": "DIC INDIA LIMITED",
+        "shippingAddress": "C-55 A&B, Phase –II,C-55 A&B, Phase –II,, Noida, Uttar Pradesh, 201305, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034156015",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034156016",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "BSM to Noida",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034156012-1154219000034156015-1",
+            "unitNumber": 1,
+            "serialNumber": "26270802",
+            "qrToken": "26270802",
+            "orderId": "1154219000034156012",
+            "lineItemId": "1154219000034156015",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "DIC INDIA LIMITED",
+            "salesOrderNumber": "SO-07483",
+            "deliveryDate": "2026-07-15",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034156012-1154219000034156015-1"
+      ]
     }
   }
 }
