@@ -68,7 +68,7 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
     if (!files?.length) return
     const selected = Array.from(files).map((file, index) => normalizeCameraVideoFile(file, order.salesOrderNumber, unitId, index))
     if (mode === 'loading' && loadingVideos.length + selected.length > MAX_LOADING_VIDEOS) { setMessage(`Maximum ${MAX_LOADING_VIDEOS} loading videos allowed`); return }
-    setBusy(unitId); setMessage('Preparing video upload…'); setProgressByUnit((prev) => ({ ...prev, [unitId]: 0 }))
+    setBusy(unitId); setMessage(''); setProgressByUnit((prev) => ({ ...prev, [unitId]: 1 }))
     try {
       for (const file of selected) {
         if (!file.size) throw new Error('The recorded video file is empty. Please record again or choose it from Gallery.')
@@ -133,6 +133,7 @@ function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDe
 }
 
 function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | File[] | null) => void; galleryMultiple?: boolean }) {
+  const [cameraOpen, setCameraOpen] = useState(false)
   const [recording, setRecording] = useState(false)
   const [stream, setStream] = useState<MediaStream | null>(null)
   const [error, setError] = useState('')
@@ -146,37 +147,48 @@ function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { d
     return () => {}
   }, [stream])
 
-  async function startRecording() {
-    if (disabled || recording) return
+  async function openCamera() {
+    if (disabled || cameraOpen || recording) return
     setError('')
     if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
       setError('In-app camera is not supported on this browser. Please use Gallery.')
       return
     }
     try {
-      const nextStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } }, audio: true })
+      const nextStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' }, width: { ideal: 854, max: 1280 }, height: { ideal: 480, max: 720 }, frameRate: { ideal: 24, max: 30 } }, audio: true })
+      setStream(nextStream)
+      setCameraOpen(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Camera permission failed')
+    }
+  }
+
+  function startRecording() {
+    if (!stream || recording) return
+    setError('')
+    try {
       const mimeType = bestRecorderMimeType()
       chunksRef.current = []
       cancelledRef.current = false
-      const recorder = new MediaRecorder(nextStream, mimeType ? { mimeType } : undefined)
+      const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined)
       recorder.ondataavailable = (event) => { if (event.data.size > 0) chunksRef.current.push(event.data) }
       recorder.onstop = () => {
         const type = recorder.mimeType || mimeType || 'video/webm'
         const blob = new Blob(chunksRef.current, { type })
         const file = new File([blob], `recorded-video-${Date.now()}.${extensionForVideoType(type)}`, { type, lastModified: Date.now() })
-        stopStream(nextStream)
+        if (stream) stopStream(stream)
         setStream(null)
+        setCameraOpen(false)
         setRecording(false)
         if (cancelledRef.current) return
         if (file.size > 0) onUpload([file])
         else setError('Recording was empty. Please record again.')
       }
       recorderRef.current = recorder
-      setStream(nextStream)
       setRecording(true)
       recorder.start(1000)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Camera permission failed')
+      setError(err instanceof Error ? err.message : 'Recording failed')
     }
   }
 
@@ -192,10 +204,11 @@ function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { d
     if (stream) stopStream(stream)
     chunksRef.current = []
     setStream(null)
+    setCameraOpen(false)
     setRecording(false)
   }
 
-  return <div className="video-upload-choices"><button type="button" className={`video-choice-btn record ${disabled ? 'disabled' : ''}`} disabled={disabled} onClick={startRecording}><span aria-hidden="true">📹</span><strong>Record Video</strong></button><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label>{error && <small className="form-error video-record-error">{error}</small>}{recording && <div className="recorder-overlay"><div className="recorder-box"><video ref={videoRef} autoPlay playsInline muted /><div className="recorder-actions"><button type="button" className="btn light" onClick={cancelRecording}>Cancel</button><button type="button" className="btn red" onClick={stopRecording}>Stop & Upload</button></div><small>Recording inside app — not saved to Gallery.</small></div></div>}</div>
+  return <div className="video-upload-choices"><button type="button" className={`video-choice-btn record ${disabled ? 'disabled' : ''}`} disabled={disabled} onClick={openCamera}><span aria-hidden="true">📹</span><strong>Record Video</strong></button><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label>{error && <small className="form-error video-record-error">{error}</small>}{cameraOpen && <div className="recorder-overlay"><div className="recorder-box"><video ref={videoRef} autoPlay playsInline muted /><div className="recorder-actions">{recording ? <><button type="button" className="btn light" onClick={cancelRecording}>Cancel</button><button type="button" className="btn red" onClick={stopRecording}>Stop & Upload</button></> : <><button type="button" className="btn light" onClick={cancelRecording}>Close</button><button type="button" className="btn red" onClick={startRecording}>Start Recording</button></>}</div></div></div>}</div>
 }
 
 function bestRecorderMimeType() {
@@ -249,11 +262,13 @@ async function parseJsonResponse(response: Response, fallback: string): Promise<
 function uploadBlobToR2(uploadUrl: string, file: File, contentType: string, onProgress: (percent: number) => void): Promise<void> {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
+    const timeout = window.setTimeout(() => { xhr.abort(); reject(new Error('Upload is taking too long or got stuck. Please check internet and try again, or upload a shorter video.')) }, 180000)
     xhr.open('PUT', uploadUrl)
     xhr.setRequestHeader('content-type', contentType)
-    xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.round((event.loaded / event.total) * 100)) }
-    xhr.onload = () => { if (xhr.status >= 200 && xhr.status < 300) resolve(); else reject(new Error(`Cloudflare R2 upload failed: HTTP ${xhr.status}. Check the R2 bucket CORS policy and presigned URL configuration.`)) }
-    xhr.onerror = () => reject(new Error('Cloudflare R2 upload failed before the request completed. This is usually caused by missing/incorrect R2 CORS for https://dispatch.bsmindia.com.'))
+    xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.max(1, Math.min(95, Math.round((event.loaded / event.total) * 100)))) }
+    xhr.onload = () => { window.clearTimeout(timeout); if (xhr.status >= 200 && xhr.status < 300) { onProgress(100); resolve() } else reject(new Error(`Cloudflare R2 upload failed: HTTP ${xhr.status}. Please try again.`)) }
+    xhr.onerror = () => { window.clearTimeout(timeout); reject(new Error('Upload failed due to network connection. Please try again on stronger internet.')) }
+    xhr.onabort = () => window.clearTimeout(timeout)
     xhr.send(file)
   })
 }
