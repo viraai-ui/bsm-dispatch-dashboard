@@ -1,5 +1,155 @@
 {
   "orders": {
+    "1154219000034838001": {
+      "id": "1154219000034838001",
+      "zohoSalesOrderId": "1154219000034838001",
+      "salesOrderNumber": "SO-07596",
+      "status": "open",
+      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+      "shippingAddress": "10, Chowbagha Road, Kolkata, West Bengal, 700039, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034838004",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034838001-1154219000034838004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034838001",
+          "lineItemId": "1154219000034838004",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+          "salesOrderNumber": "SO-07596",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034836001": {
+      "id": "1154219000034836001",
+      "zohoSalesOrderId": "1154219000034836001",
+      "salesOrderNumber": "SO-07595",
+      "status": "open",
+      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+      "shippingAddress": "10, Chowbagha Road, Kolkata, West Bengal, 700039, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-29",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034836004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 300,
+          "pendingQuantity": 300,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000034832001": {
+      "id": "1154219000034832001",
+      "zohoSalesOrderId": "1154219000034832001",
+      "salesOrderNumber": "SO-07594",
+      "status": "open",
+      "customerName": "HANDTEX HOME",
+      "shippingAddress": "GROUND FLOOR, PLOT NO. 10, OFFICE NO. 1, RISALU ROAD, NEAR INDO FARM, Panipat,, Panipat, Haryana, 132103, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034832004",
+          "itemName": "Tape Cutting Machine [Mechanical Model]",
+          "sku": "817",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034832005",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034832001-1154219000034832004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034832001",
+          "lineItemId": "1154219000034832004",
+          "itemName": "Tape Cutting Machine [Mechanical Model]",
+          "sku": "817",
+          "customerName": "HANDTEX HOME",
+          "salesOrderNumber": "SO-07594",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034832001-1154219000034832005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034832001",
+          "lineItemId": "1154219000034832005",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "HANDTEX HOME",
+          "salesOrderNumber": "SO-07594",
+          "deliveryDate": "2026-07-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034827001": {
       "id": "1154219000034827001",
       "zohoSalesOrderId": "1154219000034827001",
@@ -7116,6 +7266,9 @@
     }
   },
   "orderIds": [
+    "1154219000034838001",
+    "1154219000034836001",
+    "1154219000034832001",
     "1154219000034827001",
     "1154219000034734027",
     "1154219000034731047",
@@ -7160,8 +7313,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-28T12:54:45.367Z",
-  "lastAttemptAt": "2026-07-29T06:06:07.139Z",
+  "lastSuccessfulSyncAt": "2026-07-29T06:06:26.117Z",
+  "lastAttemptAt": "2026-07-29T06:06:26.118Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
