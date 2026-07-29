@@ -917,6 +917,62 @@
       "machineIds": [
         "1154219000034618001-1154219000034618004-1"
       ]
+    },
+    "1154219000034874001": {
+      "completedAt": "2026-07-29T07:39:16.651Z",
+      "order": {
+        "id": "1154219000034874001",
+        "zohoSalesOrderId": "1154219000034874001",
+        "salesOrderNumber": "SO-07597",
+        "status": "open",
+        "customerName": "HANDTEX HOME",
+        "shippingAddress": "GROUND FLOOR, PLOT NO. 10, OFFICE NO. 1, RISALU ROAD, NEAR INDO FARM, Panipat,, Panipat, Haryana, 132103, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034874004",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034874001-1154219000034874004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270801",
+            "qrToken": "26270801",
+            "orderId": "1154219000034874001",
+            "lineItemId": "1154219000034874004",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "HANDTEX HOME",
+            "salesOrderNumber": "SO-07597",
+            "deliveryDate": "2026-07-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000034874001-1154219000034874004-1"
+      ]
     }
   }
 }
