@@ -19,7 +19,7 @@ export async function GET() {
     .map((item) => {
       const processedIds = new Set(Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId))
       const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId], item.machines || {})
-      return { ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular' }
+      return stripInternalVendor({ ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular' })
     })
     .filter((order) => !completed.completed[order.id])
     .filter((order) => order.machines.length > 0 || hasDispatchLineItems(order))
@@ -75,6 +75,10 @@ function mergeCompletedMachines(existing: MachineUnit[] = [], next: MachineUnit[
   const byId = new Map(existing.map((machine) => [machine.id, machine]))
   for (const machine of next) byId.set(machine.id, machine)
   return [...byId.values()]
+}
+
+function stripInternalVendor<T extends Order>(order: T): T {
+  return { ...order, machines: (order.machines || []).map((machine) => ({ ...machine, vendor: undefined })) } as T
 }
 
 function enrichDescriptions(order: Order, synced?: Order, workflowMachines: Record<string, MachineWorkflow> = {}): Order {

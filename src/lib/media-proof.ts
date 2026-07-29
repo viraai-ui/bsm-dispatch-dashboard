@@ -1,6 +1,6 @@
 import type { Order } from '@/types/domain'
 import { uploadBufferToGithubMedia } from './github-media'
-import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
+import { githubReadJson, githubWriteJson } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 import { isMachineLineItem } from './item-classification'
@@ -36,6 +36,8 @@ const MEDIA_PATHS: Record<MediaStage, string> = {
   packing: 'data/media-proof-store.json',
   loading: 'data/loading-video-store.json',
 }
+const COMPLETED_PATH = 'data/packaging-completed-store.json'
+type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 
 function mediaPath(stage: MediaStage = 'packing') { return MEDIA_PATHS[stage] }
 function stageLabel(stage: MediaStage) { return stage === 'loading' ? 'loading video' : 'packing video' }
@@ -57,14 +59,15 @@ export async function cleanupExpiredMediaProofs(stage: MediaStage = 'packing') {
 }
 
 export async function listMediaProofOrders(stage: MediaStage = 'packing') {
-  const processed = await listProcessedOrders()
-  const processedAtByOrderId = new Map(processed.map((item) => [item.salesOrderId, Date.parse(item.processedAt || '') || 0]))
+  const { data: completedStore } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
+  const completed = completedStore.completed || {}
+  const completedAtByOrderId = new Map(Object.entries(completed).map(([orderId, item]) => [orderId, Date.parse(item.completedAt || '') || 0]))
   const packingStore = await readMediaProofStore('packing')
   const loadingStore = await readMediaProofStore('loading')
   const store = stage === 'loading' ? loadingStore : packingStore
   let packingChanged = false
   let loadingChanged = false
-  const sourceOrders = processed.map((item) => item.processedOrder).filter((order): order is Order => Boolean(order))
+  const sourceOrders = Object.values(completed).map((item) => item.order).filter((order): order is Order => Boolean(order))
 
   for (const order of sourceOrders) {
     if (videoRequiredMachines(order).length === 0) {
@@ -84,8 +87,8 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const orders = sourceOrders
     .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))
     .filter((order) => order.machines.length > 0)
-    .filter((order) => stage === 'packing' ? !packingStore.records[order.id]?.submittedAt : Boolean(packingStore.records[order.id]?.submittedAt) && !store.records[order.id]?.submittedAt)
-    .sort((a, b) => (processedAtByOrderId.get(b.id) || 0) - (processedAtByOrderId.get(a.id) || 0))
+    .filter((order) => !store.records[order.id]?.submittedAt)
+    .sort((a, b) => (completedAtByOrderId.get(b.id) || 0) - (completedAtByOrderId.get(a.id) || 0))
   return { orders, records: store.records }
 }
 
