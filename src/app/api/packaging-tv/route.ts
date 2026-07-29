@@ -83,6 +83,7 @@ function enrichDescriptions(order: Order, synced?: Order, workflowMachines: Reco
   const liveMachines = new Map((synced.machines || []).map((machine) => [machine.id, machine]))
   return {
     ...order,
+    salesperson: order.salesperson || synced.salesperson || '—',
     lineItems: mergeLineItemDescriptions(order.lineItems || [], synced.lineItems || []),
     machines: (order.machines || []).map((machine) => {
       const live = liveMachines.get(machine.id)

@@ -273,6 +273,8 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .packaging-order-title { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
 .packaging-order-title h3 { margin: 0 0 6px; font-size: clamp(21px, 2vw, 28px); letter-spacing: -.045em; }
 .packaging-order-title p { margin: 0; color: var(--muted); font-weight: 850; }
+.dispatch-card-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; min-width: 128px; text-align: right; }
+.dispatch-salesperson { font-size: 15px; font-weight: 750; line-height: 1.2; color: #0f172a; max-width: 180px; overflow-wrap: anywhere; }
 .packaging-machine-table { display: grid; gap: 8px; width: 100%; min-width: 0; }
 .packaging-row { display: grid; grid-template-columns: minmax(170px, 1.35fr) minmax(80px, .55fr) 54px 104px minmax(120px, .85fr); gap: 10px; align-items: start; padding: 14px; border: 1px solid rgba(226,232,240,.88); border-radius: 18px; background: rgba(255,255,255,.88); min-width: 0; }
 .packaging-row strong, .packaging-row b, .packaging-row span, .serial-list { min-width: 0; }
@@ -505,6 +507,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .packaging-row { grid-template-columns: minmax(0, 1fr); }
   .packaging-header { display: none; }
   .packaging-order-title { flex-direction: column; }
+  .dispatch-card-meta { align-items: flex-start; text-align: left; min-width: 0; }
   .units-generator-head { flex-direction: column; align-items: stretch; }
   .units-form-grid { grid-template-columns: 1fr; }
   .units-form-grid .span-2 { grid-column: span 1; }
