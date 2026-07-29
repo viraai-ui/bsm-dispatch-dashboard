@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 import type { MediaProofRecord, MediaUpload } from '@/lib/media-proof'
@@ -133,90 +133,8 @@ function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDe
 }
 
 function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | File[] | null) => void; galleryMultiple?: boolean }) {
-  const [cameraOpen, setCameraOpen] = useState(false)
-  const [recording, setRecording] = useState(false)
-  const [stream, setStream] = useState<MediaStream | null>(null)
-  const [error, setError] = useState('')
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-  const recorderRef = useRef<MediaRecorder | null>(null)
-  const chunksRef = useRef<Blob[]>([])
-  const cancelledRef = useRef(false)
-
-  useEffect(() => {
-    if (videoRef.current && stream) videoRef.current.srcObject = stream
-    return () => {}
-  }, [stream])
-
-  async function openCamera() {
-    if (disabled || cameraOpen || recording) return
-    setError('')
-    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
-      setError('In-app camera is not supported on this browser. Please use Gallery.')
-      return
-    }
-    try {
-      const nextStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1080 }, frameRate: { ideal: 60, max: 60 } }, audio: true })
-      setStream(nextStream)
-      setCameraOpen(true)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Camera permission failed')
-    }
-  }
-
-  function startRecording() {
-    if (!stream || recording) return
-    setError('')
-    try {
-      const mimeType = bestRecorderMimeType()
-      chunksRef.current = []
-      cancelledRef.current = false
-      const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined)
-      recorder.ondataavailable = (event) => { if (event.data.size > 0) chunksRef.current.push(event.data) }
-      recorder.onstop = () => {
-        const type = recorder.mimeType || mimeType || 'video/webm'
-        const blob = new Blob(chunksRef.current, { type })
-        const file = new File([blob], `recorded-video-${Date.now()}.${extensionForVideoType(type)}`, { type, lastModified: Date.now() })
-        if (stream) stopStream(stream)
-        setStream(null)
-        setCameraOpen(false)
-        setRecording(false)
-        if (cancelledRef.current) return
-        if (file.size > 0) onUpload([file])
-        else setError('Recording was empty. Please record again.')
-      }
-      recorderRef.current = recorder
-      setRecording(true)
-      recorder.start(1000)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Recording failed')
-    }
-  }
-
-  function stopRecording() {
-    if (recorderRef.current?.state === 'recording') recorderRef.current.stop()
-  }
-
-  function cancelRecording() {
-    const current = recorderRef.current
-    recorderRef.current = null
-    cancelledRef.current = true
-    if (current?.state === 'recording') current.stop()
-    if (stream) stopStream(stream)
-    chunksRef.current = []
-    setStream(null)
-    setCameraOpen(false)
-    setRecording(false)
-  }
-
-  return <div className="video-upload-choices"><button type="button" className={`video-choice-btn record ${disabled ? 'disabled' : ''}`} disabled={disabled} onClick={openCamera}><span aria-hidden="true">📹</span><strong>Record Video</strong></button><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label>{error && <small className="form-error video-record-error">{error}</small>}{cameraOpen && <div className="recorder-overlay"><div className="recorder-box"><video ref={videoRef} autoPlay playsInline muted /><div className="recorder-actions">{recording ? <><button type="button" className="btn light" onClick={cancelRecording}>Cancel</button><button type="button" className="btn red" onClick={stopRecording}>Stop & Upload</button></> : <><button type="button" className="btn light" onClick={cancelRecording}>Close</button><button type="button" className="btn red" onClick={startRecording}>Start Recording</button></>}</div></div></div>}</div>
+  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label></div>
 }
-
-function bestRecorderMimeType() {
-  const types = ['video/webm;codecs=vp9,opus', 'video/webm;codecs=vp8,opus', 'video/webm', 'video/mp4']
-  return types.find((type) => MediaRecorder.isTypeSupported(type)) || ''
-}
-
-function stopStream(stream: MediaStream) { stream.getTracks().forEach((track) => track.stop()) }
 
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
 
