@@ -58,6 +58,7 @@ export async function cleanupExpiredMediaProofs(stage: MediaStage = 'packing') {
 
 export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const processed = await listProcessedOrders()
+  const processedAtByOrderId = new Map(processed.map((item) => [item.salesOrderId, Date.parse(item.processedAt || '') || 0]))
   const packingStore = await readMediaProofStore('packing')
   const loadingStore = await readMediaProofStore('loading')
   const store = stage === 'loading' ? loadingStore : packingStore
@@ -84,6 +85,7 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
     .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))
     .filter((order) => order.machines.length > 0)
     .filter((order) => stage === 'packing' ? !packingStore.records[order.id]?.submittedAt : Boolean(packingStore.records[order.id]?.submittedAt) && !store.records[order.id]?.submittedAt)
+    .sort((a, b) => (processedAtByOrderId.get(b.id) || 0) - (processedAtByOrderId.get(a.id) || 0))
   return { orders, records: store.records }
 }
 
