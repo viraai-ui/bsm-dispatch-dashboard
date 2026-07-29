@@ -1421,6 +1421,72 @@
       "machineIds": [
         "1154219000034731047-1154219000034731050-1"
       ]
+    },
+    "1154219000034756004": {
+      "completedAt": "2026-07-29T07:42:18.569Z",
+      "order": {
+        "id": "1154219000034756004",
+        "zohoSalesOrderId": "1154219000034756004",
+        "salesOrderNumber": "SO-07577",
+        "status": "open",
+        "customerName": "Leefong Exim Pvt. Ltd.",
+        "shippingAddress": "7/717-A, Rahiman Bazar,, Kolathara, Calicut, Kerala, 673655",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034756007",
+            "itemName": "Travel head cutting press (25 ton) Heavy-duty",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034756008",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034756004-1154219000034756007-1",
+            "unitNumber": 1,
+            "serialNumber": "26270782",
+            "qrToken": "26270782",
+            "orderId": "1154219000034756004",
+            "lineItemId": "1154219000034756007",
+            "itemName": "Travel head cutting press (25 ton) Heavy-duty",
+            "sku": "",
+            "customerName": "Leefong Exim Pvt. Ltd.",
+            "salesOrderNumber": "SO-07577",
+            "deliveryDate": "2026-07-28",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-27",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034756004-1154219000034756007-1"
+      ]
     }
   }
 }
