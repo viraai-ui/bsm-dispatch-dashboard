@@ -525,6 +525,62 @@
       "machineIds": [
         "1154219000034726002-1154219000034726005-1"
       ]
+    },
+    "1154219000034717020": {
+      "completedAt": "2026-07-29T04:59:08.061Z",
+      "order": {
+        "id": "1154219000034717020",
+        "zohoSalesOrderId": "1154219000034717020",
+        "salesOrderNumber": "SO-07581",
+        "status": "open",
+        "customerName": "NEW GOBIND ENTERPRISES",
+        "shippingAddress": "Plot No. 1358, M.I.E., Part-B, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034717023",
+            "itemName": "Thread Burner (Chinese)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034717020-1154219000034717023-1",
+            "unitNumber": 1,
+            "serialNumber": "26270786",
+            "qrToken": "26270786",
+            "orderId": "1154219000034717020",
+            "lineItemId": "1154219000034717023",
+            "itemName": "Thread Burner (Chinese)",
+            "sku": "",
+            "customerName": "NEW GOBIND ENTERPRISES",
+            "salesOrderNumber": "SO-07581",
+            "deliveryDate": "2026-07-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-27",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034717020-1154219000034717023-1"
+      ]
     }
   }
 }
