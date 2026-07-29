@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 import type { MediaProofRecord, MediaUpload } from '@/lib/media-proof'
@@ -133,7 +133,32 @@ function PackingVideoPanel({ order, record, busy, progressByUnit, onUpload, onDe
 }
 
 function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { disabled?: boolean; onUpload: (files: FileList | File[] | null) => void; galleryMultiple?: boolean }) {
-  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { onUpload(event.target.files); event.target.value = '' }} /></label></div>
+  const [pendingFiles, setPendingFiles] = useState<File[]>([])
+  const [pendingSource, setPendingSource] = useState<'record' | 'gallery'>('record')
+  const recordInputRef = useRef<HTMLInputElement | null>(null)
+  const galleryInputRef = useRef<HTMLInputElement | null>(null)
+
+  function stageFiles(files: FileList | null, source: 'record' | 'gallery') {
+    const selected = Array.from(files || [])
+    if (!selected.length) return
+    setPendingSource(source)
+    setPendingFiles(selected)
+  }
+
+  function clearPending() { setPendingFiles([]) }
+
+  function uploadPending() {
+    if (!pendingFiles.length) return
+    onUpload(pendingFiles)
+    clearPending()
+  }
+
+  function chooseGalleryAgain() {
+    clearPending()
+    window.setTimeout(() => galleryInputRef.current?.click(), 0)
+  }
+
+  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input ref={recordInputRef} hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => { stageFiles(event.target.files, 'record'); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input ref={galleryInputRef} hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { stageFiles(event.target.files, 'gallery'); event.target.value = '' }} /></label>{pendingFiles.length > 0 && <div className="selected-video-backdrop" role="dialog" aria-modal="true"><section className="selected-video-card"><strong>{pendingSource === 'record' ? 'Recorded video ready' : 'Selected video ready'}</strong><span>{pendingFiles.length === 1 ? pendingFiles[0].name || 'Video ready' : `${pendingFiles.length} videos selected`}</span><div className="selected-video-actions"><button type="button" className="btn light" onClick={clearPending}>Cancel</button><button type="button" className="btn light" onClick={chooseGalleryAgain}>Choose Gallery</button><button type="button" className="btn red" onClick={uploadPending}>Upload Video</button></div></section></div>}</div>
 }
 
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
