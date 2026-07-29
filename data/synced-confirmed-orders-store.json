@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034918002": {
+      "id": "1154219000034918002",
+      "zohoSalesOrderId": "1154219000034918002",
+      "salesOrderNumber": "SO-07600",
+      "status": "open",
+      "customerName": "Selvam Press",
+      "shippingAddress": "14-6-10, Selvam Press, Market Road., Surandai, Tirunelveli, Tamil Nadu, 627859",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034918005",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "description": "400 Number Eyelet",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034918002-1154219000034918005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034918002",
+          "lineItemId": "1154219000034918005",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "customerName": "Selvam Press",
+          "salesOrderNumber": "SO-07600",
+          "deliveryDate": "2026-07-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "400 Number Eyelet"
+        }
+      ]
+    },
     "1154219000034890001": {
       "id": "1154219000034890001",
       "zohoSalesOrderId": "1154219000034890001",
@@ -7381,6 +7428,7 @@
     }
   },
   "orderIds": [
+    "1154219000034918002",
     "1154219000034890001",
     "1154219000034867284",
     "1154219000034874001",
@@ -7430,8 +7478,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T10:50:20.116Z",
-  "lastAttemptAt": "2026-07-29T11:05:01.363Z",
+  "lastSuccessfulSyncAt": "2026-07-29T11:05:21.300Z",
+  "lastAttemptAt": "2026-07-29T11:05:21.300Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
