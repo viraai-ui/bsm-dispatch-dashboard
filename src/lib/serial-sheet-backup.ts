@@ -16,6 +16,7 @@ type SerialSheetRecord = {
 }
 
 type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[] }
+export type SerialSheetDatabaseResult = { orders: Order[]; warrantyDates: Record<string, string>; configured: boolean; errors: string[] }
 
 let cachedSheetAccessToken: { token: string; expiresAt: number } | null = null
 let pendingSheetAccessToken: Promise<string> | null = null
@@ -98,6 +99,76 @@ async function fetchSerialRecords() {
   const data = await sheetPostWithRetry({ method: 'worksheet.records.fetch', worksheet_name: worksheetName })
   return Array.isArray(data.records) ? data.records : Array.isArray(data.data) ? data.data : []
 }
+
+export async function listSerialSheetDatabaseOrders(existingSerials = new Set<string>()): Promise<SerialSheetDatabaseResult> {
+  const result: SerialSheetDatabaseResult = { orders: [], warrantyDates: {}, configured: serialSheetConfigured(), errors: [] }
+  if (!result.configured) return result
+  try {
+    const records = await fetchSerialRecords()
+    const usedIds = new Set<string>()
+    for (const row of records) {
+      const serialNumber = String(row['Serial No.'] || row['Serial No'] || row.Serial || '').trim()
+      if (!serialNumber || existingSerials.has(serialNumber)) continue
+      const sNo = String(row['S.No.'] ?? row['S.No'] ?? row['S No'] ?? row.SNo ?? row.s_no ?? serialNumber).trim()
+      const id = uniqueId(`serial-sheet-${safeId(serialNumber || sNo)}`, usedIds)
+      const customerName = String(row['Company Name'] || row.Company || row.Customer || '').trim() || 'Legacy customer'
+      const address = String(row.Address || '').trim()
+      const dispatchDate = parseSheetDate(String(row['D.O.P.'] || row.DOP || row.Date || '').trim())
+      const itemName = String(row['Model No.'] || row.Model || row['Machine Name'] || '').trim() || 'Machine'
+      const machine: MachineUnit = {
+        id: `${id}-unit`,
+        unitNumber: 1,
+        serialNumber,
+        qrToken: serialNumber,
+        orderId: id,
+        lineItemId: `${id}-line`,
+        itemName,
+        sku: '',
+        customerName,
+        salesOrderNumber: `SERIAL-${serialNumber}`,
+        deliveryDate: dispatchDate,
+        status: 'Dispatched',
+        selectedForBatch: false,
+        woodenPacking: 'Not Required',
+        qrPasted: true,
+        qcDone: true,
+        mediaPhotos: 0,
+        mediaVideos: 0,
+        warrantyStart: dispatchDate,
+      }
+      result.orders.push({
+        id,
+        zohoSalesOrderId: id,
+        salesOrderNumber: `SERIAL-${serialNumber}`,
+        status: 'open',
+        customerName,
+        shippingAddress: address,
+        deliveryDate: dispatchDate,
+        dashboardStatus: 'Dispatched',
+        reviewRequired: false,
+        lineItems: [{ id: `${id}-line`, itemName, sku: '', quantity: 1, pendingQuantity: 0, woodenPackingRequired: false, dispatchCategory: 'machine', description: String(row.Remark || row.Make || '').trim() }],
+        machines: [machine],
+      })
+      result.warrantyDates[id] = dispatchDate
+    }
+    return result
+  } catch (error) {
+    result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet database import failed')
+    return result
+  }
+}
+
+function parseSheetDate(value: string) {
+  const clean = value.replace(/^'/, '').trim()
+  const match = clean.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/)
+  if (!match) return clean
+  const [, dd, mm, yy] = match
+  const year = yy.length === 2 ? `20${yy}` : yy
+  return `${year}-${String(mm).padStart(2, '0')}-${String(dd).padStart(2, '0')}`
+}
+
+function safeId(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'row' }
+function uniqueId(base: string, used: Set<string>) { let id = base; let count = 2; while (used.has(id)) id = `${base}-${count++}`; used.add(id); return id }
 
 function nextSerialSheetNumber(records: any[]) {
   const max = records.reduce((highest, row) => {
