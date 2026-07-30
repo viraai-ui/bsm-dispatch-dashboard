@@ -1,5 +1,172 @@
 {
   "orders": {
+    "1154219000034894507": {
+      "id": "1154219000034894507",
+      "zohoSalesOrderId": "1154219000034894507",
+      "salesOrderNumber": "SO-07607",
+      "status": "open",
+      "customerName": "UNIFORMVERSE PRIVATE LIMITED",
+      "shippingAddress": "B 118-122, Central Park, GIDC Pandesara, Surat,, Surat, Gujarat, 394221, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034894510",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "UV Transfarmer",
+          "quantity": 4,
+          "pendingQuantity": 4,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034894507-1154219000034894510-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034894507",
+          "lineItemId": "1154219000034894510",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "UNIFORMVERSE PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07607",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "UV Transfarmer"
+        },
+        {
+          "id": "1154219000034894507-1154219000034894510-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034894507",
+          "lineItemId": "1154219000034894510",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "UNIFORMVERSE PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07607",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "UV Transfarmer"
+        },
+        {
+          "id": "1154219000034894507-1154219000034894510-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034894507",
+          "lineItemId": "1154219000034894510",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "UNIFORMVERSE PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07607",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "UV Transfarmer"
+        },
+        {
+          "id": "1154219000034894507-1154219000034894510-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034894507",
+          "lineItemId": "1154219000034894510",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "UNIFORMVERSE PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07607",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "UV Transfarmer"
+        }
+      ]
+    },
+    "1154219000034903010": {
+      "id": "1154219000034903010",
+      "zohoSalesOrderId": "1154219000034903010",
+      "salesOrderNumber": "SO-07606",
+      "status": "open",
+      "customerName": "INDO AGRITECH PRIVATE LIMITED",
+      "shippingAddress": "Survey No. 273/2/3, Seth Agro Ke Piche, Ujjain Road, Gram Tarana Tehsil Sanwer, Sanwer,, Indore,, Madhya Pradesh,, 453551, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034903013",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034903014",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034903010-1154219000034903013-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034903010",
+          "lineItemId": "1154219000034903013",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "INDO AGRITECH PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07606",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034923001": {
       "id": "1154219000034923001",
       "zohoSalesOrderId": "1154219000034923001",
@@ -527,7 +694,7 @@
           "id": "1154219000034734030",
           "itemName": "Hotmelt Roller Coater (16 inch)",
           "sku": "831-2",
-          "description": "",
+          "description": "Good Packing",
           "quantity": 2,
           "pendingQuantity": 2,
           "woodenPackingRequired": false,
@@ -554,7 +721,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "Good Packing"
         },
         {
           "id": "1154219000034734027-1154219000034734030-2",
@@ -575,64 +742,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034731047": {
-      "id": "1154219000034731047",
-      "zohoSalesOrderId": "1154219000034731047",
-      "salesOrderNumber": "SO-07587",
-      "status": "open",
-      "customerName": "Y S Automotive Pvt. Ltd.",
-      "shippingAddress": "MI 1A, Kh. No. 122, Industrial Area, Haripur Road, Selaqui, Dehradun, Uttarakhand, 248011",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034731050",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034731051",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Freight Cost from BSM to Nitco Logistics Delhi Godown for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034731047-1154219000034731050-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034731047",
-          "lineItemId": "1154219000034731050",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "Y S Automotive Pvt. Ltd.",
-          "salesOrderNumber": "SO-07587",
-          "deliveryDate": "2026-07-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "Good Packing"
         }
       ]
     },
@@ -7407,6 +7517,8 @@
     }
   },
   "orderIds": [
+    "1154219000034894507",
+    "1154219000034903010",
     "1154219000034923001",
     "1154219000034918002",
     "1154219000034890001",
@@ -7416,7 +7528,6 @@
     "1154219000034836001",
     "1154219000034827001",
     "1154219000034734027",
-    "1154219000034731047",
     "1154219000034730016",
     "1154219000034749030",
     "1154219000034787959",
@@ -7457,8 +7568,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-29T12:35:20.705Z",
-  "lastAttemptAt": "2026-07-30T06:57:28.484Z",
+  "lastSuccessfulSyncAt": "2026-07-30T06:57:46.219Z",
+  "lastAttemptAt": "2026-07-30T06:57:46.220Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
