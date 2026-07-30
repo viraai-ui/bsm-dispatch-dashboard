@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270808,
+  "serialCounter": 26270809,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -2994,6 +2994,20 @@
           "processedAt": "2026-07-30T07:20:39.361Z",
           "dispatchNote": "wooden",
           "vendor": "Aradhya"
+        }
+      }
+    },
+    "1154219000034918002": {
+      "salesOrderId": "1154219000034918002",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000034918002-1154219000034918005-1": {
+          "machineUnitId": "1154219000034918002-1154219000034918005-1",
+          "lineItemId": "",
+          "serialNumber": "26270809",
+          "qrToken": "26270809",
+          "qrStatus": "pending"
         }
       }
     }
