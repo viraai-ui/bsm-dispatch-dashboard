@@ -3006,7 +3006,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-07-31T07:46:07.301Z",
       "processedOrder": {
         "id": "1154219000034952463",
@@ -3223,7 +3223,8 @@
           "processedAt": "2026-07-31T07:46:07.301Z",
           "dispatchNote": ""
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000035014002": {
       "salesOrderId": "1154219000035014002",
@@ -3506,13 +3507,14 @@
           "processedAt": "2026-07-31T07:46:07.301Z",
           "dispatchNote": ""
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035024001": {
       "salesOrderId": "1154219000035024001",
       "salesOrderNumber": "SO-07618",
       "status": "processed",
-      "dispatchPriority": "urgent",
+      "dispatchPriority": "regular",
       "processedAt": "2026-07-31T07:46:07.301Z",
       "processedOrder": {
         "id": "1154219000035024001",
@@ -3685,7 +3687,8 @@
           "processedAt": "2026-07-31T07:46:07.301Z",
           "dispatchNote": ""
         }
-      }
+      },
+      "dispatchSortOrder": 3
     },
     "1154219000035001001": {
       "salesOrderId": "1154219000035001001",
