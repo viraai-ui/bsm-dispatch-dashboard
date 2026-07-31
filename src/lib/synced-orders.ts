@@ -35,6 +35,12 @@ async function readBundledSyncedOrdersStore() {
   }
 }
 
+function isZohoOrderOpen(order: Order) {
+  const closedStatuses = new Set(['closed', 'void', 'cancelled', 'canceled'])
+  const status = String(order.status || '').toLowerCase()
+  return !closedStatuses.has(status) && !String(order.id || '').startsWith('manual-serial-') && !String(order.salesOrderNumber || '').startsWith('SERIAL-')
+}
+
 function normalizeStore(store: SyncedOrdersStore): SyncedOrdersStore {
   const rawOrders = store.orders || {}
   const orders = Object.fromEntries(Object.entries(rawOrders).map(([id, order]) => [id, normalizeOrder(order)]))
@@ -53,6 +59,15 @@ function normalizeOrder(order: Order): Order {
 
 export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message = 'Update confirmed sales order sync store') {
   await githubWriteJson(SYNCED_ORDERS_PATH, normalizeStore(store), message)
+}
+
+export async function listOrdersModuleOrders() {
+  const store = await readSyncedOrdersStore()
+  const workflows = await listWorkflows()
+  return store.orderIds
+    .map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null)
+    .filter((order): order is Order => order !== null)
+    .filter(isZohoOrderOpen)
 }
 
 export async function listSyncedOrders() {
