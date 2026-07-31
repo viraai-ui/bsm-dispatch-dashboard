@@ -2193,6 +2193,63 @@
         "1154219000035000006-1154219000035000009-1",
         "1154219000035000006-1154219000035000009-2"
       ]
+    },
+    "1154219000034923001": {
+      "completedAt": "2026-07-31T09:54:35.720Z",
+      "order": {
+        "id": "1154219000034923001",
+        "zohoSalesOrderId": "1154219000034923001",
+        "salesOrderNumber": "SO-07602",
+        "status": "open",
+        "customerName": "Assert Footwears",
+        "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034923004",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034923001-1154219000034923004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270807",
+            "qrToken": "26270807",
+            "orderId": "1154219000034923001",
+            "lineItemId": "1154219000034923004",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Assert Footwears",
+            "salesOrderNumber": "SO-07602",
+            "deliveryDate": "2026-07-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000034923001-1154219000034923004-1"
+      ]
     }
   }
 }
