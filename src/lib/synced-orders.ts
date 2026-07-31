@@ -138,10 +138,20 @@ async function performSync() {
 
 function applyWorkflow(order: Order, workflow?: OrderWorkflow): Order {
   if (!workflow) return order
-  const machines = order.machines.map((machine) => applyMachineWorkflow(machine, workflow))
+  const workflowLineItems = new Map((workflow.processedOrder?.lineItems || []).map((item) => [item.id, item]))
+  const workflowMachines = new Map((workflow.processedOrder?.machines || []).map((machine) => [machine.id, machine]))
+  const lineItems = order.lineItems.map((item) => ({
+    ...item,
+    woodenPackingRequired: workflowLineItems.get(item.id)?.woodenPackingRequired || item.woodenPackingRequired,
+  }))
+  const machines = order.machines.map((machine) => applyMachineWorkflow({
+    ...machine,
+    woodenPacking: workflowMachines.get(machine.id)?.woodenPacking || machine.woodenPacking,
+  }, workflow))
   const status = deriveWorkflowStatus(workflow, machines.length)
   return {
     ...order,
+    lineItems,
     machines,
     dashboardStatus: status === 'processed' ? 'Processed' : status === 'qr_generated' ? 'QR Generated' : status === 'partially_generated' ? 'QR Generated' : order.dashboardStatus,
   }
