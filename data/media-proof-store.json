@@ -152,7 +152,26 @@
       "orderId": "1154219000034923001",
       "salesOrderNumber": "SO-07602",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000034923001-1154219000034923004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000034923001-1154219000034923004-1-video-1785497759248-z0o2pi",
+              "name": "VID_20260731_170552.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-07-31%2FSO-07602%2FSingle%20needle%20post%20bed%20Drop%20feed-1154219000034923001-1154219000034923004-1-2026-07-31T11-35-57-126Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-07-31/SO-07602/Single needle post bed Drop feed-1154219000034923001-1154219000034923004-1-2026-07-31T11-35-57-126Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-07-31T11:35:59.248Z",
+              "expiresAt": "2026-08-30T11:35:57.127Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     }
   }
