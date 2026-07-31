@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035015011": {
+      "id": "1154219000035015011",
+      "zohoSalesOrderId": "1154219000035015011",
+      "salesOrderNumber": "SO-07624",
+      "status": "open",
+      "customerName": "JAGRIYA ENTERPRISES",
+      "shippingAddress": "1st, Plot, House No. 64 KH No. 382-385, Mauza Lodhai, Shamshabad Road, Near- Behind Jhalak Kishori CNG Petrol Pump, Rajeev Narayan Dham,, Agra, Uttar Pradesh, 282001, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035015014",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035015015",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035015011-1154219000035015014-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035015011",
+          "lineItemId": "1154219000035015014",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "customerName": "JAGRIYA ENTERPRISES",
+          "salesOrderNumber": "SO-07624",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035015011-1154219000035015015-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035015011",
+          "lineItemId": "1154219000035015015",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "JAGRIYA ENTERPRISES",
+          "salesOrderNumber": "SO-07624",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000034957555": {
       "id": "1154219000034957555",
       "zohoSalesOrderId": "1154219000034957555",
@@ -10422,6 +10500,7 @@
     }
   },
   "orderIds": [
+    "1154219000035015011",
     "1154219000034957555",
     "1154219000035011002",
     "1154219000035025006",
@@ -10477,8 +10556,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T09:59:41.080Z",
-  "lastAttemptAt": "2026-07-31T10:07:16.904Z",
+  "lastSuccessfulSyncAt": "2026-07-31T10:07:40.586Z",
+  "lastAttemptAt": "2026-07-31T10:07:40.586Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
