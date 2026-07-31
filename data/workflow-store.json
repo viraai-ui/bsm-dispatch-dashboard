@@ -75,7 +75,7 @@
       "salesOrderId": "1154219000034608001",
       "salesOrderNumber": "SO-07550",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-07-23T06:28:51.099Z",
       "processedOrder": {
         "id": "1154219000034608001",
@@ -139,7 +139,7 @@
           "dispatchNote": "Wooden"
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 1
     },
     "1154219000034515009": {
       "salesOrderId": "1154219000034515009",
