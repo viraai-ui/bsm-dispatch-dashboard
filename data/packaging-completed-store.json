@@ -1955,6 +1955,72 @@
         "1154219000034827001-1154219000034827004-5",
         "1154219000034827001-1154219000034827004-6"
       ]
+    },
+    "1154219000035025006": {
+      "completedAt": "2026-07-31T08:34:47.978Z",
+      "order": {
+        "id": "1154219000035025006",
+        "zohoSalesOrderId": "1154219000035025006",
+        "salesOrderNumber": "SO-07620",
+        "status": "open",
+        "customerName": "Sumanglam Footwears P Ltd",
+        "shippingAddress": "42 KM MILE STONE, ROHTAK ROAD BHADURGARH-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035025009",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035025010",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Bladder Drum type",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035025006-1154219000035025009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270812",
+            "qrToken": "26270812",
+            "orderId": "1154219000035025006",
+            "lineItemId": "1154219000035025009",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "Sumanglam Footwears P Ltd",
+            "salesOrderNumber": "SO-07620",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035025006-1154219000035025009-1"
+      ]
     }
   }
 }
