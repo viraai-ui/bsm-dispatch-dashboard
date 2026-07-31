@@ -6,7 +6,7 @@ const accountsDomain = `https://accounts.zoho.${dc}`
 const apiDomain = process.env.ZOHO_API_DOMAIN || `https://www.zohoapis.${dc}`
 let cachedAccessToken: { token: string; expiresAt: number } | null = null
 let pendingAccessToken: Promise<string> | null = null
-const itemDescriptionCache = new Map<string, string>()
+const itemDetailCache = new Map<string, { description: string; woodenPackingRequired: boolean }>()
 
 function hasZohoConfig() {
   return Boolean(process.env.ZOHO_CLIENT_ID && process.env.ZOHO_CLIENT_SECRET && process.env.ZOHO_REFRESH_TOKEN && process.env.ZOHO_ORGANIZATION_ID)
@@ -96,6 +96,10 @@ function lineItemDescription(item: any) {
 
 function isWoodenPackingLineItem(item: any) {
   const itemWooden = readCustomField(item, ['wooden packing', 'wooden', 'packing'])
+    || item.custom_field_hash?.cf_wooden_packing_unformatted
+    || item.custom_field_hash?.cf_wooden_packing
+    || item.cf_wooden_packing_unformatted
+    || item.cf_wooden_packing
   const itemWoodenText = String(itemWooden || '').toLowerCase().trim()
   const itemWoodenQty = Number(String(itemWooden || '').replace(/[^0-9.]/g, ''))
 
@@ -267,20 +271,25 @@ async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batc
 
 async function enrichZohoLineItemDescriptions(order: any, token: string) {
   for (const item of order.line_items || []) {
-    if (lineItemDescription(item)) continue
     const itemId = String(item.item_id || '')
     if (!itemId) continue
-    if (!itemDescriptionCache.has(itemId)) {
+    if (!itemDetailCache.has(itemId)) {
       try {
         const detail = await zohoGetWithRetry(`/inventory/v1/items/${itemId}`, token, 2)
         const zohoItem = detail.item || {}
-        itemDescriptionCache.set(itemId, cleanDescription(zohoItem.description || zohoItem.sales_description || zohoItem.purchase_description))
+        itemDetailCache.set(itemId, {
+          description: cleanDescription(zohoItem.description || zohoItem.sales_description || zohoItem.purchase_description),
+          woodenPackingRequired: isWoodenPackingLineItem(zohoItem),
+        })
       } catch {
-        itemDescriptionCache.set(itemId, '')
+        itemDetailCache.set(itemId, { description: '', woodenPackingRequired: false })
       }
     }
-    const description = itemDescriptionCache.get(itemId)
-    if (description) item.description = description
+    const detail = itemDetailCache.get(itemId)
+    if (detail?.description && !lineItemDescription(item)) item.description = detail.description
+    if (detail?.woodenPackingRequired) {
+      item.custom_field_hash = { ...(item.custom_field_hash || {}), cf_wooden_packing_unformatted: 1 }
+    }
   }
 }
 
