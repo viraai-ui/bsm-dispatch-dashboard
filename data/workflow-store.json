@@ -1,4 +1,5 @@
 {
+  "serialCounter": 26270821,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -2548,7 +2549,7 @@
         "salesOrderNumber": "SO-07483",
         "status": "open",
         "customerName": "DIC INDIA LIMITED",
-        "shippingAddress": "C-55 A&B, Phase \u2013II,C-55 A&B, Phase \u2013II,, Noida, Uttar Pradesh, 201305, India",
+        "shippingAddress": "C-55 A&B, Phase –II,C-55 A&B, Phase –II,, Noida, Uttar Pradesh, 201305, India",
         "salesperson": "Deepak Kumar",
         "deliveryDate": "2026-07-15",
         "dashboardStatus": "Not Generated",
@@ -3366,7 +3367,8 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-07-31T07:46:07.301Z",
           "processedAt": "2026-07-31T07:46:07.301Z",
-          "dispatchNote": ""
+          "dispatchNote": "",
+          "dispatchedAt": "2026-07-31T08:34:47.978Z"
         }
       }
     },
@@ -3776,7 +3778,7 @@
         "status": "open",
         "customerName": "V.S. ENTERPRISES",
         "shippingAddress": "PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana, - 124507",
-        "salesperson": "\u2014",
+        "salesperson": "—",
         "deliveryDate": "2026-07-31",
         "dashboardStatus": "Dispatched",
         "reviewRequired": false,
@@ -3831,6 +3833,5 @@
         }
       }
     }
-  },
-  "serialCounter": 26270821
+  }
 }
