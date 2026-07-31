@@ -2021,6 +2021,87 @@
       "machineIds": [
         "1154219000035025006-1154219000035025009-1"
       ]
+    },
+    "1154219000034890001": {
+      "completedAt": "2026-07-31T09:54:13.097Z",
+      "order": {
+        "id": "1154219000034890001",
+        "zohoSalesOrderId": "1154219000034890001",
+        "salesOrderNumber": "SO-07599",
+        "status": "open",
+        "customerName": "FORTUNE ELASTOMERS PVT LTD",
+        "shippingAddress": "10/360 M PLOT NO 34 KSIDC KINALOOR, CALICUT, KERALA, 673612",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034890004",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034890001-1154219000034890004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270805",
+            "qrToken": "26270805",
+            "orderId": "1154219000034890001",
+            "lineItemId": "1154219000034890004",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "FORTUNE ELASTOMERS PVT LTD",
+            "salesOrderNumber": "SO-07599",
+            "deliveryDate": "2026-07-30",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000034890001-1154219000034890004-2",
+            "unitNumber": 2,
+            "serialNumber": "26270806",
+            "qrToken": "26270806",
+            "orderId": "1154219000034890001",
+            "lineItemId": "1154219000034890004",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "FORTUNE ELASTOMERS PVT LTD",
+            "salesOrderNumber": "SO-07599",
+            "deliveryDate": "2026-07-30",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000034890001-1154219000034890004-1",
+        "1154219000034890001-1154219000034890004-2"
+      ]
     }
   }
 }
