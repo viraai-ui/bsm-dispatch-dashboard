@@ -2102,6 +2102,97 @@
         "1154219000034890001-1154219000034890004-1",
         "1154219000034890001-1154219000034890004-2"
       ]
+    },
+    "1154219000035000006": {
+      "completedAt": "2026-07-31T09:54:24.611Z",
+      "order": {
+        "id": "1154219000035000006",
+        "zohoSalesOrderId": "1154219000035000006",
+        "salesOrderNumber": "SO-07615",
+        "status": "open",
+        "customerName": "INFINITY",
+        "shippingAddress": "Plot No. 12, INFINITY, HSIIDC Industrial Area, Phase- V, Sector 53, Kundli Industrial Area,, Sonipat, Haryana, 131028, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035000009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035000010",
+            "itemName": "Freight Charge",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035000006-1154219000035000009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270819",
+            "qrToken": "26270819",
+            "orderId": "1154219000035000006",
+            "lineItemId": "1154219000035000009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "INFINITY",
+            "salesOrderNumber": "SO-07615",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          },
+          {
+            "id": "1154219000035000006-1154219000035000009-2",
+            "unitNumber": 2,
+            "serialNumber": "26270820",
+            "qrToken": "26270820",
+            "orderId": "1154219000035000006",
+            "lineItemId": "1154219000035000009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "INFINITY",
+            "salesOrderNumber": "SO-07615",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035000006-1154219000035000009-1",
+        "1154219000035000006-1154219000035000009-2"
+      ]
     }
   }
 }
