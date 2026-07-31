@@ -54,6 +54,14 @@ export async function buildOrderStatusMap(orders: Order[], workflows?: Record<st
   const loading = await readMediaProofStore('loading')
   const mediaRecords = { ...packing.records, ...loading.records }
   const statuses: Record<string, OrderStatusProjection> = {}
-  for (const order of orders) statuses[order.id] = projectOrderStatus(order, stages[order.id] || 'open', mediaRecords[order.id])
-  return { statuses, stages, mediaRecords }
+  const visibleIds = new Set(orders.map((order) => order.id))
+  const visibleStages: Record<string, OrderStage> = {}
+  const visibleMediaRecords: Record<string, MediaProofRecord> = {}
+  for (const order of orders) {
+    visibleStages[order.id] = stages[order.id] || 'open'
+    if (mediaRecords[order.id]) visibleMediaRecords[order.id] = mediaRecords[order.id]
+    statuses[order.id] = projectOrderStatus(order, visibleStages[order.id], mediaRecords[order.id])
+  }
+  for (const id of Object.keys(stages)) if (!visibleIds.has(id)) delete stages[id]
+  return { statuses, stages: visibleStages, mediaRecords: visibleMediaRecords }
 }
