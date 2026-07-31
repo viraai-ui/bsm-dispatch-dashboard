@@ -126,6 +126,31 @@
       "closedFromZoho": true,
       "videoNotRequired": true,
       "units": {}
+    },
+    "1154219000034923001": {
+      "orderId": "1154219000034923001",
+      "salesOrderNumber": "SO-07602",
+      "submittedAt": null,
+      "units": {
+        "loading-order": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "loading-order-video-1785494894101-klmttl",
+              "name": "bsm-gallery-loading-test.mov",
+              "type": "video/quicktime",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-07-31%2FSO-07602%2FLoading%20Video-loading-order-2026-07-31T10-48-11-756Z.mov",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-07-31/SO-07602/Loading Video-loading-order-2026-07-31T10-48-11-756Z.mov",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-07-31T10:48:14.101Z",
+              "expiresAt": "2026-08-30T10:48:11.756Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
