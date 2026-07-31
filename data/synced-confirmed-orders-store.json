@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000035024001": {
+      "id": "1154219000035024001",
+      "zohoSalesOrderId": "1154219000035024001",
+      "salesOrderNumber": "SO-07618",
+      "status": "open",
+      "customerName": "Romina Enterprises Pvt. Ltd.",
+      "shippingAddress": "Plot no 263, HSIIDC Footwear Park, Sector- 17, Bahadurgarh, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035024004",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035024001-1154219000035024004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035024001",
+          "lineItemId": "1154219000035024004",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "Romina Enterprises Pvt. Ltd.",
+          "salesOrderNumber": "SO-07618",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035014002": {
+      "id": "1154219000035014002",
+      "zohoSalesOrderId": "1154219000035014002",
+      "salesOrderNumber": "SO-07617",
+      "status": "open",
+      "customerName": "AJAY ENTERPRISES",
+      "shippingAddress": "GROUND FLOOR, KHASRA NO-52/53,, PLOT NO-4, 24/1/2, RUCHI VIHAR, NIHAL VIHAR,, NANGLOI, West Delhi, 110041, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035014005",
+          "itemName": "Computerized Post Bed Single Needle Roller Feed",
+          "sku": "9910RTC",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035014002-1154219000035014005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035014002",
+          "lineItemId": "1154219000035014005",
+          "itemName": "Computerized Post Bed Single Needle Roller Feed",
+          "sku": "9910RTC",
+          "customerName": "AJAY ENTERPRISES",
+          "salesOrderNumber": "SO-07617",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035022001": {
       "id": "1154219000035022001",
       "zohoSalesOrderId": "1154219000035022001",
@@ -7479,6 +7573,8 @@
     }
   },
   "orderIds": [
+    "1154219000035024001",
+    "1154219000035014002",
     "1154219000035022001",
     "1154219000035000006",
     "1154219000035001001",
@@ -7531,8 +7627,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T05:52:04.983Z",
-  "lastAttemptAt": "2026-07-31T06:06:45.645Z",
+  "lastSuccessfulSyncAt": "2026-07-31T06:07:05.484Z",
+  "lastAttemptAt": "2026-07-31T06:07:05.484Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
