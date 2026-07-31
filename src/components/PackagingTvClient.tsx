@@ -10,7 +10,7 @@ const PACKING_STATE_KEY = 'bsm.packing.state.v1'
 
 type PackingState = Record<string, { urgent?: boolean }>
 type MachineGroup = { itemName: string; description?: string; sku?: string; serials: string[]; notes: string[]; quantity: number; woodenPackingRequired: boolean; category?: string }
-type DispatchOrder = Order & { dispatchPriority?: 'urgent' | 'regular' }
+type DispatchOrder = Order & { dispatchPriority?: 'urgent' | 'regular'; dispatchSortOrder?: number }
 
 export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
   const [orders, setOrders] = useState<DispatchOrder[]>([])
@@ -38,7 +38,7 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     return () => document.removeEventListener('fullscreenchange', onFullscreenChange)
   }, [])
 
-  const sorted = useMemo(() => [...orders].sort((a, b) => dateValue(a.deliveryDate) - dateValue(b.deliveryDate)), [orders])
+  const sorted = useMemo(() => [...orders].sort(compareDispatchOrders), [orders])
   const urgent = sorted.filter((order) => isUrgent(order, state))
   const regular = sorted.filter((order) => !isUrgent(order, state))
 
@@ -64,6 +64,12 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     const json = await response.json()
     if (!response.ok || !json.ok) { setError(json.error || 'Could not complete packaging'); return }
     setOrders((prev) => prev.filter((item) => item.id !== order.id))
+  }
+
+  async function persistColumnOrder(priority: 'urgent' | 'regular', orderedIds: string[]) {
+    const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'reorder', priority, orderedIds }) })
+    const json = await response.json()
+    if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save dispatch order')
   }
 
   async function moveOrderPriority(orderId: string, priority: 'urgent' | 'regular') {
@@ -93,6 +99,23 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     if (orderId) void moveOrderPriority(orderId, priority)
   }
 
+  function handleCardDrop(event: React.DragEvent, targetOrderId: string, priority: 'urgent' | 'regular') {
+    if (!canMoveOrders) return
+    event.preventDefault()
+    event.stopPropagation()
+    const movingId = event.dataTransfer.getData('text/plain') || draggingOrderId
+    setDraggingOrderId(null)
+    if (!movingId || movingId === targetOrderId) return
+    const before = orders
+    const moving = before.find((order) => order.id === movingId)
+    if (!moving) return
+    const targetColumn = before.filter((order) => (order.id === movingId ? priority === 'urgent' : isUrgent(order, state) === (priority === 'urgent')) && order.id !== movingId).sort(compareDispatchOrders)
+    const targetIndex = Math.max(0, targetColumn.findIndex((order) => order.id === targetOrderId))
+    const reorderedColumn = [...targetColumn.slice(0, targetIndex), { ...moving, dispatchPriority: priority }, ...targetColumn.slice(targetIndex)].map((order, index) => ({ ...order, dispatchPriority: priority, dispatchSortOrder: index + 1 }))
+    setOrders((prev) => prev.map((order) => reorderedColumn.find((item) => item.id === order.id) || (order.id === movingId ? { ...order, dispatchPriority: priority, dispatchSortOrder: targetIndex + 1 } : order)))
+    persistColumnOrder(priority, reorderedColumn.map((order) => order.id)).then(() => setNotice(`${moving.salesOrderNumber} moved and reordered.`)).catch((err) => { setOrders(before); setError(err instanceof Error ? err.message : 'Could not save dispatch order') })
+  }
+
   function handleDragOver(event: React.DragEvent) {
     if (!canMoveOrders) return
     event.preventDefault()
@@ -112,31 +135,30 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1><p className="muted dispatch-auto-sync">Auto-sync every 15 min{lastSyncedAt ? ` • Last ${formatTime(lastSyncedAt)}` : ''}</p></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncLocal()} disabled={syncing}>{syncing ? '↻' : '⟳'}</button><button className="btn light sync-icon-btn fullscreen-btn" aria-label="Fullscreen" title="Fullscreen" onClick={toggleFullscreen}>{fullscreen ? '⤢' : '⛶'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
-    {canMoveOrders && draggingOrderId && <div className="dispatch-drop-dock" aria-label="Priority drop targets">
-      <div className="dispatch-drop-dock-hint">Drop here</div>
-      <button type="button" className="dispatch-drop-target urgent" onDragOver={handleDragOver} onDrop={(event) => handleDrop(event, 'urgent')} onClick={() => { if (draggingOrderId) void moveOrderPriority(draggingOrderId, 'urgent'); setDraggingOrderId(null) }}>
+    {canMoveOrders && draggingOrderId && <>
+      <button type="button" className="dispatch-edge-drop urgent" onDragOver={handleDragOver} onDrop={(event) => handleDrop(event, 'urgent')} onClick={() => { if (draggingOrderId) void moveOrderPriority(draggingOrderId, 'urgent'); setDraggingOrderId(null) }}>
+        <span>Drop to</span>
         <strong>Urgent Dispatch</strong>
-        <span>No scrolling needed</span>
       </button>
-      <button type="button" className="dispatch-drop-target regular" onDragOver={handleDragOver} onDrop={(event) => handleDrop(event, 'regular')} onClick={() => { if (draggingOrderId) void moveOrderPriority(draggingOrderId, 'regular'); setDraggingOrderId(null) }}>
+      <button type="button" className="dispatch-edge-drop regular" onDragOver={handleDragOver} onDrop={(event) => handleDrop(event, 'regular')} onClick={() => { if (draggingOrderId) void moveOrderPriority(draggingOrderId, 'regular'); setDraggingOrderId(null) }}>
+        <span>Drop to</span>
         <strong>Regular Dispatch</strong>
-        <span>Move back anytime</span>
       </button>
-    </div>}
+    </>}
     <div className="packaging-dispatch-grid">
-      <DispatchSection title="Urgent Dispatch" tone="urgent" orders={urgent} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} canMoveOrders={canMoveOrders} />
-      <DispatchSection title="Regular Dispatch" tone="regular" orders={regular} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} canMoveOrders={canMoveOrders} />
+      <DispatchSection title="Urgent Dispatch" tone="urgent" orders={urgent} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} onCardDrop={handleCardDrop} canMoveOrders={canMoveOrders} />
+      <DispatchSection title="Regular Dispatch" tone="regular" orders={regular} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} onCardDrop={handleCardDrop} canMoveOrders={canMoveOrders} />
     </div>
   </main>
 }
 
-function DispatchSection({ title, tone, orders, state, completeOrder, draggingOrderId, onDragStart, onDrop, canMoveOrders }: { title: string; tone: 'urgent' | 'regular'; orders: DispatchOrder[]; state: PackingState; completeOrder: (order: DispatchOrder) => void; draggingOrderId: string | null; onDragStart: (orderId: string | null) => void; onDrop: (event: React.DragEvent, priority: 'urgent' | 'regular') => void; canMoveOrders: boolean }) {
-  return <section className={`packaging-section ${tone} ${canMoveOrders && draggingOrderId ? 'drag-ready' : ''}`} onDragOver={(event) => { if (canMoveOrders) event.preventDefault() }} onDrop={(event) => onDrop(event, tone)}><div className="packaging-section-head"><h2>{title}</h2><span>{orders.length}</span></div><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} onDragStart={onDragStart} canMoveOrders={canMoveOrders} />) : <div className="card packaging-empty">{canMoveOrders ? 'Drop orders here' : 'No orders here'}</div>}</div></section>
+function DispatchSection({ title, tone, orders, state, completeOrder, draggingOrderId, onDragStart, onDrop, onCardDrop, canMoveOrders }: { title: string; tone: 'urgent' | 'regular'; orders: DispatchOrder[]; state: PackingState; completeOrder: (order: DispatchOrder) => void; draggingOrderId: string | null; onDragStart: (orderId: string | null) => void; onDrop: (event: React.DragEvent, priority: 'urgent' | 'regular') => void; onCardDrop: (event: React.DragEvent, targetOrderId: string, priority: 'urgent' | 'regular') => void; canMoveOrders: boolean }) {
+  return <section className={`packaging-section ${tone} ${canMoveOrders && draggingOrderId ? 'drag-ready' : ''}`} onDragOver={(event) => { if (canMoveOrders) event.preventDefault() }} onDrop={(event) => onDrop(event, tone)}><div className="packaging-section-head"><h2>{title}</h2><span>{orders.length}</span></div><div className="packaging-order-list">{orders.length ? orders.map((order) => <OrderCard key={order.id} order={order} urgent={isUrgent(order, state)} completeOrder={completeOrder} onDragStart={onDragStart} onCardDrop={onCardDrop} canMoveOrders={canMoveOrders} />) : <div className="card packaging-empty">{canMoveOrders ? 'Drop orders here' : 'No orders here'}</div>}</div></section>
 }
 
-function OrderCard({ order, urgent, completeOrder, onDragStart, canMoveOrders }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void; onDragStart: (orderId: string | null) => void; canMoveOrders: boolean }) {
+function OrderCard({ order, urgent, completeOrder, onDragStart, onCardDrop, canMoveOrders }: { order: DispatchOrder; urgent: boolean; completeOrder: (order: DispatchOrder) => void; onDragStart: (orderId: string | null) => void; onCardDrop: (event: React.DragEvent, targetOrderId: string, priority: 'urgent' | 'regular') => void; canMoveOrders: boolean }) {
   const groups = [...groupMachines(order.machines), ...groupDispatchLineItems(order.lineItems)]
-  return <article className={`card packaging-order-card ${canMoveOrders ? 'can-drag' : 'no-drag'}`} draggable={canMoveOrders} onDragStart={(event) => { if (!canMoveOrders) return; event.dataTransfer.effectAllowed = 'move'; event.dataTransfer.setData('text/plain', order.id); onDragStart(order.id) }} onDragEnd={() => onDragStart(null)}><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div><div className="dispatch-card-meta">{order.salesperson && order.salesperson !== '—' && <span className="dispatch-salesperson">{order.salesperson}</span>}{urgent && <Badge tone="amber">Urgent</Badge>}</div></div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine</span><span>SKU</span><span>Qty</span><span>Wooden Packing</span><span>Notes</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}-${group.serials.join('-')}`}><ItemName name={group.itemName} description={group.description} serials={group.serials} /><span className="dispatch-sku">{group.sku || '—'}</span><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b><span className="dispatch-notes">{group.notes.length ? group.notes.join(' • ') : '—'}</span></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
+  return <article className={`card packaging-order-card ${canMoveOrders ? 'can-drag' : 'no-drag'}`} draggable={canMoveOrders} onDragOver={(event) => { if (canMoveOrders) { event.preventDefault(); event.dataTransfer.dropEffect = 'move' } }} onDrop={(event) => onCardDrop(event, order.id, urgent ? 'urgent' : 'regular')} onDragStart={(event) => { if (!canMoveOrders) return; event.dataTransfer.effectAllowed = 'move'; event.dataTransfer.setData('text/plain', order.id); onDragStart(order.id) }} onDragEnd={() => onDragStart(null)}><div className="dispatch-reorder-cue">Drop above this order</div><div className="packaging-order-title"><div><h3>{order.salesOrderNumber}</h3><p>Expected Delivery: {formatDate(order.deliveryDate)}</p></div><div className="dispatch-card-meta">{order.salesperson && order.salesperson !== '—' && <span className="dispatch-salesperson">{order.salesperson}</span>}{urgent && <Badge tone="amber">Urgent</Badge>}</div></div><div className="packaging-machine-table"><div className="packaging-row packaging-header"><span>Machine</span><span>SKU</span><span>Qty</span><span>Wooden Packing</span><span>Notes</span></div>{groups.map((group) => <div className="packaging-row" key={`${group.category || 'machine'}-${group.itemName}-${group.sku || ''}-${group.serials.join('-')}`}><ItemName name={group.itemName} description={group.description} serials={group.serials} /><span className="dispatch-sku">{group.sku || '—'}</span><b>{formatQty(group.quantity, group.category)}</b><b className={group.woodenPackingRequired ? 'wooden-yes' : 'wooden-no'}>{group.woodenPackingRequired ? 'Yes' : 'No'}</b><span className="dispatch-notes">{group.notes.length ? group.notes.join(' • ') : '—'}</span></div>)}</div><button className="btn green full packaging-complete" onClick={() => completeOrder(order)}>Complete</button></article>
 }
 
 function groupMachines(machines: MachineUnit[]) {
@@ -174,6 +196,12 @@ function displayDescription(name: string, description?: string) {
   return clean
 }
 function isUrgent(order: DispatchOrder, state: PackingState) { if (order.dispatchPriority) return order.dispatchPriority === 'urgent'; return order.machines.some((machine) => state[machine.id]?.urgent) }
+function compareDispatchOrders(a: DispatchOrder, b: DispatchOrder) {
+  const aManual = Number.isFinite(a.dispatchSortOrder) ? Number(a.dispatchSortOrder) : null
+  const bManual = Number.isFinite(b.dispatchSortOrder) ? Number(b.dispatchSortOrder) : null
+  if (aManual !== null || bManual !== null) return (aManual ?? 999999) - (bManual ?? 999999) || dateValue(a.deliveryDate) - dateValue(b.deliveryDate)
+  return dateValue(a.deliveryDate) - dateValue(b.deliveryDate)
+}
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }

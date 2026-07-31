@@ -20,7 +20,7 @@ export async function GET(request: Request) {
     .map((item) => {
       const processedIds = new Set(Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId))
       const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId], item.machines || {})
-      return stripInternalVendor({ ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular' })
+      return stripInternalVendor({ ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular', dispatchSortOrder: item.dispatchSortOrder })
     })
     .filter((order) => !completed.completed[order.id])
     .filter((order) => order.machines.length > 0 || hasDispatchLineItems(order))
@@ -42,6 +42,20 @@ export async function POST(request: Request) {
       return { ...current, dispatchPriority: priority }
     })
     return apiOk({ orderId, dispatchPriority: priority })
+  }
+  if (body.action === 'reorder') {
+    if (auth.user.role !== 'Admin' && auth.user.role !== 'Operations') return Response.json({ ok: false, error: 'Only Admin and Operations can reorder dispatch columns' }, { status: 403 })
+    const priority = body.priority === 'urgent' ? 'urgent' : body.priority === 'regular' ? 'regular' : ''
+    const orderedIds: string[] = Array.isArray(body.orderedIds) ? body.orderedIds.map(String).filter(Boolean) : []
+    if (!priority || !orderedIds.length) return Response.json({ ok: false, error: 'Missing dispatch order update' }, { status: 400 })
+    await upsertOrderWorkflow(orderedIds[0], (current, store) => {
+      if (!current) throw new Error('Order workflow not found')
+      orderedIds.forEach((id: string, index: number) => {
+        if (store.orders[id]) store.orders[id] = { ...store.orders[id], dispatchPriority: priority, dispatchSortOrder: index + 1 }
+      })
+      return store.orders[orderedIds[0]]
+    })
+    return apiOk({ priority, orderedIds })
   }
   const order = body.order as Order
   if (!order?.id) return Response.json({ ok: false, error: 'Missing order' }, { status: 400 })
