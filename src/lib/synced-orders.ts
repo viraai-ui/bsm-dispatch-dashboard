@@ -1,5 +1,3 @@
-import { readFile } from 'fs/promises'
-import path from 'path'
 import type { MachineUnit, Order } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { fetchZohoConfirmedOrders } from './zoho'
@@ -27,7 +25,12 @@ export async function readSyncedOrdersStore() {
 }
 
 async function readBundledSyncedOrdersStore() {
+  if (typeof window !== 'undefined') return fallbackStore
   try {
+    const fsModule = 'node:fs/promises'
+    const pathModule = 'node:path'
+    const { readFile } = await import(fsModule)
+    const path = await import(pathModule)
     const local = await readFile(path.join(process.cwd(), SYNCED_ORDERS_PATH), 'utf8')
     return normalizeStore(JSON.parse(local || JSON.stringify(fallbackStore)) as SyncedOrdersStore)
   } catch {
@@ -35,10 +38,16 @@ async function readBundledSyncedOrdersStore() {
   }
 }
 
-function isZohoOrderOpen(order: Order) {
+export function isOperationalZohoOrder(order: Order | null | undefined) {
+  if (!order) return false
   const closedStatuses = new Set(['closed', 'void', 'cancelled', 'canceled'])
   const status = String(order.status || '').toLowerCase()
   return !closedStatuses.has(status) && !String(order.id || '').startsWith('manual-serial-') && !String(order.salesOrderNumber || '').startsWith('SERIAL-')
+}
+
+export async function getOperationalOrderIds() {
+  const store = await readSyncedOrdersStore()
+  return new Set(store.orderIds.filter((id) => isOperationalZohoOrder(store.orders[id])))
 }
 
 function normalizeStore(store: SyncedOrdersStore): SyncedOrdersStore {
@@ -67,7 +76,7 @@ export async function listOrdersModuleOrders() {
   return store.orderIds
     .map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null)
     .filter((order): order is Order => order !== null)
-    .filter(isZohoOrderOpen)
+    .filter(isOperationalZohoOrder)
 }
 
 export async function listSyncedOrders() {

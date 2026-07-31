@@ -1,7 +1,7 @@
 import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { githubReadJson, githubWriteJson, listProcessedOrders, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
-import { readSyncedOrdersStore } from '@/lib/synced-orders'
+import { getOperationalOrderIds, readSyncedOrdersStore } from '@/lib/synced-orders'
 import { isMachineLineItem } from '@/lib/item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 
@@ -11,7 +11,8 @@ const COMPLETED_PATH = 'data/packaging-completed-store.json'
 export async function GET(request: Request) {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
   if (!auth.ok) return auth.response
-  const processed = await listProcessedOrders()
+  const activeIds = await getOperationalOrderIds()
+  const processed = (await listProcessedOrders()).filter((item) => activeIds.has(item.salesOrderId))
   const synced = await readSyncedOrdersStore()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const orders = processed
