@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000034952594": {
+      "id": "1154219000034952594",
+      "zohoSalesOrderId": "1154219000034952594",
+      "salesOrderNumber": "SO-07626",
+      "status": "open",
+      "customerName": "KRISHNA UPPER",
+      "shippingAddress": "519, VIDYAPATI NAGAR, MUBARAKPUR DABAS, New Delhi, Delhi,, 110081, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034952599",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034952594-1154219000034952599-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034952594",
+          "lineItemId": "1154219000034952599",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "customerName": "KRISHNA UPPER",
+          "salesOrderNumber": "SO-07626",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035025028": {
       "id": "1154219000035025028",
       "zohoSalesOrderId": "1154219000035025028",
@@ -3009,84 +3056,6 @@
         }
       ]
     },
-    "1154219000035025006": {
-      "id": "1154219000035025006",
-      "zohoSalesOrderId": "1154219000035025006",
-      "salesOrderNumber": "SO-07620",
-      "status": "open",
-      "customerName": "Sumanglam Footwears P Ltd",
-      "shippingAddress": "42 KM MILE STONE, ROHTAK ROAD BHADURGARH-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035025009",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035025010",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Bladder Drum type",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035025006-1154219000035025009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035025006",
-          "lineItemId": "1154219000035025009",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "Sumanglam Footwears P Ltd",
-          "salesOrderNumber": "SO-07620",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035025006-1154219000035025010-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035025006",
-          "lineItemId": "1154219000035025010",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Sumanglam Footwears P Ltd",
-          "salesOrderNumber": "SO-07620",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Bladder Drum type"
-        }
-      ]
-    },
     "1154219000035009003": {
       "id": "1154219000035009003",
       "zohoSalesOrderId": "1154219000035009003",
@@ -3126,53 +3095,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035024001": {
-      "id": "1154219000035024001",
-      "zohoSalesOrderId": "1154219000035024001",
-      "salesOrderNumber": "SO-07618",
-      "status": "open",
-      "customerName": "Romina Enterprises Pvt. Ltd.",
-      "shippingAddress": "Plot no 263, HSIIDC Footwear Park, Sector- 17, Bahadurgarh, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035024004",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035024001-1154219000035024004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035024001",
-          "lineItemId": "1154219000035024004",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "Romina Enterprises Pvt. Ltd.",
-          "salesOrderNumber": "SO-07618",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -9103,53 +9025,6 @@
         }
       ]
     },
-    "1154219000032301006": {
-      "id": "1154219000032301006",
-      "zohoSalesOrderId": "1154219000032301006",
-      "salesOrderNumber": "SO-07195",
-      "status": "open",
-      "customerName": "MITAKSHI PRINT AND CRAFT",
-      "shippingAddress": "F/F, PLOT NO. 509/3, VILLAGE MUNDKA, POLE NO. MDKP804, NEAR BALMIKI CHOPAL, New Delhi, West Delhi, Delhi,, 110041",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-06-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000032301009",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000032301006-1154219000032301009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032301006",
-          "lineItemId": "1154219000032301009",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "customerName": "MITAKSHI PRINT AND CRAFT",
-          "salesOrderNumber": "SO-07195",
-          "deliveryDate": "2026-06-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000032135005": {
       "id": "1154219000032135005",
       "zohoSalesOrderId": "1154219000032135005",
@@ -10453,13 +10328,12 @@
     }
   },
   "orderIds": [
+    "1154219000034952594",
     "1154219000035025028",
     "1154219000035015011",
     "1154219000034957555",
     "1154219000035011002",
-    "1154219000035025006",
     "1154219000035009003",
-    "1154219000035024001",
     "1154219000035022001",
     "1154219000035001001",
     "1154219000034994001",
@@ -10499,7 +10373,6 @@
     "1154219000033087001",
     "1154219000032974004",
     "1154219000032674005",
-    "1154219000032301006",
     "1154219000032135005",
     "1154219000032046008",
     "1154219000031849013",
@@ -10508,8 +10381,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T11:53:52.489Z",
-  "lastAttemptAt": "2026-07-31T12:49:09.939Z",
+  "lastSuccessfulSyncAt": "2026-07-31T12:49:34.564Z",
+  "lastAttemptAt": "2026-07-31T12:49:34.564Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
