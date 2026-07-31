@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035011002": {
+      "id": "1154219000035011002",
+      "zohoSalesOrderId": "1154219000035011002",
+      "salesOrderNumber": "SO-07622",
+      "status": "open",
+      "customerName": "Sports Valley",
+      "shippingAddress": "1863, Tiruchi Road, Ramanthapuram Signal Coiatore, Tamil Nadu, 641045",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035011005",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035011002-1154219000035011005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035011002",
+          "lineItemId": "1154219000035011005",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "Sports Valley",
+          "salesOrderNumber": "SO-07622",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035018002": {
       "id": "1154219000035018002",
       "zohoSalesOrderId": "1154219000035018002",
@@ -4569,63 +4616,6 @@
         }
       ]
     },
-    "1154219000034156012": {
-      "id": "1154219000034156012",
-      "zohoSalesOrderId": "1154219000034156012",
-      "salesOrderNumber": "SO-07483",
-      "status": "open",
-      "customerName": "DIC INDIA LIMITED",
-      "shippingAddress": "C-55 A&B, Phase –II,C-55 A&B, Phase –II,, Noida, Uttar Pradesh, 201305, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034156015",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034156016",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "BSM to Noida",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034156012-1154219000034156015-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034156012",
-          "lineItemId": "1154219000034156015",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "DIC INDIA LIMITED",
-          "salesOrderNumber": "SO-07483",
-          "deliveryDate": "2026-07-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034153022": {
       "id": "1154219000034153022",
       "zohoSalesOrderId": "1154219000034153022",
@@ -7720,6 +7710,7 @@
     }
   },
   "orderIds": [
+    "1154219000035011002",
     "1154219000035018002",
     "1154219000035025006",
     "1154219000035009003",
@@ -7756,7 +7747,6 @@
     "1154219000034254047",
     "1154219000034301018",
     "1154219000034276003",
-    "1154219000034156012",
     "1154219000034153022",
     "1154219000034028015",
     "1154219000034008004",
@@ -7776,8 +7766,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T06:52:06.123Z",
-  "lastAttemptAt": "2026-07-31T07:06:45.404Z",
+  "lastSuccessfulSyncAt": "2026-07-31T07:07:06.028Z",
+  "lastAttemptAt": "2026-07-31T07:07:06.028Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
