@@ -1,5 +1,244 @@
 {
   "orders": {
+    "1154219000035001001": {
+      "id": "1154219000035001001",
+      "zohoSalesOrderId": "1154219000035001001",
+      "salesOrderNumber": "SO-07614",
+      "status": "open",
+      "customerName": "Bhawani Leaders Private Limited",
+      "shippingAddress": "A-23, EPIP, Shastripuram, Agra, Uttar Pradesh, 282007, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035001004",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035001005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035001001-1154219000035001004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035001001",
+          "lineItemId": "1154219000035001004",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "Bhawani Leaders Private Limited",
+          "salesOrderNumber": "SO-07614",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000034994001": {
+      "id": "1154219000034994001",
+      "zohoSalesOrderId": "1154219000034994001",
+      "salesOrderNumber": "SO-07613",
+      "status": "open",
+      "customerName": "Veekesy Sandals (India) Pvt. Ltd.",
+      "shippingAddress": "Plot No. 4-B, KIADB Industrial Area, Nanjangud, Mysore, Karnataka, 571302, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034994004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Cover type bladder",
+          "quantity": 4,
+          "pendingQuantity": 4,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034994001-1154219000034994004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034994001",
+          "lineItemId": "1154219000034994004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Veekesy Sandals (India) Pvt. Ltd.",
+          "salesOrderNumber": "SO-07613",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover type bladder"
+        },
+        {
+          "id": "1154219000034994001-1154219000034994004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034994001",
+          "lineItemId": "1154219000034994004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Veekesy Sandals (India) Pvt. Ltd.",
+          "salesOrderNumber": "SO-07613",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover type bladder"
+        },
+        {
+          "id": "1154219000034994001-1154219000034994004-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034994001",
+          "lineItemId": "1154219000034994004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Veekesy Sandals (India) Pvt. Ltd.",
+          "salesOrderNumber": "SO-07613",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover type bladder"
+        },
+        {
+          "id": "1154219000034994001-1154219000034994004-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034994001",
+          "lineItemId": "1154219000034994004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Veekesy Sandals (India) Pvt. Ltd.",
+          "salesOrderNumber": "SO-07613",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover type bladder"
+        }
+      ]
+    },
+    "1154219000034982003": {
+      "id": "1154219000034982003",
+      "zohoSalesOrderId": "1154219000034982003",
+      "salesOrderNumber": "SO-07612",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-30",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034982006",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 100,
+          "pendingQuantity": 100,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000034968002": {
+      "id": "1154219000034968002",
+      "zohoSalesOrderId": "1154219000034968002",
+      "salesOrderNumber": "SO-07611",
+      "status": "open",
+      "customerName": "THE PURPLETREE",
+      "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi,, Delhi,, Delhi, 110092, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034968005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Port",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000034968002-1154219000034968005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034968002",
+          "lineItemId": "1154219000034968005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "THE PURPLETREE",
+          "salesOrderNumber": "SO-07611",
+          "deliveryDate": "2026-07-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Port"
+        }
+      ]
+    },
     "1154219000034952463": {
       "id": "1154219000034952463",
       "zohoSalesOrderId": "1154219000034952463",
@@ -7137,6 +7376,10 @@
     }
   },
   "orderIds": [
+    "1154219000035001001",
+    "1154219000034994001",
+    "1154219000034982003",
+    "1154219000034968002",
     "1154219000034952463",
     "1154219000034957002",
     "1154219000034903010",
@@ -7183,8 +7426,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-30T12:47:03.960Z",
-  "lastAttemptAt": "2026-07-31T04:42:43.460Z",
+  "lastSuccessfulSyncAt": "2026-07-31T04:43:02.757Z",
+  "lastAttemptAt": "2026-07-31T04:43:02.757Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
