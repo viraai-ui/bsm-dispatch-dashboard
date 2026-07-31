@@ -3168,7 +3168,7 @@
       "salesOrderId": "1154219000034918002",
       "salesOrderNumber": "SO-07600",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-07-31T07:46:07.301Z",
       "processedOrder": {
         "id": "1154219000034918002",
@@ -3231,7 +3231,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 8
+      "dispatchSortOrder": 1
     },
     "1154219000035014002": {
       "salesOrderId": "1154219000035014002",
