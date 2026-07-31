@@ -131,26 +131,7 @@
       "orderId": "1154219000034923001",
       "salesOrderNumber": "SO-07602",
       "submittedAt": null,
-      "units": {
-        "loading-order": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "loading-order-video-1785495212602-yw4xzf",
-              "name": "SO-07602 - Machine.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2F2026-07-31%2FSO-07602%2FMachine-loading-order-2026-07-31T10-53-31-858Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/2026-07-31/SO-07602/Machine-loading-order-2026-07-31T10-53-31-858Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-07-31T10:53:32.602Z",
-              "expiresAt": "2026-08-30T10:53:31.858Z"
-            }
-          ]
-        }
-      },
+      "units": {},
       "videoNotRequired": false
     }
   }
