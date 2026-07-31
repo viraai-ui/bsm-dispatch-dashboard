@@ -8,6 +8,7 @@ import { mediaStatusForOrder, mediaTone } from '@/lib/status-projection'
 
 const LOADING_ORDER_UNIT_ID = 'loading-order'
 const MAX_LOADING_VIDEOS = 5
+const VIDEO_ACCEPT = 'video/*,.mp4,.mov,.m4v,.3gp,.3gpp,.webm'
 
 type MediaRecords = Record<string, MediaProofRecord>
 type MediaMode = 'packing' | 'loading'
@@ -158,7 +159,7 @@ function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { d
     window.setTimeout(() => galleryInputRef.current?.click(), 0)
   }
 
-  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input ref={recordInputRef} hidden disabled={disabled} type="file" accept="video/*" capture="environment" onChange={(event) => { stageFiles(event.target.files, 'record'); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input ref={galleryInputRef} hidden disabled={disabled} type="file" accept="video/*" multiple={galleryMultiple} onChange={(event) => { stageFiles(event.target.files, 'gallery'); event.target.value = '' }} /></label>{pendingFiles.length > 0 && <div className="selected-video-backdrop" role="dialog" aria-modal="true"><section className="selected-video-card"><strong>{pendingSource === 'record' ? 'Recorded video ready' : 'Selected video ready'}</strong><span>{pendingFiles.length === 1 ? pendingFiles[0].name || 'Video ready' : `${pendingFiles.length} videos selected`}</span><div className="selected-video-actions"><button type="button" className="btn light" onClick={clearPending}>Cancel</button><button type="button" className="btn light" onClick={chooseGalleryAgain}>Choose Gallery</button><button type="button" className="btn red" onClick={uploadPending}>Upload Video</button></div></section></div>}</div>
+  return <div className="video-upload-choices"><label className={`video-choice-btn record ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">📹</span><strong>Record Video</strong><input ref={recordInputRef} className="file-input-native" disabled={disabled} type="file" accept={VIDEO_ACCEPT} capture="environment" onChange={(event) => { stageFiles(event.target.files, 'record'); event.target.value = '' }} /></label><label className={`video-choice-btn gallery ${disabled ? 'disabled' : ''}`}><span aria-hidden="true">▣</span><strong>Gallery</strong><input ref={galleryInputRef} className="file-input-native" disabled={disabled} type="file" accept={VIDEO_ACCEPT} multiple={galleryMultiple} onChange={(event) => { stageFiles(event.target.files, 'gallery'); event.target.value = '' }} /></label>{pendingFiles.length > 0 && <div className="selected-video-backdrop" role="dialog" aria-modal="true"><section className="selected-video-card"><strong>{pendingSource === 'record' ? 'Recorded video ready' : 'Selected video ready'}</strong><span>{pendingFiles.length === 1 ? pendingFiles[0].name || 'Video ready' : `${pendingFiles.length} videos selected`}</span><div className="selected-video-actions"><button type="button" className="btn light" onClick={clearPending}>Cancel</button><button type="button" className="btn light" onClick={chooseGalleryAgain}>Choose Gallery</button><button type="button" className="btn red" onClick={uploadPending}>Upload Video</button></div></section></div>}</div>
 }
 
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
@@ -205,7 +206,7 @@ async function parseJsonResponse(response: Response, fallback: string): Promise<
 function uploadBlobToR2(uploadUrl: string, file: File, contentType: string, onProgress: (percent: number) => void): Promise<void> {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
-    const timeout = window.setTimeout(() => { xhr.abort(); reject(new Error('Upload is taking too long or got stuck. Please check internet and try again, or upload a shorter video.')) }, 180000)
+    const timeout = window.setTimeout(() => { xhr.abort(); reject(new Error('Upload is taking too long or got stuck. Please check internet and try again, or upload a shorter video.')) }, 600000)
     xhr.open('PUT', uploadUrl)
     xhr.setRequestHeader('content-type', contentType)
     xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.max(1, Math.min(95, Math.round((event.loaded / event.total) * 100)))) }
