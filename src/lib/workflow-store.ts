@@ -69,9 +69,28 @@ export async function githubWriteJson<T>(path: string, data: T, message: string)
   await githubRequest(`/contents/${path}`, { method: 'PUT', body: JSON.stringify(body) })
 }
 
+async function readBundledWorkflowStore(): Promise<Store | null> {
+  if (typeof window !== 'undefined') return null
+  try {
+    const fsModule = 'node:fs/promises'
+    const pathModule = 'node:path'
+    const { readFile } = await import(fsModule)
+    const path = await import(pathModule)
+    const local = await readFile(path.join(process.cwd(), STORE_PATH), 'utf8')
+    const parsed = JSON.parse(local || '{}') as Store
+    return { serialCounter: INITIAL_SERIAL_COUNTER, ...parsed, orders: parsed.orders || {} }
+  } catch {
+    return null
+  }
+}
+
 async function readStoreWithSha(): Promise<{ store: Store; sha?: string }> {
   const result = await githubReadJson<Store>(STORE_PATH, { orders: {}, serialCounter: INITIAL_SERIAL_COUNTER })
-  return { store: { serialCounter: INITIAL_SERIAL_COUNTER, ...result.data, orders: result.data.orders || {} }, sha: result.sha }
+  const remoteStore = { serialCounter: INITIAL_SERIAL_COUNTER, ...result.data, orders: result.data.orders || {} }
+  if (Object.keys(remoteStore.orders || {}).length > 0) return { store: remoteStore, sha: result.sha }
+  const bundled = await readBundledWorkflowStore()
+  if (bundled && Object.keys(bundled.orders || {}).length > 0) return { store: bundled, sha: result.sha }
+  return { store: remoteStore, sha: result.sha }
 }
 
 async function writeStore(store: Store, sha?: string) {
