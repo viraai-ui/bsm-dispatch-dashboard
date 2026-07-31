@@ -3025,53 +3025,6 @@
         }
       ]
     },
-    "1154219000035014002": {
-      "id": "1154219000035014002",
-      "zohoSalesOrderId": "1154219000035014002",
-      "salesOrderNumber": "SO-07617",
-      "status": "open",
-      "customerName": "AJAY ENTERPRISES",
-      "shippingAddress": "GROUND FLOOR, KHASRA NO-52/53,, PLOT NO-4, 24/1/2, RUCHI VIHAR, NIHAL VIHAR,, NANGLOI, West Delhi, 110041, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035014005",
-          "itemName": "Computerized Post Bed Single Needle Roller Feed",
-          "sku": "9910RTC",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035014002-1154219000035014005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035014002",
-          "lineItemId": "1154219000035014005",
-          "itemName": "Computerized Post Bed Single Needle Roller Feed",
-          "sku": "9910RTC",
-          "customerName": "AJAY ENTERPRISES",
-          "salesOrderNumber": "SO-07617",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035022001": {
       "id": "1154219000035022001",
       "zohoSalesOrderId": "1154219000035022001",
@@ -10474,7 +10427,6 @@
     "1154219000035025006",
     "1154219000035009003",
     "1154219000035024001",
-    "1154219000035014002",
     "1154219000035022001",
     "1154219000035000006",
     "1154219000035001001",
@@ -10525,8 +10477,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T07:37:05.239Z",
-  "lastAttemptAt": "2026-07-31T07:51:45.101Z",
+  "lastSuccessfulSyncAt": "2026-07-31T07:52:04.669Z",
+  "lastAttemptAt": "2026-07-31T07:52:04.669Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
