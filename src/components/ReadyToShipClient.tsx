@@ -11,9 +11,17 @@ function formatDate(value?: string) {
   return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })
 }
 
+function messageTone(status?: string) {
+  if (status === 'sent') return 'green'
+  if (status === 'failed') return 'red'
+  if (status === 'not_configured') return 'amber'
+  return 'gray'
+}
+
 export function ReadyToShipClient({ initialItems, initialTransporters }: { initialItems: ReadyToShipItem[]; initialTransporters: Transporter[] }) {
   const [items, setItems] = useState(initialItems)
   const [transporters, setTransporters] = useState(initialTransporters)
+  const [activeItem, setActiveItem] = useState<ReadyToShipItem | null>(null)
   const [query, setQuery] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
@@ -24,7 +32,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     if (!q) return items
-    return items.filter((item) => [item.salesOrderNumber, item.customerName, item.machine.itemName, item.machine.serialNumber].join(' ').toLowerCase().includes(q))
+    return items.filter((item) => [item.salesOrderNumber, item.customerName, item.machine.itemName, item.machine.serialNumber, item.shipment?.vehicleNumber].join(' ').toLowerCase().includes(q))
   }, [items, query])
 
   async function refresh() {
@@ -73,8 +81,8 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
         <p>Machines that are packed, video-verified, and ready for transport booking.</p>
       </div>
       <div className="ready-ship-stats">
-        <strong>{items.length}</strong>
-        <span>ready machines</span>
+        <strong>{items.filter((item) => !item.shipment).length}</strong>
+        <span>pending shipment</span>
       </div>
     </div>
 
@@ -83,25 +91,30 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
     <div className="ready-ship-layout">
       <section className="card ready-machine-panel">
         <div className="ready-panel-head">
-          <div><h2>Packed Machines</h2><span>{filtered.length} machines ready now</span></div>
+          <div><h2>Packed Machines</h2><span>{filtered.length} machines ready / shipped</span></div>
           <button className="btn light" type="button" disabled={busy === 'refresh'} onClick={refresh}>{busy === 'refresh' ? 'Syncing…' : 'Refresh'}</button>
         </div>
-        <input className="ready-search" placeholder="Search SO, customer, machine, serial" value={query} onChange={(event) => setQuery(event.target.value)} />
+        <input className="ready-search" placeholder="Search SO, customer, machine, serial, vehicle" value={query} onChange={(event) => setQuery(event.target.value)} />
         <div className="ready-machine-list">
-          {filtered.map((item) => <article className="ready-machine-card" key={item.id}>
+          {filtered.map((item) => <article className={`ready-machine-card ${item.shipment ? 'shipped' : ''}`} key={item.id}>
             <div className="ready-machine-main">
               <div><strong>{item.salesOrderNumber}</strong><span>{item.customerName}</span></div>
-              <Badge tone="green">Ready</Badge>
+              <Badge tone={item.shipment ? 'blue' : 'green'}>{item.shipment ? 'Shipped' : 'Ready'}</Badge>
             </div>
             <div className="ready-machine-name">{item.machine.itemName}</div>
             <div className="ready-machine-meta">
               <span>Serial: {item.machine.serialNumber || '—'}</span>
-              <span>Ready: {formatDate(item.readyAt || item.completedAt)}</span>
+              <span>{item.shipment ? `Vehicle: ${item.shipment.vehicleNumber}` : `Ready: ${formatDate(item.readyAt || item.completedAt)}`}</span>
               <span>{item.videos.length} packing video{item.videos.length === 1 ? '' : 's'}</span>
             </div>
+            {item.shipment && <div className="shipment-status-row">
+              <Badge tone={messageTone(item.shipment.messages.customer.status) as any}>Customer: {item.shipment.messages.customer.status}</Badge>
+              <Badge tone={messageTone(item.shipment.messages.salesperson.status) as any}>Sales: {item.shipment.messages.salesperson.status}</Badge>
+            </div>}
             <div className="ready-machine-actions">
               <a className="btn light" href={`/orders/${item.orderId}`}>Open Order</a>
-              {item.videos[0] && <a className="btn red" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}
+              {item.videos[0] && <a className="btn light" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}
+              <button className="btn red" type="button" onClick={() => setActiveItem(item)}>{item.shipment ? 'View Shipment' : 'Ship / WhatsApp'}</button>
             </div>
           </article>)}
           {!filtered.length && <div className="empty-state"><strong>No machines ready yet</strong><span className="muted">Once packing video is uploaded, packed machines will appear here.</span></div>}
@@ -125,5 +138,56 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
         </div>
       </aside>
     </div>
+    {activeItem && <ShipmentModal item={activeItem} transporters={transporters} busy={busy} setBusy={setBusy} onClose={() => setActiveItem(null)} onSaved={(updated) => { setItems((prev) => prev.map((item) => item.id === updated.id ? updated : item)); setActiveItem(null); setMessage('Shipment saved. WhatsApp status updated.') }} />}
   </section>
+}
+
+function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
+  const existing = item.shipment
+  const [transporterName, setTransporterName] = useState(existing?.transporterName || transporters[0]?.name || '')
+  const selectedTransporter = transporters.find((entry) => entry.name === transporterName)
+  const [transporterPhone, setTransporterPhone] = useState(existing?.transporterPhone || selectedTransporter?.phone || '')
+  const [vehicleNumber, setVehicleNumber] = useState(existing?.vehicleNumber || '')
+  const [driverName, setDriverName] = useState(existing?.driverName || '')
+  const [driverPhone, setDriverPhone] = useState(existing?.driverPhone || '')
+  const [expectedDelivery, setExpectedDelivery] = useState(existing?.expectedDelivery || '')
+  const [customerPhone, setCustomerPhone] = useState(existing?.customerPhone || item.customerPhone || '')
+  const [salespersonName, setSalespersonName] = useState(existing?.salespersonName || item.salesperson || '')
+  const [salespersonPhone, setSalespersonPhone] = useState(existing?.salespersonPhone || '')
+  const [notes, setNotes] = useState(existing?.notes || '')
+  const [sendWhatsapp, setSendWhatsapp] = useState(!existing)
+  const [error, setError] = useState('')
+
+  async function submit(event: React.FormEvent) {
+    event.preventDefault()
+    setBusy('shipment'); setError('')
+    try {
+      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'process_shipment', itemId: item.id, transporterName, transporterPhone, vehicleNumber, driverName, driverPhone, expectedDelivery, customerPhone, salespersonName, salespersonPhone, notes, sendWhatsapp }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save shipment')
+      onSaved({ ...item, shipment: json.data.shipment })
+    } catch (err) { setError(err instanceof Error ? err.message : 'Could not save shipment') }
+    finally { setBusy('') }
+  }
+
+  return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card shipment-modal">
+    <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.machine.itemName} • Serial {item.machine.serialNumber || '—'}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
+    {error && <div className="form-error">{error}</div>}
+    {existing && <div className="shipment-status-box"><strong>Shipment already saved</strong><span>Customer WhatsApp: {existing.messages.customer.status}</span><span>Salesperson WhatsApp: {existing.messages.salesperson.status}</span></div>}
+    <form className="shipment-form" onSubmit={submit}>
+      <label>Transporter<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = transporters.find((entry) => entry.name === event.target.value); if (next) setTransporterPhone(next.phone) }}><option value="">Select / type below</option>{transporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
+      <label>Transporter Name<input value={transporterName} onChange={(event) => setTransporterName(event.target.value)} /></label>
+      <label>Transporter Phone<input value={transporterPhone} onChange={(event) => setTransporterPhone(event.target.value)} /></label>
+      <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
+      <label>Driver Name<input value={driverName} onChange={(event) => setDriverName(event.target.value)} /></label>
+      <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
+      <label>Expected Delivery<input value={expectedDelivery} onChange={(event) => setExpectedDelivery(event.target.value)} placeholder="01/08/2026 evening" /></label>
+      <label>Customer WhatsApp<input value={customerPhone} onChange={(event) => setCustomerPhone(event.target.value)} /></label>
+      <label>Salesperson Name<input value={salespersonName} onChange={(event) => setSalespersonName(event.target.value)} /></label>
+      <label>Salesperson WhatsApp<input value={salespersonPhone} onChange={(event) => setSalespersonPhone(event.target.value)} /></label>
+      <label className="shipment-notes">Notes<input value={notes} onChange={(event) => setNotes(event.target.value)} placeholder="Optional dispatch note" /></label>
+      <label className="shipment-checkbox"><input type="checkbox" checked={sendWhatsapp} onChange={(event) => setSendWhatsapp(event.target.checked)} /> Send WhatsApp to customer and salesperson</label>
+      <div className="shipment-actions"><button className="btn light" type="button" onClick={onClose}>Cancel</button><button className="btn red" disabled={busy === 'shipment'}>{busy === 'shipment' ? 'Saving…' : existing ? 'Resend / Update' : 'Confirm Shipment'}</button></div>
+    </form>
+  </section></div>
 }

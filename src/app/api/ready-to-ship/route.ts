@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { addTransporter, deleteTransporter, listReadyToShipItems, readTransportersStore } from '@/lib/ready-to-ship'
+import { addTransporter, deleteTransporter, listReadyToShipItems, processShipment, readTransportersStore } from '@/lib/ready-to-ship'
 
 export async function GET() {
   const auth = await requireUser(['Admin'])
@@ -19,6 +19,22 @@ export async function POST(request: Request) {
     }
     if (body.action === 'delete_transporter') {
       return apiOk(await deleteTransporter(String(body.id || '')))
+    }
+    if (body.action === 'process_shipment') {
+      return apiOk({ shipment: await processShipment({
+        itemId: String(body.itemId || ''),
+        vehicleNumber: String(body.vehicleNumber || ''),
+        driverName: String(body.driverName || ''),
+        driverPhone: String(body.driverPhone || ''),
+        transporterName: String(body.transporterName || ''),
+        transporterPhone: String(body.transporterPhone || ''),
+        expectedDelivery: String(body.expectedDelivery || ''),
+        notes: String(body.notes || ''),
+        customerPhone: String(body.customerPhone || ''),
+        salespersonName: String(body.salespersonName || ''),
+        salespersonPhone: String(body.salespersonPhone || ''),
+        sendWhatsapp: Boolean(body.sendWhatsapp),
+      }) })
     }
     return apiError('Unknown Ready to Ship action', 400)
   } catch (error) {
