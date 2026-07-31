@@ -2825,7 +2825,7 @@
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": false,
+          "woodenPackingRequired": true,
           "dispatchCategory": "machine"
         }
       ],
@@ -2844,7 +2844,7 @@
           "deliveryDate": "2026-07-31",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Not Required",
+          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
