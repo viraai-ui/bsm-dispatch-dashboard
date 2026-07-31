@@ -2435,7 +2435,7 @@
         "salesOrderNumber": "SO-07483",
         "status": "open",
         "customerName": "DIC INDIA LIMITED",
-        "shippingAddress": "C-55 A&B, Phase \u2013II,C-55 A&B, Phase \u2013II,, Noida, Uttar Pradesh, 201305, India",
+        "shippingAddress": "C-55 A&B, Phase –II,C-55 A&B, Phase –II,, Noida, Uttar Pradesh, 201305, India",
         "salesperson": "Deepak Kumar",
         "deliveryDate": "2026-07-15",
         "dashboardStatus": "Not Generated",
@@ -2709,7 +2709,8 @@
           "qrGeneratedAt": "2026-07-29T11:22:27.248Z",
           "processedAt": "2026-07-29T11:24:54.859Z",
           "dispatchNote": "wooden",
-          "vendor": ""
+          "vendor": "",
+          "dispatchedAt": "2026-07-31T09:54:13.097Z"
         },
         "1154219000034890001-1154219000034890004-2": {
           "machineUnitId": "1154219000034890001-1154219000034890004-2",
@@ -2721,7 +2722,8 @@
           "qrGeneratedAt": "2026-07-29T11:22:27.248Z",
           "processedAt": "2026-07-29T11:24:54.859Z",
           "dispatchNote": "wooden",
-          "vendor": ""
+          "vendor": "",
+          "dispatchedAt": "2026-07-31T09:54:13.097Z"
         }
       },
       "dispatchSortOrder": 3
@@ -3675,7 +3677,7 @@
         "status": "open",
         "customerName": "V.S. ENTERPRISES",
         "shippingAddress": "PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana, - 124507",
-        "salesperson": "\u2014",
+        "salesperson": "—",
         "deliveryDate": "2026-07-31",
         "dashboardStatus": "Dispatched",
         "reviewRequired": false,
