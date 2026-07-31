@@ -87,9 +87,16 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
   function handleDrop(event: React.DragEvent, priority: 'urgent' | 'regular') {
     if (!canMoveOrders) return
     event.preventDefault()
+    event.stopPropagation()
     const orderId = event.dataTransfer.getData('text/plain') || draggingOrderId
     setDraggingOrderId(null)
     if (orderId) void moveOrderPriority(orderId, priority)
+  }
+
+  function handleDragOver(event: React.DragEvent) {
+    if (!canMoveOrders) return
+    event.preventDefault()
+    event.dataTransfer.dropEffect = 'move'
   }
 
   async function toggleFullscreen() {
@@ -105,6 +112,17 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1><p className="muted dispatch-auto-sync">Auto-sync every 15 min{lastSyncedAt ? ` • Last ${formatTime(lastSyncedAt)}` : ''}</p></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncLocal()} disabled={syncing}>{syncing ? '↻' : '⟳'}</button><button className="btn light sync-icon-btn fullscreen-btn" aria-label="Fullscreen" title="Fullscreen" onClick={toggleFullscreen}>{fullscreen ? '⤢' : '⛶'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
+    {canMoveOrders && draggingOrderId && <div className="dispatch-drop-dock" aria-label="Priority drop targets">
+      <div className="dispatch-drop-dock-hint">Drop here</div>
+      <button type="button" className="dispatch-drop-target urgent" onDragOver={handleDragOver} onDrop={(event) => handleDrop(event, 'urgent')} onClick={() => { if (draggingOrderId) void moveOrderPriority(draggingOrderId, 'urgent'); setDraggingOrderId(null) }}>
+        <strong>Urgent Dispatch</strong>
+        <span>No scrolling needed</span>
+      </button>
+      <button type="button" className="dispatch-drop-target regular" onDragOver={handleDragOver} onDrop={(event) => handleDrop(event, 'regular')} onClick={() => { if (draggingOrderId) void moveOrderPriority(draggingOrderId, 'regular'); setDraggingOrderId(null) }}>
+        <strong>Regular Dispatch</strong>
+        <span>Move back anytime</span>
+      </button>
+    </div>}
     <div className="packaging-dispatch-grid">
       <DispatchSection title="Urgent Dispatch" tone="urgent" orders={urgent} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} canMoveOrders={canMoveOrders} />
       <DispatchSection title="Regular Dispatch" tone="regular" orders={regular} state={state} completeOrder={completeOrder} draggingOrderId={draggingOrderId} onDragStart={setDraggingOrderId} onDrop={handleDrop} canMoveOrders={canMoveOrders} />

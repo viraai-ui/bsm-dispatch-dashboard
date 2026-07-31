@@ -260,6 +260,55 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
   transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 .packaging-section.drag-ready { border-style: dashed; box-shadow: 0 24px 72px rgba(15,23,42,.12), inset 0 0 0 2px rgba(59,130,246,.10); }
+.dispatch-drop-dock {
+  position: fixed;
+  left: max(16px, env(safe-area-inset-left));
+  top: 50%;
+  z-index: 90;
+  width: min(250px, calc(100vw - 32px));
+  transform: translateY(-50%);
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.78);
+  border-radius: 28px;
+  background: rgba(255,255,255,.86);
+  backdrop-filter: blur(24px) saturate(1.25);
+  box-shadow: 0 28px 90px rgba(15,23,42,.24), 0 0 0 1px rgba(15,23,42,.04);
+  animation: dispatch-dock-in .18s ease-out both;
+}
+.dispatch-drop-dock-hint {
+  padding: 2px 6px 0;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.dispatch-drop-target {
+  min-height: 104px;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  gap: 7px;
+  border: 2px dashed rgba(148,163,184,.55);
+  border-radius: 22px;
+  padding: 18px 16px;
+  text-align: left;
+  cursor: copy;
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.dispatch-drop-target strong { font-size: 18px; line-height: 1.05; letter-spacing: -.035em; }
+.dispatch-drop-target span { font-size: 12px; font-weight: 850; color: #64748b; }
+.dispatch-drop-target.urgent { background: linear-gradient(145deg, #fff1f2, #ffffff); color: #991b1b; border-color: rgba(248,113,113,.88); }
+.dispatch-drop-target.regular { background: linear-gradient(145deg, #eff6ff, #ffffff); color: #1d4ed8; border-color: rgba(96,165,250,.82); }
+.dispatch-drop-target:hover,
+.dispatch-drop-target:focus-visible { transform: translateX(5px) scale(1.02); box-shadow: 0 18px 44px rgba(15,23,42,.16); outline: none; }
+.dispatch-drop-target.urgent:hover,
+.dispatch-drop-target.urgent:focus-visible { background: linear-gradient(145deg, #ffe4e6, #ffffff); border-color: #ef4444; }
+.dispatch-drop-target.regular:hover,
+.dispatch-drop-target.regular:focus-visible { background: linear-gradient(145deg, #dbeafe, #ffffff); border-color: #3b82f6; }
+@keyframes dispatch-dock-in { from { opacity: 0; transform: translate(-10px, -50%) scale(.96); } to { opacity: 1; transform: translate(0, -50%) scale(1); } }
 .packaging-section.drag-ready.urgent { border-color: rgba(248,113,113,.95); }
 .packaging-section.drag-ready.regular { border-color: rgba(96,165,250,.95); }
 .packaging-section.urgent { background: linear-gradient(145deg, rgba(255,245,246,.94), rgba(255,255,255,.78)); border-color: rgba(254,202,202,.95); }
