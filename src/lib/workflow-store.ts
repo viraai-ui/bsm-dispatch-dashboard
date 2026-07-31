@@ -26,9 +26,20 @@ export type OrderWorkflow = {
   machines: Record<string, MachineWorkflow>
 }
 
-type Store = { orders: Record<string, OrderWorkflow>; serialCounter?: number }
+export type Store = { orders: Record<string, OrderWorkflow>; serialCounter?: number }
 const STORE_PATH = 'data/workflow-store.json'
 const INITIAL_SERIAL_COUNTER = 26270758
+
+export function highestSerialCounter(store: Store) {
+  let highest = Math.max(Number(store.serialCounter || INITIAL_SERIAL_COUNTER), INITIAL_SERIAL_COUNTER)
+  for (const order of Object.values(store.orders || {})) {
+    for (const machine of Object.values(order.machines || {})) {
+      const serial = Number(String(machine.serialNumber || '').trim())
+      if (Number.isFinite(serial) && serial > highest) highest = serial
+    }
+  }
+  return highest
+}
 
 function ghConfig() {
   return {
@@ -54,7 +65,17 @@ export async function githubRequest(path: string, init: RequestInit = {}) {
 export async function githubReadJson<T>(path: string, fallback: T): Promise<{ data: T; sha?: string }> {
   try {
     const data = await githubRequest(`/contents/${path}`)
-    const json = Buffer.from(data.content || '', 'base64').toString('utf8')
+    let content = data.content || ''
+    if (!content && data.git_url) {
+      const blobResponse = await fetch(data.git_url, {
+        headers: { Authorization: `Bearer ${ghConfig().token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
+        cache: 'no-store',
+      })
+      const blob = await blobResponse.json().catch(() => ({}))
+      if (!blobResponse.ok) throw new Error(blob.message || 'Workflow database blob request failed')
+      content = blob.content || ''
+    }
+    const json = Buffer.from(content, 'base64').toString('utf8')
     return { data: JSON.parse(json || JSON.stringify(fallback)), sha: data.sha }
   } catch (error) {
     const message = error instanceof Error ? error.message : ''
@@ -142,7 +163,7 @@ export async function allocateSerialNumbers(orderId: string, machineIds: string[
   let allocated: Record<string, string> = {}
   await upsertOrderWorkflow(orderId, (current, store) => {
     const machines = { ...(current?.machines || {}) }
-    let counter = Math.max(Number(store.serialCounter || INITIAL_SERIAL_COUNTER), INITIAL_SERIAL_COUNTER)
+    let counter = highestSerialCounter(store)
     allocated = {}
     for (const machineUnitId of uniqueIds) {
       const existing = machines[machineUnitId]?.serialNumber
