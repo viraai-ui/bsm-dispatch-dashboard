@@ -2548,7 +2548,7 @@
         "salesOrderNumber": "SO-07483",
         "status": "open",
         "customerName": "DIC INDIA LIMITED",
-        "shippingAddress": "C-55 A&B, Phase –II,C-55 A&B, Phase –II,, Noida, Uttar Pradesh, 201305, India",
+        "shippingAddress": "C-55 A&B, Phase \u2013II,C-55 A&B, Phase \u2013II,, Noida, Uttar Pradesh, 201305, India",
         "salesperson": "Deepak Kumar",
         "deliveryDate": "2026-07-15",
         "dashboardStatus": "Not Generated",
@@ -3760,6 +3760,74 @@
           "qrGeneratedAt": "2026-07-31T07:46:07.301Z",
           "processedAt": "2026-07-31T07:46:07.301Z",
           "dispatchNote": ""
+        }
+      }
+    },
+    "manual-serial-26270813": {
+      "salesOrderId": "manual-serial-26270813",
+      "salesOrderNumber": "SERIAL-26270813",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-07-31T00:00:00.000Z",
+      "processedOrder": {
+        "id": "manual-serial-26270813",
+        "zohoSalesOrderId": "manual-serial-26270813",
+        "salesOrderNumber": "SERIAL-26270813",
+        "status": "open",
+        "customerName": "V.S. ENTERPRISES",
+        "shippingAddress": "PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana, - 124507",
+        "salesperson": "\u2014",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Dispatched",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "manual-serial-26270813-line",
+            "itemName": "BS 106A PU Adhesive Glue Pasting Machine (With Rubber Roller)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 0,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "manual-serial-26270813-unit",
+            "unitNumber": 1,
+            "serialNumber": "26270813",
+            "qrToken": "26270813",
+            "orderId": "manual-serial-26270813",
+            "lineItemId": "manual-serial-26270813-line",
+            "itemName": "BS 106A PU Adhesive Glue Pasting Machine (With Rubber Roller)",
+            "sku": "",
+            "customerName": "V.S. ENTERPRISES",
+            "salesOrderNumber": "SERIAL-26270813",
+            "deliveryDate": "2026-07-31",
+            "status": "Dispatched",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": true,
+            "qcDone": true,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31"
+          }
+        ]
+      },
+      "machines": {
+        "manual-serial-26270813-unit": {
+          "machineUnitId": "manual-serial-26270813-unit",
+          "lineItemId": "manual-serial-26270813-line",
+          "serialNumber": "26270813",
+          "qrToken": "26270813",
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-07-31T00:00:00.000Z",
+          "processedAt": "2026-07-31T00:00:00.000Z",
+          "dispatchedAt": "2026-07-31T00:00:00.000Z",
+          "dispatchNote": "Manual Excel database entry"
         }
       }
     }
