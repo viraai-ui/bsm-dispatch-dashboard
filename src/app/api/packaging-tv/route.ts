@@ -6,7 +6,9 @@ import { isMachineLineItem } from '@/lib/item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
+type PriorityStore = { priorities: Record<string, { priority: 'urgent' | 'regular'; sortOrder?: number; updatedAt: string }> }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
+const PRIORITY_PATH = 'data/dispatch-priority-store.json'
 
 export async function GET(request: Request) {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
@@ -15,12 +17,19 @@ export async function GET(request: Request) {
   const processed = (await listProcessedOrders()).filter((item) => activeIds.has(item.salesOrderId))
   const synced = await readSyncedOrdersStore()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
+  const { data: priorityStore } = await githubReadJson<PriorityStore>(PRIORITY_PATH, { priorities: {} })
   const orders = processed
     .filter((item) => Boolean(item.processedOrder))
     .map((item) => {
       const processedIds = new Set(Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId))
       const order = enrichDescriptions(item.processedOrder as Order, synced.orders[item.salesOrderId], item.machines || {})
-      return stripInternalVendor({ ...order, machines: order.machines.filter((machine) => processedIds.has(machine.id)), dispatchPriority: item.dispatchPriority || 'regular', dispatchSortOrder: item.dispatchSortOrder })
+      const savedPriority = priorityStore.priorities?.[item.salesOrderId]
+      return stripInternalVendor({
+        ...order,
+        machines: order.machines.filter((machine) => processedIds.has(machine.id)),
+        dispatchPriority: savedPriority?.priority || item.dispatchPriority || 'regular',
+        dispatchSortOrder: savedPriority?.sortOrder ?? item.dispatchSortOrder,
+      })
     })
     .filter((order) => !completed.completed[order.id])
     .filter((order) => order.machines.length > 0 || hasDispatchLineItems(order))
@@ -38,13 +47,18 @@ export async function POST(request: Request) {
     const priority = body.priority === 'urgent' ? 'urgent' : body.priority === 'regular' ? 'regular' : ''
     if (!orderId || !priority) return Response.json({ ok: false, error: 'Missing priority update' }, { status: 400 })
     const orderedIds: string[] = Array.isArray(body.orderedIds) ? body.orderedIds.map(String).filter(Boolean) : []
+    const now = new Date().toISOString()
+    const { data: priorityStore } = await githubReadJson<PriorityStore>(PRIORITY_PATH, { priorities: {} })
+    const targetIds = orderedIds.length ? orderedIds : [orderId]
+    targetIds.forEach((id: string, index: number) => {
+      priorityStore.priorities[id] = { priority, sortOrder: index + 1, updatedAt: now }
+    })
+    await githubWriteJson(PRIORITY_PATH, priorityStore, `Update dispatch priority for ${orderId}`)
     await upsertOrderWorkflow(orderId, (current, store) => {
       if (!current) throw new Error('Order workflow not found')
-      const targetIds = orderedIds.length ? orderedIds : [orderId]
       targetIds.forEach((id: string, index: number) => {
         if (store.orders[id]) store.orders[id] = { ...store.orders[id], dispatchPriority: priority, dispatchSortOrder: index + 1 }
       })
-      if (!store.orders[orderId]) store.orders[orderId] = { ...current, dispatchPriority: priority, dispatchSortOrder: targetIds.indexOf(orderId) + 1 || 1 }
       return store.orders[orderId]
     })
     return apiOk({ orderId, dispatchPriority: priority, orderedIds })
@@ -54,6 +68,12 @@ export async function POST(request: Request) {
     const priority = body.priority === 'urgent' ? 'urgent' : body.priority === 'regular' ? 'regular' : ''
     const orderedIds: string[] = Array.isArray(body.orderedIds) ? body.orderedIds.map(String).filter(Boolean) : []
     if (!priority || !orderedIds.length) return Response.json({ ok: false, error: 'Missing dispatch order update' }, { status: 400 })
+    const now = new Date().toISOString()
+    const { data: priorityStore } = await githubReadJson<PriorityStore>(PRIORITY_PATH, { priorities: {} })
+    orderedIds.forEach((id: string, index: number) => {
+      priorityStore.priorities[id] = { priority, sortOrder: index + 1, updatedAt: now }
+    })
+    await githubWriteJson(PRIORITY_PATH, priorityStore, `Reorder ${priority} dispatch column`)
     await upsertOrderWorkflow(orderedIds[0], (current, store) => {
       if (!current) throw new Error('Order workflow not found')
       orderedIds.forEach((id: string, index: number) => {
