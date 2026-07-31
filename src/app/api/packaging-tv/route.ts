@@ -8,7 +8,7 @@ import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
 
-export async function GET() {
+export async function GET(request: Request) {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
   if (!auth.ok) return auth.response
   const processed = await listProcessedOrders()
@@ -23,7 +23,8 @@ export async function GET() {
     })
     .filter((order) => !completed.completed[order.id])
     .filter((order) => order.machines.length > 0 || hasDispatchLineItems(order))
-  return apiOk({ orders, completedCount: Object.keys(completed.completed).length })
+  const debug = new URL(request.url).searchParams.get('debug') === '1'
+  return apiOk({ orders, completedCount: Object.keys(completed.completed).length, ...(debug ? { debug: { processedCount: processed.length, processed: processed.map((item) => ({ id: item.salesOrderId, so: item.salesOrderNumber, hasProcessedOrder: Boolean(item.processedOrder), machineCount: Object.keys(item.machines || {}).length, pendingMachineCount: Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).length, completed: Boolean(completed.completed[item.salesOrderId]) })) } } : {}) })
 }
 
 export async function POST(request: Request) {
