@@ -87,7 +87,6 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not update dispatch priority')
       setNotice(`${existing.salesOrderNumber} moved to ${target === 'urgent' ? 'Urgent' : 'Regular'} Dispatch.`)
-      void syncLocal(true)
     } catch (err) {
       setOrders(before)
       setError(err instanceof Error ? err.message : 'Could not update dispatch priority')
@@ -201,12 +200,15 @@ function displayDescription(name: string, description?: string) {
 }
 function isUrgent(order: DispatchOrder, state: PackingState) { if (order.dispatchPriority) return order.dispatchPriority === 'urgent'; return order.machines.some((machine) => state[machine.id]?.urgent) }
 function compareDispatchOrders(a: DispatchOrder, b: DispatchOrder) {
+  const deliveryDiff = dayValue(a.deliveryDate) - dayValue(b.deliveryDate)
+  if (deliveryDiff !== 0) return deliveryDiff
   const aManual = Number.isFinite(a.dispatchSortOrder) ? Number(a.dispatchSortOrder) : null
   const bManual = Number.isFinite(b.dispatchSortOrder) ? Number(b.dispatchSortOrder) : null
-  if (aManual !== null || bManual !== null) return (aManual ?? 999999) - (bManual ?? 999999) || dateValue(a.deliveryDate) - dateValue(b.deliveryDate)
+  if (aManual !== null || bManual !== null) return (aManual ?? 999999) - (bManual ?? 999999)
   return dateValue(a.deliveryDate) - dateValue(b.deliveryDate)
 }
 function readState(): PackingState { try { return JSON.parse(localStorage.getItem(PACKING_STATE_KEY) || '{}') as PackingState } catch { return {} } }
 function dateValue(value: string) { const parsed = Date.parse(value); return Number.isFinite(parsed) ? parsed : 9999999999999 }
+function dayValue(value: string) { const parsed = dateValue(value); if (parsed >= 9999999999999) return parsed; const d = new Date(parsed); return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) }
 function formatDate(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return value; return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getFullYear()).slice(-2)}` }
 function formatTime(value: string) { const d = new Date(value); if (Number.isNaN(d.getTime())) return ''; return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }
