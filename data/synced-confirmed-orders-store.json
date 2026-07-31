@@ -2825,7 +2825,7 @@
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": true,
+          "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         }
       ],
@@ -2844,7 +2844,7 @@
           "deliveryDate": "2026-07-31",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -10477,8 +10477,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T09:32:18.691Z",
-  "lastAttemptAt": "2026-07-31T09:33:45.442Z",
+  "lastSuccessfulSyncAt": "2026-07-31T09:34:05.554Z",
+  "lastAttemptAt": "2026-07-31T09:34:05.554Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
