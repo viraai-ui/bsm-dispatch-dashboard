@@ -47,53 +47,6 @@
         }
       ]
     },
-    "1154219000035018002": {
-      "id": "1154219000035018002",
-      "zohoSalesOrderId": "1154219000035018002",
-      "salesOrderNumber": "SO-07621",
-      "status": "open",
-      "customerName": "V.S. ENTERPRISES",
-      "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035018005",
-          "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
-          "sku": "106A",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035018002-1154219000035018005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035018002",
-          "lineItemId": "1154219000035018005",
-          "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
-          "sku": "106A",
-          "customerName": "V.S. ENTERPRISES",
-          "salesOrderNumber": "SO-07621",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035025006": {
       "id": "1154219000035025006",
       "zohoSalesOrderId": "1154219000035025006",
@@ -7711,7 +7664,6 @@
   },
   "orderIds": [
     "1154219000035011002",
-    "1154219000035018002",
     "1154219000035025006",
     "1154219000035009003",
     "1154219000035024001",
@@ -7766,8 +7718,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T07:22:05.284Z",
-  "lastAttemptAt": "2026-07-31T07:30:46.261Z",
+  "lastSuccessfulSyncAt": "2026-07-31T07:31:06.966Z",
+  "lastAttemptAt": "2026-07-31T07:31:06.966Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
