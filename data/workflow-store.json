@@ -75,7 +75,7 @@
       "salesOrderId": "1154219000034608001",
       "salesOrderNumber": "SO-07550",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-07-23T06:28:51.099Z",
       "processedOrder": {
         "id": "1154219000034608001",
@@ -382,7 +382,7 @@
           "dispatchNote": "Wooden"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 8
     },
     "1154219000034626001": {
       "salesOrderId": "1154219000034626001",
@@ -2840,7 +2840,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 2
     },
     "1154219000034923001": {
       "salesOrderId": "1154219000034923001",
@@ -2912,7 +2912,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 9
     },
     "1154219000032301006": {
       "salesOrderId": "1154219000032301006",
@@ -3083,7 +3083,7 @@
           }
         ]
       },
-      "dispatchSortOrder": 6
+      "dispatchSortOrder": 1
     },
     "1154219000034903010": {
       "salesOrderId": "1154219000034903010",
@@ -3162,7 +3162,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 10
     },
     "1154219000034918002": {
       "salesOrderId": "1154219000034918002",
@@ -3231,7 +3231,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 8
+      "dispatchSortOrder": 3
     },
     "1154219000035014002": {
       "salesOrderId": "1154219000035014002",
@@ -3447,7 +3447,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 9
+      "dispatchSortOrder": 12
     },
     "1154219000035009003": {
       "salesOrderId": "1154219000035009003",
@@ -3516,7 +3516,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 10
+      "dispatchSortOrder": 4
     },
     "1154219000035024001": {
       "salesOrderId": "1154219000035024001",
@@ -3585,7 +3585,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 11
+      "dispatchSortOrder": 13
     },
     "1154219000035000006": {
       "salesOrderId": "1154219000035000006",
@@ -3697,7 +3697,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 12
+      "dispatchSortOrder": 6
     },
     "1154219000035001001": {
       "salesOrderId": "1154219000035001001",
@@ -3776,7 +3776,7 @@
           "dispatchNote": ""
         }
       },
-      "dispatchSortOrder": 13
+      "dispatchSortOrder": 11
     },
     "manual-serial-26270813": {
       "salesOrderId": "manual-serial-26270813",
