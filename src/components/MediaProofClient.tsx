@@ -165,7 +165,12 @@ function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { d
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
 
 async function uploadVideoFile(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
-  return uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)
+  try {
+    return await uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)
+  } catch {
+    onProgress(3)
+    return uploadViaServer(order, unitId, file, mode, onProgress)
+  }
 }
 
 function normalizeCameraVideoFile(file: File, salesOrderNumber: string, unitId: string, index: number) {
@@ -195,6 +200,20 @@ async function uploadDirectToR2(order: Order, unitId: string, file: File, apiPat
   const registered = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId: unitId, name: file.name, type: contentType, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt }) })
   const json = await parseJsonResponse(registered, 'Could not register R2 video')
   if (!registered.ok || !json.ok) throw new Error(json.error || 'Could not register R2 video')
+  return json
+}
+
+async function uploadViaServer(order: Order, unitId: string, file: File, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
+  const form = new FormData()
+  form.append('orderId', order.id)
+  form.append('machineId', unitId)
+  form.append('stage', mode)
+  form.append('file', file, file.name || 'gallery-video.mp4')
+  onProgress(5)
+  const response = await fetch('/api/media-proof/upload', { method: 'POST', body: form })
+  onProgress(response.ok ? 100 : 5)
+  const json = await parseJsonResponse(response, 'Fallback video upload failed')
+  if (!response.ok || !json.ok) throw new Error(json.error || 'Fallback video upload failed')
   return json
 }
 
