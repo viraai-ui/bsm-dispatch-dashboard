@@ -1,5 +1,108 @@
 {
   "orders": {
+    "1154219000035022001": {
+      "id": "1154219000035022001",
+      "zohoSalesOrderId": "1154219000035022001",
+      "salesOrderNumber": "SO-07616",
+      "status": "open",
+      "customerName": "SHAKTI ENTERPRISES",
+      "shippingAddress": "GROUND FLOOR, KHEWAT NO-510,, Unnamed Road, NEAR- RADHA SWATI SATSANG, Surya Nagar, Sankhol,, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035022004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 75,
+          "pendingQuantity": 75,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035000006": {
+      "id": "1154219000035000006",
+      "zohoSalesOrderId": "1154219000035000006",
+      "salesOrderNumber": "SO-07615",
+      "status": "open",
+      "customerName": "INFINITY",
+      "shippingAddress": "Plot No. 12, INFINITY, HSIIDC Industrial Area, Phase- V, Sector 53, Kundli Industrial Area,, Sonipat, Haryana, 131028, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-07-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035000009",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035000010",
+          "itemName": "Freight Charge",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035000006-1154219000035000009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035000006",
+          "lineItemId": "1154219000035000009",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "INFINITY",
+          "salesOrderNumber": "SO-07615",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035000006-1154219000035000009-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035000006",
+          "lineItemId": "1154219000035000009",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "INFINITY",
+          "salesOrderNumber": "SO-07615",
+          "deliveryDate": "2026-07-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035001001": {
       "id": "1154219000035001001",
       "zohoSalesOrderId": "1154219000035001001",
@@ -7376,6 +7479,8 @@
     }
   },
   "orderIds": [
+    "1154219000035022001",
+    "1154219000035000006",
     "1154219000035001001",
     "1154219000034994001",
     "1154219000034982003",
@@ -7426,8 +7531,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-07-31T05:07:04.536Z",
-  "lastAttemptAt": "2026-07-31T05:21:45.093Z",
+  "lastSuccessfulSyncAt": "2026-07-31T05:22:04.837Z",
+  "lastAttemptAt": "2026-07-31T05:22:04.837Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
