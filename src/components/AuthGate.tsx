@@ -10,6 +10,7 @@ const dispatchOnlyPath = '/packaging-tv'
 const mediaOnlyPath = '/media-proof'
 const databaseOnlyPath = '/database'
 const mediaAllowedPaths = ['/media-proof', '/loading-video']
+const adminOnlyPaths = ['/ready-to-ship']
 function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : role === 'Database' ? databaseOnlyPath : '/' }
 
 export function useAuth() {
@@ -37,7 +38,8 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) router.replace(dispatchOnlyPath)
     if (user.role === 'Media' && !mediaAllowedPaths.includes(pathname)) router.replace(mediaOnlyPath)
     if (user.role === 'Database' && pathname !== databaseOnlyPath) router.replace(databaseOnlyPath)
-    if (user.role === 'Operations' && pathname === '/settings') router.replace('/')
+    if (user.role === 'Operations' && (pathname === '/settings' || pathname === '/media-proof' || pathname === '/ready-to-ship')) router.replace('/')
+    if (adminOnlyPaths.includes(pathname) && user.role !== 'Admin') router.replace(homeForRole(user.role))
   }, [pathname, router, user])
 
   async function refreshSession() {
@@ -90,7 +92,8 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   }
 
   if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) return null
-  if (user.role === 'Media' && pathname !== mediaOnlyPath) return null
+  if (user.role === 'Media' && !mediaAllowedPaths.includes(pathname)) return null
   if (user.role === 'Database' && pathname !== databaseOnlyPath) return null
+  if (adminOnlyPaths.includes(pathname) && user.role !== 'Admin') return null
   return <AuthContext.Provider value={{ user, logout }}>{children}</AuthContext.Provider>
 }

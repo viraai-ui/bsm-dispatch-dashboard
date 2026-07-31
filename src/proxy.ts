@@ -6,7 +6,7 @@ const dispatchOnly = '/packaging-tv'
 const mediaOnly = '/media-proof'
 const databaseOnly = '/database'
 const mediaAllowed = ['/media-proof', '/loading-video']
-const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/loading-video', '/database', '/machine-lookup', '/settings', '/units-generator']
+const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/units-generator']
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
@@ -29,8 +29,11 @@ export async function proxy(request: NextRequest) {
     if (payload.role === 'Database' && pathname !== databaseOnly) {
       return NextResponse.redirect(new URL(databaseOnly, request.url))
     }
-    if (payload.role === 'Operations' && pathname === '/settings') {
+    if (payload.role === 'Operations' && (pathname === '/settings' || pathname === '/media-proof' || pathname === '/ready-to-ship')) {
       return NextResponse.redirect(new URL('/', request.url))
+    }
+    if (pathname === '/ready-to-ship' && payload.role !== 'Admin') {
+      return NextResponse.redirect(new URL(String(payload.role) === 'Media' ? mediaOnly : '/', request.url))
     }
   } catch {
     const response = NextResponse.next()

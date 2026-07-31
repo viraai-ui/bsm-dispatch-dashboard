@@ -6,13 +6,13 @@ import { deleteMediaVideo, listMediaProofOrders, proceedWithoutVideo, registerR2
 const stage: MediaStage = 'packing'
 
 export async function GET() {
-  const auth = await requireUser(['Admin', 'Operations', 'Media'])
+  const auth = await requireUser(['Admin', 'Media'])
   if (!auth.ok) return auth.response
   return apiOk(await listMediaProofOrders(stage))
 }
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Admin', 'Operations', 'Media'])
+  const auth = await requireUser(['Admin', 'Media'])
   if (!auth.ok) return auth.response
   try {
     const body = await request.json()

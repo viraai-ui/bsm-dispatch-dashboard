@@ -7,13 +7,13 @@ export const runtime = 'nodejs'
 export const maxDuration = 300
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Admin', 'Operations', 'Media'])
-  if (!auth.ok) return auth.response
   try {
     const form = await request.formData()
     const orderId = String(form.get('orderId') || '')
     const machineId = String(form.get('machineId') || '')
     const stage: MediaStage = form.get('stage') === 'loading' ? 'loading' : 'packing'
+    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : ['Admin', 'Operations', 'Media'])
+    if (!auth.ok) return auth.response
     const file = form.get('file')
     if (!orderId || !machineId || !(file instanceof File)) return apiError('Missing video upload data', 400)
     const type = file.type && file.type.startsWith('video/') ? file.type : 'video/mp4'
