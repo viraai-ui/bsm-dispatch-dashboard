@@ -76,16 +76,20 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     if (!canMoveOrders) { setError('Only Admin and Operations can move orders between dispatch columns.'); return }
     const target = priority
     const existing = orders.find((order) => order.id === orderId)
-    if (!existing || existing.dispatchPriority === target) return
+    if (!existing) return
+    const before = orders
+    const targetColumn = before.filter((order) => order.id !== orderId && isUrgent(order, state) === (target === 'urgent')).sort(compareDispatchOrders)
+    const reorderedColumn = [{ ...existing, dispatchPriority: target }, ...targetColumn].map((order, index) => ({ ...order, dispatchPriority: target, dispatchSortOrder: index + 1 }))
     setError(''); setNotice('')
-    setOrders((prev) => prev.map((order) => order.id === orderId ? { ...order, dispatchPriority: target } : order))
+    setOrders((prev) => prev.map((order) => reorderedColumn.find((item) => item.id === order.id) || order))
     try {
-      const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'priority', orderId, priority: target }) })
+      const response = await fetch('/api/packaging-tv', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'priority', orderId, priority: target, orderedIds: reorderedColumn.map((order) => order.id) }) })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not update dispatch priority')
       setNotice(`${existing.salesOrderNumber} moved to ${target === 'urgent' ? 'Urgent' : 'Regular'} Dispatch.`)
+      void syncLocal(true)
     } catch (err) {
-      setOrders((prev) => prev.map((order) => order.id === orderId ? { ...order, dispatchPriority: existing.dispatchPriority || 'regular' } : order))
+      setOrders(before)
       setError(err instanceof Error ? err.message : 'Could not update dispatch priority')
     }
   }

@@ -37,11 +37,17 @@ export async function POST(request: Request) {
     const orderId = String(body.orderId || '')
     const priority = body.priority === 'urgent' ? 'urgent' : body.priority === 'regular' ? 'regular' : ''
     if (!orderId || !priority) return Response.json({ ok: false, error: 'Missing priority update' }, { status: 400 })
-    await upsertOrderWorkflow(orderId, (current) => {
+    const orderedIds: string[] = Array.isArray(body.orderedIds) ? body.orderedIds.map(String).filter(Boolean) : []
+    await upsertOrderWorkflow(orderId, (current, store) => {
       if (!current) throw new Error('Order workflow not found')
-      return { ...current, dispatchPriority: priority }
+      const targetIds = orderedIds.length ? orderedIds : [orderId]
+      targetIds.forEach((id: string, index: number) => {
+        if (store.orders[id]) store.orders[id] = { ...store.orders[id], dispatchPriority: priority, dispatchSortOrder: index + 1 }
+      })
+      if (!store.orders[orderId]) store.orders[orderId] = { ...current, dispatchPriority: priority, dispatchSortOrder: targetIds.indexOf(orderId) + 1 || 1 }
+      return store.orders[orderId]
     })
-    return apiOk({ orderId, dispatchPriority: priority })
+    return apiOk({ orderId, dispatchPriority: priority, orderedIds })
   }
   if (body.action === 'reorder') {
     if (auth.user.role !== 'Admin' && auth.user.role !== 'Operations') return Response.json({ ok: false, error: 'Only Admin and Operations can reorder dispatch columns' }, { status: 403 })
