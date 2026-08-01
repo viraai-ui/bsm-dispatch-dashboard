@@ -2307,6 +2307,63 @@
       "machineIds": [
         "1154219000035009003-1154219000035009006-1"
       ]
+    },
+    "1154219000034918002": {
+      "completedAt": "2026-08-01T09:13:08.146Z",
+      "order": {
+        "id": "1154219000034918002",
+        "zohoSalesOrderId": "1154219000034918002",
+        "salesOrderNumber": "SO-07600",
+        "status": "open",
+        "customerName": "Selvam Press",
+        "shippingAddress": "14-6-10, Selvam Press, Market Road., Surandai, Tirunelveli, Tamil Nadu, 627859",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-29",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034918005",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "description": "400 Number Eyelet",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034918002-1154219000034918005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270809",
+            "qrToken": "26270809",
+            "orderId": "1154219000034918002",
+            "lineItemId": "1154219000034918005",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "customerName": "Selvam Press",
+            "salesOrderNumber": "SO-07600",
+            "deliveryDate": "2026-07-29",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "400 Number Eyelet",
+            "warrantyStart": "2026-07-29",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000034918002-1154219000034918005-1"
+      ]
     }
   }
 }
