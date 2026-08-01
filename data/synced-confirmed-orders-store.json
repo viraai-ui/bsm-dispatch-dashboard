@@ -3374,53 +3374,6 @@
         }
       ]
     },
-    "1154219000034968002": {
-      "id": "1154219000034968002",
-      "zohoSalesOrderId": "1154219000034968002",
-      "salesOrderNumber": "SO-07611",
-      "status": "open",
-      "customerName": "THE PURPLETREE",
-      "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi,, Delhi,, Delhi, 110092, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034968005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Port",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034968002-1154219000034968005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034968002",
-          "lineItemId": "1154219000034968005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "THE PURPLETREE",
-          "salesOrderNumber": "SO-07611",
-          "deliveryDate": "2026-07-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Port"
-        }
-      ]
-    },
     "1154219000034952463": {
       "id": "1154219000034952463",
       "zohoSalesOrderId": "1154219000034952463",
@@ -3486,63 +3439,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034957002": {
-      "id": "1154219000034957002",
-      "zohoSalesOrderId": "1154219000034957002",
-      "salesOrderNumber": "SO-07609",
-      "status": "open",
-      "customerName": "TARA FOOTWEARS PRIVATE LIMITED",
-      "shippingAddress": "E-1107 PHASE-III, RIICO INDUSTRIAL AREA, BHIWADI, RAJASTHAN-301019, Rajasthan",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034957005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Blade set (817)",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034957006",
-          "itemName": "Freight Charge",
-          "sku": "",
-          "description": "Courier Charge",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034957002-1154219000034957005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034957002",
-          "lineItemId": "1154219000034957005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "TARA FOOTWEARS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07609",
-          "deliveryDate": "2026-07-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Blade set (817)"
         }
       ]
     },
@@ -7850,9 +7746,7 @@
     "1154219000035011002",
     "1154219000035001001",
     "1154219000034994001",
-    "1154219000034968002",
     "1154219000034952463",
-    "1154219000034957002",
     "1154219000034923001",
     "1154219000034918002",
     "1154219000034838001",
@@ -7889,8 +7783,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T06:58:09.651Z",
-  "lastAttemptAt": "2026-08-01T07:02:33.183Z",
+  "lastSuccessfulSyncAt": "2026-08-01T07:02:56.061Z",
+  "lastAttemptAt": "2026-08-01T07:02:56.061Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
