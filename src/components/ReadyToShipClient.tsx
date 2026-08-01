@@ -32,7 +32,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     if (!q) return items
-    return items.filter((item) => [item.salesOrderNumber, item.customerName, item.machine.itemName, item.machine.serialNumber, item.shipment?.vehicleNumber].join(' ').toLowerCase().includes(q))
+    return items.filter((item) => [item.salesOrderNumber, item.customerName, item.shippingAddress, item.machines.map((machine) => `${machine.itemName} ${machine.serialNumber}`).join(' '), item.shipment?.vehicleNumber].join(' ').toLowerCase().includes(q))
   }, [items, query])
 
   async function refresh() {
@@ -78,7 +78,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       <div>
         <span className="eyebrow">Dispatch control</span>
         <h1>Ready to Ship</h1>
-        <p>Machines that are packed, video-verified, and ready for transport booking.</p>
+        <p>Dispatch-completed orders ready for transport booking.</p>
       </div>
       <div className="ready-ship-stats">
         <strong>{items.filter((item) => !item.shipment).length}</strong>
@@ -91,21 +91,22 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
     <div className="ready-ship-layout">
       <section className="card ready-machine-panel">
         <div className="ready-panel-head">
-          <div><h2>Packed Machines</h2><span>{filtered.length} machines ready / shipped</span></div>
+          <div><h2>Dispatch Completed Orders</h2><span>{filtered.length} orders ready / shipped</span></div>
           <button className="btn light" type="button" disabled={busy === 'refresh'} onClick={refresh}>{busy === 'refresh' ? 'Syncing…' : 'Refresh'}</button>
         </div>
-        <input className="ready-search" placeholder="Search SO, customer, machine, serial, vehicle" value={query} onChange={(event) => setQuery(event.target.value)} />
+        <input className="ready-search" placeholder="Search SO, customer, address, machine, serial, vehicle" value={query} onChange={(event) => setQuery(event.target.value)} />
         <div className="ready-machine-list">
           {filtered.map((item) => <article className={`ready-machine-card ${item.shipment ? 'shipped' : ''}`} key={item.id}>
             <div className="ready-machine-main">
               <div><strong>{item.salesOrderNumber}</strong><span>{item.customerName}</span></div>
-              <Badge tone={item.shipment ? 'blue' : 'green'}>{item.shipment ? 'Shipped' : 'Ready'}</Badge>
+              <Badge tone={item.shipment ? 'blue' : 'green'}>{item.shipment ? 'Shipped' : 'Dispatch Complete'}</Badge>
             </div>
-            <div className="ready-machine-name">{item.machine.itemName}</div>
+            <div className="ready-customer-address">{item.shippingAddress || 'Address not available'}</div>
+            <div className="ready-machine-list-inline">{item.machines.map((machine) => <div className="ready-machine-line" key={machine.id}><strong>{machine.itemName}</strong><span>Qty 1</span>{machine.serialNumber && <em>Serial {machine.serialNumber}</em>}</div>)}</div>
             <div className="ready-machine-meta">
-              <span>Serial: {item.machine.serialNumber || '—'}</span>
+              <span>Machines: {item.machines.length}</span>
               <span>{item.shipment ? `Vehicle: ${item.shipment.vehicleNumber}` : `Ready: ${formatDate(item.readyAt || item.completedAt)}`}</span>
-              <span>{item.videos.length} packing video{item.videos.length === 1 ? '' : 's'}</span>
+              <span className={item.packingVideoUploaded ? 'packing-video-yes' : 'packing-video-no'}>☑ Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</span>
             </div>
             {item.shipment && <div className="shipment-status-row">
               <Badge tone={messageTone(item.shipment.messages.customer.status) as any}>Customer: {item.shipment.messages.customer.status}</Badge>
@@ -117,7 +118,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
               <button className="btn red" type="button" onClick={() => setActiveItem(item)}>{item.shipment ? 'View Shipment' : 'Ship / WhatsApp'}</button>
             </div>
           </article>)}
-          {!filtered.length && <div className="empty-state"><strong>No machines ready yet</strong><span className="muted">Once packing video is uploaded, packed machines will appear here.</span></div>}
+          {!filtered.length && <div className="empty-state"><strong>No dispatch-completed orders yet</strong><span className="muted">Orders will appear here once completed from Dispatch View.</span></div>}
         </div>
       </section>
 
@@ -171,7 +172,8 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
   }
 
   return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card shipment-modal">
-    <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.machine.itemName} • Serial {item.machine.serialNumber || '—'}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
+    <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
+    <div className="shipment-order-context"><strong>{item.shippingAddress || 'Address not available'}</strong><div>{item.machines.map((machine) => <span key={machine.id}>{machine.itemName} · Qty 1{machine.serialNumber ? ` · Serial ${machine.serialNumber}` : ''}</span>)}</div><em>Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</em></div>
     {error && <div className="form-error">{error}</div>}
     {existing && <div className="shipment-status-box"><strong>Shipment already saved</strong><span>Customer WhatsApp: {existing.messages.customer.status}</span><span>Salesperson WhatsApp: {existing.messages.salesperson.status}</span></div>}
     <form className="shipment-form" onSubmit={submit}>

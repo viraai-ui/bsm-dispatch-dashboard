@@ -1079,3 +1079,20 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .loading-machine-row { align-items: flex-start; flex-direction: column; gap: 6px; }
 }
 
+.ready-customer-address { padding: 10px 12px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; font-size: 12px; font-weight: 700; line-height: 1.45; }
+.ready-machine-list-inline { display: grid; gap: 7px; }
+.ready-machine-line { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 14px; background: #fff; border: 1px solid #edf2f7; }
+.ready-machine-line strong { color: #1f2937; font-size: 13px; font-weight: 850; overflow-wrap: anywhere; }
+.ready-machine-line span { padding: 4px 8px; border-radius: 999px; background: #ecfdf5; color: #15803d; font-size: 11px; font-weight: 900; }
+.ready-machine-line em { color: #64748b; font-size: 11px; font-style: normal; font-weight: 800; }
+.ready-machine-meta .packing-video-yes { background: #dcfce7; color: #166534; }
+.ready-machine-meta .packing-video-no { background: #fff7ed; color: #c2410c; }
+.shipment-order-context { display: grid; gap: 8px; padding: 12px; border-radius: 16px; background: #f8fafc; border: 1px solid #e2e8f0; margin-bottom: 12px; }
+.shipment-order-context strong { color: #334155; font-size: 12px; line-height: 1.45; }
+.shipment-order-context div { display: grid; gap: 5px; }
+.shipment-order-context span { color: #1f2937; font-size: 12px; font-weight: 800; }
+.shipment-order-context em { justify-self: start; padding: 5px 9px; border-radius: 999px; background: #fff7ed; color: #c2410c; font-style: normal; font-size: 11px; font-weight: 900; }
+@media (max-width: 520px) {
+  .ready-machine-line { grid-template-columns: 1fr; align-items: start; }
+}
+

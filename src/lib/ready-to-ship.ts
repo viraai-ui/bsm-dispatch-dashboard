@@ -15,12 +15,15 @@ export type ReadyToShipItem = {
   salesOrderNumber: string
   customerName: string
   customerPhone?: string
+  shippingAddress?: string
   salesperson?: string
   deliveryDate?: string
   completedAt?: string
   readyAt?: string
   machine: MachineUnit
+  machines: MachineUnit[]
   videos: MediaUpload[]
+  packingVideoUploaded: boolean
   shipment?: ShipmentRecord
 }
 
@@ -72,28 +75,28 @@ export async function listReadyToShipItems() {
     if (!order) continue
     const allowedMachineIds = new Set(completed.machineIds?.length ? completed.machineIds : (order.machines || []).map((machine) => machine.id))
     const record = packingStore.records[orderId]
-    if (!record) continue
-    for (const machine of order.machines || []) {
-      if (!allowedMachineIds.has(machine.id)) continue
-      const videos = record.units?.[machine.id]?.videos || []
-      if (!videos.length) continue
-      const id = `${orderId}-${machine.id}`
-      const readyAt = videos.reduce((latest, video) => !latest || video.uploadedAt > latest ? video.uploadedAt : latest, '')
-      items.push({
-        id,
-        orderId,
-        salesOrderNumber: order.salesOrderNumber,
-        customerName: order.customerName,
-        customerPhone: order.customerPhone,
-        salesperson: order.salesperson,
-        deliveryDate: order.deliveryDate,
-        completedAt: completed.completedAt,
-        readyAt,
-        machine,
-        videos,
-        shipment: shipmentStore.shipments[id],
-      })
-    }
+    const machines = (order.machines || []).filter((machine) => allowedMachineIds.has(machine.id))
+    if (!machines.length) continue
+    const videos = machines.flatMap((machine) => record?.units?.[machine.id]?.videos || [])
+    const id = orderId
+    const readyAt = videos.reduce((latest, video) => !latest || video.uploadedAt > latest ? video.uploadedAt : latest, completed.completedAt || '')
+    items.push({
+      id,
+      orderId,
+      salesOrderNumber: order.salesOrderNumber,
+      customerName: order.customerName,
+      customerPhone: order.customerPhone,
+      shippingAddress: order.shippingAddress,
+      salesperson: order.salesperson,
+      deliveryDate: order.deliveryDate,
+      completedAt: completed.completedAt,
+      readyAt,
+      machine: machines[0],
+      machines,
+      videos,
+      packingVideoUploaded: videos.length > 0 || Boolean(record?.submittedAt),
+      shipment: shipmentStore.shipments[id],
+    })
   }
   return items.sort((a, b) => Date.parse(b.shipment?.shippedAt || b.readyAt || b.completedAt || '') - Date.parse(a.shipment?.shippedAt || a.readyAt || a.completedAt || ''))
 }
@@ -184,7 +187,7 @@ export async function processShipment(input: {
     },
   }
 
-  if (input.sendWhatsapp) await sendShipmentMessages(record, item.machine.itemName)
+  if (input.sendWhatsapp) await sendShipmentMessages(record, item.machines.map((machine) => machine.itemName).join(', ') || item.machine.itemName)
 
   const store = await readShipmentStore()
   store.shipments[item.id] = record
