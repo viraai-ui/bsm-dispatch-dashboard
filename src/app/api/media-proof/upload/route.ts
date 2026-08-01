@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     const orderId = String(form.get('orderId') || '')
     const machineId = String(form.get('machineId') || '')
     const stage: MediaStage = form.get('stage') === 'loading' ? 'loading' : 'packing'
-    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : ['Admin', 'Operations', 'Media'])
+    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : ['Admin', 'Operations'])
     if (!auth.ok) return auth.response
     const file = form.get('file')
     if (!orderId || !machineId || !(file instanceof File)) return apiError('Missing video upload data', 400)

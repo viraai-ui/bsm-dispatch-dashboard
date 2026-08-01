@@ -5,7 +5,7 @@ const cookieName = 'bsm_dispatch_session'
 const dispatchOnly = '/packaging-tv'
 const mediaOnly = '/media-proof'
 const databaseOnly = '/database'
-const mediaAllowed = ['/media-proof', '/loading-video']
+const mediaAllowed = ['/media-proof']
 const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/units-generator']
 
 function secretKey() {

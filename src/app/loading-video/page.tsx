@@ -6,7 +6,7 @@ import { hasPageAccess } from '@/lib/page-auth'
 export const dynamic = 'force-dynamic'
 
 export default async function LoadingVideoPage() {
-  const authed = await hasPageAccess(['Admin', 'Operations', 'Media'])
+  const authed = await hasPageAccess(['Admin', 'Operations'])
   const { orders, records } = authed ? await listMediaProofOrders('loading') : { orders: [], records: {} }
   return <DashboardShell active="Loading Video"><MediaProofClient title="Loading Video" apiPath="/api/loading-video" mode="loading" initialOrders={orders} initialRecords={records} /></DashboardShell>
 }

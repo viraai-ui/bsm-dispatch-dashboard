@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json()
     const stage = String(body.stage || '') === 'loading' ? 'loading' : 'packing'
-    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : ['Admin', 'Operations', 'Media'])
+    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : ['Admin', 'Operations'])
     if (!auth.ok) return auth.response
     const order = await getMediaOrder(String(body.orderId || ''))
     if (!order) return apiError('Order not found', 404)

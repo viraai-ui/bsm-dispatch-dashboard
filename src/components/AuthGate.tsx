@@ -9,7 +9,7 @@ const AuthContext = createContext<AuthContextValue | null>(null)
 const dispatchOnlyPath = '/packaging-tv'
 const mediaOnlyPath = '/media-proof'
 const databaseOnlyPath = '/database'
-const mediaAllowedPaths = ['/media-proof', '/loading-video']
+const mediaAllowedPaths = ['/media-proof']
 const adminOnlyPaths = ['/ready-to-ship']
 function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : role === 'Database' ? databaseOnlyPath : '/' }
 
