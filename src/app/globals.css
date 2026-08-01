@@ -1139,6 +1139,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .ready-machine-card .ready-machine-line em { font-weight: 400; }
 .ready-machine-card .badge { font-weight: 800; }
 .ready-machine-card .btn { font-weight: 800; }
-.ready-action-buttons > .btn.red { background: #16a34a; border-color: #16a34a; color: #fff; }
-.ready-action-buttons > .btn.red:hover { background: #15803d; border-color: #15803d; color: #fff; }
+.ready-action-buttons > .btn.red { position: relative; overflow: hidden; background: linear-gradient(135deg, #22c55e 0%, #16a34a 42%, #047857 100%); border: 0; color: #fff; box-shadow: 0 12px 24px rgba(22,163,74,.28), inset 0 1px 0 rgba(255,255,255,.32); }
+.ready-action-buttons > .btn.red::before { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.34) 42%, transparent 68%); transform: translateX(-120%); transition: transform .55s ease; }
+.ready-action-buttons > .btn.red:hover { background: linear-gradient(135deg, #4ade80 0%, #16a34a 44%, #065f46 100%); color: #fff; box-shadow: 0 14px 28px rgba(22,163,74,.34), inset 0 1px 0 rgba(255,255,255,.38); transform: translateY(-1px); }
+.ready-action-buttons > .btn.red:hover::before { transform: translateX(120%); }
+.ready-action-buttons > .btn.red:active { transform: translateY(0); box-shadow: 0 8px 18px rgba(22,163,74,.24); }
 
