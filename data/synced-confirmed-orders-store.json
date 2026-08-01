@@ -662,53 +662,6 @@
         }
       ]
     },
-    "1154219000034838001": {
-      "id": "1154219000034838001",
-      "zohoSalesOrderId": "1154219000034838001",
-      "salesOrderNumber": "SO-07596",
-      "status": "open",
-      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
-      "shippingAddress": "10, Chowbagha Road, Kolkata, West Bengal, 700039, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034838004",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034838001-1154219000034838004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034838001",
-          "lineItemId": "1154219000034838004",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
-          "salesOrderNumber": "SO-07596",
-          "deliveryDate": "2026-07-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034749030": {
       "id": "1154219000034749030",
       "zohoSalesOrderId": "1154219000034749030",
@@ -3679,7 +3632,6 @@
     "1154219000035011002",
     "1154219000034994001",
     "1154219000034923001",
-    "1154219000034838001",
     "1154219000034749030",
     "1154219000034756004",
     "1154219000034750001",
@@ -3711,8 +3663,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T12:28:57.420Z",
-  "lastAttemptAt": "2026-08-01T12:42:33.205Z",
+  "lastSuccessfulSyncAt": "2026-08-01T12:42:52.991Z",
+  "lastAttemptAt": "2026-08-01T12:42:52.991Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
