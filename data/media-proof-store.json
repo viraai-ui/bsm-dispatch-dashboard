@@ -159,26 +159,8 @@
       "orderId": "1154219000032974004",
       "salesOrderNumber": "SO-07312",
       "submittedAt": null,
-      "units": {
-        "1154219000032974004-1154219000032974007-2": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000032974004-1154219000032974007-2-video-1785567634169-1gg15z",
-              "name": "VID_20260801_123020.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2F2026-08-01%2FSO-07312%2FHotmelt%20Roller%20Coater%2020%20Inch-1154219000032974004-1154219000032974007-2-2026-08-01T07-00-29-035Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/2026-08-01/SO-07312/Hotmelt Roller Coater 20 Inch-1154219000032974004-1154219000032974007-2-2026-08-01T07-00-29-035Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-08-01T07:00:34.169Z",
-              "expiresAt": "2026-08-31T07:00:29.035Z"
-            }
-          ]
-        }
-      }
+      "units": {},
+      "videoNotRequired": false
     }
   }
 }
