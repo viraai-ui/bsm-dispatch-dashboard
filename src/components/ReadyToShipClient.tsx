@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Badge } from './DashboardShell'
 import type { ReadyToShipItem, Transporter } from '@/lib/ready-to-ship'
 
@@ -31,17 +31,27 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
     return items.filter((item) => [item.salesOrderNumber, item.customerName, item.shippingAddress, item.machines.map((machine) => `${machine.itemName} ${machine.serialNumber}`).join(' '), item.shipment?.vehicleNumber].join(' ').toLowerCase().includes(q))
   }, [items, query])
 
-  async function refresh() {
-    setBusy('refresh'); setMessage('')
+  async function refresh(options: { sync?: boolean; silent?: boolean } = {}) {
+    if (!options.silent) { setBusy(options.sync ? 'sync' : 'refresh'); setMessage('') }
     try {
+      if (options.sync) {
+        const syncResponse = await fetch('/api/cron/sync-orders', { cache: 'no-store' })
+        const syncJson = await syncResponse.json()
+        if (!syncResponse.ok || !syncJson.ok) throw new Error(syncJson.error || 'Could not sync orders')
+      }
       const response = await fetch('/api/ready-to-ship', { cache: 'no-store' })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not refresh Ready to Ship')
       setItems(json.data.items || [])
       setTransporters(json.data.transporters || [])
-    } catch (error) { setMessage(error instanceof Error ? error.message : 'Could not refresh Ready to Ship') }
-    finally { setBusy('') }
+    } catch (error) { if (!options.silent) setMessage(error instanceof Error ? error.message : 'Could not refresh Ready to Ship') }
+    finally { if (!options.silent) setBusy('') }
   }
+
+  useEffect(() => {
+    const interval = window.setInterval(() => { void refresh({ sync: true, silent: true }) }, 15 * 60 * 1000)
+    return () => window.clearInterval(interval)
+  }, [])
 
   async function addNewTransporter(event: React.FormEvent) {
     event.preventDefault()
@@ -87,7 +97,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       <section className="card ready-machine-panel">
         <div className="ready-panel-head">
           <div><h2>Ready Orders</h2></div>
-          <button className="btn light" type="button" disabled={busy === 'refresh'} onClick={refresh}>{busy === 'refresh' ? 'Syncing…' : 'Refresh'}</button>
+          <button className={`ready-sync-btn ${busy === 'sync' ? 'spinning' : ''}`} type="button" aria-label="Sync orders" title="Sync orders" disabled={busy === 'sync'} onClick={() => refresh({ sync: true })}>↻</button>
         </div>
         <input className="ready-search" placeholder="Search SO, customer, address, machine, serial, vehicle" value={query} onChange={(event) => setQuery(event.target.value)} />
         <div className="ready-machine-list">
@@ -104,7 +114,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
               <span className={item.packingVideoUploaded ? 'packing-video-yes' : 'packing-video-no'}>☑ Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</span>
             </div>
             <div className="ready-machine-actions">
-              {item.videos[0] && <a className="btn light" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}
+              <div className="ready-video-slot">{item.videos[0] && <a className="btn light" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}</div>
               <button className="btn red" type="button" onClick={() => setActiveItem(item)}>{item.shipment ? 'View Shipment' : 'Ship'}</button>
             </div>
           </article>)}

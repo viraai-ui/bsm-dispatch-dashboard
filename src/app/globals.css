@@ -1114,4 +1114,18 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 @media (max-width: 640px) {
   .ready-machine-main .badge { min-height: 32px; padding: 0 12px; font-size: 11px; }
 }
+.ready-sync-btn { width: 44px; height: 44px; border-radius: 999px; border: 1px solid #bbf7d0; background: #ecfdf5; color: #15803d; display: inline-grid; place-items: center; font-size: 24px; font-weight: 950; cursor: pointer; box-shadow: 0 10px 22px rgba(22,163,74,.12); }
+.ready-sync-btn:hover { background: #dcfce7; color: #166534; transform: translateY(-1px); }
+.ready-sync-btn:disabled { opacity: .72; cursor: wait; }
+.ready-sync-btn.spinning { animation: readySyncSpin .85s linear infinite; }
+@keyframes readySyncSpin { to { transform: rotate(360deg); } }
+.ready-machine-actions { grid-template-columns: 1fr auto; align-items: end; }
+.ready-video-slot { min-height: 42px; display: flex; align-items: flex-end; justify-content: flex-start; }
+.ready-video-slot .btn { min-width: 128px; }
+.ready-machine-actions > .btn.red { justify-self: end; min-width: 112px; }
+@media (max-width: 640px) {
+  .ready-machine-actions { grid-template-columns: 1fr auto; }
+  .ready-video-slot .btn { min-width: 0; }
+  .ready-machine-actions > .btn.red { min-width: 96px; }
+}
 
