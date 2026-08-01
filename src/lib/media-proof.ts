@@ -1,6 +1,6 @@
 import type { Order } from '@/types/domain'
 import { uploadBufferToGithubMedia } from './github-media'
-import { githubReadJson, githubWriteJson } from './workflow-store'
+import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 import { isMachineLineItem } from './item-classification'
@@ -67,15 +67,19 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const { data: completedStore } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const completed = completedStore.completed || {}
   const completedAtByOrderId = new Map(Object.entries(completed).map(([orderId, item]) => [orderId, Date.parse(item.completedAt || '') || 0]))
+  const processedWorkflows = stage === 'packing' ? await listProcessedOrders() : []
   const packingStore = await readMediaProofStore('packing')
   const loadingStore = await readMediaProofStore('loading')
   const store = stage === 'loading' ? loadingStore : packingStore
   let packingChanged = false
   let loadingChanged = false
   const activeIds = await activeOperationalOrderIds()
-  const sourceOrders = Object.values(completed)
-    .map((item) => item.order)
-    .filter((order): order is Order => Boolean(order) && activeIds.has(order.id))
+  const sourceOrders = (stage === 'packing' ? processedWorkflows.map((workflow) => workflow.processedOrder) : Object.values(completed).map((item) => item.order))
+    .filter((order): order is Order => Boolean(order))
+    .filter((order) => activeIds.has(order.id))
+  const sortTimeByOrderId = stage === 'packing'
+    ? new Map(processedWorkflows.map((workflow) => [workflow.salesOrderId, Date.parse(workflow.processedAt || workflow.processedOrder?.deliveryDate || '') || 0]))
+    : completedAtByOrderId
 
   for (const order of sourceOrders) {
     if (videoRequiredMachines(order).length === 0) {
@@ -96,7 +100,7 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
     .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))
     .filter((order) => order.machines.length > 0)
     .filter((order) => !store.records[order.id]?.submittedAt)
-    .sort((a, b) => (completedAtByOrderId.get(b.id) || 0) - (completedAtByOrderId.get(a.id) || 0))
+    .sort((a, b) => (sortTimeByOrderId.get(b.id) || 0) - (sortTimeByOrderId.get(a.id) || 0))
   return { orders, records: store.records }
 }
 

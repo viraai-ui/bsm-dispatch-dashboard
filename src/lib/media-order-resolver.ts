@@ -1,6 +1,6 @@
 import type { Order } from '@/types/domain'
 import { getOperationalOrderIds, getSyncedOrder, isOperationalZohoOrder } from './synced-orders'
-import { githubReadJson } from './workflow-store'
+import { githubReadJson, listWorkflows } from './workflow-store'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
@@ -15,5 +15,9 @@ export async function getMediaOrder(orderId: string) {
   const completed = data.completed || {}
   const entry = completed[id] || Object.values(completed).find((item) => item.order?.salesOrderNumber === id || item.order?.zohoSalesOrderId === id)
   const activeIds = await getOperationalOrderIds()
-  return entry?.order && activeIds.has(entry.order.id) ? entry.order : null
+  if (entry?.order && activeIds.has(entry.order.id)) return entry.order
+  const workflows = await listWorkflows()
+  const workflow = workflows[id] || Object.values(workflows).find((item) => item.salesOrderNumber === id || item.processedOrder?.zohoSalesOrderId === id)
+  const order = workflow?.processedOrder
+  return order && activeIds.has(order.id) ? order : null
 }
