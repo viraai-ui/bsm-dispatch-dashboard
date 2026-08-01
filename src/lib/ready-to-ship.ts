@@ -141,6 +141,22 @@ export async function deleteTransporter(id: string) {
   return store
 }
 
+export async function updateTransporter(input: { id: string; name: string; phone: string; notes?: string }) {
+  const id = input.id.trim()
+  const name = input.name.trim()
+  const phone = input.phone.trim()
+  if (!id) throw new Error('Transporter id is required')
+  if (!name) throw new Error('Transporter name is required')
+  if (!phone) throw new Error('Transporter phone is required')
+  const store = await readTransportersStore()
+  const index = store.transporters.findIndex((item) => item.id === id)
+  if (index === -1) throw new Error('Transporter not found')
+  const updated = { ...store.transporters[index], name, phone, notes: input.notes?.trim() || '' }
+  store.transporters[index] = updated
+  await githubWriteJson(TRANSPORTERS_PATH, store, `Update transporter ${name}`)
+  return updated
+}
+
 export async function processShipment(input: {
   itemId: string
   vehicleNumber: string

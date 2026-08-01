@@ -24,6 +24,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState('')
   const [showAddTransporter, setShowAddTransporter] = useState(false)
+  const [editingTransporter, setEditingTransporter] = useState<Transporter | null>(null)
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -65,6 +66,36 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       setShowAddTransporter(false)
       setMessage('Transporter added.')
     } catch (error) { setMessage(error instanceof Error ? error.message : 'Could not add transporter') }
+    finally { setBusy('') }
+  }
+
+
+  async function saveTransporterEdit(event: React.FormEvent) {
+    event.preventDefault()
+    if (!editingTransporter) return
+    setBusy('edit-transporter'); setMessage('')
+    try {
+      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'update_transporter', id: editingTransporter.id, name: editingTransporter.name, phone: editingTransporter.phone, notes: editingTransporter.notes }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not update transporter')
+      setTransporters((prev) => prev.map((item) => item.id === json.data.transporter.id ? json.data.transporter : item))
+      setEditingTransporter(null)
+      setMessage('Transporter updated.')
+    } catch (error) { setMessage(error instanceof Error ? error.message : 'Could not update transporter') }
+    finally { setBusy('') }
+  }
+
+  async function deleteEditingTransporter() {
+    if (!editingTransporter || !window.confirm('Delete this transporter?')) return
+    setBusy('delete-transporter'); setMessage('')
+    try {
+      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'delete_transporter', id: editingTransporter.id }) })
+      const json = await response.json()
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not delete transporter')
+      setTransporters((prev) => prev.filter((item) => item.id !== editingTransporter.id))
+      setEditingTransporter(null)
+      setMessage('Transporter deleted.')
+    } catch (error) { setMessage(error instanceof Error ? error.message : 'Could not delete transporter') }
     finally { setBusy('') }
   }
 
@@ -122,11 +153,13 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
         <div className="transporter-list">
           {transporters.map((item) => <article className="transporter-card" key={item.id}>
             <div><strong>{item.name}</strong><a href={`tel:${item.phone}`}>{item.phone}</a>{item.notes && <span>{item.notes}</span>}</div>
+            <button type="button" className="transporter-edit-btn" aria-label={`Edit ${item.name}`} title="Edit transporter" onClick={() => setEditingTransporter(item)}>✎</button>
           </article>)}
           {!transporters.length && <div className="empty-state small"><strong>No transporters yet</strong></div>}
         </div>
       </aside>
     </div>
+    {editingTransporter && <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card transporter-edit-modal"><div className="modal-head"><div><h1>Edit Transporter</h1><p className="muted">Change name, phone or notes</p></div><button className="drawer-close" onClick={() => setEditingTransporter(null)}>×</button></div><form className="transporter-edit-form" onSubmit={saveTransporterEdit}><label>Name<input value={editingTransporter.name} onChange={(event) => setEditingTransporter({ ...editingTransporter, name: event.target.value })} /></label><label>Phone<input value={editingTransporter.phone} onChange={(event) => setEditingTransporter({ ...editingTransporter, phone: event.target.value })} /></label><label>Notes<input value={editingTransporter.notes || ''} onChange={(event) => setEditingTransporter({ ...editingTransporter, notes: event.target.value })} placeholder="Notes / route / vehicle type" /></label><div className="transporter-edit-actions"><button className="btn light" type="button" onClick={() => setEditingTransporter(null)}>Cancel</button><button className="btn red" type="submit" disabled={busy === 'edit-transporter'}>{busy === 'edit-transporter' ? 'Saving…' : 'Save Changes'}</button><button className="btn light danger-text" type="button" disabled={busy === 'delete-transporter'} onClick={deleteEditingTransporter}>{busy === 'delete-transporter' ? 'Deleting…' : 'Delete'}</button></div></form></section></div>}
     {activeItem && <ShipmentModal item={activeItem} transporters={transporters} busy={busy} setBusy={setBusy} onClose={() => setActiveItem(null)} onSaved={(updated) => { setItems((prev) => prev.map((item) => item.id === updated.id ? updated : item)); setActiveItem(null); setMessage('Shipment saved.') }} />}
   </section>
 }

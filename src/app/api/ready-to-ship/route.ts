@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { addTransporter, deleteTransporter, listReadyToShipItems, processShipment, readTransportersStore } from '@/lib/ready-to-ship'
+import { addTransporter, deleteTransporter, listReadyToShipItems, processShipment, readTransportersStore, updateTransporter } from '@/lib/ready-to-ship'
 
 export async function GET() {
   const auth = await requireUser(['Admin'])
@@ -19,6 +19,9 @@ export async function POST(request: Request) {
     }
     if (body.action === 'delete_transporter') {
       return apiOk(await deleteTransporter(String(body.id || '')))
+    }
+    if (body.action === 'update_transporter') {
+      return apiOk({ transporter: await updateTransporter({ id: String(body.id || ''), name: String(body.name || ''), phone: String(body.phone || ''), notes: String(body.notes || '') }) })
     }
     if (body.action === 'process_shipment') {
       return apiOk({ shipment: await processShipment({
