@@ -57,6 +57,142 @@
         }
       ]
     },
+    "1154219000035063006": {
+      "id": "1154219000035063006",
+      "zohoSalesOrderId": "1154219000035063006",
+      "salesOrderNumber": "SO-07630",
+      "status": "open",
+      "customerName": "RETRO FOOTWEARS PRIVATE LIMITED",
+      "shippingAddress": "J 19, UDYOG NAGAR, UDYOG NAGAR, North West Delhi, Delhi,",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035063009",
+          "itemName": "Sole Stitch Cylinder bed Single needle (extra heavy duty)",
+          "sku": "205",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035063006-1154219000035063009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035063006",
+          "lineItemId": "1154219000035063009",
+          "itemName": "Sole Stitch Cylinder bed Single needle (extra heavy duty)",
+          "sku": "205",
+          "customerName": "RETRO FOOTWEARS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07630",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035069003": {
+      "id": "1154219000035069003",
+      "zohoSalesOrderId": "1154219000035069003",
+      "salesOrderNumber": "SO-07629",
+      "status": "open",
+      "customerName": "HILLSON FOOTWEAR PVT. LTD.",
+      "shippingAddress": "PLOT NO. 420-421, M.I.E. Part-A, Bahadurgarh-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035069006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "D lasting pad",
+          "quantity": 3,
+          "pendingQuantity": 3,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035069003-1154219000035069006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035069003",
+          "lineItemId": "1154219000035069006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "HILLSON FOOTWEAR PVT. LTD.",
+          "salesOrderNumber": "SO-07629",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "D lasting pad"
+        },
+        {
+          "id": "1154219000035069003-1154219000035069006-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035069003",
+          "lineItemId": "1154219000035069006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "HILLSON FOOTWEAR PVT. LTD.",
+          "salesOrderNumber": "SO-07629",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "D lasting pad"
+        },
+        {
+          "id": "1154219000035069003-1154219000035069006-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035069003",
+          "lineItemId": "1154219000035069006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "HILLSON FOOTWEAR PVT. LTD.",
+          "salesOrderNumber": "SO-07629",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "D lasting pad"
+        }
+      ]
+    },
     "1154219000034983522": {
       "id": "1154219000034983522",
       "zohoSalesOrderId": "1154219000034983522",
@@ -7728,6 +7864,8 @@
   },
   "orderIds": [
     "1154219000035041199",
+    "1154219000035063006",
+    "1154219000035069003",
     "1154219000034983522",
     "1154219000035041156",
     "1154219000035025028",
@@ -7772,8 +7910,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T10:22:12.478Z",
-  "lastAttemptAt": "2026-08-01T10:26:09.170Z",
+  "lastSuccessfulSyncAt": "2026-08-01T10:26:32.145Z",
+  "lastAttemptAt": "2026-08-01T10:26:32.145Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
