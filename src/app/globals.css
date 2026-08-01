@@ -1063,3 +1063,19 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .shipment-actions { grid-template-columns: 1fr; }
 }
 
+.loading-final-panel { display: grid; gap: 14px; }
+.loading-order-summary { display: grid; grid-template-columns: 1fr 1.6fr; gap: 10px; }
+.loading-order-summary > div { padding: 12px; border: 1px solid #e2e8f0; border-radius: 16px; background: #f8fafc; }
+.loading-order-summary span { display: block; color: #64748b; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.loading-order-summary strong { display: block; margin-top: 4px; color: #111827; font-size: 15px; }
+.loading-machine-list { display: grid; gap: 8px; padding: 12px; border: 1px solid #e2e8f0; border-radius: 18px; background: #fff; }
+.loading-machine-list h2 { margin: 0 0 4px; font-size: 16px; letter-spacing: -.01em; }
+.loading-machine-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 14px; background: #f8fafc; border: 1px solid #edf2f7; }
+.loading-machine-row strong { color: #1f2937; font-size: 13px; font-weight: 800; }
+.loading-machine-row span { flex: 0 0 auto; padding: 5px 9px; border-radius: 999px; background: #ecfdf5; color: #15803d; font-size: 12px; font-weight: 900; }
+.loading-video-drop.final-upload { border: 1px dashed #94a3b8; background: linear-gradient(180deg,#f8fafc,#fff); }
+@media (max-width: 640px) {
+  .loading-order-summary { grid-template-columns: 1fr; }
+  .loading-machine-row { align-items: flex-start; flex-direction: column; gap: 6px; }
+}
+
