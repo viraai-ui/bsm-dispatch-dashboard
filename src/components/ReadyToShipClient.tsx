@@ -139,7 +139,6 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
   const selectedTransporter = transporters.find((entry) => entry.name === transporterName)
   const [transporterPhone, setTransporterPhone] = useState(existing?.transporterPhone || selectedTransporter?.phone || '')
   const [vehicleNumber, setVehicleNumber] = useState(existing?.vehicleNumber || '')
-  const [driverName, setDriverName] = useState(existing?.driverName || '')
   const [driverPhone, setDriverPhone] = useState(existing?.driverPhone || '')
   const [expectedDelivery, setExpectedDelivery] = useState(existing?.expectedDelivery || todayInputDate())
   const [notes, setNotes] = useState(existing?.notes || '')
@@ -149,7 +148,7 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
     event.preventDefault()
     setBusy('shipment'); setError('')
     try {
-      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'process_shipment', itemId: item.id, transporterName, transporterPhone, vehicleNumber, driverName, driverPhone, expectedDelivery, notes }) })
+      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'process_shipment', itemId: item.id, transporterName, transporterPhone, vehicleNumber, driverName: '—', driverPhone, expectedDelivery, notes }) })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save shipment')
       onSaved({ ...item, shipment: json.data.shipment })
@@ -164,12 +163,9 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
     {existing && <div className="shipment-status-box"><strong>Shipment already saved</strong><span>{existing.transporterName}</span><span>{existing.vehicleNumber}</span></div>}
     <form className="shipment-form" onSubmit={submit}>
       <label>Transporter<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = transporters.find((entry) => entry.name === event.target.value); setTransporterPhone(next?.phone || '') }}><option value="">Select transporter</option>{transporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
-      <label>Transporter Name<input value={transporterName} onChange={(event) => setTransporterName(event.target.value)} /></label>
-      <label>Transporter Phone<input value={transporterPhone} onChange={(event) => setTransporterPhone(event.target.value)} /></label>
-      <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
-      <label>Driver Name<input value={driverName} onChange={(event) => setDriverName(event.target.value)} /></label>
-      <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
       <label>Expected Delivery<input type="date" value={expectedDelivery} onChange={(event) => setExpectedDelivery(event.target.value)} /></label>
+      <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
+      <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
       <label className="shipment-notes">Notes<input value={notes} onChange={(event) => setNotes(event.target.value)} placeholder="Optional dispatch note" /></label>
       <div className="shipment-actions"><button className="btn light" type="button" onClick={onClose}>Cancel</button><button className="btn red" disabled={busy === 'shipment'}>{busy === 'shipment' ? 'Saving…' : existing ? 'Update Shipment' : 'Confirm Shipment'}</button></div>
     </form>
