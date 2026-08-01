@@ -3400,63 +3400,6 @@
         }
       ]
     },
-    "1154219000035001001": {
-      "id": "1154219000035001001",
-      "zohoSalesOrderId": "1154219000035001001",
-      "salesOrderNumber": "SO-07614",
-      "status": "open",
-      "customerName": "Bhawani Leaders Private Limited",
-      "shippingAddress": "A-23, EPIP, Shastripuram, Agra, Uttar Pradesh, 282007, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035001004",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035001005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 12.5,
-          "pendingQuantity": 12.5,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035001001-1154219000035001004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035001001",
-          "lineItemId": "1154219000035001004",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "Bhawani Leaders Private Limited",
-          "salesOrderNumber": "SO-07614",
-          "deliveryDate": "2026-07-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034994001": {
       "id": "1154219000034994001",
       "zohoSalesOrderId": "1154219000034994001",
@@ -3611,53 +3554,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034918002": {
-      "id": "1154219000034918002",
-      "zohoSalesOrderId": "1154219000034918002",
-      "salesOrderNumber": "SO-07600",
-      "status": "open",
-      "customerName": "Selvam Press",
-      "shippingAddress": "14-6-10, Selvam Press, Market Road., Surandai, Tirunelveli, Tamil Nadu, 627859",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034918005",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "description": "400 Number Eyelet",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034918002-1154219000034918005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034918002",
-          "lineItemId": "1154219000034918005",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "customerName": "Selvam Press",
-          "salesOrderNumber": "SO-07600",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "400 Number Eyelet"
         }
       ]
     },
@@ -7872,10 +7768,8 @@
     "1154219000035015011",
     "1154219000034957555",
     "1154219000035011002",
-    "1154219000035001001",
     "1154219000034994001",
     "1154219000034923001",
-    "1154219000034918002",
     "1154219000034838001",
     "1154219000034749030",
     "1154219000034756004",
@@ -7910,8 +7804,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T10:41:31.816Z",
-  "lastAttemptAt": "2026-08-01T10:58:36.070Z",
+  "lastSuccessfulSyncAt": "2026-08-01T10:58:58.510Z",
+  "lastAttemptAt": "2026-08-01T10:58:58.510Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
