@@ -2250,6 +2250,63 @@
       "machineIds": [
         "1154219000034923001-1154219000034923004-1"
       ]
+    },
+    "1154219000035009003": {
+      "completedAt": "2026-08-01T04:39:37.811Z",
+      "order": {
+        "id": "1154219000035009003",
+        "zohoSalesOrderId": "1154219000035009003",
+        "salesOrderNumber": "SO-07619",
+        "status": "open",
+        "customerName": "Unique Star International",
+        "shippingAddress": "Pardevan Purwa 383-J1, Lal Bangla,, Kanpur Nagar, Uttar Pradesh, 208010",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035009006",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035009003-1154219000035009006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270817",
+            "qrToken": "26270817",
+            "orderId": "1154219000035009003",
+            "lineItemId": "1154219000035009006",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "Unique Star International",
+            "salesOrderNumber": "SO-07619",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035009003-1154219000035009006-1"
+      ]
     }
   }
 }
