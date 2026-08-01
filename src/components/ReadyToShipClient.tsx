@@ -133,7 +133,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
 
 function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
   const existing = item.shipment
-  const [transporterName, setTransporterName] = useState(existing?.transporterName || transporters[0]?.name || '')
+  const [transporterName, setTransporterName] = useState(existing?.transporterName || '')
   const selectedTransporter = transporters.find((entry) => entry.name === transporterName)
   const [transporterPhone, setTransporterPhone] = useState(existing?.transporterPhone || selectedTransporter?.phone || '')
   const [vehicleNumber, setVehicleNumber] = useState(existing?.vehicleNumber || '')

@@ -1049,8 +1049,8 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .shipment-status-row { display: flex; gap: 6px; flex-wrap: wrap; }
 .shipment-modal { max-width: 780px; width: min(94vw, 780px); max-height: 92dvh; overflow-y: auto; }
 .shipment-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.shipment-form label { display: grid; gap: 6px; color: #334155; font-weight: 850; font-size: 12px; }
-.shipment-form input, .shipment-form select { width: 100%; min-height: 44px; border: 1px solid #e2e8f0; border-radius: 14px; padding: 0 12px; font: inherit; background: #fff; color: #111827; }
+.shipment-form label { display: grid; gap: 6px; color: #334155; font-weight: 500; font-size: 12px; }
+.shipment-form input, .shipment-form select { width: 100%; min-height: 44px; border: 1px solid #e2e8f0; border-radius: 14px; padding: 0 12px; font: inherit; font-weight: 400; background: #fff; color: #111827; }
 .shipment-notes, .shipment-checkbox, .shipment-actions, .shipment-status-box { grid-column: 1 / -1; }
 .shipment-checkbox { display: flex !important; grid-template-columns: none !important; align-items: center; gap: 10px !important; padding: 12px; border-radius: 16px; background: #f8fafc; border: 1px solid #e2e8f0; }
 .shipment-checkbox input { width: 18px; min-height: 18px; height: 18px; }
@@ -1090,8 +1090,8 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .shipment-order-context { display: grid; gap: 8px; padding: 12px; border-radius: 16px; background: #f8fafc; border: 1px solid #e2e8f0; margin-bottom: 12px; }
 .shipment-order-context strong { color: #334155; font-size: 12px; line-height: 1.45; }
 .shipment-order-context div { display: grid; gap: 5px; }
-.shipment-order-context span { color: #1f2937; font-size: 12px; font-weight: 800; }
-.shipment-order-context em { justify-self: start; padding: 5px 9px; border-radius: 999px; background: #fff7ed; color: #c2410c; font-style: normal; font-size: 11px; font-weight: 900; }
+.shipment-order-context span { color: #1f2937; font-size: 12px; font-weight: 400; }
+.shipment-order-context em { justify-self: start; padding: 5px 9px; border-radius: 999px; background: #fff7ed; color: #c2410c; font-style: normal; font-size: 11px; font-weight: 500; }
 @media (max-width: 520px) {
   .ready-machine-line { grid-template-columns: 1fr; align-items: start; }
 }
