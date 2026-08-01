@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     } else if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)
     await ensureR2Cors().catch(() => {})
     const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: shipmentDocument ? 'Shipment LR Builty' : machine?.itemName || 'Loading Video', machineId: shipmentDocument ? 'shipment-lr-builty' : machineId, originalName: String(body.name || (shipmentDocument ? 'shipment-document' : 'video.mp4')), mimeType: type })
-    const target = createR2UploadTarget(key, type)
+    const target = createR2UploadTarget(key, type, 900, shipmentDocument ? 60 : 30)
     const cors = await checkBrowserCors(target.uploadUrl)
     return apiOk({ ...target, ...cors })
   } catch (error) {

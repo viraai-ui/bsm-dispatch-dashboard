@@ -33,7 +33,7 @@ export function buildR2Key(parts: { salesOrderNumber: string; machineName: strin
   return ['media-proof', date, safeSegment(parts.salesOrderNumber), `${safeSegment(parts.machineName)}-${safeSegment(parts.machineId)}-${stamp}${extension ? `.${extension}` : ''}`].join('/')
 }
 
-export function createR2UploadTarget(key: string, contentType: string, expiresInSeconds = 900): R2UploadTarget {
+export function createR2UploadTarget(key: string, contentType: string, expiresInSeconds = 900, retentionDays = 30): R2UploadTarget {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
   const amzDate = toAmzDate(now)
@@ -55,7 +55,7 @@ export function createR2UploadTarget(key: string, contentType: string, expiresIn
   const stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, sha256Hex(canonicalRequest)].join('\n')
   const signature = hmacHex(signingKey(secretAccessKey, dateStamp), stringToSign)
   const uploadUrl = `${endpoint}${canonicalUri}?${canonicalQuery}&X-Amz-Signature=${signature}`
-  return { key, uploadUrl, publicUrl: `/api/r2/view?key=${encodeURIComponent(key)}`, expiresAt: mediaExpiresAt(now), storageProvider: 'r2' }
+  return { key, uploadUrl, publicUrl: `/api/r2/view?key=${encodeURIComponent(key)}`, expiresAt: mediaExpiresAt(now, retentionDays), storageProvider: 'r2' }
 }
 
 export async function uploadBufferToR2(key: string, contentType: string, buffer: Buffer) {
@@ -152,7 +152,7 @@ export async function deleteR2Object(key: string | null | undefined) {
   return true
 }
 
-function mediaExpiresAt(now: Date) { return new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString() }
+function mediaExpiresAt(now: Date, days = 30) { return new Date(now.getTime() + days * 24 * 60 * 60 * 1000).toISOString() }
 function safeSegment(value: string) { return value.replace(/[^a-zA-Z0-9._ -]/g, '').replace(/\s+/g, ' ').trim().slice(0, 90) || 'video' }
 function mimeExtension(type: string) { if (type.includes('mp4')) return 'mp4'; if (type.includes('quicktime')) return 'mov'; if (type.includes('webm')) return 'webm'; return '' }
 function toAmzDate(date: Date) { return date.toISOString().replace(/[:-]|\.\d{3}/g, '') }

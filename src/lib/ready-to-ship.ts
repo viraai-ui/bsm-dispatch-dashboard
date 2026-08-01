@@ -83,6 +83,9 @@ export async function listReadyToShipItems() {
     if (!machines.length) continue
     const videos = machines.flatMap((machine) => record?.units?.[machine.id]?.videos || [])
     const id = orderId
+    const shipment = shipmentStore.shipments[id]
+    const needsBuilty = shipment?.shipmentType === 'transporter' && !shipment.lrCopy?.url
+    if (shipment && !needsBuilty) continue
     const readyAt = videos.reduce((latest, video) => !latest || video.uploadedAt > latest ? video.uploadedAt : latest, completed.completedAt || '')
     items.push({
       id,
@@ -99,10 +102,15 @@ export async function listReadyToShipItems() {
       machines,
       videos,
       packingVideoUploaded: videos.length > 0 || Boolean(record?.submittedAt),
-      shipment: shipmentStore.shipments[id],
+      shipment,
     })
   }
-  return items.sort((a, b) => Date.parse(b.shipment?.shippedAt || b.readyAt || b.completedAt || '') - Date.parse(a.shipment?.shippedAt || a.readyAt || a.completedAt || ''))
+  return items.sort((a, b) => {
+    const aNeedsBuilty = a.shipment?.shipmentType === 'transporter' && !a.shipment.lrCopy?.url
+    const bNeedsBuilty = b.shipment?.shipmentType === 'transporter' && !b.shipment.lrCopy?.url
+    if (aNeedsBuilty !== bNeedsBuilty) return aNeedsBuilty ? 1 : -1
+    return Date.parse(b.shipment?.shippedAt || b.readyAt || b.completedAt || '') - Date.parse(a.shipment?.shippedAt || a.readyAt || a.completedAt || '')
+  })
 }
 
 export async function readTransportersStore() {

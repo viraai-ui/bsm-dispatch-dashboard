@@ -121,10 +121,10 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
         </div>
         <input className="ready-search" placeholder="Search SO, customer, address, machine, serial, vehicle" value={query} onChange={(event) => setQuery(event.target.value)} />
         <div className="ready-machine-list">
-          {filtered.map((item) => <article className={`ready-machine-card ${item.shipment ? 'shipped' : ''}`} key={item.id}>
+          {filtered.map((item) => { const needsBuilty = item.shipment?.shipmentType === 'transporter' && !item.shipment.lrCopy?.url; return <article className={`ready-machine-card ${item.shipment ? 'shipped' : ''} ${needsBuilty ? 'builty-needed' : ''}`} key={item.id}>
             <div className="ready-machine-main">
               <div><strong>{item.salesOrderNumber}</strong><span>{item.customerName}</span></div>
-              <Badge tone={item.shipment ? 'blue' : 'green'}>{item.shipment ? 'Shipped' : 'Machine Packed'}</Badge>
+              <Badge tone={needsBuilty ? 'red' : item.shipment ? 'blue' : 'green'}>{needsBuilty ? 'Builty Needed' : item.shipment ? 'Shipped' : 'Machine Packed'}</Badge>
             </div>
             <div className="ready-customer-address">{item.shippingAddress || 'Address not available'}</div>
             <div className="ready-machine-list-inline">{item.machines.map((machine) => <div className="ready-machine-line" key={machine.id}><strong>{machine.itemName}</strong><span>Qty 1</span>{machine.serialNumber && <em>Serial {machine.serialNumber}</em>}</div>)}</div>
@@ -135,9 +135,9 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
             </div>
             <div className="ready-machine-actions">
               <div />
-              <div className="ready-action-buttons">{item.videos[0] && <a className="btn light ready-view-video-btn" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}<button className="btn red" type="button" onClick={() => setActiveItem(item)}>{item.shipment ? 'View Shipment' : 'Ship'}</button></div>
+              <div className="ready-action-buttons">{item.videos[0] && <a className="btn light ready-view-video-btn" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}<button className="btn red" type="button" onClick={() => setActiveItem(item)}>{needsBuilty ? 'Upload LR' : item.shipment ? 'View Shipment' : 'Ship'}</button></div>
             </div>
-          </article>)}
+          </article>})}
           {!filtered.length && <div className="empty-state"><strong>No dispatch-completed orders yet</strong><span className="muted">Orders will appear here once completed from Dispatch View.</span></div>}
         </div>
       </section>
@@ -160,7 +160,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       </aside>
     </div>
     {editingTransporter && <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card transporter-edit-modal"><div className="modal-head"><div><h1>Edit Transporter</h1><p className="muted">Change name, phone or notes</p></div><button className="drawer-close" onClick={() => setEditingTransporter(null)}>×</button></div><form className="transporter-edit-form" onSubmit={saveTransporterEdit}><label>Name<input value={editingTransporter.name} onChange={(event) => setEditingTransporter({ ...editingTransporter, name: event.target.value })} /></label><label>Phone<input value={editingTransporter.phone} onChange={(event) => setEditingTransporter({ ...editingTransporter, phone: event.target.value })} /></label><label>Notes<input value={editingTransporter.notes || ''} onChange={(event) => setEditingTransporter({ ...editingTransporter, notes: event.target.value })} placeholder="Notes / route / vehicle type" /></label><div className="transporter-edit-actions"><button className="btn light" type="button" onClick={() => setEditingTransporter(null)}>Cancel</button><button className="btn red" type="submit" disabled={busy === 'edit-transporter'}>{busy === 'edit-transporter' ? 'Saving…' : 'Save Changes'}</button><button className="btn light danger-text" type="button" disabled={busy === 'delete-transporter'} onClick={deleteEditingTransporter}>{busy === 'delete-transporter' ? 'Deleting…' : 'Delete'}</button></div></form></section></div>}
-    {activeItem && <ShipmentModal item={activeItem} transporters={transporters} busy={busy} setBusy={setBusy} onClose={() => setActiveItem(null)} onSaved={(updated) => { setItems((prev) => prev.map((item) => item.id === updated.id ? updated : item)); setActiveItem(null); setMessage('Shipment saved.') }} />}
+    {activeItem && <ShipmentModal item={activeItem} transporters={transporters} busy={busy} setBusy={setBusy} onClose={() => setActiveItem(null)} onSaved={(updated) => { const stillNeedsBuilty = updated.shipment?.shipmentType === 'transporter' && !updated.shipment.lrCopy?.url; setItems((prev) => stillNeedsBuilty ? prev.map((item) => item.id === updated.id ? updated : item) : prev.filter((item) => item.id !== updated.id)); setActiveItem(null); setMessage(stillNeedsBuilty ? 'Shipment saved. Builty/LR still needed.' : 'Shipment saved.') }} />}
   </section>
 }
 
