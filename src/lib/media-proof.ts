@@ -248,8 +248,8 @@ export async function submitMediaProof(order: Order, stage: MediaStage = 'packin
       if (count < 1) throw new Error('Upload at least 1 loading video before submitting')
       if (count > MAX_LOADING_VIDEOS) throw new Error(`Loading Video allows up to ${MAX_LOADING_VIDEOS} videos`)
     } else {
-      const missing = videoRequiredMachines(order).filter((machine) => !(record.units[machine.id]?.videos || []).length)
-      if (missing.length) throw new Error(`Missing videos for: ${missing.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
+      const uploadedCount = videoRequiredMachines(order).reduce((sum, machine) => sum + (record.units[machine.id]?.videos?.length || 0), 0)
+      if (uploadedCount < 1) throw new Error('Upload at least 1 packing video before submitting')
     }
   }
   record.submittedAt = new Date().toISOString()
