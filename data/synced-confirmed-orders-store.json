@@ -3530,121 +3530,6 @@
         }
       ]
     },
-    "1154219000034890001": {
-      "id": "1154219000034890001",
-      "zohoSalesOrderId": "1154219000034890001",
-      "salesOrderNumber": "SO-07599",
-      "status": "open",
-      "customerName": "FORTUNE ELASTOMERS PVT LTD",
-      "shippingAddress": "10/360 M PLOT NO 34 KSIDC KINALOOR, CALICUT, KERALA, 673612",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034890004",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034890001-1154219000034890004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034890001",
-          "lineItemId": "1154219000034890004",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "customerName": "FORTUNE ELASTOMERS PVT LTD",
-          "salesOrderNumber": "SO-07599",
-          "deliveryDate": "2026-07-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034890001-1154219000034890004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034890001",
-          "lineItemId": "1154219000034890004",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "customerName": "FORTUNE ELASTOMERS PVT LTD",
-          "salesOrderNumber": "SO-07599",
-          "deliveryDate": "2026-07-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034874001": {
-      "id": "1154219000034874001",
-      "zohoSalesOrderId": "1154219000034874001",
-      "salesOrderNumber": "SO-07597",
-      "status": "open",
-      "customerName": "HANDTEX HOME",
-      "shippingAddress": "GROUND FLOOR, PLOT NO. 10, OFFICE NO. 1, RISALU ROAD, NEAR INDO FARM, Panipat,, Panipat, Haryana, 132103, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034874004",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034874001-1154219000034874004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034874001",
-          "lineItemId": "1154219000034874004",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "HANDTEX HOME",
-          "salesOrderNumber": "SO-07597",
-          "deliveryDate": "2026-07-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034838001": {
       "id": "1154219000034838001",
       "zohoSalesOrderId": "1154219000034838001",
@@ -3939,53 +3824,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000034743020": {
-      "id": "1154219000034743020",
-      "zohoSalesOrderId": "1154219000034743020",
-      "salesOrderNumber": "SO-07574",
-      "status": "open",
-      "customerName": "Shri Banke Bihari Footwear",
-      "shippingAddress": "Plot No. 82, Sector-17, HSIIDC,, Industrial Estate, Bahadurgarh, Haryana, 124507",
-      "salesperson": "Ainesh Sikdar",
-      "deliveryDate": "2026-07-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034743025",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034743020-1154219000034743025-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034743020",
-          "lineItemId": "1154219000034743025",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "Shri Banke Bihari Footwear",
-          "salesOrderNumber": "SO-07574",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -10252,13 +10090,10 @@
     "1154219000034957002",
     "1154219000034923001",
     "1154219000034918002",
-    "1154219000034890001",
-    "1154219000034874001",
     "1154219000034838001",
     "1154219000034749030",
     "1154219000034756004",
     "1154219000034750001",
-    "1154219000034743020",
     "1154219000034744001",
     "1154219000034731006",
     "1154219000034739001",
@@ -10290,8 +10125,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T06:32:55.202Z",
-  "lastAttemptAt": "2026-08-01T06:47:32.732Z",
+  "lastSuccessfulSyncAt": "2026-08-01T06:47:55.183Z",
+  "lastAttemptAt": "2026-08-01T06:47:55.183Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
