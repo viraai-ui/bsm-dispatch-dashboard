@@ -3848,7 +3848,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 5
     },
     "1154219000034952594": {
       "salesOrderId": "1154219000034952594",
@@ -3974,7 +3974,7 @@
       "salesOrderId": "1154219000034983522",
       "salesOrderNumber": "SO-07628",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-01T07:05:48.246Z",
       "processedOrder": {
         "id": "1154219000034983522",
@@ -4147,7 +4147,8 @@
           "dispatchNote": "Local",
           "vendor": "Ishu"
         }
-      }
+      },
+      "dispatchSortOrder": 3
     }
   }
 }
