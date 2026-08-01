@@ -63,7 +63,8 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
   const [message, setMessage] = useState('')
   const [progressByUnit, setProgressByUnit] = useState<Record<string, number>>({})
   const loadingVideos = record?.units?.[LOADING_ORDER_UNIT_ID]?.videos || []
-  const ready = useMemo(() => mode === 'loading' ? loadingVideos.length > 0 && loadingVideos.length <= MAX_LOADING_VIDEOS : order.machines.length > 0 && order.machines.every((machine) => (record?.units?.[machine.id]?.videos?.length || 0) > 0), [mode, loadingVideos.length, order, record])
+  const uploadedPackingVideos = useMemo(() => order.machines.reduce((sum, machine) => sum + (record?.units?.[machine.id]?.videos?.length || 0), 0), [order, record])
+  const ready = useMemo(() => mode === 'loading' ? loadingVideos.length > 0 && loadingVideos.length <= MAX_LOADING_VIDEOS : uploadedPackingVideos > 0, [mode, loadingVideos.length, uploadedPackingVideos])
 
   async function upload(unitId: string, files: FileList | File[] | null) {
     if (!files?.length) return
