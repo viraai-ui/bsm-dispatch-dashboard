@@ -133,7 +133,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
 
 function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
   const existing = item.shipment
-  const dropdownTransporters = [{ id: 'special-porter', name: 'Porter', phone: '', notes: '', createdAt: '' }, { id: 'special-customer-own-transport', name: "Customer's Own Transport", phone: '', notes: '', createdAt: '' }, ...transporters]
+  const dropdownTransporters = [...transporters, { id: 'special-porter', name: 'Porter', phone: '', notes: '', createdAt: '' }, { id: 'special-customer-own-transport', name: "Customer's Own Transport", phone: '', notes: '', createdAt: '' }]
   const [transporterName, setTransporterName] = useState(existing?.transporterName || '')
   const selectedTransporter = dropdownTransporters.find((entry) => entry.name === transporterName)
   const [transporterPhone, setTransporterPhone] = useState(existing?.transporterPhone || selectedTransporter?.phone || '')
