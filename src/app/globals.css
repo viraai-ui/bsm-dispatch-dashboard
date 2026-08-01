@@ -1097,4 +1097,11 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 }
 .media-salesperson-line { margin: 4px 0 0; color: #475569; font-size: 12px; font-weight: 800; }
 .media-salesperson-line strong { color: #111827; }
+.transporter-form-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.transporter-list { gap: 8px; }
+.transporter-card { padding: 10px 11px; border-radius: 14px; }
+.transporter-card strong { font-size: 13px; }
+.transporter-card a { font-size: 12px; }
+.transporter-card span { font-size: 11px; line-height: 1.35; }
+.database-shipment-section { margin-top: 14px; }
 

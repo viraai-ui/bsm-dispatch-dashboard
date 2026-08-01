@@ -5,16 +5,18 @@ import { Badge } from '@/components/DashboardShell'
 import type { Order } from '@/types/domain'
 import type { MediaProofRecord } from '@/lib/media-proof'
 import type { OrderStatusProjection } from '@/lib/status-projection'
+import type { ShipmentRecord } from '@/lib/ready-to-ship'
 
 type WarrantyInfo = { label: 'Warranty Valid' | 'Warranty Void'; tone: 'green' | 'red'; startLabel: string; endLabel: string }
 const MAX_VISIBLE_ROWS = 20
 
-export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, warrantyDates = {}, publicMode = false }: { orders?: Order[]; mediaRecords?: Record<string, MediaProofRecord>; statuses?: Record<string, OrderStatusProjection>; warrantyDates?: Record<string, string>; publicMode?: boolean }) {
+export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, warrantyDates = {}, shipmentRecords = {}, publicMode = false }: { orders?: Order[]; mediaRecords?: Record<string, MediaProofRecord>; statuses?: Record<string, OrderStatusProjection>; warrantyDates?: Record<string, string>; shipmentRecords?: Record<string, ShipmentRecord>; publicMode?: boolean }) {
   const [draftQuery, setDraftQuery] = useState('')
   const [query, setQuery] = useState('')
   const [active, setActive] = useState<Order | null>(null)
   const searchableOrders = useMemo(() => orders.map((order) => {
     const warranty = warrantyInfo(warrantyDates[order.id])
+    const shipment = shipmentRecords[order.id]
     const haystack = [
       order.salesOrderNumber,
       order.customerName,
@@ -25,10 +27,15 @@ export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, 
       warranty.label,
       warranty.startLabel,
       warranty.endLabel,
+      shipment?.transporterName,
+      shipment?.transporterPhone,
+      shipment?.vehicleNumber,
+      shipment?.driverName,
+      shipment?.driverPhone,
       ...order.machines.map((machine) => `${machine.serialNumber} ${machine.itemName} ${machine.vendor || ''}`),
     ].join(' ').toLowerCase()
     return { order, haystack }
-  }), [orders, statuses, warrantyDates])
+  }), [orders, statuses, warrantyDates, shipmentRecords])
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase()
     if (!needle) return orders
@@ -40,15 +47,16 @@ export function DatabaseClient({ orders = [], mediaRecords = {}, statuses = {}, 
   return <div className={publicMode ? 'public-database-view' : undefined}>
     <section className="card search-panel database-search-panel"><div className="database-search-input-wrap"><input placeholder="Search SO, serial, customer…" value={draftQuery} onChange={(event) => setDraftQuery(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') setQuery(draftQuery) }} />{draftQuery && <button className="database-clear-x" aria-label="Clear search" onClick={() => { setDraftQuery(''); setQuery('') }}>×</button>}</div><button className="btn" onClick={() => setQuery(draftQuery)}>Search</button>{hiddenCount > 0 && <span className="database-result-note">Showing first {MAX_VISIBLE_ROWS}. Search serial/customer to narrow.</span>}</section>
     <section className="card database-list-card"><h2>Database</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Units</th><th>Warranty Valid Till</th><th>Media</th><th>Action</th></tr></thead><tbody>{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); return <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td>{order.customerName}</td><td>{order.machines.length}</td><td><strong className="warranty-date-cell">{warranty.endLabel}</strong></td><td><Badge tone={status?.mediaTone || 'gray'}>{status?.mediaLabel || 'No Media'}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr> })}</tbody></table></div><div className="mobile-cards">{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); return <article className="card mobile-order-card database-mobile-card mobile-order-tap-card compact-operational-card" key={order.id} onClick={() => setActive(order)}><div className="compact-card-main"><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><Badge tone={warranty.tone}>{warranty.endLabel}</Badge></div><div className="compact-card-side"><div><span>Units</span><strong>{order.machines.length}</strong></div><div><span>Media</span><strong>{status?.mediaLabel || 'No Media'}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); setActive(order) }}>View</button></div></article> })}</div></section>
-    {active && <RecordModal order={active} media={mediaRecords[active.id]} status={statuses[active.id]} warrantyDate={warrantyDates[active.id]} onClose={() => setActive(null)} />}
+    {active && <RecordModal order={active} media={mediaRecords[active.id]} status={statuses[active.id]} warrantyDate={warrantyDates[active.id]} shipment={shipmentRecords[active.id]} onClose={() => setActive(null)} />}
   </div>
 }
 
-function RecordModal({ order, media, status, warrantyDate, onClose }: { order: Order; media?: MediaProofRecord; status?: OrderStatusProjection; warrantyDate?: string; onClose: () => void }) {
+function RecordModal({ order, media, status, warrantyDate, shipment, onClose }: { order: Order; media?: MediaProofRecord; status?: OrderStatusProjection; warrantyDate?: string; shipment?: ShipmentRecord; onClose: () => void }) {
   const warranty = warrantyInfo(warrantyDate)
   const vendors = [...new Set(order.machines.map((machine) => formatVendor(machine.vendor || '')).filter(Boolean))].join(', ')
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{order.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="grid two details-grid"><Info k="Order Stage" v={status?.lifecycleLabel || 'Open'} /><Info k="Media" v={status?.mediaLabel || 'No Media'} /><Info k="Warranty Until" v={warranty.endLabel} /><Info k="Warranty Status" v={warranty.label} /><Info k="Customer" v={order.customerName} /><Info k="Salesperson" v={order.salesperson || '—'} /><Info k="Address" v={order.shippingAddress || '—'} /><Info k="Delivery" v={formatDisplayDate(order.deliveryDate)} />{vendors && <Info k="Vendor" v={vendors} />}</div>
+    {shipment && <section className="modal-section database-shipment-section"><h2>Shipment Details</h2><div className="grid two details-grid"><Info k="Transporter" v={shipment.transporterName || '—'} /><Info k="Transporter Phone" v={shipment.transporterPhone || '—'} /><Info k="Vehicle Number" v={shipment.vehicleNumber || '—'} /><Info k="Driver Name" v={shipment.driverName || '—'} /><Info k="Driver Mobile" v={shipment.driverPhone || '—'} /><Info k="Expected Delivery" v={formatDisplayDate(shipment.expectedDelivery)} />{shipment.notes && <Info k="Shipment Notes" v={shipment.notes} />}</div></section>}
     <section className="modal-section"><h2>Units & Media</h2><div className="desktop-table table-wrap"><table className="table database-units-table"><thead><tr><th>Unit</th><th>Serial</th><th>Vendor</th><th>Warranty</th><th>Valid Until</th><th>Videos</th></tr></thead><tbody>{order.machines.map((machine) => <tr key={machine.id}><td className="database-unit-name">{machine.itemName}</td><td>{machine.serialNumber || '—'}</td><td>{formatVendor(machine.vendor || '')}</td><td><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Warranty Valid' : warranty.label}</Badge></td><td>{warranty.endLabel}</td><td>{(media?.units?.[machine.id]?.videos || []).map((file) => <a key={file.id} href={file.workdriveUrl || file.url} target="_blank">{file.name} </a>)}</td></tr>)}</tbody></table></div><div className="mobile-cards database-unit-cards">{order.machines.map((machine) => <article className="card mobile-order-card" key={machine.id}><strong>{machine.itemName}</strong><p className="muted">Serial: {machine.serialNumber || '—'}</p><div className="meta-grid"><div><span>Vendor</span><strong>{formatVendor(machine.vendor || '')}</strong></div><div><span>Warranty</span><strong><Badge tone={warranty.tone}>{warranty.label === 'Warranty Valid' ? '✓ Valid' : warranty.label}</Badge></strong></div><div><span>Valid Until</span><strong>{warranty.endLabel}</strong></div></div></article>)}</div></section>
   </section></div>
 }

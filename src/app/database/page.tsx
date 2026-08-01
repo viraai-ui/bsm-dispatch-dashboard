@@ -6,7 +6,7 @@ import { loadDatabaseOrders } from '@/lib/database-orders'
 export const dynamic = 'force-dynamic'
 
 export default async function DatabasePage() {
-  const { databaseOrders, workflows, warrantyDates } = await loadDatabaseOrders()
+  const { databaseOrders, workflows, warrantyDates, shipmentRecords } = await loadDatabaseOrders()
   const { statuses, mediaRecords } = await buildOrderStatusMap(databaseOrders, workflows)
-  return <DashboardShell active="Database"><DatabaseClient orders={databaseOrders} mediaRecords={mediaRecords} statuses={statuses} warrantyDates={warrantyDates} /></DashboardShell>
+  return <DashboardShell active="Database"><DatabaseClient orders={databaseOrders} mediaRecords={mediaRecords} statuses={statuses} warrantyDates={warrantyDates} shipmentRecords={shipmentRecords} /></DashboardShell>
 }

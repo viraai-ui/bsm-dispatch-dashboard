@@ -1,7 +1,7 @@
 import type { MachineUnit, Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson } from './workflow-store'
 import { readMediaProofStore, type MediaUpload } from './media-proof'
-import { interaktConfigured, sendInteraktTemplate } from './interakt'
+import { getOperationalOrderIds } from './synced-orders'
 
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
 const TRANSPORTERS_PATH = 'data/transporters-store.json'
@@ -69,10 +69,12 @@ export async function listReadyToShipItems() {
     readMediaProofStore('packing'),
     readShipmentStore(),
   ])
+  const activeIds = await getOperationalOrderIds()
   const items: ReadyToShipItem[] = []
   for (const [orderId, completed] of Object.entries(completedStore.completed || {})) {
     const order = completed.order
     if (!order) continue
+    if (!activeIds.has(order.id)) continue
     const allowedMachineIds = new Set(completed.machineIds?.length ? completed.machineIds : (order.machines || []).map((machine) => machine.id))
     const record = packingStore.records[orderId]
     const machines = (order.machines || []).filter((machine) => allowedMachineIds.has(machine.id))
@@ -187,38 +189,10 @@ export async function processShipment(input: {
     },
   }
 
-  if (input.sendWhatsapp) await sendShipmentMessages(record, item.machines.map((machine) => machine.itemName).join(', ') || item.machine.itemName)
-
   const store = await readShipmentStore()
   store.shipments[item.id] = record
   await githubWriteJson(SHIPMENTS_PATH, store, `Ship ${item.salesOrderNumber} ${item.machine.itemName}`)
   return record
 }
 
-async function sendShipmentMessages(record: ShipmentRecord, machineName: string) {
-  if (!interaktConfigured()) {
-    record.messages.customer.status = record.customerPhone ? 'not_configured' : 'skipped'
-    record.messages.salesperson.status = record.salespersonPhone ? 'not_configured' : 'skipped'
-    record.messages.customer.error = record.customerPhone ? 'Interakt environment variables are not configured' : 'Customer phone missing'
-    record.messages.salesperson.error = record.salespersonPhone ? 'Interakt environment variables are not configured' : 'Salesperson phone missing'
-    return
-  }
-  const values = [record.customerName, record.salesOrderNumber, machineName, record.vehicleNumber, record.driverName, record.driverPhone, record.expectedDelivery || '—']
-  if (record.customerPhone) {
-    try {
-      const response = await sendInteraktTemplate({ phone: record.customerPhone, templateName: process.env.INTERAKT_DISPATCH_CUSTOMER_TEMPLATE || '', bodyValues: values, callbackData: record.id })
-      record.messages.customer = { status: 'sent', phone: record.customerPhone, responseId: response.id }
-    } catch (error) {
-      record.messages.customer = { status: 'failed', phone: record.customerPhone, error: error instanceof Error ? error.message : 'Customer WhatsApp failed' }
-    }
-  } else record.messages.customer = { status: 'skipped', error: 'Customer phone missing' }
 
-  if (record.salespersonPhone) {
-    try {
-      const response = await sendInteraktTemplate({ phone: record.salespersonPhone, templateName: process.env.INTERAKT_DISPATCH_SALESPERSON_TEMPLATE || '', bodyValues: [record.salespersonName || 'Salesperson', record.customerName, record.salesOrderNumber, machineName, record.vehicleNumber, record.driverName, record.driverPhone, record.expectedDelivery || '—'], callbackData: record.id })
-      record.messages.salesperson = { status: 'sent', phone: record.salespersonPhone, responseId: response.id }
-    } catch (error) {
-      record.messages.salesperson = { status: 'failed', phone: record.salespersonPhone, error: error instanceof Error ? error.message : 'Salesperson WhatsApp failed' }
-    }
-  } else record.messages.salesperson = { status: 'skipped', error: 'Salesperson phone missing' }
-}
