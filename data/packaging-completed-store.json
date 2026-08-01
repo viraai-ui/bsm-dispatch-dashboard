@@ -2445,6 +2445,73 @@
         "1154219000034952463-1154219000034952468-1",
         "1154219000034952463-1154219000034952468-2"
       ]
+    },
+    "1154219000035001001": {
+      "completedAt": "2026-08-01T09:13:43.361Z",
+      "order": {
+        "id": "1154219000035001001",
+        "zohoSalesOrderId": "1154219000035001001",
+        "salesOrderNumber": "SO-07614",
+        "status": "open",
+        "customerName": "Bhawani Leaders Private Limited",
+        "shippingAddress": "A-23, EPIP, Shastripuram, Agra, Uttar Pradesh, 282007, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-30",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035001004",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035001005",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035001001-1154219000035001004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270821",
+            "qrToken": "26270821",
+            "orderId": "1154219000035001001",
+            "lineItemId": "1154219000035001004",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "Bhawani Leaders Private Limited",
+            "salesOrderNumber": "SO-07614",
+            "deliveryDate": "2026-07-30",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-30",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035001001-1154219000035001004-1"
+      ]
     }
   }
 }
