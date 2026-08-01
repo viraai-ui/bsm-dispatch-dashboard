@@ -1101,7 +1101,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .transporter-list { gap: 8px; }
 .transporter-card { padding: 10px 11px; border-radius: 14px; }
 .transporter-card strong { font-size: 13px; }
-.transporter-card a { font-size: 12px; }
+.transporter-card a { font-size: 14px; font-weight: 500; }
 .transporter-card span { font-size: 11px; line-height: 1.35; }
 .database-shipment-section { margin-top: 14px; }
 .nav a.ready-nav-link { justify-content: space-between; gap: 8px; color: #bbf7d0; }

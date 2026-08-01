@@ -68,17 +68,6 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
     finally { setBusy('') }
   }
 
-  async function removeTransporter(id: string) {
-    if (!window.confirm('Delete this transporter?')) return
-    setBusy(id); setMessage('')
-    try {
-      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'delete_transporter', id }) })
-      const json = await response.json()
-      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not delete transporter')
-      setTransporters((prev) => prev.filter((item) => item.id !== id))
-    } catch (error) { setMessage(error instanceof Error ? error.message : 'Could not delete transporter') }
-    finally { setBusy('') }
-  }
 
   return <section className="ready-ship-page">
     <div className="ready-ship-hero card">
@@ -133,7 +122,6 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
         <div className="transporter-list">
           {transporters.map((item) => <article className="transporter-card" key={item.id}>
             <div><strong>{item.name}</strong><a href={`tel:${item.phone}`}>{item.phone}</a>{item.notes && <span>{item.notes}</span>}</div>
-            <button type="button" className="media-delete-video" disabled={busy === item.id} onClick={() => removeTransporter(item.id)}>×</button>
           </article>)}
           {!transporters.length && <div className="empty-state small"><strong>No transporters yet</strong></div>}
         </div>
