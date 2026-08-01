@@ -1,49 +1,90 @@
 {
   "orders": {
-    "1154219000034952594": {
-      "id": "1154219000034952594",
-      "zohoSalesOrderId": "1154219000034952594",
-      "salesOrderNumber": "SO-07626",
+    "1154219000035041156": {
+      "id": "1154219000035041156",
+      "zohoSalesOrderId": "1154219000035041156",
+      "salesOrderNumber": "SO-07627",
       "status": "open",
-      "customerName": "KRISHNA UPPER",
-      "shippingAddress": "519, VIDYAPATI NAGAR, MUBARAKPUR DABAS, New Delhi, Delhi,, 110081, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-07-31",
+      "customerName": "TILAK UTPADAN PVT LTD",
+      "shippingAddress": "MANDI FENTONGANJ EF 48, MANDI FENTONGANJ, RAILWAY ROAD, PUNJAB-144001, Punjab",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-02",
       "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034952599",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "description": "",
+          "id": "1154219000035041159",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "lens",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": true,
+          "woodenPackingRequired": false,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035041160",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Pinser set",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035041161",
+          "itemName": "Freight Charge",
+          "sku": "",
+          "description": "Courier Charge",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
         }
       ],
       "machines": [
         {
-          "id": "1154219000034952594-1154219000034952599-1",
+          "id": "1154219000035041156-1154219000035041159-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
-          "orderId": "1154219000034952594",
-          "lineItemId": "1154219000034952599",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "customerName": "KRISHNA UPPER",
-          "salesOrderNumber": "SO-07626",
-          "deliveryDate": "2026-07-31",
+          "orderId": "1154219000035041156",
+          "lineItemId": "1154219000035041159",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "TILAK UTPADAN PVT LTD",
+          "salesOrderNumber": "SO-07627",
+          "deliveryDate": "2026-08-02",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "lens"
+        },
+        {
+          "id": "1154219000035041156-1154219000035041160-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035041156",
+          "lineItemId": "1154219000035041160",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "TILAK UTPADAN PVT LTD",
+          "salesOrderNumber": "SO-07627",
+          "deliveryDate": "2026-08-02",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Pinser set"
         }
       ]
     },
@@ -3044,53 +3085,6 @@
           "sku": "2810",
           "customerName": "Sports Valley",
           "salesOrderNumber": "SO-07622",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035009003": {
-      "id": "1154219000035009003",
-      "zohoSalesOrderId": "1154219000035009003",
-      "salesOrderNumber": "SO-07619",
-      "status": "open",
-      "customerName": "Unique Star International",
-      "shippingAddress": "Pardevan Purwa 383-J1, Lal Bangla,, Kanpur Nagar, Uttar Pradesh, 208010",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035009006",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035009003-1154219000035009006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035009003",
-          "lineItemId": "1154219000035009006",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "Unique Star International",
-          "salesOrderNumber": "SO-07619",
           "deliveryDate": "2026-07-31",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -10328,12 +10322,11 @@
     }
   },
   "orderIds": [
-    "1154219000034952594",
+    "1154219000035041156",
     "1154219000035025028",
     "1154219000035015011",
     "1154219000034957555",
     "1154219000035011002",
-    "1154219000035009003",
     "1154219000035022001",
     "1154219000035001001",
     "1154219000034994001",
@@ -10381,8 +10374,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T06:02:56.190Z",
-  "lastAttemptAt": "2026-08-01T06:17:32.683Z",
+  "lastSuccessfulSyncAt": "2026-08-01T06:17:55.854Z",
+  "lastAttemptAt": "2026-08-01T06:17:55.854Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
