@@ -3,14 +3,14 @@ import { requireUser } from '@/lib/auth'
 import { addTransporter, deleteTransporter, listReadyToShipItems, processShipment, readTransportersStore, updateTransporter } from '@/lib/ready-to-ship'
 
 export async function GET() {
-  const auth = await requireUser(['Admin'])
+  const auth = await requireUser(['Admin', 'Operations'])
   if (!auth.ok) return auth.response
   const [items, transporters] = await Promise.all([listReadyToShipItems(), readTransportersStore()])
   return apiOk({ items, transporters: transporters.transporters })
 }
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Admin'])
+  const auth = await requireUser(['Admin', 'Operations'])
   if (!auth.ok) return auth.response
   try {
     const body = await request.json()

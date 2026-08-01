@@ -1160,4 +1160,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .shipment-file-field span { font-size: 12px; color: #475569; font-weight: 500; }
 .ready-machine-card.builty-needed { background: linear-gradient(135deg, #fff7f7 0%, #fff 58%); border-color: #fecaca; box-shadow: 0 16px 34px rgba(185,28,28,.08); }
 .ready-machine-card.builty-needed .ready-machine-main .badge { background: #fee2e2; color: #991b1b; }
+.shipment-modal { display: flex; flex-direction: column; overflow: hidden; }
+.shipment-modal .shipment-order-context, .shipment-modal .shipment-type-selector, .shipment-modal .form-error, .shipment-modal .shipment-status-box { flex: 0 0 auto; }
+.shipment-modal .shipment-form { overflow-y: auto; padding-right: 2px; }
+.shipment-modal .shipment-actions { position: sticky; bottom: 0; background: linear-gradient(180deg, rgba(255,255,255,.88), #fff 36%); padding-top: 10px; margin-top: 2px; z-index: 2; }
+@media (max-height: 680px) { .shipment-modal { max-height: 96dvh; } }
 
