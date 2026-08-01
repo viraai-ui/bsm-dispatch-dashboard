@@ -131,7 +131,26 @@
       "orderId": "1154219000034756004",
       "salesOrderNumber": "SO-07577",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000034756004-1154219000034756007-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000034756004-1154219000034756007-1-video-1785571120673-m5j2yt",
+              "name": "VID_20260801_132816.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-01%2FSO-07577%2FTravel%20head%20cutting%20press%2025%20ton%20Heavy-duty-1154219000034756004-1154219000034756007-1-2026-08-01T07-58-21-801Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-01/SO-07577/Travel head cutting press 25 ton Heavy-duty-1154219000034756004-1154219000034756007-1-2026-08-01T07-58-21-801Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-01T07:58:40.673Z",
+              "expiresAt": "2026-08-31T07:58:21.801Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     },
     "1154219000034547004": {
