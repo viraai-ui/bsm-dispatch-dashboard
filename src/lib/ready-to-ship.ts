@@ -48,6 +48,8 @@ export type ShipmentRecord = {
   salespersonPhone?: string
   transporterName: string
   transporterPhone?: string
+  shipmentType?: 'direct' | 'transporter'
+  lrCopy?: { name: string; type: string; url: string; r2Key?: string; expiresAt?: string | null } | null
   vehicleNumber: string
   driverName: string
   driverPhone: string
@@ -170,6 +172,8 @@ export async function processShipment(input: {
   salespersonName?: string
   salespersonPhone?: string
   sendWhatsapp?: boolean
+  shipmentType?: 'direct' | 'transporter'
+  lrCopy?: { name: string; type: string; url: string; r2Key?: string; expiresAt?: string | null } | null
 }) {
   const item = (await listReadyToShipItems()).find((entry) => entry.id === input.itemId)
   if (!item) throw new Error('Ready to Ship machine not found')
@@ -177,9 +181,10 @@ export async function processShipment(input: {
   const driverName = input.driverName.trim()
   const driverPhone = input.driverPhone.trim()
   const transporterName = input.transporterName.trim()
-  if (!vehicleNumber) throw new Error('Vehicle number is required')
-  if (!driverName) throw new Error('Driver name is required')
-  if (!driverPhone) throw new Error('Driver phone is required')
+  const shipmentType = input.shipmentType || 'direct'
+  if (shipmentType === 'direct' && !vehicleNumber) throw new Error('Vehicle number is required')
+  if (shipmentType === 'direct' && !driverName) throw new Error('Driver name is required')
+  if (shipmentType === 'direct' && !driverPhone) throw new Error('Driver phone is required')
   if (!transporterName) throw new Error('Transporter name is required')
 
   const record: ShipmentRecord = {
@@ -194,9 +199,11 @@ export async function processShipment(input: {
     salespersonPhone: input.salespersonPhone?.trim() || '',
     transporterName,
     transporterPhone: input.transporterPhone?.trim() || '',
-    vehicleNumber,
-    driverName,
-    driverPhone,
+    shipmentType,
+    lrCopy: input.lrCopy || null,
+    vehicleNumber: vehicleNumber || '—',
+    driverName: driverName || '—',
+    driverPhone: driverPhone || '—',
     expectedDelivery: input.expectedDelivery?.trim() || '',
     notes: input.notes?.trim() || '',
     shippedAt: new Date().toISOString(),

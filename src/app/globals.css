@@ -1153,4 +1153,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .transporter-edit-form input { width: 100%; min-height: 44px; border: 1px solid #e2e8f0; border-radius: 14px; padding: 0 12px; font: inherit; font-weight: 400; }
 .transporter-edit-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .transporter-edit-actions .danger-text { grid-column: 1 / -1; color: #b91c1c; border-color: #fecaca; background: #fff1f2; }
+.shipment-type-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; padding: 4px; border-radius: 16px; background: #f1f5f9; border: 1px solid #e2e8f0; }
+.shipment-type-selector button { min-height: 42px; border: 0; border-radius: 13px; background: transparent; color: #475569; font-weight: 700; cursor: pointer; }
+.shipment-type-selector button.active { background: #111827; color: #fff; box-shadow: 0 10px 20px rgba(15,23,42,.14); }
+.shipment-file-field input[type="file"] { padding: 10px 12px; min-height: 48px; cursor: pointer; }
+.shipment-file-field span { font-size: 12px; color: #475569; font-weight: 500; }
 

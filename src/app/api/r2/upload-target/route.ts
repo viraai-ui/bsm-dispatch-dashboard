@@ -8,19 +8,23 @@ export const runtime = 'nodejs'
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const stage = String(body.stage || '') === 'loading' ? 'loading' : 'packing'
-    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : ['Admin', 'Operations'])
+    const requestedStage = String(body.stage || '')
+    const stage = requestedStage === 'loading' ? 'loading' : requestedStage === 'shipment' ? 'shipment' : 'packing'
+    const auth = await requireUser(stage === 'packing' ? ['Admin', 'Media'] : stage === 'shipment' ? ['Admin'] : ['Admin', 'Operations'])
     if (!auth.ok) return auth.response
     const order = await getMediaOrder(String(body.orderId || ''))
     if (!order) return apiError('Order not found', 404)
     const machineId = String(body.machineId || '')
+    const shipmentDocument = stage === 'shipment'
     const loadingOrderVideo = stage === 'loading' && machineId === 'loading-order'
     const machine = loadingOrderVideo ? null : order.machines.find((item) => item.id === machineId)
-    if (!loadingOrderVideo && !machine) return apiError('Machine not found for this order', 404)
+    if (!loadingOrderVideo && !shipmentDocument && !machine) return apiError('Machine not found for this order', 404)
     const type = String(body.type || 'video/mp4')
-    if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)
+    if (shipmentDocument) {
+      if (!type.startsWith('image/') && type !== 'application/pdf') return apiError('Only image or PDF files are allowed', 400)
+    } else if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)
     await ensureR2Cors().catch(() => {})
-    const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: machine?.itemName || 'Loading Video', machineId, originalName: String(body.name || 'video.mp4'), mimeType: type })
+    const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: shipmentDocument ? 'Shipment LR Builty' : machine?.itemName || 'Loading Video', machineId: shipmentDocument ? 'shipment-lr-builty' : machineId, originalName: String(body.name || (shipmentDocument ? 'shipment-document' : 'video.mp4')), mimeType: type })
     const target = createR2UploadTarget(key, type)
     const cors = await checkBrowserCors(target.uploadUrl)
     return apiOk({ ...target, ...cors })

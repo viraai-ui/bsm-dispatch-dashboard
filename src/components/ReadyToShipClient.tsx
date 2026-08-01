@@ -167,20 +167,37 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
 function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
   const existing = item.shipment
   const dropdownTransporters = [...transporters, { id: 'special-porter', name: 'Porter', phone: '', notes: '', createdAt: '' }, { id: 'special-customer-own-transport', name: "Customer's Own Transport", phone: '', notes: '', createdAt: '' }]
+  const [shipmentType, setShipmentType] = useState<'direct' | 'transporter'>(existing?.shipmentType || 'direct')
   const [transporterName, setTransporterName] = useState(existing?.transporterName || '')
   const selectedTransporter = dropdownTransporters.find((entry) => entry.name === transporterName)
   const [transporterPhone, setTransporterPhone] = useState(existing?.transporterPhone || selectedTransporter?.phone || '')
-  const [vehicleNumber, setVehicleNumber] = useState(existing?.vehicleNumber || '')
-  const [driverPhone, setDriverPhone] = useState(existing?.driverPhone || '')
+  const [vehicleNumber, setVehicleNumber] = useState(existing?.vehicleNumber && existing.vehicleNumber !== '—' ? existing.vehicleNumber : '')
+  const [driverPhone, setDriverPhone] = useState(existing?.driverPhone && existing.driverPhone !== '—' ? existing.driverPhone : '')
   const [expectedDelivery, setExpectedDelivery] = useState(existing?.expectedDelivery || todayInputDate())
   const [notes, setNotes] = useState(existing?.notes || '')
+  const [lrFile, setLrFile] = useState<File | null>(null)
+  const [lrCopy, setLrCopy] = useState(existing?.lrCopy || null)
   const [error, setError] = useState('')
+
+  async function uploadLrCopy() {
+    if (!lrFile) return lrCopy
+    const type = lrFile.type || 'application/octet-stream'
+    if (!type.startsWith('image/') && type !== 'application/pdf') throw new Error('Attach only image or PDF for Builty/LR copy')
+    const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: item.orderId, machineId: 'shipment-lr-builty', name: lrFile.name, type, stage: 'shipment' }) })
+    const targetJson = await targetResponse.json()
+    if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare LR upload')
+    const target = targetJson.data
+    const uploadResponse = await fetch(target.uploadUrl, { method: 'PUT', headers: { 'content-type': type }, body: lrFile })
+    if (!uploadResponse.ok) throw new Error('Could not upload Builty/LR copy')
+    return { name: lrFile.name, type, url: target.publicUrl, r2Key: target.key, expiresAt: target.expiresAt || null }
+  }
 
   async function submit(event: React.FormEvent) {
     event.preventDefault()
     setBusy('shipment'); setError('')
     try {
-      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'process_shipment', itemId: item.id, transporterName, transporterPhone, vehicleNumber, driverName: '—', driverPhone, expectedDelivery, notes }) })
+      const uploadedLrCopy = shipmentType === 'transporter' ? await uploadLrCopy() : null
+      const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'process_shipment', itemId: item.id, shipmentType, transporterName, transporterPhone, vehicleNumber: shipmentType === 'direct' ? vehicleNumber : '', driverName: '—', driverPhone: shipmentType === 'direct' ? driverPhone : '', expectedDelivery, notes, lrCopy: uploadedLrCopy }) })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save shipment')
       onSaved({ ...item, shipment: json.data.shipment })
@@ -191,15 +208,23 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
   return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card shipment-modal">
     <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="shipment-order-context"><strong>{item.shippingAddress || 'Address not available'}</strong><div>{item.machines.map((machine) => <span key={machine.id}>{machine.itemName} · Qty 1{machine.serialNumber ? ` · Serial ${machine.serialNumber}` : ''}</span>)}</div><em>Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</em></div>
+    <div className="shipment-type-selector"><button type="button" className={shipmentType === 'direct' ? 'active' : ''} onClick={() => setShipmentType('direct')}>Direct</button><button type="button" className={shipmentType === 'transporter' ? 'active' : ''} onClick={() => setShipmentType('transporter')}>Transporter</button></div>
     {error && <div className="form-error">{error}</div>}
     {existing && <div className="shipment-status-box"><strong>Shipment already saved</strong><span>{existing.transporterName}</span><span>{existing.vehicleNumber}</span></div>}
     <form className="shipment-form" onSubmit={submit}>
-      <label>Transporter<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = dropdownTransporters.find((entry) => entry.name === event.target.value); setTransporterPhone(next?.phone || '') }}><option value="">Select transporter</option>{dropdownTransporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
-      <label>Expected Delivery<input type="date" value={expectedDelivery} onChange={(event) => setExpectedDelivery(event.target.value)} /></label>
-      <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
-      <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
-      <label className="shipment-notes">Notes<input value={notes} onChange={(event) => setNotes(event.target.value)} placeholder="Optional dispatch note" /></label>
+      {shipmentType === 'direct' ? <>
+        <label>Transporter<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = dropdownTransporters.find((entry) => entry.name === event.target.value); setTransporterPhone(next?.phone || '') }}><option value="">Select transporter</option>{dropdownTransporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
+        <label>Expected Delivery<input type="date" value={expectedDelivery} onChange={(event) => setExpectedDelivery(event.target.value)} /></label>
+        <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
+        <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
+        <label className="shipment-notes">Notes<input value={notes} onChange={(event) => setNotes(event.target.value)} placeholder="Optional dispatch note" /></label>
+      </> : <>
+        <label>Transporter Name<input value={transporterName} onChange={(event) => setTransporterName(event.target.value)} placeholder="Transporter name" /></label>
+        <label>Transporter Number<input value={transporterPhone} onChange={(event) => setTransporterPhone(event.target.value)} placeholder="Transporter number" /></label>
+        <label className="shipment-notes shipment-file-field">Attach Builty/LR Copy<input type="file" accept="image/*,application/pdf" onChange={(event) => setLrFile(event.target.files?.[0] || null)} />{(lrFile || lrCopy) && <span>{lrFile?.name || lrCopy?.name}</span>}</label>
+      </>}
       <div className="shipment-actions"><button className="btn light" type="button" onClick={onClose}>Cancel</button><button className="btn red" disabled={busy === 'shipment'}>{busy === 'shipment' ? 'Saving…' : existing ? 'Update Shipment' : 'Confirm Shipment'}</button></div>
     </form>
   </section></div>
 }
+

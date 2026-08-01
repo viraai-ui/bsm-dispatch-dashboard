@@ -37,6 +37,8 @@ export async function POST(request: Request) {
         salespersonName: String(body.salespersonName || ''),
         salespersonPhone: String(body.salespersonPhone || ''),
         sendWhatsapp: Boolean(body.sendWhatsapp),
+        shipmentType: body.shipmentType === 'transporter' ? 'transporter' : 'direct',
+        lrCopy: body.lrCopy && typeof body.lrCopy === 'object' ? { name: String(body.lrCopy.name || ''), type: String(body.lrCopy.type || ''), url: String(body.lrCopy.url || ''), r2Key: body.lrCopy.r2Key ? String(body.lrCopy.r2Key) : undefined, expiresAt: body.lrCopy.expiresAt ? String(body.lrCopy.expiresAt) : null } : null,
       }) })
     }
     return apiError('Unknown Ready to Ship action', 400)
