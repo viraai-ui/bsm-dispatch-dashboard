@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export type NavItem = { label: string; href: string }
 
-export function MobileMenu({ nav, active, onLogout }: { nav: NavItem[]; active: string; onLogout: () => void | Promise<void> }) {
+export function MobileMenu({ nav, active, onLogout, readyCount = null }: { nav: NavItem[]; active: string; onLogout: () => void | Promise<void>; readyCount?: number | null }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -36,9 +36,10 @@ export function MobileMenu({ nav, active, onLogout }: { nav: NavItem[]; active: 
         </div>
         <nav className="drawer-nav" aria-label="Mobile module navigation">
           {nav.map((item, index) => (
-            <a className={item.label === active ? 'active' : ''} href={item.href} key={item.label} onClick={() => setOpen(false)}>
+            <a className={`${item.label === active ? 'active' : ''} ${item.href === '/ready-to-ship' ? 'ready-nav-link' : ''}`} href={item.href} key={item.label} onClick={() => setOpen(false)}>
               <span className="module-orb">{String(index + 1).padStart(2, '0')}</span>
               <span>{item.label}</span>
+              {item.href === '/ready-to-ship' && readyCount !== null && <strong className="ready-nav-count">{readyCount}</strong>}
               <em>›</em>
             </a>
           ))}

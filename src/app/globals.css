@@ -1104,4 +1104,14 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .transporter-card a { font-size: 12px; }
 .transporter-card span { font-size: 11px; line-height: 1.35; }
 .database-shipment-section { margin-top: 14px; }
+.nav a.ready-nav-link { justify-content: space-between; gap: 8px; color: #bbf7d0; }
+.nav a.ready-nav-link.active, .nav a.ready-nav-link:hover { background: rgba(34,197,94,.18); color: #f0fdf4; }
+.ready-nav-count { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; min-height: 22px; padding: 0 8px; border-radius: 999px; background: #22c55e; color: #052e16; font-size: 12px; font-weight: 950; font-style: normal; line-height: 1; box-shadow: 0 8px 18px rgba(34,197,94,.22); }
+.drawer-nav a.ready-nav-link { color: #bbf7d0; border-color: rgba(34,197,94,.28); background: rgba(22,163,74,.12); }
+.drawer-nav a.ready-nav-link.active { background: linear-gradient(135deg, rgba(22,163,74,.95), rgba(34,197,94,.72)); box-shadow: 0 18px 34px rgba(34,197,94,.18); }
+.drawer-nav a.ready-nav-link { grid-template-columns: 42px 1fr auto auto; }
+.ready-machine-main .badge { min-height: 34px; padding: 0 14px; display: inline-flex; align-items: center; justify-content: center; text-align: center; line-height: 1; white-space: nowrap; align-self: center; }
+@media (max-width: 640px) {
+  .ready-machine-main .badge { min-height: 32px; padding: 0 12px; font-size: 11px; }
+}
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { AuthGate, useAuth } from './AuthGate'
 import { MobileMenu, type NavItem } from './MobileMenu'
 
@@ -21,6 +22,7 @@ const utilityNav: NavItem[] = [
 
 function ShellBody({ children, active }: { children: React.ReactNode; active: string }) {
   const { user, logout } = useAuth()
+  const [readyCount, setReadyCount] = useState<number | null>(null)
   const dispatchOnly = user.role === 'Dispatch'
   const mediaOnly = user.role === 'Media'
   const databaseOnly = user.role === 'Database'
@@ -30,8 +32,17 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const mobileHidden = new Set(['/packaging-tv', '/settings'])
   const mobileNav = visibleNav.filter((item) => !mobileHidden.has(item.href))
   const singleModule = dispatchOnly
+  useEffect(() => {
+    if (!visibleNav.some((item) => item.href === '/ready-to-ship')) return
+    let active = true
+    fetch('/api/ready-to-ship', { cache: 'no-store' })
+      .then((response) => response.ok ? response.json() : null)
+      .then((json) => { if (active && json?.ok) setReadyCount(json.data?.items?.length ?? 0) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [user.role])
   return <div className={singleModule ? 'shell dispatch-shell single-module-shell' : 'shell'}>
-    {!singleModule && <MobileMenu nav={mobileNav} active={active} onLogout={logout} />}
+    {!singleModule && <MobileMenu nav={mobileNav} active={active} onLogout={logout} readyCount={readyCount} />}
     {!singleModule && <aside className="side">
       <div className="brand">
         <img className="logo bsm-brand-logo" src="/brand/bsm-logo.png" alt="BSM" />
@@ -41,7 +52,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
         </div>
       </div>
       <nav className="nav" aria-label="Dashboard navigation">
-        {visibleNav.map((item) => <a className={item.label === active ? 'active' : ''} href={item.href} key={item.label}>{item.label}</a>)}
+        {visibleNav.map((item) => <a className={`${item.label === active ? 'active' : ''} ${item.href === '/ready-to-ship' ? 'ready-nav-link' : ''}`} href={item.href} key={item.label}><span>{item.label}</span>{item.href === '/ready-to-ship' && readyCount !== null && <em className="ready-nav-count">{readyCount}</em>}</a>)}
       </nav>
       <div className="side-user">
         {visibleUtilityNav.map((item) => <a className={`side-utility-link ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label}>{item.label}</a>)}
