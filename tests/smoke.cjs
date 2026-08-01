@@ -35,10 +35,19 @@ async function run() {
   await waitForServer()
   const cookie = await login()
 
-  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/units-generator', '/database', '/crm-serial-database', '/settings', '/api/orders', '/api/sync/status', '/api/media-proof/cleanup']) {
+  for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/ready-to-ship', '/units-generator', '/database', '/crm-serial-database', '/settings', '/api/orders', '/api/ready-to-ship', '/api/sync/status', '/api/media-proof/cleanup']) {
     const { response } = await fetchText(path, { headers: { cookie } })
     assert.equal(response.status, 200, `${path} should return 200`)
   }
+
+  const operationsCookie = await login('operations', '1231')
+  for (const path of ['/ready-to-ship', '/api/ready-to-ship']) {
+    const { response } = await fetchText(path, { headers: { cookie: operationsCookie } })
+    assert.equal(response.status, 200, `Operations should access ${path}`)
+  }
+  const operationsSync = await fetchText('/api/cron/sync-orders', { headers: { cookie: operationsCookie } })
+  assert.notEqual(operationsSync.response.status, 401, 'Operations sync should not be unauthorized')
+  assert.notEqual(operationsSync.response.status, 403, 'Operations sync should not be forbidden')
 
   const ordersApi = await fetchText('/api/orders', { headers: { cookie } })
   const ordersJson = JSON.parse(ordersApi.text)

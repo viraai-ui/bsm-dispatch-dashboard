@@ -15,7 +15,7 @@ function isAuthorizedCron(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   if (!isAuthorizedCron(request)) {
-    const auth = await requireUser(['Admin'])
+    const auth = await requireUser(['Admin', 'Operations'])
     if (!auth.ok) return auth.response
   }
 
