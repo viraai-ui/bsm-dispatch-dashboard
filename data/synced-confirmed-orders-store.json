@@ -104,95 +104,6 @@
         }
       ]
     },
-    "1154219000035069003": {
-      "id": "1154219000035069003",
-      "zohoSalesOrderId": "1154219000035069003",
-      "salesOrderNumber": "SO-07629",
-      "status": "open",
-      "customerName": "HILLSON FOOTWEAR PVT. LTD.",
-      "shippingAddress": "PLOT NO. 420-421, M.I.E. Part-A, Bahadurgarh-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-01",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035069006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "D lasting pad",
-          "quantity": 3,
-          "pendingQuantity": 3,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035069003-1154219000035069006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035069003",
-          "lineItemId": "1154219000035069006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "HILLSON FOOTWEAR PVT. LTD.",
-          "salesOrderNumber": "SO-07629",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "D lasting pad"
-        },
-        {
-          "id": "1154219000035069003-1154219000035069006-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035069003",
-          "lineItemId": "1154219000035069006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "HILLSON FOOTWEAR PVT. LTD.",
-          "salesOrderNumber": "SO-07629",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "D lasting pad"
-        },
-        {
-          "id": "1154219000035069003-1154219000035069006-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035069003",
-          "lineItemId": "1154219000035069006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "HILLSON FOOTWEAR PVT. LTD.",
-          "salesOrderNumber": "SO-07629",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "D lasting pad"
-        }
-      ]
-    },
     "1154219000034983522": {
       "id": "1154219000034983522",
       "zohoSalesOrderId": "1154219000034983522",
@@ -4291,53 +4202,6 @@
         }
       ]
     },
-    "1154219000034547004": {
-      "id": "1154219000034547004",
-      "zohoSalesOrderId": "1154219000034547004",
-      "salesOrderNumber": "SO-07543",
-      "status": "open",
-      "customerName": "VARDHMAN RIBBON PRINTERS",
-      "shippingAddress": "G/F, 487/68, PEERA GARHI VILLAGE, NEAR SHRI SAI AUTO,, PEERA GARHI VILLAGE, Delhi, 110087, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034547007",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034547004-1154219000034547007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034547004",
-          "lineItemId": "1154219000034547007",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "customerName": "VARDHMAN RIBBON PRINTERS",
-          "salesOrderNumber": "SO-07543",
-          "deliveryDate": "2026-07-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034527001": {
       "id": "1154219000034527001",
       "zohoSalesOrderId": "1154219000034527001",
@@ -7761,7 +7625,6 @@
   "orderIds": [
     "1154219000035041199",
     "1154219000035063006",
-    "1154219000035069003",
     "1154219000034983522",
     "1154219000035041156",
     "1154219000035025028",
@@ -7781,7 +7644,6 @@
     "1154219000034654006",
     "1154219000034623006",
     "1154219000034608001",
-    "1154219000034547004",
     "1154219000034527001",
     "1154219000034263026",
     "1154219000034301018",
@@ -7804,8 +7666,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-01T11:27:55.898Z",
-  "lastAttemptAt": "2026-08-01T11:42:33.268Z",
+  "lastSuccessfulSyncAt": "2026-08-01T11:42:54.923Z",
+  "lastAttemptAt": "2026-08-01T11:42:54.923Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
