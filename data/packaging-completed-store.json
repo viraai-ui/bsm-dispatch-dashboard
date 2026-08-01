@@ -2364,6 +2364,87 @@
       "machineIds": [
         "1154219000034918002-1154219000034918005-1"
       ]
+    },
+    "1154219000034952463": {
+      "completedAt": "2026-08-01T09:13:20.791Z",
+      "order": {
+        "id": "1154219000034952463",
+        "zohoSalesOrderId": "1154219000034952463",
+        "salesOrderNumber": "SO-07610",
+        "status": "open",
+        "customerName": "Aradhay Shoe Machinery (ASHWANI JAIN)",
+        "shippingAddress": "H-10, GF, Udyog Nagar, Industrial Area, Rohtak Road Peeragarhi, New Delhi, Delhi-110041, New Delhi, Delhi, 110087, India",
+        "salesperson": "Ainesh Sikdar",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034952468",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034952463-1154219000034952468-1",
+            "unitNumber": 1,
+            "serialNumber": "26270814",
+            "qrToken": "26270814",
+            "orderId": "1154219000034952463",
+            "lineItemId": "1154219000034952468",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "Aradhay Shoe Machinery (ASHWANI JAIN)",
+            "salesOrderNumber": "SO-07610",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          },
+          {
+            "id": "1154219000034952463-1154219000034952468-2",
+            "unitNumber": 2,
+            "serialNumber": "26270815",
+            "qrToken": "26270815",
+            "orderId": "1154219000034952463",
+            "lineItemId": "1154219000034952468",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "Aradhay Shoe Machinery (ASHWANI JAIN)",
+            "salesOrderNumber": "SO-07610",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000034952463-1154219000034952468-1",
+        "1154219000034952463-1154219000034952468-2"
+      ]
     }
   }
 }
