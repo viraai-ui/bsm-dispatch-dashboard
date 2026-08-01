@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export type NavItem = { label: string; href: string }
 
-export function MobileMenu({ nav, active, onLogout, readyCount = null }: { nav: NavItem[]; active: string; onLogout: () => void | Promise<void>; readyCount?: number | null }) {
+export function MobileMenu({ nav, utilityNav = [], active, onLogout, readyCount = null }: { nav: NavItem[]; utilityNav?: NavItem[]; active: string; onLogout: () => void | Promise<void>; readyCount?: number | null }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -44,6 +44,9 @@ export function MobileMenu({ nav, active, onLogout, readyCount = null }: { nav: 
             </a>
           ))}
         </nav>
+        {utilityNav.length > 0 && <nav className="drawer-utility-nav" aria-label="Mobile utility navigation">
+          {utilityNav.map((item) => <a className={`drawer-utility-link ${item.href === '/wooden-packing' ? 'wooden-utility-link' : ''} ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</a>)}
+        </nav>}
         <button className="drawer-logout" type="button" onClick={() => { setOpen(false); void onLogout() }}>
           <span className="module-orb drawer-logout-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
