@@ -127,7 +127,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
               <Badge tone={needsBuilty ? 'red' : item.shipment ? 'blue' : 'green'}>{needsBuilty ? 'Builty Needed' : item.shipment ? 'Shipped' : 'Machine Packed'}</Badge>
             </div>
             <div className="ready-customer-address">{item.shippingAddress || 'Address not available'}</div>
-            <div className="ready-machine-list-inline">{item.machines.map((machine) => <div className="ready-machine-line" key={machine.id}><strong>{machine.itemName}</strong><span>Qty 1</span>{machine.serialNumber && <em>Serial {machine.serialNumber}</em>}</div>)}</div>
+            <div className="ready-machine-list-inline">{item.machines.map((machine) => { const videos = item.machineVideos?.[machine.id] || []; return <div className="ready-machine-line" key={machine.id}><div className="ready-machine-line-main"><strong>{machine.itemName}</strong><span>Qty 1</span>{machine.serialNumber && <em>Serial {machine.serialNumber}</em>}</div>{videos.length > 0 && <div className="ready-machine-video-links">{videos.map((video, index) => <a className="ready-item-video-link" href={video.workdriveUrl || video.url} target="_blank" key={video.id}>View Video{videos.length > 1 ? ` ${index + 1}` : ''}</a>)}</div>}</div>})}</div>
             <div className="ready-machine-meta">
               <span>Machines: {item.machines.length}</span>
               <span>{item.shipment ? `Vehicle: ${item.shipment.vehicleNumber}` : `Ready: ${formatDate(item.readyAt || item.completedAt)}`}</span>
@@ -135,7 +135,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
             </div>
             <div className="ready-machine-actions">
               <div />
-              <div className="ready-action-buttons">{item.videos[0] && <a className="btn light ready-view-video-btn" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}<button className="btn red" type="button" onClick={() => setActiveItem(item)}>{needsBuilty ? 'Upload LR' : item.shipment ? 'View Shipment' : 'Ship'}</button></div>
+              <div className="ready-action-buttons"><button className="btn red" type="button" onClick={() => setActiveItem(item)}>{needsBuilty ? 'Upload LR' : item.shipment ? 'View Shipment' : 'Ship'}</button></div>
             </div>
           </article>})}
           {!filtered.length && <div className="empty-state"><strong>No dispatch-completed orders yet</strong><span className="muted">Orders will appear here once completed from Dispatch View.</span></div>}

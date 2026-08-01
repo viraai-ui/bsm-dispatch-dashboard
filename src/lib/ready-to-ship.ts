@@ -23,6 +23,7 @@ export type ReadyToShipItem = {
   machine: MachineUnit
   machines: MachineUnit[]
   videos: MediaUpload[]
+  machineVideos: Record<string, MediaUpload[]>
   packingVideoUploaded: boolean
   shipment?: ShipmentRecord
 }
@@ -81,7 +82,8 @@ export async function listReadyToShipItems() {
     const record = packingStore.records[orderId]
     const machines = (order.machines || []).filter((machine) => allowedMachineIds.has(machine.id))
     if (!machines.length) continue
-    const videos = machines.flatMap((machine) => record?.units?.[machine.id]?.videos || [])
+    const machineVideos = Object.fromEntries(machines.map((machine) => [machine.id, record?.units?.[machine.id]?.videos || []])) as Record<string, MediaUpload[]>
+    const videos = machines.flatMap((machine) => machineVideos[machine.id] || [])
     const id = orderId
     const shipment = shipmentStore.shipments[id]
     const needsBuilty = shipment?.shipmentType === 'transporter' && !shipment.lrCopy?.url
@@ -101,6 +103,7 @@ export async function listReadyToShipItems() {
       machine: machines[0],
       machines,
       videos,
+      machineVideos,
       packingVideoUploaded: videos.length > 0 || Boolean(record?.submittedAt),
       shipment,
     })
