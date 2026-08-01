@@ -105,7 +105,8 @@ export async function listReadyToShipItems() {
 
 export async function readTransportersStore() {
   const { data } = await githubReadJson<TransporterStore>(TRANSPORTERS_PATH, { transporters: [] })
-  return { transporters: Array.isArray(data.transporters) ? data.transporters : [] }
+  const transporters = Array.isArray(data.transporters) ? [...data.transporters] : []
+  return { transporters: transporters.sort((a, b) => Date.parse(a.createdAt || '') - Date.parse(b.createdAt || '')) }
 }
 
 export async function readShipmentStore() {
