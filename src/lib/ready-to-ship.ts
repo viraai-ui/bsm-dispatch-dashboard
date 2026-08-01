@@ -126,7 +126,7 @@ export async function addTransporter(input: { name: string; phone: string; notes
     notes: input.notes?.trim() || '',
     createdAt: new Date().toISOString(),
   }
-  store.transporters = [transporter, ...store.transporters]
+  store.transporters = [...store.transporters, transporter]
   await githubWriteJson(TRANSPORTERS_PATH, store, `Add transporter ${name}`)
   return transporter
 }

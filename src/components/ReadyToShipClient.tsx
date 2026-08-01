@@ -60,7 +60,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       const response = await fetch('/api/ready-to-ship', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'add_transporter', name, phone, notes }) })
       const json = await response.json()
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not add transporter')
-      setTransporters((prev) => [json.data.transporter, ...prev])
+      setTransporters((prev) => [...prev, json.data.transporter])
       setName(''); setPhone(''); setNotes('')
       setShowAddTransporter(false)
       setMessage('Transporter added.')
