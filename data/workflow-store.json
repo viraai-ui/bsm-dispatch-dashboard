@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270825,
+  "serialCounter": 26270829,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -3967,6 +3967,41 @@
           "processedAt": "2026-08-01T07:02:21.622Z",
           "dispatchNote": "Local",
           "vendor": "Siphone"
+        }
+      }
+    },
+    "1154219000034983522": {
+      "salesOrderId": "1154219000034983522",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000034983522-1154219000034983525-1": {
+          "machineUnitId": "1154219000034983522-1154219000034983525-1",
+          "lineItemId": "",
+          "serialNumber": "26270826",
+          "qrToken": "26270826",
+          "qrStatus": "pending"
+        },
+        "1154219000034983522-1154219000034983525-2": {
+          "machineUnitId": "1154219000034983522-1154219000034983525-2",
+          "lineItemId": "",
+          "serialNumber": "26270827",
+          "qrToken": "26270827",
+          "qrStatus": "pending"
+        },
+        "1154219000034983522-1154219000034983525-3": {
+          "machineUnitId": "1154219000034983522-1154219000034983525-3",
+          "lineItemId": "",
+          "serialNumber": "26270828",
+          "qrToken": "26270828",
+          "qrStatus": "pending"
+        },
+        "1154219000034983522-1154219000034983525-4": {
+          "machineUnitId": "1154219000034983522-1154219000034983525-4",
+          "lineItemId": "",
+          "serialNumber": "26270829",
+          "qrToken": "26270829",
+          "qrStatus": "pending"
         }
       }
     }
