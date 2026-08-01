@@ -133,8 +133,9 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
 
 function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
   const existing = item.shipment
+  const dropdownTransporters = [{ id: 'special-porter', name: 'Porter', phone: '', notes: '', createdAt: '' }, { id: 'special-customer-own-transport', name: "Customer's Own Transport", phone: '', notes: '', createdAt: '' }, ...transporters]
   const [transporterName, setTransporterName] = useState(existing?.transporterName || '')
-  const selectedTransporter = transporters.find((entry) => entry.name === transporterName)
+  const selectedTransporter = dropdownTransporters.find((entry) => entry.name === transporterName)
   const [transporterPhone, setTransporterPhone] = useState(existing?.transporterPhone || selectedTransporter?.phone || '')
   const [vehicleNumber, setVehicleNumber] = useState(existing?.vehicleNumber || '')
   const [driverPhone, setDriverPhone] = useState(existing?.driverPhone || '')
@@ -160,7 +161,7 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
     {error && <div className="form-error">{error}</div>}
     {existing && <div className="shipment-status-box"><strong>Shipment already saved</strong><span>{existing.transporterName}</span><span>{existing.vehicleNumber}</span></div>}
     <form className="shipment-form" onSubmit={submit}>
-      <label>Transporter<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = transporters.find((entry) => entry.name === event.target.value); setTransporterPhone(next?.phone || '') }}><option value="">Select transporter</option>{transporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
+      <label>Transporter<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = dropdownTransporters.find((entry) => entry.name === event.target.value); setTransporterPhone(next?.phone || '') }}><option value="">Select transporter</option>{dropdownTransporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
       <label>Expected Delivery<input type="date" value={expectedDelivery} onChange={(event) => setExpectedDelivery(event.target.value)} /></label>
       <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
       <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
