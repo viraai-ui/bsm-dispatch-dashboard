@@ -103,8 +103,8 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
               <span className={item.packingVideoUploaded ? 'packing-video-yes' : 'packing-video-no'}>☑ Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</span>
             </div>
             <div className="ready-machine-actions">
-              <div className="ready-video-slot">{item.videos[0] && <a className="btn light" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}</div>
-              <button className="btn red" type="button" onClick={() => setActiveItem(item)}>{item.shipment ? 'View Shipment' : 'Ship'}</button>
+              <div />
+              <div className="ready-action-buttons">{item.videos[0] && <a className="btn light ready-view-video-btn" href={item.videos[0].workdriveUrl || item.videos[0].url} target="_blank">View Video</a>}<button className="btn red" type="button" onClick={() => setActiveItem(item)}>{item.shipment ? 'View Shipment' : 'Ship'}</button></div>
             </div>
           </article>)}
           {!filtered.length && <div className="empty-state"><strong>No dispatch-completed orders yet</strong><span className="muted">Orders will appear here once completed from Dispatch View.</span></div>}

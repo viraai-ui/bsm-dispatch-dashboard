@@ -1082,7 +1082,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .ready-customer-address { padding: 10px 12px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; font-size: 12px; font-weight: 700; line-height: 1.45; }
 .ready-machine-list-inline { display: grid; gap: 7px; }
 .ready-machine-line { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 14px; background: #fff; border: 1px solid #edf2f7; }
-.ready-machine-line strong { color: #1f2937; font-size: 13px; font-weight: 850; overflow-wrap: anywhere; }
+.ready-machine-line strong { color: #1f2937; font-size: 13px; font-weight: 500; overflow-wrap: anywhere; }
 .ready-machine-line span { padding: 4px 8px; border-radius: 999px; background: #ecfdf5; color: #15803d; font-size: 11px; font-weight: 900; }
 .ready-machine-line em { color: #64748b; font-size: 11px; font-style: normal; font-weight: 800; }
 .ready-machine-meta .packing-video-yes { background: #dcfce7; color: #166534; }
@@ -1120,12 +1120,13 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .ready-sync-btn.spinning { animation: readySyncSpin .85s linear infinite; }
 @keyframes readySyncSpin { to { transform: rotate(360deg); } }
 .ready-machine-actions { grid-template-columns: 1fr auto; align-items: end; }
-.ready-video-slot { min-height: 42px; display: flex; align-items: flex-end; justify-content: flex-start; }
-.ready-video-slot .btn { min-width: 128px; }
-.ready-machine-actions > .btn.red { justify-self: end; min-width: 112px; }
+.ready-action-buttons { display: flex; gap: 8px; justify-content: flex-end; align-items: center; }
+.ready-view-video-btn { min-width: 112px; min-height: 42px; background: #dcfce7 !important; color: #166534 !important; border-color: #bbf7d0 !important; }
+.ready-machine-actions > .btn.red, .ready-action-buttons > .btn.red { justify-self: end; min-width: 112px; min-height: 42px; }
 @media (max-width: 640px) {
   .ready-machine-actions { grid-template-columns: 1fr auto; }
-  .ready-video-slot .btn { min-width: 0; }
-  .ready-machine-actions > .btn.red { min-width: 96px; }
+  .ready-action-buttons { gap: 6px; }
+  .ready-view-video-btn { min-width: 96px; }
+  .ready-machine-actions > .btn.red, .ready-action-buttons > .btn.red { min-width: 96px; }
 }
 
