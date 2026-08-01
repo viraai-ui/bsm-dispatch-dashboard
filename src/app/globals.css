@@ -1095,4 +1095,6 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 @media (max-width: 520px) {
   .ready-machine-line { grid-template-columns: 1fr; align-items: start; }
 }
+.media-salesperson-line { margin: 4px 0 0; color: #475569; font-size: 12px; font-weight: 800; }
+.media-salesperson-line strong { color: #111827; }
 
