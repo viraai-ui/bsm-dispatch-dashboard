@@ -1176,4 +1176,46 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .shipment-modal .shipment-form { overflow-y: auto; padding-right: 2px; }
 .shipment-modal .shipment-actions { position: sticky; bottom: 0; background: linear-gradient(180deg, rgba(255,255,255,.88), #fff 36%); padding-top: 10px; margin-top: 2px; z-index: 2; }
 @media (max-height: 680px) { .shipment-modal { max-height: 96dvh; } }
+.salesman-view-page { display: grid; gap: 18px; }
+.salesman-hero { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 24px; background: radial-gradient(circle at 12% 18%, rgba(248,113,113,.24), transparent 32%), linear-gradient(135deg, #111827 0%, #1f2937 48%, #7f1d1d 100%); color: #fff; border: 0; overflow: hidden; }
+.salesman-kicker { display: inline-flex; margin-bottom: 8px; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,.14); color: #fee2e2; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.salesman-hero h1 { margin: 0; font-size: clamp(28px, 4vw, 48px); letter-spacing: -.06em; }
+.salesman-hero p { margin: 8px 0 0; color: #e5e7eb; font-weight: 600; }
+.salesman-refresh { min-width: 120px; background: #fff !important; color: #991b1b !important; border: 0 !important; }
+.salesman-metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.salesman-metric-card { display: grid; gap: 6px; padding: 18px; border-radius: 24px; color: #fff; box-shadow: 0 20px 45px rgba(15,23,42,.12); }
+.salesman-metric-card.red { background: linear-gradient(135deg, #991b1b, #ef4444); }
+.salesman-metric-card.blue { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+.salesman-metric-card.green { background: linear-gradient(135deg, #065f46, #22c55e); }
+.salesman-metric-card.dark { background: linear-gradient(135deg, #111827, #475569); }
+.salesman-metric-card span { font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; opacity: .9; }
+.salesman-metric-card strong { font-size: 38px; line-height: 1; letter-spacing: -.05em; }
+.salesman-metric-card em { font-style: normal; color: rgba(255,255,255,.86); font-size: 13px; font-weight: 700; }
+.salesman-workload-card { display: grid; gap: 14px; }
+.salesman-section-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.salesman-section-head h2 { margin: 0; }
+.salesman-section-head span { display: block; color: var(--muted); margin-top: 3px; font-size: 13px; font-weight: 650; }
+.salesman-section-head strong { padding: 6px 10px; border-radius: 999px; background: #f1f5f9; color: #0f172a; font-size: 12px; white-space: nowrap; }
+.salesman-workload-bar { height: 22px; display: flex; overflow: hidden; border-radius: 999px; background: #e5e7eb; border: 1px solid #dbe4ef; }
+.salesman-workload-bar i { display: block; min-width: 0; }
+.salesman-workload-bar .urgent, .salesman-legend .urgent { background: #ef4444; }
+.salesman-workload-bar .regular, .salesman-legend .regular { background: #3b82f6; }
+.salesman-workload-bar .shipment, .salesman-legend .shipment { background: #22c55e; }
+.salesman-legend { display: flex; flex-wrap: wrap; gap: 10px; color: #475569; font-size: 13px; font-weight: 750; }
+.salesman-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.salesman-legend i { width: 10px; height: 10px; border-radius: 999px; }
+.salesman-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.salesman-order-panel { display: grid; gap: 14px; min-height: 260px; }
+.salesman-order-panel.urgent { background: linear-gradient(180deg, #fff7f7, #fff); border-color: #fecaca; }
+.salesman-order-panel.regular { background: linear-gradient(180deg, #eff6ff, #fff); border-color: #bfdbfe; }
+.salesman-order-panel.shipment { background: linear-gradient(180deg, #ecfdf5, #fff); border-color: #bbf7d0; }
+.salesman-order-list { display: grid; gap: 10px; }
+.salesman-mini-order { display: grid; gap: 7px; padding: 12px; border-radius: 18px; background: rgba(255,255,255,.86); border: 1px solid #e5edf6; box-shadow: 0 12px 26px rgba(15,23,42,.06); }
+.salesman-mini-order > div { display: flex; justify-content: space-between; gap: 10px; align-items: start; }
+.salesman-mini-order strong { color: #0f172a; font-size: 14px; }
+.salesman-mini-order span { color: #475569; font-size: 12px; font-weight: 650; text-align: right; }
+.salesman-mini-order em { justify-self: start; padding: 5px 8px; border-radius: 999px; background: #f8fafc; color: #334155; font-size: 11px; font-style: normal; font-weight: 850; }
+.salesman-mini-order p { margin: 0; color: #64748b; font-size: 12px; line-height: 1.4; }
+@media (max-width: 1100px) { .salesman-metric-grid, .salesman-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .salesman-hero { align-items: stretch; flex-direction: column; padding: 18px; } .salesman-metric-grid, .salesman-columns { grid-template-columns: 1fr; } .salesman-mini-order > div { display: grid; } .salesman-mini-order span { text-align: left; } }
 

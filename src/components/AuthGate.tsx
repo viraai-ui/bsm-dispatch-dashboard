@@ -10,7 +10,7 @@ const dispatchOnlyPath = '/packaging-tv'
 const mediaOnlyPath = '/media-proof'
 const databaseOnlyPath = '/database'
 const mediaAllowedPaths = ['/media-proof']
-const adminOnlyPaths: string[] = []
+const adminOnlyPaths: string[] = ['/salesman-view']
 function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : role === 'Database' ? databaseOnlyPath : '/' }
 
 export function useAuth() {
