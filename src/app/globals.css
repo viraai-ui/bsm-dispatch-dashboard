@@ -484,7 +484,17 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .modal-head h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 44px); letter-spacing: -.06em; }
 .details-grid { margin-bottom: 18px; }
 .info-tile { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: #fff; display: grid; gap: 5px; }
-.info-tile span { color: var(--muted); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.info-tile span { color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.info-tile strong { color: #111827; font-weight: 600; }
+.database-shipment-section .info-tile strong,
+.order-modal .details-grid .info-tile strong { font-weight: 600; }
+.order-modal .modal-head p,
+.order-modal .database-units-table td,
+.order-modal .database-unit-name,
+.order-modal .database-shipment-section { font-weight: 500; }
+.order-modal .database-units-table th { font-weight: 800; }
+.order-modal .badge,
+.order-modal .database-video-btn { font-weight: 700; }
 .modal-section { margin-top: 18px; }
 .modal-section-title { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
 .machine-select-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
