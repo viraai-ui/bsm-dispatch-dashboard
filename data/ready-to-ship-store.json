@@ -154,6 +154,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035160002": {
+      "id": "ship-1785743166312-3heam",
+      "itemId": "1154219000035160002",
+      "orderId": "1154219000035160002",
+      "machineId": "1154219000035160002-1154219000035160005-1",
+      "salesOrderNumber": "SO-07637",
+      "customerName": "V R SEWING MACHINE",
+      "customerPhone": "",
+      "salespersonName": "Ainesh Sikdar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-03",
+      "notes": "",
+      "shippedAt": "2026-08-03T07:46:06.312Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
