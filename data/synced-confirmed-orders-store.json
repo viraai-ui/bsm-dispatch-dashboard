@@ -1,5 +1,115 @@
 {
   "orders": {
+    "1154219000035193001": {
+      "id": "1154219000035193001",
+      "zohoSalesOrderId": "1154219000035193001",
+      "salesOrderNumber": "SO-07639",
+      "status": "open",
+      "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+      "shippingAddress": "7/313, NH 17, P.O. KOLATHARA, Kozhikode, Kerala, 673655, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035193004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "DRUM TYPE BLADDER",
+          "quantity": 4,
+          "pendingQuantity": 4,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035193001-1154219000035193004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035193001",
+          "lineItemId": "1154219000035193004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07639",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "DRUM TYPE BLADDER"
+        },
+        {
+          "id": "1154219000035193001-1154219000035193004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035193001",
+          "lineItemId": "1154219000035193004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07639",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "DRUM TYPE BLADDER"
+        },
+        {
+          "id": "1154219000035193001-1154219000035193004-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035193001",
+          "lineItemId": "1154219000035193004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07639",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "DRUM TYPE BLADDER"
+        },
+        {
+          "id": "1154219000035193001-1154219000035193004-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035193001",
+          "lineItemId": "1154219000035193004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "VEEKESY ELASTOMERS PVT LTD (NH-17, PO Kolathara Calicut)",
+          "salesOrderNumber": "SO-07639",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "DRUM TYPE BLADDER"
+        }
+      ]
+    },
     "1154219000035077002": {
       "id": "1154219000035077002",
       "zohoSalesOrderId": "1154219000035077002",
@@ -3800,6 +3910,7 @@
     }
   },
   "orderIds": [
+    "1154219000035193001",
     "1154219000035077002",
     "1154219000035089003",
     "1154219000035068003",
@@ -3842,8 +3953,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-03T09:45:36.102Z",
-  "lastAttemptAt": "2026-08-03T10:32:02.533Z",
+  "lastSuccessfulSyncAt": "2026-08-03T10:32:26.886Z",
+  "lastAttemptAt": "2026-08-03T10:32:26.886Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
