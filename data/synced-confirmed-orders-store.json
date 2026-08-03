@@ -1,5 +1,260 @@
 {
   "orders": {
+    "1154219000035149002": {
+      "id": "1154219000035149002",
+      "zohoSalesOrderId": "1154219000035149002",
+      "salesOrderNumber": "SO-07636",
+      "status": "open",
+      "customerName": "JMDI SAFEZONE LLP",
+      "shippingAddress": "Plot No-300E, EPIP HSIIDC KUNDLI, SEC-53 PHASE-III, Kundli Industrial Area,, Sonipat, Haryana, 131028, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035149005",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035149002-1154219000035149005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035149002",
+          "lineItemId": "1154219000035149005",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "customerName": "JMDI SAFEZONE LLP",
+          "salesOrderNumber": "SO-07636",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035077002": {
+      "id": "1154219000035077002",
+      "zohoSalesOrderId": "1154219000035077002",
+      "salesOrderNumber": "SO-07635",
+      "status": "open",
+      "customerName": "Unique Star International",
+      "shippingAddress": "Pardevan Purwa 383-J1, Lal Bangla,, Kanpur Nagar, Uttar Pradesh, 208010",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035077005",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035077002-1154219000035077005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035077002",
+          "lineItemId": "1154219000035077005",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "Unique Star International",
+          "salesOrderNumber": "SO-07635",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035077002-1154219000035077005-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035077002",
+          "lineItemId": "1154219000035077005",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "Unique Star International",
+          "salesOrderNumber": "SO-07635",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035089003": {
+      "id": "1154219000035089003",
+      "zohoSalesOrderId": "1154219000035089003",
+      "salesOrderNumber": "SO-07634",
+      "status": "open",
+      "customerName": "Rajender Goyal Ji",
+      "shippingAddress": "Sec-4, Bhawana Industrial Area, Delhi",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035089006",
+          "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 18 Inch)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035089007",
+          "itemName": "Flatbed Single needle",
+          "sku": "202",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035089008",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035089009",
+          "itemName": "Compressor (2 Hp)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035089003-1154219000035089006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035089003",
+          "lineItemId": "1154219000035089006",
+          "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 18 Inch)",
+          "sku": "",
+          "customerName": "Rajender Goyal Ji",
+          "salesOrderNumber": "SO-07634",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035089003-1154219000035089007-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035089003",
+          "lineItemId": "1154219000035089007",
+          "itemName": "Flatbed Single needle",
+          "sku": "202",
+          "customerName": "Rajender Goyal Ji",
+          "salesOrderNumber": "SO-07634",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035089003-1154219000035089008-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035089003",
+          "lineItemId": "1154219000035089008",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "customerName": "Rajender Goyal Ji",
+          "salesOrderNumber": "SO-07634",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035089003-1154219000035089009-1",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035089003",
+          "lineItemId": "1154219000035089009",
+          "itemName": "Compressor (2 Hp)",
+          "sku": "",
+          "customerName": "Rajender Goyal Ji",
+          "salesOrderNumber": "SO-07634",
+          "deliveryDate": "2026-08-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035095206": {
       "id": "1154219000035095206",
       "zohoSalesOrderId": "1154219000035095206",
@@ -3717,6 +3972,9 @@
     }
   },
   "orderIds": [
+    "1154219000035149002",
+    "1154219000035077002",
+    "1154219000035089003",
     "1154219000035095206",
     "1154219000035068003",
     "1154219000035041199",
@@ -3759,8 +4017,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-02T17:49:09.130Z",
-  "lastAttemptAt": "2026-08-03T05:31:31.881Z",
+  "lastSuccessfulSyncAt": "2026-08-03T05:31:58.406Z",
+  "lastAttemptAt": "2026-08-03T05:31:58.406Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
