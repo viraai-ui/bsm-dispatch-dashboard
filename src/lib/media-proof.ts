@@ -99,8 +99,15 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const orders = sourceOrders
     .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))
     .filter((order) => order.machines.length > 0)
-    .filter((order) => !store.records[order.id]?.submittedAt)
-    .sort((a, b) => (sortTimeByOrderId.get(b.id) || 0) - (sortTimeByOrderId.get(a.id) || 0))
+    .filter((order) => stage === 'packing' ? !completed[order.id] : !store.records[order.id]?.submittedAt)
+    .sort((a, b) => {
+      if (stage === 'packing') {
+        const aSubmitted = Boolean(store.records[a.id]?.submittedAt)
+        const bSubmitted = Boolean(store.records[b.id]?.submittedAt)
+        if (aSubmitted !== bSubmitted) return aSubmitted ? 1 : -1
+      }
+      return (sortTimeByOrderId.get(b.id) || 0) - (sortTimeByOrderId.get(a.id) || 0)
+    })
   return { orders, records: store.records }
 }
 
