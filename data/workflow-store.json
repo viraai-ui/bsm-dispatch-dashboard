@@ -4111,7 +4111,7 @@
           "vendor": "Ishu"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035041199": {
       "salesOrderId": "1154219000035041199",
@@ -4193,7 +4193,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035149002": {
       "salesOrderId": "1154219000035149002",
@@ -4742,7 +4742,7 @@
       "salesOrderId": "1154219000035068003",
       "salesOrderNumber": "SO-07632",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-03T10:02:33.040Z",
       "processedOrder": {
         "id": "1154219000035068003",
@@ -4807,7 +4807,8 @@
           "dispatchNote": "wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 3
     }
   }
 }
