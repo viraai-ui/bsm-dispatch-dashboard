@@ -374,6 +374,31 @@
       "submittedAt": null,
       "units": {},
       "videoNotRequired": false
+    },
+    "1154219000035025028": {
+      "orderId": "1154219000035025028",
+      "salesOrderNumber": "SO-07625",
+      "submittedAt": null,
+      "units": {
+        "1154219000035025028-1154219000035025031-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035025028-1154219000035025031-1-video-1785743045933-wc0un1",
+              "name": "VID_20260803_131346.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-03%2FSO-07625%2FTravel%20head%20cutting%20press%2025%20ton%20Heavy-duty%20Single%20Phase-1154219000035025028-1154219000035025031-1-2026-08-03T07-43-51-960Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-03/SO-07625/Travel head cutting press 25 ton Heavy-duty Single Phase-1154219000035025028-1154219000035025031-1-2026-08-03T07-43-51-960Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-03T07:44:05.933Z",
+              "expiresAt": "2026-09-02T07:43:51.961Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
