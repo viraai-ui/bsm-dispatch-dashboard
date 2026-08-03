@@ -2773,22 +2773,22 @@
         "1154219000035160002-1154219000035160005-1"
       ]
     },
-    "1154219000035025028": {
-      "completedAt": "2026-08-03T07:49:06.269Z",
+    "1154219000035177001": {
+      "completedAt": "2026-08-03T09:01:37.604063Z",
       "order": {
-        "id": "1154219000035025028",
-        "zohoSalesOrderId": "1154219000035025028",
-        "salesOrderNumber": "SO-07625",
+        "id": "1154219000035177001",
+        "zohoSalesOrderId": "1154219000035177001",
+        "salesOrderNumber": "SO-07638",
         "status": "open",
-        "customerName": "SHRI SHYAM UPPER",
-        "shippingAddress": "1st floor, KH NO 535, Rohtak Road, Mundka, New Delhi, West Delhi,, Delhi,, 110041, India",
+        "customerName": "SWAMI UPPER",
+        "shippingAddress": "GROUND FLOOR, KHASRA NO 535,, ROHTAK ROAD, Mundka, New Delhi, West Delhi,, Delhi, 110041, India",
         "salesperson": "Karan Singh",
-        "deliveryDate": "2026-07-31",
-        "dashboardStatus": "Not Generated",
+        "deliveryDate": "2026-08-03",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
-            "id": "1154219000035025031",
+            "id": "1154219000035177004",
             "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
             "sku": "",
             "description": "",
@@ -2798,7 +2798,7 @@
             "dispatchCategory": "machine"
           },
           {
-            "id": "1154219000035025032",
+            "id": "1154219000035177005",
             "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
             "sku": "PP Board 60*20*3",
             "description": "",
@@ -2810,17 +2810,17 @@
         ],
         "machines": [
           {
-            "id": "1154219000035025028-1154219000035025031-1",
+            "id": "1154219000035177001-1154219000035177004-1",
             "unitNumber": 1,
             "serialNumber": "26270825",
             "qrToken": "26270825",
-            "orderId": "1154219000035025028",
-            "lineItemId": "1154219000035025031",
+            "orderId": "1154219000035177001",
+            "lineItemId": "1154219000035177004",
             "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
             "sku": "",
-            "customerName": "SHRI SHYAM UPPER",
-            "salesOrderNumber": "SO-07625",
-            "deliveryDate": "2026-07-31",
+            "customerName": "SWAMI UPPER",
+            "salesOrderNumber": "SO-07638",
+            "deliveryDate": "2026-08-03",
             "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
@@ -2830,14 +2830,12 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "warrantyStart": "2026-08-01",
-            "dispatchNote": "Local"
+            "vendor": "Siphone"
           }
-        ],
-        "dispatchPriority": "urgent",
-        "dispatchSortOrder": 2
+        ]
       },
       "machineIds": [
-        "1154219000035025028-1154219000035025031-1"
+        "1154219000035177001-1154219000035177004-1"
       ]
     }
   }
