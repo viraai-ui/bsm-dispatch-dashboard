@@ -467,6 +467,31 @@
           ]
         }
       }
+    },
+    "1154219000035041199": {
+      "orderId": "1154219000035041199",
+      "salesOrderNumber": "SO-07631",
+      "submittedAt": null,
+      "units": {
+        "1154219000035041199-1154219000035041204-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035041199-1154219000035041204-1-video-1785749380647-cn7xge",
+              "name": "VID_20260803_145922.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-03%2FSO-07631%2FLatex%20Glue%20Applicator%20with%20Double%20Rollers%2016%204%20inch-1154219000035041199-1154219000035041204-1-2026-08-03T09-29-27-977Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-03/SO-07631/Latex Glue Applicator with Double Rollers 16 4 inch-1154219000035041199-1154219000035041204-1-2026-08-03T09-29-27-977Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-03T09:29:40.647Z",
+              "expiresAt": "2026-09-02T09:29:27.978Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
