@@ -372,7 +372,26 @@
       "orderId": "1154219000035089003",
       "salesOrderNumber": "SO-07634",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000035089003-1154219000035089006-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035089003-1154219000035089006-1-video-1785742180159-gcty9m",
+              "name": "VID_20260803_125934.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-03%2FSO-07634%2FSingle%20Needle%20High%20Post%20Bed%2028%20Inch%20Body%20Gap%2018%20Inch-1154219000035089003-1154219000035089006-1-2026-08-03T07-29-37-326Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-03/SO-07634/Single Needle High Post Bed 28 Inch Body Gap 18 Inch-1154219000035089003-1154219000035089006-1-2026-08-03T07-29-37-326Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-03T07:29:40.159Z",
+              "expiresAt": "2026-09-02T07:29:37.326Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     }
   }
