@@ -75,7 +75,7 @@
       "salesOrderId": "1154219000034608001",
       "salesOrderNumber": "SO-07550",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-03T08:27:14.328Z",
       "processedOrder": {
         "id": "1154219000034608001",
@@ -140,7 +140,8 @@
           "dispatchNote": "wooden",
           "vendor": "B E"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000034515009": {
       "salesOrderId": "1154219000034515009",
@@ -4371,7 +4372,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035089003": {
       "salesOrderId": "1154219000035089003",
