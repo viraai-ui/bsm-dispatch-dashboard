@@ -2660,6 +2660,62 @@
       "machineIds": [
         "1154219000035011002-1154219000035011005-1"
       ]
+    },
+    "1154219000035149002": {
+      "completedAt": "2026-08-03T07:02:37.728Z",
+      "order": {
+        "id": "1154219000035149002",
+        "zohoSalesOrderId": "1154219000035149002",
+        "salesOrderNumber": "SO-07636",
+        "status": "open",
+        "customerName": "JMDI SAFEZONE LLP",
+        "shippingAddress": "Plot No-300E, EPIP HSIIDC KUNDLI, SEC-53 PHASE-III, Kundli Industrial Area,, Sonipat, Haryana, 131028, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035149005",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035149002-1154219000035149005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270831",
+            "qrToken": "26270831",
+            "orderId": "1154219000035149002",
+            "lineItemId": "1154219000035149005",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "JMDI SAFEZONE LLP",
+            "salesOrderNumber": "SO-07636",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035149002-1154219000035149005-1"
+      ]
     }
   }
 }
