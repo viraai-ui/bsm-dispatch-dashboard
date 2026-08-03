@@ -92,6 +92,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035011002": {
+      "id": "ship-1785742745208-w2htg",
+      "itemId": "1154219000035011002",
+      "orderId": "1154219000035011002",
+      "machineId": "1154219000035011002-1154219000035011005-1",
+      "salesOrderNumber": "SO-07622",
+      "customerName": "Sports Valley",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "8375074070",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-03",
+      "notes": "",
+      "shippedAt": "2026-08-03T07:39:05.208Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
