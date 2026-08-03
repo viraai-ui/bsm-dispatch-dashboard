@@ -78,53 +78,6 @@
         }
       ]
     },
-    "1154219000035160002": {
-      "id": "1154219000035160002",
-      "zohoSalesOrderId": "1154219000035160002",
-      "salesOrderNumber": "SO-07637",
-      "status": "open",
-      "customerName": "V R SEWING MACHINE",
-      "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Ainesh Sikdar",
-      "deliveryDate": "2026-08-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035160005",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035160002-1154219000035160005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035160002",
-          "lineItemId": "1154219000035160005",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "V R SEWING MACHINE",
-          "salesOrderNumber": "SO-07637",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035077002": {
       "id": "1154219000035077002",
       "zohoSalesOrderId": "1154219000035077002",
@@ -3973,7 +3926,6 @@
   },
   "orderIds": [
     "1154219000035177001",
-    "1154219000035160002",
     "1154219000035077002",
     "1154219000035089003",
     "1154219000035095206",
@@ -4017,8 +3969,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-03T08:24:12.123Z",
-  "lastAttemptAt": "2026-08-03T08:33:08.244Z",
+  "lastSuccessfulSyncAt": "2026-08-03T08:33:30.936Z",
+  "lastAttemptAt": "2026-08-03T08:33:30.936Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
