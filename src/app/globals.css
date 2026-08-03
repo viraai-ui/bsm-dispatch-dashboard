@@ -1040,6 +1040,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .ready-ship-hero { align-items: stretch; flex-direction: column; }
   .ready-ship-stats { min-width: 0; }
   .ready-ship-layout { grid-template-columns: 1fr; }
+  .ready-ship-layout > .transporter-panel { display: none !important; }
 }
 @media (max-width: 520px) {
   .ready-ship-page { gap: 12px; }
@@ -1050,7 +1051,6 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .ready-machine-name { font-size: 13px; }
   .ready-machine-meta span { font-size: 11px; padding: 4px 8px; }
   .ready-machine-actions { grid-template-columns: 1fr; }
-  .transporter-panel { margin-bottom: 10px; }
 }
 
 .ready-machine-card.shipped { border-color: #bfdbfe; background: linear-gradient(180deg,#eff6ff,#fff); }
