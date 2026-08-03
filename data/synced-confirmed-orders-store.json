@@ -1048,84 +1048,6 @@
         }
       ]
     },
-    "1154219000034756004": {
-      "id": "1154219000034756004",
-      "zohoSalesOrderId": "1154219000034756004",
-      "salesOrderNumber": "SO-07577",
-      "status": "open",
-      "customerName": "Leefong Exim Pvt. Ltd.",
-      "shippingAddress": "7/717-A, Rahiman Bazar,, Kolathara, Calicut, Kerala, 673655",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-07-28",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034756007",
-          "itemName": "Travel head cutting press (25 ton) Heavy-duty",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034756008",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034756004-1154219000034756007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034756004",
-          "lineItemId": "1154219000034756007",
-          "itemName": "Travel head cutting press (25 ton) Heavy-duty",
-          "sku": "",
-          "customerName": "Leefong Exim Pvt. Ltd.",
-          "salesOrderNumber": "SO-07577",
-          "deliveryDate": "2026-07-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034756004-1154219000034756008-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034756004",
-          "lineItemId": "1154219000034756008",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "customerName": "Leefong Exim Pvt. Ltd.",
-          "salesOrderNumber": "SO-07577",
-          "deliveryDate": "2026-07-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034750001": {
       "id": "1154219000034750001",
       "zohoSalesOrderId": "1154219000034750001",
@@ -3923,7 +3845,6 @@
     "1154219000034994001",
     "1154219000034923001",
     "1154219000034749030",
-    "1154219000034756004",
     "1154219000034750001",
     "1154219000034744001",
     "1154219000034739001",
@@ -3953,8 +3874,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-03T10:35:37.811Z",
-  "lastAttemptAt": "2026-08-03T10:44:59.572Z",
+  "lastSuccessfulSyncAt": "2026-08-03T10:45:22.843Z",
+  "lastAttemptAt": "2026-08-03T10:45:22.843Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
