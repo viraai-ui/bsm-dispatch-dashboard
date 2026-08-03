@@ -2837,6 +2837,87 @@
       "machineIds": [
         "1154219000035177001-1154219000035177004-1"
       ]
+    },
+    "1154219000035077002": {
+      "completedAt": "2026-08-03T11:17:07.069Z",
+      "order": {
+        "id": "1154219000035077002",
+        "zohoSalesOrderId": "1154219000035077002",
+        "salesOrderNumber": "SO-07635",
+        "status": "open",
+        "customerName": "Unique Star International",
+        "shippingAddress": "Pardevan Purwa 383-J1, Lal Bangla,, Kanpur Nagar, Uttar Pradesh, 208010",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035077005",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035077002-1154219000035077005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270832",
+            "qrToken": "26270832",
+            "orderId": "1154219000035077002",
+            "lineItemId": "1154219000035077005",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "Unique Star International",
+            "salesOrderNumber": "SO-07635",
+            "deliveryDate": "2026-08-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "Good wrapping"
+          },
+          {
+            "id": "1154219000035077002-1154219000035077005-2",
+            "unitNumber": 2,
+            "serialNumber": "26270833",
+            "qrToken": "26270833",
+            "orderId": "1154219000035077002",
+            "lineItemId": "1154219000035077005",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "Unique Star International",
+            "salesOrderNumber": "SO-07635",
+            "deliveryDate": "2026-08-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035077002-1154219000035077005-1",
+        "1154219000035077002-1154219000035077005-2"
+      ]
     }
   }
 }
