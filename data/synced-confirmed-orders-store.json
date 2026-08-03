@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035161005": {
+      "id": "1154219000035161005",
+      "zohoSalesOrderId": "1154219000035161005",
+      "salesOrderNumber": "SO-07640",
+      "status": "open",
+      "customerName": "RNC IMPEX PRIVATE LIMITED",
+      "shippingAddress": "Khasra No. 995, Camp Road, Central Hope Town, Selaqui,, Dehradun, Uttarakhand, 248011, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035161008",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "blader Cover type",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035161009",
+          "itemName": "Freight Charge",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035161005-1154219000035161008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035161005",
+          "lineItemId": "1154219000035161008",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "RNC IMPEX PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07640",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "blader Cover type"
+        },
+        {
+          "id": "1154219000035161005-1154219000035161008-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035161005",
+          "lineItemId": "1154219000035161008",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "RNC IMPEX PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07640",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "blader Cover type"
+        }
+      ]
+    },
     "1154219000035193001": {
       "id": "1154219000035193001",
       "zohoSalesOrderId": "1154219000035193001",
@@ -3832,6 +3910,7 @@
     }
   },
   "orderIds": [
+    "1154219000035161005",
     "1154219000035193001",
     "1154219000035077002",
     "1154219000035089003",
@@ -3874,8 +3953,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-03T10:45:22.843Z",
-  "lastAttemptAt": "2026-08-03T10:59:59.307Z",
+  "lastSuccessfulSyncAt": "2026-08-03T11:00:23.866Z",
+  "lastAttemptAt": "2026-08-03T11:00:23.866Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
