@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270837,
+  "serialCounter": 26270838,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -4622,6 +4622,20 @@
           "processedAt": "2026-08-03T06:16:33.873Z",
           "dispatchNote": "local",
           "vendor": "S P Nanda"
+        }
+      }
+    },
+    "1154219000035160002": {
+      "salesOrderId": "1154219000035160002",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035160002-1154219000035160005-1": {
+          "machineUnitId": "1154219000035160002-1154219000035160005-1",
+          "lineItemId": "",
+          "serialNumber": "26270838",
+          "qrToken": "26270838",
+          "qrStatus": "pending"
         }
       }
     }
