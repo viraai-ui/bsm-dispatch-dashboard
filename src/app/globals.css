@@ -1206,6 +1206,15 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .salesman-summary-block div { display: grid; gap: 4px; }
 .salesman-summary-block strong { color: #0f172a; font-size: 36px; line-height: 1; letter-spacing: -.06em; }
 .salesman-summary-block em { color: #64748b; font-size: 12px; font-style: normal; font-weight: 600; }
+.salesman-workload-card.compact { display: grid; gap: 12px; padding: 16px 18px; }
+.salesman-workload-bar { height: 22px; display: flex; overflow: hidden; border-radius: 999px; background: #e5e7eb; border: 1px solid #dbe4ef; }
+.salesman-workload-bar i { display: block; min-width: 0; }
+.salesman-workload-bar .urgent, .salesman-legend .urgent { background: #ef4444; }
+.salesman-workload-bar .regular, .salesman-legend .regular { background: #3b82f6; }
+.salesman-workload-bar .shipment, .salesman-legend .shipment { background: #22c55e; }
+.salesman-legend { display: flex; flex-wrap: wrap; gap: 10px; color: #475569; font-size: 13px; font-weight: 750; }
+.salesman-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.salesman-legend i { width: 10px; height: 10px; border-radius: 999px; }
 .salesman-section-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .salesman-section-head h2 { margin: 0; }
 .salesman-section-head strong { padding: 6px 10px; border-radius: 999px; background: #f1f5f9; color: #0f172a; font-size: 12px; white-space: nowrap; }

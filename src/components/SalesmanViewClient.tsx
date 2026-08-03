@@ -25,6 +25,9 @@ export function SalesmanViewClient({ initialData }: { initialData: SalesmanData 
   const [data, setData] = useState(initialData)
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
+  const urgentPct = data?.totals.totalWorkloadMachines ? Math.round((data.totals.urgentMachines / data.totals.totalWorkloadMachines) * 100) : 0
+  const regularPct = data?.totals.totalWorkloadMachines ? Math.round((data.totals.regularMachines / data.totals.totalWorkloadMachines) * 100) : 0
+  const shipmentPct = data?.totals.totalWorkloadMachines ? Math.max(0, 100 - urgentPct - regularPct) : 0
 
   async function refresh() {
     setBusy(true); setMessage('')
@@ -60,6 +63,11 @@ export function SalesmanViewClient({ initialData }: { initialData: SalesmanData 
         <SummaryBlock tone="shipment" label="Ready to Ship" orders={data.totals.shipmentOrders} machines={data.totals.shipmentMachines} />
       </section>
     </div>
+
+    <section className="card salesman-workload-card compact">
+      <div className="salesman-workload-bar" aria-label="Workload split"><i className="urgent" style={{ width: `${urgentPct}%` }} /><i className="regular" style={{ width: `${regularPct}%` }} /><i className="shipment" style={{ width: `${shipmentPct}%` }} /></div>
+      <div className="salesman-legend"><span><i className="urgent" />Urgent {data.totals.urgentMachines}</span><span><i className="regular" />Regular {data.totals.regularMachines}</span><span><i className="shipment" />Shipment {data.totals.shipmentMachines}</span></div>
+    </section>
 
     <div className="salesman-columns">
       <OrderPanel title="Urgent Dispatch Orders" tone="urgent" orders={data.urgentOrders} empty="No urgent dispatch workload" />
