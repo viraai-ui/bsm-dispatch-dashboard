@@ -208,19 +208,19 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
   return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card shipment-modal">
     <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="shipment-order-context"><strong>{item.shippingAddress || 'Address not available'}</strong><div>{item.machines.map((machine) => <span key={machine.id}>{machine.itemName} · Qty 1{machine.serialNumber ? ` · Serial ${machine.serialNumber}` : ''}</span>)}</div><em>{item.packingVideoUploaded ? '✅' : '⚠️'} Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</em></div>
-    <div className="shipment-type-selector"><button type="button" className={shipmentType === 'direct' ? 'active' : ''} onClick={() => setShipmentType('direct')}>Direct</button><button type="button" className={shipmentType === 'transporter' ? 'active' : ''} onClick={() => setShipmentType('transporter')}>Transporter</button></div>
+    <div className="shipment-type-selector"><button type="button" className={shipmentType === 'direct' ? 'active' : ''} onClick={() => setShipmentType('direct')}>Direct</button><button type="button" className={shipmentType === 'transporter' ? 'active' : ''} onClick={() => setShipmentType('transporter')}>Via Transport</button></div>
     {error && <div className="form-error">{error}</div>}
     {existing && <div className="shipment-status-box"><strong>Shipment already saved</strong><span>{existing.transporterName}</span><span>{existing.vehicleNumber}</span></div>}
     <form className="shipment-form" onSubmit={submit}>
       {shipmentType === 'direct' ? <>
         <label>Dispatch Partner<select value={transporterName} onChange={(event) => { setTransporterName(event.target.value); const next = dropdownTransporters.find((entry) => entry.name === event.target.value); setTransporterPhone(next?.phone || '') }}><option value="">Select transporter</option>{dropdownTransporters.map((entry) => <option key={entry.id} value={entry.name}>{entry.name}</option>)}</select></label>
         <label>Expected Delivery<input type="date" value={expectedDelivery} onChange={(event) => setExpectedDelivery(event.target.value)} /></label>
-        <label>Vehicle Number<input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
-        <label>Driver Mobile<input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
+        <label>Vehicle Number <span className="optional-field">Optional</span><input value={vehicleNumber} onChange={(event) => setVehicleNumber(event.target.value.toUpperCase())} placeholder="DL 01 AB 1234" /></label>
+        <label>Driver Mobile <span className="optional-field">Optional</span><input value={driverPhone} onChange={(event) => setDriverPhone(event.target.value)} /></label>
         <label className="shipment-notes">Notes<input value={notes} onChange={(event) => setNotes(event.target.value)} placeholder="Optional dispatch note" /></label>
       </> : <>
         <label>Transporter Name<input value={transporterName} onChange={(event) => setTransporterName(event.target.value)} placeholder="Transporter name" /></label>
-        <label>Transporter Number<input value={transporterPhone} onChange={(event) => setTransporterPhone(event.target.value)} placeholder="Transporter number" /></label>
+        <label>Transporter Number <span className="optional-field">Optional</span><input value={transporterPhone} onChange={(event) => setTransporterPhone(event.target.value)} placeholder="Transporter number" /></label>
         <label className="shipment-notes shipment-file-field">Attach Builty/LR Copy<input type="file" accept="image/*,application/pdf" onChange={(event) => setLrFile(event.target.files?.[0] || null)} />{(lrFile || lrCopy) && <span>{lrFile?.name || lrCopy?.name}</span>}</label>
       </>}
       <div className="shipment-actions"><button className="btn light" type="button" onClick={onClose}>Cancel</button><button className="btn red" disabled={busy === 'shipment'}>{busy === 'shipment' ? 'Saving…' : existing ? 'Update Shipment' : 'Confirm Shipment'}</button></div>

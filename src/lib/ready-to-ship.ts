@@ -193,9 +193,6 @@ export async function processShipment(input: {
   const driverPhone = input.driverPhone.trim()
   const transporterName = input.transporterName.trim()
   const shipmentType = input.shipmentType || 'direct'
-  if (shipmentType === 'direct' && !vehicleNumber) throw new Error('Vehicle number is required')
-  if (shipmentType === 'direct' && !driverName) throw new Error('Driver name is required')
-  if (shipmentType === 'direct' && !driverPhone) throw new Error('Driver phone is required')
   if (!transporterName) throw new Error('Transporter name is required')
 
   const record: ShipmentRecord = {
