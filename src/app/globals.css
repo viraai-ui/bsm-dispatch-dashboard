@@ -1224,4 +1224,6 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .media-submitted-row td:first-child strong { color: #0f172a; }
 .media-mobile-order-card.submitted { background: #eafaf0 !important; background-image: none !important; border-color: #dbe4ef !important; box-shadow: 0 6px 16px rgba(15,23,42,.05) !important; }
 .media-mobile-order-card.submitted::before, .media-mobile-order-card.submitted::after { display: none !important; content: none !important; }
+.media-submitted-section-title { margin: 10px 0 2px; padding: 0 2px; color: #14532d; font-size: 15px; font-weight: 900; letter-spacing: -.02em; }
+.media-section-row td { padding: 14px 12px 8px !important; background: #fff !important; color: #14532d; font-size: 14px; font-weight: 900; border-bottom: 0 !important; }
 

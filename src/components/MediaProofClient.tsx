@@ -36,16 +36,24 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
     return mediaStatusForOrder(order, records[order.id])
   }
 
+  const pendingOrders = mode === 'packing' ? orders.filter((order) => !records[order.id]?.submittedAt) : orders
+  const submittedOrders = mode === 'packing' ? orders.filter((order) => records[order.id]?.submittedAt) : []
+
   return <>
     {error && <div className="form-error">{error}</div>}
     <section className="card media-queue-card">
       <div className="media-queue-head"><h2>{title} Queue</h2><Badge tone="blue">{orders.length} orders</Badge></div>
-      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th>{mode === 'loading' && <th>Customer</th>}<th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => { const done = Boolean(records[order.id]?.submittedAt); return <tr className={mode === 'packing' && done ? 'media-submitted-row' : ''} key={order.id}><td><strong>{order.salesOrderNumber}</strong></td>{mode === 'loading' && <td>{order.customerName}</td>}<td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>Open</button></td></tr>})}</tbody></table></div>
-      <div className="mobile-cards media-order-list">{orders.map((order) => <OrderCard key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}</div>
+      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th>{mode === 'loading' && <th>Customer</th>}<th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{pendingOrders.map((order) => <QueueRow key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}{submittedOrders.length > 0 && <tr className="media-section-row"><td colSpan={mode === 'loading' ? 5 : 4}>Submitted Videos</td></tr>}{submittedOrders.map((order) => <QueueRow key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}</tbody></table></div>
+      <div className="mobile-cards media-order-list">{pendingOrders.map((order) => <OrderCard key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}{submittedOrders.length > 0 && <div className="media-submitted-section-title">Submitted Videos</div>}{submittedOrders.map((order) => <OrderCard key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}</div>
       {!orders.length && <div className="empty-state"><strong>No orders pending</strong><span className="muted">Everything is clear here.</span></div>}
     </section>
     {active && <MediaModal order={active} record={records[active.id]} apiPath={apiPath} title={title} mode={mode} onClose={() => setActive(null)} onChanged={(record) => setRecords((prev) => ({ ...prev, [active.id]: record }))} onSubmitted={(orderId) => { setOrders((prev) => mode === 'packing' ? [...prev].sort((a, b) => a.id === orderId ? 1 : b.id === orderId ? -1 : 0) : prev.filter((order) => order.id !== orderId)); setActive(null) }} />}
   </>
+}
+
+function QueueRow({ order, record, mode, status, onOpen }: { order: Order; record?: MediaProofRecord; mode: MediaMode; status: string; onOpen: () => void }) {
+  const done = Boolean(record?.submittedAt)
+  return <tr className={mode === 'packing' && done ? 'media-submitted-row' : ''}><td><strong>{order.salesOrderNumber}</strong></td>{mode === 'loading' && <td>{order.customerName}</td>}<td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status as any)}>{status}</Badge></td><td><button className="btn light" onClick={onOpen}>Open</button></td></tr>
 }
 
 function OrderCard({ order, record, mode, status, onOpen }: { order: Order; record?: MediaProofRecord; mode: MediaMode; status: string; onOpen: () => void }) {
