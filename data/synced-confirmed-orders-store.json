@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035177001": {
+      "id": "1154219000035177001",
+      "zohoSalesOrderId": "1154219000035177001",
+      "salesOrderNumber": "SO-07638",
+      "status": "open",
+      "customerName": "SWAMI UPPER",
+      "shippingAddress": "GROUND FLOOR, KHASRA NO 535,, ROHTAK ROAD, Mundka, New Delhi, West Delhi,, Delhi, 110041, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035177004",
+          "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035177005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035177001-1154219000035177004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035177001",
+          "lineItemId": "1154219000035177004",
+          "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
+          "sku": "",
+          "customerName": "SWAMI UPPER",
+          "salesOrderNumber": "SO-07638",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035177001-1154219000035177005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035177001",
+          "lineItemId": "1154219000035177005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "SWAMI UPPER",
+          "salesOrderNumber": "SO-07638",
+          "deliveryDate": "2026-08-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035160002": {
       "id": "1154219000035160002",
       "zohoSalesOrderId": "1154219000035160002",
@@ -695,84 +773,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Pinser set"
-        }
-      ]
-    },
-    "1154219000035025028": {
-      "id": "1154219000035025028",
-      "zohoSalesOrderId": "1154219000035025028",
-      "salesOrderNumber": "SO-07625",
-      "status": "open",
-      "customerName": "SHRI SHYAM UPPER",
-      "shippingAddress": "1st floor, KH NO 535, Rohtak Road, Mundka, New Delhi, West Delhi,, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035025031",
-          "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035025032",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035025028-1154219000035025031-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035025028",
-          "lineItemId": "1154219000035025031",
-          "itemName": "Travel head cutting press (25 ton) Heavy-duty (Single Phase)",
-          "sku": "",
-          "customerName": "SHRI SHYAM UPPER",
-          "salesOrderNumber": "SO-07625",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035025028-1154219000035025032-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035025028",
-          "lineItemId": "1154219000035025032",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "customerName": "SHRI SHYAM UPPER",
-          "salesOrderNumber": "SO-07625",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -4019,6 +4019,7 @@
     }
   },
   "orderIds": [
+    "1154219000035177001",
     "1154219000035160002",
     "1154219000035149002",
     "1154219000035077002",
@@ -4029,7 +4030,6 @@
     "1154219000035063006",
     "1154219000034983522",
     "1154219000035041156",
-    "1154219000035025028",
     "1154219000035015011",
     "1154219000035011002",
     "1154219000034994001",
@@ -4065,8 +4065,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-03T07:46:48.391Z",
-  "lastAttemptAt": "2026-08-03T07:53:49.084Z",
+  "lastSuccessfulSyncAt": "2026-08-03T07:54:13.699Z",
+  "lastAttemptAt": "2026-08-03T07:54:13.699Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
