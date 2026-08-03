@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270838,
+  "serialCounter": 26270839,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -79,7 +79,9 @@
         "1154219000034608001-1154219000034608004-1": {
           "machineUnitId": "1154219000034608001-1154219000034608004-1",
           "lineItemId": "1154219000034608004",
-          "qrStatus": "pending"
+          "qrStatus": "pending",
+          "serialNumber": "26270839",
+          "qrToken": "26270839"
         }
       }
     },
