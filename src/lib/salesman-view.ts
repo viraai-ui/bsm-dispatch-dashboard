@@ -20,6 +20,7 @@ export type SalesmanDispatchOrder = {
   priority: 'urgent' | 'regular'
   machineCount: number
   machineNames: string[]
+  machineLabels: string[]
 }
 
 export type SalesmanShipmentOrder = {
@@ -31,6 +32,7 @@ export type SalesmanShipmentOrder = {
   packingVideoUploaded: boolean
   needsBuilty: boolean
   machineNames: string[]
+  machineLabels: string[]
 }
 
 export async function getSalesmanViewData() {
@@ -62,6 +64,7 @@ export async function getSalesmanViewData() {
         priority,
         machineCount: machines.length || countDispatchLineItems(order),
         machineNames: compactMachineNames(machines, order.lineItems),
+        machineLabels: compactMachineLabels(machines, order.lineItems),
       }
     })
     .filter((order) => !completed[order.id])
@@ -77,6 +80,7 @@ export async function getSalesmanViewData() {
     packingVideoUploaded: item.packingVideoUploaded,
     needsBuilty: item.shipment?.shipmentType === 'transporter' && !item.shipment.lrCopy?.url,
     machineNames: compactMachineNames(item.machines, []),
+    machineLabels: compactMachineLabels(item.machines, []),
   }))
 
   const urgentOrders = dispatchOrders.filter((order) => order.priority === 'urgent')
@@ -108,6 +112,15 @@ function sumMachines(orders: { machineCount: number }[]) { return orders.reduce(
 function compactMachineNames(machines: MachineUnit[], lineItems: OrderLineItem[]) {
   const names = machines.length ? machines.map((machine) => machine.itemName) : lineItems.filter((item) => item.dispatchCategory !== 'freight').map((item) => item.itemName)
   return [...new Set(names.filter(Boolean))].slice(0, 4)
+}
+function compactMachineLabels(machines: MachineUnit[], lineItems: OrderLineItem[]) {
+  const counts = new Map<string, number>()
+  if (machines.length) {
+    for (const machine of machines) counts.set(machine.itemName, (counts.get(machine.itemName) || 0) + 1)
+  } else {
+    for (const item of lineItems.filter((entry) => entry.dispatchCategory !== 'freight')) counts.set(item.itemName, (counts.get(item.itemName) || 0) + (item.pendingQuantity || item.quantity || 0))
+  }
+  return [...counts.entries()].filter(([name, qty]) => Boolean(name) && qty > 0).slice(0, 4).map(([name, qty]) => `${name} × ${qty}`)
 }
 function countDispatchLineItems(order: Order) {
   return (order.lineItems || []).filter((item) => item.dispatchCategory !== 'freight' && !isMachineLineItem(item)).reduce((sum, item) => sum + (item.pendingQuantity || item.quantity || 0), 0)
