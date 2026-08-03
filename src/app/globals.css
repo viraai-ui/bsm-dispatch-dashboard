@@ -745,6 +745,8 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .public-database-view { max-width: 1240px; margin: 0 auto; display: grid; gap: 14px; }
 .public-database-view .search-panel { margin-bottom: 0; }
 .public-database-view .database-list-card { margin: 0; }
+.public-salesman-shell .public-salesman-view { max-width: 1240px; margin: 0 auto; }
+.public-salesman-shell .salesman-hero { justify-content: flex-start; }
 .compact-view-btn, .tiny-view { width: auto; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 12px; }
 .mobile-card-topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .mobile-order-tap-card { cursor: pointer; }
