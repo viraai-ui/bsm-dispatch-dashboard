@@ -21,7 +21,7 @@ type SalesmanData = {
   shipmentOrders: SalesmanShipmentOrder[]
 }
 
-export function SalesmanViewClient({ initialData, publicMode = false }: { initialData: SalesmanData | null; publicMode?: boolean }) {
+export function SalesmanViewClient({ initialData, publicMode = false, title = 'Salesman View' }: { initialData: SalesmanData | null; publicMode?: boolean; title?: string }) {
   const [data, setData] = useState(initialData)
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
@@ -45,7 +45,7 @@ export function SalesmanViewClient({ initialData, publicMode = false }: { initia
 
   return <section className={`salesman-view-page clean-salesman-view ${publicMode ? 'public-salesman-view' : ''}`}>
     <header className="salesman-hero card">
-      <div><h1>Salesman View</h1></div>
+      <div><h1>{title}</h1></div>
       {!publicMode && <button className={`btn red salesman-refresh ${busy ? 'spinning' : ''}`} type="button" disabled={busy} onClick={refresh}>{busy ? 'Refreshing…' : 'Refresh'}</button>}
     </header>
     {message && <div className={message === 'Updated' ? 'form-success' : 'form-error'}>{message}</div>}
