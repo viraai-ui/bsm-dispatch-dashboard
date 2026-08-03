@@ -163,6 +163,10 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .database-video-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .database-video-btn { min-height: 38px; padding: 0 12px; border-radius: 12px; font-size: 12px; font-weight: 850; text-decoration: none; }
 .database-units-table .database-video-actions { justify-content: flex-start; }
+.database-media-cell { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.database-builty-chip { display: inline-flex; align-items: center; gap: 4px; width: max-content; max-width: 100%; min-height: 24px; padding: 4px 9px; border-radius: 999px; background: #ecfdf5; color: #047857; border: 1px solid #bbf7d0; font-size: 10px; line-height: 1; font-weight: 850; letter-spacing: .015em; white-space: nowrap; box-shadow: inset 0 1px 0 rgba(255,255,255,.72); }
+.database-builty-chip::before { content: '✓'; font-size: 10px; font-weight: 950; }
+.database-mobile-chip-row { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
 .database-result-note { color: var(--muted); font-size: 12px; font-weight: 650; }
 .database-search-input-wrap { position: relative; flex: 1 1 260px; min-width: 220px; }
 .database-search-input-wrap input { width: 100%; padding-right: 48px; }
