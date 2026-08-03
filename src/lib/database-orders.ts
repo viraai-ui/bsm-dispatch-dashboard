@@ -8,10 +8,13 @@ import { readShipmentStore } from './ready-to-ship'
 export async function loadDatabaseOrders() {
   const orders = await listSyncedOrders()
   const workflows = await listWorkflows()
-  const workflowOrderIds = new Set(Object.keys(workflows))
-  const workflowOrders = orders
-    .filter((order) => workflowOrderIds.has(order.id))
-    .map((order) => databaseOrderFromWorkflow(order, workflows[order.id]))
+  const syncedById = new Map(orders.map((order) => [order.id, order]))
+  const workflowOrders = Object.entries(workflows)
+    .map(([orderId, workflow]) => {
+      const sourceOrder = syncedById.get(orderId) || workflow.processedOrder
+      return sourceOrder ? databaseOrderFromWorkflow(sourceOrder, workflow) : null
+    })
+    .filter((order): order is Order => Boolean(order))
     .sort((a, b) => databaseSortTime(workflows[b.id], b) - databaseSortTime(workflows[a.id], a))
   const existingSerials = new Set(workflowOrders.flatMap((order) => order.machines.map((machine) => machine.serialNumber).filter(Boolean)))
   const serialSheet = await listSerialSheetDatabaseOrders(existingSerials)
@@ -45,8 +48,13 @@ function databaseOrderFromWorkflow(order: Order, workflow?: OrderWorkflow): Orde
 }
 
 function databaseSortTime(workflow: OrderWorkflow | undefined, order: Order) {
-  const machineTimes = Object.values(workflow?.machines || {}).flatMap((machine) => [machine.dispatchedAt, machine.processedAt, machine.qrGeneratedAt].filter(Boolean) as string[])
-  const value = workflow?.processedAt || machineTimes.sort().at(-1) || order.deliveryDate || ''
-  const time = Date.parse(value)
-  return Number.isFinite(time) ? time : 0
+  const values = [
+    workflow?.processedAt,
+    ...(Object.values(workflow?.machines || {}).flatMap((machine) => [machine.dispatchedAt, machine.processedAt, machine.qrGeneratedAt])),
+    order.deliveryDate,
+  ].filter(Boolean) as string[]
+  return values.reduce((latest, value) => {
+    const time = Date.parse(value)
+    return Number.isFinite(time) && time > latest ? time : latest
+  }, 0)
 }

@@ -4,7 +4,7 @@ import { readMediaProofStore } from './media-proof'
 import { buildStageMap, type OrderStage } from './order-stage'
 import { listWorkflows, type OrderWorkflow } from './workflow-store'
 
-export type MediaStatus = 'Pending' | 'Submitted'
+export type MediaStatus = 'Pending' | 'Submitted' | 'Closed'
 export type StatusTone = 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple'
 
 export type OrderStatusProjection = {
@@ -21,7 +21,7 @@ export function lifecycleLabel(stage: OrderStage) {
 }
 
 export function lifecycleTone(stage: OrderStage): StatusTone {
-  return ({ open: 'gray', processed: 'amber', packed: 'blue', packing_video: 'purple', loading_video: 'purple', closed: 'red' } as Record<OrderStage, StatusTone>)[stage]
+  return ({ open: 'gray', processed: 'amber', packed: 'blue', packing_video: 'purple', loading_video: 'purple', closed: 'green' } as Record<OrderStage, StatusTone>)[stage]
 }
 
 export function mediaStatusForOrder(order: Order, record?: MediaProofRecord): MediaStatus {
@@ -29,11 +29,11 @@ export function mediaStatusForOrder(order: Order, record?: MediaProofRecord): Me
 }
 
 export function mediaTone(status: MediaStatus): StatusTone {
-  return status === 'Submitted' ? 'green' : 'amber'
+  return status === 'Submitted' || status === 'Closed' ? 'green' : 'amber'
 }
 
 export function projectOrderStatus(order: Order, lifecycleStage: OrderStage = 'open', mediaRecord?: MediaProofRecord): OrderStatusProjection {
-  const mediaStatus = mediaStatusForOrder(order, mediaRecord)
+  const mediaStatus = lifecycleStage === 'closed' ? 'Closed' : mediaStatusForOrder(order, mediaRecord)
   return {
     lifecycleStage,
     lifecycleLabel: lifecycleLabel(lifecycleStage),
