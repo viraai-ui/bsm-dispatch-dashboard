@@ -388,6 +388,24 @@
               "expiresAt": "2026-09-02T07:59:35.189Z"
             }
           ]
+        },
+        "1154219000034983522-1154219000034983525-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000034983522-1154219000034983525-1-video-1785744035541-ffzulm",
+              "name": "VID_20260803_133023.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-03%2FSO-07628%2FManual%20Fusing%20Machine%201515%20inches-1154219000034983522-1154219000034983525-1-2026-08-03T08-00-28-020Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-03/SO-07628/Manual Fusing Machine 1515 inches-1154219000034983522-1154219000034983525-1-2026-08-03T08-00-28-020Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-03T08:00:35.541Z",
+              "expiresAt": "2026-09-02T08:00:28.020Z"
+            }
+          ]
         }
       },
       "videoNotRequired": true
