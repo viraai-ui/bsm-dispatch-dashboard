@@ -2716,6 +2716,62 @@
       "machineIds": [
         "1154219000035149002-1154219000035149005-1"
       ]
+    },
+    "1154219000035160002": {
+      "completedAt": "2026-08-03T07:02:44.934Z",
+      "order": {
+        "id": "1154219000035160002",
+        "zohoSalesOrderId": "1154219000035160002",
+        "salesOrderNumber": "SO-07637",
+        "status": "open",
+        "customerName": "V R SEWING MACHINE",
+        "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Ainesh Sikdar",
+        "deliveryDate": "2026-08-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035160005",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035160002-1154219000035160005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270838",
+            "qrToken": "26270838",
+            "orderId": "1154219000035160002",
+            "lineItemId": "1154219000035160005",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "V R SEWING MACHINE",
+            "salesOrderNumber": "SO-07637",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035160002-1154219000035160005-1"
+      ]
     }
   }
 }
