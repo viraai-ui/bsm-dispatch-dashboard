@@ -40,7 +40,7 @@ export function MediaProofClient({ initialOrders = [], initialRecords = {}, titl
     {error && <div className="form-error">{error}</div>}
     <section className="card media-queue-card">
       <div className="media-queue-head"><h2>{title} Queue</h2><Badge tone="blue">{orders.length} orders</Badge></div>
-      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th>{mode === 'loading' && <th>Customer</th>}<th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => { const done = Boolean(records[order.id]?.submittedAt); return <tr className={mode === 'packing' && done ? 'media-submitted-row' : ''} key={order.id}><td><strong>{order.salesOrderNumber}</strong></td>{mode === 'loading' && <td>{order.customerName}</td>}<td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>{mode === 'packing' && done ? 'Edit Videos' : 'Open'}</button></td></tr>})}</tbody></table></div>
+      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th>{mode === 'loading' && <th>Customer</th>}<th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{orders.map((order) => { const done = Boolean(records[order.id]?.submittedAt); return <tr className={mode === 'packing' && done ? 'media-submitted-row' : ''} key={order.id}><td><strong>{order.salesOrderNumber}</strong></td>{mode === 'loading' && <td>{order.customerName}</td>}<td>{order.deliveryDate}</td><td><Badge tone={mediaTone(status(order))}>{status(order)}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>Open</button></td></tr>})}</tbody></table></div>
       <div className="mobile-cards media-order-list">{orders.map((order) => <OrderCard key={order.id} order={order} record={records[order.id]} mode={mode} status={status(order)} onOpen={() => setActive(order)} />)}</div>
       {!orders.length && <div className="empty-state"><strong>No orders pending</strong><span className="muted">Everything is clear here.</span></div>}
     </section>
@@ -55,7 +55,7 @@ function OrderCard({ order, record, mode, status, onOpen }: { order: Order; reco
   return <article className={`card mobile-order-card media-mobile-order-card ${mode === 'packing' && done ? 'submitted' : ''}`} onClick={onOpen}>
     <div><strong>{order.salesOrderNumber}</strong><span>{mode === 'loading' ? order.customerName : (order.salesperson || 'Salesperson —')}</span></div><small className="media-count-pill">{mode === 'loading' ? `${uploaded}/${total} videos` : `${total} Item Videos`}</small>
     <div className="media-card-meta"><Badge tone={mediaTone(status as any)}>{status}</Badge></div>
-    <button className="btn light tiny-view" onClick={(event) => { event.stopPropagation(); onOpen() }}>{mode === 'packing' && done ? 'Edit Videos' : 'View'}</button>
+    <button className="btn light tiny-view" onClick={(event) => { event.stopPropagation(); onOpen() }}>View</button>
   </article>
 }
 
