@@ -286,53 +286,6 @@
         }
       ]
     },
-    "1154219000035095206": {
-      "id": "1154219000035095206",
-      "zohoSalesOrderId": "1154219000035095206",
-      "salesOrderNumber": "SO-07633",
-      "status": "open",
-      "customerName": "Sunrise Enterprises",
-      "shippingAddress": "Plot No-550 Sector-23 Faridabad-121005, MSME-UDYAM-HR-03-0012526, Haryana, 121005, India",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-08-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035095211",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035095206-1154219000035095211-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035095206",
-          "lineItemId": "1154219000035095211",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "Sunrise Enterprises",
-          "salesOrderNumber": "SO-07633",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035068003": {
       "id": "1154219000035068003",
       "zohoSalesOrderId": "1154219000035068003",
@@ -3928,7 +3881,6 @@
     "1154219000035177001",
     "1154219000035077002",
     "1154219000035089003",
-    "1154219000035095206",
     "1154219000035068003",
     "1154219000035041199",
     "1154219000035063006",
@@ -3969,8 +3921,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-03T08:33:30.936Z",
-  "lastAttemptAt": "2026-08-03T08:38:50.472Z",
+  "lastSuccessfulSyncAt": "2026-08-03T08:39:14.087Z",
+  "lastAttemptAt": "2026-08-03T08:39:14.087Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
