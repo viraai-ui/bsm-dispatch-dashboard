@@ -2603,6 +2603,63 @@
         "1154219000035015011-1154219000035015014-1",
         "1154219000035015011-1154219000035015015-1"
       ]
+    },
+    "1154219000035011002": {
+      "completedAt": "2026-08-03T05:43:07.057Z",
+      "order": {
+        "id": "1154219000035011002",
+        "zohoSalesOrderId": "1154219000035011002",
+        "salesOrderNumber": "SO-07622",
+        "status": "open",
+        "customerName": "Sports Valley",
+        "shippingAddress": "1863, Tiruchi Road, Ramanthapuram Signal Coiatore, Tamil Nadu, 641045",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035011005",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035011002-1154219000035011005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270816",
+            "qrToken": "26270816",
+            "orderId": "1154219000035011002",
+            "lineItemId": "1154219000035011005",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Sports Valley",
+            "salesOrderNumber": "SO-07622",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035011002-1154219000035011005-1"
+      ]
     }
   }
 }
