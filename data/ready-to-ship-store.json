@@ -123,6 +123,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035015011": {
+      "id": "ship-1785743104030-uur27",
+      "itemId": "1154219000035015011",
+      "orderId": "1154219000035015011",
+      "machineId": "1154219000035015011-1154219000035015014-1",
+      "salesOrderNumber": "SO-07624",
+      "customerName": "JAGRIYA ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Maa Bhagwati freight carrier",
+      "transporterPhone": "9953121332",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-03",
+      "notes": "",
+      "shippedAt": "2026-08-03T07:45:04.030Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
