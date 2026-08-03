@@ -52,14 +52,14 @@ export function SalesmanViewClient({ initialData }: { initialData: SalesmanData 
 
     <div className="salesman-summary-grid">
       <section className="card salesman-summary-card dispatch">
-        <div className="salesman-section-head"><h2>Dispatch Orders</h2><strong>{data.totals.dispatchOrders} SO</strong></div>
+        <div className="salesman-section-head"><h2>Dispatch Orders</h2><strong>{data.totals.dispatchOrders} Sales Orders • {data.totals.dispatchMachines} Machines</strong></div>
         <div className="salesman-summary-split">
           <SummaryBlock tone="urgent" label="Urgent" orders={data.totals.urgentOrders} machines={data.totals.urgentMachines} />
           <SummaryBlock tone="regular" label="Regular" orders={data.totals.regularOrders} machines={data.totals.regularMachines} />
         </div>
       </section>
       <section className="card salesman-summary-card shipment">
-        <div className="salesman-section-head"><h2>Shipment Queue</h2><strong>{data.totals.shipmentOrders} SO</strong></div>
+        <div className="salesman-section-head"><h2>Shipment Queue</h2><strong>{data.totals.shipmentOrders} Sales Orders • {data.totals.shipmentMachines} Machines</strong></div>
         <SummaryBlock tone="shipment" label="Ready to Ship" orders={data.totals.shipmentOrders} machines={data.totals.shipmentMachines} />
       </section>
     </div>
