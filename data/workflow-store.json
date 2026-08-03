@@ -3976,7 +3976,7 @@
           "vendor": "Siphone"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000034983522": {
       "salesOrderId": "1154219000034983522",
@@ -4156,7 +4156,7 @@
           "vendor": "Ishu"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035041199": {
       "salesOrderId": "1154219000035041199",
@@ -4314,7 +4314,7 @@
       "salesOrderId": "1154219000035077002",
       "salesOrderNumber": "SO-07635",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-03T06:06:27.144Z",
       "processedOrder": {
         "id": "1154219000035077002",
@@ -4415,7 +4415,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035089003": {
       "salesOrderId": "1154219000035089003",
