@@ -4,7 +4,7 @@ import { readMediaProofStore } from './media-proof'
 import { buildStageMap, type OrderStage } from './order-stage'
 import { listWorkflows, type OrderWorkflow } from './workflow-store'
 
-export type MediaStatus = 'No Media' | 'Pending' | 'Ready' | 'Submitted'
+export type MediaStatus = 'Pending' | 'Submitted'
 export type StatusTone = 'red' | 'green' | 'amber' | 'blue' | 'gray' | 'purple'
 
 export type OrderStatusProjection = {
@@ -25,14 +25,11 @@ export function lifecycleTone(stage: OrderStage): StatusTone {
 }
 
 export function mediaStatusForOrder(order: Order, record?: MediaProofRecord): MediaStatus {
-  if (record?.submittedAt) return 'Submitted'
-  if (!record) return 'No Media'
-  const ready = order.machines.length > 0 && order.machines.every((machine) => (record.units?.[machine.id]?.videos?.length || 0) > 0)
-  return ready ? 'Ready' : 'Pending'
+  return record?.submittedAt ? 'Submitted' : 'Pending'
 }
 
 export function mediaTone(status: MediaStatus): StatusTone {
-  return status === 'Submitted' ? 'green' : status === 'Ready' ? 'blue' : status === 'Pending' ? 'amber' : 'gray'
+  return status === 'Submitted' ? 'green' : 'amber'
 }
 
 export function projectOrderStatus(order: Order, lifecycleStage: OrderStage = 'open', mediaRecord?: MediaProofRecord): OrderStatusProjection {
