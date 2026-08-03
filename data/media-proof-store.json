@@ -535,6 +535,31 @@
           ]
         }
       }
+    },
+    "1154219000035068003": {
+      "orderId": "1154219000035068003",
+      "salesOrderNumber": "SO-07632",
+      "submittedAt": null,
+      "units": {
+        "1154219000035068003-1154219000035068006-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035068003-1154219000035068006-1-video-1785753801562-52yph2",
+              "name": "VID_20260803_161305.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-03%2FSO-07632%2FFoil%20Stamping%20machine-1154219000035068003-1154219000035068006-1-2026-08-03T10-43-09-782Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-03/SO-07632/Foil Stamping machine-1154219000035068003-1154219000035068006-1-2026-08-03T10-43-09-782Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-03T10:43:21.562Z",
+              "expiresAt": "2026-09-02T10:43:09.782Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
