@@ -342,6 +342,31 @@
         }
       },
       "videoNotRequired": true
+    },
+    "1154219000035149002": {
+      "orderId": "1154219000035149002",
+      "salesOrderNumber": "SO-07636",
+      "submittedAt": null,
+      "units": {
+        "1154219000035149002-1154219000035149005-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035149002-1154219000035149005-1-video-1785740261765-4db5i8",
+              "name": "VID_20260803_122731.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-03%2FSO-07636%2FFlesh%20trimming%20Machine-1154219000035149002-1154219000035149005-1-2026-08-03T06-57-35-476Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-03/SO-07636/Flesh trimming Machine-1154219000035149002-1154219000035149005-1-2026-08-03T06-57-35-476Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-03T06:57:41.765Z",
+              "expiresAt": "2026-09-02T06:57:35.476Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
