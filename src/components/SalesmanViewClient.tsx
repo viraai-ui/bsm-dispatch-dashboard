@@ -64,7 +64,8 @@ export function SalesmanViewClient({ initialData }: { initialData: SalesmanData 
       </section>
     </div>
 
-    <section className="card salesman-workload-card compact">
+    <section className="card salesman-workload-card compact glass">
+      <div className="salesman-workload-title"><h2>Workload Split</h2><strong>{data.totals.totalWorkloadMachines} machines</strong></div>
       <div className="salesman-workload-bar" aria-label="Workload split"><i className="urgent" style={{ width: `${urgentPct}%` }} /><i className="regular" style={{ width: `${regularPct}%` }} /><i className="shipment" style={{ width: `${shipmentPct}%` }} /></div>
       <div className="salesman-legend"><span><i className="urgent" />Urgent {data.totals.urgentMachines}</span><span><i className="regular" />Regular {data.totals.regularMachines}</span><span><i className="shipment" />Shipment {data.totals.shipmentMachines}</span></div>
     </section>
