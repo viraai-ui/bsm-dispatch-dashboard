@@ -2985,6 +2985,135 @@
       "machineIds": [
         "1154219000035041199-1154219000035041204-1"
       ]
+    },
+    "1154219000034983522": {
+      "completedAt": "2026-08-03T11:17:30.795Z",
+      "order": {
+        "id": "1154219000034983522",
+        "zohoSalesOrderId": "1154219000034983522",
+        "salesOrderNumber": "SO-07628",
+        "status": "open",
+        "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+        "shippingAddress": "PO Bastara, 13th Milestone, G.T. Road, Libertypuram, Kutali, Karnal-132114, Haryana",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-08-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034983525",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 4,
+            "pendingQuantity": 4,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034983522-1154219000034983525-1",
+            "unitNumber": 1,
+            "serialNumber": "26270826",
+            "qrToken": "26270826",
+            "orderId": "1154219000034983522",
+            "lineItemId": "1154219000034983525",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+            "salesOrderNumber": "SO-07628",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-01",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000034983522-1154219000034983525-2",
+            "unitNumber": 2,
+            "serialNumber": "26270827",
+            "qrToken": "26270827",
+            "orderId": "1154219000034983522",
+            "lineItemId": "1154219000034983525",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+            "salesOrderNumber": "SO-07628",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-01",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000034983522-1154219000034983525-3",
+            "unitNumber": 3,
+            "serialNumber": "26270828",
+            "qrToken": "26270828",
+            "orderId": "1154219000034983522",
+            "lineItemId": "1154219000034983525",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+            "salesOrderNumber": "SO-07628",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-01",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000034983522-1154219000034983525-4",
+            "unitNumber": 4,
+            "serialNumber": "26270829",
+            "qrToken": "26270829",
+            "orderId": "1154219000034983522",
+            "lineItemId": "1154219000034983525",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+            "salesOrderNumber": "SO-07628",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-01",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000034983522-1154219000034983525-1",
+        "1154219000034983522-1154219000034983525-2",
+        "1154219000034983522-1154219000034983525-3",
+        "1154219000034983522-1154219000034983525-4"
+      ]
     }
   }
 }
