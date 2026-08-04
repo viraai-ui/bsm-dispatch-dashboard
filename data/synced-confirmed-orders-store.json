@@ -1,5 +1,109 @@
 {
   "orders": {
+    "1154219000035159005": {
+      "id": "1154219000035159005",
+      "zohoSalesOrderId": "1154219000035159005",
+      "salesOrderNumber": "SO-07646",
+      "status": "open",
+      "customerName": "RANDHAWA FABRICATIONS",
+      "shippingAddress": "OLD SULAR, OLD SULAR, Patiala, Punjab, 147001, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035159008",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035159005-1154219000035159008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035159005",
+          "lineItemId": "1154219000035159008",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "RANDHAWA FABRICATIONS",
+          "salesOrderNumber": "SO-07646",
+          "deliveryDate": "2026-08-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035150004": {
+      "id": "1154219000035150004",
+      "zohoSalesOrderId": "1154219000035150004",
+      "salesOrderNumber": "SO-07645",
+      "status": "open",
+      "customerName": "M/S JAVA SPORTS PRIVATE LIMITED",
+      "shippingAddress": "Ground Floor, Trina Mukherjee, Post Office Building, Jamal Road, Exhibition Road, Phulwari, Patna, Bihar, 800001, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035150007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Heater stemar machine",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035150008",
+          "itemName": "Freight Charge",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035150004-1154219000035150007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035150004",
+          "lineItemId": "1154219000035150007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "M/S JAVA SPORTS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07645",
+          "deliveryDate": "2026-08-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heater stemar machine"
+        }
+      ]
+    },
     "1154219000035191018": {
       "id": "1154219000035191018",
       "zohoSalesOrderId": "1154219000035191018",
@@ -4472,6 +4576,8 @@
     }
   },
   "orderIds": [
+    "1154219000035159005",
+    "1154219000035150004",
     "1154219000035191018",
     "1154219000035179002",
     "1154219000035185002",
@@ -4514,8 +4620,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-04T07:21:09.936Z",
-  "lastAttemptAt": "2026-08-04T07:35:44.712Z",
+  "lastSuccessfulSyncAt": "2026-08-04T07:36:09.598Z",
+  "lastAttemptAt": "2026-08-04T07:36:09.598Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
