@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270841,
+  "serialCounter": 26270842,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -4890,6 +4890,20 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035179002": {
+      "salesOrderId": "1154219000035179002",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035179002-1154219000035179005-1": {
+          "machineUnitId": "1154219000035179002-1154219000035179005-1",
+          "lineItemId": "",
+          "serialNumber": "26270842",
+          "qrToken": "26270842",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
