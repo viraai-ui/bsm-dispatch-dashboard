@@ -469,6 +469,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035159005": {
+      "id": "ship-1785832827201-k192d",
+      "itemId": "1154219000035159005",
+      "orderId": "1154219000035159005",
+      "machineId": "1154219000035159005-1154219000035159008-1",
+      "salesOrderNumber": "SO-07646",
+      "customerName": "RANDHAWA FABRICATIONS",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T08:40:27.201Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
