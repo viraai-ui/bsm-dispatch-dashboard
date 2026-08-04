@@ -290,6 +290,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035077002": {
+      "id": "ship-1785822730259-qu65e",
+      "itemId": "1154219000035077002",
+      "orderId": "1154219000035077002",
+      "machineId": "1154219000035077002-1154219000035077005-1",
+      "salesOrderNumber": "SO-07635",
+      "customerName": "Unique Star International",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Baba Impex Carriers",
+      "transporterPhone": "8960311587",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-04 at 10.23.23 AM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-04%2FSO-07635%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-04T05-52-08-552Z.jpeg",
+        "r2Key": "media-proof/2026-08-04/SO-07635/Shipment LR Builty-shipment-lr-builty-2026-08-04T05-52-08-552Z.jpeg",
+        "expiresAt": "2026-10-03T05:52:08.552Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T05:52:10.259Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
