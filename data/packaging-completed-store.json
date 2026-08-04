@@ -3171,6 +3171,63 @@
       "machineIds": [
         "1154219000035068003-1154219000035068006-1"
       ]
+    },
+    "1154219000035159005": {
+      "completedAt": "2026-08-04T08:18:13.610Z",
+      "order": {
+        "id": "1154219000035159005",
+        "zohoSalesOrderId": "1154219000035159005",
+        "salesOrderNumber": "SO-07646",
+        "status": "open",
+        "customerName": "RANDHAWA FABRICATIONS",
+        "shippingAddress": "OLD SULAR, OLD SULAR, Patiala, Punjab, 147001, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035159008",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035159005-1154219000035159008-1",
+            "unitNumber": 1,
+            "serialNumber": "26270844",
+            "qrToken": "26270844",
+            "orderId": "1154219000035159005",
+            "lineItemId": "1154219000035159008",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "RANDHAWA FABRICATIONS",
+            "salesOrderNumber": "SO-07646",
+            "deliveryDate": "2026-08-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-04",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035159005-1154219000035159008-1"
+      ]
     }
   }
 }
