@@ -259,6 +259,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000034983522": {
+      "id": "ship-1785822052380-gg25u",
+      "itemId": "1154219000034983522",
+      "orderId": "1154219000034983522",
+      "machineId": "1154219000034983522-1154219000034983525-1",
+      "salesOrderNumber": "SO-07628",
+      "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+      "customerPhone": "",
+      "salespersonName": "Manoj Sir",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T05:40:52.380Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
