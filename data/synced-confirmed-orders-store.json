@@ -1187,53 +1187,6 @@
         }
       ]
     },
-    "1154219000035068003": {
-      "id": "1154219000035068003",
-      "zohoSalesOrderId": "1154219000035068003",
-      "salesOrderNumber": "SO-07632",
-      "status": "open",
-      "customerName": "YUGADHARMA TRADERS",
-      "shippingAddress": "1, GARDEN VIEW, OPP. KALAGHODA CIRCLE, SAYAJIGUNJ, VADODARA, Vadodara, Gujarat, 390005",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035068006",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035068003-1154219000035068006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035068003",
-          "lineItemId": "1154219000035068006",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "YUGADHARMA TRADERS",
-          "salesOrderNumber": "SO-07632",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035063006": {
       "id": "1154219000035063006",
       "zohoSalesOrderId": "1154219000035063006",
@@ -4526,7 +4479,6 @@
     "1154219000035161005",
     "1154219000035193001",
     "1154219000035089003",
-    "1154219000035068003",
     "1154219000035063006",
     "1154219000034983522",
     "1154219000035041156",
@@ -4562,8 +4514,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-04T07:00:43.614Z",
-  "lastAttemptAt": "2026-08-04T07:20:44.438Z",
+  "lastSuccessfulSyncAt": "2026-08-04T07:21:09.936Z",
+  "lastAttemptAt": "2026-08-04T07:21:09.936Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
