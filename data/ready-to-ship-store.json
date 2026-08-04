@@ -438,6 +438,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035191018": {
+      "id": "ship-1785832112824-rglkr",
+      "itemId": "1154219000035191018",
+      "orderId": "1154219000035191018",
+      "machineId": "1154219000035191018-1154219000035191021-1",
+      "salesOrderNumber": "SO-07644",
+      "customerName": "C.K.G. Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T08:28:32.824Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
