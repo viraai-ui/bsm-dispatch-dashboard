@@ -3341,6 +3341,63 @@
       "machineIds": [
         "1154219000035191018-1154219000035191021-1"
       ]
+    },
+    "1154219000035185002": {
+      "completedAt": "2026-08-04T11:58:50.168Z",
+      "order": {
+        "id": "1154219000035185002",
+        "zohoSalesOrderId": "1154219000035185002",
+        "salesOrderNumber": "SO-07642",
+        "status": "open",
+        "customerName": "Competence Exports Pvt Ltd",
+        "shippingAddress": "B 10 EPIP, Industrial Area, Export Zone Hajipur, Bihar, 844101",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035185005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035185002-1154219000035185005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270841",
+            "qrToken": "26270841",
+            "orderId": "1154219000035185002",
+            "lineItemId": "1154219000035185005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "Competence Exports Pvt Ltd",
+            "salesOrderNumber": "SO-07642",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-04",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035185002-1154219000035185005-1"
+      ]
     }
   }
 }
