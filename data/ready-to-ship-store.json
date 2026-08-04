@@ -407,6 +407,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035179002": {
+      "id": "ship-1785832097874-680lo",
+      "itemId": "1154219000035179002",
+      "orderId": "1154219000035179002",
+      "machineId": "1154219000035179002-1154219000035179005-1",
+      "salesOrderNumber": "SO-07643",
+      "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51EV5151",
+      "driverName": "—",
+      "driverPhone": "9718713549",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T08:28:17.874Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
