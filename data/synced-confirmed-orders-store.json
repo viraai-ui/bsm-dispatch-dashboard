@@ -1140,63 +1140,6 @@
         }
       ]
     },
-    "1154219000035041199": {
-      "id": "1154219000035041199",
-      "zohoSalesOrderId": "1154219000035041199",
-      "salesOrderNumber": "SO-07631",
-      "status": "open",
-      "customerName": "SAHAI MULTIMEDIA",
-      "shippingAddress": "295/C, Sahai Nivas, Canal Road, Aluva Market, Kadungalloor, Ernakulam, Kerala, 683108, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-08-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035041204",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035041205",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charges Upto 10KM",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035041199-1154219000035041204-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035041199",
-          "lineItemId": "1154219000035041204",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "customerName": "SAHAI MULTIMEDIA",
-          "salesOrderNumber": "SO-07631",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035063006": {
       "id": "1154219000035063006",
       "zohoSalesOrderId": "1154219000035063006",
@@ -1439,53 +1382,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Pinser set"
-        }
-      ]
-    },
-    "1154219000035011002": {
-      "id": "1154219000035011002",
-      "zohoSalesOrderId": "1154219000035011002",
-      "salesOrderNumber": "SO-07622",
-      "status": "open",
-      "customerName": "Sports Valley",
-      "shippingAddress": "1863, Tiruchi Road, Ramanthapuram Signal Coiatore, Tamil Nadu, 641045",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035011005",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035011002-1154219000035011005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035011002",
-          "lineItemId": "1154219000035011005",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "Sports Valley",
-          "salesOrderNumber": "SO-07622",
-          "deliveryDate": "2026-07-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -4535,11 +4431,9 @@
     "1154219000035193001",
     "1154219000035089003",
     "1154219000035068003",
-    "1154219000035041199",
     "1154219000035063006",
     "1154219000034983522",
     "1154219000035041156",
-    "1154219000035011002",
     "1154219000034994001",
     "1154219000034923001",
     "1154219000034749030",
@@ -4572,8 +4466,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-04T05:56:01.927Z",
-  "lastAttemptAt": "2026-08-04T06:10:36.676Z",
+  "lastSuccessfulSyncAt": "2026-08-04T06:10:57.065Z",
+  "lastAttemptAt": "2026-08-04T06:10:57.065Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
