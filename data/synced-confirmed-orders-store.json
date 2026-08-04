@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035179002": {
+      "id": "1154219000035179002",
+      "zohoSalesOrderId": "1154219000035179002",
+      "salesOrderNumber": "SO-07643",
+      "status": "open",
+      "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
+      "shippingAddress": "Khasra No. 25/14 min, 15min, 26/11, 12/1,12/2, 12/3, 13/1, 13/2, 14/1min, 14/2min, 19, 20, 27//11/1/1/1, Bahadurgarh, Kassar, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035179005",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035179002-1154219000035179005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035179002",
+          "lineItemId": "1154219000035179005",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07643",
+          "deliveryDate": "2026-08-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035185002": {
       "id": "1154219000035185002",
       "zohoSalesOrderId": "1154219000035185002",
@@ -4425,6 +4472,7 @@
     }
   },
   "orderIds": [
+    "1154219000035179002",
     "1154219000035185002",
     "1154219000035191003",
     "1154219000035161005",
@@ -4466,8 +4514,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-04T06:10:57.065Z",
-  "lastAttemptAt": "2026-08-04T06:17:33.156Z",
+  "lastSuccessfulSyncAt": "2026-08-04T06:17:57.577Z",
+  "lastAttemptAt": "2026-08-04T06:17:57.577Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
