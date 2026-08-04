@@ -3114,6 +3114,63 @@
         "1154219000034983522-1154219000034983525-3",
         "1154219000034983522-1154219000034983525-4"
       ]
+    },
+    "1154219000035068003": {
+      "completedAt": "2026-08-04T06:15:22.777Z",
+      "order": {
+        "id": "1154219000035068003",
+        "zohoSalesOrderId": "1154219000035068003",
+        "salesOrderNumber": "SO-07632",
+        "status": "open",
+        "customerName": "YUGADHARMA TRADERS",
+        "shippingAddress": "1, GARDEN VIEW, OPP. KALAGHODA CIRCLE, SAYAJIGUNJ, VADODARA, Vadodara, Gujarat, 390005",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035068006",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035068003-1154219000035068006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270840",
+            "qrToken": "26270840",
+            "orderId": "1154219000035068003",
+            "lineItemId": "1154219000035068006",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "YUGADHARMA TRADERS",
+            "salesOrderNumber": "SO-07632",
+            "deliveryDate": "2026-08-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035068003-1154219000035068006-1"
+      ]
     }
   }
 }
