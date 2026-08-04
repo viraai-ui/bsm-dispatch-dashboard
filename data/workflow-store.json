@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270843,
+  "serialCounter": 26270844,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -5030,6 +5030,20 @@
           "processedAt": "2026-08-04T07:05:30.212Z",
           "dispatchNote": "local",
           "vendor": "Rawal"
+        }
+      }
+    },
+    "1154219000035159005": {
+      "salesOrderId": "1154219000035159005",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035159005-1154219000035159008-1": {
+          "machineUnitId": "1154219000035159005-1154219000035159008-1",
+          "lineItemId": "",
+          "serialNumber": "26270844",
+          "qrToken": "26270844",
+          "qrStatus": "pending"
         }
       }
     }
