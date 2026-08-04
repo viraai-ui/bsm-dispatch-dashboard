@@ -3285,6 +3285,62 @@
       "machineIds": [
         "1154219000035179002-1154219000035179005-1"
       ]
+    },
+    "1154219000035191018": {
+      "completedAt": "2026-08-04T08:18:36.353Z",
+      "order": {
+        "id": "1154219000035191018",
+        "zohoSalesOrderId": "1154219000035191018",
+        "salesOrderNumber": "SO-07644",
+        "status": "open",
+        "customerName": "C.K.G. Enterprises",
+        "shippingAddress": "B-50 and B-29, Pole B-6, Naresh Park Extension, West Delhi, Delhi,, 110041",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035191021",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035191018-1154219000035191021-1",
+            "unitNumber": 1,
+            "serialNumber": "26270843",
+            "qrToken": "26270843",
+            "orderId": "1154219000035191018",
+            "lineItemId": "1154219000035191021",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "C.K.G. Enterprises",
+            "salesOrderNumber": "SO-07644",
+            "deliveryDate": "2026-08-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-04",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035191018-1154219000035191021-1"
+      ]
     }
   }
 }
