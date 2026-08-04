@@ -75,7 +75,7 @@
       "salesOrderId": "1154219000034608001",
       "salesOrderNumber": "SO-07550",
       "status": "processed",
-      "dispatchPriority": "urgent",
+      "dispatchPriority": "regular",
       "processedAt": "2026-08-03T08:27:14.328Z",
       "processedOrder": {
         "id": "1154219000034608001",
@@ -4589,7 +4589,8 @@
           "dispatchNote": "local",
           "vendor": "S P Nanda"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000035160002": {
       "salesOrderId": "1154219000035160002",
@@ -4887,7 +4888,8 @@
           "dispatchNote": "wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 3
     }
   }
 }
