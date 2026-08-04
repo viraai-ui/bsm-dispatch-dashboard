@@ -327,6 +327,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035041199": {
+      "id": "ship-1785822984699-l8bn1",
+      "itemId": "1154219000035041199",
+      "orderId": "1154219000035041199",
+      "machineId": "1154219000035041199-1154219000035041204-1",
+      "salesOrderNumber": "SO-07631",
+      "customerName": "SAHAI MULTIMEDIA",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "V Trans",
+      "transporterPhone": "9310436028",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T05:56:24.699Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
