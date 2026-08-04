@@ -370,6 +370,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035068003": {
+      "id": "ship-1785827237902-bcbyj",
+      "itemId": "1154219000035068003",
+      "orderId": "1154219000035068003",
+      "machineId": "1154219000035068003-1154219000035068006-1",
+      "salesOrderNumber": "SO-07632",
+      "customerName": "YUGADHARMA TRADERS",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "8375074070",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-04 at 12.26.47 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-04%2FSO-07632%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-04T07-07-15-531Z.jpeg",
+        "r2Key": "media-proof/2026-08-04/SO-07632/Shipment LR Builty-shipment-lr-builty-2026-08-04T07-07-15-531Z.jpeg",
+        "expiresAt": "2026-10-03T07:07:15.531Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-04",
+      "notes": "",
+      "shippedAt": "2026-08-04T07:07:17.902Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
