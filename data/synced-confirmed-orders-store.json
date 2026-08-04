@@ -953,74 +953,6 @@
         }
       ]
     },
-    "1154219000035077002": {
-      "id": "1154219000035077002",
-      "zohoSalesOrderId": "1154219000035077002",
-      "salesOrderNumber": "SO-07635",
-      "status": "open",
-      "customerName": "Unique Star International",
-      "shippingAddress": "Pardevan Purwa 383-J1, Lal Bangla,, Kanpur Nagar, Uttar Pradesh, 208010",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-01",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035077005",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035077002-1154219000035077005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035077002",
-          "lineItemId": "1154219000035077005",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "Unique Star International",
-          "salesOrderNumber": "SO-07635",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035077002-1154219000035077005-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035077002",
-          "lineItemId": "1154219000035077005",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "Unique Star International",
-          "salesOrderNumber": "SO-07635",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035089003": {
       "id": "1154219000035089003",
       "zohoSalesOrderId": "1154219000035089003",
@@ -1507,84 +1439,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Pinser set"
-        }
-      ]
-    },
-    "1154219000035015011": {
-      "id": "1154219000035015011",
-      "zohoSalesOrderId": "1154219000035015011",
-      "salesOrderNumber": "SO-07624",
-      "status": "open",
-      "customerName": "JAGRIYA ENTERPRISES",
-      "shippingAddress": "1st, Plot, House No. 64 KH No. 382-385, Mauza Lodhai, Shamshabad Road, Near- Behind Jhalak Kishori CNG Petrol Pump, Rajeev Narayan Dham,, Agra, Uttar Pradesh, 282001, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-01",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035015014",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035015015",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035015011-1154219000035015014-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035015011",
-          "lineItemId": "1154219000035015014",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
-          "customerName": "JAGRIYA ENTERPRISES",
-          "salesOrderNumber": "SO-07624",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035015011-1154219000035015015-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035015011",
-          "lineItemId": "1154219000035015015",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "customerName": "JAGRIYA ENTERPRISES",
-          "salesOrderNumber": "SO-07624",
-          "deliveryDate": "2026-08-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -4679,14 +4533,12 @@
     "1154219000035191003",
     "1154219000035161005",
     "1154219000035193001",
-    "1154219000035077002",
     "1154219000035089003",
     "1154219000035068003",
     "1154219000035041199",
     "1154219000035063006",
     "1154219000034983522",
     "1154219000035041156",
-    "1154219000035015011",
     "1154219000035011002",
     "1154219000034994001",
     "1154219000034923001",
@@ -4720,8 +4572,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-04T05:31:03.964Z",
-  "lastAttemptAt": "2026-08-04T05:55:36.354Z",
+  "lastSuccessfulSyncAt": "2026-08-04T05:56:01.927Z",
+  "lastAttemptAt": "2026-08-04T05:56:01.927Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
