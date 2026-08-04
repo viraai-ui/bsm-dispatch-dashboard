@@ -4961,7 +4961,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     },
     "1154219000035191018": {
       "salesOrderId": "1154219000035191018",
@@ -5038,7 +5038,7 @@
       "salesOrderId": "1154219000035159005",
       "salesOrderNumber": "SO-07646",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-04T07:41:55.255Z",
       "processedOrder": {
         "id": "1154219000035159005",
@@ -5103,7 +5103,8 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
