@@ -329,7 +329,7 @@
       }
     },
     "1154219000035041199": {
-      "id": "ship-1785822984699-l8bn1",
+      "id": "ship-1785823142237-p6xjj",
       "itemId": "1154219000035041199",
       "orderId": "1154219000035041199",
       "machineId": "1154219000035041199-1154219000035041204-1",
@@ -341,13 +341,19 @@
       "transporterName": "V Trans",
       "transporterPhone": "9310436028",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "4112186489.pdf",
+        "type": "application/pdf",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-04%2FSO-07631%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-04T05-59-00-614Z.pdf",
+        "r2Key": "media-proof/2026-08-04/SO-07631/Shipment LR Builty-shipment-lr-builty-2026-08-04T05-59-00-614Z.pdf",
+        "expiresAt": "2026-10-03T05:59:00.614Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-04",
       "notes": "",
-      "shippedAt": "2026-08-04T05:56:24.699Z",
+      "shippedAt": "2026-08-04T05:59:02.237Z",
       "messages": {
         "customer": {
           "status": "skipped",
