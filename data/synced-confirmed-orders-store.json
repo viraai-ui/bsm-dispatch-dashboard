@@ -1850,116 +1850,6 @@
         }
       ]
     },
-    "1154219000034983522": {
-      "id": "1154219000034983522",
-      "zohoSalesOrderId": "1154219000034983522",
-      "salesOrderNumber": "SO-07628",
-      "status": "open",
-      "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
-      "shippingAddress": "PO Bastara, 13th Milestone, G.T. Road, Libertypuram, Kutali, Karnal-132114, Haryana",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-08-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034983525",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 4,
-          "pendingQuantity": 4,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034983522-1154219000034983525-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034983522",
-          "lineItemId": "1154219000034983525",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
-          "salesOrderNumber": "SO-07628",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034983522-1154219000034983525-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034983522",
-          "lineItemId": "1154219000034983525",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
-          "salesOrderNumber": "SO-07628",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034983522-1154219000034983525-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034983522",
-          "lineItemId": "1154219000034983525",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
-          "salesOrderNumber": "SO-07628",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034983522-1154219000034983525-4",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034983522",
-          "lineItemId": "1154219000034983525",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
-          "salesOrderNumber": "SO-07628",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035041156": {
       "id": "1154219000035041156",
       "zohoSalesOrderId": "1154219000035041156",
@@ -3123,35 +3013,25 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034008007",
-          "itemName": "Spare Parts (Shoe Machine)",
+          "id": "1154219000035236126",
+          "itemName": "Spare Parts (Sewing Machine)",
           "sku": "",
           "description": "Pattern Sewing Machine Screen",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034008008",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "By Air Import Freight Cost",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
         }
       ],
       "machines": [
         {
-          "id": "1154219000034008004-1154219000034008007-1",
+          "id": "1154219000034008004-1154219000035236126-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000034008004",
-          "lineItemId": "1154219000034008007",
-          "itemName": "Spare Parts (Shoe Machine)",
+          "lineItemId": "1154219000035236126",
+          "itemName": "Spare Parts (Sewing Machine)",
           "sku": "",
           "customerName": "M V Enterprises",
           "salesOrderNumber": "SO-07451",
@@ -4977,7 +4857,6 @@
     "1154219000035193001",
     "1154219000035089003",
     "1154219000035063006",
-    "1154219000034983522",
     "1154219000035041156",
     "1154219000034994001",
     "1154219000034749030",
@@ -5009,8 +4888,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-05T05:43:54.431Z",
-  "lastAttemptAt": "2026-08-05T05:58:27.459Z",
+  "lastSuccessfulSyncAt": "2026-08-05T05:58:53.233Z",
+  "lastAttemptAt": "2026-08-05T05:58:53.233Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
