@@ -1577,115 +1577,6 @@
         }
       ]
     },
-    "1154219000034654006": {
-      "id": "1154219000034654006",
-      "zohoSalesOrderId": "1154219000034654006",
-      "salesOrderNumber": "SO-07558",
-      "status": "open",
-      "customerName": "SUPER SPEED SHOES COMPONENTS",
-      "shippingAddress": "Plot No. 507, Mundka, West Delhi, Delhi-110041, Delhi",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034654009",
-          "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
-          "sku": "601 - 8",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034654010",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034654011",
-          "itemName": "Hotmelt Roller Coater (12 inch)",
-          "sku": "831",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034654006-1154219000034654009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034654006",
-          "lineItemId": "1154219000034654009",
-          "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
-          "sku": "601 - 8",
-          "customerName": "SUPER SPEED SHOES COMPONENTS",
-          "salesOrderNumber": "SO-07558",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034654006-1154219000034654010-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034654006",
-          "lineItemId": "1154219000034654010",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "SUPER SPEED SHOES COMPONENTS",
-          "salesOrderNumber": "SO-07558",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034654006-1154219000034654011-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034654006",
-          "lineItemId": "1154219000034654011",
-          "itemName": "Hotmelt Roller Coater (12 inch)",
-          "sku": "831",
-          "customerName": "SUPER SPEED SHOES COMPONENTS",
-          "salesOrderNumber": "SO-07558",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034623006": {
       "id": "1154219000034623006",
       "zohoSalesOrderId": "1154219000034623006",
@@ -3793,7 +3684,6 @@
     "1154219000034739001",
     "1154219000034690004",
     "1154219000034633005",
-    "1154219000034654006",
     "1154219000034623006",
     "1154219000034608001",
     "1154219000034263026",
@@ -3814,8 +3704,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-05T10:50:12.388Z",
-  "lastAttemptAt": "2026-08-05T11:05:17.396Z",
+  "lastSuccessfulSyncAt": "2026-08-05T11:05:42.840Z",
+  "lastAttemptAt": "2026-08-05T11:05:42.840Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
