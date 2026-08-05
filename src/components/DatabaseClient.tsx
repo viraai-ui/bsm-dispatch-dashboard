@@ -10,7 +10,7 @@ import type { ShipmentRecord } from '@/lib/ready-to-ship'
 
 type WarrantyInfo = { label: 'Warranty Valid' | 'Warranty Void'; tone: 'green' | 'red'; startLabel: string; endLabel: string }
 type DatabaseFilter = 'all' | 'pending' | 'submitted' | 'closed' | 'builty'
-const MAX_VISIBLE_ROWS = 20
+const MAX_VISIBLE_ROWS = 50
 
 export function DatabaseClient({ orders = [], mediaRecords = {}, packingMediaRecords = {}, loadingMediaRecords = {}, statuses = {}, warrantyDates = {}, shipmentRecords = {}, publicMode = false }: { orders?: Order[]; mediaRecords?: Record<string, MediaProofRecord>; packingMediaRecords?: Record<string, MediaProofRecord>; loadingMediaRecords?: Record<string, MediaProofRecord>; statuses?: Record<string, OrderStatusProjection>; warrantyDates?: Record<string, string>; shipmentRecords?: Record<string, ShipmentRecord>; publicMode?: boolean }) {
   const [draftQuery, setDraftQuery] = useState('')
