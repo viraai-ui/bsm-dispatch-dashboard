@@ -169,6 +169,10 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 .database-builty-chip::before { content: '✓'; font-size: 9px; font-weight: 900; }
 .database-mobile-chip-row { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
 .database-result-note { color: var(--muted); font-size: 12px; font-weight: 650; }
+.database-list-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.database-list-head h2 { margin: 0; }
+.database-filter-wrap { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; color: #64748b; font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .06em; }
+.database-filter-wrap select { min-height: 40px; border: 1px solid var(--line); border-radius: 14px; background: #fff; color: #0f172a; font-size: 13px; font-weight: 800; padding: 0 34px 0 12px; box-shadow: 0 10px 24px rgba(15,23,42,.05); }
 .database-search-input-wrap { position: relative; flex: 1 1 260px; min-width: 220px; }
 .database-search-input-wrap input { width: 100%; padding-right: 48px; }
 .database-clear-x { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border: 0; border-radius: 0; background: transparent; color: #c8102e; font-size: 22px; line-height: 1; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; box-shadow: none; padding: 0; }
@@ -850,6 +854,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 
   .database-search-panel { grid-template-columns: minmax(0,1fr) auto; padding: 8px; border-radius: 16px; margin-bottom: 8px; }
   .database-search-panel input { min-height: 40px; border-radius: 12px; font-size: 13px; }
+  .database-list-head { align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+  .database-filter-wrap { gap: 6px; font-size: 9px; }
+  .database-filter-wrap select { min-height: 38px; max-width: 168px; border-radius: 12px; font-size: 12px; padding-left: 10px; }
   .database-list-card { padding: 10px; }
   .database-mobile-card { padding: 11px; }
   .database-mobile-card .compact-view-btn { float: right; }

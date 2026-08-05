@@ -9,17 +9,24 @@ import type { OrderStatusProjection } from '@/lib/status-projection'
 import type { ShipmentRecord } from '@/lib/ready-to-ship'
 
 type WarrantyInfo = { label: 'Warranty Valid' | 'Warranty Void'; tone: 'green' | 'red'; startLabel: string; endLabel: string }
+type DatabaseFilter = 'all' | 'pending' | 'submitted' | 'closed' | 'builty'
 const MAX_VISIBLE_ROWS = 20
 
 export function DatabaseClient({ orders = [], mediaRecords = {}, packingMediaRecords = {}, loadingMediaRecords = {}, statuses = {}, warrantyDates = {}, shipmentRecords = {}, publicMode = false }: { orders?: Order[]; mediaRecords?: Record<string, MediaProofRecord>; packingMediaRecords?: Record<string, MediaProofRecord>; loadingMediaRecords?: Record<string, MediaProofRecord>; statuses?: Record<string, OrderStatusProjection>; warrantyDates?: Record<string, string>; shipmentRecords?: Record<string, ShipmentRecord>; publicMode?: boolean }) {
   const [draftQuery, setDraftQuery] = useState('')
   const [query, setQuery] = useState('')
+  const [filter, setFilter] = useState<DatabaseFilter>('all')
   const [active, setActive] = useState<Order | null>(null)
+
   const searchableOrders = useMemo(() => orders.map((order) => {
     const warranty = warrantyInfo(warrantyDates[order.id])
     const shipment = shipmentRecords[order.id]
+    const salesOrderDigits = digitsOnly(order.salesOrderNumber)
     const haystack = [
       order.salesOrderNumber,
+      normalizeSearchText(order.salesOrderNumber),
+      salesOrderDigits,
+      salesOrderDigits.replace(/^0+/, ''),
       order.customerName,
       order.salesperson,
       order.deliveryDate,
@@ -33,23 +40,43 @@ export function DatabaseClient({ orders = [], mediaRecords = {}, packingMediaRec
       shipment?.vehicleNumber,
       shipment?.driverName,
       shipment?.driverPhone,
-      ...order.machines.map((machine) => `${machine.serialNumber} ${machine.itemName} ${machine.vendor || ''}`),
+      ...order.machines.map((machine) => `${machine.serialNumber} ${digitsOnly(machine.serialNumber || '')} ${machine.itemName} ${machine.vendor || ''}`),
     ].join(' ').toLowerCase()
     return { order, haystack }
   }), [orders, statuses, warrantyDates, shipmentRecords])
+
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase()
-    if (!needle) return orders
-    return searchableOrders.filter((item) => item.haystack.includes(needle)).map((item) => item.order)
-  }, [query, orders, searchableOrders])
+    const normalizedNeedle = normalizeSearchText(needle)
+    const digitNeedle = digitsOnly(needle)
+    return searchableOrders
+      .filter((item) => {
+        if (!needle) return true
+        return item.haystack.includes(needle) || Boolean(normalizedNeedle && item.haystack.includes(normalizedNeedle)) || Boolean(digitNeedle && item.haystack.includes(digitNeedle))
+      })
+      .filter((item) => matchesDatabaseFilter(item.order, statuses[item.order.id], shipmentRecords[item.order.id], filter))
+      .map((item) => item.order)
+  }, [query, searchableOrders, statuses, shipmentRecords, filter])
+
   const visibleRows = useMemo(() => filtered.slice(0, MAX_VISIBLE_ROWS), [filtered])
   const hiddenCount = Math.max(0, filtered.length - visibleRows.length)
 
   return <div className={publicMode ? 'public-database-view' : undefined}>
     <section className="card search-panel database-search-panel"><div className="database-search-input-wrap"><input placeholder="Search SO, serial, customer…" value={draftQuery} onChange={(event) => setDraftQuery(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') setQuery(draftQuery) }} />{draftQuery && <button className="database-clear-x" aria-label="Clear search" onClick={() => { setDraftQuery(''); setQuery('') }}>×</button>}</div><button className="btn" onClick={() => setQuery(draftQuery)}>Search</button>{hiddenCount > 0 && <span className="database-result-note">Showing first {MAX_VISIBLE_ROWS}. Search serial/customer to narrow.</span>}</section>
-    <section className="card database-list-card"><h2>Database</h2><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Units</th><th>Warranty Valid Till</th><th>Media</th><th>Action</th></tr></thead><tbody>{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); const builtyUploaded = Boolean(shipmentRecords[order.id]?.lrCopy?.url); return <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td><div className="database-customer-stack"><span>{order.customerName}</span>{builtyUploaded && <span className="database-builty-chip">Builty Uploaded</span>}</div></td><td>{order.machines.length}</td><td><strong className="warranty-date-cell">{warranty.endLabel}</strong></td><td><Badge tone={status?.mediaTone || 'gray'}>{status?.mediaLabel || 'No Media'}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr> })}</tbody></table></div><div className="mobile-cards">{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); const builtyUploaded = Boolean(shipmentRecords[order.id]?.lrCopy?.url); return <article className="card mobile-order-card database-mobile-card mobile-order-tap-card compact-operational-card" key={order.id} onClick={() => setActive(order)}><div className="compact-card-main"><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><div className="database-mobile-chip-row"><Badge tone={warranty.tone}>{warranty.endLabel}</Badge>{builtyUploaded && <span className="database-builty-chip">Builty Uploaded</span>}</div></div><div className="compact-card-side"><div><span>Units</span><strong>{order.machines.length}</strong></div><div><span>Media</span><strong>{status?.mediaLabel || 'No Media'}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); setActive(order) }}>View</button></div></article> })}</div></section>
+    <section className="card database-list-card"><div className="database-list-head"><h2>Database</h2><label className="database-filter-wrap"><span>Filter</span><select value={filter} onChange={(event) => setFilter(event.target.value as DatabaseFilter)} aria-label="Filter database records"><option value="all">All Records</option><option value="pending">Pending</option><option value="submitted">Media Submitted</option><option value="closed">Closed</option><option value="builty">Builty Uploaded</option></select></label></div><div className="desktop-table table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Units</th><th>Warranty Valid Till</th><th>Media</th><th>Action</th></tr></thead><tbody>{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); const builtyUploaded = Boolean(shipmentRecords[order.id]?.lrCopy?.url); return <tr key={order.id}><td><strong>{order.salesOrderNumber}</strong></td><td><div className="database-customer-stack"><span>{order.customerName}</span>{builtyUploaded && <span className="database-builty-chip">Builty Uploaded</span>}</div></td><td>{order.machines.length}</td><td><strong className="warranty-date-cell">{warranty.endLabel}</strong></td><td><Badge tone={status?.mediaTone || 'gray'}>{status?.mediaLabel || 'No Media'}</Badge></td><td><button className="btn light" onClick={() => setActive(order)}>View</button></td></tr> })}</tbody></table></div><div className="mobile-cards">{visibleRows.map((order) => { const status = statuses[order.id]; const warranty = warrantyInfo(warrantyDates[order.id]); const builtyUploaded = Boolean(shipmentRecords[order.id]?.lrCopy?.url); return <article className="card mobile-order-card database-mobile-card mobile-order-tap-card compact-operational-card" key={order.id} onClick={() => setActive(order)}><div className="compact-card-main"><strong>{order.salesOrderNumber}</strong><p className="muted">{order.customerName}</p><div className="database-mobile-chip-row"><Badge tone={warranty.tone}>{warranty.endLabel}</Badge>{builtyUploaded && <span className="database-builty-chip">Builty Uploaded</span>}</div></div><div className="compact-card-side"><div><span>Units</span><strong>{order.machines.length}</strong></div><div><span>Media</span><strong>{status?.mediaLabel || 'No Media'}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); setActive(order) }}>View</button></div></article> })}</div>{!visibleRows.length && <p className="empty-note">No records found for this search/filter.</p>}</section>
     {active && <RecordModal order={active} media={packingMediaRecords[active.id] || mediaRecords[active.id]} loadingMedia={loadingMediaRecords[active.id]} status={statuses[active.id]} warrantyDate={warrantyDates[active.id]} shipment={shipmentRecords[active.id]} onClose={() => setActive(null)} />}
   </div>
+}
+
+function matchesDatabaseFilter(order: Order, status: OrderStatusProjection | undefined, shipment: ShipmentRecord | undefined, filter: DatabaseFilter) {
+  const media = (status?.mediaLabel || '').toLowerCase()
+  const lifecycle = (status?.lifecycleLabel || '').toLowerCase()
+  if (filter === 'all') return true
+  if (filter === 'builty') return Boolean(shipment?.lrCopy?.url)
+  if (filter === 'closed') return media === 'closed' || lifecycle === 'closed'
+  if (filter === 'submitted') return media === 'submitted' || media === 'media submitted'
+  if (filter === 'pending') return media === 'pending' || media === 'no media' || (!media && !shipment?.lrCopy?.url && order.machines.length > 0)
+  return true
 }
 
 function RecordModal({ order, media, loadingMedia, status, warrantyDate, shipment, onClose }: { order: Order; media?: MediaProofRecord; loadingMedia?: MediaProofRecord; status?: OrderStatusProjection; warrantyDate?: string; shipment?: ShipmentRecord; onClose: () => void }) {
@@ -68,6 +95,9 @@ function VideoButtons({ files, label }: { files: MediaUpload[]; label: string })
   if (!videos.length) return <span className="muted">No videos yet</span>
   return <div className="database-video-actions">{videos.map((file, index) => <a key={file.id} className="btn light database-video-btn" href={file.workdriveUrl || file.url} target="_blank" rel="noreferrer">{videos.length > 1 ? `${label} ${index + 1}` : label}</a>)}</div>
 }
+
+function normalizeSearchText(value?: string) { return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '') }
+function digitsOnly(value?: string) { return String(value || '').replace(/\D/g, '') }
 
 function warrantyInfo(value?: string): WarrantyInfo {
   const start = parseDate(value)
@@ -115,11 +145,8 @@ function safeDate(year: number, month: number, day: number) {
 }
 
 function monthNumber(value: string) { return ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'].indexOf(value.slice(0, 3).toLowerCase()) + 1 }
-
 function formatVendor(value: string) { return value.trim().toLowerCase().replace(/\b[a-z]/g, (letter) => letter.toUpperCase()) }
-
 function formatDate(date: Date) { return `${String(date.getDate()).padStart(2, '0')}-${String(date.getMonth() + 1).padStart(2, '0')}-${date.getFullYear()}` }
-
 function formatDisplayDate(value?: string) {
   const date = parseDate(value)
   return date ? formatDate(date) : value || '—'
