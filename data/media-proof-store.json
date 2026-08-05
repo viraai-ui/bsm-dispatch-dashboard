@@ -439,7 +439,26 @@
       "orderId": "1154219000035089003",
       "salesOrderNumber": "SO-07634",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000035089003-1154219000035089007-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035089003-1154219000035089007-1-video-1785931207074-ur80ux",
+              "name": "VID_20260805_172954.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-05%2FSO-07634%2FFlatbed%20Single%20needle-1154219000035089003-1154219000035089007-1-2026-08-05T11-59-58-198Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-05/SO-07634/Flatbed Single needle-1154219000035089003-1154219000035089007-1-2026-08-05T11-59-58-198Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-05T12:00:07.074Z",
+              "expiresAt": "2026-09-04T11:59:58.198Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     },
     "1154219000035177001": {
