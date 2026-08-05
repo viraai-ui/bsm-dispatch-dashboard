@@ -689,27 +689,9 @@
     "1154219000035193030": {
       "orderId": "1154219000035193030",
       "salesOrderNumber": "SO-07650",
-      "submittedAt": "2026-08-05T06:53:45.533Z",
-      "units": {
-        "1154219000035193030-1154219000035193033-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000035193030-1154219000035193033-1-video-1785912819618-m3zws3",
-              "name": "VID_20260805_122325.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2F2026-08-05%2FSO-07650%2Fzigzag%20binding%20Cylinder%20bed-1154219000035193030-1154219000035193033-1-2026-08-05T06-53-30-177Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/2026-08-05/SO-07650/zigzag binding Cylinder bed-1154219000035193030-1154219000035193033-1-2026-08-05T06-53-30-177Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-08-05T06:53:39.618Z",
-              "expiresAt": "2026-09-04T06:53:30.177Z"
-            }
-          ]
-        }
-      }
+      "submittedAt": null,
+      "units": {},
+      "videoNotRequired": false
     },
     "1154219000035291001": {
       "orderId": "1154219000035291001",
