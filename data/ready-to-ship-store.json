@@ -661,6 +661,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035332005": {
+      "id": "ship-1785933503555-zpxku",
+      "itemId": "1154219000035332005",
+      "orderId": "1154219000035332005",
+      "machineId": "1154219000035332005-1154219000035332008-1",
+      "salesOrderNumber": "SO-07661",
+      "customerName": "Jai Shoe Company",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "HR22M4462",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-05",
+      "notes": "",
+      "shippedAt": "2026-08-05T12:38:23.555Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
