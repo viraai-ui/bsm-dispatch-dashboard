@@ -1,5 +1,104 @@
 {
   "orders": {
+    "1154219000035332005": {
+      "id": "1154219000035332005",
+      "zohoSalesOrderId": "1154219000035332005",
+      "salesOrderNumber": "SO-07661",
+      "status": "open",
+      "customerName": "Jai Shoe Company",
+      "shippingAddress": "Old Main Bazar, Fatehabad, Haryana, 125050, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035332008",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035332009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Cover Type Bladder",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035332005-1154219000035332008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035332005",
+          "lineItemId": "1154219000035332008",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "Jai Shoe Company",
+          "salesOrderNumber": "SO-07661",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035332005-1154219000035332009-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035332005",
+          "lineItemId": "1154219000035332009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Jai Shoe Company",
+          "salesOrderNumber": "SO-07661",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover Type Bladder"
+        },
+        {
+          "id": "1154219000035332005-1154219000035332009-2",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035332005",
+          "lineItemId": "1154219000035332009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Jai Shoe Company",
+          "salesOrderNumber": "SO-07661",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover Type Bladder"
+        }
+      ]
+    },
     "1154219000035316005": {
       "id": "1154219000035316005",
       "zohoSalesOrderId": "1154219000035316005",
@@ -3717,6 +3816,7 @@
     }
   },
   "orderIds": [
+    "1154219000035332005",
     "1154219000035316005",
     "1154219000035342001",
     "1154219000035306375",
@@ -3752,8 +3852,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-05T11:25:42.136Z",
-  "lastAttemptAt": "2026-08-05T11:36:34.795Z",
+  "lastSuccessfulSyncAt": "2026-08-05T11:36:59.557Z",
+  "lastAttemptAt": "2026-08-05T11:36:59.557Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
