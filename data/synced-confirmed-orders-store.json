@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035316005": {
+      "id": "1154219000035316005",
+      "zohoSalesOrderId": "1154219000035316005",
+      "salesOrderNumber": "SO-07660",
+      "status": "open",
+      "customerName": "Hari Om Enterprises",
+      "shippingAddress": "Upper Ground Floor, Plot no. 1 , KH no. 21/25, G- Block, Laxmi Park ,Nangloi, New Delhi,, West Delhi, Delhi,, 110041",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035316008",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035316005-1154219000035316008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035316005",
+          "lineItemId": "1154219000035316008",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "Hari Om Enterprises",
+          "salesOrderNumber": "SO-07660",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035342001": {
       "id": "1154219000035342001",
       "zohoSalesOrderId": "1154219000035342001",
@@ -3670,6 +3717,7 @@
     }
   },
   "orderIds": [
+    "1154219000035316005",
     "1154219000035342001",
     "1154219000035306375",
     "1154219000035278002",
@@ -3704,8 +3752,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-05T11:20:42.624Z",
-  "lastAttemptAt": "2026-08-05T11:25:16.465Z",
+  "lastSuccessfulSyncAt": "2026-08-05T11:25:42.136Z",
+  "lastAttemptAt": "2026-08-05T11:25:42.136Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
