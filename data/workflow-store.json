@@ -141,7 +141,7 @@
           "vendor": "B E"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000034515009": {
       "salesOrderId": "1154219000034515009",
@@ -4386,7 +4386,7 @@
       "salesOrderId": "1154219000035089003",
       "salesOrderNumber": "SO-07634",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-03T06:16:33.873Z",
       "processedOrder": {
         "id": "1154219000035089003",
@@ -4590,7 +4590,7 @@
           "vendor": "S P Nanda"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 1
     },
     "1154219000035160002": {
       "salesOrderId": "1154219000035160002",
@@ -5326,7 +5326,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 6
+      "dispatchSortOrder": 7
     },
     "1154219000035193030": {
       "salesOrderId": "1154219000035193030",
@@ -5398,7 +5398,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035193016": {
       "salesOrderId": "1154219000035193016",
@@ -5516,7 +5516,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035278002": {
       "salesOrderId": "1154219000035278002",
@@ -5659,7 +5659,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035332005": {
       "salesOrderId": "1154219000035332005",
@@ -5787,7 +5787,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     }
   }
 }
