@@ -1,5 +1,245 @@
 {
   "orders": {
+    "1154219000035235044": {
+      "id": "1154219000035235044",
+      "zohoSalesOrderId": "1154219000035235044",
+      "salesOrderNumber": "SO-07654",
+      "status": "open",
+      "customerName": "M S INDUSTRIAL HOUSE",
+      "shippingAddress": "Plot No. 174-177, Udyog Vihar Extension, Sector-Ecotech II, Greater Gautambuddha Nagar, 201306, Noida, Uttar Pradesh,, 201306, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035235047",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Drum type bladder",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035235048",
+          "itemName": "Spare Parts (Sewing Machine)",
+          "sku": "",
+          "description": "Hook Cover",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035235044-1154219000035235047-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035235044",
+          "lineItemId": "1154219000035235047",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "M S INDUSTRIAL HOUSE",
+          "salesOrderNumber": "SO-07654",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum type bladder"
+        },
+        {
+          "id": "1154219000035235044-1154219000035235048-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035235044",
+          "lineItemId": "1154219000035235048",
+          "itemName": "Spare Parts (Sewing Machine)",
+          "sku": "",
+          "customerName": "M S INDUSTRIAL HOUSE",
+          "salesOrderNumber": "SO-07654",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Hook Cover"
+        },
+        {
+          "id": "1154219000035235044-1154219000035235048-2",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035235044",
+          "lineItemId": "1154219000035235048",
+          "itemName": "Spare Parts (Sewing Machine)",
+          "sku": "",
+          "customerName": "M S INDUSTRIAL HOUSE",
+          "salesOrderNumber": "SO-07654",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Hook Cover"
+        }
+      ]
+    },
+    "1154219000035291001": {
+      "id": "1154219000035291001",
+      "zohoSalesOrderId": "1154219000035291001",
+      "salesOrderNumber": "SO-07653",
+      "status": "open",
+      "customerName": "FR Handicrafts",
+      "shippingAddress": "A-44, KH No. 5, Street No. 1, Nand Ram Mohalla, Brahmpuri, North East Delhi, Delhi, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035291004",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035291001-1154219000035291004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035291001",
+          "lineItemId": "1154219000035291004",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "FR Handicrafts",
+          "salesOrderNumber": "SO-07653",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035156006": {
+      "id": "1154219000035156006",
+      "zohoSalesOrderId": "1154219000035156006",
+      "salesOrderNumber": "SO-07652",
+      "status": "open",
+      "customerName": "Aqdus Enterprises",
+      "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035156009",
+          "itemName": "Belt/ conveyer type fusing machine (450mm)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035156006-1154219000035156009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035156006",
+          "lineItemId": "1154219000035156009",
+          "itemName": "Belt/ conveyer type fusing machine (450mm)",
+          "sku": "",
+          "customerName": "Aqdus Enterprises",
+          "salesOrderNumber": "SO-07652",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035193030": {
+      "id": "1154219000035193030",
+      "zohoSalesOrderId": "1154219000035193030",
+      "salesOrderNumber": "SO-07650",
+      "status": "open",
+      "customerName": "A B POLYMERS",
+      "shippingAddress": "PLOT NO C-358, DSIIDC NARELA, New Delhi, North Delhi,, Delhi, 110040, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035193033",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035193030-1154219000035193033-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035193030",
+          "lineItemId": "1154219000035193033",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "customerName": "A B POLYMERS",
+          "salesOrderNumber": "SO-07650",
+          "deliveryDate": "2026-08-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035193016": {
       "id": "1154219000035193016",
       "zohoSalesOrderId": "1154219000035193016",
@@ -4723,6 +4963,10 @@
     }
   },
   "orderIds": [
+    "1154219000035235044",
+    "1154219000035291001",
+    "1154219000035156006",
+    "1154219000035193030",
     "1154219000035193016",
     "1154219000035176213",
     "1154219000035160030",
@@ -4765,8 +5009,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-04T13:03:59.705Z",
-  "lastAttemptAt": "2026-08-05T05:18:10.496Z",
+  "lastSuccessfulSyncAt": "2026-08-05T05:18:36.857Z",
+  "lastAttemptAt": "2026-08-05T05:18:36.857Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
