@@ -3512,6 +3512,63 @@
       "machineIds": [
         "1154219000035291001-1154219000035291004-1"
       ]
+    },
+    "1154219000035316005": {
+      "completedAt": "2026-08-05T11:54:06.505Z",
+      "order": {
+        "id": "1154219000035316005",
+        "zohoSalesOrderId": "1154219000035316005",
+        "salesOrderNumber": "SO-07660",
+        "status": "open",
+        "customerName": "Hari Om Enterprises",
+        "shippingAddress": "Upper Ground Floor, Plot no. 1 , KH no. 21/25, G- Block, Laxmi Park ,Nangloi, New Delhi,, West Delhi, Delhi,, 110041",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-05",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035316008",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035316005-1154219000035316008-1",
+            "unitNumber": 1,
+            "serialNumber": "26270852",
+            "qrToken": "26270852",
+            "orderId": "1154219000035316005",
+            "lineItemId": "1154219000035316008",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "Hari Om Enterprises",
+            "salesOrderNumber": "SO-07660",
+            "deliveryDate": "2026-08-05",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-05",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000035316005-1154219000035316008-1"
+      ]
     }
   }
 }
