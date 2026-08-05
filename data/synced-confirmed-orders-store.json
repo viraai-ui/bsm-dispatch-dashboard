@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035342001": {
+      "id": "1154219000035342001",
+      "zohoSalesOrderId": "1154219000035342001",
+      "salesOrderNumber": "SO-07659",
+      "status": "open",
+      "customerName": "FEROC INTERNATIONAL",
+      "shippingAddress": "NEAR CRICKET WORLD FACTORY, NAHAL PULL, BASTI DANISHMANDAN, Jalandhar, Punjab, 144002, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035342004",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035342001-1154219000035342004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035342001",
+          "lineItemId": "1154219000035342004",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "customerName": "FEROC INTERNATIONAL",
+          "salesOrderNumber": "SO-07659",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035306375": {
       "id": "1154219000035306375",
       "zohoSalesOrderId": "1154219000035306375",
@@ -864,53 +911,6 @@
       ],
       "machines": []
     },
-    "1154219000035291001": {
-      "id": "1154219000035291001",
-      "zohoSalesOrderId": "1154219000035291001",
-      "salesOrderNumber": "SO-07653",
-      "status": "open",
-      "customerName": "FR Handicrafts",
-      "shippingAddress": "A-44, KH No. 5, Street No. 1, Nand Ram Mohalla, Brahmpuri, North East Delhi, Delhi, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-05",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035291004",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035291001-1154219000035291004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035291001",
-          "lineItemId": "1154219000035291004",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "FR Handicrafts",
-          "salesOrderNumber": "SO-07653",
-          "deliveryDate": "2026-08-05",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035156006": {
       "id": "1154219000035156006",
       "zohoSalesOrderId": "1154219000035156006",
@@ -1080,63 +1080,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035150004": {
-      "id": "1154219000035150004",
-      "zohoSalesOrderId": "1154219000035150004",
-      "salesOrderNumber": "SO-07645",
-      "status": "open",
-      "customerName": "M/S JAVA SPORTS PRIVATE LIMITED",
-      "shippingAddress": "Ground Floor, Trina Mukherjee, Post Office Building, Jamal Road, Exhibition Road, Phulwari, Patna, Bihar, 800001, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035150007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Heater stemar machine",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035150008",
-          "itemName": "Freight Charge",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035150004-1154219000035150007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035150004",
-          "lineItemId": "1154219000035150007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "M/S JAVA SPORTS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07645",
-          "deliveryDate": "2026-08-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Heater stemar machine"
         }
       ]
     },
@@ -5039,14 +4982,13 @@
     }
   },
   "orderIds": [
+    "1154219000035342001",
     "1154219000035306375",
     "1154219000035278002",
     "1154219000035288002",
-    "1154219000035291001",
     "1154219000035156006",
     "1154219000035193030",
     "1154219000035193016",
-    "1154219000035150004",
     "1154219000035191003",
     "1154219000035161005",
     "1154219000035193001",
@@ -5081,8 +5023,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-05T10:13:26.764Z",
-  "lastAttemptAt": "2026-08-05T10:34:46.973Z",
+  "lastSuccessfulSyncAt": "2026-08-05T10:35:12.541Z",
+  "lastAttemptAt": "2026-08-05T10:35:12.541Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
