@@ -475,6 +475,24 @@
               "expiresAt": "2026-09-04T12:11:23.020Z"
             }
           ]
+        },
+        "1154219000035089003-1154219000035089008-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035089003-1154219000035089008-1-video-1785932855279-xw13eh",
+              "name": "VID_20260805_175718.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-05%2FSO-07634%2FSingle%20Needle%20Walking%20foot%20Cylinder%20Bed-1154219000035089003-1154219000035089008-1-2026-08-05T12-27-23-182Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-05/SO-07634/Single Needle Walking foot Cylinder Bed-1154219000035089003-1154219000035089008-1-2026-08-05T12-27-23-182Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-05T12:27:35.279Z",
+              "expiresAt": "2026-09-04T12:27:23.182Z"
+            }
+          ]
         }
       },
       "videoNotRequired": false
