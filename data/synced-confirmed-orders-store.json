@@ -1,5 +1,98 @@
 {
   "orders": {
+    "1154219000035297001": {
+      "id": "1154219000035297001",
+      "zohoSalesOrderId": "1154219000035297001",
+      "salesOrderNumber": "SO-07656",
+      "status": "open",
+      "customerName": "Good Feel Footwear",
+      "shippingAddress": "23-3-80/1, Sultan Shahi, Hydrabad, Telangana, 500065, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035297004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Cover Type Bladder",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035297001-1154219000035297004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035297001",
+          "lineItemId": "1154219000035297004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Good Feel Footwear",
+          "salesOrderNumber": "SO-07656",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover Type Bladder"
+        },
+        {
+          "id": "1154219000035297001-1154219000035297004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035297001",
+          "lineItemId": "1154219000035297004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Good Feel Footwear",
+          "salesOrderNumber": "SO-07656",
+          "deliveryDate": "2026-08-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Cover Type Bladder"
+        }
+      ]
+    },
+    "1154219000035288002": {
+      "id": "1154219000035288002",
+      "zohoSalesOrderId": "1154219000035288002",
+      "salesOrderNumber": "SO-07655",
+      "status": "open",
+      "customerName": "JAYSHREE PU TECH",
+      "shippingAddress": "Ikrahi, Biratnagar-4, Nepal",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-10",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035288005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 2500,
+          "pendingQuantity": 2500,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000035235044": {
       "id": "1154219000035235044",
       "zohoSalesOrderId": "1154219000035235044",
@@ -707,53 +800,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Heater stemar machine"
-        }
-      ]
-    },
-    "1154219000035185002": {
-      "id": "1154219000035185002",
-      "zohoSalesOrderId": "1154219000035185002",
-      "salesOrderNumber": "SO-07642",
-      "status": "open",
-      "customerName": "Competence Exports Pvt Ltd",
-      "shippingAddress": "B 10 EPIP, Industrial Area, Export Zone Hajipur, Bihar, 844101",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035185005",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035185002-1154219000035185005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035185002",
-          "lineItemId": "1154219000035185005",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "Competence Exports Pvt Ltd",
-          "salesOrderNumber": "SO-07642",
-          "deliveryDate": "2026-08-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -4843,6 +4889,8 @@
     }
   },
   "orderIds": [
+    "1154219000035297001",
+    "1154219000035288002",
     "1154219000035235044",
     "1154219000035291001",
     "1154219000035156006",
@@ -4851,7 +4899,6 @@
     "1154219000035176213",
     "1154219000035160030",
     "1154219000035150004",
-    "1154219000035185002",
     "1154219000035191003",
     "1154219000035161005",
     "1154219000035193001",
@@ -4888,8 +4935,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-05T05:58:53.233Z",
-  "lastAttemptAt": "2026-08-05T06:21:13.101Z",
+  "lastSuccessfulSyncAt": "2026-08-05T06:21:38.552Z",
+  "lastAttemptAt": "2026-08-05T06:21:38.552Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
