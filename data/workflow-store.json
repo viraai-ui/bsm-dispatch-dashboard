@@ -5330,7 +5330,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 4
     },
     "1154219000035193030": {
       "salesOrderId": "1154219000035193030",
@@ -5527,7 +5527,7 @@
       "salesOrderId": "1154219000035278002",
       "salesOrderNumber": "SO-07657",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-05T06:57:28.366Z",
       "processedOrder": {
         "id": "1154219000035278002",
@@ -5592,7 +5592,8 @@
           "dispatchNote": "wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035316005": {
       "salesOrderId": "1154219000035316005",
