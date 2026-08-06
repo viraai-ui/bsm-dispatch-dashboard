@@ -3693,6 +3693,165 @@
       "machineIds": [
         "1154219000035193030-1154219000035193033-1"
       ]
+    },
+    "1154219000035089003": {
+      "completedAt": "2026-08-06T05:32:57.528Z",
+      "order": {
+        "id": "1154219000035089003",
+        "zohoSalesOrderId": "1154219000035089003",
+        "salesOrderNumber": "SO-07634",
+        "status": "open",
+        "customerName": "Rajender Goyal Ji",
+        "shippingAddress": "Sec-4, Bhawana Industrial Area, Delhi",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035089006",
+            "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 18 Inch)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035089007",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035089008",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035089009",
+            "itemName": "Compressor (2 Hp)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035089003-1154219000035089006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270834",
+            "qrToken": "26270834",
+            "orderId": "1154219000035089003",
+            "lineItemId": "1154219000035089006",
+            "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 18 Inch)",
+            "sku": "",
+            "customerName": "Rajender Goyal Ji",
+            "salesOrderNumber": "SO-07634",
+            "deliveryDate": "2026-08-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000035089003-1154219000035089007-1",
+            "unitNumber": 2,
+            "serialNumber": "26270835",
+            "qrToken": "26270835",
+            "orderId": "1154219000035089003",
+            "lineItemId": "1154219000035089007",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "customerName": "Rajender Goyal Ji",
+            "salesOrderNumber": "SO-07634",
+            "deliveryDate": "2026-08-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035089003-1154219000035089008-1",
+            "unitNumber": 3,
+            "serialNumber": "26270836",
+            "qrToken": "26270836",
+            "orderId": "1154219000035089003",
+            "lineItemId": "1154219000035089008",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "Rajender Goyal Ji",
+            "salesOrderNumber": "SO-07634",
+            "deliveryDate": "2026-08-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035089003-1154219000035089009-1",
+            "unitNumber": 4,
+            "serialNumber": "26270837",
+            "qrToken": "26270837",
+            "orderId": "1154219000035089003",
+            "lineItemId": "1154219000035089009",
+            "itemName": "Compressor (2 Hp)",
+            "sku": "",
+            "customerName": "Rajender Goyal Ji",
+            "salesOrderNumber": "SO-07634",
+            "deliveryDate": "2026-08-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-03",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035089003-1154219000035089006-1",
+        "1154219000035089003-1154219000035089007-1",
+        "1154219000035089003-1154219000035089008-1",
+        "1154219000035089003-1154219000035089009-1"
+      ]
     }
   }
 }
