@@ -5330,7 +5330,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 8
+      "dispatchSortOrder": 9
     },
     "1154219000035193030": {
       "salesOrderId": "1154219000035193030",
@@ -5867,7 +5867,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 5
     },
     "1154219000035317003": {
       "salesOrderId": "1154219000035317003",
@@ -6021,7 +6021,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 8
     },
     "1154219000035342001": {
       "salesOrderId": "1154219000035342001",
@@ -6093,7 +6093,7 @@
           "vendor": "S S Enterprise"
         }
       },
-      "dispatchSortOrder": 6
+      "dispatchSortOrder": 7
     },
     "1154219000035353001": {
       "salesOrderId": "1154219000035353001",
@@ -6165,13 +6165,13 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035343430": {
       "salesOrderId": "1154219000035343430",
       "salesOrderNumber": "SO-07665",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-06T07:28:35.723Z",
       "processedOrder": {
         "id": "1154219000035343430",
@@ -6236,7 +6236,8 @@
           "dispatchNote": "local",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
