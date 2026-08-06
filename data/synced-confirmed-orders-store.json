@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035343430": {
+      "id": "1154219000035343430",
+      "zohoSalesOrderId": "1154219000035343430",
+      "salesOrderNumber": "SO-07665",
+      "status": "open",
+      "customerName": "Sobti Plastics Pvt. Ltd.",
+      "shippingAddress": "Plot No. 14-15, HSIIDC Industrial Estate Bahadurgarh, Sankhol, Jhajjar, Haryana, 124507",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035343433",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035343430-1154219000035343433-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035343430",
+          "lineItemId": "1154219000035343433",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "customerName": "Sobti Plastics Pvt. Ltd.",
+          "salesOrderNumber": "SO-07665",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035353001": {
       "id": "1154219000035353001",
       "zohoSalesOrderId": "1154219000035353001",
@@ -3863,6 +3910,7 @@
     }
   },
   "orderIds": [
+    "1154219000035343430",
     "1154219000035353001",
     "1154219000035330005",
     "1154219000035317003",
@@ -3900,8 +3948,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T07:15:48.685Z",
-  "lastAttemptAt": "2026-08-06T07:26:10.307Z",
+  "lastSuccessfulSyncAt": "2026-08-06T07:26:35.145Z",
+  "lastAttemptAt": "2026-08-06T07:26:35.145Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
