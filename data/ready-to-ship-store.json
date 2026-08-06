@@ -723,6 +723,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035156006": {
+      "id": "ship-1786021639444-j7bbe",
+      "itemId": "1154219000035156006",
+      "orderId": "1154219000035156006",
+      "machineId": "1154219000035156006-1154219000035156009-1",
+      "salesOrderNumber": "SO-07652",
+      "customerName": "Aqdus Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "GJ05X9653",
+      "driverName": "—",
+      "driverPhone": "9649227359",
+      "expectedDelivery": "2026-08-06",
+      "notes": "",
+      "shippedAt": "2026-08-06T13:07:19.444Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
