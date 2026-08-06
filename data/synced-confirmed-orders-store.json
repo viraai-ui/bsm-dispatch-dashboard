@@ -1,5 +1,94 @@
 {
   "orders": {
+    "1154219000035381001": {
+      "id": "1154219000035381001",
+      "zohoSalesOrderId": "1154219000035381001",
+      "salesOrderNumber": "SO-07671",
+      "status": "open",
+      "customerName": "BOX MUSE",
+      "shippingAddress": "SY NO. 52 and 53 and Shed No. K3 and K4, Bashettihalli village, Kasaba Hobli, Bengaluru Rural, Karnataka, 561203, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035381004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Heater (Indian thread Burner)",
+          "quantity": 3,
+          "pendingQuantity": 3,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035381001-1154219000035381004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035381001",
+          "lineItemId": "1154219000035381004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "BOX MUSE",
+          "salesOrderNumber": "SO-07671",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heater (Indian thread Burner)"
+        },
+        {
+          "id": "1154219000035381001-1154219000035381004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035381001",
+          "lineItemId": "1154219000035381004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "BOX MUSE",
+          "salesOrderNumber": "SO-07671",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heater (Indian thread Burner)"
+        },
+        {
+          "id": "1154219000035381001-1154219000035381004-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035381001",
+          "lineItemId": "1154219000035381004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "BOX MUSE",
+          "salesOrderNumber": "SO-07671",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heater (Indian thread Burner)"
+        }
+      ]
+    },
     "1154219000035343892": {
       "id": "1154219000035343892",
       "zohoSalesOrderId": "1154219000035343892",
@@ -4044,6 +4133,7 @@
     }
   },
   "orderIds": [
+    "1154219000035381001",
     "1154219000035343892",
     "1154219000035343850",
     "1154219000035363005",
@@ -4086,8 +4176,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T11:48:43.362Z",
-  "lastAttemptAt": "2026-08-06T12:09:13.544Z",
+  "lastSuccessfulSyncAt": "2026-08-06T12:09:37.773Z",
+  "lastAttemptAt": "2026-08-06T12:09:37.773Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
