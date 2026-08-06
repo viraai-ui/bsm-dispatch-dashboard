@@ -1452,53 +1452,6 @@
       ],
       "machines": []
     },
-    "1154219000035156006": {
-      "id": "1154219000035156006",
-      "zohoSalesOrderId": "1154219000035156006",
-      "salesOrderNumber": "SO-07652",
-      "status": "open",
-      "customerName": "Aqdus Enterprises",
-      "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035156009",
-          "itemName": "Belt/ conveyer type fusing machine (450mm)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035156006-1154219000035156009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035156006",
-          "lineItemId": "1154219000035156009",
-          "itemName": "Belt/ conveyer type fusing machine (450mm)",
-          "sku": "",
-          "customerName": "Aqdus Enterprises",
-          "salesOrderNumber": "SO-07652",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035193030": {
       "id": "1154219000035193030",
       "zohoSalesOrderId": "1154219000035193030",
@@ -4062,7 +4015,6 @@
     "1154219000035306375",
     "1154219000035278002",
     "1154219000035288002",
-    "1154219000035156006",
     "1154219000035193030",
     "1154219000035193016",
     "1154219000035063006",
@@ -4091,8 +4043,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T12:55:38.002Z",
-  "lastAttemptAt": "2026-08-06T13:10:15.687Z",
+  "lastSuccessfulSyncAt": "2026-08-06T13:10:38.721Z",
+  "lastAttemptAt": "2026-08-06T13:10:38.721Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
