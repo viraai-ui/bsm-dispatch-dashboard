@@ -1915,7 +1915,7 @@
         {
           "id": "1154219000034633008",
           "itemName": "Chiller (Conveyor type) (5 Ton)",
-          "sku": "chiller 5 ton",
+          "sku": "Chiller 5",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
@@ -1942,7 +1942,7 @@
           "orderId": "1154219000034633005",
           "lineItemId": "1154219000034633008",
           "itemName": "Chiller (Conveyor type) (5 Ton)",
-          "sku": "chiller 5 ton",
+          "sku": "Chiller 5",
           "customerName": "THREE STAR FOOTWEARS",
           "salesOrderNumber": "SO-07560",
           "deliveryDate": "2026-07-23",
@@ -2699,7 +2699,7 @@
       "shippingAddress": "69, Gajajnan Nagar, Gajajnan Nagar, Agra, Uttar Pradesh, 282010",
       "salesperson": "Ram Kumar",
       "deliveryDate": "2026-06-11",
-      "dashboardStatus": "Not Generated",
+      "dashboardStatus": "Review Required",
       "reviewRequired": false,
       "lineItems": [
         {
@@ -2708,7 +2708,7 @@
           "sku": "",
           "description": "20 Feet Pasting Conveyor Rod Type With 1 Heating Chamber 8 Feet With NIR System",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         },
@@ -2718,7 +2718,7 @@
           "sku": "",
           "description": "20 Feet Packing Conveyor with Tube light Fitting without Tube light. Electricity Load :- 2KW",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         },
@@ -2728,107 +2728,22 @@
           "sku": "",
           "description": "Conveyor 20 Feet Belt Type Lasting Conveyor With 1 Air/Heating Chamber (3 Feet)",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         },
         {
           "id": "1154219000032674011",
           "itemName": "Chiller (Conveyor type) (3 Ton)",
-          "sku": "Chiller 3 ton",
+          "sku": "Chiller 3",
           "description": "",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         }
       ],
-      "machines": [
-        {
-          "id": "1154219000032674005-1154219000032674008-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032674005",
-          "lineItemId": "1154219000032674008",
-          "itemName": "Conveyor",
-          "sku": "",
-          "customerName": "Scholar Shoe Factory",
-          "salesOrderNumber": "SO-07258",
-          "deliveryDate": "2026-06-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "20 Feet Pasting Conveyor Rod Type With 1 Heating Chamber 8 Feet With NIR System"
-        },
-        {
-          "id": "1154219000032674005-1154219000032674009-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032674005",
-          "lineItemId": "1154219000032674009",
-          "itemName": "Conveyor",
-          "sku": "",
-          "customerName": "Scholar Shoe Factory",
-          "salesOrderNumber": "SO-07258",
-          "deliveryDate": "2026-06-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "20 Feet Packing Conveyor with Tube light Fitting without Tube light. Electricity Load :- 2KW"
-        },
-        {
-          "id": "1154219000032674005-1154219000032674010-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032674005",
-          "lineItemId": "1154219000032674010",
-          "itemName": "Conveyor",
-          "sku": "",
-          "customerName": "Scholar Shoe Factory",
-          "salesOrderNumber": "SO-07258",
-          "deliveryDate": "2026-06-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Conveyor 20 Feet Belt Type Lasting Conveyor With 1 Air/Heating Chamber (3 Feet)"
-        },
-        {
-          "id": "1154219000032674005-1154219000032674011-1",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032674005",
-          "lineItemId": "1154219000032674011",
-          "itemName": "Chiller (Conveyor type) (3 Ton)",
-          "sku": "Chiller 3 ton",
-          "customerName": "Scholar Shoe Factory",
-          "salesOrderNumber": "SO-07258",
-          "deliveryDate": "2026-06-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
+      "machines": []
     },
     "1154219000032135005": {
       "id": "1154219000032135005",
@@ -3165,7 +3080,7 @@
         {
           "id": "1154219000032135042",
           "itemName": "Chiller (Conveyor type) (5 Ton)",
-          "sku": "chiller 5 ton",
+          "sku": "Chiller 5",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 0,
@@ -4176,8 +4091,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T12:40:38.562Z",
-  "lastAttemptAt": "2026-08-06T12:55:15.243Z",
+  "lastSuccessfulSyncAt": "2026-08-06T12:55:38.002Z",
+  "lastAttemptAt": "2026-08-06T12:55:38.002Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
