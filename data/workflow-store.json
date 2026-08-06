@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270861,
+  "serialCounter": 26270863,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -6347,6 +6347,27 @@
         "machines": []
       },
       "machines": {}
+    },
+    "1154219000035363005": {
+      "salesOrderId": "1154219000035363005",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035363005-1154219000035363008-1": {
+          "machineUnitId": "1154219000035363005-1154219000035363008-1",
+          "lineItemId": "",
+          "serialNumber": "26270862",
+          "qrToken": "26270862",
+          "qrStatus": "pending"
+        },
+        "1154219000035363005-1154219000035363008-2": {
+          "machineUnitId": "1154219000035363005-1154219000035363008-2",
+          "lineItemId": "",
+          "serialNumber": "26270863",
+          "qrToken": "26270863",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
