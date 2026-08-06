@@ -915,6 +915,31 @@
           ]
         }
       }
+    },
+    "1154219000035330005": {
+      "orderId": "1154219000035330005",
+      "salesOrderNumber": "SO-07663",
+      "submittedAt": null,
+      "units": {
+        "1154219000035330005-1154219000035330008-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035330005-1154219000035330008-1-video-1786017671220-yrg9zm",
+              "name": "VID_20260806_173054.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-06%2FSO-07663%2FHotmelt%20Roller%20Coater%2016%20inch-1154219000035330005-1154219000035330008-1-2026-08-06T12-00-58-817Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-06/SO-07663/Hotmelt Roller Coater 16 inch-1154219000035330005-1154219000035330008-1-2026-08-06T12-00-58-817Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-06T12:01:11.220Z",
+              "expiresAt": "2026-09-05T12:00:58.817Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
