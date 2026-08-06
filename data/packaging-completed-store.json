@@ -3966,6 +3966,63 @@
       "machineIds": [
         "1154219000034608001-1154219000034608004-1"
       ]
+    },
+    "1154219000035278002": {
+      "completedAt": "2026-08-06T11:20:46.077Z",
+      "order": {
+        "id": "1154219000035278002",
+        "zohoSalesOrderId": "1154219000035278002",
+        "salesOrderNumber": "SO-07657",
+        "status": "open",
+        "customerName": "Tarif Ahmad",
+        "shippingAddress": "Abdul Ajij Marora VTC Marora (38), Mandikhera, Firozepur, Jhirka, Mewat, Haryana, 122108, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-05",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035278005",
+            "itemName": "Flatbed Single Walking Foot",
+            "sku": "302",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035278002-1154219000035278005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270851",
+            "qrToken": "26270851",
+            "orderId": "1154219000035278002",
+            "lineItemId": "1154219000035278005",
+            "itemName": "Flatbed Single Walking Foot",
+            "sku": "302",
+            "customerName": "Tarif Ahmad",
+            "salesOrderNumber": "SO-07657",
+            "deliveryDate": "2026-08-05",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-05",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035278002-1154219000035278005-1"
+      ]
     }
   }
 }
