@@ -865,6 +865,31 @@
           ]
         }
       }
+    },
+    "1154219000035278002": {
+      "orderId": "1154219000035278002",
+      "salesOrderNumber": "SO-07657",
+      "submittedAt": null,
+      "units": {
+        "1154219000035278002-1154219000035278005-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035278002-1154219000035278005-1-video-1786010725895-fvzaj5",
+              "name": "VID_20260806_153503.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-06%2FSO-07657%2FFlatbed%20Single%20Walking%20Foot-1154219000035278002-1154219000035278005-1-2026-08-06T10-05-13-341Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-06/SO-07657/Flatbed Single Walking Foot-1154219000035278002-1154219000035278005-1-2026-08-06T10-05-13-341Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-06T10:05:25.895Z",
+              "expiresAt": "2026-09-05T10:05:13.342Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
