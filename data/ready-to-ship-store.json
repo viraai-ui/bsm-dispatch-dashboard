@@ -692,6 +692,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035089003": {
+      "id": "ship-1786006098600-riaxx",
+      "itemId": "1154219000035089003",
+      "orderId": "1154219000035089003",
+      "machineId": "1154219000035089003-1154219000035089006-1",
+      "salesOrderNumber": "SO-07634",
+      "customerName": "Rajender Goyal Ji",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAN5819",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-06",
+      "notes": "",
+      "shippedAt": "2026-08-06T08:48:18.600Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
