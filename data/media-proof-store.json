@@ -954,6 +954,31 @@
       "submittedAt": "2026-08-06T12:19:52.450Z",
       "videoNotRequired": true,
       "units": {}
+    },
+    "1154219000035343892": {
+      "orderId": "1154219000035343892",
+      "salesOrderNumber": "SO-07670",
+      "submittedAt": null,
+      "units": {
+        "1154219000035343892-1154219000035343897-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035343892-1154219000035343897-1-video-1786021669657-v672fr",
+              "name": "VID_20260806_183726.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-06%2FSO-07670%2FHydraulic%20Sole%20Attaching%20machine-1154219000035343892-1154219000035343897-1-2026-08-06T13-07-32-073Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-06/SO-07670/Hydraulic Sole Attaching machine-1154219000035343892-1154219000035343897-1-2026-08-06T13-07-32-073Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-06T13:07:49.657Z",
+              "expiresAt": "2026-09-05T13:07:32.073Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
