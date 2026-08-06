@@ -4023,6 +4023,63 @@
       "machineIds": [
         "1154219000035278002-1154219000035278005-1"
       ]
+    },
+    "1154219000035156006": {
+      "completedAt": "2026-08-06T11:21:00.123Z",
+      "order": {
+        "id": "1154219000035156006",
+        "zohoSalesOrderId": "1154219000035156006",
+        "salesOrderNumber": "SO-07652",
+        "status": "open",
+        "customerName": "Aqdus Enterprises",
+        "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035156009",
+            "itemName": "Belt/ conveyer type fusing machine (450mm)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035156006-1154219000035156009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270847",
+            "qrToken": "26270847",
+            "orderId": "1154219000035156006",
+            "lineItemId": "1154219000035156009",
+            "itemName": "Belt/ conveyer type fusing machine (450mm)",
+            "sku": "",
+            "customerName": "Aqdus Enterprises",
+            "salesOrderNumber": "SO-07652",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-05",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 9
+      },
+      "machineIds": [
+        "1154219000035156006-1154219000035156009-1"
+      ]
     }
   }
 }
