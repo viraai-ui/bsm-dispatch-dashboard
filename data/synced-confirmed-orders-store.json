@@ -1,5 +1,145 @@
 {
   "orders": {
+    "1154219000035343892": {
+      "id": "1154219000035343892",
+      "zohoSalesOrderId": "1154219000035343892",
+      "salesOrderNumber": "SO-07670",
+      "status": "open",
+      "customerName": "RAJESH PLASTICS",
+      "shippingAddress": "T-1/86, Basement, Mangol Puri Industrial Area, phase 1, Mangolpuri, North west Delhi, New Delhi, Delhi, 110083, India",
+      "salesperson": "Manoj Sir",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035343897",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035343892-1154219000035343897-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035343892",
+          "lineItemId": "1154219000035343897",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "RAJESH PLASTICS",
+          "salesOrderNumber": "SO-07670",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035343850": {
+      "id": "1154219000035343850",
+      "zohoSalesOrderId": "1154219000035343850",
+      "salesOrderNumber": "SO-07669",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035343855",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035363005": {
+      "id": "1154219000035363005",
+      "zohoSalesOrderId": "1154219000035363005",
+      "salesOrderNumber": "SO-07668",
+      "status": "open",
+      "customerName": "KAGAZ TEG'S AND LABEL'S",
+      "shippingAddress": "ABHISHEK ESTATE,, 19/F,, OLD HARIPURA CIVIL ROAD,, GIRDHARNAGAR, ASARWA, AHMEDABAD, Ahmedabad, Gujarat, 380004, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035363008",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035363005-1154219000035363008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035363005",
+          "lineItemId": "1154219000035363008",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "KAGAZ TEG'S AND LABEL'S",
+          "salesOrderNumber": "SO-07668",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035363005-1154219000035363008-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035363005",
+          "lineItemId": "1154219000035363008",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "KAGAZ TEG'S AND LABEL'S",
+          "salesOrderNumber": "SO-07668",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035343802": {
       "id": "1154219000035343802",
       "zohoSalesOrderId": "1154219000035343802",
@@ -3904,6 +4044,9 @@
     }
   },
   "orderIds": [
+    "1154219000035343892",
+    "1154219000035343850",
+    "1154219000035363005",
     "1154219000035343802",
     "1154219000035356001",
     "1154219000035343430",
@@ -3943,8 +4086,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T10:54:34.985Z",
-  "lastAttemptAt": "2026-08-06T11:47:33.712Z",
+  "lastSuccessfulSyncAt": "2026-08-06T11:47:57.355Z",
+  "lastAttemptAt": "2026-08-06T11:47:57.355Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
