@@ -3636,6 +3636,63 @@
       "machineIds": [
         "1154219000035332005-1154219000035332008-1"
       ]
+    },
+    "1154219000035193030": {
+      "completedAt": "2026-08-06T05:20:42.650Z",
+      "order": {
+        "id": "1154219000035193030",
+        "zohoSalesOrderId": "1154219000035193030",
+        "salesOrderNumber": "SO-07650",
+        "status": "open",
+        "customerName": "A B POLYMERS",
+        "shippingAddress": "PLOT NO C-358, DSIIDC NARELA, New Delhi, North Delhi,, Delhi, 110040, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035193033",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035193030-1154219000035193033-1",
+            "unitNumber": 1,
+            "serialNumber": "26270848",
+            "qrToken": "26270848",
+            "orderId": "1154219000035193030",
+            "lineItemId": "1154219000035193033",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "A B POLYMERS",
+            "salesOrderNumber": "SO-07650",
+            "deliveryDate": "2026-08-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-05",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035193030-1154219000035193033-1"
+      ]
     }
   }
 }
