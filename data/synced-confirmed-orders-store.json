@@ -1,5 +1,30 @@
 {
   "orders": {
+    "1154219000035343802": {
+      "id": "1154219000035343802",
+      "zohoSalesOrderId": "1154219000035343802",
+      "salesOrderNumber": "SO-07667",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035343807",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000035356001": {
       "id": "1154219000035356001",
       "zohoSalesOrderId": "1154219000035356001",
@@ -2161,84 +2186,6 @@
         }
       ]
     },
-    "1154219000034015059": {
-      "id": "1154219000034015059",
-      "zohoSalesOrderId": "1154219000034015059",
-      "salesOrderNumber": "SO-07448",
-      "status": "open",
-      "customerName": "THE CRAFT STORE",
-      "shippingAddress": "SQOOS LIFESTYLE PVT LTD Shop No. 159, 1st Floor , Exult Shoppers Near Siddhivinayak Temple Vesu,Surat - 395007",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034015066",
-          "itemName": "Skiving Machine @5%",
-          "sku": "801 @5%",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034015067",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034015059-1154219000034015066-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034015059",
-          "lineItemId": "1154219000034015066",
-          "itemName": "Skiving Machine @5%",
-          "sku": "801 @5%",
-          "customerName": "THE CRAFT STORE",
-          "salesOrderNumber": "SO-07448",
-          "deliveryDate": "2026-07-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034015059-1154219000034015067-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034015059",
-          "lineItemId": "1154219000034015067",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "THE CRAFT STORE",
-          "salesOrderNumber": "SO-07448",
-          "deliveryDate": "2026-07-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000033890006": {
       "id": "1154219000033890006",
       "zohoSalesOrderId": "1154219000033890006",
@@ -3957,6 +3904,7 @@
     }
   },
   "orderIds": [
+    "1154219000035343802",
     "1154219000035356001",
     "1154219000035343430",
     "1154219000035353001",
@@ -3981,7 +3929,6 @@
     "1154219000034301018",
     "1154219000034276003",
     "1154219000034153022",
-    "1154219000034015059",
     "1154219000033890006",
     "1154219000033848001",
     "1154219000033193011",
@@ -3996,8 +3943,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T10:17:36.697Z",
-  "lastAttemptAt": "2026-08-06T10:39:09.439Z",
+  "lastSuccessfulSyncAt": "2026-08-06T10:39:30.604Z",
+  "lastAttemptAt": "2026-08-06T10:39:30.604Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
