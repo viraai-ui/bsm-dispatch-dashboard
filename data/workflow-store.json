@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270858,
+  "serialCounter": 26270859,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -6088,6 +6088,20 @@
           "processedAt": "2026-08-06T07:10:00.035Z",
           "dispatchNote": "wooden",
           "vendor": "S S Enterprise"
+        }
+      }
+    },
+    "1154219000035353001": {
+      "salesOrderId": "1154219000035353001",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035353001-1154219000035353004-1": {
+          "machineUnitId": "1154219000035353001-1154219000035353004-1",
+          "lineItemId": "",
+          "serialNumber": "26270859",
+          "qrToken": "26270859",
+          "qrStatus": "pending"
         }
       }
     }
