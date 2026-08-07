@@ -1,5 +1,77 @@
 {
   "orders": {
+    "1154219000035398001": {
+      "id": "1154219000035398001",
+      "zohoSalesOrderId": "1154219000035398001",
+      "salesOrderNumber": "SO-07675",
+      "status": "open",
+      "customerName": "Pradhan Upper Stitching Unit",
+      "shippingAddress": "Kotmukha, Alukaranbard, Bupatinagar, Purba, Bedinipur, West Bengal, 721425, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035398004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035374005": {
+      "id": "1154219000035374005",
+      "zohoSalesOrderId": "1154219000035374005",
+      "salesOrderNumber": "SO-07674",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Alwar",
+      "shippingAddress": "A-461,462,RIICO Industrial Area, Chopanki, Bhiwadi, Rajasthan, 301019, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035374008",
+          "itemName": "Angle Tape Cutting Machine [Double Blade] (Pneumatic)",
+          "sku": "369 AD",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035374005-1154219000035374008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035374005",
+          "lineItemId": "1154219000035374008",
+          "itemName": "Angle Tape Cutting Machine [Double Blade] (Pneumatic)",
+          "sku": "369 AD",
+          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Alwar",
+          "salesOrderNumber": "SO-07674",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035373004": {
       "id": "1154219000035373004",
       "zohoSalesOrderId": "1154219000035373004",
@@ -4048,6 +4120,8 @@
     }
   },
   "orderIds": [
+    "1154219000035398001",
+    "1154219000035374005",
     "1154219000035373004",
     "1154219000035362002",
     "1154219000035381001",
@@ -4091,8 +4165,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T06:13:18.650Z",
-  "lastAttemptAt": "2026-08-07T06:27:11.446Z",
+  "lastSuccessfulSyncAt": "2026-08-07T06:27:36.399Z",
+  "lastAttemptAt": "2026-08-07T06:27:36.399Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
