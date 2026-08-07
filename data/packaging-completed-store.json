@@ -4369,6 +4369,63 @@
       "machineIds": [
         "1154219000035343892-1154219000035343897-1"
       ]
+    },
+    "1154219000035403001": {
+      "completedAt": "2026-08-07T10:21:45.308Z",
+      "order": {
+        "id": "1154219000035403001",
+        "zohoSalesOrderId": "1154219000035403001",
+        "salesOrderNumber": "SO-07678",
+        "status": "open",
+        "customerName": "A.P. Footwear(Bahadurgarh)",
+        "shippingAddress": "1257, Red Cross Road, MIE Part-B, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035403004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035403001-1154219000035403004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270869",
+            "qrToken": "26270869",
+            "orderId": "1154219000035403001",
+            "lineItemId": "1154219000035403004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "A.P. Footwear(Bahadurgarh)",
+            "salesOrderNumber": "SO-07678",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035403001-1154219000035403004-1"
+      ]
     }
   }
 }
