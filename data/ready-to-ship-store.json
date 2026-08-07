@@ -878,6 +878,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035317003": {
+      "id": "ship-1786085846611-nzw5m",
+      "itemId": "1154219000035317003",
+      "orderId": "1154219000035317003",
+      "machineId": "1154219000035317003-1154219000035317006-1",
+      "salesOrderNumber": "SO-07662",
+      "customerName": "Welcome Shoes",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAC0143",
+      "driverName": "—",
+      "driverPhone": "9891359533",
+      "expectedDelivery": "2026-08-07",
+      "notes": "",
+      "shippedAt": "2026-08-07T06:57:26.611Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
