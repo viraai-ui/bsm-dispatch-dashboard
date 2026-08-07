@@ -4483,6 +4483,63 @@
       "machineIds": [
         "1154219000035398016-1154219000035398019-1"
       ]
+    },
+    "1154219000035342001": {
+      "completedAt": "2026-08-07T11:33:05.885Z",
+      "order": {
+        "id": "1154219000035342001",
+        "zohoSalesOrderId": "1154219000035342001",
+        "salesOrderNumber": "SO-07659",
+        "status": "open",
+        "customerName": "FEROC INTERNATIONAL",
+        "shippingAddress": "NEAR CRICKET WORLD FACTORY, NAHAL PULL, BASTI DANISHMANDAN, Jalandhar, Punjab, 144002, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035342004",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035342001-1154219000035342004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270858",
+            "qrToken": "26270858",
+            "orderId": "1154219000035342001",
+            "lineItemId": "1154219000035342004",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "customerName": "FEROC INTERNATIONAL",
+            "salesOrderNumber": "SO-07659",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035342001-1154219000035342004-1"
+      ]
     }
   }
 }
