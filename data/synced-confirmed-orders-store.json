@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000035373004": {
+      "id": "1154219000035373004",
+      "zohoSalesOrderId": "1154219000035373004",
+      "salesOrderNumber": "SO-07673",
+      "status": "open",
+      "customerName": "Mehak International",
+      "shippingAddress": "Plot No. 37, Sy. No. 257, Ibrahimpatnam Khalsa Revenue Village whitegold Textile Park, Ibrahimpatnam Khalsa, Rangareddy, Telangana, 501506, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035373007",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035373004-1154219000035373007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035373004",
+          "lineItemId": "1154219000035373007",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "customerName": "Mehak International",
+          "salesOrderNumber": "SO-07673",
+          "deliveryDate": "2026-08-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035362002": {
+      "id": "1154219000035362002",
+      "zohoSalesOrderId": "1154219000035362002",
+      "salesOrderNumber": "SO-07672",
+      "status": "open",
+      "customerName": "Kavita Creations",
+      "shippingAddress": "W-184, MIDC, Tarapur Industrial Area, Boisar, Palghar, Maharashtra, 401506, India",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035362005",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035362002-1154219000035362005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035362002",
+          "lineItemId": "1154219000035362005",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "Kavita Creations",
+          "salesOrderNumber": "SO-07672",
+          "deliveryDate": "2026-08-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035381001": {
       "id": "1154219000035381001",
       "zohoSalesOrderId": "1154219000035381001",
@@ -3954,6 +4048,8 @@
     }
   },
   "orderIds": [
+    "1154219000035373004",
+    "1154219000035362002",
     "1154219000035381001",
     "1154219000035343892",
     "1154219000035343850",
@@ -3995,8 +4091,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T05:13:16.152Z",
-  "lastAttemptAt": "2026-08-07T05:27:54.101Z",
+  "lastSuccessfulSyncAt": "2026-08-07T05:28:16.284Z",
+  "lastAttemptAt": "2026-08-07T05:28:16.284Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
