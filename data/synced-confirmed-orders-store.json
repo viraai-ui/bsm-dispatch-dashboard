@@ -348,53 +348,6 @@
         }
       ]
     },
-    "1154219000035353001": {
-      "id": "1154219000035353001",
-      "zohoSalesOrderId": "1154219000035353001",
-      "salesOrderNumber": "SO-07664",
-      "status": "open",
-      "customerName": "LOVELY FOOTFAB",
-      "shippingAddress": "Ground Floor, 676, MIE Part-A,, Bhardurgarh, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035353004",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035353001-1154219000035353004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035353001",
-          "lineItemId": "1154219000035353004",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "LOVELY FOOTFAB",
-          "salesOrderNumber": "SO-07664",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035330005": {
       "id": "1154219000035330005",
       "zohoSalesOrderId": "1154219000035330005",
@@ -4008,7 +3961,6 @@
     "1154219000035343802",
     "1154219000035356001",
     "1154219000035343430",
-    "1154219000035353001",
     "1154219000035330005",
     "1154219000035317003",
     "1154219000035342001",
@@ -4043,8 +3995,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-06T13:10:38.721Z",
-  "lastAttemptAt": "2026-08-07T05:12:53.456Z",
+  "lastSuccessfulSyncAt": "2026-08-07T05:13:16.152Z",
+  "lastAttemptAt": "2026-08-07T05:13:16.152Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
