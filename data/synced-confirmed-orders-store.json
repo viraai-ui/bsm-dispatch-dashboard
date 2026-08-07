@@ -11348,53 +11348,6 @@
         }
       ]
     },
-    "1154219000035343892": {
-      "id": "1154219000035343892",
-      "zohoSalesOrderId": "1154219000035343892",
-      "salesOrderNumber": "SO-07670",
-      "status": "open",
-      "customerName": "RAJESH PLASTICS",
-      "shippingAddress": "T-1/86, Basement, Mangol Puri Industrial Area, phase 1, Mangolpuri, North west Delhi, New Delhi, Delhi, 110083, India",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-08-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035343897",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035343892-1154219000035343897-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035343892",
-          "lineItemId": "1154219000035343897",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "RAJESH PLASTICS",
-          "salesOrderNumber": "SO-07670",
-          "deliveryDate": "2026-08-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035343850": {
       "id": "1154219000035343850",
       "zohoSalesOrderId": "1154219000035343850",
@@ -11646,105 +11599,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035317003": {
-      "id": "1154219000035317003",
-      "zohoSalesOrderId": "1154219000035317003",
-      "salesOrderNumber": "SO-07662",
-      "status": "open",
-      "customerName": "Welcome Shoes",
-      "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035317006",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035317007",
-          "itemName": "Steamer (6 nozzles) (SS body)",
-          "sku": "360",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035317003-1154219000035317006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035317003",
-          "lineItemId": "1154219000035317006",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "Welcome Shoes",
-          "salesOrderNumber": "SO-07662",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035317003-1154219000035317006-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035317003",
-          "lineItemId": "1154219000035317006",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "Welcome Shoes",
-          "salesOrderNumber": "SO-07662",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035317003-1154219000035317007-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035317003",
-          "lineItemId": "1154219000035317007",
-          "itemName": "Steamer (6 nozzles) (SS body)",
-          "sku": "360",
-          "customerName": "Welcome Shoes",
-          "salesOrderNumber": "SO-07662",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -15219,14 +15073,12 @@
     "1154219000035373004",
     "1154219000035362002",
     "1154219000035381001",
-    "1154219000035343892",
     "1154219000035343850",
     "1154219000035363005",
     "1154219000035343802",
     "1154219000035356001",
     "1154219000035343430",
     "1154219000035330005",
-    "1154219000035317003",
     "1154219000035342001",
     "1154219000035306375",
     "1154219000035278002",
@@ -15259,8 +15111,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T06:44:17.277Z",
-  "lastAttemptAt": "2026-08-07T07:10:49.876Z",
+  "lastSuccessfulSyncAt": "2026-08-07T07:11:17.893Z",
+  "lastAttemptAt": "2026-08-07T07:11:17.893Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
