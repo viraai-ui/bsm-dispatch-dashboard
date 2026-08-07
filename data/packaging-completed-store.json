@@ -4140,6 +4140,121 @@
         "dispatchPriority": "regular"
       },
       "machineIds": []
+    },
+    "1154219000035317003": {
+      "completedAt": "2026-08-07T05:41:25.482Z",
+      "order": {
+        "id": "1154219000035317003",
+        "zohoSalesOrderId": "1154219000035317003",
+        "salesOrderNumber": "SO-07662",
+        "status": "open",
+        "customerName": "Welcome Shoes",
+        "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035317006",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035317007",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035317003-1154219000035317006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270855",
+            "qrToken": "26270855",
+            "orderId": "1154219000035317003",
+            "lineItemId": "1154219000035317006",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "Welcome Shoes",
+            "salesOrderNumber": "SO-07662",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035317003-1154219000035317006-2",
+            "unitNumber": 2,
+            "serialNumber": "26270856",
+            "qrToken": "26270856",
+            "orderId": "1154219000035317003",
+            "lineItemId": "1154219000035317006",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "Welcome Shoes",
+            "salesOrderNumber": "SO-07662",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035317003-1154219000035317007-1",
+            "unitNumber": 3,
+            "serialNumber": "26270857",
+            "qrToken": "26270857",
+            "orderId": "1154219000035317003",
+            "lineItemId": "1154219000035317007",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "customerName": "Welcome Shoes",
+            "salesOrderNumber": "SO-07662",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000035317003-1154219000035317006-1",
+        "1154219000035317003-1154219000035317006-2",
+        "1154219000035317003-1154219000035317007-1"
+      ]
     }
   }
 }
