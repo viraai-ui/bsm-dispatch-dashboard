@@ -915,6 +915,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035342001": {
+      "id": "ship-1786102852896-krjnx",
+      "itemId": "1154219000035342001",
+      "orderId": "1154219000035342001",
+      "machineId": "1154219000035342001-1154219000035342004-1",
+      "salesOrderNumber": "SO-07659",
+      "customerName": "FEROC INTERNATIONAL",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "83750 74070",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-07",
+      "notes": "",
+      "shippedAt": "2026-08-07T11:40:52.896Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
