@@ -4426,6 +4426,63 @@
       "machineIds": [
         "1154219000035403001-1154219000035403004-1"
       ]
+    },
+    "1154219000035398016": {
+      "completedAt": "2026-08-07T11:32:59.011Z",
+      "order": {
+        "id": "1154219000035398016",
+        "zohoSalesOrderId": "1154219000035398016",
+        "salesOrderNumber": "SO-07683",
+        "status": "open",
+        "customerName": "Hari Om Enterprises",
+        "shippingAddress": "Upper Ground Floor, Plot no. 1 , KH no. 21/25, G- Block, Laxmi Park ,Nangloi, New Delhi,, West Delhi, Delhi,, 110041",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035398019",
+            "itemName": "Angle Tape Cutting Machine [Electronic] (Motorized)",
+            "sku": "369A",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035398016-1154219000035398019-1",
+            "unitNumber": 1,
+            "serialNumber": "26270871",
+            "qrToken": "26270871",
+            "orderId": "1154219000035398016",
+            "lineItemId": "1154219000035398019",
+            "itemName": "Angle Tape Cutting Machine [Electronic] (Motorized)",
+            "sku": "369A",
+            "customerName": "Hari Om Enterprises",
+            "salesOrderNumber": "SO-07683",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035398016-1154219000035398019-1"
+      ]
     }
   }
 }
