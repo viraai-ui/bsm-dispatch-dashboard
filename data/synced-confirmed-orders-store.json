@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035398016": {
+      "id": "1154219000035398016",
+      "zohoSalesOrderId": "1154219000035398016",
+      "salesOrderNumber": "SO-07683",
+      "status": "open",
+      "customerName": "Hari Om Enterprises",
+      "shippingAddress": "Upper Ground Floor, Plot no. 1 , KH no. 21/25, G- Block, Laxmi Park ,Nangloi, New Delhi,, West Delhi, Delhi,, 110041",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035398019",
+          "itemName": "Angle Tape Cutting Machine [Electronic] (Motorized)",
+          "sku": "369A",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035398016-1154219000035398019-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035398016",
+          "lineItemId": "1154219000035398019",
+          "itemName": "Angle Tape Cutting Machine [Electronic] (Motorized)",
+          "sku": "369A",
+          "customerName": "Hari Om Enterprises",
+          "salesOrderNumber": "SO-07683",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035305151": {
       "id": "1154219000035305151",
       "zohoSalesOrderId": "1154219000035305151",
@@ -12790,53 +12837,6 @@
         }
       ]
     },
-    "1154219000035278002": {
-      "id": "1154219000035278002",
-      "zohoSalesOrderId": "1154219000035278002",
-      "salesOrderNumber": "SO-07657",
-      "status": "open",
-      "customerName": "Tarif Ahmad",
-      "shippingAddress": "Abdul Ajij Marora VTC Marora (38), Mandikhera, Firozepur, Jhirka, Mewat, Haryana, 122108, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-05",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035278005",
-          "itemName": "Flatbed Single Walking Foot",
-          "sku": "302",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035278002-1154219000035278005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035278002",
-          "lineItemId": "1154219000035278005",
-          "itemName": "Flatbed Single Walking Foot",
-          "sku": "302",
-          "customerName": "Tarif Ahmad",
-          "salesOrderNumber": "SO-07657",
-          "deliveryDate": "2026-08-05",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035288002": {
       "id": "1154219000035288002",
       "zohoSalesOrderId": "1154219000035288002",
@@ -15356,6 +15356,7 @@
     }
   },
   "orderIds": [
+    "1154219000035398016",
     "1154219000035305151",
     "1154219000035426007",
     "1154219000035411005",
@@ -15376,7 +15377,6 @@
     "1154219000035330005",
     "1154219000035342001",
     "1154219000035306375",
-    "1154219000035278002",
     "1154219000035288002",
     "1154219000035193030",
     "1154219000035193016",
@@ -15405,8 +15405,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T10:29:12.940Z",
-  "lastAttemptAt": "2026-08-07T10:45:03.146Z",
+  "lastSuccessfulSyncAt": "2026-08-07T10:45:26.635Z",
+  "lastAttemptAt": "2026-08-07T10:45:26.635Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
