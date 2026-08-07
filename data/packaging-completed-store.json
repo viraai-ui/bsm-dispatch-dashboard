@@ -4255,6 +4255,63 @@
         "1154219000035317003-1154219000035317006-2",
         "1154219000035317003-1154219000035317007-1"
       ]
+    },
+    "1154219000035330005": {
+      "completedAt": "2026-08-07T05:41:33.683Z",
+      "order": {
+        "id": "1154219000035330005",
+        "zohoSalesOrderId": "1154219000035330005",
+        "salesOrderNumber": "SO-07663",
+        "status": "open",
+        "customerName": "HEKU TOYS",
+        "shippingAddress": "1st Floor, Plot No G 406 407 C, Nr Delta Watch, Metoda GIDC,, RAJKOT, Gujarat, 360021, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035330008",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035330005-1154219000035330008-1",
+            "unitNumber": 1,
+            "serialNumber": "26270854",
+            "qrToken": "26270854",
+            "orderId": "1154219000035330005",
+            "lineItemId": "1154219000035330008",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "HEKU TOYS",
+            "salesOrderNumber": "SO-07663",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035330005-1154219000035330008-1"
+      ]
     }
   }
 }
