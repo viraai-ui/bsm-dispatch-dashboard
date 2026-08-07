@@ -847,6 +847,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035343892": {
+      "id": "ship-1786085707380-wsm6d",
+      "itemId": "1154219000035343892",
+      "orderId": "1154219000035343892",
+      "machineId": "1154219000035343892-1154219000035343897-1",
+      "salesOrderNumber": "SO-07670",
+      "customerName": "RAJESH PLASTICS",
+      "customerPhone": "",
+      "salespersonName": "Manoj Sir",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAN5819",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-07",
+      "notes": "",
+      "shippedAt": "2026-08-07T06:55:07.380Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
