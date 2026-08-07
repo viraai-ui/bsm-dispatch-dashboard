@@ -6100,7 +6100,7 @@
           "vendor": "S S Enterprise"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 4
     },
     "1154219000035353001": {
       "salesOrderId": "1154219000035353001",
@@ -6415,7 +6415,7 @@
       "salesOrderId": "1154219000035398001",
       "salesOrderNumber": "SO-07675",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-07T06:28:12.988Z",
       "processedOrder": {
         "id": "1154219000035398001",
@@ -6442,7 +6442,8 @@
         ],
         "machines": []
       },
-      "machines": {}
+      "machines": {},
+      "dispatchSortOrder": 1
     },
     "1154219000035374005": {
       "salesOrderId": "1154219000035374005",
