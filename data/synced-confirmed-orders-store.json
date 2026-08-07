@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035305151": {
+      "id": "1154219000035305151",
+      "zohoSalesOrderId": "1154219000035305151",
+      "salesOrderNumber": "SO-07682",
+      "status": "open",
+      "customerName": "LEHAR FOOTWEARS LIMITED",
+      "shippingAddress": "A-243A, ROAD NO. 6, VKI AREA, JAIPUR,RAJASTHAN-302013",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035305154",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Bladder drum type",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035305155",
+          "itemName": "Freight Charge",
+          "sku": "",
+          "description": "Courier Charge",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035305151-1154219000035305154-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035305151",
+          "lineItemId": "1154219000035305154",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "LEHAR FOOTWEARS LIMITED",
+          "salesOrderNumber": "SO-07682",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Bladder drum type"
+        },
+        {
+          "id": "1154219000035305151-1154219000035305154-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035305151",
+          "lineItemId": "1154219000035305154",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "LEHAR FOOTWEARS LIMITED",
+          "salesOrderNumber": "SO-07682",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Bladder drum type"
+        }
+      ]
+    },
     "1154219000035426007": {
       "id": "1154219000035426007",
       "zohoSalesOrderId": "1154219000035426007",
@@ -13975,61 +14053,6 @@
         }
       ]
     },
-    "1154219000032674005": {
-      "id": "1154219000032674005",
-      "zohoSalesOrderId": "1154219000032674005",
-      "salesOrderNumber": "SO-07258",
-      "status": "open",
-      "customerName": "Scholar Shoe Factory",
-      "shippingAddress": "69, Gajajnan Nagar, Gajajnan Nagar, Agra, Uttar Pradesh, 282010",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-06-11",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000032674008",
-          "itemName": "Conveyor",
-          "sku": "",
-          "description": "20 Feet Pasting Conveyor Rod Type With 1 Heating Chamber 8 Feet With NIR System",
-          "quantity": 1,
-          "pendingQuantity": 0,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000032674009",
-          "itemName": "Conveyor",
-          "sku": "",
-          "description": "20 Feet Packing Conveyor with Tube light Fitting without Tube light. Electricity Load :- 2KW",
-          "quantity": 1,
-          "pendingQuantity": 0,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000032674010",
-          "itemName": "Conveyor",
-          "sku": "",
-          "description": "Conveyor 20 Feet Belt Type Lasting Conveyor With 1 Air/Heating Chamber (3 Feet)",
-          "quantity": 1,
-          "pendingQuantity": 0,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000032674011",
-          "itemName": "Chiller (Conveyor type) (3 Ton)",
-          "sku": "Chiller 3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 0,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": []
-    },
     "1154219000032135005": {
       "id": "1154219000032135005",
       "zohoSalesOrderId": "1154219000032135005",
@@ -15333,6 +15356,7 @@
     }
   },
   "orderIds": [
+    "1154219000035305151",
     "1154219000035426007",
     "1154219000035411005",
     "1154219000035405001",
@@ -15373,7 +15397,6 @@
     "1154219000033193011",
     "1154219000033087001",
     "1154219000032974004",
-    "1154219000032674005",
     "1154219000032135005",
     "1154219000032046008",
     "1154219000031849013",
@@ -15382,8 +15405,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T10:14:11.926Z",
-  "lastAttemptAt": "2026-08-07T10:28:48.050Z",
+  "lastSuccessfulSyncAt": "2026-08-07T10:29:12.940Z",
+  "lastAttemptAt": "2026-08-07T10:29:12.940Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
