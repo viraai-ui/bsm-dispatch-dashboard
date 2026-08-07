@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000035426007": {
+      "id": "1154219000035426007",
+      "zohoSalesOrderId": "1154219000035426007",
+      "salesOrderNumber": "SO-07681",
+      "status": "open",
+      "customerName": "Anant Enterprises",
+      "shippingAddress": "3rd Floor, House No. 101-102, Blk-H Pkt 2,, Sec 16 Rohini, Delhi, 110085",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035426010",
+          "itemName": "Swing arm (22 ton) Refurbished",
+          "sku": "",
+          "description": "With Cutting Board [PP Board] - 35*17*1 Inch",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035426007-1154219000035426010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035426007",
+          "lineItemId": "1154219000035426010",
+          "itemName": "Swing arm (22 ton) Refurbished",
+          "sku": "",
+          "customerName": "Anant Enterprises",
+          "salesOrderNumber": "SO-07681",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "With Cutting Board [PP Board] - 35*17*1 Inch"
+        }
+      ]
+    },
+    "1154219000035411005": {
+      "id": "1154219000035411005",
+      "zohoSalesOrderId": "1154219000035411005",
+      "salesOrderNumber": "SO-07680",
+      "status": "open",
+      "customerName": "SOLETALES PRIVATE LIMITED",
+      "shippingAddress": "Plot No. 43, HSIIDC , SECTOR- 17, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035411008",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035411005-1154219000035411008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035411005",
+          "lineItemId": "1154219000035411008",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "SOLETALES PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07680",
+          "deliveryDate": "2026-08-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035405001": {
       "id": "1154219000035405001",
       "zohoSalesOrderId": "1154219000035405001",
@@ -15239,6 +15333,8 @@
     }
   },
   "orderIds": [
+    "1154219000035426007",
+    "1154219000035411005",
     "1154219000035405001",
     "1154219000035403001",
     "1154219000035401001",
@@ -15286,8 +15382,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T09:44:10.862Z",
-  "lastAttemptAt": "2026-08-07T09:58:47.939Z",
+  "lastSuccessfulSyncAt": "2026-08-07T09:59:12.477Z",
+  "lastAttemptAt": "2026-08-07T09:59:12.477Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
