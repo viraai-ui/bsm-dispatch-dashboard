@@ -4312,6 +4312,63 @@
       "machineIds": [
         "1154219000035330005-1154219000035330008-1"
       ]
+    },
+    "1154219000035343892": {
+      "completedAt": "2026-08-07T05:41:40.361Z",
+      "order": {
+        "id": "1154219000035343892",
+        "zohoSalesOrderId": "1154219000035343892",
+        "salesOrderNumber": "SO-07670",
+        "status": "open",
+        "customerName": "RAJESH PLASTICS",
+        "shippingAddress": "T-1/86, Basement, Mangol Puri Industrial Area, phase 1, Mangolpuri, North west Delhi, New Delhi, Delhi, 110083, India",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035343897",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035343892-1154219000035343897-1",
+            "unitNumber": 1,
+            "serialNumber": "26270861",
+            "qrToken": "26270861",
+            "orderId": "1154219000035343892",
+            "lineItemId": "1154219000035343897",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "RAJESH PLASTICS",
+            "salesOrderNumber": "SO-07670",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035343892-1154219000035343897-1"
+      ]
     }
   }
 }
