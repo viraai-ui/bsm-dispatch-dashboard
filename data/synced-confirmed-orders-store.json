@@ -13731,53 +13731,6 @@
         }
       ]
     },
-    "1154219000034153022": {
-      "id": "1154219000034153022",
-      "zohoSalesOrderId": "1154219000034153022",
-      "salesOrderNumber": "SO-07482",
-      "status": "open",
-      "customerName": "LEPERA INDUSTRIES PRIVATE LIMITED",
-      "shippingAddress": "GAT NO. 498, GONDE DHUMALA, TAL.IGATPURI, Nashik, Maharashtra, 422403, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034153025",
-          "itemName": "Conveyor",
-          "sku": "",
-          "description": "32 Feet Belt Conveyor with 1 heating Chamber (12 Feet) with NIR System 1. Contactor Controlled logic 2. Speed Controlled with VFD 3. Gear Motor 4. Working Platform: 250mm",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034153022-1154219000034153025-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034153022",
-          "lineItemId": "1154219000034153025",
-          "itemName": "Conveyor",
-          "sku": "",
-          "customerName": "LEPERA INDUSTRIES PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07482",
-          "deliveryDate": "2026-07-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "32 Feet Belt Conveyor with 1 heating Chamber (12 Feet) with NIR System 1. Contactor Controlled logic 2. Speed Controlled with VFD 3. Gear Motor 4. Working Platform: 250mm"
-        }
-      ]
-    },
     "1154219000033890006": {
       "id": "1154219000033890006",
       "zohoSalesOrderId": "1154219000033890006",
@@ -15391,7 +15344,6 @@
     "1154219000034263026",
     "1154219000034301018",
     "1154219000034276003",
-    "1154219000034153022",
     "1154219000033890006",
     "1154219000033848001",
     "1154219000033193011",
@@ -15405,8 +15357,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T11:19:55.963Z",
-  "lastAttemptAt": "2026-08-07T11:54:41.907Z",
+  "lastSuccessfulSyncAt": "2026-08-07T11:55:05.334Z",
+  "lastAttemptAt": "2026-08-07T11:55:05.334Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
