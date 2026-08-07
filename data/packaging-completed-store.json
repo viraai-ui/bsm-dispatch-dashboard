@@ -4540,6 +4540,97 @@
       "machineIds": [
         "1154219000035342001-1154219000035342004-1"
       ]
+    },
+    "1154219000035401001": {
+      "completedAt": "2026-08-07T11:33:28.815Z",
+      "order": {
+        "id": "1154219000035401001",
+        "zohoSalesOrderId": "1154219000035401001",
+        "salesOrderNumber": "SO-07677",
+        "status": "open",
+        "customerName": "SHRI SHYAM ENTERPRISES",
+        "shippingAddress": "GROUND FLOOR, K-90,, UDYOG NAGAR, Delhi, 110041, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035401004",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035401005",
+            "itemName": "Belt/ strap embossing machine",
+            "sku": "BS-120",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035401001-1154219000035401004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270867",
+            "qrToken": "26270867",
+            "orderId": "1154219000035401001",
+            "lineItemId": "1154219000035401004",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "SHRI SHYAM ENTERPRISES",
+            "salesOrderNumber": "SO-07677",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035401001-1154219000035401005-1",
+            "unitNumber": 2,
+            "serialNumber": "26270868",
+            "qrToken": "26270868",
+            "orderId": "1154219000035401001",
+            "lineItemId": "1154219000035401005",
+            "itemName": "Belt/ strap embossing machine",
+            "sku": "BS-120",
+            "customerName": "SHRI SHYAM ENTERPRISES",
+            "salesOrderNumber": "SO-07677",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035401001-1154219000035401004-1",
+        "1154219000035401001-1154219000035401005-1"
+      ]
     }
   }
 }
