@@ -5523,7 +5523,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 1
     },
     "1154219000035278002": {
       "salesOrderId": "1154219000035278002",
@@ -6245,7 +6245,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 2
     },
     "1154219000035343892": {
       "salesOrderId": "1154219000035343892",
@@ -6443,7 +6443,7 @@
         "machines": []
       },
       "machines": {},
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 5
     },
     "1154219000035374005": {
       "salesOrderId": "1154219000035374005",
@@ -6662,7 +6662,7 @@
       "salesOrderId": "1154219000035401001",
       "salesOrderNumber": "SO-07677",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-07T07:57:17.468Z",
       "processedOrder": {
         "id": "1154219000035401001",
@@ -6773,7 +6773,8 @@
           "dispatchNote": "local",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 3
     },
     "1154219000035403001": {
       "salesOrderId": "1154219000035403001",
