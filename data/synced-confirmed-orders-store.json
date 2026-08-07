@@ -1,52 +1,5 @@
 {
   "orders": {
-    "1154219000035398016": {
-      "id": "1154219000035398016",
-      "zohoSalesOrderId": "1154219000035398016",
-      "salesOrderNumber": "SO-07683",
-      "status": "open",
-      "customerName": "Hari Om Enterprises",
-      "shippingAddress": "Upper Ground Floor, Plot no. 1 , KH no. 21/25, G- Block, Laxmi Park ,Nangloi, New Delhi,, West Delhi, Delhi,, 110041",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035398019",
-          "itemName": "Angle Tape Cutting Machine [Electronic] (Motorized)",
-          "sku": "369A",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035398016-1154219000035398019-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035398016",
-          "lineItemId": "1154219000035398019",
-          "itemName": "Angle Tape Cutting Machine [Electronic] (Motorized)",
-          "sku": "369A",
-          "customerName": "Hari Om Enterprises",
-          "salesOrderNumber": "SO-07683",
-          "deliveryDate": "2026-08-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035305151": {
       "id": "1154219000035305151",
       "zohoSalesOrderId": "1154219000035305151",
@@ -255,53 +208,6 @@
           "customerName": "Delkart Industries Limited",
           "salesOrderNumber": "SO-07679",
           "deliveryDate": "2026-08-08",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035403001": {
-      "id": "1154219000035403001",
-      "zohoSalesOrderId": "1154219000035403001",
-      "salesOrderNumber": "SO-07678",
-      "status": "open",
-      "customerName": "A.P. Footwear(Bahadurgarh)",
-      "shippingAddress": "1257, Red Cross Road, MIE Part-B, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035403004",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035403001-1154219000035403004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035403001",
-          "lineItemId": "1154219000035403004",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "customerName": "A.P. Footwear(Bahadurgarh)",
-          "salesOrderNumber": "SO-07678",
-          "deliveryDate": "2026-08-07",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
@@ -11739,31 +11645,6 @@
         }
       ]
     },
-    "1154219000035343850": {
-      "id": "1154219000035343850",
-      "zohoSalesOrderId": "1154219000035343850",
-      "salesOrderNumber": "SO-07669",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035343855",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000035363005": {
       "id": "1154219000035363005",
       "zohoSalesOrderId": "1154219000035363005",
@@ -11831,31 +11712,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000035343802": {
-      "id": "1154219000035343802",
-      "zohoSalesOrderId": "1154219000035343802",
-      "salesOrderNumber": "SO-07667",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035343807",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000035356001": {
       "id": "1154219000035356001",
@@ -15309,12 +15165,10 @@
     }
   },
   "orderIds": [
-    "1154219000035398016",
     "1154219000035305151",
     "1154219000035426007",
     "1154219000035411005",
     "1154219000035405001",
-    "1154219000035403001",
     "1154219000035401001",
     "1154219000035305099",
     "1154219000035398001",
@@ -15322,9 +15176,7 @@
     "1154219000035373004",
     "1154219000035362002",
     "1154219000035381001",
-    "1154219000035343850",
     "1154219000035363005",
-    "1154219000035343802",
     "1154219000035356001",
     "1154219000035343430",
     "1154219000035330005",
@@ -15357,8 +15209,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T12:25:06.801Z",
-  "lastAttemptAt": "2026-08-07T12:39:42.220Z",
+  "lastSuccessfulSyncAt": "2026-08-07T12:40:06.444Z",
+  "lastAttemptAt": "2026-08-07T12:40:06.444Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
