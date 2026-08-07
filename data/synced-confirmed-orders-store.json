@@ -1,5 +1,130 @@
 {
   "orders": {
+    "1154219000035403001": {
+      "id": "1154219000035403001",
+      "zohoSalesOrderId": "1154219000035403001",
+      "salesOrderNumber": "SO-07678",
+      "status": "open",
+      "customerName": "A.P. Footwear(Bahadurgarh)",
+      "shippingAddress": "1257, Red Cross Road, MIE Part-B, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035403004",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035403001-1154219000035403004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035403001",
+          "lineItemId": "1154219000035403004",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "A.P. Footwear(Bahadurgarh)",
+          "salesOrderNumber": "SO-07678",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035401001": {
+      "id": "1154219000035401001",
+      "zohoSalesOrderId": "1154219000035401001",
+      "salesOrderNumber": "SO-07677",
+      "status": "open",
+      "customerName": "SHRI SHYAM ENTERPRISES",
+      "shippingAddress": "GROUND FLOOR, K-90,, UDYOG NAGAR, Delhi, 110041, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035401004",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035401005",
+          "itemName": "Belt/ strap embossing machine",
+          "sku": "BS-120",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035401001-1154219000035401004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035401001",
+          "lineItemId": "1154219000035401004",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "SHRI SHYAM ENTERPRISES",
+          "salesOrderNumber": "SO-07677",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035401001-1154219000035401005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035401001",
+          "lineItemId": "1154219000035401005",
+          "itemName": "Belt/ strap embossing machine",
+          "sku": "BS-120",
+          "customerName": "SHRI SHYAM ENTERPRISES",
+          "salesOrderNumber": "SO-07677",
+          "deliveryDate": "2026-08-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035305099": {
       "id": "1154219000035305099",
       "zohoSalesOrderId": "1154219000035305099",
@@ -15067,6 +15192,8 @@
     }
   },
   "orderIds": [
+    "1154219000035403001",
+    "1154219000035401001",
     "1154219000035305099",
     "1154219000035398001",
     "1154219000035374005",
@@ -15111,8 +15238,8 @@
     "1154219000028400007",
     "1154219000027358003"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T07:41:33.943Z",
-  "lastAttemptAt": "2026-08-07T07:41:52.442Z",
+  "lastSuccessfulSyncAt": "2026-08-07T07:42:18.104Z",
+  "lastAttemptAt": "2026-08-07T07:42:18.104Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
