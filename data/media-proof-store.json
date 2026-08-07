@@ -1072,6 +1072,31 @@
           ]
         }
       }
+    },
+    "1154219000035398016": {
+      "orderId": "1154219000035398016",
+      "salesOrderNumber": "SO-07683",
+      "submittedAt": null,
+      "units": {
+        "1154219000035398016-1154219000035398019-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035398016-1154219000035398019-1-video-1786101880263-g2kidk",
+              "name": "VID_20260807_165425.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-07%2FSO-07683%2FAngle%20Tape%20Cutting%20Machine%20Electronic%20Motorized-1154219000035398016-1154219000035398019-1-2026-08-07T11-24-29-941Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-07/SO-07683/Angle Tape Cutting Machine Electronic Motorized-1154219000035398016-1154219000035398019-1-2026-08-07T11-24-29-941Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-07T11:24:40.263Z",
+              "expiresAt": "2026-09-06T11:24:29.941Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
