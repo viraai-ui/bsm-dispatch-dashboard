@@ -6444,7 +6444,7 @@
         "machines": []
       },
       "machines": {},
-      "dispatchSortOrder": 6
+      "dispatchSortOrder": 4
     },
     "1154219000035374005": {
       "salesOrderId": "1154219000035374005",
@@ -7000,7 +7000,7 @@
       "salesOrderId": "1154219000035453001",
       "salesOrderNumber": "SO-07684",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-08T06:29:49.195Z",
       "processedOrder": {
         "id": "1154219000035453001",
@@ -7065,7 +7065,8 @@
           "dispatchNote": "wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
