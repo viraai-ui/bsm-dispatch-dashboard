@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035463001": {
+      "id": "1154219000035463001",
+      "zohoSalesOrderId": "1154219000035463001",
+      "salesOrderNumber": "SO-07685",
+      "status": "open",
+      "customerName": "COOLBITE FASHIONS",
+      "shippingAddress": "55FF, OMAXE GALLERIA, Jhajjar Road, Sector 14, Bahadurgarh, Jhajjar,, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035463004",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035463005",
+          "itemName": "Single needle high post bed",
+          "sku": "8365",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035463001-1154219000035463004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035463001",
+          "lineItemId": "1154219000035463004",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "customerName": "COOLBITE FASHIONS",
+          "salesOrderNumber": "SO-07685",
+          "deliveryDate": "2026-08-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035463001-1154219000035463005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035463001",
+          "lineItemId": "1154219000035463005",
+          "itemName": "Single needle high post bed",
+          "sku": "8365",
+          "customerName": "COOLBITE FASHIONS",
+          "salesOrderNumber": "SO-07685",
+          "deliveryDate": "2026-08-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035453001": {
       "id": "1154219000035453001",
       "zohoSalesOrderId": "1154219000035453001",
@@ -11609,100 +11687,6 @@
         }
       ]
     },
-    "1154219000035330005": {
-      "id": "1154219000035330005",
-      "zohoSalesOrderId": "1154219000035330005",
-      "salesOrderNumber": "SO-07663",
-      "status": "open",
-      "customerName": "HEKU TOYS",
-      "shippingAddress": "1st Floor, Plot No G 406 407 C, Nr Delta Watch, Metoda GIDC,, RAJKOT, Gujarat, 360021, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035330008",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035330005-1154219000035330008-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035330005",
-          "lineItemId": "1154219000035330008",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "HEKU TOYS",
-          "salesOrderNumber": "SO-07663",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035342001": {
-      "id": "1154219000035342001",
-      "zohoSalesOrderId": "1154219000035342001",
-      "salesOrderNumber": "SO-07659",
-      "status": "open",
-      "customerName": "FEROC INTERNATIONAL",
-      "shippingAddress": "NEAR CRICKET WORLD FACTORY, NAHAL PULL, BASTI DANISHMANDAN, Jalandhar, Punjab, 144002, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035342004",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035342001-1154219000035342004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035342001",
-          "lineItemId": "1154219000035342004",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "customerName": "FEROC INTERNATIONAL",
-          "salesOrderNumber": "SO-07659",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035306375": {
       "id": "1154219000035306375",
       "zohoSalesOrderId": "1154219000035306375",
@@ -14887,6 +14871,7 @@
     }
   },
   "orderIds": [
+    "1154219000035463001",
     "1154219000035453001",
     "1154219000035426007",
     "1154219000035411005",
@@ -14899,8 +14884,6 @@
     "1154219000035363005",
     "1154219000035356001",
     "1154219000035343430",
-    "1154219000035330005",
-    "1154219000035342001",
     "1154219000035306375",
     "1154219000035288002",
     "1154219000035193030",
@@ -14928,8 +14911,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-08T08:57:53.527Z",
-  "lastAttemptAt": "2026-08-08T09:03:09.559Z",
+  "lastSuccessfulSyncAt": "2026-08-08T09:03:31.235Z",
+  "lastAttemptAt": "2026-08-08T09:03:31.235Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
