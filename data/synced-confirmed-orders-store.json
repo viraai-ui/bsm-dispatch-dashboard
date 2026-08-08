@@ -1,51 +1,29 @@
 {
   "orders": {
-    "1154219000035463015": {
-      "id": "1154219000035463015",
-      "zohoSalesOrderId": "1154219000035463015",
-      "salesOrderNumber": "SO-07688",
+    "1154219000035471001": {
+      "id": "1154219000035471001",
+      "zohoSalesOrderId": "1154219000035471001",
+      "salesOrderNumber": "SO-07689",
       "status": "open",
-      "customerName": "SHRI KRISHAN ENTERPRISES",
-      "shippingAddress": "First floor, 2074, MIE, Bahadurgarh, bahadurgarh, Jhajjar, Haryana - 124507",
-      "salesperson": "Shivani Kumari",
+      "customerName": "KOUSHAL ENTERPRISES",
+      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
+      "salesperson": "Deepak Kumar",
       "deliveryDate": "2026-08-08",
-      "dashboardStatus": "Not Generated",
+      "dashboardStatus": "Review Required",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000035463018",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
+          "id": "1154219000035471004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
           "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
         }
       ],
-      "machines": [
-        {
-          "id": "1154219000035463015-1154219000035463018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035463015",
-          "lineItemId": "1154219000035463018",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "SHRI KRISHAN ENTERPRISES",
-          "salesOrderNumber": "SO-07688",
-          "deliveryDate": "2026-08-08",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
+      "machines": []
     },
     "1154219000035468001": {
       "id": "1154219000035468001",
@@ -237,53 +215,6 @@
           "sku": "PP Board 60*20*3",
           "customerName": "UNIFORMVERSE PRIVATE LIMITED",
           "salesOrderNumber": "SO-07687",
-          "deliveryDate": "2026-08-08",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035466001": {
-      "id": "1154219000035466001",
-      "zohoSalesOrderId": "1154219000035466001",
-      "salesOrderNumber": "SO-07686",
-      "status": "open",
-      "customerName": "Jindal Enterprises",
-      "shippingAddress": "G-113, Bhagat Singh Park, Gali Number 8, Naaz Computer Social Foundation, Bhagat Singh Park, New Delhi,, North Delhi, Delhi, 110042",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-08",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035466004",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035466001-1154219000035466004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035466001",
-          "lineItemId": "1154219000035466004",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "Jindal Enterprises",
-          "salesOrderNumber": "SO-07686",
           "deliveryDate": "2026-08-08",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -15167,9 +15098,8 @@
     }
   },
   "orderIds": [
-    "1154219000035463015",
+    "1154219000035471001",
     "1154219000035468001",
-    "1154219000035466001",
     "1154219000035463001",
     "1154219000035453001",
     "1154219000035426007",
@@ -15210,8 +15140,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-08T11:11:25.094Z",
-  "lastAttemptAt": "2026-08-08T11:37:50.345Z",
+  "lastSuccessfulSyncAt": "2026-08-08T11:38:13.066Z",
+  "lastAttemptAt": "2026-08-08T11:38:13.066Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
