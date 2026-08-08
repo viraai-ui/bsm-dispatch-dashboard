@@ -1097,6 +1097,31 @@
           ]
         }
       }
+    },
+    "1154219000035374005": {
+      "orderId": "1154219000035374005",
+      "salesOrderNumber": "SO-07674",
+      "submittedAt": null,
+      "units": {
+        "1154219000035374005-1154219000035374008-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035374005-1154219000035374008-1-video-1786182377615-aop33d",
+              "name": "VID_20260808_151606.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-08%2FSO-07674%2FAngle%20Tape%20Cutting%20Machine%20Double%20Blade%20Pneumatic-1154219000035374005-1154219000035374008-1-2026-08-08T09-46-10-841Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-08/SO-07674/Angle Tape Cutting Machine Double Blade Pneumatic-1154219000035374005-1154219000035374008-1-2026-08-08T09-46-10-841Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-08T09:46:17.615Z",
+              "expiresAt": "2026-09-07T09:46:10.842Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
