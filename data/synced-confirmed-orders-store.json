@@ -47,84 +47,6 @@
         }
       ]
     },
-    "1154219000035305151": {
-      "id": "1154219000035305151",
-      "zohoSalesOrderId": "1154219000035305151",
-      "salesOrderNumber": "SO-07682",
-      "status": "open",
-      "customerName": "LEHAR FOOTWEARS LIMITED",
-      "shippingAddress": "A-243A, ROAD NO. 6, VKI AREA, JAIPUR,RAJASTHAN-302013",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035305154",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Bladder drum type",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035305155",
-          "itemName": "Freight Charge",
-          "sku": "",
-          "description": "Courier Charge",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035305151-1154219000035305154-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035305151",
-          "lineItemId": "1154219000035305154",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "LEHAR FOOTWEARS LIMITED",
-          "salesOrderNumber": "SO-07682",
-          "deliveryDate": "2026-08-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Bladder drum type"
-        },
-        {
-          "id": "1154219000035305151-1154219000035305154-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035305151",
-          "lineItemId": "1154219000035305154",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "LEHAR FOOTWEARS LIMITED",
-          "salesOrderNumber": "SO-07682",
-          "deliveryDate": "2026-08-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Bladder drum type"
-        }
-      ]
-    },
     "1154219000035426007": {
       "id": "1154219000035426007",
       "zohoSalesOrderId": "1154219000035426007",
@@ -11603,95 +11525,6 @@
         }
       ]
     },
-    "1154219000035381001": {
-      "id": "1154219000035381001",
-      "zohoSalesOrderId": "1154219000035381001",
-      "salesOrderNumber": "SO-07671",
-      "status": "open",
-      "customerName": "BOX MUSE",
-      "shippingAddress": "SY NO. 52 and 53 and Shed No. K3 and K4, Bashettihalli village, Kasaba Hobli, Bengaluru Rural, Karnataka, 561203, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-06",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035381004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Heater (Indian thread Burner)",
-          "quantity": 3,
-          "pendingQuantity": 3,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035381001-1154219000035381004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035381001",
-          "lineItemId": "1154219000035381004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "BOX MUSE",
-          "salesOrderNumber": "SO-07671",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Heater (Indian thread Burner)"
-        },
-        {
-          "id": "1154219000035381001-1154219000035381004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035381001",
-          "lineItemId": "1154219000035381004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "BOX MUSE",
-          "salesOrderNumber": "SO-07671",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Heater (Indian thread Burner)"
-        },
-        {
-          "id": "1154219000035381001-1154219000035381004-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035381001",
-          "lineItemId": "1154219000035381004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "BOX MUSE",
-          "salesOrderNumber": "SO-07671",
-          "deliveryDate": "2026-08-06",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Heater (Indian thread Burner)"
-        }
-      ]
-    },
     "1154219000035363005": {
       "id": "1154219000035363005",
       "zohoSalesOrderId": "1154219000035363005",
@@ -15180,7 +15013,6 @@
   },
   "orderIds": [
     "1154219000035453001",
-    "1154219000035305151",
     "1154219000035426007",
     "1154219000035411005",
     "1154219000035405001",
@@ -15190,7 +15022,6 @@
     "1154219000035374005",
     "1154219000035373004",
     "1154219000035362002",
-    "1154219000035381001",
     "1154219000035363005",
     "1154219000035356001",
     "1154219000035343430",
@@ -15224,8 +15055,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-08T06:04:48.952Z",
-  "lastAttemptAt": "2026-08-08T06:19:22.637Z",
+  "lastSuccessfulSyncAt": "2026-08-08T06:19:46.969Z",
+  "lastAttemptAt": "2026-08-08T06:19:46.969Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
