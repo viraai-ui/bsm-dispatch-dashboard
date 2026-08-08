@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270878,
+  "serialCounter": 26270883,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -7473,6 +7473,48 @@
           "processedAt": "2026-08-08T10:21:38.068Z",
           "dispatchNote": "local",
           "vendor": "Ishu"
+        }
+      }
+    },
+    "1154219000035468001": {
+      "salesOrderId": "1154219000035468001",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035468001-1154219000035468005-1": {
+          "machineUnitId": "1154219000035468001-1154219000035468005-1",
+          "lineItemId": "",
+          "serialNumber": "26270879",
+          "qrToken": "26270879",
+          "qrStatus": "pending"
+        },
+        "1154219000035468001-1154219000035468007-1": {
+          "machineUnitId": "1154219000035468001-1154219000035468007-1",
+          "lineItemId": "",
+          "serialNumber": "26270880",
+          "qrToken": "26270880",
+          "qrStatus": "pending"
+        },
+        "1154219000035468001-1154219000035468008-1": {
+          "machineUnitId": "1154219000035468001-1154219000035468008-1",
+          "lineItemId": "",
+          "serialNumber": "26270881",
+          "qrToken": "26270881",
+          "qrStatus": "pending"
+        },
+        "1154219000035468001-1154219000035468004-1": {
+          "machineUnitId": "1154219000035468001-1154219000035468004-1",
+          "lineItemId": "",
+          "serialNumber": "26270882",
+          "qrToken": "26270882",
+          "qrStatus": "pending"
+        },
+        "1154219000035468001-1154219000035468009-1": {
+          "machineUnitId": "1154219000035468001-1154219000035468009-1",
+          "lineItemId": "",
+          "serialNumber": "26270883",
+          "qrToken": "26270883",
+          "qrStatus": "pending"
         }
       }
     }
