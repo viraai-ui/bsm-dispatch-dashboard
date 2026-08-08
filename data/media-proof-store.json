@@ -1147,6 +1147,31 @@
           ]
         }
       }
+    },
+    "1154219000035453001": {
+      "orderId": "1154219000035453001",
+      "salesOrderNumber": "SO-07684",
+      "submittedAt": null,
+      "units": {
+        "1154219000035453001-1154219000035453004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035453001-1154219000035453004-1-video-1786183943171-baz7dm",
+              "name": "VID_20260808_154207.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-08%2FSO-07684%2FCover%20Type%20Sole%20Press%20pneumatic-1154219000035453001-1154219000035453004-1-2026-08-08T10-12-12-720Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-08/SO-07684/Cover Type Sole Press pneumatic-1154219000035453001-1154219000035453004-1-2026-08-08T10-12-12-720Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-08T10:12:23.171Z",
+              "expiresAt": "2026-09-07T10:12:12.721Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
