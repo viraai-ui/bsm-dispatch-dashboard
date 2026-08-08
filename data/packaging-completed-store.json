@@ -5298,6 +5298,63 @@
       "machineIds": [
         "1154219000035343430-1154219000035343433-1"
       ]
+    },
+    "1154219000035063006": {
+      "completedAt": "2026-08-08T13:48:32.873Z",
+      "order": {
+        "id": "1154219000035063006",
+        "zohoSalesOrderId": "1154219000035063006",
+        "salesOrderNumber": "SO-07630",
+        "status": "open",
+        "customerName": "PUREMAX FOOTWEARS PRIVATE LIMITED",
+        "shippingAddress": "Plot No.96, Sector-16, I.E., HSIIDC,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-05",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035063009",
+            "itemName": "Sole Stitch Cylinder bed Single needle (extra heavy duty)",
+            "sku": "205",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035063006-1154219000035063009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270874",
+            "qrToken": "26270874",
+            "orderId": "1154219000035063006",
+            "lineItemId": "1154219000035063009",
+            "itemName": "Sole Stitch Cylinder bed Single needle (extra heavy duty)",
+            "sku": "205",
+            "customerName": "PUREMAX FOOTWEARS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07630",
+            "deliveryDate": "2026-08-05",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035063006-1154219000035063009-1"
+      ]
     }
   }
 }
