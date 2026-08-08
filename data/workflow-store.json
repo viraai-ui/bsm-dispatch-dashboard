@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270873,
+  "serialCounter": 26270874,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -7139,6 +7139,20 @@
           "processedAt": "2026-08-08T07:12:43.542Z",
           "dispatchNote": "local",
           "vendor": "Dts"
+        }
+      }
+    },
+    "1154219000035063006": {
+      "salesOrderId": "1154219000035063006",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035063006-1154219000035063009-1": {
+          "machineUnitId": "1154219000035063006-1154219000035063009-1",
+          "lineItemId": "",
+          "serialNumber": "26270874",
+          "qrToken": "26270874",
+          "qrStatus": "pending"
         }
       }
     }
