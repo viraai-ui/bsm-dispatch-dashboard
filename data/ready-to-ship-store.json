@@ -1088,6 +1088,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035466001": {
+      "id": "ship-1786188840217-9flbd",
+      "itemId": "1154219000035466001",
+      "orderId": "1154219000035466001",
+      "machineId": "1154219000035466001-1154219000035466004-1",
+      "salesOrderNumber": "SO-07686",
+      "customerName": "Jindal Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01RAB6980",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-08",
+      "notes": "",
+      "shippedAt": "2026-08-08T11:34:00.217Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
