@@ -6248,7 +6248,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035343892": {
       "salesOrderId": "1154219000035343892",
@@ -6446,7 +6446,7 @@
         "machines": []
       },
       "machines": {},
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035374005": {
       "salesOrderId": "1154219000035374005",
@@ -6518,13 +6518,13 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035373004": {
       "salesOrderId": "1154219000035373004",
       "salesOrderNumber": "SO-07673",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-07T06:44:50.728Z",
       "processedOrder": {
         "id": "1154219000035373004",
@@ -6589,7 +6589,8 @@
           "dispatchNote": "wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035362002": {
       "salesOrderId": "1154219000035362002",
@@ -7069,7 +7070,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035426007": {
       "salesOrderId": "1154219000035426007",
@@ -7212,7 +7213,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     }
   }
 }
