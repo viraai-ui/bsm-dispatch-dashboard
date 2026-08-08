@@ -5411,6 +5411,62 @@
       "machineIds": [
         "1154219000035426007-1154219000035426010-1"
       ]
+    },
+    "1154219000035411005": {
+      "completedAt": "2026-08-08T13:48:48.175Z",
+      "order": {
+        "id": "1154219000035411005",
+        "zohoSalesOrderId": "1154219000035411005",
+        "salesOrderNumber": "SO-07680",
+        "status": "open",
+        "customerName": "SOLETALES PRIVATE LIMITED",
+        "shippingAddress": "Plot No. 43, HSIIDC , SECTOR- 17, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035411008",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035411005-1154219000035411008-1",
+            "unitNumber": 1,
+            "serialNumber": "26270875",
+            "qrToken": "26270875",
+            "orderId": "1154219000035411005",
+            "lineItemId": "1154219000035411008",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "SOLETALES PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07680",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035411005-1154219000035411008-1"
+      ]
     }
   }
 }
