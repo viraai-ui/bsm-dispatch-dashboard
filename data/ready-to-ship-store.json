@@ -1119,6 +1119,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035463015": {
+      "id": "ship-1786188994550-6nn2k",
+      "itemId": "1154219000035463015",
+      "orderId": "1154219000035463015",
+      "machineId": "1154219000035463015-1154219000035463018-1",
+      "salesOrderNumber": "SO-07688",
+      "customerName": "SHRI KRISHAN ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-08",
+      "notes": "",
+      "shippedAt": "2026-08-08T11:36:34.550Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
