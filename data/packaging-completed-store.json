@@ -5355,6 +5355,62 @@
       "machineIds": [
         "1154219000035063006-1154219000035063009-1"
       ]
+    },
+    "1154219000035426007": {
+      "completedAt": "2026-08-08T13:48:43.007Z",
+      "order": {
+        "id": "1154219000035426007",
+        "zohoSalesOrderId": "1154219000035426007",
+        "salesOrderNumber": "SO-07681",
+        "status": "open",
+        "customerName": "Anant Enterprises",
+        "shippingAddress": "3rd Floor, House No. 101-102, Blk-H Pkt 2,, Sec 16 Rohini, Delhi, 110085",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035426010",
+            "itemName": "Swing arm (22 ton) Refurbished",
+            "sku": "",
+            "description": "With Cutting Board [PP Board] - 35*17*1 Inch",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035426007-1154219000035426010-1",
+            "unitNumber": 1,
+            "serialNumber": "26270873",
+            "qrToken": "26270873",
+            "orderId": "1154219000035426007",
+            "lineItemId": "1154219000035426010",
+            "itemName": "Swing arm (22 ton) Refurbished",
+            "sku": "",
+            "customerName": "Anant Enterprises",
+            "salesOrderNumber": "SO-07681",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "With Cutting Board [PP Board] - 35*17*1 Inch",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035426007-1154219000035426010-1"
+      ]
     }
   }
 }
