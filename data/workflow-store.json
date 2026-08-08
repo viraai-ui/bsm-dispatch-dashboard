@@ -6248,7 +6248,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035343892": {
       "salesOrderId": "1154219000035343892",
@@ -6446,7 +6446,7 @@
         "machines": []
       },
       "machines": {},
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035374005": {
       "salesOrderId": "1154219000035374005",
@@ -6518,7 +6518,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035373004": {
       "salesOrderId": "1154219000035373004",
@@ -6590,7 +6590,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 8
     },
     "1154219000035362002": {
       "salesOrderId": "1154219000035362002",
@@ -6662,7 +6662,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     },
     "1154219000035401001": {
       "salesOrderId": "1154219000035401001",
@@ -6927,7 +6927,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 6
+      "dispatchSortOrder": 7
     },
     "1154219000035398016": {
       "salesOrderId": "1154219000035398016",
@@ -7072,7 +7072,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 8
+      "dispatchSortOrder": 9
     },
     "1154219000035426007": {
       "salesOrderId": "1154219000035426007",
@@ -7480,7 +7480,7 @@
       "salesOrderId": "1154219000035468001",
       "salesOrderNumber": "SO-07687",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-08T10:37:30.110Z",
       "processedOrder": {
         "id": "1154219000035468001",
@@ -7762,7 +7762,8 @@
           "dispatchNote": "good wrapping",
           "vendor": ""
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
