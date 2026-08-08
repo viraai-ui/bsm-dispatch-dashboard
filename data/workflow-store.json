@@ -6590,7 +6590,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 9
+      "dispatchSortOrder": 10
     },
     "1154219000035362002": {
       "salesOrderId": "1154219000035362002",
@@ -6927,7 +6927,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 8
+      "dispatchSortOrder": 9
     },
     "1154219000035398016": {
       "salesOrderId": "1154219000035398016",
@@ -7072,7 +7072,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 10
+      "dispatchSortOrder": 11
     },
     "1154219000035426007": {
       "salesOrderId": "1154219000035426007",
@@ -7409,7 +7409,7 @@
       "salesOrderId": "1154219000035466001",
       "salesOrderNumber": "SO-07686",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-08T10:21:38.068Z",
       "processedOrder": {
         "id": "1154219000035466001",
@@ -7474,7 +7474,8 @@
           "dispatchNote": "local",
           "vendor": "Ishu"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035468001": {
       "salesOrderId": "1154219000035468001",
@@ -7763,7 +7764,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 8
     },
     "1154219000035463015": {
       "salesOrderId": "1154219000035463015",
@@ -7835,7 +7836,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 7
     }
   }
 }
