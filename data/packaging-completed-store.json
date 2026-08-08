@@ -5241,6 +5241,63 @@
         "dispatchSortOrder": 6
       },
       "machineIds": []
+    },
+    "1154219000035343430": {
+      "completedAt": "2026-08-08T13:48:20.279Z",
+      "order": {
+        "id": "1154219000035343430",
+        "zohoSalesOrderId": "1154219000035343430",
+        "salesOrderNumber": "SO-07665",
+        "status": "open",
+        "customerName": "Sobti Plastics Pvt. Ltd.",
+        "shippingAddress": "Plot No. 14-15, HSIIDC Industrial Estate Bahadurgarh, Sankhol, Jhajjar, Haryana, 124507",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035343433",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035343430-1154219000035343433-1",
+            "unitNumber": 1,
+            "serialNumber": "26270860",
+            "qrToken": "26270860",
+            "orderId": "1154219000035343430",
+            "lineItemId": "1154219000035343433",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "Sobti Plastics Pvt. Ltd.",
+            "salesOrderNumber": "SO-07665",
+            "deliveryDate": "2026-08-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-06",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035343430-1154219000035343433-1"
+      ]
     }
   }
 }
