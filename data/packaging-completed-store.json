@@ -5210,6 +5210,37 @@
       "machineIds": [
         "1154219000035453001-1154219000035453004-1"
       ]
+    },
+    "1154219000035398001": {
+      "completedAt": "2026-08-08T13:48:09.969Z",
+      "order": {
+        "id": "1154219000035398001",
+        "zohoSalesOrderId": "1154219000035398001",
+        "salesOrderNumber": "SO-07675",
+        "status": "open",
+        "customerName": "Pradhan Upper Stitching Unit",
+        "shippingAddress": "Kotmukha, Alukaranbard, Bupatinagar, Purba, Bedinipur, West Bengal, 721425, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Review Required",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035398004",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": []
     }
   }
 }
