@@ -12848,8 +12848,8 @@
       "zohoSalesOrderId": "1154219000035063006",
       "salesOrderNumber": "SO-07630",
       "status": "open",
-      "customerName": "RETRO FOOTWEARS PRIVATE LIMITED",
-      "shippingAddress": "J 19, UDYOG NAGAR, UDYOG NAGAR, North West Delhi, Delhi,",
+      "customerName": "PUREMAX FOOTWEARS PRIVATE LIMITED",
+      "shippingAddress": "Plot No.96, Sector-16, I.E., HSIIDC,, Bahadurgarh, Haryana, 124507, India",
       "salesperson": "Karan Singh",
       "deliveryDate": "2026-08-05",
       "dashboardStatus": "Not Generated",
@@ -12876,7 +12876,7 @@
           "lineItemId": "1154219000035063009",
           "itemName": "Sole Stitch Cylinder bed Single needle (extra heavy duty)",
           "sku": "205",
-          "customerName": "RETRO FOOTWEARS PRIVATE LIMITED",
+          "customerName": "PUREMAX FOOTWEARS PRIVATE LIMITED",
           "salesOrderNumber": "SO-07630",
           "deliveryDate": "2026-08-05",
           "status": "Not Generated",
@@ -13461,6 +13461,51 @@
           "itemDescription": "UV Light for Sole Marking Machine"
         }
       ]
+    },
+    "1154219000034276023": {
+      "id": "1154219000034276023",
+      "zohoSalesOrderId": "1154219000034276023",
+      "salesOrderNumber": "SO-07508",
+      "status": "open",
+      "customerName": "YZ buyer International Pvt. Ltd.",
+      "shippingAddress": "69, Sec-8, IMT Manesar, Haryana, 122002, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-07-20",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000034276026",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 0,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035383961",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 0,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000034276028",
+          "itemName": "Silicon sheet for TPU Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 3,
+          "pendingQuantity": 0,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": []
     },
     "1154219000034301018": {
       "id": "1154219000034301018",
@@ -15084,84 +15129,6 @@
           "itemDescription": "56 Feet Pasting Conveyor with 3 Heating Chamber (6 Feet, 6 Feet, 8 Feet)"
         }
       ]
-    },
-    "1154219000027358003": {
-      "id": "1154219000027358003",
-      "zohoSalesOrderId": "1154219000027358003",
-      "salesOrderNumber": "SO-06702",
-      "status": "open",
-      "customerName": "TILAK UTPADAN PVT LTD",
-      "shippingAddress": "MANDI FENTONGANJ EF 48, MANDI FENTONGANJ, RAILWAY ROAD, PUNJAB-144001, Punjab",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-04-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000027358009",
-          "itemName": "TPU fusing machine [Hot And Cold]",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000027358011",
-          "itemName": "Silicon sheet for TPU Machine",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000027358003-1154219000027358009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000027358003",
-          "lineItemId": "1154219000027358009",
-          "itemName": "TPU fusing machine [Hot And Cold]",
-          "sku": "",
-          "customerName": "TILAK UTPADAN PVT LTD",
-          "salesOrderNumber": "SO-06702",
-          "deliveryDate": "2026-04-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000027358003-1154219000027358011-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000027358003",
-          "lineItemId": "1154219000027358011",
-          "itemName": "Silicon sheet for TPU Machine",
-          "sku": "",
-          "customerName": "TILAK UTPADAN PVT LTD",
-          "salesOrderNumber": "SO-06702",
-          "deliveryDate": "2026-04-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
     }
   },
   "orderIds": [
@@ -15194,6 +15161,7 @@
     "1154219000034623006",
     "1154219000034608001",
     "1154219000034263026",
+    "1154219000034276023",
     "1154219000034301018",
     "1154219000034276003",
     "1154219000033890006",
@@ -15206,11 +15174,10 @@
     "1154219000031849013",
     "1154219000031446006",
     "1154219000030035027",
-    "1154219000028400007",
-    "1154219000027358003"
+    "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-07T12:40:06.444Z",
-  "lastAttemptAt": "2026-08-08T05:01:06.241Z",
+  "lastSuccessfulSyncAt": "2026-08-08T05:01:29.341Z",
+  "lastAttemptAt": "2026-08-08T05:01:29.341Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
