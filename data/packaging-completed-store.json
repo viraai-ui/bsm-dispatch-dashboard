@@ -4836,6 +4836,63 @@
       "machineIds": [
         "1154219000035466001-1154219000035466004-1"
       ]
+    },
+    "1154219000035463015": {
+      "completedAt": "2026-08-08T11:21:39.987Z",
+      "order": {
+        "id": "1154219000035463015",
+        "zohoSalesOrderId": "1154219000035463015",
+        "salesOrderNumber": "SO-07688",
+        "status": "open",
+        "customerName": "SHRI KRISHAN ENTERPRISES",
+        "shippingAddress": "First floor, 2074, MIE, Bahadurgarh, bahadurgarh, Jhajjar, Haryana - 124507",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035463018",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035463015-1154219000035463018-1",
+            "unitNumber": 1,
+            "serialNumber": "26270884",
+            "qrToken": "26270884",
+            "orderId": "1154219000035463015",
+            "lineItemId": "1154219000035463018",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "SHRI KRISHAN ENTERPRISES",
+            "salesOrderNumber": "SO-07688",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 7
+      },
+      "machineIds": [
+        "1154219000035463015-1154219000035463018-1"
+      ]
     }
   }
 }
