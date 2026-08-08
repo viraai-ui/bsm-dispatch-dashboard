@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035453001": {
+      "id": "1154219000035453001",
+      "zohoSalesOrderId": "1154219000035453001",
+      "salesOrderNumber": "SO-07684",
+      "status": "open",
+      "customerName": "Sri Somanatha Foot Wear",
+      "shippingAddress": "Ground Floor, 26-17/1-9, Pasalavari Street, Gandhinagar Vijayawada, Krishna, Andhra Pradesh, 520003",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035453004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035453001-1154219000035453004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035453001",
+          "lineItemId": "1154219000035453004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Sri Somanatha Foot Wear",
+          "salesOrderNumber": "SO-07684",
+          "deliveryDate": "2026-08-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035305151": {
       "id": "1154219000035305151",
       "zohoSalesOrderId": "1154219000035305151",
@@ -15132,6 +15179,7 @@
     }
   },
   "orderIds": [
+    "1154219000035453001",
     "1154219000035305151",
     "1154219000035426007",
     "1154219000035411005",
@@ -15176,8 +15224,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-08T05:31:29.408Z",
-  "lastAttemptAt": "2026-08-08T05:46:06.512Z",
+  "lastSuccessfulSyncAt": "2026-08-08T05:46:30.374Z",
+  "lastAttemptAt": "2026-08-08T05:46:30.374Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
