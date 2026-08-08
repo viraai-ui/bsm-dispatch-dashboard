@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035466001": {
+      "id": "1154219000035466001",
+      "zohoSalesOrderId": "1154219000035466001",
+      "salesOrderNumber": "SO-07686",
+      "status": "open",
+      "customerName": "Jindal Enterprises",
+      "shippingAddress": "G-113, Bhagat Singh Park, Gali Number 8, Naaz Computer Social Foundation, Bhagat Singh Park, New Delhi,, North Delhi, Delhi, 110042",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035466004",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035466001-1154219000035466004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035466001",
+          "lineItemId": "1154219000035466004",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "Jindal Enterprises",
+          "salesOrderNumber": "SO-07686",
+          "deliveryDate": "2026-08-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035463001": {
       "id": "1154219000035463001",
       "zohoSalesOrderId": "1154219000035463001",
@@ -14871,6 +14918,7 @@
     }
   },
   "orderIds": [
+    "1154219000035466001",
     "1154219000035463001",
     "1154219000035453001",
     "1154219000035426007",
@@ -14911,8 +14959,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-08T09:33:26.634Z",
-  "lastAttemptAt": "2026-08-08T09:48:03.138Z",
+  "lastSuccessfulSyncAt": "2026-08-08T09:48:26.983Z",
+  "lastAttemptAt": "2026-08-08T09:48:26.983Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
