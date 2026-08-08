@@ -1045,6 +1045,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035330005": {
+      "id": "ship-1786179556382-q4tp5",
+      "itemId": "1154219000035330005",
+      "orderId": "1154219000035330005",
+      "machineId": "1154219000035330005-1154219000035330008-1",
+      "salesOrderNumber": "SO-07663",
+      "customerName": "HEKU TOYS",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "8375074070",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-08 at 1.27.19 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-08%2FSO-07663%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-08T08-59-14-736Z.jpeg",
+        "r2Key": "media-proof/2026-08-08/SO-07663/Shipment LR Builty-shipment-lr-builty-2026-08-08T08-59-14-736Z.jpeg",
+        "expiresAt": "2026-10-07T08:59:14.737Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-08",
+      "notes": "",
+      "shippedAt": "2026-08-08T08:59:16.382Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
