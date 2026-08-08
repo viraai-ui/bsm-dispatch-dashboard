@@ -4722,6 +4722,63 @@
         "1154219000035193016-1154219000035193019-1",
         "1154219000035193016-1154219000035193020-1"
       ]
+    },
+    "1154219000035374005": {
+      "completedAt": "2026-08-08T11:21:24.660Z",
+      "order": {
+        "id": "1154219000035374005",
+        "zohoSalesOrderId": "1154219000035374005",
+        "salesOrderNumber": "SO-07674",
+        "status": "open",
+        "customerName": "WALKAROO INTERNATIONAL PVT LTD - Alwar",
+        "shippingAddress": "A-461,462,RIICO Industrial Area, Chopanki, Bhiwadi, Rajasthan, 301019, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035374008",
+            "itemName": "Angle Tape Cutting Machine [Double Blade] (Pneumatic)",
+            "sku": "369 AD",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035374005-1154219000035374008-1",
+            "unitNumber": 1,
+            "serialNumber": "26270864",
+            "qrToken": "26270864",
+            "orderId": "1154219000035374005",
+            "lineItemId": "1154219000035374008",
+            "itemName": "Angle Tape Cutting Machine [Double Blade] (Pneumatic)",
+            "sku": "369 AD",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Alwar",
+            "salesOrderNumber": "SO-07674",
+            "deliveryDate": "2026-08-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035374005-1154219000035374008-1"
+      ]
     }
   }
 }
