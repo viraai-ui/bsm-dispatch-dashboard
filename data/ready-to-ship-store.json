@@ -923,7 +923,7 @@
       }
     },
     "1154219000035342001": {
-      "id": "ship-1786102852896-krjnx",
+      "id": "ship-1786179616163-lpr91",
       "itemId": "1154219000035342001",
       "orderId": "1154219000035342001",
       "machineId": "1154219000035342001-1154219000035342004-1",
@@ -935,13 +935,19 @@
       "transporterName": "VRL Logistics",
       "transporterPhone": "83750 74070",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-08 at 2.15.47 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-08%2FSO-07659%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-08T09-00-14-488Z.jpeg",
+        "r2Key": "media-proof/2026-08-08/SO-07659/Shipment LR Builty-shipment-lr-builty-2026-08-08T09-00-14-488Z.jpeg",
+        "expiresAt": "2026-10-07T09:00:14.489Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-07",
       "notes": "",
-      "shippedAt": "2026-08-07T11:40:52.896Z",
+      "shippedAt": "2026-08-08T09:00:16.163Z",
       "messages": {
         "customer": {
           "status": "skipped",
