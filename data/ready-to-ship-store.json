@@ -1150,6 +1150,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035374005": {
+      "id": "ship-1786189216089-anzy5",
+      "itemId": "1154219000035374005",
+      "orderId": "1154219000035374005",
+      "machineId": "1154219000035374005-1154219000035374008-1",
+      "salesOrderNumber": "SO-07674",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Alwar",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-08",
+      "notes": "",
+      "shippedAt": "2026-08-08T11:40:16.089Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
