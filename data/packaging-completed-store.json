@@ -4779,6 +4779,63 @@
       "machineIds": [
         "1154219000035374005-1154219000035374008-1"
       ]
+    },
+    "1154219000035466001": {
+      "completedAt": "2026-08-08T11:21:30.464Z",
+      "order": {
+        "id": "1154219000035466001",
+        "zohoSalesOrderId": "1154219000035466001",
+        "salesOrderNumber": "SO-07686",
+        "status": "open",
+        "customerName": "Jindal Enterprises",
+        "shippingAddress": "G-113, Bhagat Singh Park, Gali Number 8, Naaz Computer Social Foundation, Bhagat Singh Park, New Delhi,, North Delhi, Delhi, 110042",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035466004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035466001-1154219000035466004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270878",
+            "qrToken": "26270878",
+            "orderId": "1154219000035466001",
+            "lineItemId": "1154219000035466004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "Jindal Enterprises",
+            "salesOrderNumber": "SO-07686",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035466001-1154219000035466004-1"
+      ]
     }
   }
 }
