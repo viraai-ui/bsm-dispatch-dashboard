@@ -13124,53 +13124,6 @@
         }
       ]
     },
-    "1154219000034608001": {
-      "id": "1154219000034608001",
-      "zohoSalesOrderId": "1154219000034608001",
-      "salesOrderNumber": "SO-07550",
-      "status": "open",
-      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-07-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034608004",
-          "itemName": "ROLLER PRESSING MACHINE",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034608001-1154219000034608004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034608001",
-          "lineItemId": "1154219000034608004",
-          "itemName": "ROLLER PRESSING MACHINE",
-          "sku": "",
-          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-          "salesOrderNumber": "SO-07550",
-          "deliveryDate": "2026-07-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034263026": {
       "id": "1154219000034263026",
       "zohoSalesOrderId": "1154219000034263026",
@@ -15038,7 +14991,6 @@
     "1154219000034690004",
     "1154219000034633005",
     "1154219000034623006",
-    "1154219000034608001",
     "1154219000034263026",
     "1154219000034276023",
     "1154219000034301018",
@@ -15055,8 +15007,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-08T06:19:46.969Z",
-  "lastAttemptAt": "2026-08-08T06:57:03.822Z",
+  "lastSuccessfulSyncAt": "2026-08-08T06:57:26.963Z",
+  "lastAttemptAt": "2026-08-08T06:57:26.963Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
