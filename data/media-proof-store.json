@@ -1172,6 +1172,31 @@
           ]
         }
       }
+    },
+    "1154219000035463015": {
+      "orderId": "1154219000035463015",
+      "salesOrderNumber": "SO-07688",
+      "submittedAt": null,
+      "units": {
+        "1154219000035463015-1154219000035463018-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035463015-1154219000035463018-1-video-1786186392947-l2w2id",
+              "name": "VID_20260808_162256.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-08%2FSO-07688%2FTape%20Cutting%20machine%20Electronic-1154219000035463015-1154219000035463018-1-2026-08-08T10-53-00-524Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-08/SO-07688/Tape Cutting machine Electronic-1154219000035463015-1154219000035463018-1-2026-08-08T10-53-00-524Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-08T10:53:12.947Z",
+              "expiresAt": "2026-09-07T10:53:00.524Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
