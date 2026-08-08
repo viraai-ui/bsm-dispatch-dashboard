@@ -4893,6 +4893,63 @@
       "machineIds": [
         "1154219000035463015-1154219000035463018-1"
       ]
+    },
+    "1154219000035405001": {
+      "completedAt": "2026-08-08T13:47:41.866Z",
+      "order": {
+        "id": "1154219000035405001",
+        "zohoSalesOrderId": "1154219000035405001",
+        "salesOrderNumber": "SO-07679",
+        "status": "open",
+        "customerName": "Delkart Industries Limited",
+        "shippingAddress": "Gate No.202/203, Dongre Wasti Moi Road, Kuruli, Tal - Khed, Pune, Maharashtra, 410501, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035405004",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035405001-1154219000035405004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270870",
+            "qrToken": "26270870",
+            "orderId": "1154219000035405001",
+            "lineItemId": "1154219000035405004",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Delkart Industries Limited",
+            "salesOrderNumber": "SO-07679",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 9
+      },
+      "machineIds": [
+        "1154219000035405001-1154219000035405004-1"
+      ]
     }
   }
 }
