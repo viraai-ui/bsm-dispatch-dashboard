@@ -1014,6 +1014,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035401001": {
+      "id": "ship-1786179305365-ual4v",
+      "itemId": "1154219000035401001",
+      "orderId": "1154219000035401001",
+      "machineId": "1154219000035401001-1154219000035401004-1",
+      "salesOrderNumber": "SO-07677",
+      "customerName": "SHRI SHYAM ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL04EC3957",
+      "driverName": "—",
+      "driverPhone": "9871453027",
+      "expectedDelivery": "2026-08-08",
+      "notes": "",
+      "shippedAt": "2026-08-08T08:55:05.365Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
