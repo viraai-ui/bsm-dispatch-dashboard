@@ -4631,6 +4631,97 @@
         "1154219000035401001-1154219000035401004-1",
         "1154219000035401001-1154219000035401005-1"
       ]
+    },
+    "1154219000035193016": {
+      "completedAt": "2026-08-08T06:30:35.577Z",
+      "order": {
+        "id": "1154219000035193016",
+        "zohoSalesOrderId": "1154219000035193016",
+        "salesOrderNumber": "SO-07649",
+        "status": "open",
+        "customerName": "I.B ENTERPRISES",
+        "shippingAddress": "SF, 4955, AHATA KIDARA, BARA HINDU RAO,NEAR POLICE CHAUKI,, North West Delhi, Delhi, 110006, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035193019",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035193020",
+            "itemName": "Edge coloring machine [Double Side]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035193016-1154219000035193019-1",
+            "unitNumber": 1,
+            "serialNumber": "26270849",
+            "qrToken": "26270849",
+            "orderId": "1154219000035193016",
+            "lineItemId": "1154219000035193019",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "customerName": "I.B ENTERPRISES",
+            "salesOrderNumber": "SO-07649",
+            "deliveryDate": "2026-08-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-05",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035193016-1154219000035193020-1",
+            "unitNumber": 2,
+            "serialNumber": "26270850",
+            "qrToken": "26270850",
+            "orderId": "1154219000035193016",
+            "lineItemId": "1154219000035193020",
+            "itemName": "Edge coloring machine [Double Side]",
+            "sku": "",
+            "customerName": "I.B ENTERPRISES",
+            "salesOrderNumber": "SO-07649",
+            "deliveryDate": "2026-08-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-05",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035193016-1154219000035193019-1",
+        "1154219000035193016-1154219000035193020-1"
+      ]
     }
   }
 }
