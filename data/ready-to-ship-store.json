@@ -1181,6 +1181,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035063006": {
+      "id": "ship-1786341417079-3byy0",
+      "itemId": "1154219000035063006",
+      "orderId": "1154219000035063006",
+      "machineId": "1154219000035063006-1154219000035063009-1",
+      "salesOrderNumber": "SO-07630",
+      "customerName": "PUREMAX FOOTWEARS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51EV3510",
+      "driverName": "—",
+      "driverPhone": "9205952835",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T05:56:57.079Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
