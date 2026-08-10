@@ -1288,26 +1288,8 @@
       "orderId": "1154219000035463001",
       "salesOrderNumber": "SO-07685",
       "submittedAt": null,
-      "units": {
-        "1154219000035463001-1154219000035463005-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000035463001-1154219000035463005-1-video-1786348030746-hkx09f",
-              "name": "VID_20260810_131650.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2F2026-08-10%2FSO-07685%2FSingle%20needle%20high%20post%20bed-1154219000035463001-1154219000035463005-1-2026-08-10T07-46-58-146Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/2026-08-10/SO-07685/Single needle high post bed-1154219000035463001-1154219000035463005-1-2026-08-10T07-46-58-146Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-08-10T07:47:10.746Z",
-              "expiresAt": "2026-09-09T07:46:58.147Z"
-            }
-          ]
-        }
-      }
+      "units": {},
+      "videoNotRequired": false
     }
   }
 }
