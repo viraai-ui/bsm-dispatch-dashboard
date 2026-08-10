@@ -6592,7 +6592,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 10
+      "dispatchSortOrder": 3
     },
     "1154219000035362002": {
       "salesOrderId": "1154219000035362002",
@@ -6664,7 +6664,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 2
     },
     "1154219000035401001": {
       "salesOrderId": "1154219000035401001",
@@ -7858,7 +7858,7 @@
       "salesOrderId": "1154219000035503001",
       "salesOrderNumber": "SO-07695",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-10T08:23:57.056Z",
       "processedOrder": {
         "id": "1154219000035503001",
@@ -7923,7 +7923,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Dts"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
