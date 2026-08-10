@@ -5557,6 +5557,63 @@
         "1154219000035463001-1154219000035463004-1",
         "1154219000035463001-1154219000035463005-1"
       ]
+    },
+    "1154219000035503014": {
+      "completedAt": "2026-08-10T10:11:13.980Z",
+      "order": {
+        "id": "1154219000035503014",
+        "zohoSalesOrderId": "1154219000035503014",
+        "salesOrderNumber": "SO-07696",
+        "status": "open",
+        "customerName": "Aniket Footwear",
+        "shippingAddress": "926, Tehsil Kirawali, Runkata, Runkata, Agra, Uttar Pradesh, 282007",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035503017",
+            "itemName": "Tape folding machine (heavy duty)",
+            "sku": "12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035503014-1154219000035503017-1",
+            "unitNumber": 1,
+            "serialNumber": "26270886",
+            "qrToken": "26270886",
+            "orderId": "1154219000035503014",
+            "lineItemId": "1154219000035503017",
+            "itemName": "Tape folding machine (heavy duty)",
+            "sku": "12",
+            "customerName": "Aniket Footwear",
+            "salesOrderNumber": "SO-07696",
+            "deliveryDate": "2026-08-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-10",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035503014-1154219000035503017-1"
+      ]
     }
   }
 }
