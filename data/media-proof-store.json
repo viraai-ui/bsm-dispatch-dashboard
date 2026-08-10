@@ -1384,6 +1384,31 @@
           ]
         }
       }
+    },
+    "1154219000035503001": {
+      "orderId": "1154219000035503001",
+      "salesOrderNumber": "SO-07695",
+      "submittedAt": null,
+      "units": {
+        "1154219000035503001-1154219000035503004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035503001-1154219000035503004-1-video-1786358715158-fjydjv",
+              "name": "VID_20260810_161439.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-10%2FSO-07695%2FSwing%20arm%2022%20ton%20Refurbished-1154219000035503001-1154219000035503004-1-2026-08-10T10-44-47-626Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-10/SO-07695/Swing arm 22 ton Refurbished-1154219000035503001-1154219000035503004-1-2026-08-10T10-44-47-626Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-10T10:45:15.158Z",
+              "expiresAt": "2026-09-09T10:44:47.626Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
