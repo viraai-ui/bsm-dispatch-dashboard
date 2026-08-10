@@ -1503,6 +1503,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035426007": {
+      "id": "ship-1786366920707-m1b3w",
+      "itemId": "1154219000035426007",
+      "orderId": "1154219000035426007",
+      "machineId": "1154219000035426007-1154219000035426010-1",
+      "salesOrderNumber": "SO-07681",
+      "customerName": "Anant Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAB5950",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T13:02:00.707Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
