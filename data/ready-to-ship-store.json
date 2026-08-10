@@ -1348,6 +1348,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035373004": {
+      "id": "ship-1786365902350-pkgu7",
+      "itemId": "1154219000035373004",
+      "orderId": "1154219000035373004",
+      "machineId": "1154219000035373004-1154219000035373007-1",
+      "salesOrderNumber": "SO-07673",
+      "customerName": "Mehak International",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "83750 74070",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T12:45:02.350Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
