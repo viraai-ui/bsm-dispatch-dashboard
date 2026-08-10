@@ -12781,53 +12781,6 @@
       ],
       "machines": []
     },
-    "1154219000035193030": {
-      "id": "1154219000035193030",
-      "zohoSalesOrderId": "1154219000035193030",
-      "salesOrderNumber": "SO-07650",
-      "status": "open",
-      "customerName": "A B POLYMERS",
-      "shippingAddress": "PLOT NO C-358, DSIIDC NARELA, New Delhi, North Delhi,, Delhi, 110040, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035193033",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035193030-1154219000035193033-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035193030",
-          "lineItemId": "1154219000035193033",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "customerName": "A B POLYMERS",
-          "salesOrderNumber": "SO-07650",
-          "deliveryDate": "2026-08-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035193016": {
       "id": "1154219000035193016",
       "zohoSalesOrderId": "1154219000035193016",
@@ -15120,7 +15073,6 @@
     "1154219000035343430",
     "1154219000035306375",
     "1154219000035288002",
-    "1154219000035193030",
     "1154219000035193016",
     "1154219000034750001",
     "1154219000034744001",
@@ -15144,8 +15096,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-10T06:09:32.365Z",
-  "lastAttemptAt": "2026-08-10T06:24:05.843Z",
+  "lastSuccessfulSyncAt": "2026-08-10T06:24:31.528Z",
+  "lastAttemptAt": "2026-08-10T06:24:31.528Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
