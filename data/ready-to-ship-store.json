@@ -1212,6 +1212,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035193030": {
+      "id": "ship-1786342417765-mg03x",
+      "itemId": "1154219000035193030",
+      "orderId": "1154219000035193030",
+      "machineId": "1154219000035193030-1154219000035193033-1",
+      "salesOrderNumber": "SO-07650",
+      "customerName": "A B POLYMERS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP0173",
+      "driverName": "—",
+      "driverPhone": "8826779045",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T06:13:37.765Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
