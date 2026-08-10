@@ -1317,6 +1317,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035463001": {
+      "id": "ship-1786352497239-tldgj",
+      "itemId": "1154219000035463001",
+      "orderId": "1154219000035463001",
+      "machineId": "1154219000035463001-1154219000035463004-1",
+      "salesOrderNumber": "SO-07685",
+      "customerName": "COOLBITE FASHIONS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAR8910",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T09:01:37.239Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
