@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@prisma/client": "^6.19.0",
     "bcryptjs": "latest",
     "clsx": "latest",
@@ -19,6 +20,7 @@
     "jose": "latest",
     "jspdf": "^4.2.1",
     "next": "latest",
+    "pg": "^8.23.0",
     "qrcode": "latest",
     "react": "latest",
     "react-dom": "latest",

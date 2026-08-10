@@ -3,6 +3,7 @@ import { requireUser } from '@/lib/auth'
 import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { isMachineLineItem } from '@/lib/item-classification'
 import { backupGeneratedSerialsToZohoSheet, updateSerialVendorsInZohoSheet } from '@/lib/serial-sheet-backup'
+import { upsertGeneratedSerialsToMasterDatabase } from '@/lib/master-database'
 import type { Order } from '@/types/domain'
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -27,6 +28,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
     const now = new Date().toISOString()
     let sheetBackup: Awaited<ReturnType<typeof backupGeneratedSerialsToZohoSheet>> | null = null
+    let masterBackup: Awaited<ReturnType<typeof upsertGeneratedSerialsToMasterDatabase>> | null = null
     const workflow = await upsertOrderWorkflow(id, (current) => {
       const machines = { ...(current?.machines || {}) }
       if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) {
@@ -66,13 +68,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         return saved ? { ...machine, serialNumber: saved.serialNumber || machine.serialNumber, qrToken: saved.qrToken || machine.qrToken } : machine
       }).filter((machine) => generatedById.has(machine.id))
       sheetBackup = await backupGeneratedSerialsToZohoSheet(order, generatedMachines, generatedDate)
+      masterBackup = await upsertGeneratedSerialsToMasterDatabase(order, generatedMachines, generatedDate)
     }
     if (action === 'process' && order?.id) {
       const selectedIds = new Set((body.selectedMachineIds || []).filter(Boolean))
       const vendorBackup = await updateSerialVendorsInZohoSheet((workflow.processedOrder?.machines || order.machines || []).filter((machine) => selectedIds.has(machine.id)))
       sheetBackup = vendorBackup.synced || vendorBackup.skipped || vendorBackup.errors.length ? vendorBackup : sheetBackup
     }
-    return apiOk({ workflow, sheetBackup })
+    return apiOk({ workflow, sheetBackup, masterBackup })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Workflow update failed', 400)
   }
