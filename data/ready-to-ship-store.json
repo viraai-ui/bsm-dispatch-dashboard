@@ -1379,6 +1379,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035362002": {
+      "id": "ship-1786365968542-qtxg5",
+      "itemId": "1154219000035362002",
+      "orderId": "1154219000035362002",
+      "machineId": "1154219000035362002-1154219000035362005-1",
+      "salesOrderNumber": "SO-07672",
+      "customerName": "Kavita Creations",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "V Trans",
+      "transporterPhone": "70278 38181",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T12:46:08.542Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
