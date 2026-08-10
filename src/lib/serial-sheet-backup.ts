@@ -350,8 +350,15 @@ export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: 
   try {
     const records = await fetchSerialRecords()
     const existingSerials = new Set(records.map((row: any) => String(row['Serial No.'] || row['Serial No'] || row.Serial || '').trim()).filter(Boolean))
-    const newMachines = serialMachines.filter((machine) => !existingSerials.has(String(machine.serialNumber).trim()))
+    const pendingSerials = new Set<string>()
+    const newMachines = serialMachines.filter((machine) => {
+      const serial = String(machine.serialNumber).trim()
+      if (!serial || existingSerials.has(serial) || pendingSerials.has(serial)) return false
+      pendingSerials.add(serial)
+      return true
+    })
     result.skipped = serialMachines.length - newMachines.length
+    if (!newMachines.length) return result
     const rows = buildRows(order, newMachines, date, nextSerialSheetNumber(records))
     await appendSerialRows(rows)
     result.synced = rows.length
