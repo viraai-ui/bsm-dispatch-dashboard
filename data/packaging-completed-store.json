@@ -5785,6 +5785,63 @@
       "machineIds": [
         "1154219000035373004-1154219000035373007-1"
       ]
+    },
+    "1154219000035533061": {
+      "completedAt": "2026-08-10T12:54:01.726Z",
+      "order": {
+        "id": "1154219000035533061",
+        "zohoSalesOrderId": "1154219000035533061",
+        "salesOrderNumber": "SO-07702",
+        "status": "open",
+        "customerName": "K.G.N. PRINTING",
+        "shippingAddress": "PLOT NO. 264, PART-A, M.I.E., BAHADURGARH, Jhajjar, Haryana, 124507",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035533066",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035533061-1154219000035533066-1",
+            "unitNumber": 1,
+            "serialNumber": "26270897",
+            "qrToken": "26270897",
+            "orderId": "1154219000035533061",
+            "lineItemId": "1154219000035533066",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "K.G.N. PRINTING",
+            "salesOrderNumber": "SO-07702",
+            "deliveryDate": "2026-08-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-10",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035533061-1154219000035533066-1"
+      ]
     }
   }
 }
