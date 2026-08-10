@@ -5728,6 +5728,63 @@
       "machineIds": [
         "1154219000035362002-1154219000035362005-1"
       ]
+    },
+    "1154219000035373004": {
+      "completedAt": "2026-08-10T12:05:40.425Z",
+      "order": {
+        "id": "1154219000035373004",
+        "zohoSalesOrderId": "1154219000035373004",
+        "salesOrderNumber": "SO-07673",
+        "status": "open",
+        "customerName": "Mehak International",
+        "shippingAddress": "Plot No. 37, Sy. No. 257, Ibrahimpatnam Khalsa Revenue Village whitegold Textile Park, Ibrahimpatnam Khalsa, Rangareddy, Telangana, 501506, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035373007",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035373004-1154219000035373007-1",
+            "unitNumber": 1,
+            "serialNumber": "26270865",
+            "qrToken": "26270865",
+            "orderId": "1154219000035373004",
+            "lineItemId": "1154219000035373007",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "Mehak International",
+            "salesOrderNumber": "SO-07673",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-07",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035373004-1154219000035373007-1"
+      ]
     }
   }
 }
