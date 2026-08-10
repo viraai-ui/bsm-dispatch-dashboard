@@ -96,9 +96,9 @@ async function sheetPostWithRetry(params: Record<string, string>, retries = 3) {
 }
 
 async function fetchSerialRecords(worksheetName = sheetConfig().worksheetName) {
-  if (/25\s*-\s*26/.test(worksheetName)) return fetchSerialContentRecords(worksheetName)
-  const data = await sheetPostWithRetry({ method: 'worksheet.records.fetch', worksheet_name: worksheetName })
-  return Array.isArray(data.records) ? data.records : Array.isArray(data.data) ? data.data : []
+  // Use raw worksheet content instead of tabular records. Zoho's records.fetch can stop
+  // around blank rows/manual gaps, which made duplicate protection miss existing serials.
+  return fetchSerialContentRecords(worksheetName)
 }
 
 async function fetchSerialContentRecords(worksheetName: string) {
