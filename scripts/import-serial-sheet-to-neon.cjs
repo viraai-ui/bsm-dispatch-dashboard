@@ -8,7 +8,7 @@ for (const line of fs.readFileSync('.env.local', 'utf8').split(/\r?\n/)) {
   if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) value = value.slice(1, -1)
   process.env[match[1].trim()] = value
 }
-process.env.DATABASE_URL = fs.readFileSync('/tmp/bsm_dispatch_database_url.txt', 'utf8').trim()
+if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL missing from .env.local')
 
 const dc = process.env.ZOHO_DC || 'in'
 const accountsDomain = `https://accounts.zoho.${dc}`
