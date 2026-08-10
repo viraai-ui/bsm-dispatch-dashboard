@@ -1334,6 +1334,31 @@
           ]
         }
       }
+    },
+    "1154219000035373004": {
+      "orderId": "1154219000035373004",
+      "salesOrderNumber": "SO-07673",
+      "submittedAt": null,
+      "units": {
+        "1154219000035373004-1154219000035373007-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035373004-1154219000035373007-1-video-1786350016744-fl7lp0",
+              "name": "VID_20260810_135003.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-10%2FSO-07673%2FSingle%20Needle%20Walking%20foot%20Cylinder%20Bed-1154219000035373004-1154219000035373007-1-2026-08-10T08-20-07-636Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-10/SO-07673/Single Needle Walking foot Cylinder Bed-1154219000035373004-1154219000035373007-1-2026-08-10T08-20-07-636Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-10T08:20:16.744Z",
+              "expiresAt": "2026-09-09T08:20:07.636Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
