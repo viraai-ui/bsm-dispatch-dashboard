@@ -1280,6 +1280,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035405001": {
+      "id": "ship-1786347927979-yq7u3",
+      "itemId": "1154219000035405001",
+      "orderId": "1154219000035405001",
+      "machineId": "1154219000035405001-1154219000035405004-1",
+      "salesOrderNumber": "SO-07679",
+      "customerName": "Delkart Industries Limited",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "8375074070",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-10 at 12.04.01 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-10%2FSO-07679%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-10T07-45-26-324Z.jpeg",
+        "r2Key": "media-proof/2026-08-10/SO-07679/Shipment LR Builty-shipment-lr-builty-2026-08-10T07-45-26-324Z.jpeg",
+        "expiresAt": "2026-10-09T07:45:26.324Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T07:45:27.979Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
