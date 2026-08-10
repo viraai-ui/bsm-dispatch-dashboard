@@ -5614,6 +5614,63 @@
       "machineIds": [
         "1154219000035503014-1154219000035503017-1"
       ]
+    },
+    "1154219000035503001": {
+      "completedAt": "2026-08-10T12:05:12.362Z",
+      "order": {
+        "id": "1154219000035503001",
+        "zohoSalesOrderId": "1154219000035503001",
+        "salesOrderNumber": "SO-07695",
+        "status": "open",
+        "customerName": "Rajyog Enterprises",
+        "shippingAddress": "X-11, Supa Mica, A/P Supa, Tal-Parner, Ahmednagar, Maharashtra, 414302, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035503004",
+            "itemName": "Swing arm (22 ton) Refurbished",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035503001-1154219000035503004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270885",
+            "qrToken": "26270885",
+            "orderId": "1154219000035503001",
+            "lineItemId": "1154219000035503004",
+            "itemName": "Swing arm (22 ton) Refurbished",
+            "sku": "",
+            "customerName": "Rajyog Enterprises",
+            "salesOrderNumber": "SO-07695",
+            "deliveryDate": "2026-08-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-10",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035503001-1154219000035503004-1"
+      ]
     }
   }
 }
