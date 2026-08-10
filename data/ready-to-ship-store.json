@@ -1441,6 +1441,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035533061": {
+      "id": "ship-1786366714175-5kmm9",
+      "itemId": "1154219000035533061",
+      "orderId": "1154219000035533061",
+      "machineId": "1154219000035533061-1154219000035533066-1",
+      "salesOrderNumber": "SO-07702",
+      "customerName": "K.G.N. PRINTING",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T12:58:34.175Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
