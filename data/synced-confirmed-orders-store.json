@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035533061": {
+      "id": "1154219000035533061",
+      "zohoSalesOrderId": "1154219000035533061",
+      "salesOrderNumber": "SO-07702",
+      "status": "open",
+      "customerName": "K.G.N. PRINTING",
+      "shippingAddress": "PLOT NO. 264, PART-A, M.I.E., BAHADURGARH, Jhajjar, Haryana, 124507",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035533066",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035533061-1154219000035533066-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035533061",
+          "lineItemId": "1154219000035533066",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "K.G.N. PRINTING",
+          "salesOrderNumber": "SO-07702",
+          "deliveryDate": "2026-08-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035534006": {
       "id": "1154219000035534006",
       "zohoSalesOrderId": "1154219000035534006",
@@ -15805,6 +15852,7 @@
     }
   },
   "orderIds": [
+    "1154219000035533061",
     "1154219000035534006",
     "1154219000035532001",
     "1154219000035531001",
@@ -15850,8 +15898,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-10T11:58:42.792Z",
-  "lastAttemptAt": "2026-08-10T12:02:26.702Z",
+  "lastSuccessfulSyncAt": "2026-08-10T12:02:49.274Z",
+  "lastAttemptAt": "2026-08-10T12:02:49.274Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
