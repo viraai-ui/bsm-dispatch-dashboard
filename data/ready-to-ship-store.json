@@ -1534,6 +1534,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035453001": {
+      "id": "ship-1786367001622-jbcpo",
+      "itemId": "1154219000035453001",
+      "orderId": "1154219000035453001",
+      "machineId": "1154219000035453001-1154219000035453004-1",
+      "salesOrderNumber": "SO-07684",
+      "customerName": "Sri Somanatha Foot Wear",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "8375074070",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T13:03:21.622Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
