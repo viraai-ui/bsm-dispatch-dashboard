@@ -1359,6 +1359,31 @@
           ]
         }
       }
+    },
+    "1154219000035503014": {
+      "orderId": "1154219000035503014",
+      "salesOrderNumber": "SO-07696",
+      "submittedAt": null,
+      "units": {
+        "1154219000035503014-1154219000035503017-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035503014-1154219000035503017-1-video-1786355847088-yjlkpy",
+              "name": "VID_20260810_152712.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-10%2FSO-07696%2FTape%20folding%20machine%20heavy%20duty-1154219000035503014-1154219000035503017-1-2026-08-10T09-57-16-953Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-10/SO-07696/Tape folding machine heavy duty-1154219000035503014-1154219000035503017-1-2026-08-10T09-57-16-953Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-10T09:57:27.088Z",
+              "expiresAt": "2026-09-09T09:57:16.953Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
