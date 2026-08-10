@@ -1410,6 +1410,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035503014": {
+      "id": "ship-1786366346637-47a15",
+      "itemId": "1154219000035503014",
+      "orderId": "1154219000035503014",
+      "machineId": "1154219000035503014-1154219000035503017-1",
+      "salesOrderNumber": "SO-07696",
+      "customerName": "Aniket Footwear",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T12:52:26.637Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
