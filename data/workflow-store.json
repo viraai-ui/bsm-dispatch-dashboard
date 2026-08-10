@@ -8393,6 +8393,19 @@
           "vendor": "Balaji"
         }
       }
+    },
+    "1154219000035531001": {
+      "salesOrderId": "1154219000035531001",
+      "salesOrderNumber": "SO-07699",
+      "status": "qr_not_required",
+      "machines": {
+        "1154219000035531001-1154219000035531004-1": {
+          "machineUnitId": "1154219000035531001-1154219000035531004-1",
+          "lineItemId": "1154219000035531004",
+          "qrStatus": "not_required",
+          "qrNotRequiredAt": "2026-08-10T11:59:53.750Z"
+        }
+      }
     }
   }
 }
