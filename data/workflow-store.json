@@ -7924,13 +7924,13 @@
           "vendor": "Dts"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 4
     },
     "1154219000035503014": {
       "salesOrderId": "1154219000035503014",
       "salesOrderNumber": "SO-07696",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-10T09:35:31.976Z",
       "processedOrder": {
         "id": "1154219000035503014",
@@ -7995,7 +7995,8 @@
           "dispatchNote": "local",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
