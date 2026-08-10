@@ -1565,6 +1565,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035193016": {
+      "id": "ship-1786367081275-icfxw",
+      "itemId": "1154219000035193016",
+      "orderId": "1154219000035193016",
+      "machineId": "1154219000035193016-1154219000035193019-1",
+      "salesOrderNumber": "SO-07649",
+      "customerName": "I.B ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAT0676",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T13:04:41.275Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
