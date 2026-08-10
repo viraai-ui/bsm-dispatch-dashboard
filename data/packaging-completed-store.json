@@ -5467,6 +5467,96 @@
       "machineIds": [
         "1154219000035411005-1154219000035411008-1"
       ]
+    },
+    "1154219000035463001": {
+      "completedAt": "2026-08-10T08:01:23.886Z",
+      "order": {
+        "id": "1154219000035463001",
+        "zohoSalesOrderId": "1154219000035463001",
+        "salesOrderNumber": "SO-07685",
+        "status": "open",
+        "customerName": "COOLBITE FASHIONS",
+        "shippingAddress": "55FF, OMAXE GALLERIA, Jhajjar Road, Sector 14, Bahadurgarh, Jhajjar,, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035463004",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035463005",
+            "itemName": "Single needle high post bed",
+            "sku": "8365",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035463001-1154219000035463004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270876",
+            "qrToken": "26270876",
+            "orderId": "1154219000035463001",
+            "lineItemId": "1154219000035463004",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "COOLBITE FASHIONS",
+            "salesOrderNumber": "SO-07685",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035463001-1154219000035463005-1",
+            "unitNumber": 2,
+            "serialNumber": "26270877",
+            "qrToken": "26270877",
+            "orderId": "1154219000035463001",
+            "lineItemId": "1154219000035463005",
+            "itemName": "Single needle high post bed",
+            "sku": "8365",
+            "customerName": "COOLBITE FASHIONS",
+            "salesOrderNumber": "SO-07685",
+            "deliveryDate": "2026-08-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035463001-1154219000035463004-1",
+        "1154219000035463001-1154219000035463005-1"
+      ]
     }
   }
 }
