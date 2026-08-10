@@ -1243,6 +1243,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035468001": {
+      "id": "ship-1786342820326-4zerb",
+      "itemId": "1154219000035468001",
+      "orderId": "1154219000035468001",
+      "machineId": "1154219000035468001-1154219000035468005-1",
+      "salesOrderNumber": "SO-07687",
+      "customerName": "UNIFORMVERSE PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M D Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-08 at 7.13.37 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-10%2FSO-07687%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-10T06-20-18-505Z.jpeg",
+        "r2Key": "media-proof/2026-08-10/SO-07687/Shipment LR Builty-shipment-lr-builty-2026-08-10T06-20-18-505Z.jpeg",
+        "expiresAt": "2026-10-09T06:20:18.505Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-10",
+      "notes": "",
+      "shippedAt": "2026-08-10T06:20:20.326Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
