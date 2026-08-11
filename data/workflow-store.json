@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270902,
+  "serialCounter": 26270907,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -9290,6 +9290,48 @@
           "processedAt": "2026-08-11T05:27:49.963Z",
           "dispatchNote": "wooden",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000035509004": {
+      "salesOrderId": "1154219000035509004",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000035509004-1154219000035509007-1": {
+          "machineUnitId": "1154219000035509004-1154219000035509007-1",
+          "lineItemId": "",
+          "serialNumber": "26270903",
+          "qrToken": "26270903",
+          "qrStatus": "pending"
+        },
+        "1154219000035509004-1154219000035509007-2": {
+          "machineUnitId": "1154219000035509004-1154219000035509007-2",
+          "lineItemId": "",
+          "serialNumber": "26270904",
+          "qrToken": "26270904",
+          "qrStatus": "pending"
+        },
+        "1154219000035509004-1154219000035509007-3": {
+          "machineUnitId": "1154219000035509004-1154219000035509007-3",
+          "lineItemId": "",
+          "serialNumber": "26270905",
+          "qrToken": "26270905",
+          "qrStatus": "pending"
+        },
+        "1154219000035509004-1154219000035509007-4": {
+          "machineUnitId": "1154219000035509004-1154219000035509007-4",
+          "lineItemId": "",
+          "serialNumber": "26270906",
+          "qrToken": "26270906",
+          "qrStatus": "pending"
+        },
+        "1154219000035509004-1154219000035509007-5": {
+          "machineUnitId": "1154219000035509004-1154219000035509007-5",
+          "lineItemId": "",
+          "serialNumber": "26270907",
+          "qrToken": "26270907",
+          "qrStatus": "pending"
         }
       }
     }
