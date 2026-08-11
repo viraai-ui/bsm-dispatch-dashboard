@@ -8006,7 +8006,7 @@
       "salesOrderId": "1154219000035481007",
       "salesOrderNumber": "SO-07693",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-10T09:58:46.689Z",
       "processedOrder": {
         "id": "1154219000035481007",
@@ -8395,7 +8395,8 @@
           "dispatchNote": "local",
           "vendor": "Balaji"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035531001": {
       "salesOrderId": "1154219000035531001",
@@ -8473,7 +8474,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035533061": {
       "salesOrderId": "1154219000035533061",
@@ -9072,7 +9073,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035531015": {
       "salesOrderId": "1154219000035531015",
