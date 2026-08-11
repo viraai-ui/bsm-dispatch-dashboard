@@ -8412,7 +8412,7 @@
       "salesOrderId": "1154219000035531001",
       "salesOrderNumber": "SO-07699",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-11T07:40:22.009Z",
       "processedOrder": {
         "id": "1154219000035531001",
@@ -8487,7 +8487,8 @@
           "dispatchNote": "Wooden",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 4
     },
     "1154219000035533061": {
       "salesOrderId": "1154219000035533061",
@@ -9158,7 +9159,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035504003": {
       "salesOrderId": "1154219000035504003",
@@ -9522,7 +9523,7 @@
       "salesOrderId": "1154219000033193011",
       "salesOrderNumber": "SO-07341",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-11T09:14:56.633Z",
       "processedOrder": {
         "id": "1154219000033193011",
@@ -9587,7 +9588,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
