@@ -6560,6 +6560,111 @@
         "1154219000035534006-1154219000035534009-14",
         "1154219000035534006-1154219000035534009-15"
       ]
+    },
+    "1154219000035504003": {
+      "completedAt": "2026-08-11T13:16:08.165Z",
+      "order": {
+        "id": "1154219000035504003",
+        "zohoSalesOrderId": "1154219000035504003",
+        "salesOrderNumber": "SO-07704",
+        "status": "open",
+        "customerName": "KANCHAN POLYMERS",
+        "shippingAddress": "PLOT NO M-5 TO M-8, SAYAN TEXTILE PARK, ICCHAPORE, HAZIRA ROAD,, SURAT, Gujarat, 394510, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035504006",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "23 no needle per set honi hai",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035504003-1154219000035504006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270899",
+            "qrToken": "26270899",
+            "orderId": "1154219000035504003",
+            "lineItemId": "1154219000035504006",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "KANCHAN POLYMERS",
+            "salesOrderNumber": "SO-07704",
+            "deliveryDate": "2026-08-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "23 no needle per set honi hai",
+            "warrantyStart": "2026-08-11",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000035504003-1154219000035504006-2",
+            "unitNumber": 2,
+            "serialNumber": "26270900",
+            "qrToken": "26270900",
+            "orderId": "1154219000035504003",
+            "lineItemId": "1154219000035504006",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "KANCHAN POLYMERS",
+            "salesOrderNumber": "SO-07704",
+            "deliveryDate": "2026-08-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "23 no needle per set honi hai",
+            "warrantyStart": "2026-08-11",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000035504003-1154219000035504006-3",
+            "unitNumber": 3,
+            "serialNumber": "26270901",
+            "qrToken": "26270901",
+            "orderId": "1154219000035504003",
+            "lineItemId": "1154219000035504006",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "KANCHAN POLYMERS",
+            "salesOrderNumber": "SO-07704",
+            "deliveryDate": "2026-08-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "23 no needle per set honi hai",
+            "warrantyStart": "2026-08-11",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035504003-1154219000035504006-1",
+        "1154219000035504003-1154219000035504006-2",
+        "1154219000035504003-1154219000035504006-3"
+      ]
     }
   }
 }
