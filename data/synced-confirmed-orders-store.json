@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000035502015": {
+      "id": "1154219000035502015",
+      "zohoSalesOrderId": "1154219000035502015",
+      "salesOrderNumber": "SO-07709",
+      "status": "open",
+      "customerName": "Relaxo Footwears Limited (Haridwar)",
+      "shippingAddress": "Haridwar, Uttrakhand, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-11",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035502018",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Motor With Speed controller (834-2)",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035502015-1154219000035502018-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035502015",
+          "lineItemId": "1154219000035502018",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Limited (Haridwar)",
+          "salesOrderNumber": "SO-07709",
+          "deliveryDate": "2026-08-11",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Motor With Speed controller (834-2)"
+        },
+        {
+          "id": "1154219000035502015-1154219000035502018-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035502015",
+          "lineItemId": "1154219000035502018",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Limited (Haridwar)",
+          "salesOrderNumber": "SO-07709",
+          "deliveryDate": "2026-08-11",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Motor With Speed controller (834-2)"
+        }
+      ]
+    },
     "1154219000035516019": {
       "id": "1154219000035516019",
       "zohoSalesOrderId": "1154219000035516019",
@@ -15986,6 +16054,7 @@
     }
   },
   "orderIds": [
+    "1154219000035502015",
     "1154219000035516019",
     "1154219000035510018",
     "1154219000035509004",
@@ -16027,8 +16096,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-11T09:04:55.562Z",
-  "lastAttemptAt": "2026-08-11T10:00:22.026Z",
+  "lastSuccessfulSyncAt": "2026-08-11T10:00:48.973Z",
+  "lastAttemptAt": "2026-08-11T10:00:48.973Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
