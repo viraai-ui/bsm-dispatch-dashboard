@@ -1654,6 +1654,31 @@
           ]
         }
       }
+    },
+    "1154219000035504003": {
+      "orderId": "1154219000035504003",
+      "salesOrderNumber": "SO-07704",
+      "submittedAt": null,
+      "units": {
+        "1154219000035504003-1154219000035504006-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035504003-1154219000035504006-1-video-1786447942872-t3j3b4",
+              "name": "VID_20260811_170206.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-11%2FSO-07704%2FTape%20Binding%20Single%20Needle%20Cylinder%20Bed-1154219000035504003-1154219000035504006-1-2026-08-11T11-32-11-575Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-11/SO-07704/Tape Binding Single Needle Cylinder Bed-1154219000035504003-1154219000035504006-1-2026-08-11T11-32-11-575Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-11T11:32:22.872Z",
+              "expiresAt": "2026-09-10T11:32:11.575Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
