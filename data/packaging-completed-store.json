@@ -6665,6 +6665,73 @@
         "1154219000035504003-1154219000035504006-2",
         "1154219000035504003-1154219000035504006-3"
       ]
+    },
+    "1154219000035531001": {
+      "completedAt": "2026-08-11T13:16:14.911Z",
+      "order": {
+        "id": "1154219000035531001",
+        "zohoSalesOrderId": "1154219000035531001",
+        "salesOrderNumber": "SO-07699",
+        "status": "open",
+        "customerName": "WELLSTAR FOOTCARE",
+        "shippingAddress": "11/545 D, KOZHIKKODENKUNNU OLAVANNA-PO, KOZHIKODE-DT, KERALA, 673019, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035531004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035531005",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035531001-1154219000035531004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270902",
+            "qrToken": "26270902",
+            "orderId": "1154219000035531001",
+            "lineItemId": "1154219000035531004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "WELLSTAR FOOTCARE",
+            "salesOrderNumber": "SO-07699",
+            "deliveryDate": "2026-08-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-11",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035531001-1154219000035531004-1"
+      ]
     }
   }
 }
