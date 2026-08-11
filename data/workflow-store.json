@@ -8396,7 +8396,7 @@
           "vendor": "Balaji"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035531001": {
       "salesOrderId": "1154219000035531001",
@@ -8474,7 +8474,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035533061": {
       "salesOrderId": "1154219000035533061",
@@ -9073,13 +9073,13 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035531015": {
       "salesOrderId": "1154219000035531015",
       "salesOrderNumber": "SO-07703",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-11T05:13:17.757Z",
       "processedOrder": {
         "id": "1154219000035531015",
@@ -9144,7 +9144,8 @@
           "dispatchNote": "wooden",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
