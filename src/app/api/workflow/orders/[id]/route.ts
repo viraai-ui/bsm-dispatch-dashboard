@@ -21,6 +21,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const { id } = await params
     const body = await request.json()
     const action = body.action as string
+    if (action === 'undo') {
+      const workflow = await upsertOrderWorkflow(id, (current) => {
+        const order = body.order as Order | undefined
+        return {
+          salesOrderId: id,
+          salesOrderNumber: order?.salesOrderNumber || current?.salesOrderNumber || '',
+          status: 'open',
+          machines: {},
+        }
+      })
+      return apiOk({ workflow })
+    }
     const order = body.order as Order
     if (action === 'allocate_serials') {
       const serials = await allocateSerialNumbers(id, body.machineIds || [])

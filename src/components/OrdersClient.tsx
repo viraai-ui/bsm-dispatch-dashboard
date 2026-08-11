@@ -151,12 +151,15 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   const [qrCodes, setQrCodes] = useState<Record<string, string>>(() => initialQrCodes(order, workflow))
   const [generating, setGenerating] = useState(false)
   const [processed, setProcessed] = useState(false)
+  const [localStage, setLocalStage] = useState<OrderStage>(stage)
   const [processConfirm, setProcessConfirm] = useState(false)
   const [processSuccess, setProcessSuccess] = useState(false)
   const [dispatchPriority, setDispatchPriority] = useState<'urgent' | 'regular'>('regular')
   const [dispatchNotes, setDispatchNotes] = useState<Record<string, string>>({})
   const [dispatchVendors, setDispatchVendors] = useState<Record<string, string>>({})
   const [message, setMessage] = useState('')
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [undoing, setUndoing] = useState(false)
   const selectableMachines = machines.filter((machine) => !isLockedMachine(machine))
   const nonMachineOnlyOrder = machines.length === 0 && order.lineItems.some((item) => item.dispatchCategory !== 'freight')
   const allSelectableSelected = selectableMachines.length > 0 && selectableMachines.every((machine) => selected.has(machine.id))
@@ -166,7 +169,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   })
   const toggleSelectAll = () => setSelected(() => allSelectableSelected ? new Set() : new Set(selectableMachines.map((machine) => machine.id)))
   const selectedCount = selected.size
-  const modalStage = processed ? 'processed' : stage
+  const modalStage = processed ? 'processed' : localStage
   const canDownloadQr = modalStage !== 'closed'
 
   const generateSelected = async () => {
@@ -238,7 +241,28 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     setMessage(`${nonMachineOnlyOrder ? 'Order' : `Selected machine${selectedCount === 1 ? '' : 's'}`} moved to Regular Dispatch without QR & Serial.`)
   }
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><button className="drawer-close" onClick={onClose}>×</button></div>
+  const undoOrder = async () => {
+    setMenuOpen(false)
+    setMessage('')
+    if (!window.confirm(`Undo ${order.salesOrderNumber} and move it back to Open stage? This will let you regenerate serial and QR again.`)) return
+    setUndoing(true)
+    try {
+      await saveWorkflow(order.id, { action: 'undo', order })
+      const resetMachines = order.machines.map((machine) => ({ ...machine, serialNumber: '', qrToken: '', status: 'Not Generated' as const }))
+      setMachines(resetMachines)
+      setQrCodes({})
+      setSelected(new Set(resetMachines.map((machine) => machine.id)))
+      setProcessed(false)
+      setLocalStage('open')
+      setMessage('Order moved back to Open stage. You can generate Serial & QR again.')
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Could not undo order')
+    } finally {
+      setUndoing(false)
+    }
+  }
+
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><div className="modal-head-actions"><div className="order-menu-wrap"><button className="drawer-close menu-dot-btn" aria-label="Order actions" onClick={() => setMenuOpen((open) => !open)}>⋯</button>{menuOpen && <div className="order-menu"><button type="button" onClick={undoOrder} disabled={undoing}>{undoing ? 'Undoing…' : 'Undo Order'}</button></div>}</div><button className="drawer-close" onClick={onClose}>×</button></div></div>
     {message && <div className={message.toLowerCase().includes('success') ? 'form-success process-success-tape' : 'form-error'}>{message}</div>}
     <StageTracker stage={modalStage} />
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
