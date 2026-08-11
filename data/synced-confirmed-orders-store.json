@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035527004": {
+      "id": "1154219000035527004",
+      "zohoSalesOrderId": "1154219000035527004",
+      "salesOrderNumber": "SO-07710",
+      "status": "open",
+      "customerName": "Daksh Autoplast",
+      "shippingAddress": "H1-727, RIICO Industrial Area Khushkhera, RIICO Industrial Area Khushkhera, Khairthal Tijara, Rajasthan, 301707",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-11",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035527007",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "description": "Special Size Eyelet",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035527004-1154219000035527007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035527004",
+          "lineItemId": "1154219000035527007",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "customerName": "Daksh Autoplast",
+          "salesOrderNumber": "SO-07710",
+          "deliveryDate": "2026-08-11",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Special Size Eyelet"
+        }
+      ]
+    },
     "1154219000035502015": {
       "id": "1154219000035502015",
       "zohoSalesOrderId": "1154219000035502015",
@@ -16054,6 +16101,7 @@
     }
   },
   "orderIds": [
+    "1154219000035527004",
     "1154219000035502015",
     "1154219000035516019",
     "1154219000035510018",
@@ -16096,8 +16144,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-11T10:30:47.248Z",
-  "lastAttemptAt": "2026-08-11T10:45:22.360Z",
+  "lastSuccessfulSyncAt": "2026-08-11T10:45:48.387Z",
+  "lastAttemptAt": "2026-08-11T10:45:48.387Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
