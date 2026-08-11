@@ -1596,6 +1596,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035343430": {
+      "id": "ship-1786434085624-gde71",
+      "itemId": "1154219000035343430",
+      "orderId": "1154219000035343430",
+      "machineId": "1154219000035343430-1154219000035343433-1",
+      "salesOrderNumber": "SO-07665",
+      "customerName": "Sobti Plastics Pvt. Ltd.",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAG6894",
+      "driverName": "—",
+      "driverPhone": "8178135379",
+      "expectedDelivery": "2026-08-11",
+      "notes": "",
+      "shippedAt": "2026-08-11T07:41:25.624Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
