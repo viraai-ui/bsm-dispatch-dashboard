@@ -10248,7 +10248,7 @@
           "vendor": "Siphon"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035565004": {
       "salesOrderId": "1154219000035565004",
@@ -10572,13 +10572,13 @@
         "machines": []
       },
       "machines": {},
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 5
     },
     "1154219000035449046": {
       "salesOrderId": "1154219000035449046",
       "salesOrderNumber": "SO-07692",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T12:28:17.659Z",
       "processedOrder": {
         "id": "1154219000035449046",
@@ -10605,7 +10605,8 @@
         ],
         "machines": []
       },
-      "machines": {}
+      "machines": {},
+      "dispatchSortOrder": 1
     }
   }
 }
