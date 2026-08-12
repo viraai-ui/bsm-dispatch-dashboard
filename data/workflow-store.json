@@ -10327,7 +10327,7 @@
       "salesOrderId": "1154219000035576003",
       "salesOrderNumber": "SO-07717",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T11:28:45.525Z",
       "processedOrder": {
         "id": "1154219000035576003",
@@ -10392,7 +10392,8 @@
           "dispatchNote": "local",
           "vendor": "Ishu"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035602008": {
       "salesOrderId": "1154219000035602008",
