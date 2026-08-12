@@ -6823,6 +6823,87 @@
         "1154219000035566002-1154219000035566005-1",
         "1154219000035566002-1154219000035566006-1"
       ]
+    },
+    "1154219000034739001": {
+      "completedAt": "2026-08-12T08:17:51.722Z",
+      "order": {
+        "id": "1154219000034739001",
+        "zohoSalesOrderId": "1154219000034739001",
+        "salesOrderNumber": "SO-07570",
+        "status": "open",
+        "customerName": "AGGARWAL ENTERPRISES",
+        "shippingAddress": "FIRST FLOOR, C-241, MAIN 100 FUTA ROAD, Hardev Puri, New Delhi,, Shahdara, Delhi, 110093, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035567126",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034739001-1154219000035567126-1",
+            "unitNumber": 1,
+            "serialNumber": "26270909",
+            "qrToken": "26270909",
+            "orderId": "1154219000034739001",
+            "lineItemId": "1154219000035567126",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "AGGARWAL ENTERPRISES",
+            "salesOrderNumber": "SO-07570",
+            "deliveryDate": "2026-08-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000034739001-1154219000035567126-2",
+            "unitNumber": 2,
+            "serialNumber": "26270910",
+            "qrToken": "26270910",
+            "orderId": "1154219000034739001",
+            "lineItemId": "1154219000035567126",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "AGGARWAL ENTERPRISES",
+            "salesOrderNumber": "SO-07570",
+            "deliveryDate": "2026-08-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000034739001-1154219000035567126-1",
+        "1154219000034739001-1154219000035567126-2"
+      ]
     }
   }
 }
