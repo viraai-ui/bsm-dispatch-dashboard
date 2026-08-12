@@ -1713,6 +1713,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035504003": {
+      "id": "ship-1786511722603-z59z3",
+      "itemId": "1154219000035504003",
+      "orderId": "1154219000035504003",
+      "machineId": "1154219000035504003-1154219000035504006-1",
+      "salesOrderNumber": "SO-07704",
+      "customerName": "KANCHAN POLYMERS",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "9990651104",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T05:15:22.603Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
