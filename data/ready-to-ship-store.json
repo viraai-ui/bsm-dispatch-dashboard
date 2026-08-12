@@ -1849,6 +1849,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035566002": {
+      "id": "ship-1786532672123-cc8tf",
+      "itemId": "1154219000035566002",
+      "orderId": "1154219000035566002",
+      "machineId": "1154219000035566002-1154219000035566005-1",
+      "salesOrderNumber": "SO-07711",
+      "customerName": "Arnaf Futuristic Technologies Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP4509",
+      "driverName": "—",
+      "driverPhone": "8929054536",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T11:04:32.123Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
