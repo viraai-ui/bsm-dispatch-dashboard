@@ -10248,7 +10248,7 @@
           "vendor": "Siphon"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035565004": {
       "salesOrderId": "1154219000035565004",
@@ -10393,13 +10393,13 @@
           "vendor": "Ishu"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 5
     },
     "1154219000035602008": {
       "salesOrderId": "1154219000035602008",
       "salesOrderNumber": "SO-07718",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T11:43:37.805Z",
       "processedOrder": {
         "id": "1154219000035602008",
@@ -10464,7 +10464,8 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
