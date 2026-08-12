@@ -14450,53 +14450,6 @@
         }
       ]
     },
-    "1154219000033193011": {
-      "id": "1154219000033193011",
-      "zohoSalesOrderId": "1154219000033193011",
-      "salesOrderNumber": "SO-07341",
-      "status": "open",
-      "customerName": "Samriddhi Industries",
-      "shippingAddress": "A-27, RIICO Housing Colony, Near Laxmi Roadlines,, Road No. 14 Badharna, VKI, Jaipur, Rajasthan, 302013",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-06-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000033193014",
-          "itemName": "Beam Cutting Press (60Ton)",
-          "sku": "",
-          "description": "1600*810 mm",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000033193011-1154219000033193014-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000033193011",
-          "lineItemId": "1154219000033193014",
-          "itemName": "Beam Cutting Press (60Ton)",
-          "sku": "",
-          "customerName": "Samriddhi Industries",
-          "salesOrderNumber": "SO-07341",
-          "deliveryDate": "2026-06-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "1600*810 mm"
-        }
-      ]
-    },
     "1154219000033087001": {
       "id": "1154219000033087001",
       "zohoSalesOrderId": "1154219000033087001",
@@ -15874,7 +15827,6 @@
     "1154219000034276003",
     "1154219000033890006",
     "1154219000033848001",
-    "1154219000033193011",
     "1154219000033087001",
     "1154219000032974004",
     "1154219000032135005",
@@ -15884,8 +15836,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T12:09:59.497Z",
-  "lastAttemptAt": "2026-08-12T12:18:05.553Z",
+  "lastSuccessfulSyncAt": "2026-08-12T12:18:30.633Z",
+  "lastAttemptAt": "2026-08-12T12:18:30.633Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
