@@ -16,7 +16,7 @@ type SerialSheetRecord = {
   Make: string
 }
 
-type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[] }
+type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[]; verified?: boolean; missingFields?: string[] }
 export type SerialSheetDatabaseResult = { orders: Order[]; warrantyDates: Record<string, string>; configured: boolean; errors: string[] }
 
 let cachedSheetAccessToken: { token: string; expiresAt: number } | null = null
@@ -342,6 +342,43 @@ async function appendSerialRows(rows: SerialSheetRecord[]) {
   })
 }
 
+function requiredSheetFields(row: Record<string, unknown>) {
+  return {
+    serial: String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim(),
+    customer: String(sheetValue(row, ['Company Name', 'Company', 'Customer']) || '').trim(),
+    address: String(sheetValue(row, ['Address']) || '').trim(),
+    dop: String(sheetValue(row, ['D.O.P.', 'D.O.P', 'DOP', 'D.O.P ', 'Date', 'Delivery Date']) || '').trim(),
+    model: String(sheetValue(row, ['Model No.', 'Model', 'Machine Name']) || '').trim(),
+  }
+}
+
+async function verifySerialRowsInSheet(expectedRows: SerialSheetRecord[]) {
+  const result = { verified: true, missingFields: [] as string[] }
+  if (!expectedRows.length) return result
+  const records = await fetchSerialRecords()
+  const bySerial = new Map<string, Record<string, unknown>>()
+  for (const row of records as Record<string, unknown>[]) {
+    const serial = requiredSheetFields(row).serial
+    if (serial) bySerial.set(serial, row)
+  }
+  for (const expected of expectedRows) {
+    const serial = String(expected['Serial No.'] || '').trim()
+    const actual = bySerial.get(serial)
+    if (!actual) {
+      result.verified = false
+      result.missingFields.push(`${serial}: missing row`)
+      continue
+    }
+    const fields = requiredSheetFields(actual)
+    if (!fields.customer) result.missingFields.push(`${serial}: missing customer`)
+    if (!fields.address) result.missingFields.push(`${serial}: missing address`)
+    if (!fields.dop) result.missingFields.push(`${serial}: missing D.O.P.`)
+    if (!fields.model) result.missingFields.push(`${serial}: missing model`)
+  }
+  if (result.missingFields.length) result.verified = false
+  return result
+}
+
 export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: MachineUnit[], date: string): Promise<BackupResult> {
   const result: BackupResult = { synced: 0, skipped: 0, configured: serialSheetConfigured(), errors: [] }
   if (!result.configured) return result
@@ -361,6 +398,10 @@ export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: 
     if (!newMachines.length) return result
     const rows = buildRows(order, newMachines, date, nextSerialSheetNumber(records))
     await appendSerialRows(rows)
+    const verification = await verifySerialRowsInSheet(rows)
+    result.verified = verification.verified
+    result.missingFields = verification.missingFields
+    if (!verification.verified) result.errors.push(`Zoho Sheet backup verification failed: ${verification.missingFields.join('; ')}`)
     result.synced = rows.length
     return result
   } catch (error) {

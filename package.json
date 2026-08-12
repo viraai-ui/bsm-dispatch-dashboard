@@ -8,6 +8,7 @@
     "start": "next start",
     "smoke": "node tests/smoke.cjs",
     "verify:serials": "node tests/live-serial-coverage.cjs",
+    "verify:serial-sheet": "node scripts/audit-serial-sheet-coverage.cjs",
     "verify:database": "node tests/database-integrity.cjs",
     "typecheck": "tsc --noEmit"
   },

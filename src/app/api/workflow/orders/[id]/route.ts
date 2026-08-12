@@ -80,6 +80,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         return saved ? { ...machine, serialNumber: saved.serialNumber || machine.serialNumber, qrToken: saved.qrToken || machine.qrToken } : machine
       }).filter((machine) => generatedById.has(machine.id))
       sheetBackup = await backupGeneratedSerialsToZohoSheet(order, generatedMachines, generatedDate)
+      if (sheetBackup.configured && (!sheetBackup.verified || sheetBackup.errors.length)) {
+        throw new Error(`Serial generated but Zoho Sheet backup did not verify. Please retry before processing. ${sheetBackup.errors.join('; ') || sheetBackup.missingFields?.join('; ') || ''}`.trim())
+      }
       masterBackup = await upsertGeneratedSerialsToMasterDatabase(order, generatedMachines, generatedDate)
     }
     if (action === 'process' && order?.id) {
