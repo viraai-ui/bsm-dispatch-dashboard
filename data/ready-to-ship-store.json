@@ -1752,7 +1752,7 @@
       }
     },
     "1154219000033193011": {
-      "id": "ship-1786512201794-z0oqy",
+      "id": "ship-1786537008005-zc3re",
       "itemId": "1154219000033193011",
       "orderId": "1154219000033193011",
       "machineId": "1154219000033193011-1154219000033193014-1",
@@ -1764,13 +1764,19 @@
       "transporterName": "Kajaria logistics",
       "transporterPhone": "917274899",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "Whatsapp Scan August 12, 2026 at 14.05.51.pdf",
+        "type": "application/pdf",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-12%2FSO-07341%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-12T12-16-45-706Z.pdf",
+        "r2Key": "media-proof/2026-08-12/SO-07341/Shipment LR Builty-shipment-lr-builty-2026-08-12T12-16-45-706Z.pdf",
+        "expiresAt": "2026-10-11T12:16:45.706Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-12",
       "notes": "",
-      "shippedAt": "2026-08-12T05:23:21.794Z",
+      "shippedAt": "2026-08-12T12:16:48.005Z",
       "messages": {
         "customer": {
           "status": "skipped",
