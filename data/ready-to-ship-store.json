@@ -1917,6 +1917,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035557081": {
+      "id": "ship-1786537082624-ugsa4",
+      "itemId": "1154219000035557081",
+      "orderId": "1154219000035557081",
+      "machineId": "1154219000035557081-1154219000035557086-1",
+      "salesOrderNumber": "SO-07713",
+      "customerName": "AP FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T12:18:02.624Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
