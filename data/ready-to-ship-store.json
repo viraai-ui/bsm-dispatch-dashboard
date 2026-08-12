@@ -1880,6 +1880,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035565004": {
+      "id": "ship-1786536042224-izg17",
+      "itemId": "1154219000035565004",
+      "orderId": "1154219000035565004",
+      "machineId": "1154219000035565004-1154219000035565007-1",
+      "salesOrderNumber": "SO-07715",
+      "customerName": "KADAM INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51GD6742",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T12:00:42.224Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
