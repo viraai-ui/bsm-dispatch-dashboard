@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035566002": {
+      "id": "1154219000035566002",
+      "zohoSalesOrderId": "1154219000035566002",
+      "salesOrderNumber": "SO-07711",
+      "status": "open",
+      "customerName": "Arnaf Futuristic Technologies Private Limited",
+      "shippingAddress": "92, Block C, Hosiery Complex Phase 2,, Noida, Gautambuddha Nagar, Noida, Uttar Pradesh, 201305, India",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-12",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035566005",
+          "itemName": "Pneumatic Marginal Gluing Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035566006",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035566002-1154219000035566005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035566002",
+          "lineItemId": "1154219000035566005",
+          "itemName": "Pneumatic Marginal Gluing Machine",
+          "sku": "",
+          "customerName": "Arnaf Futuristic Technologies Private Limited",
+          "salesOrderNumber": "SO-07711",
+          "deliveryDate": "2026-08-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035566002-1154219000035566006-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035566002",
+          "lineItemId": "1154219000035566006",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "Arnaf Futuristic Technologies Private Limited",
+          "salesOrderNumber": "SO-07711",
+          "deliveryDate": "2026-08-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035527004": {
       "id": "1154219000035527004",
       "zohoSalesOrderId": "1154219000035527004",
@@ -13806,26 +13884,47 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034739004",
-          "itemName": "Cover Type Sole Press Double Station (pneumatic)",
-          "sku": "2003-2",
+          "id": "1154219000035567126",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
           "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
+          "quantity": 2,
+          "pendingQuantity": 2,
           "woodenPackingRequired": true,
           "dispatchCategory": "machine"
         }
       ],
       "machines": [
         {
-          "id": "1154219000034739001-1154219000034739004-1",
+          "id": "1154219000034739001-1154219000035567126-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000034739001",
-          "lineItemId": "1154219000034739004",
-          "itemName": "Cover Type Sole Press Double Station (pneumatic)",
-          "sku": "2003-2",
+          "lineItemId": "1154219000035567126",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "AGGARWAL ENTERPRISES",
+          "salesOrderNumber": "SO-07570",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000034739001-1154219000035567126-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000034739001",
+          "lineItemId": "1154219000035567126",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
           "customerName": "AGGARWAL ENTERPRISES",
           "salesOrderNumber": "SO-07570",
           "deliveryDate": "2026-08-17",
@@ -15808,6 +15907,7 @@
     }
   },
   "orderIds": [
+    "1154219000035566002",
     "1154219000035527004",
     "1154219000035502015",
     "1154219000035516019",
@@ -15849,8 +15949,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T05:42:05.885Z",
-  "lastAttemptAt": "2026-08-12T06:41:07.078Z",
+  "lastSuccessfulSyncAt": "2026-08-12T06:41:33.118Z",
+  "lastAttemptAt": "2026-08-12T06:41:33.118Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
