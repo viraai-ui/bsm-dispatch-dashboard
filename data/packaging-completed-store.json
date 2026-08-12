@@ -7085,6 +7085,63 @@
       "machineIds": [
         "1154219000035576003-1154219000035576006-1"
       ]
+    },
+    "1154219000035602008": {
+      "completedAt": "2026-08-12T12:00:45.910Z",
+      "order": {
+        "id": "1154219000035602008",
+        "zohoSalesOrderId": "1154219000035602008",
+        "salesOrderNumber": "SO-07718",
+        "status": "open",
+        "customerName": "A.P. Footwear(Bahadurgarh)",
+        "shippingAddress": "1257, Red Cross Road, MIE Part-B, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035602011",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035602008-1154219000035602011-1",
+            "unitNumber": 1,
+            "serialNumber": "26270922",
+            "qrToken": "26270922",
+            "orderId": "1154219000035602008",
+            "lineItemId": "1154219000035602011",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "A.P. Footwear(Bahadurgarh)",
+            "salesOrderNumber": "SO-07718",
+            "deliveryDate": "2026-08-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035602008-1154219000035602011-1"
+      ]
     }
   }
 }
