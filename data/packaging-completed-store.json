@@ -6971,6 +6971,63 @@
       "machineIds": [
         "1154219000035557081-1154219000035557086-1"
       ]
+    },
+    "1154219000035565004": {
+      "completedAt": "2026-08-12T11:10:58.765Z",
+      "order": {
+        "id": "1154219000035565004",
+        "zohoSalesOrderId": "1154219000035565004",
+        "salesOrderNumber": "SO-07715",
+        "status": "open",
+        "customerName": "KADAM INDUSTRIES",
+        "shippingAddress": "Khasra No. 64/24, Gali No. 6, Mundka Industrial Area, Opp. Metro Pillar No. 578,Main Rohtak Road, Mundka, Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035565007",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035565004-1154219000035565007-1",
+            "unitNumber": 1,
+            "serialNumber": "26270920",
+            "qrToken": "26270920",
+            "orderId": "1154219000035565004",
+            "lineItemId": "1154219000035565007",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "KADAM INDUSTRIES",
+            "salesOrderNumber": "SO-07715",
+            "deliveryDate": "2026-08-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "Ḷocal"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035565004-1154219000035565007-1"
+      ]
     }
   }
 }
