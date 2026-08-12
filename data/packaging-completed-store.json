@@ -7142,6 +7142,63 @@
       "machineIds": [
         "1154219000035602008-1154219000035602011-1"
       ]
+    },
+    "1154219000035582001": {
+      "completedAt": "2026-08-12T13:08:05.128Z",
+      "order": {
+        "id": "1154219000035582001",
+        "zohoSalesOrderId": "1154219000035582001",
+        "salesOrderNumber": "SO-07714",
+        "status": "open",
+        "customerName": "CRYSTAL TRADING CO",
+        "shippingAddress": "H.NO 125, NIVI ABADI SANTOKH PURA JALANDHAR, JALANDHAR, Jalandhar, , Punjab,, 144004, india",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035582004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035582001-1154219000035582004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270919",
+            "qrToken": "26270919",
+            "orderId": "1154219000035582001",
+            "lineItemId": "1154219000035582004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "CRYSTAL TRADING CO",
+            "salesOrderNumber": "SO-07714",
+            "deliveryDate": "2026-08-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000035582001-1154219000035582004-1"
+      ]
     }
   }
 }
