@@ -1676,6 +1676,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035531001": {
+      "id": "ship-1786511586213-vz7ql",
+      "itemId": "1154219000035531001",
+      "orderId": "1154219000035531001",
+      "machineId": "1154219000035531001-1154219000035531004-1",
+      "salesOrderNumber": "SO-07699",
+      "customerName": "WELLSTAR FOOTCARE",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Bullet Logistics",
+      "transporterPhone": "9345916865",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-11 at 6.57.09 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-12%2FSO-07699%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-12T05-13-04-529Z.jpeg",
+        "r2Key": "media-proof/2026-08-12/SO-07699/Shipment LR Builty-shipment-lr-builty-2026-08-12T05-13-04-529Z.jpeg",
+        "expiresAt": "2026-10-11T05:13:04.529Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T05:13:06.213Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
