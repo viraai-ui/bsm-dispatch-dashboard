@@ -1,5 +1,77 @@
 {
   "orders": {
+    "1154219000035597007": {
+      "id": "1154219000035597007",
+      "zohoSalesOrderId": "1154219000035597007",
+      "salesOrderNumber": "SO-07721",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-12",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035597010",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035582019": {
+      "id": "1154219000035582019",
+      "zohoSalesOrderId": "1154219000035582019",
+      "salesOrderNumber": "SO-07720",
+      "status": "open",
+      "customerName": "Flowknit Footwear Industries Pvt Ltd",
+      "shippingAddress": "Kh. No 51/25, Plot No 145, Swarn Park,, Mundka,, Near Pillar No 484,, Delhi, 110041",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-12",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035582022",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035582019-1154219000035582022-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035582019",
+          "lineItemId": "1154219000035582022",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "Flowknit Footwear Industries Pvt Ltd",
+          "salesOrderNumber": "SO-07720",
+          "deliveryDate": "2026-08-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035588022": {
       "id": "1154219000035588022",
       "zohoSalesOrderId": "1154219000035588022",
@@ -15812,6 +15884,8 @@
     }
   },
   "orderIds": [
+    "1154219000035597007",
+    "1154219000035582019",
     "1154219000035588022",
     "1154219000035602008",
     "1154219000035576003",
@@ -15858,8 +15932,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T11:48:27.152Z",
-  "lastAttemptAt": "2026-08-12T11:50:38.662Z",
+  "lastSuccessfulSyncAt": "2026-08-12T11:51:02.250Z",
+  "lastAttemptAt": "2026-08-12T11:51:02.250Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
