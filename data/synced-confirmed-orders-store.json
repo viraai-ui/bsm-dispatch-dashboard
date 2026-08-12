@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035582001": {
+      "id": "1154219000035582001",
+      "zohoSalesOrderId": "1154219000035582001",
+      "salesOrderNumber": "SO-07714",
+      "status": "open",
+      "customerName": "CRYSTAL TRADING CO",
+      "shippingAddress": "H.NO 125, NIVI ABADI SANTOKH PURA JALANDHAR, JALANDHAR, Jalandhar, , Punjab,, 144004, india",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-12",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035582004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035582001-1154219000035582004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035582001",
+          "lineItemId": "1154219000035582004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "CRYSTAL TRADING CO",
+          "salesOrderNumber": "SO-07714",
+          "deliveryDate": "2026-08-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035557081": {
       "id": "1154219000035557081",
       "zohoSalesOrderId": "1154219000035557081",
@@ -15567,6 +15614,7 @@
     }
   },
   "orderIds": [
+    "1154219000035582001",
     "1154219000035557081",
     "1154219000035575001",
     "1154219000035566002",
@@ -15608,8 +15656,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T08:33:27.754Z",
-  "lastAttemptAt": "2026-08-12T08:48:05.670Z",
+  "lastSuccessfulSyncAt": "2026-08-12T08:48:28.943Z",
+  "lastAttemptAt": "2026-08-12T08:48:28.943Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
