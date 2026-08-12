@@ -1806,6 +1806,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035534006": {
+      "id": "ship-1786519388124-cowvp",
+      "itemId": "1154219000035534006",
+      "orderId": "1154219000035534006",
+      "machineId": "1154219000035534006-1154219000035534009-1",
+      "salesOrderNumber": "SO-07701",
+      "customerName": "SOURCELIX INDIA PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "+91 83750 74070",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "IMG-20260812-WA0001.jpg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-12%2FSO-07701%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-12T07-23-05-562Z.jpg",
+        "r2Key": "media-proof/2026-08-12/SO-07701/Shipment LR Builty-shipment-lr-builty-2026-08-12T07-23-05-562Z.jpg",
+        "expiresAt": "2026-10-11T07:23:05.562Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T07:23:08.124Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
