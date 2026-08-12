@@ -10175,13 +10175,13 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 5
     },
     "1154219000035582001": {
       "salesOrderId": "1154219000035582001",
       "salesOrderNumber": "SO-07714",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T09:03:46.709Z",
       "processedOrder": {
         "id": "1154219000035582001",
@@ -10246,7 +10246,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Siphon"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
