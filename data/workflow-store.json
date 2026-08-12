@@ -10577,7 +10577,34 @@
     "1154219000035449046": {
       "salesOrderId": "1154219000035449046",
       "salesOrderNumber": "SO-07692",
-      "status": "qr_not_required",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-12T12:28:17.659Z",
+      "processedOrder": {
+        "id": "1154219000035449046",
+        "zohoSalesOrderId": "1154219000035449046",
+        "salesOrderNumber": "SO-07692",
+        "status": "open",
+        "customerName": "Liberty Shoe Limited (Himachal Pradesh)",
+        "shippingAddress": "Vill.Satiwala, Tehsil Paonta Sahib, Sirmour,, Sirmaur, Himachal Pradesh, 173025, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Review Required",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035449049",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 100,
+            "pendingQuantity": 100,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": []
+      },
       "machines": {}
     }
   }
