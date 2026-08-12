@@ -9538,7 +9538,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     },
     "1154219000033193011": {
       "salesOrderId": "1154219000033193011",
@@ -9617,7 +9617,7 @@
       "salesOrderId": "1154219000034739001",
       "salesOrderNumber": "SO-07570",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T06:43:49.530Z",
       "processedOrder": {
         "id": "1154219000034739001",
@@ -9718,7 +9718,8 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
