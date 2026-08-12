@@ -9175,7 +9175,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035504003": {
       "salesOrderId": "1154219000035504003",
@@ -9538,7 +9538,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000033193011": {
       "salesOrderId": "1154219000033193011",
@@ -9974,7 +9974,7 @@
       "salesOrderId": "1154219000031849013",
       "salesOrderNumber": "SO-07154",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T08:25:53.945Z",
       "processedOrder": {
         "id": "1154219000031849013",
@@ -10092,13 +10092,14 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000035557081": {
       "salesOrderId": "1154219000035557081",
       "salesOrderNumber": "SO-07713",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-12T08:44:30.148Z",
       "processedOrder": {
         "id": "1154219000035557081",
@@ -10173,7 +10174,8 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
