@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000035576003": {
+      "id": "1154219000035576003",
+      "zohoSalesOrderId": "1154219000035576003",
+      "salesOrderNumber": "SO-07717",
+      "status": "open",
+      "customerName": "JAGDISH UPPER",
+      "shippingAddress": "KHASRA NO. 628/468-480, SULTANPUR MAJRA,, SULTANPUR MAJRA, Delhi, 110086, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-12",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035576006",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035576003-1154219000035576006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035576003",
+          "lineItemId": "1154219000035576006",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "JAGDISH UPPER",
+          "salesOrderNumber": "SO-07717",
+          "deliveryDate": "2026-08-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035572007": {
+      "id": "1154219000035572007",
+      "zohoSalesOrderId": "1154219000035572007",
+      "salesOrderNumber": "SO-07716",
+      "status": "open",
+      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-12",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035572010",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Thread Burner heater",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035572007-1154219000035572010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035572007",
+          "lineItemId": "1154219000035572010",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+          "salesOrderNumber": "SO-07716",
+          "deliveryDate": "2026-08-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Thread Burner heater"
+        }
+      ]
+    },
     "1154219000035565004": {
       "id": "1154219000035565004",
       "zohoSalesOrderId": "1154219000035565004",
@@ -15583,6 +15677,8 @@
     }
   },
   "orderIds": [
+    "1154219000035576003",
+    "1154219000035572007",
     "1154219000035565004",
     "1154219000035582001",
     "1154219000035557081",
@@ -15625,8 +15721,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T11:18:18.813Z",
-  "lastAttemptAt": "2026-08-12T11:22:04.392Z",
+  "lastSuccessfulSyncAt": "2026-08-12T11:22:28.419Z",
+  "lastAttemptAt": "2026-08-12T11:22:28.419Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
