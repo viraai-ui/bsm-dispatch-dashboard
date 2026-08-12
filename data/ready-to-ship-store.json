@@ -1744,6 +1744,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000033193011": {
+      "id": "ship-1786512201794-z0oqy",
+      "itemId": "1154219000033193011",
+      "orderId": "1154219000033193011",
+      "machineId": "1154219000033193011-1154219000033193014-1",
+      "salesOrderNumber": "SO-07341",
+      "customerName": "Samriddhi Industries",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kajaria logistics",
+      "transporterPhone": "917274899",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-12T05:23:21.794Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
