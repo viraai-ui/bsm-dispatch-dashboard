@@ -7028,6 +7028,63 @@
       "machineIds": [
         "1154219000035565004-1154219000035565007-1"
       ]
+    },
+    "1154219000035576003": {
+      "completedAt": "2026-08-12T12:00:40.793Z",
+      "order": {
+        "id": "1154219000035576003",
+        "zohoSalesOrderId": "1154219000035576003",
+        "salesOrderNumber": "SO-07717",
+        "status": "open",
+        "customerName": "JAGDISH UPPER",
+        "shippingAddress": "KHASRA NO. 628/468-480, SULTANPUR MAJRA,, SULTANPUR MAJRA, Delhi, 110086, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035576006",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035576003-1154219000035576006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270921",
+            "qrToken": "26270921",
+            "orderId": "1154219000035576003",
+            "lineItemId": "1154219000035576006",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "JAGDISH UPPER",
+            "salesOrderNumber": "SO-07717",
+            "deliveryDate": "2026-08-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035576003-1154219000035576006-1"
+      ]
     }
   }
 }
