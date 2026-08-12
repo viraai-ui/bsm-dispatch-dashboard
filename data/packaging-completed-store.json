@@ -6732,6 +6732,97 @@
       "machineIds": [
         "1154219000035531001-1154219000035531004-1"
       ]
+    },
+    "1154219000035566002": {
+      "completedAt": "2026-08-12T08:17:45.250Z",
+      "order": {
+        "id": "1154219000035566002",
+        "zohoSalesOrderId": "1154219000035566002",
+        "salesOrderNumber": "SO-07711",
+        "status": "open",
+        "customerName": "Arnaf Futuristic Technologies Private Limited",
+        "shippingAddress": "92, Block C, Hosiery Complex Phase 2,, Noida, Gautambuddha Nagar, Noida, Uttar Pradesh, 201305, India",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035566005",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035566006",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035566002-1154219000035566005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270911",
+            "qrToken": "26270911",
+            "orderId": "1154219000035566002",
+            "lineItemId": "1154219000035566005",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "customerName": "Arnaf Futuristic Technologies Private Limited",
+            "salesOrderNumber": "SO-07711",
+            "deliveryDate": "2026-08-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035566002-1154219000035566006-1",
+            "unitNumber": 2,
+            "serialNumber": "26270912",
+            "qrToken": "26270912",
+            "orderId": "1154219000035566002",
+            "lineItemId": "1154219000035566006",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "Arnaf Futuristic Technologies Private Limited",
+            "salesOrderNumber": "SO-07711",
+            "deliveryDate": "2026-08-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035566002-1154219000035566005-1",
+        "1154219000035566002-1154219000035566006-1"
+      ]
     }
   }
 }
