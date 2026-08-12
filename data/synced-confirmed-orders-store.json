@@ -160,100 +160,6 @@
         }
       ]
     },
-    "1154219000035602008": {
-      "id": "1154219000035602008",
-      "zohoSalesOrderId": "1154219000035602008",
-      "salesOrderNumber": "SO-07718",
-      "status": "open",
-      "customerName": "A.P. Footwear(Bahadurgarh)",
-      "shippingAddress": "1257, Red Cross Road, MIE Part-B, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035602011",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035602008-1154219000035602011-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035602008",
-          "lineItemId": "1154219000035602011",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "A.P. Footwear(Bahadurgarh)",
-          "salesOrderNumber": "SO-07718",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035576003": {
-      "id": "1154219000035576003",
-      "zohoSalesOrderId": "1154219000035576003",
-      "salesOrderNumber": "SO-07717",
-      "status": "open",
-      "customerName": "JAGDISH UPPER",
-      "shippingAddress": "KHASRA NO. 628/468-480, SULTANPUR MAJRA,, SULTANPUR MAJRA, Delhi, 110086, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035576006",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035576003-1154219000035576006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035576003",
-          "lineItemId": "1154219000035576006",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "JAGDISH UPPER",
-          "salesOrderNumber": "SO-07717",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035572007": {
       "id": "1154219000035572007",
       "zohoSalesOrderId": "1154219000035572007",
@@ -13641,31 +13547,6 @@
         }
       ]
     },
-    "1154219000035288002": {
-      "id": "1154219000035288002",
-      "zohoSalesOrderId": "1154219000035288002",
-      "salesOrderNumber": "SO-07655",
-      "status": "open",
-      "customerName": "JAYSHREE PU TECH",
-      "shippingAddress": "Ikrahi, Biratnagar-4, Nepal",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-10",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035288005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 2500,
-          "pendingQuantity": 2500,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000034750001": {
       "id": "1154219000034750001",
       "zohoSalesOrderId": "1154219000034750001",
@@ -15793,8 +15674,6 @@
     "1154219000035597007",
     "1154219000035582019",
     "1154219000035588022",
-    "1154219000035602008",
-    "1154219000035576003",
     "1154219000035572007",
     "1154219000035582001",
     "1154219000035557081",
@@ -15815,7 +15694,6 @@
     "1154219000035305099",
     "1154219000035356001",
     "1154219000035306375",
-    "1154219000035288002",
     "1154219000034750001",
     "1154219000034744001",
     "1154219000034739001",
@@ -15836,8 +15714,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T12:18:30.633Z",
-  "lastAttemptAt": "2026-08-12T12:24:36.059Z",
+  "lastSuccessfulSyncAt": "2026-08-12T12:24:58.904Z",
+  "lastAttemptAt": "2026-08-12T12:24:58.904Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
