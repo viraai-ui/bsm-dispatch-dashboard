@@ -2047,6 +2047,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000034739001": {
+      "id": "ship-1786603129739-reehl",
+      "itemId": "1154219000034739001",
+      "orderId": "1154219000034739001",
+      "machineId": "1154219000034739001-1154219000035567126-1",
+      "salesOrderNumber": "SO-07570",
+      "customerName": "AGGARWAL ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAS3803",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-13",
+      "notes": "",
+      "shippedAt": "2026-08-13T06:38:49.739Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
