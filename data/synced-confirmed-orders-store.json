@@ -1,29 +1,51 @@
 {
   "orders": {
-    "1154219000035597007": {
-      "id": "1154219000035597007",
-      "zohoSalesOrderId": "1154219000035597007",
-      "salesOrderNumber": "SO-07721",
+    "1154219000035634001": {
+      "id": "1154219000035634001",
+      "zohoSalesOrderId": "1154219000035634001",
+      "salesOrderNumber": "SO-07722",
       "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Review Required",
+      "customerName": "SHOESHION INTERNATIONAL PRIVATE LIMITED",
+      "shippingAddress": "178, Gali Number 9, Kalptaru Enterprises, MIE Part A, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-13",
+      "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000035597010",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
+          "id": "1154219000035634004",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
           "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
+          "quantity": 1,
+          "pendingQuantity": 1,
           "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
+          "dispatchCategory": "machine"
         }
       ],
-      "machines": []
+      "machines": [
+        {
+          "id": "1154219000035634001-1154219000035634004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035634001",
+          "lineItemId": "1154219000035634004",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "customerName": "SHOESHION INTERNATIONAL PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07722",
+          "deliveryDate": "2026-08-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
     },
     "1154219000035582019": {
       "id": "1154219000035582019",
@@ -246,63 +268,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035557081": {
-      "id": "1154219000035557081",
-      "zohoSalesOrderId": "1154219000035557081",
-      "salesOrderNumber": "SO-07713",
-      "status": "open",
-      "customerName": "AP FOOTWEAR",
-      "shippingAddress": "1257, RED CROSS ROAD, MIE PART - B, BAHADURGARH, Jhajjar, Haryana, 124507",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035557086",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035557087",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035557081-1154219000035557086-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035557081",
-          "lineItemId": "1154219000035557086",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "AP FOOTWEAR",
-          "salesOrderNumber": "SO-07713",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -1589,31 +1554,6 @@
           "itemDescription": "Drum Type Bladder"
         }
       ]
-    },
-    "1154219000035449046": {
-      "id": "1154219000035449046",
-      "zohoSalesOrderId": "1154219000035449046",
-      "salesOrderNumber": "SO-07692",
-      "status": "open",
-      "customerName": "Liberty Shoe Limited (Himachal Pradesh)",
-      "shippingAddress": "Vill.Satiwala, Tehsil Paonta Sahib, Sirmour,, Sirmaur, Himachal Pradesh, 173025, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-10",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035449049",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 100,
-          "pendingQuantity": 100,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000035305099": {
       "id": "1154219000035305099",
@@ -15671,12 +15611,11 @@
     }
   },
   "orderIds": [
-    "1154219000035597007",
+    "1154219000035634001",
     "1154219000035582019",
     "1154219000035588022",
     "1154219000035572007",
     "1154219000035582001",
-    "1154219000035557081",
     "1154219000035575001",
     "1154219000035527004",
     "1154219000035502015",
@@ -15690,7 +15629,6 @@
     "1154219000035510003",
     "1154219000035503001",
     "1154219000035500001",
-    "1154219000035449046",
     "1154219000035305099",
     "1154219000035356001",
     "1154219000035306375",
@@ -15714,8 +15652,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-12T13:03:28.454Z",
-  "lastAttemptAt": "2026-08-13T05:47:48.758Z",
+  "lastSuccessfulSyncAt": "2026-08-13T05:48:13.768Z",
+  "lastAttemptAt": "2026-08-13T05:48:13.768Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
