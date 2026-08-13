@@ -13575,74 +13575,6 @@
         }
       ]
     },
-    "1154219000034739001": {
-      "id": "1154219000034739001",
-      "zohoSalesOrderId": "1154219000034739001",
-      "salesOrderNumber": "SO-07570",
-      "status": "open",
-      "customerName": "AGGARWAL ENTERPRISES",
-      "shippingAddress": "FIRST FLOOR, C-241, MAIN 100 FUTA ROAD, Hardev Puri, New Delhi,, Shahdara, Delhi, 110093, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035567126",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034739001-1154219000035567126-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034739001",
-          "lineItemId": "1154219000035567126",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "customerName": "AGGARWAL ENTERPRISES",
-          "salesOrderNumber": "SO-07570",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000034739001-1154219000035567126-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034739001",
-          "lineItemId": "1154219000035567126",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "customerName": "AGGARWAL ENTERPRISES",
-          "salesOrderNumber": "SO-07570",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000034690004": {
       "id": "1154219000034690004",
       "zohoSalesOrderId": "1154219000034690004",
@@ -14372,10 +14304,10 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000032135023",
-          "itemName": "Swing Arm Clicker (20 Ton)",
+          "id": "1154219000035636344",
+          "itemName": "Atom Swing Arm Clicker (20 Ton)",
           "sku": "",
-          "description": "Electricity Load:- 3kw",
+          "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
@@ -14784,13 +14716,13 @@
       ],
       "machines": [
         {
-          "id": "1154219000032135005-1154219000032135023-1",
+          "id": "1154219000032135005-1154219000035636344-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
-          "lineItemId": "1154219000032135023",
-          "itemName": "Swing Arm Clicker (20 Ton)",
+          "lineItemId": "1154219000035636344",
+          "itemName": "Atom Swing Arm Clicker (20 Ton)",
           "sku": "",
           "customerName": "YZ buyer International Pvt. Ltd.",
           "salesOrderNumber": "SO-07178",
@@ -14802,7 +14734,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": "Electricity Load:- 3kw"
+          "itemDescription": ""
         },
         {
           "id": "1154219000032135005-1154219000032135024-1",
@@ -15586,7 +15518,6 @@
     "1154219000035306375",
     "1154219000034750001",
     "1154219000034744001",
-    "1154219000034739001",
     "1154219000034690004",
     "1154219000034633005",
     "1154219000034623006",
@@ -15604,8 +15535,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T06:38:33.758Z",
-  "lastAttemptAt": "2026-08-13T06:49:18.854Z",
+  "lastSuccessfulSyncAt": "2026-08-13T06:49:45.714Z",
+  "lastAttemptAt": "2026-08-13T06:49:45.714Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
