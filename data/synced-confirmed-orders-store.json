@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035661001": {
+      "id": "1154219000035661001",
+      "zohoSalesOrderId": "1154219000035661001",
+      "salesOrderNumber": "SO-07726",
+      "status": "open",
+      "customerName": "DHATRI SALES (Noida)",
+      "shippingAddress": "C-149, SECTOR 63, NOIDA, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-13",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035661004",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035661001-1154219000035661004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035661001",
+          "lineItemId": "1154219000035661004",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "DHATRI SALES (Noida)",
+          "salesOrderNumber": "SO-07726",
+          "deliveryDate": "2026-08-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035660001": {
       "id": "1154219000035660001",
       "zohoSalesOrderId": "1154219000035660001",
@@ -15375,6 +15422,7 @@
     }
   },
   "orderIds": [
+    "1154219000035661001",
     "1154219000035660001",
     "1154219000035659001",
     "1154219000035657001",
@@ -15413,8 +15461,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T08:23:28.801Z",
-  "lastAttemptAt": "2026-08-13T08:38:05.523Z",
+  "lastSuccessfulSyncAt": "2026-08-13T08:38:25.201Z",
+  "lastAttemptAt": "2026-08-13T08:38:25.201Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
