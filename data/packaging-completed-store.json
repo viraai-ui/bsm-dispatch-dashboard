@@ -7627,6 +7627,63 @@
       "machineIds": [
         "1154219000033087001-1154219000033087004-1"
       ]
+    },
+    "1154219000035659001": {
+      "completedAt": "2026-08-13T10:45:38.693Z",
+      "order": {
+        "id": "1154219000035659001",
+        "zohoSalesOrderId": "1154219000035659001",
+        "salesOrderNumber": "SO-07724",
+        "status": "open",
+        "customerName": "BHAGWATI ENTERPRISES",
+        "shippingAddress": "GROUND FLOOR, HOUSE NO.628/468-480, VILLAGE SULTANPUR MAJRA, SULTANPUR MAJRA, LANDMARK NEAR KUAN, Nangloi, Delhi, 110041",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-13",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035659004",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035659001-1154219000035659004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270927",
+            "qrToken": "26270927",
+            "orderId": "1154219000035659001",
+            "lineItemId": "1154219000035659004",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "BHAGWATI ENTERPRISES",
+            "salesOrderNumber": "SO-07724",
+            "deliveryDate": "2026-08-13",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-13",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035659001-1154219000035659004-1"
+      ]
     }
   }
 }
