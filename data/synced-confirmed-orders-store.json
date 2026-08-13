@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035660001": {
+      "id": "1154219000035660001",
+      "zohoSalesOrderId": "1154219000035660001",
+      "salesOrderNumber": "SO-07725",
+      "status": "open",
+      "customerName": "BRS Footwear Industry",
+      "shippingAddress": "WARD NO, BALEKHAN, CHOMU, Loharwara, Jaipur Rural, Rajasthan, 303807, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-13",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035660004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "Heavy Duty",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035660005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035660001-1154219000035660004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035660001",
+          "lineItemId": "1154219000035660004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "BRS Footwear Industry",
+          "salesOrderNumber": "SO-07725",
+          "deliveryDate": "2026-08-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heavy Duty"
+        },
+        {
+          "id": "1154219000035660001-1154219000035660005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035660001",
+          "lineItemId": "1154219000035660005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "BRS Footwear Industry",
+          "salesOrderNumber": "SO-07725",
+          "deliveryDate": "2026-08-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035659001": {
       "id": "1154219000035659001",
       "zohoSalesOrderId": "1154219000035659001",
@@ -15297,6 +15375,7 @@
     }
   },
   "orderIds": [
+    "1154219000035660001",
     "1154219000035659001",
     "1154219000035657001",
     "1154219000035634001",
@@ -15334,8 +15413,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T08:16:05.622Z",
-  "lastAttemptAt": "2026-08-13T08:23:05.627Z",
+  "lastSuccessfulSyncAt": "2026-08-13T08:23:28.801Z",
+  "lastAttemptAt": "2026-08-13T08:23:28.801Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
