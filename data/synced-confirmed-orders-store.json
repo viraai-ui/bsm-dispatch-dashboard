@@ -14309,7 +14309,7 @@
           "sku": "",
           "description": "",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         },
@@ -14529,7 +14529,7 @@
           "sku": "737 C",
           "description": "",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         },
@@ -14716,29 +14716,8 @@
       ],
       "machines": [
         {
-          "id": "1154219000032135005-1154219000035636344-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032135005",
-          "lineItemId": "1154219000035636344",
-          "itemName": "Atom Swing Arm Clicker (20 Ton)",
-          "sku": "",
-          "customerName": "YZ buyer International Pvt. Ltd.",
-          "salesOrderNumber": "SO-07178",
-          "deliveryDate": "2026-05-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
           "id": "1154219000032135005-1154219000032135024-1",
-          "unitNumber": 2,
+          "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -14759,7 +14738,7 @@
         },
         {
           "id": "1154219000032135005-1154219000032135025-1",
-          "unitNumber": 3,
+          "unitNumber": 2,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -14780,7 +14759,7 @@
         },
         {
           "id": "1154219000032135005-1154219000032135027-1",
-          "unitNumber": 4,
+          "unitNumber": 3,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -14801,7 +14780,7 @@
         },
         {
           "id": "1154219000032135005-1154219000032135030-1",
-          "unitNumber": 5,
+          "unitNumber": 4,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -14821,29 +14800,8 @@
           "itemDescription": "Hot"
         },
         {
-          "id": "1154219000032135005-1154219000032135034-1",
-          "unitNumber": 6,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000032135005",
-          "lineItemId": "1154219000032135034",
-          "itemName": "Toe lasting Machine with Cement [9 Pincer]",
-          "sku": "737 C",
-          "customerName": "YZ buyer International Pvt. Ltd.",
-          "salesOrderNumber": "SO-07178",
-          "deliveryDate": "2026-05-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
           "id": "1154219000032135005-1154219000032135035-1",
-          "unitNumber": 7,
+          "unitNumber": 5,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -14864,7 +14822,7 @@
         },
         {
           "id": "1154219000032135005-1154219000032135037-1",
-          "unitNumber": 8,
+          "unitNumber": 6,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -14885,7 +14843,7 @@
         },
         {
           "id": "1154219000032135005-1154219000032135049-1",
-          "unitNumber": 9,
+          "unitNumber": 7,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000032135005",
@@ -15535,8 +15493,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T06:49:45.714Z",
-  "lastAttemptAt": "2026-08-13T06:53:05.451Z",
+  "lastSuccessfulSyncAt": "2026-08-13T06:53:31.077Z",
+  "lastAttemptAt": "2026-08-13T06:53:31.077Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
