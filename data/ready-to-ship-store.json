@@ -2233,6 +2233,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035531015": {
+      "id": "ship-1786624791471-tp1c9",
+      "itemId": "1154219000035531015",
+      "orderId": "1154219000035531015",
+      "machineId": "1154219000035531015-1154219000035531018-1",
+      "salesOrderNumber": "SO-07703",
+      "customerName": "TYNOR ORTHOTICS PVT LTD",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "V Trans",
+      "transporterPhone": "7027838181",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-13",
+      "notes": "",
+      "shippedAt": "2026-08-13T12:39:51.471Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
