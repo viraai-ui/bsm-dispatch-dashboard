@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270929,
+  "serialCounter": 26270930,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -10943,6 +10943,20 @@
           "processedAt": "2026-08-13T09:00:12.889Z",
           "dispatchNote": "good wrapping",
           "vendor": "Siphon"
+        }
+      }
+    },
+    "1154219000033087001": {
+      "salesOrderId": "1154219000033087001",
+      "salesOrderNumber": "",
+      "status": "open",
+      "machines": {
+        "1154219000033087001-1154219000033087004-1": {
+          "machineUnitId": "1154219000033087001-1154219000033087004-1",
+          "lineItemId": "",
+          "serialNumber": "26270930",
+          "qrToken": "26270930",
+          "qrStatus": "pending"
         }
       }
     }
