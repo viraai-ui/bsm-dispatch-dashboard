@@ -2109,6 +2109,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000033087001": {
+      "id": "ship-1786615744941-mzzcl",
+      "itemId": "1154219000033087001",
+      "orderId": "1154219000033087001",
+      "machineId": "1154219000033087001-1154219000033087004-1",
+      "salesOrderNumber": "SO-07330",
+      "customerName": "Stalwart Overseas",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP3665",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-13",
+      "notes": "",
+      "shippedAt": "2026-08-13T10:09:04.941Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
