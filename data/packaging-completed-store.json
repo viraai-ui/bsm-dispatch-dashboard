@@ -7470,6 +7470,106 @@
       "machineIds": [
         "1154219000035582019-1154219000035582022-1"
       ]
+    },
+    "1154219000033848001": {
+      "completedAt": "2026-08-13T08:08:11.129Z",
+      "order": {
+        "id": "1154219000033848001",
+        "zohoSalesOrderId": "1154219000033848001",
+        "salesOrderNumber": "SO-07394",
+        "status": "open",
+        "customerName": "Vasu Kedia",
+        "shippingAddress": "H-240 LIC Colony Paschim Vihar, Delhi, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000033848006",
+            "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
+            "sku": "601 - 8",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034224365",
+            "itemName": "Edge folding machine with glue/power saving motor",
+            "sku": "291P",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000033848007",
+            "itemName": "Hotmelt Polyamide Granules",
+            "sku": "7160",
+            "description": "",
+            "quantity": 25,
+            "pendingQuantity": 25,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000033848001-1154219000033848006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270913",
+            "qrToken": "26270913",
+            "orderId": "1154219000033848001",
+            "lineItemId": "1154219000033848006",
+            "itemName": "High Frequency Welding Embossing machine (8kw hydraulic)",
+            "sku": "601 - 8",
+            "customerName": "Vasu Kedia",
+            "salesOrderNumber": "SO-07394",
+            "deliveryDate": "2026-07-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000033848001-1154219000034224365-1",
+            "unitNumber": 2,
+            "serialNumber": "26270914",
+            "qrToken": "26270914",
+            "orderId": "1154219000033848001",
+            "lineItemId": "1154219000034224365",
+            "itemName": "Edge folding machine with glue/power saving motor",
+            "sku": "291P",
+            "customerName": "Vasu Kedia",
+            "salesOrderNumber": "SO-07394",
+            "deliveryDate": "2026-07-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000033848001-1154219000033848006-1",
+        "1154219000033848001-1154219000034224365-1"
+      ]
     }
   }
 }
