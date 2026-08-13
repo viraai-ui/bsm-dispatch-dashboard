@@ -2171,6 +2171,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000033848001": {
+      "id": "ship-1786622055298-tzjx0",
+      "itemId": "1154219000033848001",
+      "orderId": "1154219000033848001",
+      "machineId": "1154219000033848001-1154219000033848006-1",
+      "salesOrderNumber": "SO-07394",
+      "customerName": "Vasu Kedia",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAR8803",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-13",
+      "notes": "",
+      "shippedAt": "2026-08-13T11:54:15.298Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
