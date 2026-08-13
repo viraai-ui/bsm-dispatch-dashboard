@@ -182,53 +182,6 @@
         }
       ]
     },
-    "1154219000035572007": {
-      "id": "1154219000035572007",
-      "zohoSalesOrderId": "1154219000035572007",
-      "salesOrderNumber": "SO-07716",
-      "status": "open",
-      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035572010",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Thread Burner heater",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035572007-1154219000035572010-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035572007",
-          "lineItemId": "1154219000035572010",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-          "salesOrderNumber": "SO-07716",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Thread Burner heater"
-        }
-      ]
-    },
     "1154219000035527004": {
       "id": "1154219000035527004",
       "zohoSalesOrderId": "1154219000035527004",
@@ -15290,7 +15243,6 @@
     "1154219000035634001",
     "1154219000035582019",
     "1154219000035588022",
-    "1154219000035572007",
     "1154219000035527004",
     "1154219000035516019",
     "1154219000035510018",
@@ -15324,8 +15276,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T07:08:30.588Z",
-  "lastAttemptAt": "2026-08-13T07:19:18.901Z",
+  "lastSuccessfulSyncAt": "2026-08-13T07:19:43.883Z",
+  "lastAttemptAt": "2026-08-13T07:19:43.883Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
