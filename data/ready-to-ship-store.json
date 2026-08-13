@@ -2202,6 +2202,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035660001": {
+      "id": "ship-1786622914053-titlt",
+      "itemId": "1154219000035660001",
+      "orderId": "1154219000035660001",
+      "machineId": "1154219000035660001-1154219000035660004-1",
+      "salesOrderNumber": "SO-07725",
+      "customerName": "BRS Footwear Industry",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAE0997",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-13",
+      "notes": "",
+      "shippedAt": "2026-08-13T12:08:34.053Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
