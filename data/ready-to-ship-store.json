@@ -2010,6 +2010,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035582001": {
+      "id": "ship-1786598692460-kcr2a",
+      "itemId": "1154219000035582001",
+      "orderId": "1154219000035582001",
+      "machineId": "1154219000035582001-1154219000035582004-1",
+      "salesOrderNumber": "SO-07714",
+      "customerName": "CRYSTAL TRADING CO",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-12",
+      "notes": "",
+      "shippedAt": "2026-08-13T05:24:52.460Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
