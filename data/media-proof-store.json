@@ -2077,6 +2077,31 @@
           ]
         }
       }
+    },
+    "1154219000035660001": {
+      "orderId": "1154219000035660001",
+      "salesOrderNumber": "SO-07725",
+      "submittedAt": null,
+      "units": {
+        "1154219000035660001-1154219000035660004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035660001-1154219000035660004-1-video-1786619441418-mje31u",
+              "name": "VID_20260813_164022.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-13%2FSO-07725%2FTravel%20Head%20Cutting%20Press%2025%20ton-1154219000035660001-1154219000035660004-1-2026-08-13T11-10-28-361Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-13/SO-07725/Travel Head Cutting Press 25 ton-1154219000035660001-1154219000035660004-1-2026-08-13T11-10-28-361Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-13T11:10:41.418Z",
+              "expiresAt": "2026-09-12T11:10:28.362Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
