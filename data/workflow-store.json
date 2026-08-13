@@ -10621,7 +10621,7 @@
       "salesOrderId": "1154219000035659001",
       "salesOrderNumber": "SO-07724",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-13T08:31:34.800Z",
       "processedOrder": {
         "id": "1154219000035659001",
@@ -10686,7 +10686,8 @@
           "dispatchNote": "Local",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035657001": {
       "salesOrderId": "1154219000035657001",
