@@ -7750,6 +7750,63 @@
       "machineIds": [
         "1154219000035660001-1154219000035660004-1"
       ]
+    },
+    "1154219000035531015": {
+      "completedAt": "2026-08-13T12:02:30.694Z",
+      "order": {
+        "id": "1154219000035531015",
+        "zohoSalesOrderId": "1154219000035531015",
+        "salesOrderNumber": "SO-07703",
+        "status": "open",
+        "customerName": "TYNOR ORTHOTICS PVT LTD",
+        "shippingAddress": "PLOT NO 169-170, SECTOR 82 JLPL, INDL AREA, Mohali, SAS Nagar, Punjab, 160055, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035531018",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035531015-1154219000035531018-1",
+            "unitNumber": 1,
+            "serialNumber": "26270898",
+            "qrToken": "26270898",
+            "orderId": "1154219000035531015",
+            "lineItemId": "1154219000035531018",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "TYNOR ORTHOTICS PVT LTD",
+            "salesOrderNumber": "SO-07703",
+            "deliveryDate": "2026-08-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-11",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035531015-1154219000035531018-1"
+      ]
     }
   }
 }
