@@ -2140,6 +2140,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035661001": {
+      "id": "ship-1786621794698-qvapi",
+      "itemId": "1154219000035661001",
+      "orderId": "1154219000035661001",
+      "machineId": "1154219000035661001-1154219000035661004-1",
+      "salesOrderNumber": "SO-07726",
+      "customerName": "DHATRI SALES (Noida)",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "UP14TT0310",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-13",
+      "notes": "",
+      "shippedAt": "2026-08-13T11:49:54.698Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
