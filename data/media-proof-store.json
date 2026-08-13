@@ -2051,6 +2051,31 @@
           ]
         }
       }
+    },
+    "1154219000035659001": {
+      "orderId": "1154219000035659001",
+      "salesOrderNumber": "SO-07724",
+      "submittedAt": null,
+      "units": {
+        "1154219000035659001-1154219000035659004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035659001-1154219000035659004-1-video-1786616754772-gqjzy4",
+              "name": "VID_20260813_155508.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-13%2FSO-07724%2FHigh%20Frequency%20Welding%20Embossing%20machine%2012kw%20Hydraulic-1154219000035659001-1154219000035659004-1-2026-08-13T10-25-19-180Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-13/SO-07724/High Frequency Welding Embossing machine 12kw Hydraulic-1154219000035659001-1154219000035659004-1-2026-08-13T10-25-19-180Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-13T10:25:54.772Z",
+              "expiresAt": "2026-09-12T10:25:19.180Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
