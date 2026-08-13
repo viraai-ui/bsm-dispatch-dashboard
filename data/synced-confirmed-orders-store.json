@@ -47,53 +47,6 @@
         }
       ]
     },
-    "1154219000035582019": {
-      "id": "1154219000035582019",
-      "zohoSalesOrderId": "1154219000035582019",
-      "salesOrderNumber": "SO-07720",
-      "status": "open",
-      "customerName": "Flowknit Footwear Industries Pvt Ltd",
-      "shippingAddress": "Kh. No 51/25, Plot No 145, Swarn Park,, Mundka,, Near Pillar No 484,, Delhi, 110041",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035582022",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035582019-1154219000035582022-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035582019",
-          "lineItemId": "1154219000035582022",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "Flowknit Footwear Industries Pvt Ltd",
-          "salesOrderNumber": "SO-07720",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035588022": {
       "id": "1154219000035588022",
       "zohoSalesOrderId": "1154219000035588022",
@@ -15241,7 +15194,6 @@
   },
   "orderIds": [
     "1154219000035634001",
-    "1154219000035582019",
     "1154219000035588022",
     "1154219000035527004",
     "1154219000035516019",
@@ -15276,8 +15228,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T08:04:42.388Z",
-  "lastAttemptAt": "2026-08-13T08:08:05.219Z",
+  "lastSuccessfulSyncAt": "2026-08-13T08:08:28.164Z",
+  "lastAttemptAt": "2026-08-13T08:08:28.164Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
