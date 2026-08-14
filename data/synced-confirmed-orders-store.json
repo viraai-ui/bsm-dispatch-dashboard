@@ -1,5 +1,271 @@
 {
   "orders": {
+    "1154219000035705001": {
+      "id": "1154219000035705001",
+      "zohoSalesOrderId": "1154219000035705001",
+      "salesOrderNumber": "SO-07731",
+      "status": "open",
+      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035705004",
+          "itemName": "ROLLER PRESSING MACHINE",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035705001-1154219000035705004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035705001",
+          "lineItemId": "1154219000035705004",
+          "itemName": "ROLLER PRESSING MACHINE",
+          "sku": "",
+          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+          "salesOrderNumber": "SO-07731",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035701001": {
+      "id": "1154219000035701001",
+      "zohoSalesOrderId": "1154219000035701001",
+      "salesOrderNumber": "SO-07730",
+      "status": "open",
+      "customerName": "JD Associates",
+      "shippingAddress": "Delhi Road, 7-Harwar, Dhand, Amer, Jaipur, Rajasthan, 302018, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035701004",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "description": "Plain Roller",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035701001-1154219000035701004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035701001",
+          "lineItemId": "1154219000035701004",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "customerName": "JD Associates",
+          "salesOrderNumber": "SO-07730",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain Roller"
+        }
+      ]
+    },
+    "1154219000035688002": {
+      "id": "1154219000035688002",
+      "zohoSalesOrderId": "1154219000035688002",
+      "salesOrderNumber": "SO-07729",
+      "status": "open",
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035688005",
+          "itemName": "Flatbed Single needle",
+          "sku": "202",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035688002-1154219000035688005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035688002",
+          "lineItemId": "1154219000035688005",
+          "itemName": "Flatbed Single needle",
+          "sku": "202",
+          "customerName": "ROSEUS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07729",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035686001": {
+      "id": "1154219000035686001",
+      "zohoSalesOrderId": "1154219000035686001",
+      "salesOrderNumber": "SO-07728",
+      "status": "open",
+      "customerName": "K P Industries",
+      "shippingAddress": "Kh No-44/21, Mundka, Mundka, Delhi, 110041",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-13",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035686004",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035686001-1154219000035686004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035686001",
+          "lineItemId": "1154219000035686004",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "K P Industries",
+          "salesOrderNumber": "SO-07728",
+          "deliveryDate": "2026-08-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035685001": {
+      "id": "1154219000035685001",
+      "zohoSalesOrderId": "1154219000035685001",
+      "salesOrderNumber": "SO-07727",
+      "status": "open",
+      "customerName": "Unipatch Rubber Ltd",
+      "shippingAddress": "E-89,90A, INDUSTRIAL AREA, UNIPATCH RUBBER LIMITED, NEELAM CHOWK, BHIWADI, Alwar, Rajasthan, 301019, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-18",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035685004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035685005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035685001-1154219000035685004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035685001",
+          "lineItemId": "1154219000035685004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "Unipatch Rubber Ltd",
+          "salesOrderNumber": "SO-07727",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035685001-1154219000035685005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035685001",
+          "lineItemId": "1154219000035685005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "Unipatch Rubber Ltd",
+          "salesOrderNumber": "SO-07727",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035657001": {
       "id": "1154219000035657001",
       "zohoSalesOrderId": "1154219000035657001",
@@ -15115,6 +15381,11 @@
     }
   },
   "orderIds": [
+    "1154219000035705001",
+    "1154219000035701001",
+    "1154219000035688002",
+    "1154219000035686001",
+    "1154219000035685001",
     "1154219000035657001",
     "1154219000035634001",
     "1154219000035588022",
@@ -15149,8 +15420,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-13T12:40:33.699Z",
-  "lastAttemptAt": "2026-08-14T05:01:37.203Z",
+  "lastSuccessfulSyncAt": "2026-08-14T05:02:01.850Z",
+  "lastAttemptAt": "2026-08-14T05:02:01.850Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
