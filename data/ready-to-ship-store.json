@@ -2326,6 +2326,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035716003": {
+      "id": "ship-1786706765189-jmazl",
+      "itemId": "1154219000035716003",
+      "orderId": "1154219000035716003",
+      "machineId": "1154219000035716003-1154219000035716006-1",
+      "salesOrderNumber": "SO-07737",
+      "customerName": "Ganvex Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-14",
+      "notes": "",
+      "shippedAt": "2026-08-14T11:26:05.189Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
