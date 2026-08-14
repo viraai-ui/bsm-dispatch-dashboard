@@ -11595,16 +11595,63 @@
     },
     "1154219000035711007": {
       "salesOrderId": "1154219000035711007",
-      "salesOrderNumber": "",
+      "salesOrderNumber": "SO-07736",
       "status": "open",
       "machines": {
         "1154219000035711007-1154219000035711010-1": {
           "machineUnitId": "1154219000035711007-1154219000035711010-1",
-          "lineItemId": "",
+          "lineItemId": "1154219000035711010",
           "serialNumber": "26270952",
           "qrToken": "26270952",
           "qrStatus": "pending"
         }
+      },
+      "processedOrder": {
+        "id": "1154219000035711007",
+        "zohoSalesOrderId": "1154219000035711007",
+        "salesOrderNumber": "SO-07736",
+        "status": "open",
+        "customerName": "Goldstar Stride Limited",
+        "shippingAddress": "Shankha Park Maharjgunj P.O Box: 3787, Kathmandu, Nepal",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035711010",
+            "itemName": "Toe Molding Machine",
+            "sku": "513",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035711007-1154219000035711010-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035711007",
+            "lineItemId": "1154219000035711010",
+            "itemName": "Toe Molding Machine",
+            "sku": "513",
+            "customerName": "Goldstar Stride Limited",
+            "salesOrderNumber": "SO-07736",
+            "deliveryDate": "2026-08-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
       }
     },
     "1154219000035516019": {
