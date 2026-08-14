@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035711007": {
+      "id": "1154219000035711007",
+      "zohoSalesOrderId": "1154219000035711007",
+      "salesOrderNumber": "SO-07736",
+      "status": "open",
+      "customerName": "Goldstar Stride Limited",
+      "shippingAddress": "Shankha Park Maharjgunj P.O Box: 3787, Kathmandu, Nepal",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035711010",
+          "itemName": "Toe Molding Machine",
+          "sku": "513",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035711007-1154219000035711010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035711007",
+          "lineItemId": "1154219000035711010",
+          "itemName": "Toe Molding Machine",
+          "sku": "513",
+          "customerName": "Goldstar Stride Limited",
+          "salesOrderNumber": "SO-07736",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035719001": {
       "id": "1154219000035719001",
       "zohoSalesOrderId": "1154219000035719001",
@@ -263,53 +310,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Plain Roller"
-        }
-      ]
-    },
-    "1154219000035688002": {
-      "id": "1154219000035688002",
-      "zohoSalesOrderId": "1154219000035688002",
-      "salesOrderNumber": "SO-07729",
-      "status": "open",
-      "customerName": "ROSEUS PRIVATE LIMITED",
-      "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035688005",
-          "itemName": "Flatbed Single needle",
-          "sku": "202",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035688002-1154219000035688005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035688002",
-          "lineItemId": "1154219000035688005",
-          "itemName": "Flatbed Single needle",
-          "sku": "202",
-          "customerName": "ROSEUS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07729",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -15563,12 +15563,12 @@
     }
   },
   "orderIds": [
+    "1154219000035711007",
     "1154219000035719001",
     "1154219000035696047",
     "1154219000035717001",
     "1154219000035705001",
     "1154219000035701001",
-    "1154219000035688002",
     "1154219000035686001",
     "1154219000035685001",
     "1154219000035657001",
@@ -15605,8 +15605,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-14T08:48:50.882Z",
-  "lastAttemptAt": "2026-08-14T09:03:29.166Z",
+  "lastSuccessfulSyncAt": "2026-08-14T09:03:48.705Z",
+  "lastAttemptAt": "2026-08-14T09:03:48.705Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
