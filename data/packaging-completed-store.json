@@ -8159,6 +8159,63 @@
       "machineIds": [
         "1154219000035657001-1154219000035657004-1"
       ]
+    },
+    "1154219000035719001": {
+      "completedAt": "2026-08-14T11:45:59.654Z",
+      "order": {
+        "id": "1154219000035719001",
+        "zohoSalesOrderId": "1154219000035719001",
+        "salesOrderNumber": "SO-07735",
+        "status": "open",
+        "customerName": "Kalzado Initiatives LLP",
+        "shippingAddress": "Khasra No. 323Mi, Central Hope Town, Tehsil Vikash\nNagar, Selaqui Dehradun,, Uttarakhand",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035719004",
+            "itemName": "Toe Molding Machine",
+            "sku": "513",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035719001-1154219000035719004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270946",
+            "qrToken": "26270946",
+            "orderId": "1154219000035719001",
+            "lineItemId": "1154219000035719004",
+            "itemName": "Toe Molding Machine",
+            "sku": "513",
+            "customerName": "Kalzado Initiatives LLP",
+            "salesOrderNumber": "SO-07735",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035719001-1154219000035719004-1"
+      ]
     }
   }
 }
