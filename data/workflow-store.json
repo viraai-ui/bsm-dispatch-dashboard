@@ -11027,7 +11027,7 @@
       "salesOrderId": "1154219000035688002",
       "salesOrderNumber": "SO-07729",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T05:13:25.203Z",
       "processedOrder": {
         "id": "1154219000035688002",
@@ -11092,7 +11092,8 @@
           "dispatchNote": "local",
           "vendor": "Balaji"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
