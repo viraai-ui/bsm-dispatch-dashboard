@@ -1,5 +1,130 @@
 {
   "orders": {
+    "1154219000035713007": {
+      "id": "1154219000035713007",
+      "zohoSalesOrderId": "1154219000035713007",
+      "salesOrderNumber": "SO-07733",
+      "status": "open",
+      "customerName": "GURUJI FOOTWEAR",
+      "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035713010",
+          "itemName": "Automatic Double Bed Heat Press (Head Movement) (16x24)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035713007-1154219000035713010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035713007",
+          "lineItemId": "1154219000035713010",
+          "itemName": "Automatic Double Bed Heat Press (Head Movement) (16x24)",
+          "sku": "",
+          "customerName": "GURUJI FOOTWEAR",
+          "salesOrderNumber": "SO-07733",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035717001": {
+      "id": "1154219000035717001",
+      "zohoSalesOrderId": "1154219000035717001",
+      "salesOrderNumber": "SO-07732",
+      "status": "open",
+      "customerName": "SELECTION BAG",
+      "shippingAddress": "GROUND FLOOR,GALA NO 1, AGRIPADA INDUSTRIAL PREMISES, BHARUCHA COMPUND, SANE GURUJI MARG, MUMBAI CENTRAL, MUMBAI, MAHARASHTRA - 400011",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035717004",
+          "itemName": "Pneumatic Marginal Gluing Machine",
+          "sku": "",
+          "description": "Monday Payment aane ke baad jayegi",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035717005",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "Today Dispatch",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035717001-1154219000035717004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035717001",
+          "lineItemId": "1154219000035717004",
+          "itemName": "Pneumatic Marginal Gluing Machine",
+          "sku": "",
+          "customerName": "SELECTION BAG",
+          "salesOrderNumber": "SO-07732",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Monday Payment aane ke baad jayegi"
+        },
+        {
+          "id": "1154219000035717001-1154219000035717005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035717001",
+          "lineItemId": "1154219000035717005",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "SELECTION BAG",
+          "salesOrderNumber": "SO-07732",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Today Dispatch"
+        }
+      ]
+    },
     "1154219000035705001": {
       "id": "1154219000035705001",
       "zohoSalesOrderId": "1154219000035705001",
@@ -15381,6 +15506,8 @@
     }
   },
   "orderIds": [
+    "1154219000035713007",
+    "1154219000035717001",
     "1154219000035705001",
     "1154219000035701001",
     "1154219000035688002",
@@ -15420,8 +15547,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-14T06:06:05.165Z",
-  "lastAttemptAt": "2026-08-14T06:20:40.695Z",
+  "lastSuccessfulSyncAt": "2026-08-14T06:21:05.672Z",
+  "lastAttemptAt": "2026-08-14T06:21:05.672Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
