@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035719001": {
+      "id": "1154219000035719001",
+      "zohoSalesOrderId": "1154219000035719001",
+      "salesOrderNumber": "SO-07735",
+      "status": "open",
+      "customerName": "Kalzado Initiatives LLP",
+      "shippingAddress": "Khasra No. 323Mi, Central Hope Town, Tehsil Vikash\nNagar, Selaqui Dehradun,, Uttarakhand",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035719004",
+          "itemName": "Toe Molding Machine",
+          "sku": "513",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035719001-1154219000035719004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035719001",
+          "lineItemId": "1154219000035719004",
+          "itemName": "Toe Molding Machine",
+          "sku": "513",
+          "customerName": "Kalzado Initiatives LLP",
+          "salesOrderNumber": "SO-07735",
+          "deliveryDate": "2026-08-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035696047": {
       "id": "1154219000035696047",
       "zohoSalesOrderId": "1154219000035696047",
@@ -13986,6 +14033,16 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035688173",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
         }
       ],
       "machines": [
@@ -15553,6 +15610,7 @@
     }
   },
   "orderIds": [
+    "1154219000035719001",
     "1154219000035696047",
     "1154219000035713007",
     "1154219000035717001",
@@ -15595,8 +15653,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-14T07:43:10.382Z",
-  "lastAttemptAt": "2026-08-14T07:54:45.583Z",
+  "lastSuccessfulSyncAt": "2026-08-14T07:55:09.124Z",
+  "lastAttemptAt": "2026-08-14T07:55:09.124Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
