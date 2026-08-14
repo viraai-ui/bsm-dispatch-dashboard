@@ -11093,13 +11093,13 @@
           "vendor": "Balaji"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     },
     "1154219000035686001": {
       "salesOrderId": "1154219000035686001",
       "salesOrderNumber": "SO-07728",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T05:32:27.917Z",
       "processedOrder": {
         "id": "1154219000035686001",
@@ -11164,7 +11164,8 @@
           "dispatchNote": "local",
           "vendor": "Ishu Traders"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
