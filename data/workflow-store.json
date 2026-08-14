@@ -10695,7 +10695,7 @@
       "salesOrderId": "1154219000035657001",
       "salesOrderNumber": "SO-07723",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-13T08:28:24.197Z",
       "processedOrder": {
         "id": "1154219000035657001",
@@ -10770,7 +10770,8 @@
           "dispatchNote": "wooden",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035661001": {
       "salesOrderId": "1154219000035661001",
@@ -11093,7 +11094,7 @@
           "vendor": "Balaji"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035686001": {
       "salesOrderId": "1154219000035686001",
@@ -11379,7 +11380,7 @@
           "vendor": "Ishu Traders"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 4
     }
   }
 }
