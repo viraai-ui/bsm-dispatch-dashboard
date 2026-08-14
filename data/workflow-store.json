@@ -11515,13 +11515,13 @@
           "vendor": "Allure"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 4
     },
     "1154219000035716003": {
       "salesOrderId": "1154219000035716003",
       "salesOrderNumber": "SO-07737",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T09:27:50.551Z",
       "processedOrder": {
         "id": "1154219000035716003",
@@ -11586,7 +11586,8 @@
           "dispatchNote": "Local",
           "vendor": "Ishu Traders"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
