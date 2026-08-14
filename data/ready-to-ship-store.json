@@ -2388,6 +2388,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035509004": {
+      "id": "ship-1786706928050-vtco6",
+      "itemId": "1154219000035509004",
+      "orderId": "1154219000035509004",
+      "machineId": "1154219000035509004-1154219000035509007-1",
+      "salesOrderNumber": "SO-07706",
+      "customerName": "GURU JI ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "HR63E9996",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-14",
+      "notes": "",
+      "shippedAt": "2026-08-14T11:28:48.050Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
