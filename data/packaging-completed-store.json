@@ -8035,6 +8035,63 @@
       "machineIds": [
         "1154219000035716003-1154219000035716006-1"
       ]
+    },
+    "1154219000035686001": {
+      "completedAt": "2026-08-14T11:36:26.347Z",
+      "order": {
+        "id": "1154219000035686001",
+        "zohoSalesOrderId": "1154219000035686001",
+        "salesOrderNumber": "SO-07728",
+        "status": "open",
+        "customerName": "K P Industries",
+        "shippingAddress": "Kh No-44/21, Mundka, Mundka, Delhi, 110041",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-13",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035686004",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035686001-1154219000035686004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270936",
+            "qrToken": "26270936",
+            "orderId": "1154219000035686001",
+            "lineItemId": "1154219000035686004",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "K P Industries",
+            "salesOrderNumber": "SO-07728",
+            "deliveryDate": "2026-08-13",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035686001-1154219000035686004-1"
+      ]
     }
   }
 }
