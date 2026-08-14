@@ -7921,6 +7921,63 @@
       "machineIds": [
         "1154219000035688002-1154219000035688005-1"
       ]
+    },
+    "1154219000035701001": {
+      "completedAt": "2026-08-14T09:11:26.083Z",
+      "order": {
+        "id": "1154219000035701001",
+        "zohoSalesOrderId": "1154219000035701001",
+        "salesOrderNumber": "SO-07730",
+        "status": "open",
+        "customerName": "JD Associates",
+        "shippingAddress": "Delhi Road, 7-Harwar, Dhand, Amer, Jaipur, Rajasthan, 302018, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035701004",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "Plain Roller",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035701001-1154219000035701004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270937",
+            "qrToken": "26270937",
+            "orderId": "1154219000035701001",
+            "lineItemId": "1154219000035701004",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "JD Associates",
+            "salesOrderNumber": "SO-07730",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035701001-1154219000035701004-1"
+      ]
     }
   }
 }
