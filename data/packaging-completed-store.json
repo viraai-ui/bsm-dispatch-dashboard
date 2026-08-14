@@ -7978,6 +7978,63 @@
       "machineIds": [
         "1154219000035701001-1154219000035701004-1"
       ]
+    },
+    "1154219000035716003": {
+      "completedAt": "2026-08-14T11:11:59.796Z",
+      "order": {
+        "id": "1154219000035716003",
+        "zohoSalesOrderId": "1154219000035716003",
+        "salesOrderNumber": "SO-07737",
+        "status": "open",
+        "customerName": "Ganvex Enterprises",
+        "shippingAddress": "FIRST FLOOR, A-51, Mangolpuri Flyover U Turn, Tata Power Distributor North Delhi Power Ltd, Mangolpuri Industrial Area Phase 1, New Delhi, North West Delhi, Delhi, 110083",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035716006",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035716003-1154219000035716006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270951",
+            "qrToken": "26270951",
+            "orderId": "1154219000035716003",
+            "lineItemId": "1154219000035716006",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "Ganvex Enterprises",
+            "salesOrderNumber": "SO-07737",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035716003-1154219000035716006-1"
+      ]
     }
   }
 }
