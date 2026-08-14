@@ -8092,6 +8092,73 @@
       "machineIds": [
         "1154219000035686001-1154219000035686004-1"
       ]
+    },
+    "1154219000035657001": {
+      "completedAt": "2026-08-14T11:45:53.706Z",
+      "order": {
+        "id": "1154219000035657001",
+        "zohoSalesOrderId": "1154219000035657001",
+        "salesOrderNumber": "SO-07723",
+        "status": "open",
+        "customerName": "ANUGAMI INDUSTRIES PRIVATE LIMITED",
+        "shippingAddress": "C/O ASHOK KUMAR PAUL, DHADIKA, Gohaldangra, DHADIKA, Gohaldangra,, East Singhbhum, Jharkhand, 832302, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035657004",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035657005",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035657001-1154219000035657004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270926",
+            "qrToken": "26270926",
+            "orderId": "1154219000035657001",
+            "lineItemId": "1154219000035657004",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "ANUGAMI INDUSTRIES PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07723",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-13",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035657001-1154219000035657004-1"
+      ]
     }
   }
 }
