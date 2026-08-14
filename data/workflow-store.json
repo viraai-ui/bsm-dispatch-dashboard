@@ -10830,7 +10830,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035661001": {
       "salesOrderId": "1154219000035661001",
@@ -11298,7 +11298,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 4
     },
     "1154219000035705001": {
       "salesOrderId": "1154219000035705001",
@@ -11448,7 +11448,7 @@
       "salesOrderId": "1154219000035719001",
       "salesOrderNumber": "SO-07735",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T08:31:04.842Z",
       "processedOrder": {
         "id": "1154219000035719001",
@@ -11513,7 +11513,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Allure"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
