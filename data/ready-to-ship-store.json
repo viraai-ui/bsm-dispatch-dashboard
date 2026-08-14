@@ -2295,6 +2295,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035696047": {
+      "id": "ship-1786698201597-x9rp0",
+      "itemId": "1154219000035696047",
+      "orderId": "1154219000035696047",
+      "machineId": "1154219000035696047-1154219000035696052-1",
+      "salesOrderNumber": "SO-07734",
+      "customerName": "ANANYA UPPER",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-14",
+      "notes": "",
+      "shippedAt": "2026-08-14T09:03:21.598Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
