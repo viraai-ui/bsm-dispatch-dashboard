@@ -1,5 +1,30 @@
 {
   "orders": {
+    "1154219000035730004": {
+      "id": "1154219000035730004",
+      "zohoSalesOrderId": "1154219000035730004",
+      "salesOrderNumber": "SO-07739",
+      "status": "open",
+      "customerName": "CHUNOBA INTERNATIONAL",
+      "shippingAddress": "42- SAMARPAN IND ESTATE, OPP. BHAVDA GATE, VILLAGE-KUHA, TALUKO-DASKROI,, AHMEDABAD, Gujarat, 382433, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035730007",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 62.5,
+          "pendingQuantity": 62.5,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000035691003": {
       "id": "1154219000035691003",
       "zohoSalesOrderId": "1154219000035691003",
@@ -5516,53 +5541,6 @@
         }
       ]
     },
-    "1154219000035716003": {
-      "id": "1154219000035716003",
-      "zohoSalesOrderId": "1154219000035716003",
-      "salesOrderNumber": "SO-07737",
-      "status": "open",
-      "customerName": "Ganvex Enterprises",
-      "shippingAddress": "FIRST FLOOR, A-51, Mangolpuri Flyover U Turn, Tata Power Distributor North Delhi Power Ltd, Mangolpuri Industrial Area Phase 1, New Delhi, North West Delhi, Delhi, 110083",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035716006",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035716003-1154219000035716006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035716003",
-          "lineItemId": "1154219000035716006",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "Ganvex Enterprises",
-          "salesOrderNumber": "SO-07737",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035711007": {
       "id": "1154219000035711007",
       "zohoSalesOrderId": "1154219000035711007",
@@ -5771,100 +5749,6 @@
           "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
           "salesOrderNumber": "SO-07731",
           "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035701001": {
-      "id": "1154219000035701001",
-      "zohoSalesOrderId": "1154219000035701001",
-      "salesOrderNumber": "SO-07730",
-      "status": "open",
-      "customerName": "JD Associates",
-      "shippingAddress": "Delhi Road, 7-Harwar, Dhand, Amer, Jaipur, Rajasthan, 302018, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035701004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "description": "Plain Roller",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035701001-1154219000035701004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035701001",
-          "lineItemId": "1154219000035701004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "JD Associates",
-          "salesOrderNumber": "SO-07730",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Plain Roller"
-        }
-      ]
-    },
-    "1154219000035686001": {
-      "id": "1154219000035686001",
-      "zohoSalesOrderId": "1154219000035686001",
-      "salesOrderNumber": "SO-07728",
-      "status": "open",
-      "customerName": "K P Industries",
-      "shippingAddress": "Kh No-44/21, Mundka, Mundka, Delhi, 110041",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-13",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035686004",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035686001-1154219000035686004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035686001",
-          "lineItemId": "1154219000035686004",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "K P Industries",
-          "salesOrderNumber": "SO-07728",
-          "deliveryDate": "2026-08-13",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
@@ -6503,137 +6387,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Needle bar"
-        }
-      ]
-    },
-    "1154219000035509004": {
-      "id": "1154219000035509004",
-      "zohoSalesOrderId": "1154219000035509004",
-      "salesOrderNumber": "SO-07706",
-      "status": "open",
-      "customerName": "GURU JI ENTERPRISES",
-      "shippingAddress": "Plot no 81, Sector 16, Phase 1, Bahadurgarh, Jhajjar, Haryana, 124507, Bahadurgarh, Haryana,, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-11",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035509007",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 5,
-          "pendingQuantity": 5,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035509004-1154219000035509007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035509004",
-          "lineItemId": "1154219000035509007",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "GURU JI ENTERPRISES",
-          "salesOrderNumber": "SO-07706",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035509004-1154219000035509007-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035509004",
-          "lineItemId": "1154219000035509007",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "GURU JI ENTERPRISES",
-          "salesOrderNumber": "SO-07706",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035509004-1154219000035509007-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035509004",
-          "lineItemId": "1154219000035509007",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "GURU JI ENTERPRISES",
-          "salesOrderNumber": "SO-07706",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035509004-1154219000035509007-4",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035509004",
-          "lineItemId": "1154219000035509007",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "GURU JI ENTERPRISES",
-          "salesOrderNumber": "SO-07706",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035509004-1154219000035509007-5",
-          "unitNumber": 5,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035509004",
-          "lineItemId": "1154219000035509007",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "GURU JI ENTERPRISES",
-          "salesOrderNumber": "SO-07706",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -21022,14 +20775,12 @@
     }
   },
   "orderIds": [
+    "1154219000035730004",
     "1154219000035691003",
-    "1154219000035716003",
     "1154219000035711007",
     "1154219000035719001",
     "1154219000035717001",
     "1154219000035705001",
-    "1154219000035701001",
-    "1154219000035686001",
     "1154219000035685001",
     "1154219000035657001",
     "1154219000035634001",
@@ -21037,7 +20788,6 @@
     "1154219000035527004",
     "1154219000035516019",
     "1154219000035510018",
-    "1154219000035509004",
     "1154219000035516005",
     "1154219000035531015",
     "1154219000035532001",
@@ -21064,8 +20814,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-14T10:57:35.701Z",
-  "lastAttemptAt": "2026-08-14T11:52:08.841Z",
+  "lastSuccessfulSyncAt": "2026-08-14T11:52:29.015Z",
+  "lastAttemptAt": "2026-08-14T11:52:29.015Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
