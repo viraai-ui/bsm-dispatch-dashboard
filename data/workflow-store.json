@@ -10830,7 +10830,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 4
     },
     "1154219000035661001": {
       "salesOrderId": "1154219000035661001",
@@ -11153,7 +11153,7 @@
           "vendor": "Balaji"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035686001": {
       "salesOrderId": "1154219000035686001",
@@ -11231,7 +11231,7 @@
       "salesOrderId": "1154219000035701001",
       "salesOrderNumber": "SO-07730",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T05:38:58.744Z",
       "processedOrder": {
         "id": "1154219000035701001",
@@ -11296,7 +11296,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035705001": {
       "salesOrderId": "1154219000035705001",
@@ -11439,7 +11440,7 @@
           "vendor": "Ishu Traders"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     }
   }
 }
