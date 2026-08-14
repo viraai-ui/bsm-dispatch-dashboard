@@ -11611,15 +11611,7 @@
       "salesOrderId": "1154219000035516019",
       "salesOrderNumber": "SO-07708",
       "status": "open",
-      "machines": {
-        "1154219000035516019-1154219000035516022-1": {
-          "machineUnitId": "1154219000035516019-1154219000035516022-1",
-          "lineItemId": "",
-          "serialNumber": "26270954",
-          "qrToken": "26270954",
-          "qrStatus": "pending"
-        }
-      }
+      "machines": {}
     }
   }
 }
