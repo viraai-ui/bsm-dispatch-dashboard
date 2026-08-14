@@ -7807,6 +7807,63 @@
       "machineIds": [
         "1154219000035531015-1154219000035531018-1"
       ]
+    },
+    "1154219000035696047": {
+      "completedAt": "2026-08-14T08:04:05.938Z",
+      "order": {
+        "id": "1154219000035696047",
+        "zohoSalesOrderId": "1154219000035696047",
+        "salesOrderNumber": "SO-07734",
+        "status": "open",
+        "customerName": "ANANYA UPPER",
+        "shippingAddress": "MOZA VILLAGE HASAN PUR, CHOTU RAM NAGAR, LINE PAR, BAHADURGARH, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035696052",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035696047-1154219000035696052-1",
+            "unitNumber": 1,
+            "serialNumber": "26270941",
+            "qrToken": "26270941",
+            "orderId": "1154219000035696047",
+            "lineItemId": "1154219000035696052",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "ANANYA UPPER",
+            "salesOrderNumber": "SO-07734",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035696047-1154219000035696052-1"
+      ]
     }
   }
 }
