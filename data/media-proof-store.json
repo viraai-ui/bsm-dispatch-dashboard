@@ -2177,6 +2177,31 @@
           ]
         }
       }
+    },
+    "1154219000034623006": {
+      "orderId": "1154219000034623006",
+      "salesOrderNumber": "SO-07553",
+      "submittedAt": null,
+      "units": {
+        "1154219000034623006-1154219000034623009-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000034623006-1154219000034623009-1-video-1786695390558-383n49",
+              "name": "VID_20260814_134604.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-14%2FSO-07553%2FBeam%20cutting%20Press%204%20column%2040%20ton-1154219000034623006-1154219000034623009-1-2026-08-14T08-16-09-460Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-14/SO-07553/Beam cutting Press 4 column 40 ton-1154219000034623006-1154219000034623009-1-2026-08-14T08-16-09-460Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-14T08:16:30.558Z",
+              "expiresAt": "2026-09-13T08:16:09.460Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
