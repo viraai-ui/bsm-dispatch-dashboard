@@ -2357,6 +2357,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035701001": {
+      "id": "ship-1786706827555-1fy3m",
+      "itemId": "1154219000035701001",
+      "orderId": "1154219000035701001",
+      "machineId": "1154219000035701001-1154219000035701004-1",
+      "salesOrderNumber": "SO-07730",
+      "customerName": "JD Associates",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-14",
+      "notes": "",
+      "shippedAt": "2026-08-14T11:27:07.555Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
