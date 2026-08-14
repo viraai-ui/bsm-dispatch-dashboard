@@ -7864,6 +7864,63 @@
       "machineIds": [
         "1154219000035696047-1154219000035696052-1"
       ]
+    },
+    "1154219000035688002": {
+      "completedAt": "2026-08-14T08:28:33.930Z",
+      "order": {
+        "id": "1154219000035688002",
+        "zohoSalesOrderId": "1154219000035688002",
+        "salesOrderNumber": "SO-07729",
+        "status": "open",
+        "customerName": "ROSEUS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035688005",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035688002-1154219000035688005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270933",
+            "qrToken": "26270933",
+            "orderId": "1154219000035688002",
+            "lineItemId": "1154219000035688005",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "customerName": "ROSEUS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07729",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000035688002-1154219000035688005-1"
+      ]
     }
   }
 }
