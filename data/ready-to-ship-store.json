@@ -2264,6 +2264,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035688002": {
+      "id": "ship-1786698079027-dxx14",
+      "itemId": "1154219000035688002",
+      "orderId": "1154219000035688002",
+      "machineId": "1154219000035688002-1154219000035688005-1",
+      "salesOrderNumber": "SO-07729",
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS0540",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-14",
+      "notes": "",
+      "shippedAt": "2026-08-14T09:01:19.027Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
