@@ -12971,7 +12971,9 @@
     "1154219000035794018": {
       "salesOrderId": "1154219000035794018",
       "salesOrderNumber": "SO-07744",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-17T12:49:28.232Z",
       "processedOrder": {
         "id": "1154219000035794018",
         "zohoSalesOrderId": "1154219000035794018",
@@ -12999,8 +13001,8 @@
           {
             "id": "1154219000035794018-1154219000035794021-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270980",
+            "qrToken": "26270980",
             "orderId": "1154219000035794018",
             "lineItemId": "1154219000035794021",
             "itemName": "Edge coloring machine [Double Side]",
@@ -13008,14 +13010,17 @@
             "customerName": "SF ENTERPRISES",
             "salesOrderNumber": "SO-07744",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "Wooden"
           }
         ]
       },
@@ -13028,7 +13033,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T12:49:00.777Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T12:49:11.817Z"
+          "zohoBackupQueuedAt": "2026-08-17T12:49:11.817Z",
+          "processedAt": "2026-08-17T12:49:28.232Z",
+          "dispatchNote": "Wooden",
+          "vendor": "Able"
         }
       }
     }
