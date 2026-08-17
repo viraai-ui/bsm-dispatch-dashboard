@@ -2450,6 +2450,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035719001": {
+      "id": "ship-1786946244893-51q7s",
+      "itemId": "1154219000035719001",
+      "orderId": "1154219000035719001",
+      "machineId": "1154219000035719001-1154219000035719004-1",
+      "salesOrderNumber": "SO-07735",
+      "customerName": "Kalzado Initiatives LLP",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAR7533",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-17",
+      "notes": "",
+      "shippedAt": "2026-08-17T05:57:24.893Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
