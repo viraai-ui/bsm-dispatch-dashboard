@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270979,
+  "serialCounter": 26270980,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -12965,6 +12965,67 @@
           "processedAt": "2026-08-17T12:45:11.367Z",
           "dispatchNote": "Wooden",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000035794018": {
+      "salesOrderId": "1154219000035794018",
+      "salesOrderNumber": "SO-07744",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035794018",
+        "zohoSalesOrderId": "1154219000035794018",
+        "salesOrderNumber": "SO-07744",
+        "status": "open",
+        "customerName": "SF ENTERPRISES",
+        "shippingAddress": "CTS 2630, AB Village Ali Talao, Kharodi Opp. Marve Road, Malad, Mumbai, Maharashtra, 400095, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035794021",
+            "itemName": "Edge coloring machine [Double Side]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035794018-1154219000035794021-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035794018",
+            "lineItemId": "1154219000035794021",
+            "itemName": "Edge coloring machine [Double Side]",
+            "sku": "",
+            "customerName": "SF ENTERPRISES",
+            "salesOrderNumber": "SO-07744",
+            "deliveryDate": "2026-08-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035794018-1154219000035794021-1": {
+          "machineUnitId": "1154219000035794018-1154219000035794021-1",
+          "lineItemId": "1154219000035794021",
+          "serialNumber": "26270980",
+          "qrToken": "26270980",
+          "qrStatus": "pending"
         }
       }
     }
