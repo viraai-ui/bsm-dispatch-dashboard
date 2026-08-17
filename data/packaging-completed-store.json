@@ -8448,6 +8448,97 @@
       "machineIds": [
         "1154219000035705001-1154219000035705004-1"
       ]
+    },
+    "1154219000035717001": {
+      "completedAt": "2026-08-17T11:50:00.198Z",
+      "order": {
+        "id": "1154219000035717001",
+        "zohoSalesOrderId": "1154219000035717001",
+        "salesOrderNumber": "SO-07732",
+        "status": "open",
+        "customerName": "SELECTION BAG",
+        "shippingAddress": "GROUND FLOOR,GALA NO 1, AGRIPADA INDUSTRIAL PREMISES, BHARUCHA COMPUND, SANE GURUJI MARG, MUMBAI CENTRAL, MUMBAI, MAHARASHTRA - 400011",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035717004",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "description": "Monday Payment aane ke baad jayegi",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035717005",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "Today Dispatch",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035717001-1154219000035717004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270960",
+            "qrToken": "26270960",
+            "orderId": "1154219000035717001",
+            "lineItemId": "1154219000035717004",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "customerName": "SELECTION BAG",
+            "salesOrderNumber": "SO-07732",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Monday Payment aane ke baad jayegi",
+            "warrantyStart": "2026-08-17",
+            "dispatchNote": "Wooden"
+          },
+          {
+            "id": "1154219000035717001-1154219000035717005-1",
+            "unitNumber": 2,
+            "serialNumber": "26270961",
+            "qrToken": "26270961",
+            "orderId": "1154219000035717001",
+            "lineItemId": "1154219000035717005",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "SELECTION BAG",
+            "salesOrderNumber": "SO-07732",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Today Dispatch",
+            "warrantyStart": "2026-08-17",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035717001-1154219000035717004-1",
+        "1154219000035717001-1154219000035717005-1"
+      ]
     }
   }
 }
