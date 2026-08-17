@@ -180,11 +180,11 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
       const nextQrCodes: Record<string, string> = { ...qrCodes }
       for (const entry of generatedEntries) nextQrCodes[entry.machineId] = entry.qrCode
       const workflowMachines: MachineWorkflow[] = updated.filter((machine) => selected.has(machine.id)).map((machine) => ({ machineUnitId: machine.id, lineItemId: machine.lineItemId, serialNumber: machine.serialNumber, qrCode: nextQrCodes[machine.id], qrToken: machine.qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() }))
-      await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
+      const saved = await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
       setMachines(updated)
       setQrCodes(nextQrCodes)
       await generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
-      setMessage(`Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.`)
+      setMessage(saved.data?.sheetBackup?.status === 'pending' ? `Serial saved; Zoho backup queued. Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.` : `Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.`)
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Serial generation failed. Please retry.')
     } finally {
@@ -255,7 +255,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
   }
 
   return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><div className="modal-head-actions"><div className="order-menu-wrap"><button className="drawer-close menu-dot-btn" aria-label="Order actions" onClick={() => setMenuOpen((open) => !open)}>⋯</button>{menuOpen && <div className="order-menu"><button type="button" onClick={undoOrder} disabled={undoing}>{undoing ? 'Undoing…' : 'Undo Order'}</button></div>}</div><button className="drawer-close" onClick={onClose}>×</button></div></div>
-    {message && <div className={message.toLowerCase().includes('success') ? 'form-success process-success-tape' : 'form-error'}>{message}</div>}
+    {message && <div className={message.toLowerCase().includes('success') || message.startsWith('Serial saved;') || message.startsWith('Barcode PDF generated') ? 'form-success process-success-tape' : 'form-error'}>{message}</div>}
     <StageTracker stage={modalStage} />
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
     <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap line-items-wrap"><table className="table line-items-table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Type</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td><ItemName name={item.itemName} description={item.description} /></td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{dispatchCategoryLabel(item.dispatchCategory)}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>

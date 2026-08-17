@@ -2,7 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { isMachineLineItem } from '@/lib/item-classification'
-import { backupGeneratedSerialsToZohoSheet, updateSerialVendorsInZohoSheet } from '@/lib/serial-sheet-backup'
+
 import { upsertGeneratedSerialsToMasterDatabase } from '@/lib/master-database'
 import type { Order } from '@/types/domain'
 
@@ -39,13 +39,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       return apiOk({ serials })
     }
     const now = new Date().toISOString()
-    let sheetBackup: Awaited<ReturnType<typeof backupGeneratedSerialsToZohoSheet>> | null = null
+    let sheetBackup: { synced: number; skipped: number; configured: boolean; errors: string[]; queued?: number; status?: 'pending' } | null = null
     let masterBackup: Awaited<ReturnType<typeof upsertGeneratedSerialsToMasterDatabase>> | null = null
     const workflow = await upsertOrderWorkflow(id, (current) => {
       const machines = { ...(current?.machines || {}) }
       if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) {
         const existing = machines[item.machineUnitId]
-        machines[item.machineUnitId] = { ...item, serialNumber: item.serialNumber || existing?.serialNumber, qrToken: item.qrToken || existing?.qrToken || item.serialNumber || existing?.serialNumber, qrStatus: 'generated' }
+        machines[item.machineUnitId] = { ...item, serialNumber: item.serialNumber || existing?.serialNumber, qrToken: item.qrToken || existing?.qrToken || item.serialNumber || existing?.serialNumber, qrStatus: 'generated', zohoBackupStatus: existing?.zohoBackupStatus === 'synced' ? 'synced' : 'pending', zohoBackupQueuedAt: existing?.zohoBackupQueuedAt || now, zohoBackupError: undefined }
       }
       if (action === 'not_required') for (const machine of selectedMachines(order, body.selectedMachineIds)) machines[machine.id] = { machineUnitId: machine.id, lineItemId: machine.lineItemId, qrStatus: 'not_required', qrNotRequiredAt: now }
       const generated = Object.values(machines).filter((m) => m.qrStatus === 'generated').length
@@ -79,17 +79,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         const saved = generatedById.get(machine.id)
         return saved ? { ...machine, serialNumber: saved.serialNumber || machine.serialNumber, qrToken: saved.qrToken || machine.qrToken } : machine
       }).filter((machine) => generatedById.has(machine.id))
-      sheetBackup = await backupGeneratedSerialsToZohoSheet(order, generatedMachines, generatedDate)
-      if (sheetBackup.configured && (!sheetBackup.verified || sheetBackup.errors.length)) {
-        throw new Error(`Serial generated but Zoho Sheet backup did not verify. Please retry before processing. ${sheetBackup.errors.join('; ') || sheetBackup.missingFields?.join('; ') || ''}`.trim())
-      }
       masterBackup = await upsertGeneratedSerialsToMasterDatabase(order, generatedMachines, generatedDate)
+      // Sheet is a recoverable secondary backup. Workflow persistence is authoritative;
+      // the scheduled/manual reconciler drains this explicit, idempotent queue.
+      sheetBackup = { synced: 0, skipped: 0, configured: process.env.ZOHO_SERIAL_SHEET_ENABLED === 'true', errors: [], queued: generatedMachines.length, status: 'pending' }
     }
-    if (action === 'process' && order?.id) {
-      const selectedIds = new Set((body.selectedMachineIds || []).filter(Boolean))
-      const vendorBackup = await updateSerialVendorsInZohoSheet((workflow.processedOrder?.machines || order.machines || []).filter((machine) => selectedIds.has(machine.id)))
-      sheetBackup = vendorBackup.synced || vendorBackup.skipped || vendorBackup.errors.length ? vendorBackup : sheetBackup
-    }
+    // Processing is intentionally independent of Zoho Sheet availability. Vendor data is
+    // durable in the workflow and can be reconciled without holding this request open.
     return apiOk({ workflow, sheetBackup, masterBackup })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Workflow update failed', 400)

@@ -1,5 +1,5 @@
 import type { MachineUnit, Order } from '@/types/domain'
-import { githubReadJson, listWorkflows } from './workflow-store'
+import { githubReadJson, listWorkflows, upsertOrderWorkflow } from './workflow-store'
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
@@ -89,6 +89,9 @@ async function sheetPostWithRetry(params: Record<string, string>, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try { return await sheetPost(params) } catch (error) {
       lastError = error
+      const message = error instanceof Error ? error.message.toLowerCase() : ''
+      // Retrying a depleted quota immediately only multiplies the outage.
+      if (/api request limit|rate limit|too many requests|quota/.test(message)) break
       if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, attempt * 1200))
     }
   }
@@ -416,25 +419,56 @@ export async function syncMissingGeneratedSerialsToZohoSheet(minSerial = 2627075
   try {
     const workflows = await listWorkflows()
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
+    const entries: { workflowId: string; machineId: string; order: Order; machine: MachineUnit; generatedAt: string }[] = []
     for (const workflow of Object.values(workflows)) {
       const order = workflow.processedOrder || synced.data.orders?.[workflow.salesOrderId]
       if (!order) continue
       const orderMachinesById = new Map((order.machines || []).map((machine) => [machine.id, machine]))
-      const machines: MachineUnit[] = []
-      let generatedAt = new Date().toISOString().slice(0, 10)
       for (const machineWorkflow of Object.values(workflow.machines || {})) {
         const serial = Number(machineWorkflow.serialNumber || 0)
-        if (!serial || serial <= minSerial) continue
+        if (!serial || serial <= minSerial || machineWorkflow.zohoBackupStatus === 'synced') continue
         const orderMachine = orderMachinesById.get(machineWorkflow.machineUnitId)
         if (!orderMachine) continue
-        generatedAt = machineWorkflow.qrGeneratedAt || generatedAt
-        machines.push({ ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) })
+        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } })
       }
-      if (!machines.length) continue
-      const backup = await backupGeneratedSerialsToZohoSheet(order, machines, generatedAt)
-      result.synced += backup.synced
-      result.skipped += backup.skipped
-      result.errors.push(...backup.errors)
+    }
+    if (!entries.length) return result
+
+    // One full read for the whole queue, one batch append, and at most one readback.
+    const records = await fetchSerialRecords()
+    const existing = new Set(records.map((row: any) => String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()).filter(Boolean))
+    const wasExisting = new Set(existing)
+    let nextSNo = nextSerialSheetNumber(records)
+    const rows: SerialSheetRecord[] = []
+    for (const entry of entries) {
+      if (existing.has(String(entry.machine.serialNumber))) continue
+      const built = buildRows(entry.order, [entry.machine], entry.generatedAt, nextSNo)
+      rows.push(...built)
+      nextSNo = String(Number(nextSNo) + built.length)
+      existing.add(String(entry.machine.serialNumber)) // prevent duplicates within this batch
+    }
+    if (rows.length) await appendSerialRows(rows)
+    const confirmed = new Set(wasExisting)
+    if (rows.length) {
+      const after = await fetchSerialRecords()
+      for (const row of after) confirmed.add(String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim())
+    }
+    const now = new Date().toISOString()
+    const byWorkflow = new Map<string, typeof entries>()
+    for (const entry of entries) byWorkflow.set(entry.workflowId, [...(byWorkflow.get(entry.workflowId) || []), entry])
+    for (const [workflowId, workflowEntries] of byWorkflow) {
+      await upsertOrderWorkflow(workflowId, (current) => {
+        if (!current) throw new Error(`Workflow ${workflowId} disappeared during Sheet reconciliation`)
+        const machines = { ...current.machines }
+        for (const entry of workflowEntries) {
+          const machine = machines[entry.machineId]
+          if (!machine) continue
+          const ok = confirmed.has(String(entry.machine.serialNumber))
+          machines[entry.machineId] = { ...machine, zohoBackupStatus: ok ? 'synced' : 'error', zohoBackupLastAttemptAt: now, zohoBackupSyncedAt: ok ? now : machine.zohoBackupSyncedAt, zohoBackupError: ok ? undefined : 'Zoho append did not verify; queued for retry' }
+          if (ok) wasExisting.has(String(entry.machine.serialNumber)) ? result.skipped++ : result.synced++
+        }
+        return { ...current, machines }
+      })
     }
     return result
   } catch (error) {

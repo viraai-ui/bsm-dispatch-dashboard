@@ -13,6 +13,11 @@ export type MachineWorkflow = {
   dispatchedAt?: string
   dispatchNote?: string
   vendor?: string
+  zohoBackupStatus?: 'pending' | 'synced' | 'error'
+  zohoBackupQueuedAt?: string
+  zohoBackupSyncedAt?: string
+  zohoBackupLastAttemptAt?: string
+  zohoBackupError?: string
 }
 
 export type OrderWorkflow = {
