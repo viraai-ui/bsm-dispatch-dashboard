@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035794018": {
+      "id": "1154219000035794018",
+      "zohoSalesOrderId": "1154219000035794018",
+      "salesOrderNumber": "SO-07744",
+      "status": "open",
+      "customerName": "SF ENTERPRISES",
+      "shippingAddress": "CTS 2630, AB Village Ali Talao, Kharodi Opp. Marve Road, Malad, Mumbai, Maharashtra, 400095, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035794021",
+          "itemName": "Edge coloring machine [Double Side]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035794018-1154219000035794021-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035794018",
+          "lineItemId": "1154219000035794021",
+          "itemName": "Edge coloring machine [Double Side]",
+          "sku": "",
+          "customerName": "SF ENTERPRISES",
+          "salesOrderNumber": "SO-07744",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035788001": {
       "id": "1154219000035788001",
       "zohoSalesOrderId": "1154219000035788001",
@@ -21117,6 +21164,7 @@
     }
   },
   "orderIds": [
+    "1154219000035794018",
     "1154219000035788001",
     "1154219000035749001",
     "1154219000035701017",
@@ -21158,8 +21206,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T07:48:37.492Z",
-  "lastAttemptAt": "2026-08-17T08:03:14.651Z",
+  "lastSuccessfulSyncAt": "2026-08-17T08:03:38.562Z",
+  "lastAttemptAt": "2026-08-17T08:03:38.562Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
