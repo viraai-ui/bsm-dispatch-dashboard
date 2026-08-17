@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { buildR2Key, createR2UploadTarget, ensureR2Cors } from '@/lib/r2'
+import { buildR2Key, createR2UploadTarget } from '@/lib/r2'
 import { getMediaOrder } from '@/lib/media-order-resolver'
 
 export const runtime = 'nodejs'
@@ -20,10 +20,13 @@ export async function POST(request: Request) {
     const machine = loadingOrderVideo ? null : order.machines.find((item) => item.id === machineId)
     if (!loadingOrderVideo && !shipmentDocument && !machine) return apiError('Machine not found for this order', 404)
     const type = String(body.type || 'video/mp4')
+    const size = Number(body.size)
+    if (!Number.isSafeInteger(size) || size <= 0) return apiError('A valid non-empty file size is required', 400)
+    if (size > (shipmentDocument ? 15 : 250) * 1024 * 1024) return apiError(`File exceeds the ${shipmentDocument ? '15 MB' : '250 MB'} limit`, 413)
     if (shipmentDocument) {
       if (!type.startsWith('image/') && type !== 'application/pdf') return apiError('Only image or PDF files are allowed', 400)
     } else if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)
-    await ensureR2Cors().catch(() => {})
+
     const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: shipmentDocument ? 'Shipment LR Builty' : machine?.itemName || 'Loading Video', machineId: shipmentDocument ? 'shipment-lr-builty' : machineId, originalName: String(body.name || (shipmentDocument ? 'shipment-document' : 'video.mp4')), mimeType: type })
     const target = createR2UploadTarget(key, type, 900, shipmentDocument ? 60 : 30)
     const cors = await checkBrowserCors(target.uploadUrl)

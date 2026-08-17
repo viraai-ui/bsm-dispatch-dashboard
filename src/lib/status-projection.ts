@@ -46,9 +46,7 @@ export function projectOrderStatus(order: Order, lifecycleStage: OrderStage = 'o
 
 export async function buildOrderStatusMap(orders: Order[], workflows?: Record<string, OrderWorkflow>) {
   const workflowMap = workflows || await listWorkflows()
-  const stages = await buildStageMap(workflowMap)
-  const packing = await readMediaProofStore('packing')
-  const loading = await readMediaProofStore('loading')
+  const [stages, packing, loading] = await Promise.all([buildStageMap(workflowMap), readMediaProofStore('packing'), readMediaProofStore('loading')])
   const mediaRecords = { ...packing.records, ...loading.records }
   const statuses: Record<string, OrderStatusProjection> = {}
   const visibleIds = new Set(orders.map((order) => order.id))

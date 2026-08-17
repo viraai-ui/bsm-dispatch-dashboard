@@ -80,8 +80,11 @@ export async function listOrdersModuleOrders() {
 }
 
 export async function listSyncedOrders() {
-  const store = await readSyncedOrdersStore()
-  const workflows = await listWorkflows()
+  const [store, workflows] = await Promise.all([readSyncedOrdersStore(), listWorkflows()])
+  return listSyncedOrdersFromSnapshots(store, workflows)
+}
+
+export function listSyncedOrdersFromSnapshots(store: SyncedOrdersStore, workflows: Record<string, OrderWorkflow>) {
   const orders = store.orderIds.map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null).filter(Boolean) as Order[]
   const seen = new Set(orders.map((order) => order.id))
   for (const workflow of Object.values(workflows)) {
@@ -94,8 +97,7 @@ export async function listSyncedOrders() {
 }
 
 export async function getSyncedOrder(id: string) {
-  const store = await readSyncedOrdersStore()
-  const workflows = await listWorkflows()
+  const [store, workflows] = await Promise.all([readSyncedOrdersStore(), listWorkflows()])
   const workflowMatch = Object.values(workflows).find((item) => {
     const workflowOrder = item.processedOrder || buildWorkflowOnlyOrder(item)
     return workflowOrder && (workflowOrder.id === id || workflowOrder.zohoSalesOrderId === id || workflowOrder.salesOrderNumber === id)

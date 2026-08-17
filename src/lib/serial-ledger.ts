@@ -17,6 +17,13 @@ let pool: Pool | undefined
 let schemaReady: Promise<void> | undefined
 
 export function serialDatabaseConfigured() { return Boolean(process.env.DATABASE_URL || process.env.NEON_DATABASE_URL) }
+const LEGAL_TRANSITIONS: Record<SerialAllocationStatus, SerialAllocationStatus[]> = {
+  allocated_pending: ['generated', 'processed', 'voided'], generated: ['processed', 'voided'],
+  processed: ['dispatched', 'voided'], dispatched: [], voided: [],
+}
+export function isLegalSerialTransition(from: SerialAllocationStatus, to: SerialAllocationStatus) {
+  return from === to || LEGAL_TRANSITIONS[from].includes(to)
+}
 function databaseUrl() { return process.env.DATABASE_URL || process.env.NEON_DATABASE_URL || '' }
 function db() {
   const url = databaseUrl()
@@ -102,7 +109,7 @@ export async function markWorkflowMirrorFailed(orderId: string, machineIds: stri
 
 export async function markSerialStatus(machineIdentity: string, status: SerialAllocationStatus, detail: Record<string, unknown> = {}) {
   await ensureSerialLedgerSchema(); const timestampColumn = status === 'generated' ? 'generated_at' : status === 'processed' ? 'processed_at' : status === 'dispatched' ? 'dispatched_at' : status === 'voided' ? 'voided_at' : null; const client = await db().connect()
-  try { await client.query('begin'); const current = await client.query<{serial_number:string;status:string}>('select serial_number::text,status from serial_allocations where machine_identity=$1 for update',[machineIdentity]); if(!current.rowCount) throw new Error(`Serial allocation not found for ${machineIdentity}`); const row=current.rows[0]; await client.query(`update serial_allocations set status=$2,updated_at=now()${timestampColumn ? `,${timestampColumn}=coalesce(${timestampColumn},now())` : ''} where machine_identity=$1`,[machineIdentity,status]); await client.query('insert into serial_allocation_events(serial_number,event_type,from_status,to_status,detail) values($1,$2,$3,$4,$5)',[row.serial_number,'status_changed',row.status,status,JSON.stringify(detail)]); await client.query('commit') } catch(error){await client.query('rollback').catch(()=>undefined);throw error} finally{client.release()}
+  try { await client.query('begin'); const current = await client.query<{serial_number:string;status:string}>('select serial_number::text,status from serial_allocations where machine_identity=$1 for update',[machineIdentity]); if(!current.rowCount) throw new Error(`Serial allocation not found for ${machineIdentity}`); const row=current.rows[0]; if(row.status===status){await client.query('commit');return} if(!isLegalSerialTransition(row.status as SerialAllocationStatus,status)) throw new Error(`Illegal serial transition: ${row.status} -> ${status}`); await client.query(`update serial_allocations set status=$2,updated_at=now()${timestampColumn ? `,${timestampColumn}=coalesce(${timestampColumn},now())` : ''} where machine_identity=$1`,[machineIdentity,status]); await client.query('insert into serial_allocation_events(serial_number,event_type,from_status,to_status,detail) values($1,$2,$3,$4,$5)',[row.serial_number,'status_changed',row.status,status,JSON.stringify(detail)]); await client.query('commit') } catch(error){await client.query('rollback').catch(()=>undefined);throw error} finally{client.release()}
 }
 
 export function findUnexplainedSerials(rows: Array<{ serial_number: string }>, floor = SERIAL_FLOOR) {

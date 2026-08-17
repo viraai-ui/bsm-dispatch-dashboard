@@ -2,23 +2,24 @@ import { type NextRequest } from 'next/server'
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { readSyncedOrdersStore, syncConfirmedOrders } from '@/lib/synced-orders'
+import { isAuthorizedCron } from '@/lib/cron-auth'
 
 export const runtime = 'nodejs'
 export const maxDuration = 300
 export const dynamic = 'force-dynamic'
 
-function isAuthorizedCron(request: NextRequest) {
-  const cronSecret = process.env.CRON_SECRET
-  const authHeader = request.headers.get('authorization') || ''
-  return Boolean((cronSecret && authHeader === `Bearer ${cronSecret}`) || request.headers.get('x-vercel-cron') === '1')
+export async function GET(request: NextRequest) {
+  if (!isAuthorizedCron(request)) return apiError('Unauthorized', 401)
+  return runSync()
 }
 
-export async function GET(request: NextRequest) {
-  if (!isAuthorizedCron(request)) {
-    const auth = await requireUser(['Admin', 'Operations'])
-    if (!auth.ok) return auth.response
-  }
+export async function POST() {
+  const auth = await requireUser(['Admin', 'Operations'])
+  if (!auth.ok) return auth.response
+  return runSync()
+}
 
+async function runSync() {
   try {
     const startedAt = Date.now()
     const store = await syncConfirmedOrders()

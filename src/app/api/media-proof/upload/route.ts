@@ -17,9 +17,11 @@ export async function POST(request: Request) {
     if (!auth.ok) return auth.response
     const file = form.get('file')
     if (!orderId || !machineId || !(file instanceof File)) return apiError(stage === 'shipment' ? 'Missing Builty/LR upload data' : 'Missing video upload data', 400)
-    const type = stage === 'shipment'
-      ? (file.type && (file.type.startsWith('image/') || file.type === 'application/pdf') ? file.type : 'application/pdf')
-      : (file.type && file.type.startsWith('video/') ? file.type : 'video/mp4')
+    if (file.size <= 0) return apiError('The selected file is empty', 400)
+    const maximum = stage === 'shipment' ? 15 * 1024 * 1024 : 250 * 1024 * 1024
+    if (file.size > maximum) return apiError(`File exceeds the ${stage === 'shipment' ? '15 MB' : '250 MB'} limit`, 413)
+    const type = file.type
+    if (!type) return apiError('File type is missing', 400)
     if (stage === 'shipment') {
       if (!type.startsWith('image/') && type !== 'application/pdf') return apiError('Only image or PDF files are allowed', 400)
     } else if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)

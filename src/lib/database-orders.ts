@@ -1,13 +1,13 @@
 import type { Order } from '@/types/domain'
 import { listSerialSheetDatabaseOrders } from './serial-sheet-backup'
-import { listSyncedOrders } from './synced-orders'
+import { listSyncedOrdersFromSnapshots, readSyncedOrdersStore } from './synced-orders'
 import { readDispatchStore } from './order-stage'
 import { listWorkflows, type OrderWorkflow } from './workflow-store'
 import { readShipmentStore } from './ready-to-ship'
 
 export async function loadDatabaseOrders() {
-  const orders = await listSyncedOrders()
-  const workflows = await listWorkflows()
+  const [syncedStore, workflows, dispatchStore, shipmentStore] = await Promise.all([readSyncedOrdersStore(), listWorkflows(), readDispatchStore(), readShipmentStore()])
+  const orders = listSyncedOrdersFromSnapshots(syncedStore, workflows)
   const syncedById = new Map(orders.map((order) => [order.id, order]))
   const workflowOrders = Object.entries(workflows)
     .map(([orderId, workflow]) => {
@@ -21,7 +21,7 @@ export async function loadDatabaseOrders() {
   // Both sources are independently sorted. Sort again after merging so new
   // workflow serials never appear behind older serial-sheet records.
   const databaseOrders = [...workflowOrders, ...serialSheet.orders].sort((a, b) => highestSerial(b) - highestSerial(a) || b.salesOrderNumber.localeCompare(a.salesOrderNumber, undefined, { numeric: true }))
-  const [dispatchStore, shipmentStore] = await Promise.all([readDispatchStore(), readShipmentStore()])
+
   const warrantyDates = {
     ...Object.fromEntries(workflowOrders.map((order) => [order.id, dispatchStore.dispatched[order.id]?.dispatchedAt || order.deliveryDate || ''])),
     ...serialSheet.warrantyDates,

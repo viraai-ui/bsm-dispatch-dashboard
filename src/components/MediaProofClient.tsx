@@ -184,7 +184,7 @@ function extensionForVideoType(type: string) {
 
 async function uploadDirectToR2(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
   const contentType = file.type || 'video/mp4'
-  const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId: unitId, name: file.name, type: contentType, stage: mode }) })
+  const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId: unitId, name: file.name, type: contentType, size: file.size, stage: mode }) })
   const targetJson = await parseJsonResponse(targetResponse, 'R2 upload target unavailable')
   if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'R2 upload target unavailable')
   const target = targetJson.data

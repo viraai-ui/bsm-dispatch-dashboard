@@ -36,7 +36,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
     if (!options.silent) { setBusy(options.sync ? 'sync' : 'refresh'); setMessage('') }
     try {
       if (options.sync) {
-        const syncResponse = await fetch('/api/cron/sync-orders', { cache: 'no-store' })
+        const syncResponse = await fetch('/api/cron/sync-orders', { method: 'POST', cache: 'no-store' })
         const syncJson = await syncResponse.json()
         if (!syncResponse.ok || !syncJson.ok) throw new Error(syncJson.error || 'Could not sync orders')
       }
@@ -183,7 +183,7 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
     if (!lrFile) return lrCopy
     const type = lrFile.type || 'application/octet-stream'
     if (!type.startsWith('image/') && type !== 'application/pdf') throw new Error('Attach only image or PDF for Builty/LR copy')
-    const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: item.orderId, machineId: 'shipment-lr-builty', name: lrFile.name, type, stage: 'shipment' }) })
+    const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: item.orderId, machineId: 'shipment-lr-builty', name: lrFile.name, type, size: lrFile.size, stage: 'shipment' }) })
     const targetJson = await targetResponse.json()
     if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare LR upload')
     const target = targetJson.data

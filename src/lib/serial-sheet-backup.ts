@@ -17,10 +17,12 @@ type SerialSheetRecord = {
 }
 
 type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[]; verified?: boolean; missingFields?: string[] }
-export type SerialSheetDatabaseResult = { orders: Order[]; warrantyDates: Record<string, string>; configured: boolean; errors: string[] }
+export type SerialSheetDatabaseResult = { orders: Order[]; warrantyDates: Record<string, string>; configured: boolean; errors: string[]; fetchedAt?: string; stale?: boolean }
 
 let cachedSheetAccessToken: { token: string; expiresAt: number } | null = null
 let pendingSheetAccessToken: Promise<string> | null = null
+let databaseCache: { value: SerialSheetDatabaseResult; expiresAt: number } | null = null
+let pendingDatabaseRead: Promise<SerialSheetDatabaseResult> | null = null
 
 function sheetDomain() {
   const dc = process.env.ZOHO_DC || 'in'
@@ -34,7 +36,7 @@ function sheetConfig() {
   }
 }
 
-function serialSheetConfigured() {
+export function serialSheetConfigured() {
   return process.env.ZOHO_SERIAL_SHEET_ENABLED === 'true' && Boolean(sheetClientId() && sheetClientSecret() && sheetRefreshToken())
 }
 
@@ -139,12 +141,32 @@ async function fetchDatabaseSerialRecords() {
 }
 
 export async function listSerialSheetDatabaseOrders(existingSerials = new Set<string>()): Promise<SerialSheetDatabaseResult> {
+  const now = Date.now()
+  let snapshot: SerialSheetDatabaseResult
+  if (databaseCache && databaseCache.expiresAt > now) snapshot = databaseCache.value
+  else {
+    pendingDatabaseRead ||= loadSerialSheetDatabaseOrders().finally(() => { pendingDatabaseRead = null })
+    try {
+      snapshot = await pendingDatabaseRead
+      if (!snapshot.errors.length) databaseCache = { value: snapshot, expiresAt: now + 5 * 60_000 }
+      else if (databaseCache) snapshot = { ...databaseCache.value, stale: true, errors: snapshot.errors }
+    } catch (error) {
+      if (!databaseCache) throw error
+      snapshot = { ...databaseCache.value, stale: true, errors: [error instanceof Error ? error.message : 'Zoho Sheet read failed'] }
+    }
+  }
+  const filtered = snapshot.orders.filter((order) => !order.machines.some((machine) => existingSerials.has(String(machine.serialNumber || ''))))
+  const ids = new Set(filtered.map((order) => order.id))
+  return { ...snapshot, orders: filtered, warrantyDates: Object.fromEntries(Object.entries(snapshot.warrantyDates).filter(([id]) => ids.has(id))) }
+}
+
+async function loadSerialSheetDatabaseOrders(): Promise<SerialSheetDatabaseResult> {
   const result: SerialSheetDatabaseResult = { orders: [], warrantyDates: {}, configured: serialSheetConfigured(), errors: [] }
   if (!result.configured) return result
   try {
     const records = await fetchDatabaseSerialRecords()
     const usedIds = new Set<string>()
-    const seenSerials = new Set(existingSerials)
+    const seenSerials = new Set<string>()
     for (const row of records) {
       const sNo = String(sheetValue(row, ['S.No.', 'S.No', 'S No', 'SNo', 's_no']) ?? '').trim()
       const serialNumber = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || legacySerialFromRow(row, sNo)).trim()
@@ -194,6 +216,7 @@ export async function listSerialSheetDatabaseOrders(existingSerials = new Set<st
       result.warrantyDates[id] = dispatchDate
     }
     result.orders.sort((a, b) => serialValue(b) - serialValue(a))
+    result.fetchedAt = new Date().toISOString()
     return result
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet database import failed')
