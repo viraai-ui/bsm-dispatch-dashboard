@@ -212,31 +212,6 @@
         }
       ]
     },
-    "1154219000035730004": {
-      "id": "1154219000035730004",
-      "zohoSalesOrderId": "1154219000035730004",
-      "salesOrderNumber": "SO-07739",
-      "status": "open",
-      "customerName": "CHUNOBA INTERNATIONAL",
-      "shippingAddress": "42- SAMARPAN IND ESTATE, OPP. BHAVDA GATE, VILLAGE-KUHA, TALUKO-DASKROI,, AHMEDABAD, Gujarat, 382433, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035730007",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 62.5,
-          "pendingQuantity": 62.5,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000035691003": {
       "id": "1154219000035691003",
       "zohoSalesOrderId": "1154219000035691003",
@@ -20943,7 +20918,6 @@
     "1154219000035749001",
     "1154219000035701017",
     "1154219000035710004",
-    "1154219000035730004",
     "1154219000035691003",
     "1154219000035711007",
     "1154219000035717001",
@@ -20981,8 +20955,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T06:18:27.077Z",
-  "lastAttemptAt": "2026-08-17T06:49:05.701Z",
+  "lastSuccessfulSyncAt": "2026-08-17T06:49:32.726Z",
+  "lastAttemptAt": "2026-08-17T06:49:32.726Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
