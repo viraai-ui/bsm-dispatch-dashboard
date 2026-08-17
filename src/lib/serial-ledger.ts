@@ -93,7 +93,11 @@ export async function markWorkflowMirrored(orderId: string, machineIds: string[]
 export async function markWorkflowMirrorFailed(orderId: string, machineIds: string[], error: unknown) {
   if (!serialDatabaseConfigured() || !machineIds.length) return
   const message = (error instanceof Error ? error.message : String(error)).slice(0, 1000)
-  await db().query(`update serial_workflow_mirrors set state='pending',attempts=attempts+1,last_error=$2,updated_at=now() where machine_identity=any($1::text[])`, [machineIds.map(id => `${orderId}:${id}`), message]).catch(() => undefined)
+  try {
+    await db().query(`update serial_workflow_mirrors set state='pending',attempts=attempts+1,last_error=$2,updated_at=now() where machine_identity=any($1::text[])`, [machineIds.map(id => `${orderId}:${id}`), message])
+  } catch (queueError) {
+    console.error('Failed to persist workflow mirror failure', { orderId, machineIds, queueError })
+  }
 }
 
 export async function markSerialStatus(machineIdentity: string, status: SerialAllocationStatus, detail: Record<string, unknown> = {}) {
@@ -111,4 +115,18 @@ export function findUnexplainedSerials(rows: Array<{ serial_number: string }>, f
 
 export async function detectSerialGaps() {
   await ensureSerialLedgerSchema(); const result=await db().query<{serial_number:string;status:string;machine_identity:string}>(`select serial_number::text,status,machine_identity from serial_allocations where namespace='dashboard' order by serial_number`); const rows=result.rows; return {...findUnexplainedSerials(rows),rows}
+}
+
+export async function serialLedgerHealth() {
+  await ensureSerialLedgerSchema()
+  const [counter, allocations, mirrors] = await Promise.all([
+    db().query<{ last_serial: string }>(`select last_serial::text from serial_counters where namespace='dashboard'`),
+    db().query<{ serial_number: string; status: SerialAllocationStatus }>(`select serial_number::text,status from serial_allocations where namespace='dashboard' order by serial_number`),
+    db().query<{ state: string; count: string; oldest: string | null }>(`select state,count(*)::text,min(updated_at)::text oldest from serial_workflow_mirrors group by state`),
+  ])
+  const gap = findUnexplainedSerials(allocations.rows)
+  const lastSerial = counter.rows[0]?.last_serial || SERIAL_FLOOR.toString()
+  const byStatus = Object.fromEntries(['allocated_pending','generated','processed','dispatched','voided'].map(status => [status, allocations.rows.filter(row => row.status === status).length]))
+  const pending = mirrors.rows.find(row => row.state === 'pending')
+  return { configured: true, counter: lastSerial, maximum: gap.max, counterMatchesMaximum: lastSerial === gap.max, unexplainedGaps: gap.unexplained, allocationCount: allocations.rowCount || 0, byStatus, pendingMirrors: Number(pending?.count || 0), oldestPendingMirrorAt: pending?.oldest || null }
 }

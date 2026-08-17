@@ -17,7 +17,7 @@ export async function allocateSerialNumbers(orderId: string, machineIds: string[
     await markWorkflowMirrored(orderId, uniqueIds)
   } catch (error) {
     await markWorkflowMirrorFailed(orderId, uniqueIds, error)
-    throw error
+    console.error('Serial workflow mirror queued for reconciliation', { orderId, machineIds: uniqueIds, error })
   }
   return allocated
 }
