@@ -2481,6 +2481,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035516019": {
+      "id": "ship-1786967624950-5b2t9",
+      "itemId": "1154219000035516019",
+      "orderId": "1154219000035516019",
+      "machineId": "1154219000035516019-1154219000035516022-1",
+      "salesOrderNumber": "SO-07708",
+      "customerName": "JAMA CORPORATION PVT.LTD.",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-17 at 5.16.48 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-17%2FSO-07708%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-17T11-53-43-157Z.jpeg",
+        "r2Key": "media-proof/2026-08-17/SO-07708/Shipment LR Builty-shipment-lr-builty-2026-08-17T11-53-43-157Z.jpeg",
+        "expiresAt": "2026-10-16T11:53:43.157Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-17",
+      "notes": "",
+      "shippedAt": "2026-08-17T11:53:44.950Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
