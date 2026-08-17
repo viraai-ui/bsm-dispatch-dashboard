@@ -10160,7 +10160,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 1
     },
     "1154219000035557081": {
       "salesOrderId": "1154219000035557081",
@@ -11307,7 +11307,7 @@
       "salesOrderId": "1154219000035705001",
       "salesOrderNumber": "SO-07731",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T05:42:35.354Z",
       "processedOrder": {
         "id": "1154219000035705001",
@@ -11372,7 +11372,8 @@
           "dispatchNote": "wooden",
           "vendor": "Balaji Engineering"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000035696047": {
       "salesOrderId": "1154219000035696047",
@@ -11875,7 +11876,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     }
   }
 }
