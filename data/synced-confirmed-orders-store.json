@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035792002": {
+      "id": "1154219000035792002",
+      "zohoSalesOrderId": "1154219000035792002",
+      "salesOrderNumber": "SO-07750",
+      "status": "open",
+      "customerName": "LIFESOL MEDICAL INDIA PRIVATE LIMITED",
+      "shippingAddress": "K-59, SITE 5 KASNA INDUSTRIAL AREA, GREATER NOIDA, Gautambuddha Nagar, Uttar Pradesh, 201308, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035792005",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035792002-1154219000035792005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035792002",
+          "lineItemId": "1154219000035792005",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "LIFESOL MEDICAL INDIA PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07750",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035795016": {
       "id": "1154219000035795016",
       "zohoSalesOrderId": "1154219000035795016",
@@ -21525,6 +21572,7 @@
     }
   },
   "orderIds": [
+    "1154219000035792002",
     "1154219000035795016",
     "1154219000035798028",
     "1154219000035814001",
@@ -21572,8 +21620,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T10:42:15.906Z",
-  "lastAttemptAt": "2026-08-17T10:52:41.523Z",
+  "lastSuccessfulSyncAt": "2026-08-17T10:53:08.897Z",
+  "lastAttemptAt": "2026-08-17T10:53:08.897Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
