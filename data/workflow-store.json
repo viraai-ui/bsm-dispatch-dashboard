@@ -12403,7 +12403,9 @@
     "1154219000035814001": {
       "salesOrderId": "1154219000035814001",
       "salesOrderNumber": "SO-07747",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-17T11:19:50.953Z",
       "processedOrder": {
         "id": "1154219000035814001",
         "zohoSalesOrderId": "1154219000035814001",
@@ -12431,8 +12433,8 @@
           {
             "id": "1154219000035814001-1154219000035814004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270971",
+            "qrToken": "26270971",
             "orderId": "1154219000035814001",
             "lineItemId": "1154219000035814004",
             "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
@@ -12440,14 +12442,17 @@
             "customerName": "Shiva Enterprises",
             "salesOrderNumber": "SO-07747",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -12460,7 +12465,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T11:18:49.318Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T11:18:58.625Z"
+          "zohoBackupQueuedAt": "2026-08-17T11:18:58.625Z",
+          "processedAt": "2026-08-17T11:19:50.953Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     },
