@@ -5800,53 +5800,6 @@
         }
       ]
     },
-    "1154219000035719001": {
-      "id": "1154219000035719001",
-      "zohoSalesOrderId": "1154219000035719001",
-      "salesOrderNumber": "SO-07735",
-      "status": "open",
-      "customerName": "Kalzado Initiatives LLP",
-      "shippingAddress": "Khasra No. 323Mi, Central Hope Town, Tehsil Vikash\nNagar, Selaqui Dehradun,, Uttarakhand",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035719004",
-          "itemName": "Toe Molding Machine",
-          "sku": "513",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035719001-1154219000035719004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035719001",
-          "lineItemId": "1154219000035719004",
-          "itemName": "Toe Molding Machine",
-          "sku": "513",
-          "customerName": "Kalzado Initiatives LLP",
-          "salesOrderNumber": "SO-07735",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035717001": {
       "id": "1154219000035717001",
       "zohoSalesOrderId": "1154219000035717001",
@@ -20993,7 +20946,6 @@
     "1154219000035730004",
     "1154219000035691003",
     "1154219000035711007",
-    "1154219000035719001",
     "1154219000035717001",
     "1154219000035705001",
     "1154219000035685001",
@@ -21029,8 +20981,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T05:53:35.790Z",
-  "lastAttemptAt": "2026-08-17T06:18:01.126Z",
+  "lastSuccessfulSyncAt": "2026-08-17T06:18:27.077Z",
+  "lastAttemptAt": "2026-08-17T06:18:27.077Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
