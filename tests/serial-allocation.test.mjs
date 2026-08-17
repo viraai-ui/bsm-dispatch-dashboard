@@ -4,7 +4,7 @@ process.env.GITHUB_TOKEN = 'test-token'
 process.env.GITHUB_OWNER = 'test-owner'
 process.env.GITHUB_REPO = 'test-repo'
 
-const { allocateSerialNumbers, highestSerialCounter } = await import('../src/lib/workflow-store.ts')
+const { allocateSerialNumbersLegacy: allocateSerialNumbers, highestSerialCounter } = await import('../src/lib/workflow-store.ts')
 const initial = 26270758
 
 assert.equal(highestSerialCounter({ serialCounter: initial + 1, orders: { rolledBack: { machines: { unit: { serialNumber: String(initial + 9) } } } } }), initial + 9, 'stale counter must not reuse a serial after rollback')

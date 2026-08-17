@@ -10,7 +10,8 @@
     "verify:serials": "node tests/live-serial-coverage.cjs",
     "verify:serial-sheet": "node scripts/audit-serial-sheet-coverage.cjs",
     "verify:database": "node tests/database-integrity.cjs",
-    "test:serials": "node --experimental-strip-types tests/serial-allocation.test.mjs",
+    "test:serials": "node --experimental-strip-types tests/serial-ledger.test.mjs",
+    "test:serials:legacy": "node --experimental-strip-types tests/serial-allocation.test.mjs",
     "test:zoho-backup": "node tests/zoho-backup-queue.test.mjs",
     "test:qr-performance": "node tests/qr-download-performance.test.mjs",
     "test:storage": "node --experimental-strip-types tests/local-storage-quota.test.mjs",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@types/bcryptjs": "latest",
     "@types/node": "latest",
+    "@types/pg": "latest",
     "@types/qrcode": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

@@ -163,31 +163,52 @@ export async function upsertOrderWorkflow(orderId: string, updater: (current: Or
   throw lastError instanceof Error ? lastError : new Error('Workflow update conflict')
 }
 
-export async function allocateSerialNumbers(orderId: string, machineIds: string[], order?: Order) {
-  const uniqueIds = Array.from(new Set(machineIds.filter(Boolean)))
-  if (!uniqueIds.length) return {} as Record<string, string>
-  let allocated: Record<string, string> = {}
+/** Mirror an already-authoritative allocation into the workflow store. Client-safe:
+ * this module deliberately has no dependency (including dynamic imports) on pg/ledger code. */
+export async function mirrorAllocatedSerialNumbers(orderId: string, allocated: Record<string, string>, order?: Order) {
+  const uniqueIds = Object.keys(allocated).filter(Boolean)
+  if (!uniqueIds.length) return allocated
   await upsertOrderWorkflow(orderId, (current, store) => {
     const machines = { ...(current?.machines || {}) }
     const orderMachinesById = new Map((order?.machines || []).map((machine) => [machine.id, machine]))
     let counter = highestSerialCounter(store)
-    allocated = {}
     for (const machineUnitId of uniqueIds) {
       const existing = machines[machineUnitId]
       const sourceMachine = orderMachinesById.get(machineUnitId)
-      const serialNumber = existing?.serialNumber || sourceMachine?.serialNumber || String(++counter)
-      machines[machineUnitId] = {
-        ...existing,
-        machineUnitId,
-        lineItemId: existing?.lineItemId || sourceMachine?.lineItemId || '',
-        serialNumber,
-        qrToken: existing?.qrToken || sourceMachine?.qrToken || serialNumber,
-        qrStatus: existing?.qrStatus || 'pending',
-      }
-      allocated[machineUnitId] = serialNumber
+      const serialNumber = allocated[machineUnitId]
+      if (!serialNumber) throw new Error(`Serial allocation missing for ${machineUnitId}`)
+      if (existing?.serialNumber && existing.serialNumber !== serialNumber) throw new Error(`Workflow serial conflict for ${machineUnitId}`)
+      counter = Math.max(counter, Number(serialNumber))
+      machines[machineUnitId] = { ...existing, machineUnitId, lineItemId: existing?.lineItemId || sourceMachine?.lineItemId || '', serialNumber, qrToken: existing?.qrToken || sourceMachine?.qrToken || serialNumber, qrStatus: existing?.qrStatus || 'pending' }
     }
     store.serialCounter = counter
     return current ? { ...current, salesOrderNumber: current.salesOrderNumber || order?.salesOrderNumber || '', processedOrder: current.processedOrder || order, machines } : { salesOrderId: orderId, salesOrderNumber: order?.salesOrderNumber || '', status: 'open', processedOrder: order, machines }
+  })
+  return allocated
+}
+
+/** Legacy GitHub allocator. Only the server allocation service may choose this path. */
+export async function allocateSerialNumbersLegacy(orderId: string, machineIds: string[], order?: Order) {
+  const uniqueIds = Array.from(new Set(machineIds.filter(Boolean)))
+  if (!uniqueIds.length) return {} as Record<string, string>
+  const allocated: Record<string, string> = {}
+  await upsertOrderWorkflow(orderId, (current, store) => {
+      // The updater may be rerun after an optimistic-write conflict.
+      for (const machineUnitId of uniqueIds) delete allocated[machineUnitId]
+      const machines = { ...(current?.machines || {}) }
+      const orderMachinesById = new Map((order?.machines || []).map((machine) => [machine.id, machine]))
+      let counter = highestSerialCounter(store)
+      for (const machineUnitId of uniqueIds) {
+        const existing = machines[machineUnitId]
+        const sourceMachine = orderMachinesById.get(machineUnitId)
+        const serialNumber = existing?.serialNumber || allocated[machineUnitId] || sourceMachine?.serialNumber || String(++counter)
+        if (!serialNumber) throw new Error(`Serial allocation missing for ${machineUnitId}`)
+        counter = Math.max(counter, Number(serialNumber))
+        allocated[machineUnitId] = serialNumber
+        machines[machineUnitId] = { ...existing, machineUnitId, lineItemId: existing?.lineItemId || sourceMachine?.lineItemId || '', serialNumber, qrToken: existing?.qrToken || sourceMachine?.qrToken || serialNumber, qrStatus: existing?.qrStatus || 'pending' }
+      }
+      store.serialCounter = counter
+      return current ? { ...current, salesOrderNumber: current.salesOrderNumber || order?.salesOrderNumber || '', processedOrder: current.processedOrder || order, machines } : { salesOrderId: orderId, salesOrderNumber: order?.salesOrderNumber || '', status: 'open', processedOrder: order, machines }
   })
   return allocated
 }

@@ -1,7 +1,9 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { allocateSerialNumbers, getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
+import { getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
+import { allocateSerialNumbers } from '@/lib/serial-allocation-service'
 import { isMachineLineItem } from '@/lib/item-classification'
+import { markSerialStatus } from '@/lib/serial-ledger'
 
 import type { Order } from '@/types/domain'
 
@@ -27,7 +29,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           salesOrderId: id,
           salesOrderNumber: order?.salesOrderNumber || current?.salesOrderNumber || '',
           status: 'open',
-          machines: {},
+          // Undo never erases assigned identities or serial history.
+          machines: current?.machines || {},
         }
       })
       return apiOk({ workflow })
@@ -71,6 +74,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         : current?.processedOrder
       return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, dispatchPriority: action === 'process' ? body.dispatchPriority : current?.dispatchPriority, processedAt: action === 'process' ? now : current?.processedAt, processedOrder, machines }
     })
+    if (action === 'generate') {
+      for (const machine of body.machines as MachineWorkflow[]) await markSerialStatus(`${id}:${machine.machineUnitId}`, 'generated', { workflowPersisted: true })
+    }
+    if (action === 'process') {
+      for (const machine of selectedMachines(order, body.selectedMachineIds)) await markSerialStatus(`${id}:${machine.id}`, 'processed', { workflowPersisted: true })
+    }
     if (action === 'generate' && order?.id && Array.isArray(body.machines)) {
       const generatedById = new Map((body.machines as MachineWorkflow[]).map((machine) => [machine.machineUnitId, machine]))
       const generatedMachines = (order.machines || []).map((machine) => {
