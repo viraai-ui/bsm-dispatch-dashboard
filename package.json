@@ -11,6 +11,7 @@
     "verify:serial-sheet": "node scripts/audit-serial-sheet-coverage.cjs",
     "verify:database": "node tests/database-integrity.cjs",
     "test:serials": "node --experimental-strip-types tests/serial-allocation.test.mjs",
+    "test:storage": "node --experimental-strip-types tests/local-storage-quota.test.mjs",
     "test:database-ui": "node tests/database-filter-ui.test.cjs",
     "typecheck": "tsc --noEmit"
   },

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { safeLocalStorageSet } from '@/lib/safe-local-storage'
 import { Badge } from '@/components/DashboardShell'
 
 const WOODEN_CACHE_KEY = 'bsm.wooden.requirements.v2'
@@ -52,7 +53,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
       const response = await fetch('/api/wooden-packing', { cache: 'no-store' })
       const json = await response.json()
       const saved = json.data?.queue || { items: [] }
-      setQueue(saved); localStorage.setItem(WOODEN_CACHE_KEY, JSON.stringify(saved))
+      setQueue(saved); safeLocalStorageSet(WOODEN_CACHE_KEY, JSON.stringify(saved))
       setStatuses((current) => ({ ...readStatuses(saved.items), ...current }))
     } catch {}
   }
@@ -68,7 +69,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
       const json = await response.json()
       const next = json.data?.queue
       if (!response.ok || !json.ok) throw new Error(json.error || 'Wooden Packing sync failed. Showing the last successfully synced data.')
-      setQueue(next); localStorage.setItem(WOODEN_CACHE_KEY, JSON.stringify(next))
+      setQueue(next); safeLocalStorageSet(WOODEN_CACHE_KEY, JSON.stringify(next))
     } catch (err) {
       if (showError) setError(err instanceof Error ? err.message : 'Wooden Packing sync failed. Showing the last successfully synced data.')
       await loadSaved()
@@ -78,7 +79,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   function updateStatus(salesOrderNumber: string, status: WoodenStatus) {
     const next = { ...statuses, [salesOrderNumber]: status }
     setStatuses(next)
-    localStorage.setItem(WOODEN_STATUS_KEY, JSON.stringify(next))
+    safeLocalStorageSet(WOODEN_STATUS_KEY, JSON.stringify(next))
   }
 
   return <>
@@ -159,7 +160,7 @@ function readStatuses(rows: WoodenItem[] = []): Record<string, WoodenStatus> {
     for (const [salesOrderNumber, items] of rows.reduce((map, row) => map.set(row.salesOrderNumber, [...(map.get(row.salesOrderNumber) || []), row]), new Map<string, WoodenItem[]>())) {
       migrated[salesOrderNumber] = items.some((item) => old[item.id] === 'Ordered' || old[item.id] === 'Completed') ? 'Ordered' : 'Required'
     }
-    if (Object.keys(migrated).length) localStorage.setItem(WOODEN_STATUS_KEY, JSON.stringify(migrated))
+    if (Object.keys(migrated).length) safeLocalStorageSet(WOODEN_STATUS_KEY, JSON.stringify(migrated))
     return migrated
   } catch { return {} }
 }

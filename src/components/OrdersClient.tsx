@@ -7,26 +7,9 @@ import { Badge } from '@/components/DashboardShell'
 import { dispatchCategoryLabel } from '@/lib/item-classification'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
+import { safeLocalStorageRemove, safeLocalStorageSet } from '@/lib/safe-local-storage'
 
 type OrderStage = 'open' | 'processed' | 'packed' | 'packing_video' | 'loading_video' | 'closed'
-
-type MachineRecord = {
-  id: string
-  serialNumber: string
-  qrCode: string
-  qrToken: string
-  salesOrderNumber: string
-  customerName: string
-  customerAddress: string
-  machineName: string
-  salesperson: string
-  dispatchDate: string
-  qrGenerationDate: string
-  expectedDeliveryDate: string
-  warrantyStatus: string
-  order: Order
-  machine: MachineUnit
-}
 
 const ORDERS_CACHE_KEY = 'bsm.orders.cache.v2'
 const MACHINE_DB_KEY = 'bsm.machine.database.v1'
@@ -49,6 +32,9 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [statusFilter, setStatusFilter] = useState<OrderStage | 'all'>('all')
 
   useEffect(() => {
+    // Migrate the obsolete cache that duplicated full orders and base64 QR images.
+    // Durable workflow storage remains the sole source of truth.
+    safeLocalStorageRemove(MACHINE_DB_KEY)
     const cached = readCachedOrders()
     if (cached.length) setRows(cached)
     void fetch('/api/workflow/processed').then((r) => r.json()).then((json) => {
@@ -192,10 +178,7 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
       const generatedById = new Map(generatedEntries.map((entry) => [entry.machineId, entry]))
       const updated = machines.map((machine) => generatedById.get(machine.id)?.machine || machine)
       const nextQrCodes: Record<string, string> = { ...qrCodes }
-      for (const entry of generatedEntries) {
-        nextQrCodes[entry.machineId] = entry.qrCode
-        saveMachineRecord({ order, machine: entry.machine, qrCode: entry.qrCode, date })
-      }
+      for (const entry of generatedEntries) nextQrCodes[entry.machineId] = entry.qrCode
       const workflowMachines: MachineWorkflow[] = updated.filter((machine) => selected.has(machine.id)).map((machine) => ({ machineUnitId: machine.id, lineItemId: machine.lineItemId, serialNumber: machine.serialNumber, qrCode: nextQrCodes[machine.id], qrToken: machine.qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() }))
       await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
       setMachines(updated)
@@ -298,7 +281,7 @@ function StageTracker({ stage }: { stage: OrderStage }) {
 function initialQrCodes(order: Order, workflow: OrderWorkflow | null) {
   const codes: Record<string, string> = {}
   for (const machine of order.machines) {
-    const saved = workflow?.machines?.[machine.id]?.qrCode || readMachineRecords().find((record) => record.serialNumber === machine.serialNumber)?.qrCode
+    const saved = workflow?.machines?.[machine.id]?.qrCode
     if (saved) codes[machine.id] = saved
   }
   return codes
@@ -433,10 +416,8 @@ function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!work
 async function saveWorkflow(orderId: string, payload: unknown) { const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save workflow'); return json }
 async function allocateSerials(orderId: string, order: Order, machineIds: string[]) { if (!machineIds.length) return {} as Record<string, string>; const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'allocate_serials', order, machineIds }) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not allocate serial numbers'); return (json.data?.serials || {}) as Record<string, string> }
 function readCachedOrders() { if (typeof window === 'undefined') return []; try { return sanitizeOrders(JSON.parse(localStorage.getItem(ORDERS_CACHE_KEY) || '[]') as Order[]) } catch { return [] } }
-function cacheOrders(orders: Order[]) { try { localStorage.setItem(ORDERS_CACHE_KEY, JSON.stringify(sanitizeOrders(orders))) } catch {} }
+function cacheOrders(orders: Order[]) { safeLocalStorageSet(ORDERS_CACHE_KEY, JSON.stringify(sanitizeOrders(orders))) }
 function safeFileName(value: string) { return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() || 'Machine' }
-function saveMachineRecord({ order, machine, qrCode, date }: { order: Order; machine: MachineUnit; qrCode: string; date: string }) { const records = readMachineRecords().filter((r) => r.serialNumber !== machine.serialNumber); const start = new Date(date); const end = new Date(start); end.setFullYear(end.getFullYear() + 1); const warrantyStatus = new Date() <= end ? `Active till ${end.toISOString().slice(0, 10)}` : 'Expired'; records.unshift({ id: machine.serialNumber, serialNumber: machine.serialNumber, qrCode, qrToken: machine.qrToken, salesOrderNumber: order.salesOrderNumber, customerName: order.customerName, customerAddress: order.shippingAddress || '', machineName: machine.itemName, salesperson: order.salesperson || '', dispatchDate: date, qrGenerationDate: date, expectedDeliveryDate: order.deliveryDate, warrantyStatus, order, machine }); localStorage.setItem(MACHINE_DB_KEY, JSON.stringify(records)) }
-function readMachineRecords(): MachineRecord[] { try { return JSON.parse(localStorage.getItem(MACHINE_DB_KEY) || '[]') as MachineRecord[] } catch { return [] } }
 function readProcessedOrders(): Order[] { try { return JSON.parse(localStorage.getItem(PROCESSED_ORDERS_KEY) || '[]') as Order[] } catch { return [] } }
 function downloadDataUrl(fileName: string, dataUrl: string) { const a = document.createElement('a'); a.href = dataUrl; a.download = fileName; document.body.appendChild(a); a.click(); a.remove() }
 function buildQrPayload({ order, machine, date }: { order: Order; machine: MachineUnit; date: string }) { return [`Sales Order Number: ${order.salesOrderNumber}`, `Customer Name: ${order.customerName}`, `Customer Address: ${order.shippingAddress || '—'}`, `Machine Name: ${machine.itemName}`, `Machine Serial Number: ${machine.serialNumber}`, `Date: ${date}`].join('\n') }
