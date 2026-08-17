@@ -12439,66 +12439,8 @@
     "1154219000035792002": {
       "salesOrderId": "1154219000035792002",
       "salesOrderNumber": "SO-07750",
-      "status": "qr_generated",
-      "processedOrder": {
-        "id": "1154219000035792002",
-        "zohoSalesOrderId": "1154219000035792002",
-        "salesOrderNumber": "SO-07750",
-        "status": "open",
-        "customerName": "LIFESOL MEDICAL INDIA PRIVATE LIMITED",
-        "shippingAddress": "K-59, SITE 5 KASNA INDUSTRIAL AREA, GREATER NOIDA, Gautambuddha Nagar, Uttar Pradesh, 201308, India",
-        "salesperson": "Deepak Kumar",
-        "deliveryDate": "2026-08-17",
-        "dashboardStatus": "Not Generated",
-        "reviewRequired": false,
-        "lineItems": [
-          {
-            "id": "1154219000035792005",
-            "itemName": "Tape Cutting machine [Electronic]",
-            "sku": "369",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": true,
-            "dispatchCategory": "machine"
-          }
-        ],
-        "machines": [
-          {
-            "id": "1154219000035792002-1154219000035792005-1",
-            "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
-            "orderId": "1154219000035792002",
-            "lineItemId": "1154219000035792005",
-            "itemName": "Tape Cutting machine [Electronic]",
-            "sku": "369",
-            "customerName": "LIFESOL MEDICAL INDIA PRIVATE LIMITED",
-            "salesOrderNumber": "SO-07750",
-            "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Pending",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": ""
-          }
-        ]
-      },
-      "machines": {
-        "1154219000035792002-1154219000035792005-1": {
-          "machineUnitId": "1154219000035792002-1154219000035792005-1",
-          "lineItemId": "1154219000035792005",
-          "serialNumber": "26270969",
-          "qrToken": "26270969",
-          "qrStatus": "generated",
-          "qrGeneratedAt": "2026-08-17T11:09:15.968Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T11:09:25.489Z"
-        }
-      }
+      "status": "open",
+      "machines": {}
     }
   }
 }
