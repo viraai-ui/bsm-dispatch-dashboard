@@ -11885,22 +11885,7 @@
       "salesOrderId": "1154219000035798001",
       "salesOrderNumber": "SO-07746",
       "status": "open",
-      "machines": {
-        "1154219000035798001-1154219000035798004-1": {
-          "machineUnitId": "1154219000035798001-1154219000035798004-1",
-          "lineItemId": "",
-          "serialNumber": "26270964",
-          "qrToken": "26270964",
-          "qrStatus": "pending"
-        },
-        "1154219000035798001-1154219000035798004-2": {
-          "machineUnitId": "1154219000035798001-1154219000035798004-2",
-          "lineItemId": "",
-          "serialNumber": "26270965",
-          "qrToken": "26270965",
-          "qrStatus": "pending"
-        }
-      }
+      "machines": {}
     }
   }
 }
