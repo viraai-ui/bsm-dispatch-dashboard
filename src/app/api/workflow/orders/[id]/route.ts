@@ -35,7 +35,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
     const order = body.order as Order
     if (action === 'allocate_serials') {
-      const serials = await allocateSerialNumbers(id, body.machineIds || [])
+      const serials = await allocateSerialNumbers(id, body.machineIds || [], body.order as Order | undefined)
       return apiOk({ serials })
     }
     const now = new Date().toISOString()

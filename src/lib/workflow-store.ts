@@ -31,7 +31,8 @@ const STORE_PATH = 'data/workflow-store.json'
 const INITIAL_SERIAL_COUNTER = 26270758
 
 export function highestSerialCounter(store: Store) {
-  let highest = Math.max(Number(store.serialCounter || INITIAL_SERIAL_COUNTER), INITIAL_SERIAL_COUNTER)
+  const persisted = Number(store.serialCounter || INITIAL_SERIAL_COUNTER)
+  let highest = Number.isFinite(persisted) ? Math.max(persisted, INITIAL_SERIAL_COUNTER) : INITIAL_SERIAL_COUNTER
   for (const order of Object.values(store.orders || {})) {
     for (const machine of Object.values(order.machines || {})) {
       const serial = Number(String(machine.serialNumber || '').trim())
@@ -157,29 +158,31 @@ export async function upsertOrderWorkflow(orderId: string, updater: (current: Or
   throw lastError instanceof Error ? lastError : new Error('Workflow update conflict')
 }
 
-export async function allocateSerialNumbers(orderId: string, machineIds: string[]) {
+export async function allocateSerialNumbers(orderId: string, machineIds: string[], order?: Order) {
   const uniqueIds = Array.from(new Set(machineIds.filter(Boolean)))
   if (!uniqueIds.length) return {} as Record<string, string>
   let allocated: Record<string, string> = {}
   await upsertOrderWorkflow(orderId, (current, store) => {
     const machines = { ...(current?.machines || {}) }
+    const orderMachinesById = new Map((order?.machines || []).map((machine) => [machine.id, machine]))
     let counter = highestSerialCounter(store)
     allocated = {}
     for (const machineUnitId of uniqueIds) {
-      const existing = machines[machineUnitId]?.serialNumber
-      const serialNumber = existing || String(++counter)
+      const existing = machines[machineUnitId]
+      const sourceMachine = orderMachinesById.get(machineUnitId)
+      const serialNumber = existing?.serialNumber || sourceMachine?.serialNumber || String(++counter)
       machines[machineUnitId] = {
-        ...machines[machineUnitId],
+        ...existing,
         machineUnitId,
-        lineItemId: machines[machineUnitId]?.lineItemId || '',
+        lineItemId: existing?.lineItemId || sourceMachine?.lineItemId || '',
         serialNumber,
-        qrToken: machines[machineUnitId]?.qrToken || serialNumber,
-        qrStatus: machines[machineUnitId]?.qrStatus || 'pending',
+        qrToken: existing?.qrToken || sourceMachine?.qrToken || serialNumber,
+        qrStatus: existing?.qrStatus || 'pending',
       }
       allocated[machineUnitId] = serialNumber
     }
     store.serialCounter = counter
-    return current ? { ...current, machines } : { salesOrderId: orderId, salesOrderNumber: '', status: 'open', machines }
+    return current ? { ...current, salesOrderNumber: current.salesOrderNumber || order?.salesOrderNumber || '', processedOrder: current.processedOrder || order, machines } : { salesOrderId: orderId, salesOrderNumber: order?.salesOrderNumber || '', status: 'open', processedOrder: order, machines }
   })
   return allocated
 }

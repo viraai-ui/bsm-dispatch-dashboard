@@ -188,8 +188,16 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
     if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare LR upload')
     const target = targetJson.data
     const uploadResponse = await fetch(target.uploadUrl, { method: 'PUT', headers: { 'content-type': type }, body: lrFile })
-    if (!uploadResponse.ok) throw new Error('Could not upload Builty/LR copy')
-    return { name: lrFile.name, type, url: target.publicUrl, r2Key: target.key, expiresAt: target.expiresAt || null }
+    if (uploadResponse.ok) return { name: lrFile.name, type, url: target.publicUrl, r2Key: target.key, expiresAt: target.expiresAt || null }
+    const form = new FormData()
+    form.append('orderId', item.orderId)
+    form.append('machineId', 'shipment-lr-builty')
+    form.append('stage', 'shipment')
+    form.append('file', lrFile)
+    const fallbackResponse = await fetch('/api/media-proof/upload', { method: 'POST', body: form })
+    const fallbackJson = await fallbackResponse.json()
+    if (!fallbackResponse.ok || !fallbackJson.ok) throw new Error(fallbackJson.error || 'Could not upload Builty/LR copy')
+    return fallbackJson.data.file
   }
 
   async function submit(event: React.FormEvent) {

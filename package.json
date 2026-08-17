@@ -10,6 +10,7 @@
     "verify:serials": "node tests/live-serial-coverage.cjs",
     "verify:serial-sheet": "node scripts/audit-serial-sheet-coverage.cjs",
     "verify:database": "node tests/database-integrity.cjs",
+    "test:serials": "node --experimental-strip-types tests/serial-allocation.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

@@ -18,13 +18,22 @@ export async function loadDatabaseOrders() {
     .sort((a, b) => databaseSortTime(workflows[b.id], b) - databaseSortTime(workflows[a.id], a))
   const existingSerials = new Set(workflowOrders.flatMap((order) => order.machines.map((machine) => machine.serialNumber).filter(Boolean)))
   const serialSheet = await listSerialSheetDatabaseOrders(existingSerials)
-  const databaseOrders = [...workflowOrders, ...serialSheet.orders]
+  // Both sources are independently sorted. Sort again after merging so new
+  // workflow serials never appear behind older serial-sheet records.
+  const databaseOrders = [...workflowOrders, ...serialSheet.orders].sort((a, b) => highestSerial(b) - highestSerial(a) || b.salesOrderNumber.localeCompare(a.salesOrderNumber, undefined, { numeric: true }))
   const [dispatchStore, shipmentStore] = await Promise.all([readDispatchStore(), readShipmentStore()])
   const warrantyDates = {
     ...Object.fromEntries(workflowOrders.map((order) => [order.id, dispatchStore.dispatched[order.id]?.dispatchedAt || order.deliveryDate || ''])),
     ...serialSheet.warrantyDates,
   }
   return { databaseOrders, workflows, warrantyDates, serialSheet, shipmentRecords: shipmentStore.shipments }
+}
+
+export function highestSerial(order: Order) {
+  return (order.machines || []).reduce((highest, machine) => {
+    const serial = Number(String(machine.serialNumber || '').trim())
+    return Number.isSafeInteger(serial) ? Math.max(highest, serial) : highest
+  }, 0)
 }
 
 function databaseOrderFromWorkflow(order: Order, workflow?: OrderWorkflow): Order {

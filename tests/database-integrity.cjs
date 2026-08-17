@@ -25,11 +25,11 @@ function readUrl(url) {
 async function githubJson(path) {
   const meta = ghApi(`/repos/${repo}/contents/${path}`)
   if (meta.content && meta.encoding === 'base64') return JSON.parse(Buffer.from(meta.content, 'base64').toString('utf8'))
-  if (meta.download_url) return JSON.parse(await readUrl(meta.download_url))
   if (meta.git_url) {
     const blob = ghApi(meta.git_url.replace('https://api.github.com', ''))
     return JSON.parse(Buffer.from(blob.content || '', 'base64').toString('utf8'))
   }
+  if (meta.download_url) return JSON.parse(await readUrl(`${meta.download_url}?cacheBust=${Date.now()}`))
   throw new Error(`Could not read ${path}`)
 }
 

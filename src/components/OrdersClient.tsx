@@ -176,28 +176,37 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     if (!selectedCount) return
     if (!window.confirm(`Generate serial numbers and barcode PDF for ${selectedCount} selected machine${selectedCount === 1 ? '' : 's'}?`)) return
     setGenerating(true)
-    const date = new Date().toISOString().slice(0, 10)
-    const allocated = await allocateSerials(order.id, machines.filter((machine) => selected.has(machine.id) && !machine.serialNumber).map((machine) => machine.id))
-    const updated: MachineUnit[] = []
-    const nextQrCodes: Record<string, string> = { ...qrCodes }
-    for (const machine of machines) {
-      if (!selected.has(machine.id)) { updated.push(machine); continue }
-      const serialNumber = machine.serialNumber || allocated[machine.id]
-      const qrToken = machine.qrToken || serialNumber
-      const qrPayload = buildQrPayload({ order, machine: { ...machine, serialNumber, qrToken }, date })
-      const qrCode = qrCodes[machine.id] || await QRCode.toDataURL(qrPayload, { margin: 1, width: 480 })
-      const nextMachine = { ...machine, serialNumber, qrToken, status: 'QR Generated' as const, warrantyStart: date }
-      updated.push(nextMachine)
-      nextQrCodes[machine.id] = qrCode
-      saveMachineRecord({ order, machine: nextMachine, qrCode, date })
+    setMessage('Generating serials and barcode PDF…')
+    try {
+      const date = new Date().toISOString().slice(0, 10)
+      const allocated = await allocateSerials(order.id, order, machines.filter((machine) => selected.has(machine.id) && !machine.serialNumber).map((machine) => machine.id))
+      const selectedMachines = machines.filter((machine) => selected.has(machine.id))
+      const generatedEntries = await Promise.all(selectedMachines.map(async (machine) => {
+        const serialNumber = machine.serialNumber || allocated[machine.id]
+        const qrToken = machine.qrToken || serialNumber
+        const qrPayload = buildQrPayload({ order, machine: { ...machine, serialNumber, qrToken }, date })
+        const qrCode = qrCodes[machine.id] || await QRCode.toDataURL(qrPayload, { margin: 1, width: 360 })
+        const nextMachine = { ...machine, serialNumber, qrToken, status: 'QR Generated' as const, warrantyStart: date }
+        return { machineId: machine.id, machine: nextMachine, qrCode }
+      }))
+      const generatedById = new Map(generatedEntries.map((entry) => [entry.machineId, entry]))
+      const updated = machines.map((machine) => generatedById.get(machine.id)?.machine || machine)
+      const nextQrCodes: Record<string, string> = { ...qrCodes }
+      for (const entry of generatedEntries) {
+        nextQrCodes[entry.machineId] = entry.qrCode
+        saveMachineRecord({ order, machine: entry.machine, qrCode: entry.qrCode, date })
+      }
+      const workflowMachines: MachineWorkflow[] = updated.filter((machine) => selected.has(machine.id)).map((machine) => ({ machineUnitId: machine.id, lineItemId: machine.lineItemId, serialNumber: machine.serialNumber, qrCode: nextQrCodes[machine.id], qrToken: machine.qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() }))
+      await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
+      setMachines(updated)
+      setQrCodes(nextQrCodes)
+      await generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
+      setMessage(`Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.`)
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Serial generation failed. Please retry.')
+    } finally {
+      setGenerating(false)
     }
-    const workflowMachines: MachineWorkflow[] = updated.filter((machine) => selected.has(machine.id)).map((machine) => ({ machineUnitId: machine.id, lineItemId: machine.lineItemId, serialNumber: machine.serialNumber, qrCode: nextQrCodes[machine.id], qrToken: machine.qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() }))
-    await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
-    setMachines(updated)
-    setQrCodes(nextQrCodes)
-    await generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
-    setMessage(`Barcode PDF generated with ${selectedCount} page${selectedCount === 1 ? '' : 's'}.`)
-    setGenerating(false)
   }
 
   const openPriorityPrompt = () => {
@@ -422,7 +431,7 @@ function displayDescription(name: string, description?: string) {
 }
 function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.dispatchedAt ? 'Dispatched' : saved.processedAt ? 'Processed' : saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
 async function saveWorkflow(orderId: string, payload: unknown) { const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not save workflow'); return json }
-async function allocateSerials(orderId: string, machineIds: string[]) { if (!machineIds.length) return {} as Record<string, string>; const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'allocate_serials', machineIds }) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not allocate serial numbers'); return (json.data?.serials || {}) as Record<string, string> }
+async function allocateSerials(orderId: string, order: Order, machineIds: string[]) { if (!machineIds.length) return {} as Record<string, string>; const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'allocate_serials', order, machineIds }) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not allocate serial numbers'); return (json.data?.serials || {}) as Record<string, string> }
 function readCachedOrders() { if (typeof window === 'undefined') return []; try { return sanitizeOrders(JSON.parse(localStorage.getItem(ORDERS_CACHE_KEY) || '[]') as Order[]) } catch { return [] } }
 function cacheOrders(orders: Order[]) { try { localStorage.setItem(ORDERS_CACHE_KEY, JSON.stringify(sanitizeOrders(orders))) } catch {} }
 function safeFileName(value: string) { return value.replace(/[\\/:*?"<>|]/g, '').replace(/\s+/g, ' ').trim() || 'Machine' }
