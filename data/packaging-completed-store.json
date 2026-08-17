@@ -8247,6 +8247,93 @@
         "dispatchSortOrder": 1
       },
       "machineIds": []
+    },
+    "1154219000031849013": {
+      "completedAt": "2026-08-17T07:49:55.551Z",
+      "order": {
+        "id": "1154219000031849013",
+        "zohoSalesOrderId": "1154219000031849013",
+        "salesOrderNumber": "SO-07154",
+        "status": "open",
+        "customerName": "SUN LEATHER",
+        "shippingAddress": "674/39-40, KDA COLONY, JAJMAU, KANPUR, Uttar Pradesh, 208010, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-05-23",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000031849016",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 0,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000031849017",
+            "itemName": "Loop Stapling machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000031849018",
+            "itemName": "Staples for (belt Loops)",
+            "sku": "",
+            "description": "1 Lac pieces Staples",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000031849019",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
+            "quantity": 1,
+            "pendingQuantity": 0,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000031849013-1154219000031849017-1",
+            "unitNumber": 1,
+            "serialNumber": "26270917",
+            "qrToken": "26270917",
+            "orderId": "1154219000031849013",
+            "lineItemId": "1154219000031849017",
+            "itemName": "Loop Stapling machine",
+            "sku": "",
+            "customerName": "SUN LEATHER",
+            "salesOrderNumber": "SO-07154",
+            "deliveryDate": "2026-05-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-12",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000031849013-1154219000031849017-1"
+      ]
     }
   }
 }
