@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270971,
+  "serialCounter": 26270974,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -12540,6 +12540,174 @@
           "zohoBackupQueuedAt": "2026-08-17T11:16:11.924Z",
           "zohoBackupLastAttemptAt": "2026-08-17T11:30:21.641Z",
           "zohoBackupSyncedAt": "2026-08-17T11:30:21.641Z"
+        }
+      }
+    },
+    "1154219000035701017": {
+      "salesOrderId": "1154219000035701017",
+      "salesOrderNumber": "SO-07741",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035701017",
+        "zohoSalesOrderId": "1154219000035701017",
+        "salesOrderNumber": "SO-07741",
+        "status": "open",
+        "customerName": "Ayush Enterprises",
+        "shippingAddress": "2nd Floor, 04, Ward No 02, Saurabh Nagar, Near Shiv Mandir,, Transit Camp, Rudrapur, Udham Singh Nagar, Uttarakhand, 263153",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035701020",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035701021",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035701022",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035701023",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035701017-1154219000035701020-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035701017",
+            "lineItemId": "1154219000035701020",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "Ayush Enterprises",
+            "salesOrderNumber": "SO-07741",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035701017-1154219000035701021-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035701017",
+            "lineItemId": "1154219000035701021",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "Ayush Enterprises",
+            "salesOrderNumber": "SO-07741",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035701017-1154219000035701022-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035701017",
+            "lineItemId": "1154219000035701022",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "customerName": "Ayush Enterprises",
+            "salesOrderNumber": "SO-07741",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035701017-1154219000035701023-1",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035701017",
+            "lineItemId": "1154219000035701023",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "Ayush Enterprises",
+            "salesOrderNumber": "SO-07741",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035701017-1154219000035701020-1": {
+          "machineUnitId": "1154219000035701017-1154219000035701020-1",
+          "lineItemId": "1154219000035701020",
+          "serialNumber": "26270972",
+          "qrToken": "26270972",
+          "qrStatus": "pending"
+        },
+        "1154219000035701017-1154219000035701021-1": {
+          "machineUnitId": "1154219000035701017-1154219000035701021-1",
+          "lineItemId": "1154219000035701021",
+          "serialNumber": "26270973",
+          "qrToken": "26270973",
+          "qrStatus": "pending"
+        },
+        "1154219000035701017-1154219000035701023-1": {
+          "machineUnitId": "1154219000035701017-1154219000035701023-1",
+          "lineItemId": "1154219000035701023",
+          "serialNumber": "26270974",
+          "qrToken": "26270974",
+          "qrStatus": "pending"
         }
       }
     }
