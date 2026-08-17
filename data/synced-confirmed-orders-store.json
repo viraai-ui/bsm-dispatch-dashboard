@@ -1,5 +1,217 @@
 {
   "orders": {
+    "1154219000035749001": {
+      "id": "1154219000035749001",
+      "zohoSalesOrderId": "1154219000035749001",
+      "salesOrderNumber": "SO-07742",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-14",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035749004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 300,
+          "pendingQuantity": 300,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035701017": {
+      "id": "1154219000035701017",
+      "zohoSalesOrderId": "1154219000035701017",
+      "salesOrderNumber": "SO-07741",
+      "status": "open",
+      "customerName": "Ayush Enterprises",
+      "shippingAddress": "2nd Floor, 04, Ward No 02, Saurabh Nagar, Near Shiv Mandir,, Transit Camp, Rudrapur, Udham Singh Nagar, Uttarakhand, 263153",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-18",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035701020",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035701021",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035701022",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035701023",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035701017-1154219000035701020-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035701017",
+          "lineItemId": "1154219000035701020",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "customerName": "Ayush Enterprises",
+          "salesOrderNumber": "SO-07741",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035701017-1154219000035701021-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035701017",
+          "lineItemId": "1154219000035701021",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "Ayush Enterprises",
+          "salesOrderNumber": "SO-07741",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035701017-1154219000035701022-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035701017",
+          "lineItemId": "1154219000035701022",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "Ayush Enterprises",
+          "salesOrderNumber": "SO-07741",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035701017-1154219000035701023-1",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035701017",
+          "lineItemId": "1154219000035701023",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "Ayush Enterprises",
+          "salesOrderNumber": "SO-07741",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035710004": {
+      "id": "1154219000035710004",
+      "zohoSalesOrderId": "1154219000035710004",
+      "salesOrderNumber": "SO-07740",
+      "status": "open",
+      "customerName": "MS BHAGWATI ENTERPRISES",
+      "shippingAddress": "BASEMENT, GROUND FLOOR, C-76, SECTOR-8, JAYPEE MALL, BLOCK-C, SECTOR-8, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035710007",
+          "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
+          "sku": "106A",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035710004-1154219000035710007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035710004",
+          "lineItemId": "1154219000035710007",
+          "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
+          "sku": "106A",
+          "customerName": "MS BHAGWATI ENTERPRISES",
+          "salesOrderNumber": "SO-07740",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035730004": {
       "id": "1154219000035730004",
       "zohoSalesOrderId": "1154219000035730004",
@@ -20775,6 +20987,9 @@
     }
   },
   "orderIds": [
+    "1154219000035749001",
+    "1154219000035701017",
+    "1154219000035710004",
     "1154219000035730004",
     "1154219000035691003",
     "1154219000035711007",
@@ -20814,8 +21029,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-14T12:07:32.115Z",
-  "lastAttemptAt": "2026-08-17T05:38:10.843Z",
+  "lastSuccessfulSyncAt": "2026-08-17T05:38:36.590Z",
+  "lastAttemptAt": "2026-08-17T05:38:36.590Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
