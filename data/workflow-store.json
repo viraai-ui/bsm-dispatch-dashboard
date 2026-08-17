@@ -10160,7 +10160,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035557081": {
       "salesOrderId": "1154219000035557081",
@@ -11373,7 +11373,7 @@
           "vendor": "Balaji Engineering"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035696047": {
       "salesOrderId": "1154219000035696047",
@@ -11659,7 +11659,7 @@
       "salesOrderId": "1154219000035516019",
       "salesOrderNumber": "SO-07708",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-14T12:14:20.557Z",
       "processedOrder": {
         "id": "1154219000035516019",
@@ -11724,7 +11724,8 @@
           "dispatchNote": "Wooden",
           "vendor": "Ishu Traders"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035730004": {
       "salesOrderId": "1154219000035730004",
@@ -11876,7 +11877,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     }
   }
 }
