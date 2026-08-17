@@ -12546,7 +12546,9 @@
     "1154219000035701017": {
       "salesOrderId": "1154219000035701017",
       "salesOrderNumber": "SO-07741",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-17T12:33:48.281Z",
       "processedOrder": {
         "id": "1154219000035701017",
         "zohoSalesOrderId": "1154219000035701017",
@@ -12604,8 +12606,8 @@
           {
             "id": "1154219000035701017-1154219000035701020-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270972",
+            "qrToken": "26270972",
             "orderId": "1154219000035701017",
             "lineItemId": "1154219000035701020",
             "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
@@ -12613,20 +12615,23 @@
             "customerName": "Ayush Enterprises",
             "salesOrderNumber": "SO-07741",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000035701017-1154219000035701021-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270973",
+            "qrToken": "26270973",
             "orderId": "1154219000035701017",
             "lineItemId": "1154219000035701021",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -12634,14 +12639,17 @@
             "customerName": "Ayush Enterprises",
             "salesOrderNumber": "SO-07741",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Siphon",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000035701017-1154219000035701022-1",
@@ -12662,13 +12670,15 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000035701017-1154219000035701023-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270974",
+            "qrToken": "26270974",
             "orderId": "1154219000035701017",
             "lineItemId": "1154219000035701023",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -12676,14 +12686,17 @@
             "customerName": "Ayush Enterprises",
             "salesOrderNumber": "SO-07741",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Ishu",
+            "dispatchNote": "Good wrapping"
           }
         ]
       },
@@ -12698,7 +12711,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-17T12:29:50.530Z",
           "zohoBackupLastAttemptAt": "2026-08-17T12:30:14.911Z",
-          "zohoBackupSyncedAt": "2026-08-17T12:30:14.911Z"
+          "zohoBackupSyncedAt": "2026-08-17T12:30:14.911Z",
+          "processedAt": "2026-08-17T12:33:48.281Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         },
         "1154219000035701017-1154219000035701021-1": {
           "machineUnitId": "1154219000035701017-1154219000035701021-1",
@@ -12710,7 +12726,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-17T12:29:50.530Z",
           "zohoBackupLastAttemptAt": "2026-08-17T12:30:14.911Z",
-          "zohoBackupSyncedAt": "2026-08-17T12:30:14.911Z"
+          "zohoBackupSyncedAt": "2026-08-17T12:30:14.911Z",
+          "processedAt": "2026-08-17T12:33:48.281Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Siphon"
         },
         "1154219000035701017-1154219000035701023-1": {
           "machineUnitId": "1154219000035701017-1154219000035701023-1",
@@ -12722,7 +12741,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-17T12:29:50.530Z",
           "zohoBackupLastAttemptAt": "2026-08-17T12:30:14.911Z",
-          "zohoBackupSyncedAt": "2026-08-17T12:30:14.911Z"
+          "zohoBackupSyncedAt": "2026-08-17T12:30:14.911Z",
+          "processedAt": "2026-08-17T12:33:48.281Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Ishu"
         }
       }
     }
