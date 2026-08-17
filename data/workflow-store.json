@@ -12751,7 +12751,9 @@
     "1154219000035795001": {
       "salesOrderId": "1154219000035795001",
       "salesOrderNumber": "SO-07745",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-17T12:45:11.367Z",
       "processedOrder": {
         "id": "1154219000035795001",
         "zohoSalesOrderId": "1154219000035795001",
@@ -12779,8 +12781,8 @@
           {
             "id": "1154219000035795001-1154219000035795004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270975",
+            "qrToken": "26270975",
             "orderId": "1154219000035795001",
             "lineItemId": "1154219000035795004",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -12788,20 +12790,23 @@
             "customerName": "Parshvaprem Industries Pvt. Ltd.",
             "salesOrderNumber": "SO-07745",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035795001-1154219000035795004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270976",
+            "qrToken": "26270976",
             "orderId": "1154219000035795001",
             "lineItemId": "1154219000035795004",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -12809,20 +12814,23 @@
             "customerName": "Parshvaprem Industries Pvt. Ltd.",
             "salesOrderNumber": "SO-07745",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035795001-1154219000035795004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270977",
+            "qrToken": "26270977",
             "orderId": "1154219000035795001",
             "lineItemId": "1154219000035795004",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -12830,20 +12838,23 @@
             "customerName": "Parshvaprem Industries Pvt. Ltd.",
             "salesOrderNumber": "SO-07745",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035795001-1154219000035795004-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270978",
+            "qrToken": "26270978",
             "orderId": "1154219000035795001",
             "lineItemId": "1154219000035795004",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -12851,20 +12862,23 @@
             "customerName": "Parshvaprem Industries Pvt. Ltd.",
             "salesOrderNumber": "SO-07745",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035795001-1154219000035795004-5",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270979",
+            "qrToken": "26270979",
             "orderId": "1154219000035795001",
             "lineItemId": "1154219000035795004",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -12872,14 +12886,17 @@
             "customerName": "Parshvaprem Industries Pvt. Ltd.",
             "salesOrderNumber": "SO-07745",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "vendor": "Able",
+            "dispatchNote": "Wooden"
           }
         ]
       },
@@ -12892,7 +12909,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T12:39:45.535Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z"
+          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z",
+          "processedAt": "2026-08-17T12:45:11.367Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000035795001-1154219000035795004-2": {
           "machineUnitId": "1154219000035795001-1154219000035795004-2",
@@ -12902,7 +12922,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T12:39:45.535Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z"
+          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z",
+          "processedAt": "2026-08-17T12:45:11.367Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000035795001-1154219000035795004-3": {
           "machineUnitId": "1154219000035795001-1154219000035795004-3",
@@ -12912,7 +12935,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T12:39:45.535Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z"
+          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z",
+          "processedAt": "2026-08-17T12:45:11.367Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000035795001-1154219000035795004-4": {
           "machineUnitId": "1154219000035795001-1154219000035795004-4",
@@ -12922,7 +12948,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T12:39:45.535Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z"
+          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z",
+          "processedAt": "2026-08-17T12:45:11.367Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000035795001-1154219000035795004-5": {
           "machineUnitId": "1154219000035795001-1154219000035795004-5",
@@ -12932,7 +12961,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-17T12:39:45.535Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z"
+          "zohoBackupQueuedAt": "2026-08-17T12:39:55.676Z",
+          "processedAt": "2026-08-17T12:45:11.367Z",
+          "dispatchNote": "Wooden",
+          "vendor": "Able"
         }
       }
     }
