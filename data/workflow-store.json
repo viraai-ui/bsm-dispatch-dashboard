@@ -11763,7 +11763,7 @@
       "salesOrderId": "1154219000035717001",
       "salesOrderNumber": "SO-07732",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-17T06:19:48.937Z",
       "processedOrder": {
         "id": "1154219000035717001",
@@ -11874,7 +11874,8 @@
           "dispatchNote": "Wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
