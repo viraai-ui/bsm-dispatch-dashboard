@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270965,
+  "serialCounter": 26270967,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -11885,7 +11885,90 @@
       "salesOrderId": "1154219000035798001",
       "salesOrderNumber": "SO-07746",
       "status": "open",
-      "machines": {}
+      "machines": {
+        "1154219000035798001-1154219000035798004-1": {
+          "machineUnitId": "1154219000035798001-1154219000035798004-1",
+          "lineItemId": "1154219000035798004",
+          "serialNumber": "26270966",
+          "qrToken": "26270966",
+          "qrStatus": "pending"
+        },
+        "1154219000035798001-1154219000035798004-2": {
+          "machineUnitId": "1154219000035798001-1154219000035798004-2",
+          "lineItemId": "1154219000035798004",
+          "serialNumber": "26270967",
+          "qrToken": "26270967",
+          "qrStatus": "pending"
+        }
+      },
+      "processedOrder": {
+        "id": "1154219000035798001",
+        "zohoSalesOrderId": "1154219000035798001",
+        "salesOrderNumber": "SO-07746",
+        "status": "open",
+        "customerName": "TrustKnit Pvt. Ltd.",
+        "shippingAddress": "lot No. 19, 1st Floor, Sector-16, Bahadurgarh,, Haryana",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035798004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035798001-1154219000035798004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035798001",
+            "lineItemId": "1154219000035798004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "TrustKnit Pvt. Ltd.",
+            "salesOrderNumber": "SO-07746",
+            "deliveryDate": "2026-08-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035798001-1154219000035798004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035798001",
+            "lineItemId": "1154219000035798004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "TrustKnit Pvt. Ltd.",
+            "salesOrderNumber": "SO-07746",
+            "deliveryDate": "2026-08-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      }
     }
   }
 }
