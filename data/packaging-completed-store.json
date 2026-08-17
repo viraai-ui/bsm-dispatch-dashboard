@@ -8334,6 +8334,63 @@
       "machineIds": [
         "1154219000031849013-1154219000031849017-1"
       ]
+    },
+    "1154219000035516019": {
+      "completedAt": "2026-08-17T07:50:08.133Z",
+      "order": {
+        "id": "1154219000035516019",
+        "zohoSalesOrderId": "1154219000035516019",
+        "salesOrderNumber": "SO-07708",
+        "status": "open",
+        "customerName": "JAMA CORPORATION PVT.LTD.",
+        "shippingAddress": "8/2-B, ARYA NAGAR, KANPUR, Kanpur Nagar, Kanpur, Uttar Pradesh, 208002, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035516022",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035516019-1154219000035516022-1",
+            "unitNumber": 1,
+            "serialNumber": "26270955",
+            "qrToken": "26270955",
+            "orderId": "1154219000035516019",
+            "lineItemId": "1154219000035516022",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "JAMA CORPORATION PVT.LTD.",
+            "salesOrderNumber": "SO-07708",
+            "deliveryDate": "2026-08-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035516019-1154219000035516022-1"
+      ]
     }
   }
 }
