@@ -8391,6 +8391,63 @@
       "machineIds": [
         "1154219000035516019-1154219000035516022-1"
       ]
+    },
+    "1154219000035705001": {
+      "completedAt": "2026-08-17T11:49:48.338Z",
+      "order": {
+        "id": "1154219000035705001",
+        "zohoSalesOrderId": "1154219000035705001",
+        "salesOrderNumber": "SO-07731",
+        "status": "open",
+        "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+        "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035705004",
+            "itemName": "ROLLER PRESSING MACHINE",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035705001-1154219000035705004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270938",
+            "qrToken": "26270938",
+            "orderId": "1154219000035705001",
+            "lineItemId": "1154219000035705004",
+            "itemName": "ROLLER PRESSING MACHINE",
+            "sku": "",
+            "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+            "salesOrderNumber": "SO-07731",
+            "deliveryDate": "2026-08-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035705001-1154219000035705004-1"
+      ]
     }
   }
 }
