@@ -16,6 +16,7 @@
     "test:qr-performance": "node tests/qr-download-performance.test.mjs",
     "test:storage": "node --experimental-strip-types tests/local-storage-quota.test.mjs",
     "test:database-ui": "node tests/database-filter-ui.test.cjs",
+    "test:core-hardening": "node tests/core-hardening.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

@@ -46,8 +46,7 @@ async function run() {
     assert.equal(response.status, 200, `Operations should access ${path}`)
   }
   const operationsSync = await fetchText('/api/cron/sync-orders', { headers: { cookie: operationsCookie } })
-  assert.notEqual(operationsSync.response.status, 401, 'Operations sync should not be unauthorized')
-  assert.notEqual(operationsSync.response.status, 403, 'Operations sync should not be forbidden')
+  assert.equal(operationsSync.response.status, 401, 'Cron sync must reject normal user sessions and require the cron secret')
 
   const ordersApi = await fetchText('/api/orders', { headers: { cookie } })
   const ordersJson = JSON.parse(ordersApi.text)
