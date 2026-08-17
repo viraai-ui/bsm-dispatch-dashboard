@@ -1,5 +1,120 @@
 {
   "orders": {
+    "1154219000035795016": {
+      "id": "1154219000035795016",
+      "zohoSalesOrderId": "1154219000035795016",
+      "salesOrderNumber": "SO-07749",
+      "status": "open",
+      "customerName": "Rajyog Enterprises",
+      "shippingAddress": "X-11, Supa Mica, A/P Supa, Tal-Parner, Ahmednagar, Maharashtra, 414302, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035795019",
+          "itemName": "Beam Cutting Press (40 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035795016-1154219000035795019-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035795016",
+          "lineItemId": "1154219000035795019",
+          "itemName": "Beam Cutting Press (40 ton)",
+          "sku": "",
+          "customerName": "Rajyog Enterprises",
+          "salesOrderNumber": "SO-07749",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035798028": {
+      "id": "1154219000035798028",
+      "zohoSalesOrderId": "1154219000035798028",
+      "salesOrderNumber": "SO-07748",
+      "status": "open",
+      "customerName": "ACCLAIM INDUSTRIS",
+      "shippingAddress": "Sector-17 Plot No. 318, HSIIDC, Footwear Park, Bahadurgarh-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035798031",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "sole press back & front Gutkha",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035798028-1154219000035798031-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035798028",
+          "lineItemId": "1154219000035798031",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "ACCLAIM INDUSTRIS",
+          "salesOrderNumber": "SO-07748",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "sole press back & front Gutkha"
+        },
+        {
+          "id": "1154219000035798028-1154219000035798031-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035798028",
+          "lineItemId": "1154219000035798031",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "ACCLAIM INDUSTRIS",
+          "salesOrderNumber": "SO-07748",
+          "deliveryDate": "2026-08-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "sole press back & front Gutkha"
+        }
+      ]
+    },
     "1154219000035814001": {
       "id": "1154219000035814001",
       "zohoSalesOrderId": "1154219000035814001",
@@ -21410,6 +21525,8 @@
     }
   },
   "orderIds": [
+    "1154219000035795016",
+    "1154219000035798028",
     "1154219000035814001",
     "1154219000035798001",
     "1154219000035795001",
@@ -21455,8 +21572,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T10:27:15.665Z",
-  "lastAttemptAt": "2026-08-17T10:41:49.667Z",
+  "lastSuccessfulSyncAt": "2026-08-17T10:42:15.906Z",
+  "lastAttemptAt": "2026-08-17T10:42:15.906Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
