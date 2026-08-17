@@ -2309,6 +2309,31 @@
       "submittedAt": "2026-08-17T05:24:52.968Z",
       "videoNotRequired": true,
       "units": {}
+    },
+    "1154219000035516019": {
+      "orderId": "1154219000035516019",
+      "salesOrderNumber": "SO-07708",
+      "submittedAt": null,
+      "units": {
+        "1154219000035516019-1154219000035516022-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035516019-1154219000035516022-1-video-1786944734271-m5bltm",
+              "name": "VID_20260817_110148.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-17%2FSO-07708%2FThread%20Trimmer%20Double%20Motor-1154219000035516019-1154219000035516022-1-2026-08-17T05-31-57-358Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-17/SO-07708/Thread Trimmer Double Motor-1154219000035516019-1154219000035516022-1-2026-08-17T05-31-57-358Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-17T05:32:14.271Z",
+              "expiresAt": "2026-09-16T05:31:57.358Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
