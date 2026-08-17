@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270970,
+  "serialCounter": 26270971,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -12404,7 +12404,62 @@
       "salesOrderId": "1154219000035814001",
       "salesOrderNumber": "SO-07747",
       "status": "open",
-      "machines": {}
+      "machines": {
+        "1154219000035814001-1154219000035814004-1": {
+          "machineUnitId": "1154219000035814001-1154219000035814004-1",
+          "lineItemId": "1154219000035814004",
+          "serialNumber": "26270971",
+          "qrToken": "26270971",
+          "qrStatus": "pending"
+        }
+      },
+      "processedOrder": {
+        "id": "1154219000035814001",
+        "zohoSalesOrderId": "1154219000035814001",
+        "salesOrderNumber": "SO-07747",
+        "status": "open",
+        "customerName": "Shiva Enterprises",
+        "shippingAddress": "Plot no. 22, Kh. No. 39/8, Gali no. 7, Samaypur, New Delhi, North Delhi, Delhi, 110042, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035814004",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035814001-1154219000035814004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035814001",
+            "lineItemId": "1154219000035814004",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "Shiva Enterprises",
+            "salesOrderNumber": "SO-07747",
+            "deliveryDate": "2026-08-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      }
     },
     "1154219000035792002": {
       "salesOrderId": "1154219000035792002",
