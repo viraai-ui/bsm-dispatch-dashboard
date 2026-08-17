@@ -6874,53 +6874,6 @@
         }
       ]
     },
-    "1154219000035516019": {
-      "id": "1154219000035516019",
-      "zohoSalesOrderId": "1154219000035516019",
-      "salesOrderNumber": "SO-07708",
-      "status": "open",
-      "customerName": "JAMA CORPORATION PVT.LTD.",
-      "shippingAddress": "8/2-B, ARYA NAGAR, KANPUR, Kanpur Nagar, Kanpur, Uttar Pradesh, 208002, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-11",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035516022",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035516019-1154219000035516022-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035516019",
-          "lineItemId": "1154219000035516022",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "JAMA CORPORATION PVT.LTD.",
-          "salesOrderNumber": "SO-07708",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035510018": {
       "id": "1154219000035510018",
       "zohoSalesOrderId": "1154219000035510018",
@@ -21592,7 +21545,6 @@
     "1154219000035634001",
     "1154219000035588022",
     "1154219000035527004",
-    "1154219000035516019",
     "1154219000035510018",
     "1154219000035516005",
     "1154219000035531015",
@@ -21620,8 +21572,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T11:23:41.850Z",
-  "lastAttemptAt": "2026-08-17T12:10:19.555Z",
+  "lastSuccessfulSyncAt": "2026-08-17T12:10:42.352Z",
+  "lastAttemptAt": "2026-08-17T12:10:42.352Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
