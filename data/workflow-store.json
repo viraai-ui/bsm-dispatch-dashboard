@@ -13639,7 +13639,9 @@
     "1154219000035809004": {
       "salesOrderId": "1154219000035809004",
       "salesOrderNumber": "SO-07755",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "urgent",
+      "processedAt": "2026-08-18T10:21:25.981Z",
       "processedOrder": {
         "id": "1154219000035809004",
         "zohoSalesOrderId": "1154219000035809004",
@@ -13677,8 +13679,8 @@
           {
             "id": "1154219000035809004-1154219000035809007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270990",
+            "qrToken": "26270990",
             "orderId": "1154219000035809004",
             "lineItemId": "1154219000035809007",
             "itemName": "Single Needle Walking foot (Cylinder Bed)",
@@ -13686,14 +13688,17 @@
             "customerName": "THALIR ENTERPRISES",
             "salesOrderNumber": "SO-07755",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ]
       },
@@ -13706,7 +13711,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T10:21:04.942Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T10:21:15.088Z"
+          "zohoBackupQueuedAt": "2026-08-18T10:21:15.088Z",
+          "processedAt": "2026-08-18T10:21:25.981Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
