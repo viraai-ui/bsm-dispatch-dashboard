@@ -1,5 +1,109 @@
 {
   "orders": {
+    "1154219000035796015": {
+      "id": "1154219000035796015",
+      "zohoSalesOrderId": "1154219000035796015",
+      "salesOrderNumber": "SO-07756",
+      "status": "open",
+      "customerName": "Falcon Industries",
+      "shippingAddress": "Plot No. 23, Ground Floor, Bawana Industrial Area, Pocket N, Sec-2, Bawana, Delhi, 110039, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-18",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035796018",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035796015-1154219000035796018-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035796015",
+          "lineItemId": "1154219000035796018",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "customerName": "Falcon Industries",
+          "salesOrderNumber": "SO-07756",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035809004": {
+      "id": "1154219000035809004",
+      "zohoSalesOrderId": "1154219000035809004",
+      "salesOrderNumber": "SO-07755",
+      "status": "open",
+      "customerName": "THALIR ENTERPRISES",
+      "shippingAddress": "S F NO 533/1A3 SITE NO 6, GOLDEN AVENUE, SEERAPALAYAM MADUKKARAI, Coimbatore Industrial Estate Sub Post Office, Coimbatore,, Coimbatore, Tamil Nadu, 641021, India",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-18",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035809007",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035809008",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charge Upto 10KM from BSM to",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035809004-1154219000035809007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035809004",
+          "lineItemId": "1154219000035809007",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "customerName": "THALIR ENTERPRISES",
+          "salesOrderNumber": "SO-07755",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035824045": {
       "id": "1154219000035824045",
       "zohoSalesOrderId": "1154219000035824045",
@@ -21328,6 +21432,8 @@
     }
   },
   "orderIds": [
+    "1154219000035796015",
+    "1154219000035809004",
     "1154219000035824045",
     "1154219000035790005",
     "1154219000035824001",
@@ -21373,8 +21479,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T10:08:33.427Z",
-  "lastAttemptAt": "2026-08-18T10:09:42.807Z",
+  "lastSuccessfulSyncAt": "2026-08-18T10:10:09.710Z",
+  "lastAttemptAt": "2026-08-18T10:10:09.710Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
