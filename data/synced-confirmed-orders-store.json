@@ -7570,37 +7570,37 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000035510006",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "description": "for 1300 No. Eyelet",
+          "id": "1154219000035826181",
+          "itemName": "Eyelet Punching Single Channel (1300 No. )",
+          "sku": "",
+          "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": true,
+          "woodenPackingRequired": false,
           "dispatchCategory": "machine"
         }
       ],
       "machines": [
         {
-          "id": "1154219000035510003-1154219000035510006-1",
+          "id": "1154219000035510003-1154219000035826181-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000035510003",
-          "lineItemId": "1154219000035510006",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
+          "lineItemId": "1154219000035826181",
+          "itemName": "Eyelet Punching Single Channel (1300 No. )",
+          "sku": "",
           "customerName": "Doershappy",
           "salesOrderNumber": "SO-07697",
           "deliveryDate": "2026-08-17",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": "for 1300 No. Eyelet"
+          "itemDescription": ""
         }
       ]
     },
@@ -21551,8 +21551,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T08:19:41.225Z",
-  "lastAttemptAt": "2026-08-18T08:26:59.132Z",
+  "lastSuccessfulSyncAt": "2026-08-18T08:27:23.987Z",
+  "lastAttemptAt": "2026-08-18T08:27:23.987Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
