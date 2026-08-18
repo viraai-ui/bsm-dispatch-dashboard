@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035824001": {
+      "id": "1154219000035824001",
+      "zohoSalesOrderId": "1154219000035824001",
+      "salesOrderNumber": "SO-07752",
+      "status": "open",
+      "customerName": "Smitam Lifestyle Goods Private Limited",
+      "shippingAddress": "M-18, Badli Industrial Area, Delhi, 110042",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-18",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035824006",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035824001-1154219000035824006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035824001",
+          "lineItemId": "1154219000035824006",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "customerName": "Smitam Lifestyle Goods Private Limited",
+          "salesOrderNumber": "SO-07752",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035795016": {
       "id": "1154219000035795016",
       "zohoSalesOrderId": "1154219000035795016",
@@ -21410,6 +21457,7 @@
     }
   },
   "orderIds": [
+    "1154219000035824001",
     "1154219000035795016",
     "1154219000035814001",
     "1154219000035798001",
@@ -21455,8 +21503,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T06:57:25.204Z",
-  "lastAttemptAt": "2026-08-18T07:03:07.452Z",
+  "lastSuccessfulSyncAt": "2026-08-18T07:03:37.393Z",
+  "lastAttemptAt": "2026-08-18T07:03:37.393Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
