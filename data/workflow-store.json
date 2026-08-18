@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270990,
+  "serialCounter": 26270991,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -13716,6 +13716,67 @@
           "processedAt": "2026-08-18T10:21:25.981Z",
           "dispatchNote": "",
           "vendor": ""
+        }
+      }
+    },
+    "1154219000035838014": {
+      "salesOrderId": "1154219000035838014",
+      "salesOrderNumber": "SO-07758",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035838014",
+        "zohoSalesOrderId": "1154219000035838014",
+        "salesOrderNumber": "SO-07758",
+        "status": "open",
+        "customerName": "STEP STON FOOTWEARS LLP",
+        "shippingAddress": "PLOT NO-356, GROUND FLOOR, SECTOR-17, FOOTWEAR PARK, HSIIDC, Bahadurgarh, Jhajjar, Haryana - 124507",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035838017",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035838014-1154219000035838017-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035838014",
+            "lineItemId": "1154219000035838017",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "STEP STON FOOTWEARS LLP",
+            "salesOrderNumber": "SO-07758",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035838014-1154219000035838017-1": {
+          "machineUnitId": "1154219000035838014-1154219000035838017-1",
+          "lineItemId": "1154219000035838017",
+          "serialNumber": "26270991",
+          "qrToken": "26270991",
+          "qrStatus": "pending"
         }
       }
     }
