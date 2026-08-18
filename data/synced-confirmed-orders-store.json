@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000035824045": {
+      "id": "1154219000035824045",
+      "zohoSalesOrderId": "1154219000035824045",
+      "salesOrderNumber": "SO-07754",
+      "status": "open",
+      "customerName": "Sir Sasa",
+      "shippingAddress": "KHARSA NO 285, ninder mod, harmada-302013, India",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035824050",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035824045-1154219000035824050-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035824045",
+          "lineItemId": "1154219000035824050",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "customerName": "Sir Sasa",
+          "salesOrderNumber": "SO-07754",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035824045-1154219000035824050-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035824045",
+          "lineItemId": "1154219000035824050",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "customerName": "Sir Sasa",
+          "salesOrderNumber": "SO-07754",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035790005": {
       "id": "1154219000035790005",
       "zohoSalesOrderId": "1154219000035790005",
@@ -21504,6 +21572,7 @@
     }
   },
   "orderIds": [
+    "1154219000035824045",
     "1154219000035790005",
     "1154219000035824001",
     "1154219000035795016",
@@ -21551,8 +21620,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T08:57:23.559Z",
-  "lastAttemptAt": "2026-08-18T09:04:16.957Z",
+  "lastSuccessfulSyncAt": "2026-08-18T09:04:41.216Z",
+  "lastAttemptAt": "2026-08-18T09:04:41.216Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
