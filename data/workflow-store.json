@@ -13492,7 +13492,9 @@
     "1154219000035790005": {
       "salesOrderId": "1154219000035790005",
       "salesOrderNumber": "SO-07753",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-18T07:48:05.319Z",
       "processedOrder": {
         "id": "1154219000035790005",
         "zohoSalesOrderId": "1154219000035790005",
@@ -13520,8 +13522,8 @@
           {
             "id": "1154219000035790005-1154219000035790008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270988",
+            "qrToken": "26270988",
             "orderId": "1154219000035790005",
             "lineItemId": "1154219000035790008",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -13529,14 +13531,17 @@
             "customerName": "The Kicks Factory Co.",
             "salesOrderNumber": "SO-07753",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ]
       },
@@ -13549,7 +13554,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T07:47:52.897Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T07:48:01.689Z"
+          "zohoBackupQueuedAt": "2026-08-18T07:48:01.689Z",
+          "processedAt": "2026-08-18T07:48:05.319Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
