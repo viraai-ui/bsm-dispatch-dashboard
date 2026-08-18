@@ -6691,7 +6691,7 @@
       "shippingAddress": "C/O ASHOK KUMAR PAUL, DHADIKA, Gohaldangra, DHADIKA, Gohaldangra,, East Singhbhum, Jharkhand, 832302, India",
       "salesperson": "Deepak Kumar",
       "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
+      "dashboardStatus": "Review Required",
       "reviewRequired": false,
       "lineItems": [
         {
@@ -6700,7 +6700,7 @@
           "sku": "831-2",
           "description": "",
           "quantity": 1,
-          "pendingQuantity": 1,
+          "pendingQuantity": 0,
           "woodenPackingRequired": true,
           "dispatchCategory": "machine"
         },
@@ -6710,34 +6710,12 @@
           "sku": "7100",
           "description": "",
           "quantity": 12.5,
-          "pendingQuantity": 12.5,
+          "pendingQuantity": 0,
           "woodenPackingRequired": false,
           "dispatchCategory": "adhesive"
         }
       ],
-      "machines": [
-        {
-          "id": "1154219000035657001-1154219000035657004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035657001",
-          "lineItemId": "1154219000035657004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "ANUGAMI INDUSTRIES PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07723",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
+      "machines": []
     },
     "1154219000035634001": {
       "id": "1154219000035634001",
@@ -21620,8 +21598,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T09:19:41.977Z",
-  "lastAttemptAt": "2026-08-18T09:26:58.991Z",
+  "lastSuccessfulSyncAt": "2026-08-18T09:27:23.725Z",
+  "lastAttemptAt": "2026-08-18T09:27:23.725Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
