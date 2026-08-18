@@ -1,99 +1,5 @@
 {
   "orders": {
-    "1154219000035787009": {
-      "id": "1154219000035787009",
-      "zohoSalesOrderId": "1154219000035787009",
-      "salesOrderNumber": "SO-07751",
-      "status": "open",
-      "customerName": "SIGNATURE FOOTWEAR",
-      "shippingAddress": "Ground Floor,First Floor and Two Room On Second Floor, 1451, Unnamed Road, MIE Part B, Bahadurgarh, Jhajjar,, Haryana,, 124507",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035787012",
-          "itemName": "Heating oven [2 Feet]",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035787009-1154219000035787012-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035787009",
-          "lineItemId": "1154219000035787012",
-          "itemName": "Heating oven [2 Feet]",
-          "sku": "",
-          "customerName": "SIGNATURE FOOTWEAR",
-          "salesOrderNumber": "SO-07751",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035792002": {
-      "id": "1154219000035792002",
-      "zohoSalesOrderId": "1154219000035792002",
-      "salesOrderNumber": "SO-07750",
-      "status": "open",
-      "customerName": "LIFESOL MEDICAL INDIA PRIVATE LIMITED",
-      "shippingAddress": "K-59, SITE 5 KASNA INDUSTRIAL AREA, GREATER NOIDA, Gautambuddha Nagar, Uttar Pradesh, 201308, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035792005",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035792002-1154219000035792005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035792002",
-          "lineItemId": "1154219000035792005",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "LIFESOL MEDICAL INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07750",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035795016": {
       "id": "1154219000035795016",
       "zohoSalesOrderId": "1154219000035795016",
@@ -138,74 +44,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035798028": {
-      "id": "1154219000035798028",
-      "zohoSalesOrderId": "1154219000035798028",
-      "salesOrderNumber": "SO-07748",
-      "status": "open",
-      "customerName": "ACCLAIM INDUSTRIS",
-      "shippingAddress": "Sector-17 Plot No. 318, HSIIDC, Footwear Park, Bahadurgarh-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035798031",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "sole press back & front Gutkha",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035798028-1154219000035798031-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035798028",
-          "lineItemId": "1154219000035798031",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "ACCLAIM INDUSTRIS",
-          "salesOrderNumber": "SO-07748",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "sole press back & front Gutkha"
-        },
-        {
-          "id": "1154219000035798028-1154219000035798031-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035798028",
-          "lineItemId": "1154219000035798031",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "ACCLAIM INDUSTRIS",
-          "salesOrderNumber": "SO-07748",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "sole press back & front Gutkha"
         }
       ]
     },
@@ -21572,10 +21410,7 @@
     }
   },
   "orderIds": [
-    "1154219000035787009",
-    "1154219000035792002",
     "1154219000035795016",
-    "1154219000035798028",
     "1154219000035814001",
     "1154219000035798001",
     "1154219000035795001",
@@ -21620,8 +21455,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T06:18:33.230Z",
-  "lastAttemptAt": "2026-08-18T06:33:07.241Z",
+  "lastSuccessfulSyncAt": "2026-08-18T06:33:40.742Z",
+  "lastAttemptAt": "2026-08-18T06:33:40.742Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
