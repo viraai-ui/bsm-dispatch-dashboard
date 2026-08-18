@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270989,
+  "serialCounter": 26270990,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -13633,6 +13633,77 @@
           "processedAt": "2026-08-18T10:11:43.290Z",
           "dispatchNote": "",
           "vendor": ""
+        }
+      }
+    },
+    "1154219000035809004": {
+      "salesOrderId": "1154219000035809004",
+      "salesOrderNumber": "SO-07755",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035809004",
+        "zohoSalesOrderId": "1154219000035809004",
+        "salesOrderNumber": "SO-07755",
+        "status": "open",
+        "customerName": "THALIR ENTERPRISES",
+        "shippingAddress": "S F NO 533/1A3 SITE NO 6, GOLDEN AVENUE, SEERAPALAYAM MADUKKARAI, Coimbatore Industrial Estate Sub Post Office, Coimbatore,, Coimbatore, Tamil Nadu, 641021, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035809007",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035809008",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charge Upto 10KM from BSM to",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035809004-1154219000035809007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035809004",
+            "lineItemId": "1154219000035809007",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "THALIR ENTERPRISES",
+            "salesOrderNumber": "SO-07755",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035809004-1154219000035809007-1": {
+          "machineUnitId": "1154219000035809004-1154219000035809007-1",
+          "lineItemId": "1154219000035809007",
+          "serialNumber": "26270990",
+          "qrToken": "26270990",
+          "qrStatus": "pending"
         }
       }
     }
