@@ -13802,7 +13802,7 @@
       "salesOrderId": "1154219000035838001",
       "salesOrderNumber": "SO-07757",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-18T12:50:16.146Z",
       "processedOrder": {
         "id": "1154219000035838001",
@@ -13863,7 +13863,8 @@
           "dispatchNote": "",
           "vendor": ""
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000035824045": {
       "salesOrderId": "1154219000035824045",
@@ -13973,7 +13974,7 @@
           "vendor": "Sunrise"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 4
     }
   }
 }
