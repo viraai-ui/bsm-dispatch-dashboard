@@ -8931,6 +8931,62 @@
       "machineIds": [
         "1154219000035814001-1154219000035814004-1"
       ]
+    },
+    "1154219000035794018": {
+      "completedAt": "2026-08-18T05:42:48.374Z",
+      "order": {
+        "id": "1154219000035794018",
+        "zohoSalesOrderId": "1154219000035794018",
+        "salesOrderNumber": "SO-07744",
+        "status": "open",
+        "customerName": "SF ENTERPRISES",
+        "shippingAddress": "CTS 2630, AB Village Ali Talao, Kharodi Opp. Marve Road, Malad, Mumbai, Maharashtra, 400095, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035794021",
+            "itemName": "Edge coloring machine [Double Side]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035794018-1154219000035794021-1",
+            "unitNumber": 1,
+            "serialNumber": "26270980",
+            "qrToken": "26270980",
+            "orderId": "1154219000035794018",
+            "lineItemId": "1154219000035794021",
+            "itemName": "Edge coloring machine [Double Side]",
+            "sku": "",
+            "customerName": "SF ENTERPRISES",
+            "salesOrderNumber": "SO-07744",
+            "deliveryDate": "2026-08-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-17",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035794018-1154219000035794021-1"
+      ]
     }
   }
 }
