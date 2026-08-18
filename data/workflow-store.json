@@ -13722,7 +13722,8 @@
           "dispatchNote": "",
           "vendor": ""
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035838014": {
       "salesOrderId": "1154219000035838014",
@@ -13794,7 +13795,8 @@
           "dispatchNote": "",
           "vendor": ""
         }
-      }
+      },
+      "dispatchSortOrder": 3
     },
     "1154219000035838001": {
       "salesOrderId": "1154219000035838001",
@@ -13867,7 +13869,7 @@
       "salesOrderId": "1154219000035824045",
       "salesOrderNumber": "SO-07754",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-18T12:51:36.362Z",
       "processedOrder": {
         "id": "1154219000035824045",
@@ -13970,7 +13972,8 @@
           "dispatchNote": "V Trans",
           "vendor": "Sunrise"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     }
   }
 }
