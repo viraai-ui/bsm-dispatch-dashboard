@@ -13419,7 +13419,9 @@
     "1154219000035824001": {
       "salesOrderId": "1154219000035824001",
       "salesOrderNumber": "SO-07752",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-18T07:07:51.686Z",
       "processedOrder": {
         "id": "1154219000035824001",
         "zohoSalesOrderId": "1154219000035824001",
@@ -13447,8 +13449,8 @@
           {
             "id": "1154219000035824001-1154219000035824006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270987",
+            "qrToken": "26270987",
             "orderId": "1154219000035824001",
             "lineItemId": "1154219000035824006",
             "itemName": "Single Needle Walking foot (Cylinder Bed)",
@@ -13456,14 +13458,17 @@
             "customerName": "Smitam Lifestyle Goods Private Limited",
             "salesOrderNumber": "SO-07752",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ]
       },
@@ -13476,7 +13481,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T07:06:40.288Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T07:06:48.764Z"
+          "zohoBackupQueuedAt": "2026-08-18T07:06:48.764Z",
+          "processedAt": "2026-08-18T07:07:51.686Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
