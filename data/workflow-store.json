@@ -13043,7 +13043,9 @@
     "1154219000035788001": {
       "salesOrderId": "1154219000035788001",
       "salesOrderNumber": "SO-07743",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-18T05:28:24.517Z",
       "processedOrder": {
         "id": "1154219000035788001",
         "zohoSalesOrderId": "1154219000035788001",
@@ -13053,7 +13055,7 @@
         "shippingAddress": "PLOT NO. 68, Sector 16, HSIIDC, Bahadurgarh, Sankhol, Jhajjar,, Haryana, 124507, India",
         "salesperson": "Karan Singh",
         "deliveryDate": "2026-08-17",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -13121,8 +13123,8 @@
           {
             "id": "1154219000035788001-1154219000035788006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270981",
+            "qrToken": "26270981",
             "orderId": "1154219000035788001",
             "lineItemId": "1154219000035788006",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -13130,14 +13132,17 @@
             "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07743",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000035788001-1154219000035788007-1",
@@ -13158,13 +13163,15 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000035788001-1154219000035788004-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270982",
+            "qrToken": "26270982",
             "orderId": "1154219000035788001",
             "lineItemId": "1154219000035788004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -13172,20 +13179,23 @@
             "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07743",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000035788001-1154219000035788005-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270983",
+            "qrToken": "26270983",
             "orderId": "1154219000035788001",
             "lineItemId": "1154219000035788005",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -13193,20 +13203,23 @@
             "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07743",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000035788001-1154219000035788008-1",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270984",
+            "qrToken": "26270984",
             "orderId": "1154219000035788001",
             "lineItemId": "1154219000035788008",
             "itemName": "Compressor (10 HP)",
@@ -13214,20 +13227,23 @@
             "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07743",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "3 Cylider, 500 Ltr"
+            "itemDescription": "3 Cylider, 500 Ltr",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000035788001-1154219000035788009-1",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270985",
+            "qrToken": "26270985",
             "orderId": "1154219000035788001",
             "lineItemId": "1154219000035788009",
             "itemName": "Automatic Double Bed Heat Press (Head Movement) (15x15)",
@@ -13235,14 +13251,17 @@
             "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07743",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ]
       },
@@ -13255,7 +13274,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T05:27:27.876Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z"
+          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z",
+          "processedAt": "2026-08-18T05:28:24.517Z",
+          "dispatchNote": "",
+          "vendor": ""
         },
         "1154219000035788001-1154219000035788004-1": {
           "machineUnitId": "1154219000035788001-1154219000035788004-1",
@@ -13265,7 +13287,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T05:27:27.876Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z"
+          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z",
+          "processedAt": "2026-08-18T05:28:24.517Z",
+          "dispatchNote": "",
+          "vendor": ""
         },
         "1154219000035788001-1154219000035788005-1": {
           "machineUnitId": "1154219000035788001-1154219000035788005-1",
@@ -13275,7 +13300,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T05:27:27.876Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z"
+          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z",
+          "processedAt": "2026-08-18T05:28:24.517Z",
+          "dispatchNote": "",
+          "vendor": ""
         },
         "1154219000035788001-1154219000035788008-1": {
           "machineUnitId": "1154219000035788001-1154219000035788008-1",
@@ -13285,7 +13313,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T05:27:27.876Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z"
+          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z",
+          "processedAt": "2026-08-18T05:28:24.517Z",
+          "dispatchNote": "",
+          "vendor": ""
         },
         "1154219000035788001-1154219000035788009-1": {
           "machineUnitId": "1154219000035788001-1154219000035788009-1",
@@ -13295,7 +13326,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T05:27:27.876Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z"
+          "zohoBackupQueuedAt": "2026-08-17T13:08:49.644Z",
+          "processedAt": "2026-08-18T05:28:24.517Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
