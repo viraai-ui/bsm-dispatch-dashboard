@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035787009": {
+      "id": "1154219000035787009",
+      "zohoSalesOrderId": "1154219000035787009",
+      "salesOrderNumber": "SO-07751",
+      "status": "open",
+      "customerName": "SIGNATURE FOOTWEAR",
+      "shippingAddress": "Ground Floor,First Floor and Two Room On Second Floor, 1451, Unnamed Road, MIE Part B, Bahadurgarh, Jhajjar,, Haryana,, 124507",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-18",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035787012",
+          "itemName": "Heating oven [2 Feet]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035787009-1154219000035787012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035787009",
+          "lineItemId": "1154219000035787012",
+          "itemName": "Heating oven [2 Feet]",
+          "sku": "",
+          "customerName": "SIGNATURE FOOTWEAR",
+          "salesOrderNumber": "SO-07751",
+          "deliveryDate": "2026-08-18",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035792002": {
       "id": "1154219000035792002",
       "zohoSalesOrderId": "1154219000035792002",
@@ -21525,6 +21572,7 @@
     }
   },
   "orderIds": [
+    "1154219000035787009",
     "1154219000035792002",
     "1154219000035795016",
     "1154219000035798028",
@@ -21572,8 +21620,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-17T13:18:54.045Z",
-  "lastAttemptAt": "2026-08-18T05:17:23.087Z",
+  "lastSuccessfulSyncAt": "2026-08-18T05:17:48.608Z",
+  "lastAttemptAt": "2026-08-18T05:17:48.608Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
