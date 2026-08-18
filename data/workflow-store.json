@@ -13799,7 +13799,7 @@
     "1154219000035838001": {
       "salesOrderId": "1154219000035838001",
       "salesOrderNumber": "SO-07757",
-      "status": "processed",
+      "status": "qr_not_required",
       "dispatchPriority": "regular",
       "processedAt": "2026-08-18T12:49:42.286Z",
       "processedOrder": {
@@ -13856,10 +13856,7 @@
           "machineUnitId": "1154219000035838001-1154219000035838004-1",
           "lineItemId": "1154219000035838004",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-08-18T12:49:39.044Z",
-          "processedAt": "2026-08-18T12:49:42.286Z",
-          "dispatchNote": "",
-          "vendor": ""
+          "qrNotRequiredAt": "2026-08-18T12:50:11.763Z"
         }
       }
     }
