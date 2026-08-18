@@ -13866,7 +13866,9 @@
     "1154219000035824045": {
       "salesOrderId": "1154219000035824045",
       "salesOrderNumber": "SO-07754",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-18T12:51:36.362Z",
       "processedOrder": {
         "id": "1154219000035824045",
         "zohoSalesOrderId": "1154219000035824045",
@@ -13894,8 +13896,8 @@
           {
             "id": "1154219000035824045-1154219000035824050-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270992",
+            "qrToken": "26270992",
             "orderId": "1154219000035824045",
             "lineItemId": "1154219000035824050",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -13903,20 +13905,23 @@
             "customerName": "Sir Sasa",
             "salesOrderNumber": "SO-07754",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "Sunrise",
+            "dispatchNote": "V trans"
           },
           {
             "id": "1154219000035824045-1154219000035824050-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270993",
+            "qrToken": "26270993",
             "orderId": "1154219000035824045",
             "lineItemId": "1154219000035824050",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -13924,14 +13929,17 @@
             "customerName": "Sir Sasa",
             "salesOrderNumber": "SO-07754",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "Sunrise",
+            "dispatchNote": "V Trans"
           }
         ]
       },
@@ -13944,7 +13952,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T12:50:38.555Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T12:50:48.184Z"
+          "zohoBackupQueuedAt": "2026-08-18T12:50:48.184Z",
+          "processedAt": "2026-08-18T12:51:36.362Z",
+          "dispatchNote": "V trans",
+          "vendor": "Sunrise"
         },
         "1154219000035824045-1154219000035824050-2": {
           "machineUnitId": "1154219000035824045-1154219000035824050-2",
@@ -13954,7 +13965,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T12:50:38.555Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T12:50:48.184Z"
+          "zohoBackupQueuedAt": "2026-08-18T12:50:48.184Z",
+          "processedAt": "2026-08-18T12:51:36.362Z",
+          "dispatchNote": "V Trans",
+          "vendor": "Sunrise"
         }
       }
     }
