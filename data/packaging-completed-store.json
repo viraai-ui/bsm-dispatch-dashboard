@@ -9043,6 +9043,63 @@
       "machineIds": [
         "1154219000035787009-1154219000035787012-1"
       ]
+    },
+    "1154219000035824001": {
+      "completedAt": "2026-08-18T08:33:15.677Z",
+      "order": {
+        "id": "1154219000035824001",
+        "zohoSalesOrderId": "1154219000035824001",
+        "salesOrderNumber": "SO-07752",
+        "status": "open",
+        "customerName": "Smitam Lifestyle Goods Private Limited",
+        "shippingAddress": "M-18, Badli Industrial Area, Delhi, 110042",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035824006",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035824001-1154219000035824006-1",
+            "unitNumber": 1,
+            "serialNumber": "26270987",
+            "qrToken": "26270987",
+            "orderId": "1154219000035824001",
+            "lineItemId": "1154219000035824006",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "Smitam Lifestyle Goods Private Limited",
+            "salesOrderNumber": "SO-07752",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035824001-1154219000035824006-1"
+      ]
     }
   }
 }
