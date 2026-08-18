@@ -13869,9 +13869,9 @@
     "1154219000035824045": {
       "salesOrderId": "1154219000035824045",
       "salesOrderNumber": "SO-07754",
-      "status": "qr_generated",
-      "dispatchPriority": "urgent",
-      "processedAt": "2026-08-18T12:51:36.362Z",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-18T13:05:04.161Z",
       "processedOrder": {
         "id": "1154219000035824045",
         "zohoSalesOrderId": "1154219000035824045",
@@ -13881,16 +13881,16 @@
         "shippingAddress": "KHARSA NO 285, ninder mod, harmada-302013, India",
         "salesperson": "Shivani Kumari",
         "deliveryDate": "2026-08-19",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "Processed",
         "reviewRequired": false,
         "lineItems": [
           {
             "id": "1154219000035824050",
             "itemName": "Hotmelt Roller Coater (16 inch)",
             "sku": "831-2",
-            "description": "",
-            "quantity": 2,
-            "pendingQuantity": 2,
+            "description": "Good Packing",
+            "quantity": 3,
+            "pendingQuantity": 3,
             "woodenPackingRequired": true,
             "dispatchCategory": "machine"
           }
@@ -13908,23 +13908,45 @@
             "customerName": "Sir Sasa",
             "salesOrderNumber": "SO-07754",
             "deliveryDate": "2026-08-19",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "",
-            "warrantyStart": "2026-08-18",
-            "vendor": "Sunrise",
-            "dispatchNote": "V trans"
+            "itemDescription": "Good Packing",
+            "dispatchNote": "V trans",
+            "vendor": "Sunrise"
           },
           {
             "id": "1154219000035824045-1154219000035824050-2",
             "unitNumber": 2,
             "serialNumber": "26270993",
             "qrToken": "26270993",
+            "orderId": "1154219000035824045",
+            "lineItemId": "1154219000035824050",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Sir Sasa",
+            "salesOrderNumber": "SO-07754",
+            "deliveryDate": "2026-08-19",
+            "status": "Processed",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Good Packing",
+            "dispatchNote": "V Trans",
+            "vendor": "Sunrise"
+          },
+          {
+            "id": "1154219000035824045-1154219000035824050-3",
+            "unitNumber": 3,
+            "serialNumber": "26270994",
+            "qrToken": "26270994",
             "orderId": "1154219000035824045",
             "lineItemId": "1154219000035824050",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -13939,7 +13961,7 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "",
+            "itemDescription": "Good Packing",
             "warrantyStart": "2026-08-18",
             "vendor": "Sunrise",
             "dispatchNote": "V Trans"
@@ -13981,7 +14003,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T13:04:23.249Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T13:04:33.214Z"
+          "zohoBackupQueuedAt": "2026-08-18T13:04:33.214Z",
+          "processedAt": "2026-08-18T13:05:04.161Z",
+          "dispatchNote": "V Trans",
+          "vendor": "Sunrise"
         }
       }
     }
