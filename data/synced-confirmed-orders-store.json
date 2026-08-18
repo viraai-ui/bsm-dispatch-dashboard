@@ -214,9 +214,9 @@
           "id": "1154219000035824050",
           "itemName": "Hotmelt Roller Coater (16 inch)",
           "sku": "831-2",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
+          "description": "Good Packing",
+          "quantity": 3,
+          "pendingQuantity": 3,
           "woodenPackingRequired": true,
           "dispatchCategory": "machine"
         }
@@ -241,7 +241,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "Good Packing"
         },
         {
           "id": "1154219000035824045-1154219000035824050-2",
@@ -262,7 +262,28 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "Good Packing"
+        },
+        {
+          "id": "1154219000035824045-1154219000035824050-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035824045",
+          "lineItemId": "1154219000035824050",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "customerName": "Sir Sasa",
+          "salesOrderNumber": "SO-07754",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Good Packing"
         }
       ]
     },
@@ -21575,8 +21596,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T12:39:18.444Z",
-  "lastAttemptAt": "2026-08-18T13:03:33.697Z",
+  "lastSuccessfulSyncAt": "2026-08-18T13:03:57.301Z",
+  "lastAttemptAt": "2026-08-18T13:03:57.301Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
