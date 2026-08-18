@@ -7479,95 +7479,6 @@
         }
       ]
     },
-    "1154219000035517005": {
-      "id": "1154219000035517005",
-      "zohoSalesOrderId": "1154219000035517005",
-      "salesOrderNumber": "SO-07698",
-      "status": "open",
-      "customerName": "GRAPHITE FOILS INDIA PRIVATE LIMITED",
-      "shippingAddress": "D5, Gallops Industrial Park, Sarkhej-Bavla Road, Rajoda-Changodar, Gallops Industrial Park, Ahmedabad, Gujarat, 382220, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-11",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035517008",
-          "itemName": "Cutting Board [PP Board] - 35*17*1 Inch",
-          "sku": "",
-          "description": "",
-          "quantity": 3,
-          "pendingQuantity": 3,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035517005-1154219000035517008-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035517005",
-          "lineItemId": "1154219000035517008",
-          "itemName": "Cutting Board [PP Board] - 35*17*1 Inch",
-          "sku": "",
-          "customerName": "GRAPHITE FOILS INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07698",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035517005-1154219000035517008-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035517005",
-          "lineItemId": "1154219000035517008",
-          "itemName": "Cutting Board [PP Board] - 35*17*1 Inch",
-          "sku": "",
-          "customerName": "GRAPHITE FOILS INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07698",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035517005-1154219000035517008-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035517005",
-          "lineItemId": "1154219000035517008",
-          "itemName": "Cutting Board [PP Board] - 35*17*1 Inch",
-          "sku": "",
-          "customerName": "GRAPHITE FOILS INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07698",
-          "deliveryDate": "2026-08-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035510003": {
       "id": "1154219000035510003",
       "zohoSalesOrderId": "1154219000035510003",
@@ -21441,7 +21352,6 @@
     "1154219000035516005",
     "1154219000035531015",
     "1154219000035532001",
-    "1154219000035517005",
     "1154219000035510003",
     "1154219000035503001",
     "1154219000035500001",
@@ -21463,8 +21373,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-18T09:49:42.306Z",
-  "lastAttemptAt": "2026-08-18T10:04:16.805Z",
+  "lastSuccessfulSyncAt": "2026-08-18T10:04:44.540Z",
+  "lastAttemptAt": "2026-08-18T10:04:44.540Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
