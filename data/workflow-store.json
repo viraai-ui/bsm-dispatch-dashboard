@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270985,
+  "serialCounter": 26270986,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -13330,6 +13330,67 @@
           "processedAt": "2026-08-18T05:28:24.517Z",
           "dispatchNote": "",
           "vendor": ""
+        }
+      }
+    },
+    "1154219000035787009": {
+      "salesOrderId": "1154219000035787009",
+      "salesOrderNumber": "SO-07751",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035787009",
+        "zohoSalesOrderId": "1154219000035787009",
+        "salesOrderNumber": "SO-07751",
+        "status": "open",
+        "customerName": "SIGNATURE FOOTWEAR",
+        "shippingAddress": "Ground Floor,First Floor and Two Room On Second Floor, 1451, Unnamed Road, MIE Part B, Bahadurgarh, Jhajjar,, Haryana,, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035787012",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035787009-1154219000035787012-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035787009",
+            "lineItemId": "1154219000035787012",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "customerName": "SIGNATURE FOOTWEAR",
+            "salesOrderNumber": "SO-07751",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035787009-1154219000035787012-1": {
+          "machineUnitId": "1154219000035787009-1154219000035787012-1",
+          "lineItemId": "1154219000035787012",
+          "serialNumber": "26270986",
+          "qrToken": "26270986",
+          "qrStatus": "pending"
         }
       }
     }
