@@ -9157,6 +9157,62 @@
       "machineIds": [
         "1154219000035790005-1154219000035790008-1"
       ]
+    },
+    "1154219000035796015": {
+      "completedAt": "2026-08-18T10:57:41.186Z",
+      "order": {
+        "id": "1154219000035796015",
+        "zohoSalesOrderId": "1154219000035796015",
+        "salesOrderNumber": "SO-07756",
+        "status": "open",
+        "customerName": "Falcon Industries",
+        "shippingAddress": "Plot No. 23, Ground Floor, Bawana Industrial Area, Pocket N, Sec-2, Bawana, Delhi, 110039, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035796018",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035796015-1154219000035796018-1",
+            "unitNumber": 1,
+            "serialNumber": "26270989",
+            "qrToken": "26270989",
+            "orderId": "1154219000035796015",
+            "lineItemId": "1154219000035796018",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "customerName": "Falcon Industries",
+            "salesOrderNumber": "SO-07756",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent"
+      },
+      "machineIds": [
+        "1154219000035796015-1154219000035796018-1"
+      ]
     }
   }
 }
