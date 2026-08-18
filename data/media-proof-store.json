@@ -2486,6 +2486,24 @@
               "expiresAt": "2026-09-17T09:25:06.345Z"
             }
           ]
+        },
+        "1154219000035795001-1154219000035795004-4": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035795001-1154219000035795004-4-video-1787045382692-immo72",
+              "name": "VID_20260818_145922.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-18%2FSO-07745%2FHotmelt%20Roller%20Coater%2016%20inch-1154219000035795001-1154219000035795004-4-2026-08-18T09-29-28-903Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-18/SO-07745/Hotmelt Roller Coater 16 inch-1154219000035795001-1154219000035795004-4-2026-08-18T09-29-28-903Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-18T09:29:42.692Z",
+              "expiresAt": "2026-09-17T09:29:28.903Z"
+            }
+          ]
         }
       },
       "videoNotRequired": false
