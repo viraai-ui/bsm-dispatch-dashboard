@@ -13567,7 +13567,9 @@
     "1154219000035796015": {
       "salesOrderId": "1154219000035796015",
       "salesOrderNumber": "SO-07756",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "urgent",
+      "processedAt": "2026-08-18T10:11:43.290Z",
       "processedOrder": {
         "id": "1154219000035796015",
         "zohoSalesOrderId": "1154219000035796015",
@@ -13595,8 +13597,8 @@
           {
             "id": "1154219000035796015-1154219000035796018-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270989",
+            "qrToken": "26270989",
             "orderId": "1154219000035796015",
             "lineItemId": "1154219000035796018",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -13604,14 +13606,17 @@
             "customerName": "Falcon Industries",
             "salesOrderNumber": "SO-07756",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ]
       },
@@ -13624,7 +13629,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T10:11:29.778Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T10:11:38.836Z"
+          "zohoBackupQueuedAt": "2026-08-18T10:11:38.836Z",
+          "processedAt": "2026-08-18T10:11:43.290Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
