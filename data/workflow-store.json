@@ -13722,7 +13722,9 @@
     "1154219000035838014": {
       "salesOrderId": "1154219000035838014",
       "salesOrderNumber": "SO-07758",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "urgent",
+      "processedAt": "2026-08-18T12:39:59.609Z",
       "processedOrder": {
         "id": "1154219000035838014",
         "zohoSalesOrderId": "1154219000035838014",
@@ -13750,8 +13752,8 @@
           {
             "id": "1154219000035838014-1154219000035838017-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270991",
+            "qrToken": "26270991",
             "orderId": "1154219000035838014",
             "lineItemId": "1154219000035838017",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -13759,14 +13761,17 @@
             "customerName": "STEP STON FOOTWEARS LLP",
             "salesOrderNumber": "SO-07758",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ]
       },
@@ -13779,7 +13784,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T12:37:31.855Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-18T12:37:47.851Z"
+          "zohoBackupQueuedAt": "2026-08-18T12:37:47.851Z",
+          "processedAt": "2026-08-18T12:39:59.609Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
