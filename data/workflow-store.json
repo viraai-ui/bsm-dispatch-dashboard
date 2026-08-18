@@ -13799,13 +13799,67 @@
     "1154219000035838001": {
       "salesOrderId": "1154219000035838001",
       "salesOrderNumber": "SO-07757",
-      "status": "qr_not_required",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-18T12:49:42.286Z",
+      "processedOrder": {
+        "id": "1154219000035838001",
+        "zohoSalesOrderId": "1154219000035838001",
+        "salesOrderNumber": "SO-07757",
+        "status": "open",
+        "customerName": "RAMESHWAR FABRICATOR",
+        "shippingAddress": "0, JAAR FACTORY KE PAAS, BITTHARIYO KA PURA, Girwai, Girwai,, Gwalior, Madhya Pradesh, 474002, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035838004",
+            "itemName": "PP Board (60*20*4 Inch)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035838001-1154219000035838004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035838001",
+            "lineItemId": "1154219000035838004",
+            "itemName": "PP Board (60*20*4 Inch)",
+            "sku": "",
+            "customerName": "RAMESHWAR FABRICATOR",
+            "salesOrderNumber": "SO-07757",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Printed",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
+          }
+        ]
+      },
       "machines": {
         "1154219000035838001-1154219000035838004-1": {
           "machineUnitId": "1154219000035838001-1154219000035838004-1",
           "lineItemId": "1154219000035838004",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-08-18T12:49:39.044Z"
+          "qrNotRequiredAt": "2026-08-18T12:49:39.044Z",
+          "processedAt": "2026-08-18T12:49:42.286Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
