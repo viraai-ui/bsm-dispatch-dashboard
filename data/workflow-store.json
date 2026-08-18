@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270988,
+  "serialCounter": 26270989,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -13563,6 +13563,67 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035796015": {
+      "salesOrderId": "1154219000035796015",
+      "salesOrderNumber": "SO-07756",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035796015",
+        "zohoSalesOrderId": "1154219000035796015",
+        "salesOrderNumber": "SO-07756",
+        "status": "open",
+        "customerName": "Falcon Industries",
+        "shippingAddress": "Plot No. 23, Ground Floor, Bawana Industrial Area, Pocket N, Sec-2, Bawana, Delhi, 110039, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035796018",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035796015-1154219000035796018-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035796015",
+            "lineItemId": "1154219000035796018",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "customerName": "Falcon Industries",
+            "salesOrderNumber": "SO-07756",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035796015-1154219000035796018-1": {
+          "machineUnitId": "1154219000035796015-1154219000035796018-1",
+          "lineItemId": "1154219000035796018",
+          "serialNumber": "26270989",
+          "qrToken": "26270989",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
