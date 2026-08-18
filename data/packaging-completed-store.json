@@ -8987,6 +8987,62 @@
       "machineIds": [
         "1154219000035794018-1154219000035794021-1"
       ]
+    },
+    "1154219000035787009": {
+      "completedAt": "2026-08-18T05:48:09.789Z",
+      "order": {
+        "id": "1154219000035787009",
+        "zohoSalesOrderId": "1154219000035787009",
+        "salesOrderNumber": "SO-07751",
+        "status": "open",
+        "customerName": "SIGNATURE FOOTWEAR",
+        "shippingAddress": "Ground Floor,First Floor and Two Room On Second Floor, 1451, Unnamed Road, MIE Part B, Bahadurgarh, Jhajjar,, Haryana,, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035787012",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035787009-1154219000035787012-1",
+            "unitNumber": 1,
+            "serialNumber": "26270986",
+            "qrToken": "26270986",
+            "orderId": "1154219000035787009",
+            "lineItemId": "1154219000035787012",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "customerName": "SIGNATURE FOOTWEAR",
+            "salesOrderNumber": "SO-07751",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035787009-1154219000035787012-1"
+      ]
     }
   }
 }
