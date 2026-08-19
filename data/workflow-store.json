@@ -14075,7 +14075,9 @@
     "1154219000035858007": {
       "salesOrderId": "1154219000035858007",
       "salesOrderNumber": "SO-07763",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T06:19:44.395Z",
       "processedOrder": {
         "id": "1154219000035858007",
         "zohoSalesOrderId": "1154219000035858007",
@@ -14103,8 +14105,8 @@
           {
             "id": "1154219000035858007-1154219000035858010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270995",
+            "qrToken": "26270995",
             "orderId": "1154219000035858007",
             "lineItemId": "1154219000035858010",
             "itemName": "Steamer (6 nozzles) (SS body)",
@@ -14112,14 +14114,17 @@
             "customerName": "Nayra Enterprises",
             "salesOrderNumber": "SO-07763",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -14132,7 +14137,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:18:05.575Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:18:16.102Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:18:16.102Z",
+          "processedAt": "2026-08-19T06:19:44.395Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
