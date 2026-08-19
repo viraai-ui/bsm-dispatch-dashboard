@@ -2896,6 +2896,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000031849013": {
+      "id": "ship-1787142771914-znjoz",
+      "itemId": "1154219000031849013",
+      "orderId": "1154219000031849013",
+      "machineId": "1154219000031849013-1154219000031849017-1",
+      "salesOrderNumber": "SO-07154",
+      "customerName": "SUN LEATHER",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "V Trans",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T12:32:51.914Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
