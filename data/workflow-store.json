@@ -14151,7 +14151,9 @@
     "1154219000035873001": {
       "salesOrderId": "1154219000035873001",
       "salesOrderNumber": "SO-07764",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T06:39:12.212Z",
       "processedOrder": {
         "id": "1154219000035873001",
         "zohoSalesOrderId": "1154219000035873001",
@@ -14179,8 +14181,8 @@
           {
             "id": "1154219000035873001-1154219000035873004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270996",
+            "qrToken": "26270996",
             "orderId": "1154219000035873001",
             "lineItemId": "1154219000035873004",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -14188,14 +14190,17 @@
             "customerName": "CBT FOOTWEAR",
             "salesOrderNumber": "SO-07764",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Rawal",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -14208,7 +14213,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:34:20.661Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:34:30.940Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:34:30.940Z",
+          "processedAt": "2026-08-19T06:39:12.212Z",
+          "dispatchNote": "Local",
+          "vendor": "Rawal"
         }
       }
     }
