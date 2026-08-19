@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035869004": {
+      "id": "1154219000035869004",
+      "zohoSalesOrderId": "1154219000035869004",
+      "salesOrderNumber": "SO-07768",
+      "status": "open",
+      "customerName": "Liberty Shoes Limited (Karnal)",
+      "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035869007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Gun(Ultrasonic Gun)",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035869004-1154219000035869007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035869004",
+          "lineItemId": "1154219000035869007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Liberty Shoes Limited (Karnal)",
+          "salesOrderNumber": "SO-07768",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Gun(Ultrasonic Gun)"
+        }
+      ]
+    },
     "1154219000035880001": {
       "id": "1154219000035880001",
       "zohoSalesOrderId": "1154219000035880001",
@@ -176,53 +223,6 @@
           "sku": "",
           "customerName": "CBT FOOTWEAR",
           "salesOrderNumber": "SO-07764",
-          "deliveryDate": "2026-08-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035858007": {
-      "id": "1154219000035858007",
-      "zohoSalesOrderId": "1154219000035858007",
-      "salesOrderNumber": "SO-07763",
-      "status": "open",
-      "customerName": "Nayra Enterprises",
-      "shippingAddress": "BASEMENT,GROUND & FIRST FLOOR, KHASRA NO 501, SWARN PARK INDUSTRIAL AREA, M.R. BHARTI SCHOOL,, Mundka, Delhi, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035858010",
-          "itemName": "Steamer (6 nozzles) (SS body)",
-          "sku": "360",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035858007-1154219000035858010-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035858007",
-          "lineItemId": "1154219000035858010",
-          "itemName": "Steamer (6 nozzles) (SS body)",
-          "sku": "360",
-          "customerName": "Nayra Enterprises",
-          "salesOrderNumber": "SO-07763",
           "deliveryDate": "2026-08-19",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -1193,31 +1193,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000035749001": {
-      "id": "1154219000035749001",
-      "zohoSalesOrderId": "1154219000035749001",
-      "salesOrderNumber": "SO-07742",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035749004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 300,
-          "pendingQuantity": 300,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000035710004": {
       "id": "1154219000035710004",
@@ -20839,11 +20814,11 @@
     }
   },
   "orderIds": [
+    "1154219000035869004",
     "1154219000035880001",
     "1154219000035859514",
     "1154219000035876001",
     "1154219000035873001",
-    "1154219000035858007",
     "1154219000035867001",
     "1154219000035850015",
     "1154219000035850002",
@@ -20856,7 +20831,6 @@
     "1154219000035795001",
     "1154219000035794018",
     "1154219000035788001",
-    "1154219000035749001",
     "1154219000035710004",
     "1154219000035691003",
     "1154219000035711007",
@@ -20889,8 +20863,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T12:45:58.227Z",
-  "lastAttemptAt": "2026-08-19T13:20:29.696Z",
+  "lastSuccessfulSyncAt": "2026-08-19T13:20:50.665Z",
+  "lastAttemptAt": "2026-08-19T13:20:50.665Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
