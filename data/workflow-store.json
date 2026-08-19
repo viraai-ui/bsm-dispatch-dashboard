@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271006,
+  "serialCounter": 26271007,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -14833,6 +14833,67 @@
           "vendor": "Able",
           "zohoBackupLastAttemptAt": "2026-08-19T07:31:46.944Z",
           "zohoBackupSyncedAt": "2026-08-19T07:31:46.944Z"
+        }
+      }
+    },
+    "1154219000035510003": {
+      "salesOrderId": "1154219000035510003",
+      "salesOrderNumber": "SO-07697",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035510003",
+        "zohoSalesOrderId": "1154219000035510003",
+        "salesOrderNumber": "SO-07697",
+        "status": "open",
+        "customerName": "Doershappy",
+        "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035826181",
+            "itemName": "Eyelet Punching Single Channel (1300 No. )",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035510003-1154219000035826181-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035510003",
+            "lineItemId": "1154219000035826181",
+            "itemName": "Eyelet Punching Single Channel (1300 No. )",
+            "sku": "",
+            "customerName": "Doershappy",
+            "salesOrderNumber": "SO-07697",
+            "deliveryDate": "2026-08-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035510003-1154219000035826181-1": {
+          "machineUnitId": "1154219000035510003-1154219000035826181-1",
+          "lineItemId": "1154219000035826181",
+          "serialNumber": "26271007",
+          "qrToken": "26271007",
+          "qrStatus": "pending"
         }
       }
     }
