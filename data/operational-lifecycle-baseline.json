@@ -1,0 +1,358 @@
+{
+  "version": 1,
+  "cutoverVersion": "operational-lifecycle-baseline-v1",
+  "cutoverDate": "2026-08-19",
+  "tombstones": {
+    "1154219000034156012": {
+      "orderId": "1154219000034156012",
+      "salesOrderNumber": "SO-07483",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034547004": {
+      "orderId": "1154219000034547004",
+      "salesOrderNumber": "SO-07543",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034515009": {
+      "orderId": "1154219000034515009",
+      "salesOrderNumber": "SO-07545",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034532009": {
+      "orderId": "1154219000034532009",
+      "salesOrderNumber": "SO-07546",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034536002": {
+      "orderId": "1154219000034536002",
+      "salesOrderNumber": "SO-07547",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034618001": {
+      "orderId": "1154219000034618001",
+      "salesOrderNumber": "SO-07551",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034626001": {
+      "orderId": "1154219000034626001",
+      "salesOrderNumber": "SO-07554",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034624004": {
+      "orderId": "1154219000034624004",
+      "salesOrderNumber": "SO-07555",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034643003": {
+      "orderId": "1154219000034643003",
+      "salesOrderNumber": "SO-07559",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034677001": {
+      "orderId": "1154219000034677001",
+      "salesOrderNumber": "SO-07561",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034684003": {
+      "orderId": "1154219000034684003",
+      "salesOrderNumber": "SO-07563",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034693002": {
+      "orderId": "1154219000034693002",
+      "salesOrderNumber": "SO-07565",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034703020": {
+      "orderId": "1154219000034703020",
+      "salesOrderNumber": "SO-07566",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034726002": {
+      "orderId": "1154219000034726002",
+      "salesOrderNumber": "SO-07569",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034743020": {
+      "orderId": "1154219000034743020",
+      "salesOrderNumber": "SO-07574",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034737027": {
+      "orderId": "1154219000034737027",
+      "salesOrderNumber": "SO-07580",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034717020": {
+      "orderId": "1154219000034717020",
+      "salesOrderNumber": "SO-07581",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034729015": {
+      "orderId": "1154219000034729015",
+      "salesOrderNumber": "SO-07582",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034731047": {
+      "orderId": "1154219000034731047",
+      "salesOrderNumber": "SO-07587",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034734027": {
+      "orderId": "1154219000034734027",
+      "salesOrderNumber": "SO-07589",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034709015": {
+      "orderId": "1154219000034709015",
+      "salesOrderNumber": "SO-07591",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034827001": {
+      "orderId": "1154219000034827001",
+      "salesOrderNumber": "SO-07593",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034832001": {
+      "orderId": "1154219000034832001",
+      "salesOrderNumber": "SO-07594",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034838001": {
+      "orderId": "1154219000034838001",
+      "salesOrderNumber": "SO-07596",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034874001": {
+      "orderId": "1154219000034874001",
+      "salesOrderNumber": "SO-07597",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034867284": {
+      "orderId": "1154219000034867284",
+      "salesOrderNumber": "SO-07598",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034890001": {
+      "orderId": "1154219000034890001",
+      "salesOrderNumber": "SO-07599",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000034918002": {
+      "orderId": "1154219000034918002",
+      "salesOrderNumber": "SO-07600",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035001001": {
+      "orderId": "1154219000035001001",
+      "salesOrderNumber": "SO-07614",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035000006": {
+      "orderId": "1154219000035000006",
+      "salesOrderNumber": "SO-07615",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035009003": {
+      "orderId": "1154219000035009003",
+      "salesOrderNumber": "SO-07619",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035025006": {
+      "orderId": "1154219000035025006",
+      "salesOrderNumber": "SO-07620",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "loading_video",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035343802": {
+      "orderId": "1154219000035343802",
+      "salesOrderNumber": "SO-07667",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035343850": {
+      "orderId": "1154219000035343850",
+      "salesOrderNumber": "SO-07669",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035398001": {
+      "orderId": "1154219000035398001",
+      "salesOrderNumber": "SO-07675",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035449046": {
+      "orderId": "1154219000035449046",
+      "salesOrderNumber": "SO-07692",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035597007": {
+      "orderId": "1154219000035597007",
+      "salesOrderNumber": "SO-07721",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035730004": {
+      "orderId": "1154219000035730004",
+      "salesOrderNumber": "SO-07739",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    },
+    "1154219000035838014": {
+      "orderId": "1154219000035838014",
+      "salesOrderNumber": "SO-07758",
+      "reason": "baseline_pre_cutover_zoho_closed_or_omitted",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-08-19T12:48:35.718Z",
+      "cutoverVersion": "operational-lifecycle-baseline-v1",
+      "cutoverDate": "2026-08-19"
+    }
+  }
+}
