@@ -14212,11 +14212,13 @@
           "qrToken": "26270996",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:34:20.661Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-19T06:34:30.940Z",
           "processedAt": "2026-08-19T06:39:12.212Z",
           "dispatchNote": "Local",
-          "vendor": "Rawal"
+          "vendor": "Rawal",
+          "zohoBackupLastAttemptAt": "2026-08-19T06:45:10.760Z",
+          "zohoBackupSyncedAt": "2026-08-19T06:45:10.760Z"
         }
       },
       "dispatchSortOrder": 5
