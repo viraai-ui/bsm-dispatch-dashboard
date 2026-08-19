@@ -442,19 +442,17 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
   try {
     const workflows = await listWorkflows()
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
-    const entries: { workflowId: string; machineId: string; order: Order; machine: MachineUnit; generatedAt: string }[] = []
+    const entries: { workflowId: string; machineId: string; serial: string; order?: Order; machine?: MachineUnit; generatedAt: string }[] = []
     for (const workflow of Object.values(workflows)) {
       const order = workflow.processedOrder || synced.data.orders?.[workflow.salesOrderId]
-      if (!order) continue
-      const orderMachinesById = new Map((order.machines || []).map((machine) => [machine.id, machine]))
+      const orderMachinesById = new Map((order?.machines || []).map((machine) => [machine.id, machine]))
       for (const machineWorkflow of Object.values(workflow.machines || {})) {
         const serial = Number(machineWorkflow.serialNumber || 0)
         // Queue state, not a historical serial cutoff, determines retry eligibility. A cutoff
         // stranded older pending/error entries forever after partial incidents.
         if (!serial || machineWorkflow.zohoBackupStatus === 'synced') continue
         const orderMachine = orderMachinesById.get(machineWorkflow.machineUnitId)
-        if (!orderMachine) continue
-        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } })
+        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, serial: String(machineWorkflow.serialNumber).trim(), order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: orderMachine ? { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } : undefined })
       }
     }
     if (!entries.length) return result
@@ -466,11 +464,14 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
     let nextSNo = nextSerialSheetNumber(records)
     const rows: SerialSheetRecord[] = []
     for (const entry of entries) {
-      if (existing.has(String(entry.machine.serialNumber))) continue
+      if (existing.has(entry.serial)) continue
+      // Existing rows can always be acknowledged. Missing rows need the saved order snapshot
+      // to construct a non-empty, meaningful append; otherwise leave the item queued.
+      if (!entry.order || !entry.machine) continue
       const built = buildRows(entry.order, [entry.machine], entry.generatedAt, nextSNo)
       rows.push(...built)
       nextSNo = String(Number(nextSNo) + built.length)
-      existing.add(String(entry.machine.serialNumber)) // prevent duplicates within this batch
+      existing.add(entry.serial) // prevent duplicates within this batch
     }
     if (rows.length) await appendSerialRows(rows)
     const confirmed = new Set(wasExisting)
@@ -488,9 +489,9 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
         for (const entry of workflowEntries) {
           const machine = machines[entry.machineId]
           if (!machine) continue
-          const ok = confirmed.has(String(entry.machine.serialNumber))
+          const ok = confirmed.has(entry.serial)
           machines[entry.machineId] = { ...machine, zohoBackupStatus: ok ? 'synced' : 'error', zohoBackupLastAttemptAt: now, zohoBackupSyncedAt: ok ? now : machine.zohoBackupSyncedAt, zohoBackupError: ok ? undefined : 'Zoho append did not verify; queued for retry' }
-          if (ok) wasExisting.has(String(entry.machine.serialNumber)) ? result.skipped++ : result.synced++
+          if (ok) wasExisting.has(entry.serial) ? result.skipped++ : result.synced++
         }
         return { ...current, machines }
       })
