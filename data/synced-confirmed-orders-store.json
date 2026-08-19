@@ -537,53 +537,6 @@
         }
       ]
     },
-    "1154219000035838001": {
-      "id": "1154219000035838001",
-      "zohoSalesOrderId": "1154219000035838001",
-      "salesOrderNumber": "SO-07757",
-      "status": "open",
-      "customerName": "RAMESHWAR FABRICATOR",
-      "shippingAddress": "0, JAAR FACTORY KE PAAS, BITTHARIYO KA PURA, Girwai, Girwai,, Gwalior, Madhya Pradesh, 474002, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035838004",
-          "itemName": "PP Board (60*20*4 Inch)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035838001-1154219000035838004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035838001",
-          "lineItemId": "1154219000035838004",
-          "itemName": "PP Board (60*20*4 Inch)",
-          "sku": "",
-          "customerName": "RAMESHWAR FABRICATOR",
-          "salesOrderNumber": "SO-07757",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035809004": {
       "id": "1154219000035809004",
       "zohoSalesOrderId": "1154219000035809004",
@@ -7873,53 +7826,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Computerize Roller Feed Cutter Set"
-        }
-      ]
-    },
-    "1154219000035510003": {
-      "id": "1154219000035510003",
-      "zohoSalesOrderId": "1154219000035510003",
-      "salesOrderNumber": "SO-07697",
-      "status": "open",
-      "customerName": "Doershappy",
-      "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035826181",
-          "itemName": "Eyelet Punching Single Channel (1300 No. )",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035510003-1154219000035826181-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035510003",
-          "lineItemId": "1154219000035826181",
-          "itemName": "Eyelet Punching Single Channel (1300 No. )",
-          "sku": "",
-          "customerName": "Doershappy",
-          "salesOrderNumber": "SO-07697",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -20942,7 +20848,6 @@
     "1154219000035850015",
     "1154219000035850002",
     "1154219000035854013",
-    "1154219000035838001",
     "1154219000035809004",
     "1154219000035824045",
     "1154219000035795016",
@@ -20965,7 +20870,6 @@
     "1154219000035516005",
     "1154219000035531015",
     "1154219000035532001",
-    "1154219000035510003",
     "1154219000035503001",
     "1154219000035500001",
     "1154219000035305099",
@@ -20985,8 +20889,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T12:17:26.636Z",
-  "lastAttemptAt": "2026-08-19T12:20:26.745Z",
+  "lastSuccessfulSyncAt": "2026-08-19T12:20:49.992Z",
+  "lastAttemptAt": "2026-08-19T12:20:49.992Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
