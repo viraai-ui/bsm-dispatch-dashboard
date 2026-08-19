@@ -2642,6 +2642,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035701017": {
+      "id": "ship-1787118839908-tlnz5",
+      "itemId": "1154219000035701017",
+      "orderId": "1154219000035701017",
+      "machineId": "1154219000035701017-1154219000035701020-1",
+      "salesOrderNumber": "SO-07741",
+      "customerName": "Ayush Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "New Yadav Tempo Service",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T05:53:59.908Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
