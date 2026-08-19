@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035858007": {
+      "id": "1154219000035858007",
+      "zohoSalesOrderId": "1154219000035858007",
+      "salesOrderNumber": "SO-07763",
+      "status": "open",
+      "customerName": "Nayra Enterprises",
+      "shippingAddress": "BASEMENT,GROUND & FIRST FLOOR, KHASRA NO 501, SWARN PARK INDUSTRIAL AREA, M.R. BHARTI SCHOOL,, Mundka, Delhi, 110041, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035858010",
+          "itemName": "Steamer (6 nozzles) (SS body)",
+          "sku": "360",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035858007-1154219000035858010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035858007",
+          "lineItemId": "1154219000035858010",
+          "itemName": "Steamer (6 nozzles) (SS body)",
+          "sku": "360",
+          "customerName": "Nayra Enterprises",
+          "salesOrderNumber": "SO-07763",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035867001": {
       "id": "1154219000035867001",
       "zohoSalesOrderId": "1154219000035867001",
@@ -1030,146 +1077,6 @@
         }
       ],
       "machines": []
-    },
-    "1154219000035701017": {
-      "id": "1154219000035701017",
-      "zohoSalesOrderId": "1154219000035701017",
-      "salesOrderNumber": "SO-07741",
-      "status": "open",
-      "customerName": "Ayush Enterprises",
-      "shippingAddress": "2nd Floor, 04, Ward No 02, Saurabh Nagar, Near Shiv Mandir,, Transit Camp, Rudrapur, Udham Singh Nagar, Uttarakhand, 263153",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035701020",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035701021",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035701022",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035701023",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035701017-1154219000035701020-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035701017",
-          "lineItemId": "1154219000035701020",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "customerName": "Ayush Enterprises",
-          "salesOrderNumber": "SO-07741",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035701017-1154219000035701021-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035701017",
-          "lineItemId": "1154219000035701021",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "customerName": "Ayush Enterprises",
-          "salesOrderNumber": "SO-07741",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035701017-1154219000035701022-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035701017",
-          "lineItemId": "1154219000035701022",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "customerName": "Ayush Enterprises",
-          "salesOrderNumber": "SO-07741",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035701017-1154219000035701023-1",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035701017",
-          "lineItemId": "1154219000035701023",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "Ayush Enterprises",
-          "salesOrderNumber": "SO-07741",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
     },
     "1154219000035710004": {
       "id": "1154219000035710004",
@@ -21630,6 +21537,7 @@
     }
   },
   "orderIds": [
+    "1154219000035858007",
     "1154219000035867001",
     "1154219000035850015",
     "1154219000035850002",
@@ -21644,7 +21552,6 @@
     "1154219000035794018",
     "1154219000035788001",
     "1154219000035749001",
-    "1154219000035701017",
     "1154219000035710004",
     "1154219000035691003",
     "1154219000035711007",
@@ -21679,8 +21586,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T06:01:07.292Z",
-  "lastAttemptAt": "2026-08-19T06:17:06.294Z",
+  "lastSuccessfulSyncAt": "2026-08-19T06:17:31.545Z",
+  "lastAttemptAt": "2026-08-19T06:17:31.545Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
