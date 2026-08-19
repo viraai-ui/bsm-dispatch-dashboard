@@ -14685,7 +14685,7 @@
           "zohoBackupSyncedAt": "2026-08-19T07:15:26.251Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 6
     },
     "1154219000035876001": {
       "salesOrderId": "1154219000035876001",
@@ -14915,7 +14915,7 @@
       "salesOrderId": "1154219000035710004",
       "salesOrderNumber": "SO-07740",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-19T11:35:58.268Z",
       "processedOrder": {
         "id": "1154219000035710004",
@@ -14981,7 +14981,8 @@
           "dispatchNote": "Local",
           "vendor": "Dts"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
