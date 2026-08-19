@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000035859514": {
+      "id": "1154219000035859514",
+      "zohoSalesOrderId": "1154219000035859514",
+      "salesOrderNumber": "SO-07766",
+      "status": "open",
+      "customerName": "M/S AR KAY INDUSTRIES",
+      "shippingAddress": "Phase 2, Gate No. 242MI, Goverdhan Dham, Runkata, AGRA, Agra, Uttar Pradesh, 282007, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035859517",
+          "itemName": "Spray table (for water-based adhesive)",
+          "sku": "301",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035859514-1154219000035859517-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035859514",
+          "lineItemId": "1154219000035859517",
+          "itemName": "Spray table (for water-based adhesive)",
+          "sku": "301",
+          "customerName": "M/S AR KAY INDUSTRIES",
+          "salesOrderNumber": "SO-07766",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035876001": {
+      "id": "1154219000035876001",
+      "zohoSalesOrderId": "1154219000035876001",
+      "salesOrderNumber": "SO-07765",
+      "status": "open",
+      "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+      "shippingAddress": "Plot No. 37, Sec-4B, Industrial Estate, Bahadurgarh Haryana-124507, Haryana",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035876004",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035876001-1154219000035876004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035876001",
+          "lineItemId": "1154219000035876004",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+          "salesOrderNumber": "SO-07765",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035873001": {
       "id": "1154219000035873001",
       "zohoSalesOrderId": "1154219000035873001",
@@ -21584,6 +21678,8 @@
     }
   },
   "orderIds": [
+    "1154219000035859514",
+    "1154219000035876001",
     "1154219000035873001",
     "1154219000035858007",
     "1154219000035867001",
@@ -21634,8 +21730,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T06:40:48.581Z",
-  "lastAttemptAt": "2026-08-19T07:00:37.713Z",
+  "lastSuccessfulSyncAt": "2026-08-19T07:01:03.940Z",
+  "lastAttemptAt": "2026-08-19T07:01:03.940Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
