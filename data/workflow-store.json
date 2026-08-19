@@ -14606,7 +14606,9 @@
     "1154219000035859514": {
       "salesOrderId": "1154219000035859514",
       "salesOrderNumber": "SO-07766",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T07:04:11.964Z",
       "processedOrder": {
         "id": "1154219000035859514",
         "zohoSalesOrderId": "1154219000035859514",
@@ -14634,8 +14636,8 @@
           {
             "id": "1154219000035859514-1154219000035859517-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271004",
+            "qrToken": "26271004",
             "orderId": "1154219000035859514",
             "lineItemId": "1154219000035859517",
             "itemName": "Spray table (for water-based adhesive)",
@@ -14643,14 +14645,17 @@
             "customerName": "M/S AR KAY INDUSTRIES",
             "salesOrderNumber": "SO-07766",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ]
       },
@@ -14663,7 +14668,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T07:03:15.388Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T07:03:26.853Z"
+          "zohoBackupQueuedAt": "2026-08-19T07:03:26.853Z",
+          "processedAt": "2026-08-19T07:04:11.964Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
