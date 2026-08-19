@@ -9650,6 +9650,63 @@
       "machineIds": [
         "1154219000035873001-1154219000035873004-1"
       ]
+    },
+    "1154219000035850015": {
+      "completedAt": "2026-08-19T10:03:59.392Z",
+      "order": {
+        "id": "1154219000035850015",
+        "zohoSalesOrderId": "1154219000035850015",
+        "salesOrderNumber": "SO-07761",
+        "status": "open",
+        "customerName": "Madaan Plastic Industry",
+        "shippingAddress": "Plot No-4 & 5, Sector-17, HSIIDC Bahadurgarh, Haryana-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035850018",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035850015-1154219000035850018-1",
+            "unitNumber": 1,
+            "serialNumber": "26270997",
+            "qrToken": "26270997",
+            "orderId": "1154219000035850015",
+            "lineItemId": "1154219000035850018",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "Madaan Plastic Industry",
+            "salesOrderNumber": "SO-07761",
+            "deliveryDate": "2026-08-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035850015-1154219000035850018-1"
+      ]
     }
   }
 }
