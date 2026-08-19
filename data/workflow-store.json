@@ -14975,11 +14975,13 @@
           "qrToken": "26271008",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T11:33:32.985Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-19T11:33:42.428Z",
           "processedAt": "2026-08-19T11:35:58.268Z",
           "dispatchNote": "Local",
-          "vendor": "Dts"
+          "vendor": "Dts",
+          "zohoBackupLastAttemptAt": "2026-08-19T11:45:44.517Z",
+          "zohoBackupSyncedAt": "2026-08-19T11:45:44.517Z"
         }
       },
       "dispatchSortOrder": 1
