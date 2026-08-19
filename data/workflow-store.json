@@ -14989,7 +14989,9 @@
     "1154219000035588022": {
       "salesOrderId": "1154219000035588022",
       "salesOrderNumber": "SO-07719",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T11:58:13.753Z",
       "processedOrder": {
         "id": "1154219000035588022",
         "zohoSalesOrderId": "1154219000035588022",
@@ -15037,8 +15039,8 @@
           {
             "id": "1154219000035588022-1154219000035588025-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271009",
+            "qrToken": "26271009",
             "orderId": "1154219000035588022",
             "lineItemId": "1154219000035588025",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -15046,14 +15048,17 @@
             "customerName": "Sanspareils Greenlands Pvt. Ltd.",
             "salesOrderNumber": "SO-07719",
             "deliveryDate": "2026-08-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Siphon",
+            "dispatchNote": "Good Wrapping"
           },
           {
             "id": "1154219000035588022-1154219000035588026-1",
@@ -15074,7 +15079,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ]
       },
@@ -15087,7 +15094,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T11:57:22.152Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T11:57:31.550Z"
+          "zohoBackupQueuedAt": "2026-08-19T11:57:31.550Z",
+          "processedAt": "2026-08-19T11:58:13.753Z",
+          "dispatchNote": "Good Wrapping",
+          "vendor": "Siphon"
         }
       }
     }
