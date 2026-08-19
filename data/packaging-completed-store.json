@@ -9971,6 +9971,63 @@
       "machineIds": [
         "1154219000035838001-1154219000035838004-1"
       ]
+    },
+    "1154219000035710004": {
+      "completedAt": "2026-08-19T13:08:39.058Z",
+      "order": {
+        "id": "1154219000035710004",
+        "zohoSalesOrderId": "1154219000035710004",
+        "salesOrderNumber": "SO-07740",
+        "status": "open",
+        "customerName": "MS BHAGWATI ENTERPRISES",
+        "shippingAddress": "BASEMENT, GROUND FLOOR, C-76, SECTOR-8, JAYPEE MALL, BLOCK-C, SECTOR-8, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035710007",
+            "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
+            "sku": "106A",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035710004-1154219000035710007-1",
+            "unitNumber": 1,
+            "serialNumber": "26271008",
+            "qrToken": "26271008",
+            "orderId": "1154219000035710004",
+            "lineItemId": "1154219000035710007",
+            "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
+            "sku": "106A",
+            "customerName": "MS BHAGWATI ENTERPRISES",
+            "salesOrderNumber": "SO-07740",
+            "deliveryDate": "2026-08-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035710004-1154219000035710007-1"
+      ]
     }
   }
 }
