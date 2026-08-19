@@ -14755,7 +14755,9 @@
     "1154219000035850002": {
       "salesOrderId": "1154219000035850002",
       "salesOrderNumber": "SO-07760",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T07:20:47.092Z",
       "processedOrder": {
         "id": "1154219000035850002",
         "zohoSalesOrderId": "1154219000035850002",
@@ -14783,8 +14785,8 @@
           {
             "id": "1154219000035850002-1154219000035850005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271006",
+            "qrToken": "26271006",
             "orderId": "1154219000035850002",
             "lineItemId": "1154219000035850005",
             "itemName": "Side wall Stitching (sole stitch)",
@@ -14792,14 +14794,17 @@
             "customerName": "BELGI FOOTWEAR LLP",
             "salesOrderNumber": "SO-07760",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -14812,7 +14817,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T07:18:23.109Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T07:18:32.445Z"
+          "zohoBackupQueuedAt": "2026-08-19T07:18:32.445Z",
+          "processedAt": "2026-08-19T07:20:47.092Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
