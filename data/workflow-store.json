@@ -14839,7 +14839,9 @@
     "1154219000035510003": {
       "salesOrderId": "1154219000035510003",
       "salesOrderNumber": "SO-07697",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T10:18:37.342Z",
       "processedOrder": {
         "id": "1154219000035510003",
         "zohoSalesOrderId": "1154219000035510003",
@@ -14867,8 +14869,8 @@
           {
             "id": "1154219000035510003-1154219000035826181-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271007",
+            "qrToken": "26271007",
             "orderId": "1154219000035510003",
             "lineItemId": "1154219000035826181",
             "itemName": "Eyelet Punching Single Channel (1300 No. )",
@@ -14876,14 +14878,17 @@
             "customerName": "Doershappy",
             "salesOrderNumber": "SO-07697",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Guru Dev",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -14898,7 +14903,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-19T10:09:55.257Z",
           "zohoBackupLastAttemptAt": "2026-08-19T10:15:35.572Z",
-          "zohoBackupSyncedAt": "2026-08-19T10:15:35.572Z"
+          "zohoBackupSyncedAt": "2026-08-19T10:15:35.572Z",
+          "processedAt": "2026-08-19T10:18:37.342Z",
+          "dispatchNote": "Local",
+          "vendor": "Guru Dev"
         }
       }
     }
