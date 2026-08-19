@@ -2580,6 +2580,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035790005": {
+      "id": "ship-1787118453156-n7f9a",
+      "itemId": "1154219000035790005",
+      "orderId": "1154219000035790005",
+      "machineId": "1154219000035790005-1154219000035790008-1",
+      "salesOrderNumber": "SO-07753",
+      "customerName": "The Kicks Factory Co.",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS0134",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-18",
+      "notes": "",
+      "shippedAt": "2026-08-19T05:47:33.157Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
