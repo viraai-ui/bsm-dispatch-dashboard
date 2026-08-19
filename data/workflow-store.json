@@ -13821,11 +13821,13 @@
           "qrToken": "26270991",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T12:37:31.855Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-18T12:37:47.851Z",
           "processedAt": "2026-08-18T12:39:59.609Z",
           "dispatchNote": "",
-          "vendor": ""
+          "vendor": "",
+          "zohoBackupLastAttemptAt": "2026-08-19T04:05:49.853Z",
+          "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       },
       "dispatchSortOrder": 3
