@@ -13509,12 +13509,14 @@
           "qrToken": "26270987",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T07:06:40.288Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-18T07:06:48.764Z",
           "processedAt": "2026-08-18T07:07:51.686Z",
           "dispatchNote": "",
           "vendor": "",
-          "dispatchedAt": "2026-08-18T08:33:15.677Z"
+          "dispatchedAt": "2026-08-18T08:33:15.677Z",
+          "zohoBackupLastAttemptAt": "2026-08-19T04:05:49.853Z",
+          "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       },
       "dispatchSortOrder": 1
