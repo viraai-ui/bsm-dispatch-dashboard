@@ -13776,7 +13776,7 @@
           "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035838014": {
       "salesOrderId": "1154219000035838014",
@@ -13920,7 +13920,7 @@
           "vendor": ""
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035824045": {
       "salesOrderId": "1154219000035824045",
@@ -14071,7 +14071,7 @@
           "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       },
-      "dispatchSortOrder": 7
+      "dispatchSortOrder": 8
     },
     "1154219000035858007": {
       "salesOrderId": "1154219000035858007",
@@ -14146,7 +14146,7 @@
           "zohoBackupSyncedAt": "2026-08-19T06:31:20.846Z"
         }
       },
-      "dispatchSortOrder": 6
+      "dispatchSortOrder": 7
     },
     "1154219000035873001": {
       "salesOrderId": "1154219000035873001",
@@ -14221,7 +14221,7 @@
           "zohoBackupSyncedAt": "2026-08-19T06:45:10.760Z"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035850015": {
       "salesOrderId": "1154219000035850015",
@@ -14296,7 +14296,7 @@
           "zohoBackupSyncedAt": "2026-08-19T06:45:10.760Z"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035634001": {
       "salesOrderId": "1154219000035634001",
@@ -14371,7 +14371,7 @@
           "zohoBackupSyncedAt": "2026-08-19T06:45:10.760Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035867001": {
       "salesOrderId": "1154219000035867001",
@@ -14679,7 +14679,7 @@
       "salesOrderId": "1154219000035876001",
       "salesOrderNumber": "SO-07765",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-19T07:06:25.989Z",
       "processedOrder": {
         "id": "1154219000035876001",
@@ -14745,7 +14745,8 @@
           "dispatchNote": "Local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
