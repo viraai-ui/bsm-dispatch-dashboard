@@ -5,6 +5,7 @@ import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 import { isMachineLineItem } from './item-classification'
 import { buildR2Key, r2Configured, uploadBufferToR2 } from './r2'
+import { isLocallyTerminal } from './operational-orders'
 
 export type MediaStage = 'packing' | 'loading'
 export const LOADING_ORDER_UNIT_ID = 'loading-order'
@@ -38,6 +39,7 @@ const MEDIA_PATHS: Record<MediaStage, string> = {
 }
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
+type ShipmentStore = { shipments: Record<string, { shipmentType?: 'direct' | 'transporter'; shippedAt?: string; lrCopy?: { url?: string } | null }> }
 
 
 function mediaPath(stage: MediaStage = 'packing') { return MEDIA_PATHS[stage] }
@@ -61,6 +63,7 @@ export async function cleanupExpiredMediaProofs(stage: MediaStage = 'packing') {
 
 export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const { data: completedStore } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
+  const { data: shipmentStore } = await githubReadJson<ShipmentStore>('data/ready-to-ship-store.json', { shipments: {} })
   const completed = completedStore.completed || {}
   const completedAtByOrderId = new Map(Object.entries(completed).map(([orderId, item]) => [orderId, Date.parse(item.completedAt || '') || 0]))
   const processedWorkflows = stage === 'packing' ? await listProcessedOrders() : []
@@ -72,6 +75,7 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
 
   const sourceOrders = (stage === 'packing' ? processedWorkflows.map((workflow) => workflow.processedOrder) : Object.values(completed).map((item) => item.order))
     .filter((order): order is Order => Boolean(order))
+    .filter((order) => !isLocallyTerminal(shipmentStore.shipments[order.id]))
 
   const sortTimeByOrderId = stage === 'packing'
     ? new Map(processedWorkflows.map((workflow) => [workflow.salesOrderId, Date.parse(workflow.processedAt || workflow.processedOrder?.deliveryDate || '') || 0]))
