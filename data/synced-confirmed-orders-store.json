@@ -1,5 +1,82 @@
 {
   "orders": {
+    "1154219000035854013": {
+      "id": "1154219000035854013",
+      "zohoSalesOrderId": "1154219000035854013",
+      "salesOrderNumber": "SO-07759",
+      "status": "open",
+      "customerName": "D Zone",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035854016",
+          "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035854017",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Drive single phase",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035854013-1154219000035854016-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035854013",
+          "lineItemId": "1154219000035854016",
+          "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+          "sku": "",
+          "customerName": "D Zone",
+          "salesOrderNumber": "SO-07759",
+          "deliveryDate": "2026-08-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035854013-1154219000035854017-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035854013",
+          "lineItemId": "1154219000035854017",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "D Zone",
+          "salesOrderNumber": "SO-07759",
+          "deliveryDate": "2026-08-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drive single phase"
+        }
+      ]
+    },
     "1154219000035838001": {
       "id": "1154219000035838001",
       "zohoSalesOrderId": "1154219000035838001",
@@ -21469,6 +21546,7 @@
     }
   },
   "orderIds": [
+    "1154219000035854013",
     "1154219000035838001",
     "1154219000035796015",
     "1154219000035809004",
@@ -21517,8 +21595,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T05:27:46.213Z",
-  "lastAttemptAt": "2026-08-19T05:40:14.651Z",
+  "lastSuccessfulSyncAt": "2026-08-19T05:40:41.595Z",
+  "lastAttemptAt": "2026-08-19T05:40:41.595Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
