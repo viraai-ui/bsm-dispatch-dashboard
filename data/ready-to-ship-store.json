@@ -2927,6 +2927,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035657001": {
+      "id": "ship-1787142829978-35o52",
+      "itemId": "1154219000035657001",
+      "orderId": "1154219000035657001",
+      "machineId": "1154219000035657001-1154219000035657004-1",
+      "salesOrderNumber": "SO-07723",
+      "customerName": "ANUGAMI INDUSTRIES PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "V Trans",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-19 at 10.29.51 AM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-19%2FSO-07723%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-19T12-33-48-364Z.jpeg",
+        "r2Key": "media-proof/2026-08-19/SO-07723/Shipment LR Builty-shipment-lr-builty-2026-08-19T12-33-48-364Z.jpeg",
+        "expiresAt": "2026-10-18T12:33:48.365Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-18",
+      "notes": "",
+      "shippedAt": "2026-08-19T12:33:49.978Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
