@@ -9365,6 +9365,63 @@
         "1154219000035795001-1154219000035795004-4",
         "1154219000035795001-1154219000035795004-5"
       ]
+    },
+    "1154219000035838014": {
+      "completedAt": "2026-08-19T04:40:36.667Z",
+      "order": {
+        "id": "1154219000035838014",
+        "zohoSalesOrderId": "1154219000035838014",
+        "salesOrderNumber": "SO-07758",
+        "status": "open",
+        "customerName": "STEP STON FOOTWEARS LLP",
+        "shippingAddress": "PLOT NO-356, GROUND FLOOR, SECTOR-17, FOOTWEAR PARK, HSIIDC, Bahadurgarh, Jhajjar, Haryana - 124507",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035838017",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035838014-1154219000035838017-1",
+            "unitNumber": 1,
+            "serialNumber": "26270991",
+            "qrToken": "26270991",
+            "orderId": "1154219000035838014",
+            "lineItemId": "1154219000035838017",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "STEP STON FOOTWEARS LLP",
+            "salesOrderNumber": "SO-07758",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035838014-1154219000035838017-1"
+      ]
     }
   }
 }
