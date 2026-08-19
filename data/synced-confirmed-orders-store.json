@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035880001": {
+      "id": "1154219000035880001",
+      "zohoSalesOrderId": "1154219000035880001",
+      "salesOrderNumber": "SO-07767",
+      "status": "open",
+      "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+      "shippingAddress": "Ground Floor, PLOT NO. 530, M.I.E. PART-A,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035880004",
+          "itemName": "UV Curing machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035880001-1154219000035880004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035880001",
+          "lineItemId": "1154219000035880004",
+          "itemName": "UV Curing machine",
+          "sku": "",
+          "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+          "salesOrderNumber": "SO-07767",
+          "deliveryDate": "2026-08-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035859514": {
       "id": "1154219000035859514",
       "zohoSalesOrderId": "1154219000035859514",
@@ -20886,6 +20933,7 @@
     }
   },
   "orderIds": [
+    "1154219000035880001",
     "1154219000035859514",
     "1154219000035876001",
     "1154219000035873001",
@@ -20937,8 +20985,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T09:00:01.262Z",
-  "lastAttemptAt": "2026-08-19T09:14:48.065Z",
+  "lastSuccessfulSyncAt": "2026-08-19T09:15:11.467Z",
+  "lastAttemptAt": "2026-08-19T09:15:11.467Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
