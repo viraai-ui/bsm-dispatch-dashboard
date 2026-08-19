@@ -9593,6 +9593,63 @@
       "machineIds": [
         "1154219000035876001-1154219000035876004-1"
       ]
+    },
+    "1154219000035873001": {
+      "completedAt": "2026-08-19T10:03:46.241Z",
+      "order": {
+        "id": "1154219000035873001",
+        "zohoSalesOrderId": "1154219000035873001",
+        "salesOrderNumber": "SO-07764",
+        "status": "open",
+        "customerName": "CBT FOOTWEAR",
+        "shippingAddress": "Plot No. 209, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035873004",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035873001-1154219000035873004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270996",
+            "qrToken": "26270996",
+            "orderId": "1154219000035873001",
+            "lineItemId": "1154219000035873004",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "CBT FOOTWEAR",
+            "salesOrderNumber": "SO-07764",
+            "deliveryDate": "2026-08-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000035873001-1154219000035873004-1"
+      ]
     }
   }
 }
