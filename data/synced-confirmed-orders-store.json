@@ -1,52 +1,5 @@
 {
   "orders": {
-    "1154219000035838014": {
-      "id": "1154219000035838014",
-      "zohoSalesOrderId": "1154219000035838014",
-      "salesOrderNumber": "SO-07758",
-      "status": "open",
-      "customerName": "STEP STON FOOTWEARS LLP",
-      "shippingAddress": "PLOT NO-356, GROUND FLOOR, SECTOR-17, FOOTWEAR PARK, HSIIDC, Bahadurgarh, Jhajjar, Haryana - 124507",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035838017",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035838014-1154219000035838017-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035838014",
-          "lineItemId": "1154219000035838017",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "customerName": "STEP STON FOOTWEARS LLP",
-          "salesOrderNumber": "SO-07758",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035838001": {
       "id": "1154219000035838001",
       "zohoSalesOrderId": "1154219000035838001",
@@ -774,16 +727,6 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000035788008",
-          "itemName": "Compressor (10 HP)",
-          "sku": "",
-          "description": "3 Cylider, 500 Ltr",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
           "id": "1154219000035788009",
           "itemName": "Automatic Double Bed Heat Press (Head Movement) (15x15)",
           "sku": "",
@@ -880,29 +823,8 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000035788001-1154219000035788008-1",
-          "unitNumber": 5,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035788001",
-          "lineItemId": "1154219000035788008",
-          "itemName": "Compressor (10 HP)",
-          "sku": "",
-          "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07743",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "3 Cylider, 500 Ltr"
-        },
-        {
           "id": "1154219000035788001-1154219000035788009-1",
-          "unitNumber": 6,
+          "unitNumber": 5,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000035788001",
@@ -7362,8 +7284,8 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000035516008",
-          "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+          "id": "1154219000035824111",
+          "itemName": "Travel Head Cutting Press (25 ton)",
           "sku": "",
           "description": "",
           "quantity": 1,
@@ -7384,13 +7306,13 @@
       ],
       "machines": [
         {
-          "id": "1154219000035516005-1154219000035516008-1",
+          "id": "1154219000035516005-1154219000035824111-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000035516005",
-          "lineItemId": "1154219000035516008",
-          "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+          "lineItemId": "1154219000035824111",
+          "itemName": "Travel Head Cutting Press (25 ton)",
           "sku": "",
           "customerName": "SWAMI UPPER",
           "salesOrderNumber": "SO-07705",
@@ -21547,7 +21469,6 @@
     }
   },
   "orderIds": [
-    "1154219000035838014",
     "1154219000035838001",
     "1154219000035796015",
     "1154219000035809004",
@@ -21596,8 +21517,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T05:01:15.683Z",
-  "lastAttemptAt": "2026-08-19T05:20:20.661Z",
+  "lastSuccessfulSyncAt": "2026-08-19T05:20:44.197Z",
+  "lastAttemptAt": "2026-08-19T05:20:44.197Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
