@@ -2710,6 +2710,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035634001": {
+      "id": "ship-1787132771393-uph6u",
+      "itemId": "1154219000035634001",
+      "orderId": "1154219000035634001",
+      "machineId": "1154219000035634001-1154219000035634004-1",
+      "salesOrderNumber": "SO-07722",
+      "customerName": "SHOESHION INTERNATIONAL PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAL5797",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T09:46:11.394Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
