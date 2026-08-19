@@ -13,7 +13,20 @@ export type OperationalProjectionInput = {
   packingRecords?: Record<string, MediaRecord>
   loadingRecords?: Record<string, MediaRecord>
   shipments?: Record<string, Shipment>
+  tombstones?: Record<string, LifecycleTombstone>
 }
+
+export type LifecycleTombstone = {
+  orderId: string
+  salesOrderNumber: string
+  reason: 'baseline_pre_cutover_zoho_closed_or_omitted'
+  stageAtCutover: OperationalStage
+  tombstonedAt: string
+  cutoverVersion: string
+  cutoverDate: string
+}
+export type LifecycleBaselineStore = { version: 1; cutoverVersion: string; cutoverDate: string; tombstones: Record<string, LifecycleTombstone> }
+export const LIFECYCLE_BASELINE_PATH = 'data/operational-lifecycle-baseline.json'
 
 export function isLocallyTerminal(shipment?: Shipment) {
   if (!shipment?.shippedAt) return false
@@ -33,11 +46,14 @@ export function projectOperationalOrders(input: OperationalProjectionInput) {
   const packing = input.packingRecords || {}
   const loading = input.loadingRecords || {}
   const shipments = input.shipments || {}
+  const tombstones = input.tombstones || {}
   const syncedById = new Map(input.syncedOrders.map((order) => [order.id, order]))
   const ids = new Set([...syncedById.keys(), ...Object.keys(workflows), ...Object.keys(completed)])
   const byId: Record<string, { order: Order; stage: OperationalStage; showInDispatch: boolean; showInPackingVideo: boolean; showInLoadingVideo: boolean; showInReadyToShip: boolean }> = {}
 
   for (const id of ids) {
+    // Baseline terminal decisions win; source workflow/media/history remain intact.
+    if (tombstones[id]) continue
     const workflow = workflows[id]
     const durableOrder = workflow?.processedOrder || completed[id]?.order
     const synced = syncedById.get(id)
@@ -65,14 +81,15 @@ export async function loadOperationalProjection() {
   const [{ readSyncedOrdersStore }, { listWorkflows, githubReadJson }, { readMediaProofStore }, { readShipmentStore }] = await Promise.all([
     import('./synced-orders'), import('./workflow-store'), import('./media-proof'), import('./ready-to-ship'),
   ])
-  const [synced, workflows, completedStore, packing, loading, shipmentStore] = await Promise.all([
+  const [synced, workflows, completedStore, packing, loading, shipmentStore, baselineStore] = await Promise.all([
     readSyncedOrdersStore(), listWorkflows(),
     githubReadJson<{ completed: Record<string, { completedAt?: string; order?: Order }> }>('data/packaging-completed-store.json', { completed: {} }),
     readMediaProofStore('packing'), readMediaProofStore('loading'), readShipmentStore(),
+    githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} }),
   ])
   return projectOperationalOrders({
     syncedOrders: synced.orderIds.map((id) => synced.orders[id]).filter(Boolean), workflows,
     completed: completedStore.data.completed, packingRecords: packing.records,
-    loadingRecords: loading.records, shipments: shipmentStore.shipments,
+    loadingRecords: loading.records, shipments: shipmentStore.shipments, tombstones: baselineStore.data.tombstones,
   })
 }

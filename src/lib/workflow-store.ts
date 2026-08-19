@@ -138,8 +138,9 @@ export async function listWorkflows() {
 }
 
 export async function listProcessedOrders() {
-  const { store } = await readStoreWithSha()
+  const [{ store }, baseline] = await Promise.all([readStoreWithSha(), githubReadJson<{ tombstones?: Record<string, unknown> }>('data/operational-lifecycle-baseline.json', {})])
   return Object.values(store.orders).filter((order) => {
+    if (baseline.data.tombstones?.[order.salesOrderId]) return false
     const machines = Object.values(order.machines || {})
     return machines.some((machine) => machine.processedAt && !machine.dispatchedAt) || (order.status === 'processed' && order.processedOrder && machines.length === 0)
   })

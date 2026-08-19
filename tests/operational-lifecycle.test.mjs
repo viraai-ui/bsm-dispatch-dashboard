@@ -5,7 +5,8 @@ import { projectOperationalOrders, isLocallyTerminal } from '../src/lib/operatio
 const order = (id, status = 'confirmed') => ({ id, status, salesOrderNumber: id, customerName: id, lineItems: [], machines: [] })
 const workflow = (id, snapshot = order(id)) => ({ salesOrderId: id, salesOrderNumber: id, status: 'processed', processedAt: '2026-01-01T00:00:00Z', processedOrder: snapshot, machines: {} })
 
-const project = ({ synced = [], workflows = {}, completed = {}, packingRecords = {}, loadingRecords = {}, shipments = {} } = {}) => projectOperationalOrders({ syncedOrders: synced, workflows, completed, packingRecords, loadingRecords, shipments })
+const project = ({ synced = [], workflows = {}, completed = {}, packingRecords = {}, loadingRecords = {}, shipments = {}, tombstones = {} } = {}) => projectOperationalOrders({ syncedOrders: synced, workflows, completed, packingRecords, loadingRecords, shipments, tombstones })
+const tombstone = (id, stageAtCutover = 'processed') => ({ orderId: id, salesOrderNumber: id, reason: 'baseline_pre_cutover_zoho_closed_or_omitted', stageAtCutover, tombstonedAt: '2026-08-19T00:00:00Z', cutoverVersion: 'lifecycle-baseline-v1', cutoverDate: '2026-08-19' })
 
 test('unprocessed closed and omitted orders disappear', () => {
   assert.deepEqual(project({ synced: [order('closed', 'closed')] }).orders, [])
@@ -18,6 +19,29 @@ test('processed closed and Zoho-omitted orders survive from durable snapshots wi
   const result = project({ synced: [closed], workflows: { closed: workflow('closed'), omitted: workflow('omitted', omitted) } })
   assert.deepEqual(result.orders.map((item) => item.id).sort(), ['closed', 'omitted'])
   assert.equal(new Set(result.orders.map((item) => item.id)).size, result.orders.length)
+})
+
+test('baseline-old closed/omitted is hidden without deleting durable data', () => {
+  const saved = order('legacy')
+  const workflows = { legacy: workflow('legacy', saved) }
+  const completed = { legacy: { completedAt: 'x', order: saved } }
+  const packingRecords = { legacy: { submittedAt: 'x', evidence: 'preserved' } }
+  const result = project({ workflows, completed, packingRecords, tombstones: { legacy: tombstone('legacy', 'ready_to_ship') } })
+  assert.equal(result.byId.legacy, undefined)
+  assert.equal(workflows.legacy.processedOrder.id, 'legacy')
+  assert.equal(completed.legacy.order.id, 'legacy')
+  assert.equal(packingRecords.legacy.evidence, 'preserved')
+})
+
+test('future processed then closed remains, while active current remains unaffected', () => {
+  const result = project({ synced: [order('future', 'closed'), order('current')], workflows: { future: workflow('future') } })
+  assert.deepEqual(result.orders.map(x => x.id).sort(), ['current', 'future'])
+})
+
+test('baseline tombstone has precedence over active Zoho and no-LR local state', () => {
+  const saved = order('precedence')
+  const result = project({ synced: [saved], workflows: { precedence: workflow('precedence', saved) }, shipments: { precedence: { shipmentType: 'transporter', shippedAt: 'x', lrCopy: null } }, tombstones: { precedence: tombstone('precedence', 'builty_needed') } })
+  assert.equal(result.byId.precedence, undefined)
 })
 
 test('packaging completion advances order and removes it from dispatch projection', () => {

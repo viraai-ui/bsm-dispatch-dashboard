@@ -67,14 +67,16 @@ export type TransporterStore = { transporters: Transporter[] }
 export type ShipmentStore = { shipments: Record<string, ShipmentRecord> }
 
 export async function listReadyToShipItems() {
-  const [{ data: completedStore }, packingStore, shipmentStore] = await Promise.all([
+  const [{ data: completedStore }, packingStore, shipmentStore, { data: baseline }] = await Promise.all([
     githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} }),
     readMediaProofStore('packing'),
     readShipmentStore(),
+    githubReadJson<{ tombstones?: Record<string, unknown> }>('data/operational-lifecycle-baseline.json', {}),
   ])
 
   const items: ReadyToShipItem[] = []
   for (const [orderId, completed] of Object.entries(completedStore.completed || {})) {
+    if (baseline.tombstones?.[orderId]) continue
     const order = completed.order
     if (!order) continue
 
