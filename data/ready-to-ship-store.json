@@ -2834,6 +2834,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035795001": {
+      "id": "ship-1787142190977-zpemn",
+      "itemId": "1154219000035795001",
+      "orderId": "1154219000035795001",
+      "machineId": "1154219000035795001-1154219000035795004-1",
+      "salesOrderNumber": "SO-07745",
+      "customerName": "Parshvaprem Industries Pvt. Ltd.",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Shiv Shakti Air Cargo",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T12:23:10.977Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
