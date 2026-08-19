@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035873001": {
+      "id": "1154219000035873001",
+      "zohoSalesOrderId": "1154219000035873001",
+      "salesOrderNumber": "SO-07764",
+      "status": "open",
+      "customerName": "CBT FOOTWEAR",
+      "shippingAddress": "Plot No. 209, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035873004",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035873001-1154219000035873004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035873001",
+          "lineItemId": "1154219000035873004",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "customerName": "CBT FOOTWEAR",
+          "salesOrderNumber": "SO-07764",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035858007": {
       "id": "1154219000035858007",
       "zohoSalesOrderId": "1154219000035858007",
@@ -21537,6 +21584,7 @@
     }
   },
   "orderIds": [
+    "1154219000035873001",
     "1154219000035858007",
     "1154219000035867001",
     "1154219000035850015",
@@ -21586,8 +21634,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T06:21:02.401Z",
-  "lastAttemptAt": "2026-08-19T06:33:24.644Z",
+  "lastSuccessfulSyncAt": "2026-08-19T06:33:48.550Z",
+  "lastAttemptAt": "2026-08-19T06:33:48.550Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
