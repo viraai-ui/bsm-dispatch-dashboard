@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270998,
+  "serialCounter": 26271003,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -14363,6 +14363,179 @@
           "processedAt": "2026-08-19T06:42:41.751Z",
           "dispatchNote": "Local",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000035867001": {
+      "salesOrderId": "1154219000035867001",
+      "salesOrderNumber": "SO-07762",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035867001",
+        "zohoSalesOrderId": "1154219000035867001",
+        "salesOrderNumber": "SO-07762",
+        "status": "open",
+        "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+        "shippingAddress": "PLOT NO 2911 & 2912, J TYPE, PHASE 1, GIDC, VAPI, Gujarat, 396195, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035867004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "Plain Roller with Wooden Paking",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035867001-1154219000035867004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035867001",
+            "lineItemId": "1154219000035867004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+            "salesOrderNumber": "SO-07762",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller with Wooden Paking"
+          },
+          {
+            "id": "1154219000035867001-1154219000035867004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035867001",
+            "lineItemId": "1154219000035867004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+            "salesOrderNumber": "SO-07762",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller with Wooden Paking"
+          },
+          {
+            "id": "1154219000035867001-1154219000035867004-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035867001",
+            "lineItemId": "1154219000035867004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+            "salesOrderNumber": "SO-07762",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller with Wooden Paking"
+          },
+          {
+            "id": "1154219000035867001-1154219000035867004-4",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035867001",
+            "lineItemId": "1154219000035867004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+            "salesOrderNumber": "SO-07762",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller with Wooden Paking"
+          },
+          {
+            "id": "1154219000035867001-1154219000035867004-5",
+            "unitNumber": 5,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035867001",
+            "lineItemId": "1154219000035867004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+            "salesOrderNumber": "SO-07762",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller with Wooden Paking"
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035867001-1154219000035867004-1": {
+          "machineUnitId": "1154219000035867001-1154219000035867004-1",
+          "lineItemId": "1154219000035867004",
+          "serialNumber": "26270999",
+          "qrToken": "26270999",
+          "qrStatus": "pending"
+        },
+        "1154219000035867001-1154219000035867004-2": {
+          "machineUnitId": "1154219000035867001-1154219000035867004-2",
+          "lineItemId": "1154219000035867004",
+          "serialNumber": "26271000",
+          "qrToken": "26271000",
+          "qrStatus": "pending"
+        },
+        "1154219000035867001-1154219000035867004-3": {
+          "machineUnitId": "1154219000035867001-1154219000035867004-3",
+          "lineItemId": "1154219000035867004",
+          "serialNumber": "26271001",
+          "qrToken": "26271001",
+          "qrStatus": "pending"
+        },
+        "1154219000035867001-1154219000035867004-4": {
+          "machineUnitId": "1154219000035867001-1154219000035867004-4",
+          "lineItemId": "1154219000035867004",
+          "serialNumber": "26271002",
+          "qrToken": "26271002",
+          "qrStatus": "pending"
+        },
+        "1154219000035867001-1154219000035867004-5": {
+          "machineUnitId": "1154219000035867001-1154219000035867004-5",
+          "lineItemId": "1154219000035867004",
+          "serialNumber": "26271003",
+          "qrToken": "26271003",
+          "qrStatus": "pending"
         }
       }
     }
