@@ -1,5 +1,230 @@
 {
   "orders": {
+    "1154219000035867001": {
+      "id": "1154219000035867001",
+      "zohoSalesOrderId": "1154219000035867001",
+      "salesOrderNumber": "SO-07762",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+      "shippingAddress": "PLOT NO 2911 & 2912, J TYPE, PHASE 1, GIDC, VAPI, Gujarat, 396195, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035867004",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "Plain Roller with Wooden Paking",
+          "quantity": 5,
+          "pendingQuantity": 5,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035867001-1154219000035867004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035867001",
+          "lineItemId": "1154219000035867004",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+          "salesOrderNumber": "SO-07762",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain Roller with Wooden Paking"
+        },
+        {
+          "id": "1154219000035867001-1154219000035867004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035867001",
+          "lineItemId": "1154219000035867004",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+          "salesOrderNumber": "SO-07762",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain Roller with Wooden Paking"
+        },
+        {
+          "id": "1154219000035867001-1154219000035867004-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035867001",
+          "lineItemId": "1154219000035867004",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+          "salesOrderNumber": "SO-07762",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain Roller with Wooden Paking"
+        },
+        {
+          "id": "1154219000035867001-1154219000035867004-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035867001",
+          "lineItemId": "1154219000035867004",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+          "salesOrderNumber": "SO-07762",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain Roller with Wooden Paking"
+        },
+        {
+          "id": "1154219000035867001-1154219000035867004-5",
+          "unitNumber": 5,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035867001",
+          "lineItemId": "1154219000035867004",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+          "salesOrderNumber": "SO-07762",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Plain Roller with Wooden Paking"
+        }
+      ]
+    },
+    "1154219000035850015": {
+      "id": "1154219000035850015",
+      "zohoSalesOrderId": "1154219000035850015",
+      "salesOrderNumber": "SO-07761",
+      "status": "open",
+      "customerName": "Madaan Plastic Industry",
+      "shippingAddress": "Plot No-4 & 5, Sector-17, HSIIDC Bahadurgarh, Haryana-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035850018",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035850015-1154219000035850018-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035850015",
+          "lineItemId": "1154219000035850018",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "customerName": "Madaan Plastic Industry",
+          "salesOrderNumber": "SO-07761",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035850002": {
+      "id": "1154219000035850002",
+      "zohoSalesOrderId": "1154219000035850002",
+      "salesOrderNumber": "SO-07760",
+      "status": "open",
+      "customerName": "BELGI FOOTWEAR LLP",
+      "shippingAddress": "2 MANZIL GROUND FLOOR SLAB AND FIRST FLOOR SHED, PLOT NO. 351, HSIIDC, SECTOR-17, I E, JHAJJHAR, VILLAGE JAKHODA/KASSAR, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035850005",
+          "itemName": "Side wall Stitching (sole stitch)",
+          "sku": "168",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035850002-1154219000035850005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035850002",
+          "lineItemId": "1154219000035850005",
+          "itemName": "Side wall Stitching (sole stitch)",
+          "sku": "168",
+          "customerName": "BELGI FOOTWEAR LLP",
+          "salesOrderNumber": "SO-07760",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035854013": {
       "id": "1154219000035854013",
       "zohoSalesOrderId": "1154219000035854013",
@@ -116,53 +341,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035796015": {
-      "id": "1154219000035796015",
-      "zohoSalesOrderId": "1154219000035796015",
-      "salesOrderNumber": "SO-07756",
-      "status": "open",
-      "customerName": "Falcon Industries",
-      "shippingAddress": "Plot No. 23, Ground Floor, Bawana Industrial Area, Pocket N, Sec-2, Bawana, Delhi, 110039, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035796018",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035796015-1154219000035796018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035796015",
-          "lineItemId": "1154219000035796018",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "customerName": "Falcon Industries",
-          "salesOrderNumber": "SO-07756",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -314,100 +492,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Good Packing"
-        }
-      ]
-    },
-    "1154219000035790005": {
-      "id": "1154219000035790005",
-      "zohoSalesOrderId": "1154219000035790005",
-      "salesOrderNumber": "SO-07753",
-      "status": "open",
-      "customerName": "The Kicks Factory Co.",
-      "shippingAddress": "Second Floor, B-1/662, Gali No-22, Harsh Vihar, KH No-381, New Delhi, Shahdara, Delhi,, 110093, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035790008",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035790005-1154219000035790008-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035790005",
-          "lineItemId": "1154219000035790008",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "The Kicks Factory Co.",
-          "salesOrderNumber": "SO-07753",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035824001": {
-      "id": "1154219000035824001",
-      "zohoSalesOrderId": "1154219000035824001",
-      "salesOrderNumber": "SO-07752",
-      "status": "open",
-      "customerName": "Smitam Lifestyle Goods Private Limited",
-      "shippingAddress": "M-18, Badli Industrial Area, Delhi, 110042",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035824006",
-          "itemName": "Single Needle Walking foot (Cylinder Bed)",
-          "sku": "341",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035824001-1154219000035824006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035824001",
-          "lineItemId": "1154219000035824006",
-          "itemName": "Single Needle Walking foot (Cylinder Bed)",
-          "sku": "341",
-          "customerName": "Smitam Lifestyle Goods Private Limited",
-          "salesOrderNumber": "SO-07752",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -21546,13 +21630,13 @@
     }
   },
   "orderIds": [
+    "1154219000035867001",
+    "1154219000035850015",
+    "1154219000035850002",
     "1154219000035854013",
     "1154219000035838001",
-    "1154219000035796015",
     "1154219000035809004",
     "1154219000035824045",
-    "1154219000035790005",
-    "1154219000035824001",
     "1154219000035795016",
     "1154219000035814001",
     "1154219000035798001",
@@ -21595,8 +21679,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-19T05:42:46.763Z",
-  "lastAttemptAt": "2026-08-19T06:00:40.042Z",
+  "lastSuccessfulSyncAt": "2026-08-19T06:01:07.292Z",
+  "lastAttemptAt": "2026-08-19T06:01:07.292Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
