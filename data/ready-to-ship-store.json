@@ -2741,6 +2741,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035838001": {
+      "id": "ship-1787141779099-ic4xf",
+      "itemId": "1154219000035838001",
+      "orderId": "1154219000035838001",
+      "machineId": "1154219000035838001-1154219000035838004-1",
+      "salesOrderNumber": "SO-07757",
+      "customerName": "RAMESHWAR FABRICATOR",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "MP07GB0559",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T12:16:19.099Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
