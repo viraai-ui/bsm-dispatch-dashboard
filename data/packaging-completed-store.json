@@ -9536,6 +9536,63 @@
       "machineIds": [
         "1154219000035634001-1154219000035634004-1"
       ]
+    },
+    "1154219000035876001": {
+      "completedAt": "2026-08-19T10:03:34.885Z",
+      "order": {
+        "id": "1154219000035876001",
+        "zohoSalesOrderId": "1154219000035876001",
+        "salesOrderNumber": "SO-07765",
+        "status": "open",
+        "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+        "shippingAddress": "Plot No. 37, Sec-4B, Industrial Estate, Bahadurgarh Haryana-124507, Haryana",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035876004",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035876001-1154219000035876004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271005",
+            "qrToken": "26271005",
+            "orderId": "1154219000035876001",
+            "lineItemId": "1154219000035876004",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+            "salesOrderNumber": "SO-07765",
+            "deliveryDate": "2026-08-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035876001-1154219000035876004-1"
+      ]
     }
   }
 }
