@@ -14224,7 +14224,9 @@
     "1154219000035850015": {
       "salesOrderId": "1154219000035850015",
       "salesOrderNumber": "SO-07761",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T06:40:53.196Z",
       "processedOrder": {
         "id": "1154219000035850015",
         "zohoSalesOrderId": "1154219000035850015",
@@ -14252,8 +14254,8 @@
           {
             "id": "1154219000035850015-1154219000035850018-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270997",
+            "qrToken": "26270997",
             "orderId": "1154219000035850015",
             "lineItemId": "1154219000035850018",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -14261,14 +14263,17 @@
             "customerName": "Madaan Plastic Industry",
             "salesOrderNumber": "SO-07761",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Shree Sai",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -14281,7 +14286,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:39:59.086Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:40:09.756Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:40:09.756Z",
+          "processedAt": "2026-08-19T06:40:53.196Z",
+          "dispatchNote": "Local",
+          "vendor": "Shree Sai"
         }
       }
     }
