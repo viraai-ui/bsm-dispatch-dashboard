@@ -9859,6 +9859,62 @@
         "1154219000035867001-1154219000035867004-4",
         "1154219000035867001-1154219000035867004-5"
       ]
+    },
+    "1154219000035510003": {
+      "completedAt": "2026-08-19T12:08:53.321Z",
+      "order": {
+        "id": "1154219000035510003",
+        "zohoSalesOrderId": "1154219000035510003",
+        "salesOrderNumber": "SO-07697",
+        "status": "open",
+        "customerName": "Doershappy",
+        "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035826181",
+            "itemName": "Eyelet Punching Single Channel (1300 No. )",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035510003-1154219000035826181-1",
+            "unitNumber": 1,
+            "serialNumber": "26271007",
+            "qrToken": "26271007",
+            "orderId": "1154219000035510003",
+            "lineItemId": "1154219000035826181",
+            "itemName": "Eyelet Punching Single Channel (1300 No. )",
+            "sku": "",
+            "customerName": "Doershappy",
+            "salesOrderNumber": "SO-07697",
+            "deliveryDate": "2026-08-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035510003-1154219000035826181-1"
+      ]
     }
   }
 }
