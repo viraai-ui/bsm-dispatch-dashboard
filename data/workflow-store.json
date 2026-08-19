@@ -14678,7 +14678,9 @@
     "1154219000035876001": {
       "salesOrderId": "1154219000035876001",
       "salesOrderNumber": "SO-07765",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T07:06:25.989Z",
       "processedOrder": {
         "id": "1154219000035876001",
         "zohoSalesOrderId": "1154219000035876001",
@@ -14706,8 +14708,8 @@
           {
             "id": "1154219000035876001-1154219000035876004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271005",
+            "qrToken": "26271005",
             "orderId": "1154219000035876001",
             "lineItemId": "1154219000035876004",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -14715,14 +14717,17 @@
             "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
             "salesOrderNumber": "SO-07765",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -14735,7 +14740,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T07:05:06.096Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T07:05:16.576Z"
+          "zohoBackupQueuedAt": "2026-08-19T07:05:16.576Z",
+          "processedAt": "2026-08-19T07:06:25.989Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
