@@ -14297,7 +14297,9 @@
     "1154219000035634001": {
       "salesOrderId": "1154219000035634001",
       "salesOrderNumber": "SO-07722",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T06:42:41.751Z",
       "processedOrder": {
         "id": "1154219000035634001",
         "zohoSalesOrderId": "1154219000035634001",
@@ -14325,8 +14327,8 @@
           {
             "id": "1154219000035634001-1154219000035634004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270998",
+            "qrToken": "26270998",
             "orderId": "1154219000035634001",
             "lineItemId": "1154219000035634004",
             "itemName": "TPU fusing machine [Hot And Cold]",
@@ -14334,14 +14336,17 @@
             "customerName": "SHOESHION INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07722",
             "deliveryDate": "2026-08-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -14354,7 +14359,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:41:57.860Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:42:08.050Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:42:08.050Z",
+          "processedAt": "2026-08-19T06:42:41.751Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
