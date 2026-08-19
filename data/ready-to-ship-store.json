@@ -2611,6 +2611,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035824001": {
+      "id": "ship-1787118599041-r0h4a",
+      "itemId": "1154219000035824001",
+      "orderId": "1154219000035824001",
+      "machineId": "1154219000035824001-1154219000035824006-1",
+      "salesOrderNumber": "SO-07752",
+      "customerName": "Smitam Lifestyle Goods Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP2284",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-18",
+      "notes": "",
+      "shippedAt": "2026-08-19T05:49:59.041Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
