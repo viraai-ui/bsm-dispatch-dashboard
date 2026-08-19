@@ -2644,7 +2644,7 @@
       }
     },
     "1154219000035701017": {
-      "id": "ship-1787118839908-tlnz5",
+      "id": "ship-1787119475723-jbzrq",
       "itemId": "1154219000035701017",
       "orderId": "1154219000035701017",
       "machineId": "1154219000035701017-1154219000035701020-1",
@@ -2656,13 +2656,19 @@
       "transporterName": "New Yadav Tempo Service",
       "transporterPhone": "",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-18 at 7.01.11 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-19%2FSO-07741%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-19T06-04-33-353Z.jpeg",
+        "r2Key": "media-proof/2026-08-19/SO-07741/Shipment LR Builty-shipment-lr-builty-2026-08-19T06-04-33-353Z.jpeg",
+        "expiresAt": "2026-10-18T06:04:33.353Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-19",
       "notes": "",
-      "shippedAt": "2026-08-19T05:53:59.908Z",
+      "shippedAt": "2026-08-19T06:04:35.723Z",
       "messages": {
         "customer": {
           "status": "skipped",
