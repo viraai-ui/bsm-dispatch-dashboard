@@ -2679,6 +2679,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035858007": {
+      "id": "ship-1787132710900-vglc2",
+      "itemId": "1154219000035858007",
+      "orderId": "1154219000035858007",
+      "machineId": "1154219000035858007-1154219000035858010-1",
+      "salesOrderNumber": "SO-07763",
+      "customerName": "Nayra Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAL5797",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T09:45:10.901Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
