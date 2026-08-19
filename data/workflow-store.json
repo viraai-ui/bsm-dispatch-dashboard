@@ -13661,12 +13661,14 @@
           "qrToken": "26270989",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T10:11:29.778Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-18T10:11:38.836Z",
           "processedAt": "2026-08-18T10:11:43.290Z",
           "dispatchNote": "",
           "vendor": "",
-          "dispatchedAt": "2026-08-18T10:57:41.186Z"
+          "dispatchedAt": "2026-08-18T10:57:41.186Z",
+          "zohoBackupLastAttemptAt": "2026-08-19T04:05:49.853Z",
+          "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       }
     },
