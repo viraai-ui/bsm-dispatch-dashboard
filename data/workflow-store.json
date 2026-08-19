@@ -13434,12 +13434,14 @@
           "qrToken": "26270986",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-18T05:44:13.460Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-18T05:35:24.904Z",
           "processedAt": "2026-08-18T05:46:23.757Z",
           "dispatchNote": "Local",
           "vendor": "Karan Sir",
-          "dispatchedAt": "2026-08-18T05:48:09.789Z"
+          "dispatchedAt": "2026-08-18T05:48:09.789Z",
+          "zohoBackupLastAttemptAt": "2026-08-19T04:05:49.853Z",
+          "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       }
     },
