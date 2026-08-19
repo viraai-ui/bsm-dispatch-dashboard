@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270994,
+  "serialCounter": 26270995,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -14069,6 +14069,67 @@
           "vendor": "Sunrise",
           "zohoBackupLastAttemptAt": "2026-08-19T04:05:49.853Z",
           "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
+        }
+      }
+    },
+    "1154219000035858007": {
+      "salesOrderId": "1154219000035858007",
+      "salesOrderNumber": "SO-07763",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035858007",
+        "zohoSalesOrderId": "1154219000035858007",
+        "salesOrderNumber": "SO-07763",
+        "status": "open",
+        "customerName": "Nayra Enterprises",
+        "shippingAddress": "BASEMENT,GROUND & FIRST FLOOR, KHASRA NO 501, SWARN PARK INDUSTRIAL AREA, M.R. BHARTI SCHOOL,, Mundka, Delhi, 110041, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035858010",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035858007-1154219000035858010-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035858007",
+            "lineItemId": "1154219000035858010",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "customerName": "Nayra Enterprises",
+            "salesOrderNumber": "SO-07763",
+            "deliveryDate": "2026-08-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035858007-1154219000035858010-1": {
+          "machineUnitId": "1154219000035858007-1154219000035858010-1",
+          "lineItemId": "1154219000035858010",
+          "serialNumber": "26270995",
+          "qrToken": "26270995",
+          "qrStatus": "pending"
         }
       }
     }
