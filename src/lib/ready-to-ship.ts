@@ -1,7 +1,7 @@
 import type { MachineUnit, Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson } from './workflow-store'
 import { readMediaProofStore, type MediaUpload } from './media-proof'
-import { getOperationalOrderIds } from './synced-orders'
+
 
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
 const TRANSPORTERS_PATH = 'data/transporters-store.json'
@@ -72,12 +72,12 @@ export async function listReadyToShipItems() {
     readMediaProofStore('packing'),
     readShipmentStore(),
   ])
-  const activeIds = await getOperationalOrderIds()
+
   const items: ReadyToShipItem[] = []
   for (const [orderId, completed] of Object.entries(completedStore.completed || {})) {
     const order = completed.order
     if (!order) continue
-    if (!activeIds.has(order.id)) continue
+
     const allowedMachineIds = new Set(completed.machineIds?.length ? completed.machineIds : (order.machines || []).map((machine) => machine.id))
     const record = packingStore.records[orderId]
     const machines = (order.machines || []).filter((machine) => allowedMachineIds.has(machine.id))

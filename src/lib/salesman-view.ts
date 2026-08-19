@@ -1,5 +1,5 @@
 import { githubReadJson, listProcessedOrders, type MachineWorkflow } from './workflow-store'
-import { getOperationalOrderIds, readSyncedOrdersStore } from './synced-orders'
+import { readSyncedOrdersStore } from './synced-orders'
 import { listReadyToShipItems } from './ready-to-ship'
 import { isMachineLineItem } from './item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
@@ -36,7 +36,7 @@ export type SalesmanShipmentOrder = {
 }
 
 export async function getSalesmanViewData() {
-  const activeIds = await getOperationalOrderIds()
+
   const [processed, synced, completedRead, priorityRead, readyItems] = await Promise.all([
     listProcessedOrders(),
     readSyncedOrdersStore(),
@@ -47,7 +47,7 @@ export async function getSalesmanViewData() {
   const completed = completedRead.data.completed || {}
   const priorities = priorityRead.data.priorities || {}
   const dispatchOrders: SalesmanDispatchOrder[] = processed
-    .filter((item) => activeIds.has(item.salesOrderId))
+
     .filter((item) => Boolean(item.processedOrder))
     .map((item) => {
       const processedIds = new Set(Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId))

@@ -1,9 +1,10 @@
 import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { githubReadJson, githubWriteJson, listProcessedOrders, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
-import { getOperationalOrderIds, readSyncedOrdersStore } from '@/lib/synced-orders'
+import { readSyncedOrdersStore } from '@/lib/synced-orders'
 import { isMachineLineItem } from '@/lib/item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
+import { loadOperationalProjection } from '@/lib/operational-orders'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 type PriorityStore = { priorities: Record<string, { priority: 'urgent' | 'regular'; sortOrder?: number; updatedAt: string }> }
@@ -13,8 +14,8 @@ const PRIORITY_PATH = 'data/dispatch-priority-store.json'
 export async function GET(request: Request) {
   const auth = await requireUser(['Admin', 'Operations', 'Dispatch'])
   if (!auth.ok) return auth.response
-  const activeIds = await getOperationalOrderIds()
-  const processed = (await listProcessedOrders()).filter((item) => activeIds.has(item.salesOrderId))
+  const [allProcessed, projection] = await Promise.all([listProcessedOrders(), loadOperationalProjection()])
+  const processed = allProcessed.filter((item) => projection.byId[item.salesOrderId]?.showInDispatch)
   const synced = await readSyncedOrdersStore()
   const { data: completed } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const { data: priorityStore } = await githubReadJson<PriorityStore>(PRIORITY_PATH, { priorities: {} })

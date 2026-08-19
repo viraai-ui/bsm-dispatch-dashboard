@@ -39,10 +39,6 @@ const MEDIA_PATHS: Record<MediaStage, string> = {
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 
-async function activeOperationalOrderIds() {
-  const { getOperationalOrderIds } = await import('./synced-orders')
-  return getOperationalOrderIds()
-}
 
 function mediaPath(stage: MediaStage = 'packing') { return MEDIA_PATHS[stage] }
 function stageLabel(stage: MediaStage) { return stage === 'loading' ? 'loading video' : 'packing video' }
@@ -73,10 +69,10 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const store = stage === 'loading' ? loadingStore : packingStore
   let packingChanged = false
   let loadingChanged = false
-  const activeIds = await activeOperationalOrderIds()
+
   const sourceOrders = (stage === 'packing' ? processedWorkflows.map((workflow) => workflow.processedOrder) : Object.values(completed).map((item) => item.order))
     .filter((order): order is Order => Boolean(order))
-    .filter((order) => activeIds.has(order.id))
+
   const sortTimeByOrderId = stage === 'packing'
     ? new Map(processedWorkflows.map((workflow) => [workflow.salesOrderId, Date.parse(workflow.processedAt || workflow.processedOrder?.deliveryDate || '') || 0]))
     : completedAtByOrderId
