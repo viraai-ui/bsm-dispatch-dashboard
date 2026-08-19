@@ -14071,7 +14071,7 @@
           "zohoBackupSyncedAt": "2026-08-19T04:05:49.853Z"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035858007": {
       "salesOrderId": "1154219000035858007",
@@ -14146,7 +14146,7 @@
           "zohoBackupSyncedAt": "2026-08-19T06:31:20.846Z"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035873001": {
       "salesOrderId": "1154219000035873001",
@@ -14219,13 +14219,13 @@
           "vendor": "Rawal"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 4
     },
     "1154219000035850015": {
       "salesOrderId": "1154219000035850015",
       "salesOrderNumber": "SO-07761",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-19T06:40:53.196Z",
       "processedOrder": {
         "id": "1154219000035850015",
@@ -14291,7 +14291,8 @@
           "dispatchNote": "Local",
           "vendor": "Shree Sai"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
