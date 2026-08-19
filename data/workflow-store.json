@@ -14914,7 +14914,9 @@
     "1154219000035710004": {
       "salesOrderId": "1154219000035710004",
       "salesOrderNumber": "SO-07740",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T11:35:58.268Z",
       "processedOrder": {
         "id": "1154219000035710004",
         "zohoSalesOrderId": "1154219000035710004",
@@ -14942,8 +14944,8 @@
           {
             "id": "1154219000035710004-1154219000035710007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271008",
+            "qrToken": "26271008",
             "orderId": "1154219000035710004",
             "lineItemId": "1154219000035710007",
             "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
@@ -14951,14 +14953,17 @@
             "customerName": "MS BHAGWATI ENTERPRISES",
             "salesOrderNumber": "SO-07740",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Dts",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -14971,7 +14976,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T11:33:32.985Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T11:33:42.428Z"
+          "zohoBackupQueuedAt": "2026-08-19T11:33:42.428Z",
+          "processedAt": "2026-08-19T11:35:58.268Z",
+          "dispatchNote": "Local",
+          "vendor": "Dts"
         }
       }
     }
