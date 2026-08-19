@@ -14369,7 +14369,9 @@
     "1154219000035867001": {
       "salesOrderId": "1154219000035867001",
       "salesOrderNumber": "SO-07762",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-19T06:44:31.117Z",
       "processedOrder": {
         "id": "1154219000035867001",
         "zohoSalesOrderId": "1154219000035867001",
@@ -14397,8 +14399,8 @@
           {
             "id": "1154219000035867001-1154219000035867004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26270999",
+            "qrToken": "26270999",
             "orderId": "1154219000035867001",
             "lineItemId": "1154219000035867004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -14406,20 +14408,23 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
             "salesOrderNumber": "SO-07762",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller with Wooden Paking"
+            "itemDescription": "Plain Roller with Wooden Paking",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Ars",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035867001-1154219000035867004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271000",
+            "qrToken": "26271000",
             "orderId": "1154219000035867001",
             "lineItemId": "1154219000035867004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -14427,20 +14432,23 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
             "salesOrderNumber": "SO-07762",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller with Wooden Paking"
+            "itemDescription": "Plain Roller with Wooden Paking",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Ars",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035867001-1154219000035867004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271001",
+            "qrToken": "26271001",
             "orderId": "1154219000035867001",
             "lineItemId": "1154219000035867004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -14448,20 +14456,23 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
             "salesOrderNumber": "SO-07762",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller with Wooden Paking"
+            "itemDescription": "Plain Roller with Wooden Paking",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Ars",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035867001-1154219000035867004-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271002",
+            "qrToken": "26271002",
             "orderId": "1154219000035867001",
             "lineItemId": "1154219000035867004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -14469,20 +14480,23 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
             "salesOrderNumber": "SO-07762",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller with Wooden Paking"
+            "itemDescription": "Plain Roller with Wooden Paking",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Ars",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035867001-1154219000035867004-5",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271003",
+            "qrToken": "26271003",
             "orderId": "1154219000035867001",
             "lineItemId": "1154219000035867004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -14490,14 +14504,17 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
             "salesOrderNumber": "SO-07762",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller with Wooden Paking"
+            "itemDescription": "Plain Roller with Wooden Paking",
+            "warrantyStart": "2026-08-19",
+            "vendor": "Ars",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -14510,7 +14527,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:43:10.716Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z",
+          "processedAt": "2026-08-19T06:44:31.117Z",
+          "dispatchNote": "wooden",
+          "vendor": "Ars"
         },
         "1154219000035867001-1154219000035867004-2": {
           "machineUnitId": "1154219000035867001-1154219000035867004-2",
@@ -14520,7 +14540,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:43:10.716Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z",
+          "processedAt": "2026-08-19T06:44:31.117Z",
+          "dispatchNote": "wooden",
+          "vendor": "Ars"
         },
         "1154219000035867001-1154219000035867004-3": {
           "machineUnitId": "1154219000035867001-1154219000035867004-3",
@@ -14530,7 +14553,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:43:10.716Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z",
+          "processedAt": "2026-08-19T06:44:31.117Z",
+          "dispatchNote": "wooden",
+          "vendor": "Ars"
         },
         "1154219000035867001-1154219000035867004-4": {
           "machineUnitId": "1154219000035867001-1154219000035867004-4",
@@ -14540,7 +14566,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:43:10.716Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z",
+          "processedAt": "2026-08-19T06:44:31.117Z",
+          "dispatchNote": "wooden",
+          "vendor": "Ars"
         },
         "1154219000035867001-1154219000035867004-5": {
           "machineUnitId": "1154219000035867001-1154219000035867004-5",
@@ -14550,7 +14579,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T06:43:10.716Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z"
+          "zohoBackupQueuedAt": "2026-08-19T06:43:28.274Z",
+          "processedAt": "2026-08-19T06:44:31.117Z",
+          "dispatchNote": "wooden",
+          "vendor": "Ars"
         }
       }
     }
