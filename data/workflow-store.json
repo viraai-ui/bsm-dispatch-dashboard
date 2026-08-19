@@ -15093,11 +15093,13 @@
           "qrToken": "26271009",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-19T11:57:22.152Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-19T11:57:31.550Z",
           "processedAt": "2026-08-19T11:58:13.753Z",
           "dispatchNote": "Good Wrapping",
-          "vendor": "Siphon"
+          "vendor": "Siphon",
+          "zohoBackupLastAttemptAt": "2026-08-19T12:01:15.328Z",
+          "zohoBackupSyncedAt": "2026-08-19T12:01:15.328Z"
         }
       }
     }
