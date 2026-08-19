@@ -2600,6 +2600,31 @@
           ]
         }
       }
+    },
+    "1154219000035873001": {
+      "orderId": "1154219000035873001",
+      "salesOrderNumber": "SO-07764",
+      "submittedAt": null,
+      "units": {
+        "1154219000035873001-1154219000035873004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035873001-1154219000035873004-1-video-1787133388777-y7fua0",
+              "name": "VID_20260819_152611.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-19%2FSO-07764%2FSole%20Marking%20Machine%20Pneumatic%20With%20Adjustable%20Pad-1154219000035873001-1154219000035873004-1-2026-08-19T09-56-16-056Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-19/SO-07764/Sole Marking Machine Pneumatic With Adjustable Pad-1154219000035873001-1154219000035873004-1-2026-08-19T09-56-16-056Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-19T09:56:28.777Z",
+              "expiresAt": "2026-09-18T09:56:16.057Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
