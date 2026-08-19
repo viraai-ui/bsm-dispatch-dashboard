@@ -2865,6 +2865,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035787009": {
+      "id": "ship-1787142313717-vxwrp",
+      "itemId": "1154219000035787009",
+      "orderId": "1154219000035787009",
+      "machineId": "1154219000035787009-1154219000035787012-1",
+      "salesOrderNumber": "SO-07751",
+      "customerName": "SIGNATURE FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-19",
+      "notes": "",
+      "shippedAt": "2026-08-19T12:25:13.717Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
