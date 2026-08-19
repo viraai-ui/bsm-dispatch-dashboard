@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270997,
+  "serialCounter": 26270998,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -14293,6 +14293,67 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035634001": {
+      "salesOrderId": "1154219000035634001",
+      "salesOrderNumber": "SO-07722",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035634001",
+        "zohoSalesOrderId": "1154219000035634001",
+        "salesOrderNumber": "SO-07722",
+        "status": "open",
+        "customerName": "SHOESHION INTERNATIONAL PRIVATE LIMITED",
+        "shippingAddress": "178, Gali Number 9, Kalptaru Enterprises, MIE Part A, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-13",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035634004",
+            "itemName": "TPU fusing machine [Hot And Cold]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035634001-1154219000035634004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035634001",
+            "lineItemId": "1154219000035634004",
+            "itemName": "TPU fusing machine [Hot And Cold]",
+            "sku": "",
+            "customerName": "SHOESHION INTERNATIONAL PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07722",
+            "deliveryDate": "2026-08-13",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035634001-1154219000035634004-1": {
+          "machineUnitId": "1154219000035634001-1154219000035634004-1",
+          "lineItemId": "1154219000035634004",
+          "serialNumber": "26270998",
+          "qrToken": "26270998",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
