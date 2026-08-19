@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26270995,
+  "serialCounter": 26270996,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -14147,6 +14147,67 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035873001": {
+      "salesOrderId": "1154219000035873001",
+      "salesOrderNumber": "SO-07764",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035873001",
+        "zohoSalesOrderId": "1154219000035873001",
+        "salesOrderNumber": "SO-07764",
+        "status": "open",
+        "customerName": "CBT FOOTWEAR",
+        "shippingAddress": "Plot No. 209, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035873004",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035873001-1154219000035873004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035873001",
+            "lineItemId": "1154219000035873004",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "CBT FOOTWEAR",
+            "salesOrderNumber": "SO-07764",
+            "deliveryDate": "2026-08-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035873001-1154219000035873004-1": {
+          "machineUnitId": "1154219000035873001-1154219000035873004-1",
+          "lineItemId": "1154219000035873004",
+          "serialNumber": "26270996",
+          "qrToken": "26270996",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
