@@ -436,7 +436,7 @@ export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: 
   }
 }
 
-export async function syncMissingGeneratedSerialsToZohoSheet(minSerial = 26270758): Promise<BackupResult> {
+export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupResult> {
   const result: BackupResult = { synced: 0, skipped: 0, configured: serialSheetConfigured(), errors: [] }
   if (!result.configured) return result
   try {
@@ -449,7 +449,9 @@ export async function syncMissingGeneratedSerialsToZohoSheet(minSerial = 2627075
       const orderMachinesById = new Map((order.machines || []).map((machine) => [machine.id, machine]))
       for (const machineWorkflow of Object.values(workflow.machines || {})) {
         const serial = Number(machineWorkflow.serialNumber || 0)
-        if (!serial || serial <= minSerial || machineWorkflow.zohoBackupStatus === 'synced') continue
+        // Queue state, not a historical serial cutoff, determines retry eligibility. A cutoff
+        // stranded older pending/error entries forever after partial incidents.
+        if (!serial || machineWorkflow.zohoBackupStatus === 'synced') continue
         const orderMachine = orderMachinesById.get(machineWorkflow.machineUnitId)
         if (!orderMachine) continue
         entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } })

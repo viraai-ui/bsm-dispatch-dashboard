@@ -143,6 +143,9 @@ async function run() {
   if (!sheetRefreshToken() || !sheetClientId() || !sheetClientSecret()) throw new Error('Zoho Sheet credentials are missing')
   const workflow = await githubJson('data/workflow-store.json')
   const workflowMachines = collectWorkflowMachines(workflow)
+  const workflowSerialCounts = new Map()
+  for (const machine of workflowMachines) workflowSerialCounts.set(machine.serial, (workflowSerialCounts.get(machine.serial) || 0) + 1)
+  const workflowDuplicates = [...workflowSerialCounts].filter(([, count]) => count > 1).map(([serial, count]) => ({ serial, count }))
   const worksheetNames = databaseWorksheets()
   const sheetErrors = []
   const allSheetRows = (await Promise.all(worksheetNames.map(async (name) => {
@@ -159,12 +162,36 @@ async function run() {
     counts.set(serial, (counts.get(serial) || 0) + 1)
   }
   for (const [serial, count] of counts) if (count > 1) duplicates.push({ serial, count })
+  const primaryRows = allSheetRows.filter((row) => row.__worksheetName === primaryWorksheet())
+  const primaryCounts = new Map()
+  for (const row of primaryRows) {
+    const serial = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()
+    if (serial) primaryCounts.set(serial, (primaryCounts.get(serial) || 0) + 1)
+  }
+  const dashboardRangeDuplicates = [...primaryCounts]
+    .filter(([serial, count]) => workflowSerialCounts.has(serial) && count > 1)
+    .map(([serial, count]) => ({ serial, count }))
+  const pending = workflowMachines.filter((machine) => {
+    const order = workflow.orders?.[machine.orderId]
+    const state = order?.machines?.[Object.keys(order?.machines || {}).find((id) => String(order.machines[id].serialNumber || '').trim() === machine.serial)]
+    return state?.zohoBackupStatus !== 'synced'
+  })
   const summary = {
+    auditedAt: new Date().toISOString(),
     workflowSerialCount: workflowMachines.length,
+    workflowUniqueSerialCount: workflowSerialCounts.size,
+    workflowDuplicateSerials: workflowDuplicates,
+    pendingUnsyncedCount: pending.length,
+    pendingUnsyncedSerials: pending.map((machine) => machine.serial),
     sheetNamesChecked: worksheetNames,
     sheetRowCount: allSheetRows.length,
     sheetSerialCount: sheetSerials.size,
     missingCount: missing.length,
+    matchedCount: workflowMachines.length - missing.length,
+    primaryWorksheet: primaryWorksheet(),
+    primaryWorksheetRowCount: primaryRows.length,
+    dashboardRangeDuplicateCount: dashboardRangeDuplicates.length,
+    dashboardRangeDuplicates,
     duplicateSheetSerialCount: duplicates.length,
     sheetErrors,
     missing,

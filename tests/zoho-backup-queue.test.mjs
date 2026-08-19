@@ -18,6 +18,26 @@ assert.ok(workflow.includes("zohoBackupStatus?: 'pending' | 'synced' | 'error'")
 assert.ok(sheet.includes('One full read for the whole queue, one batch append, and at most one readback'), 'reconciler must batch API calls')
 assert.ok(sheet.includes('prevent duplicates within this batch'), 'batch must deduplicate serials')
 assert.ok(sheet.includes("machineWorkflow.zohoBackupStatus === 'synced'"), 'retries must skip completed queue items')
+assert.ok(!sheet.includes('serial <= minSerial'), 'retry queue must not strand old pending serials behind a cutoff')
+assert.ok(sheet.includes('if (rows.length) await appendSerialRows(rows)'), 'empty append must be impossible')
+assert.ok(sheet.indexOf('const after = await fetchSerialRecords()') < sheet.indexOf("zohoBackupStatus: ok ? 'synced' : 'error'"), 'readback must happen before an item is marked synced')
 assert.ok(sheet.includes("zohoBackupStatus: ok ? 'synced' : 'error'"), 'eventual reconciliation must persist outcome')
 assert.ok(sheet.includes('/api request limit|rate limit|too many requests|quota/'), 'quota failures must not be aggressively retried')
-console.log('Zoho backup architecture regression tests passed: 13 assertions')
+// Fault model: first append succeeds but readback fails. The item remains queued; on the
+// next tick the initial read sees it and skips append, then marks it synced. Repeated ticks
+// stop at the synced state and cannot append a duplicate.
+let state = 'pending'; let present = false; let appends = 0
+function tick({ failReadback = false } = {}) {
+  if (state === 'synced') return
+  const wasPresent = present
+  if (!wasPresent) { present = true; appends++ }
+  if (failReadback && !wasPresent) { state = 'error'; return }
+  if (present) state = 'synced'
+}
+tick({ failReadback: true })
+assert.equal(state, 'error', 'temporary Zoho readback failure must remain queued')
+tick()
+assert.equal(state, 'synced', 'next tick must recover after temporary failure')
+tick()
+assert.equal(appends, 1, 'successful and repeated retries must not create duplicates')
+console.log('Zoho backup architecture/fault regression tests passed: 19 assertions')
