@@ -10028,6 +10028,62 @@
       "machineIds": [
         "1154219000035710004-1154219000035710007-1"
       ]
+    },
+    "1154219000035024001": {
+      "completedAt": "2026-08-20T08:13:33.258Z",
+      "order": {
+        "id": "1154219000035024001",
+        "zohoSalesOrderId": "1154219000035024001",
+        "salesOrderNumber": "SO-07618",
+        "status": "open",
+        "customerName": "Romina Enterprises Pvt. Ltd.",
+        "shippingAddress": "Plot no 263, HSIIDC Footwear Park, Sector- 17, Bahadurgarh, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035024004",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035024001-1154219000035024004-1",
+            "unitNumber": 1,
+            "serialNumber": "26270818",
+            "qrToken": "26270818",
+            "orderId": "1154219000035024001",
+            "lineItemId": "1154219000035024004",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "Romina Enterprises Pvt. Ltd.",
+            "salesOrderNumber": "SO-07618",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035024001-1154219000035024004-1"
+      ]
     }
   }
 }
