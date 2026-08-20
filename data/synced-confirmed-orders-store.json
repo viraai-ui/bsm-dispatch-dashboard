@@ -1,5 +1,196 @@
 {
   "orders": {
+    "1154219000035873016": {
+      "id": "1154219000035873016",
+      "zohoSalesOrderId": "1154219000035873016",
+      "salesOrderNumber": "SO-07771",
+      "status": "open",
+      "customerName": "SELFIEE FOOTWEAR",
+      "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035873020",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035873019",
+          "itemName": "De lasting Jack (hydraulic)",
+          "sku": "500",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035873021",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035873016-1154219000035873020-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035873016",
+          "lineItemId": "1154219000035873020",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "customerName": "SELFIEE FOOTWEAR",
+          "salesOrderNumber": "SO-07771",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035873016-1154219000035873019-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035873016",
+          "lineItemId": "1154219000035873019",
+          "itemName": "De lasting Jack (hydraulic)",
+          "sku": "500",
+          "customerName": "SELFIEE FOOTWEAR",
+          "salesOrderNumber": "SO-07771",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035873016-1154219000035873021-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035873016",
+          "lineItemId": "1154219000035873021",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "customerName": "SELFIEE FOOTWEAR",
+          "salesOrderNumber": "SO-07771",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035898002": {
+      "id": "1154219000035898002",
+      "zohoSalesOrderId": "1154219000035898002",
+      "salesOrderNumber": "SO-07770",
+      "status": "open",
+      "customerName": "Surbhi Polymers Pvt. Ltd. - NEPAL",
+      "shippingAddress": "8/125, Main Road, Birat Nagar, Nepal",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035898005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035891004": {
+      "id": "1154219000035891004",
+      "zohoSalesOrderId": "1154219000035891004",
+      "salesOrderNumber": "SO-07769",
+      "status": "open",
+      "customerName": "DSI Industrial Automation and Machineries",
+      "shippingAddress": "132/2A, Suthi Mahalakshmi Nagar East, Malumichampatti, Coimbatore, Tamil Nadu, 641050",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035891007",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035891008",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost Extra from BSM to VRL Logistics Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035891004-1154219000035891007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035891004",
+          "lineItemId": "1154219000035891007",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "customerName": "DSI Industrial Automation and Machineries",
+          "salesOrderNumber": "SO-07769",
+          "deliveryDate": "2026-08-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035869004": {
       "id": "1154219000035869004",
       "zohoSalesOrderId": "1154219000035869004",
@@ -20814,6 +21005,9 @@
     }
   },
   "orderIds": [
+    "1154219000035873016",
+    "1154219000035898002",
+    "1154219000035891004",
     "1154219000035869004",
     "1154219000035880001",
     "1154219000035859514",
@@ -20863,8 +21057,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T05:02:08.735Z",
-  "lastAttemptAt": "2026-08-20T05:04:07.644Z",
+  "lastSuccessfulSyncAt": "2026-08-20T05:04:31.523Z",
+  "lastAttemptAt": "2026-08-20T05:04:31.523Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
