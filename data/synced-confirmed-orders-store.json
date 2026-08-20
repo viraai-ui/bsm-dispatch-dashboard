@@ -1036,137 +1036,6 @@
         }
       ]
     },
-    "1154219000035795001": {
-      "id": "1154219000035795001",
-      "zohoSalesOrderId": "1154219000035795001",
-      "salesOrderNumber": "SO-07745",
-      "status": "open",
-      "customerName": "Parshvaprem Industries Pvt. Ltd.",
-      "shippingAddress": "Shop No. 9, Janki Presidency,, 90, Feet Road, Bhayandar,, (W), Thane, W, Thane",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035795004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "description": "",
-          "quantity": 5,
-          "pendingQuantity": 5,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035795001-1154219000035795004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035795001",
-          "lineItemId": "1154219000035795004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "Parshvaprem Industries Pvt. Ltd.",
-          "salesOrderNumber": "SO-07745",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035795001-1154219000035795004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035795001",
-          "lineItemId": "1154219000035795004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "Parshvaprem Industries Pvt. Ltd.",
-          "salesOrderNumber": "SO-07745",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035795001-1154219000035795004-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035795001",
-          "lineItemId": "1154219000035795004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "Parshvaprem Industries Pvt. Ltd.",
-          "salesOrderNumber": "SO-07745",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035795001-1154219000035795004-4",
-          "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035795001",
-          "lineItemId": "1154219000035795004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "Parshvaprem Industries Pvt. Ltd.",
-          "salesOrderNumber": "SO-07745",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035795001-1154219000035795004-5",
-          "unitNumber": 5,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035795001",
-          "lineItemId": "1154219000035795004",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "Parshvaprem Industries Pvt. Ltd.",
-          "salesOrderNumber": "SO-07745",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035794018": {
       "id": "1154219000035794018",
       "zohoSalesOrderId": "1154219000035794018",
@@ -6948,53 +6817,6 @@
         }
       ]
     },
-    "1154219000035705001": {
-      "id": "1154219000035705001",
-      "zohoSalesOrderId": "1154219000035705001",
-      "salesOrderNumber": "SO-07731",
-      "status": "open",
-      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035705004",
-          "itemName": "ROLLER PRESSING MACHINE",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035705001-1154219000035705004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035705001",
-          "lineItemId": "1154219000035705004",
-          "itemName": "ROLLER PRESSING MACHINE",
-          "sku": "",
-          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-          "salesOrderNumber": "SO-07731",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035685001": {
       "id": "1154219000035685001",
       "zohoSalesOrderId": "1154219000035685001",
@@ -7867,53 +7689,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Computerize Roller Feed Cutter Set"
-        }
-      ]
-    },
-    "1154219000035503001": {
-      "id": "1154219000035503001",
-      "zohoSalesOrderId": "1154219000035503001",
-      "salesOrderNumber": "SO-07695",
-      "status": "open",
-      "customerName": "Rajyog Enterprises",
-      "shippingAddress": "X-11, Supa Mica, A/P Supa, Tal-Parner, Ahmednagar, Maharashtra, 414302, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035503004",
-          "itemName": "Swing arm (22 ton) Refurbished",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035503001-1154219000035503004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035503001",
-          "lineItemId": "1154219000035503004",
-          "itemName": "Swing arm (22 ton) Refurbished",
-          "sku": "",
-          "customerName": "Rajyog Enterprises",
-          "salesOrderNumber": "SO-07695",
-          "deliveryDate": "2026-08-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -20897,12 +20672,10 @@
     "1154219000035795016",
     "1154219000035814001",
     "1154219000035798001",
-    "1154219000035795001",
     "1154219000035794018",
     "1154219000035788001",
     "1154219000035691003",
     "1154219000035711007",
-    "1154219000035705001",
     "1154219000035685001",
     "1154219000035634001",
     "1154219000035588022",
@@ -20911,7 +20684,6 @@
     "1154219000035516005",
     "1154219000035531015",
     "1154219000035532001",
-    "1154219000035503001",
     "1154219000035500001",
     "1154219000035305099",
     "1154219000035356001",
@@ -20930,8 +20702,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T05:41:09.598Z",
-  "lastAttemptAt": "2026-08-20T06:01:27.114Z",
+  "lastSuccessfulSyncAt": "2026-08-20T06:01:52.892Z",
+  "lastAttemptAt": "2026-08-20T06:01:52.892Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
