@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271015,
+  "serialCounter": 26271016,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -15520,6 +15520,67 @@
           "processedAt": "2026-08-20T07:55:46.038Z",
           "dispatchNote": "wooden",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000035875012": {
+      "salesOrderId": "1154219000035875012",
+      "salesOrderNumber": "SO-07775",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035875012",
+        "zohoSalesOrderId": "1154219000035875012",
+        "salesOrderNumber": "SO-07775",
+        "status": "open",
+        "customerName": "V.S. ENTERPRISES",
+        "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035875015",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035875012-1154219000035875015-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035875012",
+            "lineItemId": "1154219000035875015",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "V.S. ENTERPRISES",
+            "salesOrderNumber": "SO-07775",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035875012-1154219000035875015-1": {
+          "machineUnitId": "1154219000035875012-1154219000035875015-1",
+          "lineItemId": "1154219000035875015",
+          "serialNumber": "26271016",
+          "qrToken": "26271016",
+          "qrStatus": "pending"
         }
       }
     }
