@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271020,
+  "serialCounter": 26271021,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -15876,6 +15876,67 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-08-20T12:45:46.741Z",
           "zohoBackupSyncedAt": "2026-08-20T12:45:46.741Z"
+        }
+      }
+    },
+    "1154219000035880022": {
+      "salesOrderId": "1154219000035880022",
+      "salesOrderNumber": "SO-07781",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035880022",
+        "zohoSalesOrderId": "1154219000035880022",
+        "salesOrderNumber": "SO-07781",
+        "status": "open",
+        "customerName": "RAMP POLYMERS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO.73, SECTOR-17 ,HSIIDC, BAHADURGARH, HARYANA, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035880025",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035880022-1154219000035880025-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035880022",
+            "lineItemId": "1154219000035880025",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "RAMP POLYMERS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07781",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035880022-1154219000035880025-1": {
+          "machineUnitId": "1154219000035880022-1154219000035880025-1",
+          "lineItemId": "1154219000035880025",
+          "serialNumber": "26271021",
+          "qrToken": "26271021",
+          "qrStatus": "pending"
         }
       }
     }
