@@ -15882,7 +15882,9 @@
     "1154219000035880022": {
       "salesOrderId": "1154219000035880022",
       "salesOrderNumber": "SO-07781",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T12:46:36.143Z",
       "processedOrder": {
         "id": "1154219000035880022",
         "zohoSalesOrderId": "1154219000035880022",
@@ -15910,8 +15912,8 @@
           {
             "id": "1154219000035880022-1154219000035880025-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271021",
+            "qrToken": "26271021",
             "orderId": "1154219000035880022",
             "lineItemId": "1154219000035880025",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -15919,14 +15921,17 @@
             "customerName": "RAMP POLYMERS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07781",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -15939,7 +15944,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T12:45:56.311Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T12:46:08.661Z"
+          "zohoBackupQueuedAt": "2026-08-20T12:46:08.661Z",
+          "processedAt": "2026-08-20T12:46:36.143Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
