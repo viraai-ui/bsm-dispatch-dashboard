@@ -10625,6 +10625,62 @@
       "machineIds": [
         "1154219000035809004-1154219000035809007-1"
       ]
+    },
+    "1154219000035901077": {
+      "completedAt": "2026-08-20T11:35:08.419Z",
+      "order": {
+        "id": "1154219000035901077",
+        "zohoSalesOrderId": "1154219000035901077",
+        "salesOrderNumber": "SO-07777",
+        "status": "open",
+        "customerName": "Ganvex Enterprises",
+        "shippingAddress": "FIRST FLOOR, A-51, Mangolpuri Flyover U Turn, Tata Power Distributor North Delhi Power Ltd, Mangolpuri Industrial Area Phase 1, New Delhi, North West Delhi, Delhi, 110083",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035901082",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035901077-1154219000035901082-1",
+            "unitNumber": 1,
+            "serialNumber": "26271017",
+            "qrToken": "26271017",
+            "orderId": "1154219000035901077",
+            "lineItemId": "1154219000035901082",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Ganvex Enterprises",
+            "salesOrderNumber": "SO-07777",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035901077-1154219000035901082-1"
+      ]
     }
   }
 }
