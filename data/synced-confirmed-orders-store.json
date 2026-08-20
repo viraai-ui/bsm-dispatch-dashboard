@@ -191,53 +191,6 @@
         }
       ]
     },
-    "1154219000035869004": {
-      "id": "1154219000035869004",
-      "zohoSalesOrderId": "1154219000035869004",
-      "salesOrderNumber": "SO-07768",
-      "status": "open",
-      "customerName": "Liberty Shoes Limited (Karnal)",
-      "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035869007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Gun(Ultrasonic Gun)",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035869004-1154219000035869007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035869004",
-          "lineItemId": "1154219000035869007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Liberty Shoes Limited (Karnal)",
-          "salesOrderNumber": "SO-07768",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Gun(Ultrasonic Gun)"
-        }
-      ]
-    },
     "1154219000035880001": {
       "id": "1154219000035880001",
       "zohoSalesOrderId": "1154219000035880001",
@@ -20611,7 +20564,6 @@
     "1154219000035873016",
     "1154219000035898002",
     "1154219000035891004",
-    "1154219000035869004",
     "1154219000035880001",
     "1154219000035859514",
     "1154219000035876001",
@@ -20654,8 +20606,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T06:40:28.707Z",
-  "lastAttemptAt": "2026-08-20T06:46:38.485Z",
+  "lastSuccessfulSyncAt": "2026-08-20T06:47:05.341Z",
+  "lastAttemptAt": "2026-08-20T06:47:05.341Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
