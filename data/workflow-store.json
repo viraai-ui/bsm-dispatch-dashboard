@@ -15357,7 +15357,9 @@
     "1154219000035880001": {
       "salesOrderId": "1154219000035880001",
       "salesOrderNumber": "SO-07767",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T05:58:01.636Z",
       "processedOrder": {
         "id": "1154219000035880001",
         "zohoSalesOrderId": "1154219000035880001",
@@ -15385,8 +15387,8 @@
           {
             "id": "1154219000035880001-1154219000035880004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271014",
+            "qrToken": "26271014",
             "orderId": "1154219000035880001",
             "lineItemId": "1154219000035880004",
             "itemName": "UV Curing machine",
@@ -15394,14 +15396,17 @@
             "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
             "salesOrderNumber": "SO-07767",
             "deliveryDate": "2026-08-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -15414,7 +15419,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:56:25.274Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T05:56:35.577Z"
+          "zohoBackupQueuedAt": "2026-08-20T05:56:35.577Z",
+          "processedAt": "2026-08-20T05:58:01.636Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
