@@ -1,52 +1,5 @@
 {
   "orders": {
-    "1154219000035903021": {
-      "id": "1154219000035903021",
-      "zohoSalesOrderId": "1154219000035903021",
-      "salesOrderNumber": "SO-07772",
-      "status": "open",
-      "customerName": "Liberty Shoes Limited (Karnal)",
-      "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035903024",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Ultrasonic gun",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035903021-1154219000035903024-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035903021",
-          "lineItemId": "1154219000035903024",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Liberty Shoes Limited (Karnal)",
-          "salesOrderNumber": "SO-07772",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Ultrasonic gun"
-        }
-      ]
-    },
     "1154219000035873016": {
       "id": "1154219000035873016",
       "zohoSalesOrderId": "1154219000035873016",
@@ -20655,7 +20608,6 @@
     }
   },
   "orderIds": [
-    "1154219000035903021",
     "1154219000035873016",
     "1154219000035898002",
     "1154219000035891004",
@@ -20702,8 +20654,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T06:20:43.530Z",
-  "lastAttemptAt": "2026-08-20T06:31:38.157Z",
+  "lastSuccessfulSyncAt": "2026-08-20T06:32:05.347Z",
+  "lastAttemptAt": "2026-08-20T06:32:05.347Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
