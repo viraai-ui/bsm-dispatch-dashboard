@@ -15352,11 +15352,13 @@
           "qrToken": "26271013",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:54:18.944Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-20T05:54:35.765Z",
           "processedAt": "2026-08-20T05:55:43.658Z",
           "dispatchNote": "Wooden",
-          "vendor": "Gurudev"
+          "vendor": "Gurudev",
+          "zohoBackupLastAttemptAt": "2026-08-20T06:01:15.078Z",
+          "zohoBackupSyncedAt": "2026-08-20T06:01:15.078Z"
         }
       }
     },
