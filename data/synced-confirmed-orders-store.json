@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035880022": {
+      "id": "1154219000035880022",
+      "zohoSalesOrderId": "1154219000035880022",
+      "salesOrderNumber": "SO-07781",
+      "status": "open",
+      "customerName": "RAMP POLYMERS PRIVATE LIMITED",
+      "shippingAddress": "PLOT NO.73, SECTOR-17 ,HSIIDC, BAHADURGARH, HARYANA, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035880025",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035880022-1154219000035880025-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035880022",
+          "lineItemId": "1154219000035880025",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "RAMP POLYMERS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07781",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035895010": {
       "id": "1154219000035895010",
       "zohoSalesOrderId": "1154219000035895010",
@@ -9426,6 +9473,7 @@
     }
   },
   "orderIds": [
+    "1154219000035880022",
     "1154219000035895010",
     "1154219000035891025",
     "1154219000035884008",
@@ -9472,8 +9520,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T12:33:49.242Z",
-  "lastAttemptAt": "2026-08-20T12:40:17.639Z",
+  "lastSuccessfulSyncAt": "2026-08-20T12:40:39.660Z",
+  "lastAttemptAt": "2026-08-20T12:40:39.660Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
