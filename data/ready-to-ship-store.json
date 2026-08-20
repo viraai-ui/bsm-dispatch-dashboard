@@ -2520,7 +2520,7 @@
       }
     },
     "1154219000035705001": {
-      "id": "ship-1786969131496-nk988",
+      "id": "ship-1787204694630-17uzj",
       "itemId": "1154219000035705001",
       "orderId": "1154219000035705001",
       "machineId": "1154219000035705001-1154219000035705004-1",
@@ -2532,13 +2532,19 @@
       "transporterName": "Bullet Logistics",
       "transporterPhone": "9345916865",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "bu.pdf",
+        "type": "application/pdf",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-20%2FSO-07731%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-20T05-44-52-460Z.pdf",
+        "r2Key": "media-proof/2026-08-20/SO-07731/Shipment LR Builty-shipment-lr-builty-2026-08-20T05-44-52-460Z.pdf",
+        "expiresAt": "2026-10-19T05:44:52.460Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-17",
       "notes": "",
-      "shippedAt": "2026-08-17T12:18:51.496Z",
+      "shippedAt": "2026-08-20T05:44:54.630Z",
       "messages": {
         "customer": {
           "status": "skipped",
