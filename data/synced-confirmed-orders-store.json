@@ -47,100 +47,6 @@
         }
       ]
     },
-    "1154219000035901077": {
-      "id": "1154219000035901077",
-      "zohoSalesOrderId": "1154219000035901077",
-      "salesOrderNumber": "SO-07777",
-      "status": "open",
-      "customerName": "Ganvex Enterprises",
-      "shippingAddress": "FIRST FLOOR, A-51, Mangolpuri Flyover U Turn, Tata Power Distributor North Delhi Power Ltd, Mangolpuri Industrial Area Phase 1, New Delhi, North West Delhi, Delhi, 110083",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035901082",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035901077-1154219000035901082-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035901077",
-          "lineItemId": "1154219000035901082",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "Ganvex Enterprises",
-          "salesOrderNumber": "SO-07777",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035875012": {
-      "id": "1154219000035875012",
-      "zohoSalesOrderId": "1154219000035875012",
-      "salesOrderNumber": "SO-07775",
-      "status": "open",
-      "customerName": "V.S. ENTERPRISES",
-      "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035875015",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035875012-1154219000035875015-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035875012",
-          "lineItemId": "1154219000035875015",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "customerName": "V.S. ENTERPRISES",
-          "salesOrderNumber": "SO-07775",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035890003": {
       "id": "1154219000035890003",
       "zohoSalesOrderId": "1154219000035890003",
@@ -9396,8 +9302,6 @@
   },
   "orderIds": [
     "1154219000035884008",
-    "1154219000035901077",
-    "1154219000035875012",
     "1154219000035890003",
     "1154219000035887005",
     "1154219000035873016",
@@ -9441,8 +9345,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T11:28:12.615Z",
-  "lastAttemptAt": "2026-08-20T11:40:42.601Z",
+  "lastSuccessfulSyncAt": "2026-08-20T11:41:07.014Z",
+  "lastAttemptAt": "2026-08-20T11:41:07.014Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
