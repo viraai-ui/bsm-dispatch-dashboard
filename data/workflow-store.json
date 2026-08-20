@@ -15439,7 +15439,9 @@
     "1154219000035887005": {
       "salesOrderId": "1154219000035887005",
       "salesOrderNumber": "SO-07773",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T07:55:46.038Z",
       "processedOrder": {
         "id": "1154219000035887005",
         "zohoSalesOrderId": "1154219000035887005",
@@ -15477,8 +15479,8 @@
           {
             "id": "1154219000035887005-1154219000035887008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271015",
+            "qrToken": "26271015",
             "orderId": "1154219000035887005",
             "lineItemId": "1154219000035887008",
             "itemName": "Single Needle Walking foot (Cylinder Bed)",
@@ -15486,14 +15488,17 @@
             "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07773",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -15508,7 +15513,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-20T07:32:23.121Z",
           "zohoBackupLastAttemptAt": "2026-08-20T07:46:38.272Z",
-          "zohoBackupSyncedAt": "2026-08-20T07:46:38.272Z"
+          "zohoBackupSyncedAt": "2026-08-20T07:46:38.272Z",
+          "processedAt": "2026-08-20T07:55:46.038Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
