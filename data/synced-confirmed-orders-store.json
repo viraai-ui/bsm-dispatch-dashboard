@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035903021": {
+      "id": "1154219000035903021",
+      "zohoSalesOrderId": "1154219000035903021",
+      "salesOrderNumber": "SO-07772",
+      "status": "open",
+      "customerName": "Liberty Shoes Limited (Karnal)",
+      "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035903024",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Ultrasonic gun",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035903021-1154219000035903024-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035903021",
+          "lineItemId": "1154219000035903024",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Liberty Shoes Limited (Karnal)",
+          "salesOrderNumber": "SO-07772",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Ultrasonic gun"
+        }
+      ]
+    },
     "1154219000035873016": {
       "id": "1154219000035873016",
       "zohoSalesOrderId": "1154219000035873016",
@@ -554,53 +601,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Plain Roller with Wooden Paking"
-        }
-      ]
-    },
-    "1154219000035850015": {
-      "id": "1154219000035850015",
-      "zohoSalesOrderId": "1154219000035850015",
-      "salesOrderNumber": "SO-07761",
-      "status": "open",
-      "customerName": "Madaan Plastic Industry",
-      "shippingAddress": "Plot No-4 & 5, Sector-17, HSIIDC Bahadurgarh, Haryana-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035850018",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035850015-1154219000035850018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035850015",
-          "lineItemId": "1154219000035850018",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "customerName": "Madaan Plastic Industry",
-          "salesOrderNumber": "SO-07761",
-          "deliveryDate": "2026-08-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -1373,53 +1373,6 @@
           "sku": "",
           "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
           "salesOrderNumber": "SO-07743",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035710004": {
-      "id": "1154219000035710004",
-      "zohoSalesOrderId": "1154219000035710004",
-      "salesOrderNumber": "SO-07740",
-      "status": "open",
-      "customerName": "MS BHAGWATI ENTERPRISES",
-      "shippingAddress": "BASEMENT, GROUND FLOOR, C-76, SECTOR-8, JAYPEE MALL, BLOCK-C, SECTOR-8, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035710007",
-          "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
-          "sku": "106A",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035710004-1154219000035710007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035710004",
-          "lineItemId": "1154219000035710007",
-          "itemName": "PU Adhesive Glue Pasting Machine (With Rubber Roller)",
-          "sku": "106A",
-          "customerName": "MS BHAGWATI ENTERPRISES",
-          "salesOrderNumber": "SO-07740",
           "deliveryDate": "2026-08-17",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -6992,84 +6945,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035717001": {
-      "id": "1154219000035717001",
-      "zohoSalesOrderId": "1154219000035717001",
-      "salesOrderNumber": "SO-07732",
-      "status": "open",
-      "customerName": "SELECTION BAG",
-      "shippingAddress": "GROUND FLOOR,GALA NO 1, AGRIPADA INDUSTRIAL PREMISES, BHARUCHA COMPUND, SANE GURUJI MARG, MUMBAI CENTRAL, MUMBAI, MAHARASHTRA - 400011",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035717004",
-          "itemName": "Pneumatic Marginal Gluing Machine",
-          "sku": "",
-          "description": "Monday Payment aane ke baad jayegi",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035717005",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "Today Dispatch",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035717001-1154219000035717004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035717001",
-          "lineItemId": "1154219000035717004",
-          "itemName": "Pneumatic Marginal Gluing Machine",
-          "sku": "",
-          "customerName": "SELECTION BAG",
-          "salesOrderNumber": "SO-07732",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Monday Payment aane ke baad jayegi"
-        },
-        {
-          "id": "1154219000035717001-1154219000035717005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035717001",
-          "lineItemId": "1154219000035717005",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "SELECTION BAG",
-          "salesOrderNumber": "SO-07732",
-          "deliveryDate": "2026-08-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Today Dispatch"
         }
       ]
     },
@@ -21005,6 +20880,7 @@
     }
   },
   "orderIds": [
+    "1154219000035903021",
     "1154219000035873016",
     "1154219000035898002",
     "1154219000035891004",
@@ -21014,7 +20890,6 @@
     "1154219000035876001",
     "1154219000035873001",
     "1154219000035867001",
-    "1154219000035850015",
     "1154219000035850002",
     "1154219000035854013",
     "1154219000035809004",
@@ -21025,10 +20900,8 @@
     "1154219000035795001",
     "1154219000035794018",
     "1154219000035788001",
-    "1154219000035710004",
     "1154219000035691003",
     "1154219000035711007",
-    "1154219000035717001",
     "1154219000035705001",
     "1154219000035685001",
     "1154219000035634001",
@@ -21057,8 +20930,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T05:34:21.871Z",
-  "lastAttemptAt": "2026-08-20T05:40:43.720Z",
+  "lastSuccessfulSyncAt": "2026-08-20T05:41:09.598Z",
+  "lastAttemptAt": "2026-08-20T05:41:09.598Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
