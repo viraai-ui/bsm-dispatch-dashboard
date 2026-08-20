@@ -15685,7 +15685,9 @@
     "1154219000035891025": {
       "salesOrderId": "1154219000035891025",
       "salesOrderNumber": "SO-07779",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T12:41:11.842Z",
       "processedOrder": {
         "id": "1154219000035891025",
         "zohoSalesOrderId": "1154219000035891025",
@@ -15713,8 +15715,8 @@
           {
             "id": "1154219000035891025-1154219000035891028-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271018",
+            "qrToken": "26271018",
             "orderId": "1154219000035891025",
             "lineItemId": "1154219000035891028",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -15722,14 +15724,17 @@
             "customerName": "JAMA CORPORATION PVT.LTD.",
             "salesOrderNumber": "SO-07779",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Able",
+            "dispatchNote": "God wrapping"
           }
         ]
       },
@@ -15742,7 +15747,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T12:39:34.388Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T12:39:53.823Z"
+          "zohoBackupQueuedAt": "2026-08-20T12:39:53.823Z",
+          "processedAt": "2026-08-20T12:41:11.842Z",
+          "dispatchNote": "God wrapping",
+          "vendor": "Able"
         }
       }
     }
