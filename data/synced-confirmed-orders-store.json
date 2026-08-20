@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000035895010": {
+      "id": "1154219000035895010",
+      "zohoSalesOrderId": "1154219000035895010",
+      "salesOrderNumber": "SO-07780",
+      "status": "open",
+      "customerName": "SHREE BALAJI POLYMERS",
+      "shippingAddress": "PLOT NO 62 SECTORE 17 HSIIDC FOOTWEAR PARK, BAHADURGARH, HARYANA, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035895013",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035895014",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035895010-1154219000035895013-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035895010",
+          "lineItemId": "1154219000035895013",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "SHREE BALAJI POLYMERS",
+          "salesOrderNumber": "SO-07780",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035895010-1154219000035895014-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035895010",
+          "lineItemId": "1154219000035895014",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "SHREE BALAJI POLYMERS",
+          "salesOrderNumber": "SO-07780",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035891025": {
       "id": "1154219000035891025",
       "zohoSalesOrderId": "1154219000035891025",
@@ -9348,6 +9426,7 @@
     }
   },
   "orderIds": [
+    "1154219000035895010",
     "1154219000035891025",
     "1154219000035884008",
     "1154219000035890003",
@@ -9393,8 +9472,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T12:00:37.161Z",
-  "lastAttemptAt": "2026-08-20T12:20:05.692Z",
+  "lastSuccessfulSyncAt": "2026-08-20T12:20:28.803Z",
+  "lastAttemptAt": "2026-08-20T12:20:28.803Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
