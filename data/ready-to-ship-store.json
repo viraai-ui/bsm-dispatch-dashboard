@@ -3137,6 +3137,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035875012": {
+      "id": "ship-1787225515391-16ypc",
+      "itemId": "1154219000035875012",
+      "orderId": "1154219000035875012",
+      "machineId": "1154219000035875012-1154219000035875015-1",
+      "salesOrderNumber": "SO-07775",
+      "customerName": "V.S. ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-20",
+      "notes": "",
+      "shippedAt": "2026-08-20T11:31:55.391Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
