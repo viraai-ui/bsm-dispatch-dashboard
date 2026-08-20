@@ -15357,7 +15357,7 @@
     "1154219000035880001": {
       "salesOrderId": "1154219000035880001",
       "salesOrderNumber": "SO-07767",
-      "status": "open",
+      "status": "qr_generated",
       "processedOrder": {
         "id": "1154219000035880001",
         "zohoSalesOrderId": "1154219000035880001",
@@ -15411,7 +15411,10 @@
           "lineItemId": "1154219000035880004",
           "serialNumber": "26271014",
           "qrToken": "26271014",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-08-20T05:56:25.274Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-08-20T05:56:35.577Z"
         }
       }
     }
