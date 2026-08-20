@@ -10455,6 +10455,109 @@
       "machineIds": [
         "1154219000035859514-1154219000035859517-1"
       ]
+    },
+    "1154219000035824045": {
+      "completedAt": "2026-08-20T11:34:02.639Z",
+      "order": {
+        "id": "1154219000035824045",
+        "zohoSalesOrderId": "1154219000035824045",
+        "salesOrderNumber": "SO-07754",
+        "status": "open",
+        "customerName": "Sir Sasa",
+        "shippingAddress": "KHARSA NO 285, ninder mod, harmada-302013, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035824050",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "Good Packing",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035824045-1154219000035824050-1",
+            "unitNumber": 1,
+            "serialNumber": "26270992",
+            "qrToken": "26270992",
+            "orderId": "1154219000035824045",
+            "lineItemId": "1154219000035824050",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Sir Sasa",
+            "salesOrderNumber": "SO-07754",
+            "deliveryDate": "2026-08-19",
+            "status": "Processed",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Good Packing",
+            "dispatchNote": "V trans"
+          },
+          {
+            "id": "1154219000035824045-1154219000035824050-2",
+            "unitNumber": 2,
+            "serialNumber": "26270993",
+            "qrToken": "26270993",
+            "orderId": "1154219000035824045",
+            "lineItemId": "1154219000035824050",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Sir Sasa",
+            "salesOrderNumber": "SO-07754",
+            "deliveryDate": "2026-08-19",
+            "status": "Processed",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Good Packing",
+            "dispatchNote": "V Trans"
+          },
+          {
+            "id": "1154219000035824045-1154219000035824050-3",
+            "unitNumber": 3,
+            "serialNumber": "26270994",
+            "qrToken": "26270994",
+            "orderId": "1154219000035824045",
+            "lineItemId": "1154219000035824050",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Sir Sasa",
+            "salesOrderNumber": "SO-07754",
+            "deliveryDate": "2026-08-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Good Packing",
+            "warrantyStart": "2026-08-18",
+            "dispatchNote": "V Trans"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035824045-1154219000035824050-1",
+        "1154219000035824045-1154219000035824050-2",
+        "1154219000035824045-1154219000035824050-3"
+      ]
     }
   }
 }
