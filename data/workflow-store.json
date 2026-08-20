@@ -15109,7 +15109,9 @@
     "1154219000035873016": {
       "salesOrderId": "1154219000035873016",
       "salesOrderNumber": "SO-07771",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T05:53:26.887Z",
       "processedOrder": {
         "id": "1154219000035873016",
         "zohoSalesOrderId": "1154219000035873016",
@@ -15157,8 +15159,8 @@
           {
             "id": "1154219000035873016-1154219000035873020-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271010",
+            "qrToken": "26271010",
             "orderId": "1154219000035873016",
             "lineItemId": "1154219000035873020",
             "itemName": "Seat lasting Machine",
@@ -15166,20 +15168,23 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-07771",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000035873016-1154219000035873019-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271011",
+            "qrToken": "26271011",
             "orderId": "1154219000035873016",
             "lineItemId": "1154219000035873019",
             "itemName": "De lasting Jack (hydraulic)",
@@ -15187,20 +15192,23 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-07771",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000035873016-1154219000035873021-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271012",
+            "qrToken": "26271012",
             "orderId": "1154219000035873016",
             "lineItemId": "1154219000035873021",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -15208,14 +15216,17 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-07771",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Rawal Ji",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -15228,7 +15239,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:50:46.972Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z"
+          "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z",
+          "processedAt": "2026-08-20T05:53:26.887Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000035873016-1154219000035873019-1": {
           "machineUnitId": "1154219000035873016-1154219000035873019-1",
@@ -15238,7 +15252,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:50:46.972Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z"
+          "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z",
+          "processedAt": "2026-08-20T05:53:26.887Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000035873016-1154219000035873021-1": {
           "machineUnitId": "1154219000035873016-1154219000035873021-1",
@@ -15248,7 +15265,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:50:46.972Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z"
+          "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z",
+          "processedAt": "2026-08-20T05:53:26.887Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal Ji"
         }
       }
     }
