@@ -3001,6 +3001,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035717001": {
+      "id": "ship-1787204226353-9i028",
+      "itemId": "1154219000035717001",
+      "orderId": "1154219000035717001",
+      "machineId": "1154219000035717001-1154219000035717004-1",
+      "salesOrderNumber": "SO-07732",
+      "customerName": "SELECTION BAG",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS5604",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-20",
+      "notes": "",
+      "shippedAt": "2026-08-20T05:37:06.353Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
