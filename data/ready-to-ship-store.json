@@ -1789,7 +1789,7 @@
       }
     },
     "1154219000035503001": {
-      "id": "ship-1787118968938-c2v38",
+      "id": "ship-1787204955831-evlcv",
       "itemId": "1154219000035503001",
       "orderId": "1154219000035503001",
       "machineId": "1154219000035503001-1154219000035503004-1",
@@ -1801,13 +1801,19 @@
       "transporterName": "MD logistics",
       "transporterPhone": "DL01LAH5160",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-20 at 11.17.09 AM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-20%2FSO-07695%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-20T05-49-14-414Z.jpeg",
+        "r2Key": "media-proof/2026-08-20/SO-07695/Shipment LR Builty-shipment-lr-builty-2026-08-20T05-49-14-414Z.jpeg",
+        "expiresAt": "2026-10-19T05:49:14.415Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-12",
       "notes": "",
-      "shippedAt": "2026-08-19T05:56:08.938Z",
+      "shippedAt": "2026-08-20T05:49:15.831Z",
       "messages": {
         "customer": {
           "status": "skipped",
