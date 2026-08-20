@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035884008": {
+      "id": "1154219000035884008",
+      "zohoSalesOrderId": "1154219000035884008",
+      "salesOrderNumber": "SO-07778",
+      "status": "open",
+      "customerName": "SEET KAMAL PRIVATE LIMITED",
+      "shippingAddress": "3A, KAMANI ROAD, JHOTWARA INDUSTRIAL AREA,, Jaipur, Rajasthan, 302012, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035884011",
+          "itemName": "Beam Cutting Press (60Ton)",
+          "sku": "",
+          "description": "1600*810 mm",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035884008-1154219000035884011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035884008",
+          "lineItemId": "1154219000035884011",
+          "itemName": "Beam Cutting Press (60Ton)",
+          "sku": "",
+          "customerName": "SEET KAMAL PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07778",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "1600*810 mm"
+        }
+      ]
+    },
     "1154219000035901077": {
       "id": "1154219000035901077",
       "zohoSalesOrderId": "1154219000035901077",
@@ -9348,6 +9395,7 @@
     }
   },
   "orderIds": [
+    "1154219000035884008",
     "1154219000035901077",
     "1154219000035875012",
     "1154219000035890003",
@@ -9393,8 +9441,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T11:01:27.622Z",
-  "lastAttemptAt": "2026-08-20T11:20:47.419Z",
+  "lastSuccessfulSyncAt": "2026-08-20T11:21:11.652Z",
+  "lastAttemptAt": "2026-08-20T11:21:11.652Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
