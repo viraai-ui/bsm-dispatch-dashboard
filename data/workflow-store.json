@@ -15757,7 +15757,9 @@
     "1154219000035895010": {
       "salesOrderId": "1154219000035895010",
       "salesOrderNumber": "SO-07780",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T12:45:34.990Z",
       "processedOrder": {
         "id": "1154219000035895010",
         "zohoSalesOrderId": "1154219000035895010",
@@ -15795,8 +15797,8 @@
           {
             "id": "1154219000035895010-1154219000035895013-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271019",
+            "qrToken": "26271019",
             "orderId": "1154219000035895010",
             "lineItemId": "1154219000035895013",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -15804,20 +15806,23 @@
             "customerName": "SHREE BALAJI POLYMERS",
             "salesOrderNumber": "SO-07780",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035895010-1154219000035895014-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271020",
+            "qrToken": "26271020",
             "orderId": "1154219000035895010",
             "lineItemId": "1154219000035895014",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -15825,14 +15830,17 @@
             "customerName": "SHREE BALAJI POLYMERS",
             "salesOrderNumber": "SO-07780",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -15845,7 +15853,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T12:42:19.344Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T12:42:32.980Z"
+          "zohoBackupQueuedAt": "2026-08-20T12:42:32.980Z",
+          "processedAt": "2026-08-20T12:45:34.990Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000035895010-1154219000035895014-1": {
           "machineUnitId": "1154219000035895010-1154219000035895014-1",
@@ -15855,7 +15866,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T12:42:19.344Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T12:42:32.980Z"
+          "zohoBackupQueuedAt": "2026-08-20T12:42:32.980Z",
+          "processedAt": "2026-08-20T12:45:34.990Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
