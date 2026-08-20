@@ -15238,11 +15238,13 @@
           "qrToken": "26271010",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:50:46.972Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z",
           "processedAt": "2026-08-20T05:53:26.887Z",
           "dispatchNote": "Local",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupLastAttemptAt": "2026-08-20T06:01:15.078Z",
+          "zohoBackupSyncedAt": "2026-08-20T06:01:15.078Z"
         },
         "1154219000035873016-1154219000035873019-1": {
           "machineUnitId": "1154219000035873016-1154219000035873019-1",
@@ -15251,11 +15253,13 @@
           "qrToken": "26271011",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:50:46.972Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z",
           "processedAt": "2026-08-20T05:53:26.887Z",
           "dispatchNote": "Local",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupLastAttemptAt": "2026-08-20T06:01:15.078Z",
+          "zohoBackupSyncedAt": "2026-08-20T06:01:15.078Z"
         },
         "1154219000035873016-1154219000035873021-1": {
           "machineUnitId": "1154219000035873016-1154219000035873021-1",
@@ -15264,11 +15268,13 @@
           "qrToken": "26271012",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:50:46.972Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-20T05:50:57.738Z",
           "processedAt": "2026-08-20T05:53:26.887Z",
           "dispatchNote": "local",
-          "vendor": "Rawal Ji"
+          "vendor": "Rawal Ji",
+          "zohoBackupLastAttemptAt": "2026-08-20T06:01:15.078Z",
+          "zohoBackupSyncedAt": "2026-08-20T06:01:15.078Z"
         }
       }
     },
