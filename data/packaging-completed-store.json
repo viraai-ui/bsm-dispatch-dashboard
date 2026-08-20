@@ -10558,6 +10558,73 @@
         "1154219000035824045-1154219000035824050-2",
         "1154219000035824045-1154219000035824050-3"
       ]
+    },
+    "1154219000035809004": {
+      "completedAt": "2026-08-20T11:34:36.121Z",
+      "order": {
+        "id": "1154219000035809004",
+        "zohoSalesOrderId": "1154219000035809004",
+        "salesOrderNumber": "SO-07755",
+        "status": "open",
+        "customerName": "THALIR ENTERPRISES",
+        "shippingAddress": "S F NO 533/1A3 SITE NO 6, GOLDEN AVENUE, SEERAPALAYAM MADUKKARAI, Coimbatore Industrial Estate Sub Post Office, Coimbatore,, Coimbatore, Tamil Nadu, 641021, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035809007",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035809008",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charge Upto 10KM from BSM to",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035809004-1154219000035809007-1",
+            "unitNumber": 1,
+            "serialNumber": "26270990",
+            "qrToken": "26270990",
+            "orderId": "1154219000035809004",
+            "lineItemId": "1154219000035809007",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "THALIR ENTERPRISES",
+            "salesOrderNumber": "SO-07755",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-18",
+            "dispatchNote": ""
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035809004-1154219000035809007-1"
+      ]
     }
   }
 }
