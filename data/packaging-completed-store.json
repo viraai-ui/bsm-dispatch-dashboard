@@ -10341,6 +10341,63 @@
         "1154219000035873016-1154219000035873019-1",
         "1154219000035873016-1154219000035873021-1"
       ]
+    },
+    "1154219000035875012": {
+      "completedAt": "2026-08-20T10:16:06.356Z",
+      "order": {
+        "id": "1154219000035875012",
+        "zohoSalesOrderId": "1154219000035875012",
+        "salesOrderNumber": "SO-07775",
+        "status": "open",
+        "customerName": "V.S. ENTERPRISES",
+        "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035875015",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035875012-1154219000035875015-1",
+            "unitNumber": 1,
+            "serialNumber": "26271016",
+            "qrToken": "26271016",
+            "orderId": "1154219000035875012",
+            "lineItemId": "1154219000035875015",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "V.S. ENTERPRISES",
+            "salesOrderNumber": "SO-07775",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035875012-1154219000035875015-1"
+      ]
     }
   }
 }
