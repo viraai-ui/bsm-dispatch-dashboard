@@ -10084,6 +10084,63 @@
       "machineIds": [
         "1154219000035024001-1154219000035024004-1"
       ]
+    },
+    "1154219000034623006": {
+      "completedAt": "2026-08-20T08:13:39.587Z",
+      "order": {
+        "id": "1154219000034623006",
+        "zohoSalesOrderId": "1154219000034623006",
+        "salesOrderNumber": "SO-07553",
+        "status": "open",
+        "customerName": "IBS Safety India Pvt Ltd",
+        "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-07-23",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034623009",
+            "itemName": "Beam cutting Press (4 column) (40 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034623006-1154219000034623009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270942",
+            "qrToken": "26270942",
+            "orderId": "1154219000034623006",
+            "lineItemId": "1154219000034623009",
+            "itemName": "Beam cutting Press (4 column) (40 ton)",
+            "sku": "",
+            "customerName": "IBS Safety India Pvt Ltd",
+            "salesOrderNumber": "SO-07553",
+            "deliveryDate": "2026-07-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-14",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000034623006-1154219000034623009-1"
+      ]
     }
   }
 }
