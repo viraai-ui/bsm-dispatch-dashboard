@@ -15275,7 +15275,9 @@
     "1154219000035891004": {
       "salesOrderId": "1154219000035891004",
       "salesOrderNumber": "SO-07769",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T05:55:43.658Z",
       "processedOrder": {
         "id": "1154219000035891004",
         "zohoSalesOrderId": "1154219000035891004",
@@ -15313,8 +15315,8 @@
           {
             "id": "1154219000035891004-1154219000035891007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271013",
+            "qrToken": "26271013",
             "orderId": "1154219000035891004",
             "lineItemId": "1154219000035891007",
             "itemName": "Eyelet Punching Single Channel",
@@ -15322,14 +15324,17 @@
             "customerName": "DSI Industrial Automation and Machineries",
             "salesOrderNumber": "SO-07769",
             "deliveryDate": "2026-08-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Gurudev",
+            "dispatchNote": "Wooden"
           }
         ]
       },
@@ -15342,7 +15347,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-20T05:54:18.944Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-20T05:54:35.765Z"
+          "zohoBackupQueuedAt": "2026-08-20T05:54:35.765Z",
+          "processedAt": "2026-08-20T05:55:43.658Z",
+          "dispatchNote": "Wooden",
+          "vendor": "Gurudev"
         }
       }
     }
