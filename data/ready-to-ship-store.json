@@ -3199,6 +3199,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035809004": {
+      "id": "ship-1787230411651-58xnw",
+      "itemId": "1154219000035809004",
+      "orderId": "1154219000035809004",
+      "machineId": "1154219000035809004-1154219000035809007-1",
+      "salesOrderNumber": "SO-07755",
+      "customerName": "THALIR ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-20",
+      "notes": "",
+      "shippedAt": "2026-08-20T12:53:31.651Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
