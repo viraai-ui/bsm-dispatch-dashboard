@@ -2864,6 +2864,31 @@
           ]
         }
       }
+    },
+    "1154219000035880001": {
+      "orderId": "1154219000035880001",
+      "salesOrderNumber": "SO-07767",
+      "submittedAt": null,
+      "units": {
+        "1154219000035880001-1154219000035880004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035880001-1154219000035880004-1-video-1787226291135-67tnce",
+              "name": "VID_20260820_171355.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-20%2FSO-07767%2FUV%20Curing%20machine-1154219000035880001-1154219000035880004-1-2026-08-20T11-44-03-150Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-20/SO-07767/UV Curing machine-1154219000035880001-1154219000035880004-1-2026-08-20T11-44-03-150Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-20T11:44:51.135Z",
+              "expiresAt": "2026-09-19T11:44:03.150Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
