@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271013,
+  "serialCounter": 26271014,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -15351,6 +15351,67 @@
           "processedAt": "2026-08-20T05:55:43.658Z",
           "dispatchNote": "Wooden",
           "vendor": "Gurudev"
+        }
+      }
+    },
+    "1154219000035880001": {
+      "salesOrderId": "1154219000035880001",
+      "salesOrderNumber": "SO-07767",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035880001",
+        "zohoSalesOrderId": "1154219000035880001",
+        "salesOrderNumber": "SO-07767",
+        "status": "open",
+        "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+        "shippingAddress": "Ground Floor, PLOT NO. 530, M.I.E. PART-A,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035880004",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035880001-1154219000035880004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035880001",
+            "lineItemId": "1154219000035880004",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+            "salesOrderNumber": "SO-07767",
+            "deliveryDate": "2026-08-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035880001-1154219000035880004-1": {
+          "machineUnitId": "1154219000035880001-1154219000035880004-1",
+          "lineItemId": "1154219000035880004",
+          "serialNumber": "26271014",
+          "qrToken": "26271014",
+          "qrStatus": "pending"
         }
       }
     }
