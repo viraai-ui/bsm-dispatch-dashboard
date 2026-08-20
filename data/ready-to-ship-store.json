@@ -3106,6 +3106,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035876001": {
+      "id": "ship-1787213575174-38wha",
+      "itemId": "1154219000035876001",
+      "orderId": "1154219000035876001",
+      "machineId": "1154219000035876001-1154219000035876004-1",
+      "salesOrderNumber": "SO-07765",
+      "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK2392",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-20",
+      "notes": "",
+      "shippedAt": "2026-08-20T08:12:55.174Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
