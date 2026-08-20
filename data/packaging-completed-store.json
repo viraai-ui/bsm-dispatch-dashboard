@@ -10217,6 +10217,130 @@
       "machineIds": [
         "1154219000035588022-1154219000035588025-1"
       ]
+    },
+    "1154219000035873016": {
+      "completedAt": "2026-08-20T10:15:58.885Z",
+      "order": {
+        "id": "1154219000035873016",
+        "zohoSalesOrderId": "1154219000035873016",
+        "salesOrderNumber": "SO-07771",
+        "status": "open",
+        "customerName": "SELFIEE FOOTWEAR",
+        "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035873020",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035873019",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035873021",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035873016-1154219000035873020-1",
+            "unitNumber": 1,
+            "serialNumber": "26271010",
+            "qrToken": "26271010",
+            "orderId": "1154219000035873016",
+            "lineItemId": "1154219000035873020",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-07771",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000035873016-1154219000035873019-1",
+            "unitNumber": 2,
+            "serialNumber": "26271011",
+            "qrToken": "26271011",
+            "orderId": "1154219000035873016",
+            "lineItemId": "1154219000035873019",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-07771",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000035873016-1154219000035873021-1",
+            "unitNumber": 3,
+            "serialNumber": "26271012",
+            "qrToken": "26271012",
+            "orderId": "1154219000035873016",
+            "lineItemId": "1154219000035873021",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-07771",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035873016-1154219000035873020-1",
+        "1154219000035873016-1154219000035873019-1",
+        "1154219000035873016-1154219000035873021-1"
+      ]
     }
   }
 }
