@@ -1,5 +1,77 @@
 {
   "orders": {
+    "1154219000035858029": {
+      "id": "1154219000035858029",
+      "zohoSalesOrderId": "1154219000035858029",
+      "salesOrderNumber": "SO-07776",
+      "status": "open",
+      "customerName": "United Products",
+      "shippingAddress": "Khasra No. 71/22/1/2,2-12, MIE Part-B, Bahaduragarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035858032",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035875012": {
+      "id": "1154219000035875012",
+      "zohoSalesOrderId": "1154219000035875012",
+      "salesOrderNumber": "SO-07775",
+      "status": "open",
+      "customerName": "V.S. ENTERPRISES",
+      "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035875015",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035875012-1154219000035875015-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035875012",
+          "lineItemId": "1154219000035875015",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "V.S. ENTERPRISES",
+          "salesOrderNumber": "SO-07775",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035890003": {
       "id": "1154219000035890003",
       "zohoSalesOrderId": "1154219000035890003",
@@ -1053,7 +1125,7 @@
       "status": "open",
       "customerName": "RKD PRODUCTS INDIA PRIVATE LIMITED",
       "shippingAddress": "PLOT NO. 68, Sector 16, HSIIDC, Bahadurgarh, Sankhol, Jhajjar,, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
+      "salesperson": "Karan Singh",
       "deliveryDate": "2026-08-17",
       "dashboardStatus": "Not Generated",
       "reviewRequired": false,
@@ -20618,6 +20690,8 @@
     }
   },
   "orderIds": [
+    "1154219000035858029",
+    "1154219000035875012",
     "1154219000035890003",
     "1154219000035887005",
     "1154219000035873016",
@@ -20664,8 +20738,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T09:27:34.243Z",
-  "lastAttemptAt": "2026-08-20T09:34:03.392Z",
+  "lastSuccessfulSyncAt": "2026-08-20T09:34:26.439Z",
+  "lastAttemptAt": "2026-08-20T09:34:26.439Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
