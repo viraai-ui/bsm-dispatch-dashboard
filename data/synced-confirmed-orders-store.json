@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035890003": {
+      "id": "1154219000035890003",
+      "zohoSalesOrderId": "1154219000035890003",
+      "salesOrderNumber": "SO-07774",
+      "status": "open",
+      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+      "shippingAddress": "Khasra No. 508, Plot No. 9, Industrial Area, Basai Encalave-1, Gurugram, Haryana, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035890006",
+          "itemName": "Beam Cutting Press (40 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035890003-1154219000035890006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035890003",
+          "lineItemId": "1154219000035890006",
+          "itemName": "Beam Cutting Press (40 ton)",
+          "sku": "",
+          "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+          "salesOrderNumber": "SO-07774",
+          "deliveryDate": "2026-09-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035887005": {
       "id": "1154219000035887005",
       "zohoSalesOrderId": "1154219000035887005",
@@ -334,53 +381,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035876001": {
-      "id": "1154219000035876001",
-      "zohoSalesOrderId": "1154219000035876001",
-      "salesOrderNumber": "SO-07765",
-      "status": "open",
-      "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
-      "shippingAddress": "Plot No. 37, Sec-4B, Industrial Estate, Bahadurgarh Haryana-124507, Haryana",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035876004",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035876001-1154219000035876004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035876001",
-          "lineItemId": "1154219000035876004",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
-          "salesOrderNumber": "SO-07765",
-          "deliveryDate": "2026-08-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -20618,13 +20618,13 @@
     }
   },
   "orderIds": [
+    "1154219000035890003",
     "1154219000035887005",
     "1154219000035873016",
     "1154219000035898002",
     "1154219000035891004",
     "1154219000035880001",
     "1154219000035859514",
-    "1154219000035876001",
     "1154219000035873001",
     "1154219000035867001",
     "1154219000035850002",
@@ -20664,8 +20664,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-20T08:01:06.013Z",
-  "lastAttemptAt": "2026-08-20T08:20:14.710Z",
+  "lastSuccessfulSyncAt": "2026-08-20T08:20:36.820Z",
+  "lastAttemptAt": "2026-08-20T08:20:36.820Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
