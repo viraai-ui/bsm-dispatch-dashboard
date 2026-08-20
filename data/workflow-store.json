@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271009,
+  "serialCounter": 26271012,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -15103,6 +15103,143 @@
           "vendor": "Siphon",
           "zohoBackupLastAttemptAt": "2026-08-19T12:01:15.328Z",
           "zohoBackupSyncedAt": "2026-08-19T12:01:15.328Z"
+        }
+      }
+    },
+    "1154219000035873016": {
+      "salesOrderId": "1154219000035873016",
+      "salesOrderNumber": "SO-07771",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035873016",
+        "zohoSalesOrderId": "1154219000035873016",
+        "salesOrderNumber": "SO-07771",
+        "status": "open",
+        "customerName": "SELFIEE FOOTWEAR",
+        "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035873020",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035873019",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035873021",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035873016-1154219000035873020-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035873016",
+            "lineItemId": "1154219000035873020",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-07771",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035873016-1154219000035873019-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035873016",
+            "lineItemId": "1154219000035873019",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-07771",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035873016-1154219000035873021-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035873016",
+            "lineItemId": "1154219000035873021",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-07771",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035873016-1154219000035873020-1": {
+          "machineUnitId": "1154219000035873016-1154219000035873020-1",
+          "lineItemId": "1154219000035873020",
+          "serialNumber": "26271010",
+          "qrToken": "26271010",
+          "qrStatus": "pending"
+        },
+        "1154219000035873016-1154219000035873019-1": {
+          "machineUnitId": "1154219000035873016-1154219000035873019-1",
+          "lineItemId": "1154219000035873019",
+          "serialNumber": "26271011",
+          "qrToken": "26271011",
+          "qrStatus": "pending"
+        },
+        "1154219000035873016-1154219000035873021-1": {
+          "machineUnitId": "1154219000035873016-1154219000035873021-1",
+          "lineItemId": "1154219000035873021",
+          "serialNumber": "26271012",
+          "qrToken": "26271012",
+          "qrStatus": "pending"
         }
       }
     }
