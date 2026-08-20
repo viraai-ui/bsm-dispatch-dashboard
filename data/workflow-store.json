@@ -15606,7 +15606,9 @@
     "1154219000035901077": {
       "salesOrderId": "1154219000035901077",
       "salesOrderNumber": "SO-07777",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-20T10:46:50.714Z",
       "processedOrder": {
         "id": "1154219000035901077",
         "zohoSalesOrderId": "1154219000035901077",
@@ -15634,8 +15636,8 @@
           {
             "id": "1154219000035901077-1154219000035901082-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271017",
+            "qrToken": "26271017",
             "orderId": "1154219000035901077",
             "lineItemId": "1154219000035901082",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -15643,14 +15645,17 @@
             "customerName": "Ganvex Enterprises",
             "salesOrderNumber": "SO-07777",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -15665,7 +15670,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-20T10:29:36.461Z",
           "zohoBackupLastAttemptAt": "2026-08-20T10:30:05.616Z",
-          "zohoBackupSyncedAt": "2026-08-20T10:30:05.616Z"
+          "zohoBackupSyncedAt": "2026-08-20T10:30:05.616Z",
+          "processedAt": "2026-08-20T10:46:50.714Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         }
       }
     }
