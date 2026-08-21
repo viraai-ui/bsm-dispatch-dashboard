@@ -11073,6 +11073,73 @@
       "machineIds": [
         "1154219000035881013-1154219000035881016-1"
       ]
+    },
+    "1154219000035887005": {
+      "completedAt": "2026-08-21T13:12:55.000Z",
+      "order": {
+        "id": "1154219000035887005",
+        "zohoSalesOrderId": "1154219000035887005",
+        "salesOrderNumber": "SO-07773",
+        "status": "open",
+        "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
+        "shippingAddress": "1st and 2nd floor, Bldg No.173, Indian Corporation Building, Mankoli Anjur Road, Mankoli Anjur Road, Tehsil Bhiwandi, Bhiwandi, Thane, Maharashtra, 421302",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035887008",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035887009",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charge up to 5 Km",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035887005-1154219000035887008-1",
+            "unitNumber": 1,
+            "serialNumber": "26271015",
+            "qrToken": "26271015",
+            "orderId": "1154219000035887005",
+            "lineItemId": "1154219000035887008",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07773",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000035887005-1154219000035887008-1"
+      ]
     }
   }
 }
