@@ -10858,6 +10858,63 @@
       "machineIds": [
         "1154219000035014002-1154219000035014005-1"
       ]
+    },
+    "1154219000035880022": {
+      "completedAt": "2026-08-21T06:35:05.750Z",
+      "order": {
+        "id": "1154219000035880022",
+        "zohoSalesOrderId": "1154219000035880022",
+        "salesOrderNumber": "SO-07781",
+        "status": "open",
+        "customerName": "RAMP POLYMERS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO.73, SECTOR-17 ,HSIIDC, BAHADURGARH, HARYANA, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035880025",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035880022-1154219000035880025-1",
+            "unitNumber": 1,
+            "serialNumber": "26271021",
+            "qrToken": "26271021",
+            "orderId": "1154219000035880022",
+            "lineItemId": "1154219000035880025",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "RAMP POLYMERS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07781",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 7
+      },
+      "machineIds": [
+        "1154219000035880022-1154219000035880025-1"
+      ]
     }
   }
 }
