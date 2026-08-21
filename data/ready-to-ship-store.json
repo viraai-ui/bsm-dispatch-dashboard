@@ -3484,6 +3484,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035024001": {
+      "id": "ship-1787301722711-1u4fu",
+      "itemId": "1154219000035024001",
+      "orderId": "1154219000035024001",
+      "machineId": "1154219000035024001-1154219000035024004-1",
+      "salesOrderNumber": "SO-07618",
+      "customerName": "Romina Enterprises Pvt. Ltd.",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-21",
+      "notes": "",
+      "shippedAt": "2026-08-21T08:42:02.711Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
