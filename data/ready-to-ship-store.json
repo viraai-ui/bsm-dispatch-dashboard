@@ -3422,6 +3422,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000032301006": {
+      "id": "ship-1787301645231-h481n",
+      "itemId": "1154219000032301006",
+      "orderId": "1154219000032301006",
+      "machineId": "1154219000032301006-1154219000032301009-1",
+      "salesOrderNumber": "SO-07195",
+      "customerName": "MITAKSHI PRINT AND CRAFT",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-21",
+      "notes": "",
+      "shippedAt": "2026-08-21T08:40:45.232Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
