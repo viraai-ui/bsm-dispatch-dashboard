@@ -10,6 +10,9 @@ export type R2UploadTarget = {
 
 const REGION = 'auto'
 const SERVICE = 's3'
+const CORS_ORIGIN = 'https://dispatch.bsmindia.com'
+const R2_REQUEST_TIMEOUT_MS = 10_000
+let corsRepairInFlight: Promise<void> | null = null
 
 function r2Config() {
   const accountId = process.env.R2_ACCOUNT_ID || ''
@@ -71,6 +74,12 @@ export async function uploadBufferToR2(key: string, contentType: string, buffer:
 }
 
 export async function ensureR2Cors() {
+  if (corsRepairInFlight) return corsRepairInFlight
+  corsRepairInFlight = putR2Cors().finally(() => { corsRepairInFlight = null })
+  return corsRepairInFlight
+}
+
+async function putR2Cors() {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
   const amzDate = toAmzDate(now)
@@ -96,8 +105,34 @@ export async function ensureR2Cors() {
     },
     body,
     cache: 'no-store',
+    signal: AbortSignal.timeout(R2_REQUEST_TIMEOUT_MS),
   })
   if (!response.ok) throw new Error(`Cloudflare R2 CORS setup failed: HTTP ${response.status}`)
+}
+
+export async function checkR2BrowserCors(uploadUrl: string) {
+  try {
+    const response = await fetch(uploadUrl, {
+      method: 'OPTIONS',
+      headers: { Origin: CORS_ORIGIN, 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'content-type' },
+      cache: 'no-store',
+      signal: AbortSignal.timeout(R2_REQUEST_TIMEOUT_MS),
+    })
+    const allowedOrigin = response.headers.get('access-control-allow-origin')
+    const allowedMethods = response.headers.get('access-control-allow-methods') || ''
+    const corsReady = response.ok && (allowedOrigin === CORS_ORIGIN || allowedOrigin === '*') && allowedMethods.split(',').some((method) => method.trim().toUpperCase() === 'PUT')
+    if (corsReady) return { corsReady: true as const }
+    return { corsReady: false as const, corsError: `Cloudflare R2 browser upload preflight failed (HTTP ${response.status}; origin=${allowedOrigin || 'missing'}; methods=${allowedMethods || 'missing'}).` }
+  } catch (error) {
+    return { corsReady: false as const, corsError: `Cloudflare R2 browser upload preflight failed: ${error instanceof Error ? error.message : 'network error'}` }
+  }
+}
+
+export async function ensureR2BrowserCors(uploadUrl: string) {
+  const initial = await checkR2BrowserCors(uploadUrl)
+  if (initial.corsReady) return initial
+  await ensureR2Cors()
+  return checkR2BrowserCors(uploadUrl)
 }
 
 export function createR2ViewUrl(key: string, expiresInSeconds = 3600) {

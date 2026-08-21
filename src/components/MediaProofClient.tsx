@@ -160,7 +160,10 @@ function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: 
 async function uploadVideoFile(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
   try {
     return await uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)
-  } catch {
+  } catch (error) {
+    // Vercel request bodies are capped well below normal mobile video sizes.
+    // Never turn an actionable direct-R2 error into a second opaque NetworkError.
+    if (file.size > 4 * 1024 * 1024) throw error
     onProgress(3)
     return uploadViaServer(order, unitId, file, mode, onProgress)
   }

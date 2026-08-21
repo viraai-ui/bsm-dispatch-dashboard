@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { buildR2Key, createR2UploadTarget, ensureR2Cors } from '@/lib/r2'
+import { buildR2Key, createR2UploadTarget, ensureR2BrowserCors } from '@/lib/r2'
 import { getMediaOrder } from '@/lib/media-order-resolver'
 
 export const runtime = 'nodejs'
@@ -29,47 +29,10 @@ export async function POST(request: Request) {
 
     const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: shipmentDocument ? 'Shipment LR Builty' : machine?.itemName || 'Loading Video', machineId: shipmentDocument ? 'shipment-lr-builty' : machineId, originalName: String(body.name || (shipmentDocument ? 'shipment-document' : 'video.mp4')), mimeType: type })
     const target = createR2UploadTarget(key, type, 900, shipmentDocument ? 60 : 30)
-    const cors = await ensureBrowserCors(target.uploadUrl)
+    const cors = await ensureR2BrowserCors(target.uploadUrl)
+    if (!cors.corsReady) return apiError(cors.corsError, 503)
     return apiOk({ ...target, ...cors })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Could not create R2 upload target', 400)
-  }
-}
-
-async function ensureBrowserCors(uploadUrl: string) {
-  const initial = await checkBrowserCors(uploadUrl)
-  if (initial.corsReady) return initial
-
-  // Browser PUT is the only upload path that works reliably for mobile-sized
-  // videos (the hosting proxy limits large multipart request bodies). Repair a
-  // missing/stale bucket policy instead of silently sending the video through
-  // that constrained fallback.
-  try {
-    await ensureR2Cors()
-    return await checkBrowserCors(uploadUrl)
-  } catch {
-    return initial
-  }
-}
-
-async function checkBrowserCors(uploadUrl: string) {
-  try {
-    const response = await fetch(uploadUrl, {
-      method: 'OPTIONS',
-      headers: {
-        Origin: 'https://dispatch.bsmindia.com',
-        'Access-Control-Request-Method': 'PUT',
-        'Access-Control-Request-Headers': 'content-type',
-      },
-      cache: 'no-store',
-    })
-    if (response.ok) return { corsReady: true }
-    const body = await response.text().catch(() => '')
-    if (body.includes('CORS not configured') || response.status === 403) {
-      return { corsReady: false, corsError: 'Cloudflare R2 bucket CORS is not configured for https://dispatch.bsmindia.com. Add PUT/GET/HEAD CORS for this origin in Cloudflare R2 bucket settings.' }
-    }
-    return { corsReady: false, corsError: `Cloudflare R2 browser upload preflight failed: HTTP ${response.status}` }
-  } catch {
-    return { corsReady: false, corsError: 'Cloudflare R2 browser upload preflight failed. Check the R2 bucket CORS policy.' }
   }
 }
