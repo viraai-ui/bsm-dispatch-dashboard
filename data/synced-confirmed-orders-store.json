@@ -1139,53 +1139,6 @@
         }
       ]
     },
-    "1154219000035814001": {
-      "id": "1154219000035814001",
-      "zohoSalesOrderId": "1154219000035814001",
-      "salesOrderNumber": "SO-07747",
-      "status": "open",
-      "customerName": "Shiva Enterprises",
-      "shippingAddress": "Plot no. 22, Kh. No. 39/8, Gali no. 7, Samaypur, New Delhi, North Delhi, Delhi, 110042, India",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035814004",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035814001-1154219000035814004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035814001",
-          "lineItemId": "1154219000035814004",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "customerName": "Shiva Enterprises",
-          "salesOrderNumber": "SO-07747",
-          "deliveryDate": "2026-08-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035798001": {
       "id": "1154219000035798001",
       "zohoSalesOrderId": "1154219000035798001",
@@ -9393,7 +9346,6 @@
     "1154219000035854013",
     "1154219000035824045",
     "1154219000035795016",
-    "1154219000035814001",
     "1154219000035798001",
     "1154219000035794018",
     "1154219000035788001",
@@ -9420,8 +9372,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T08:33:11.090Z",
-  "lastAttemptAt": "2026-08-21T08:40:40.897Z",
+  "lastSuccessfulSyncAt": "2026-08-21T08:41:02.727Z",
+  "lastAttemptAt": "2026-08-21T08:41:02.727Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
