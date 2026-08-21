@@ -16074,7 +16074,9 @@
     "1154219000035881013": {
       "salesOrderId": "1154219000035881013",
       "salesOrderNumber": "SO-07784",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-21T06:31:03.704Z",
       "processedOrder": {
         "id": "1154219000035881013",
         "zohoSalesOrderId": "1154219000035881013",
@@ -16112,8 +16114,8 @@
           {
             "id": "1154219000035881013-1154219000035881016-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271023",
+            "qrToken": "26271023",
             "orderId": "1154219000035881013",
             "lineItemId": "1154219000035881016",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -16121,14 +16123,17 @@
             "customerName": "Tactix Defence Systems LLP",
             "salesOrderNumber": "SO-07784",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -16143,7 +16148,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T06:30:03.706Z",
           "zohoBackupLastAttemptAt": "2026-08-21T06:30:32.281Z",
-          "zohoBackupSyncedAt": "2026-08-21T06:30:32.281Z"
+          "zohoBackupSyncedAt": "2026-08-21T06:30:32.281Z",
+          "processedAt": "2026-08-21T06:31:03.704Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
