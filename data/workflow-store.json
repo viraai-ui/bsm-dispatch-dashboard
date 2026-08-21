@@ -16577,7 +16577,9 @@
     "1154219000035933004": {
       "salesOrderId": "1154219000035933004",
       "salesOrderNumber": "SO-07789",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-21T11:21:39.394Z",
       "processedOrder": {
         "id": "1154219000035933004",
         "zohoSalesOrderId": "1154219000035933004",
@@ -16615,8 +16617,8 @@
           {
             "id": "1154219000035933004-1154219000035933007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271031",
+            "qrToken": "26271031",
             "orderId": "1154219000035933004",
             "lineItemId": "1154219000035933007",
             "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -16624,14 +16626,17 @@
             "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
             "salesOrderNumber": "SO-07789",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -16644,7 +16649,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-21T11:20:41.337Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-21T11:20:50.739Z"
+          "zohoBackupQueuedAt": "2026-08-21T11:20:50.739Z",
+          "processedAt": "2026-08-21T11:21:39.394Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
