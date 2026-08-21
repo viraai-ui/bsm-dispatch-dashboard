@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035947002": {
+      "id": "1154219000035947002",
+      "zohoSalesOrderId": "1154219000035947002",
+      "salesOrderNumber": "SO-07790",
+      "status": "open",
+      "customerName": "Star Impact Pvt. Ltd.",
+      "shippingAddress": "Rehman Nagar, Ludhiana Road, Opp. Power Grid, Melerkotla, Punjab, 148023, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035947005",
+          "itemName": "Toe puff Fusing/ Attaching machine",
+          "sku": "299",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035947002-1154219000035947005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035947002",
+          "lineItemId": "1154219000035947005",
+          "itemName": "Toe puff Fusing/ Attaching machine",
+          "sku": "299",
+          "customerName": "Star Impact Pvt. Ltd.",
+          "salesOrderNumber": "SO-07790",
+          "deliveryDate": "2026-08-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035933004": {
       "id": "1154219000035933004",
       "zohoSalesOrderId": "1154219000035933004",
@@ -3962,6 +4009,7 @@
     }
   },
   "orderIds": [
+    "1154219000035947002",
     "1154219000035933004",
     "1154219000035949001",
     "1154219000035903106",
@@ -4009,8 +4057,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T11:19:16.481Z",
-  "lastAttemptAt": "2026-08-21T11:20:44.538Z",
+  "lastSuccessfulSyncAt": "2026-08-21T11:21:06.416Z",
+  "lastAttemptAt": "2026-08-21T11:21:06.416Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
