@@ -1,5 +1,62 @@
 {
   "orders": {
+    "1154219000035933004": {
+      "id": "1154219000035933004",
+      "zohoSalesOrderId": "1154219000035933004",
+      "salesOrderNumber": "SO-07789",
+      "status": "open",
+      "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
+      "shippingAddress": "DAG- 609, MOUZA- 87, NARAYANPUR, Malancha,, South Twenty Four Parganas, West Bengal, 743502",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035933007",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035925477",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charges From BSM to OSC Logistics",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035933004-1154219000035933007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035933004",
+          "lineItemId": "1154219000035933007",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
+          "salesOrderNumber": "SO-07789",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035949001": {
       "id": "1154219000035949001",
       "zohoSalesOrderId": "1154219000035949001",
@@ -3905,6 +3962,7 @@
     }
   },
   "orderIds": [
+    "1154219000035933004",
     "1154219000035949001",
     "1154219000035903106",
     "1154219000035921001",
@@ -3951,8 +4009,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T11:04:22.104Z",
-  "lastAttemptAt": "2026-08-21T11:18:54.235Z",
+  "lastSuccessfulSyncAt": "2026-08-21T11:19:16.481Z",
+  "lastAttemptAt": "2026-08-21T11:19:16.481Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
