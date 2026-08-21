@@ -1,5 +1,115 @@
 {
   "orders": {
+    "1154219000035921001": {
+      "id": "1154219000035921001",
+      "zohoSalesOrderId": "1154219000035921001",
+      "salesOrderNumber": "SO-07786",
+      "status": "open",
+      "customerName": "Flamingo Designs Pvt Ltd",
+      "shippingAddress": "C-49, Sector-81, Phase-2, Noida, Uttar Pradesh, 201305",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035921004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "description": "",
+          "quantity": 4,
+          "pendingQuantity": 4,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035921001-1154219000035921004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035921001",
+          "lineItemId": "1154219000035921004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Flamingo Designs Pvt Ltd",
+          "salesOrderNumber": "SO-07786",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035921001-1154219000035921004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035921001",
+          "lineItemId": "1154219000035921004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Flamingo Designs Pvt Ltd",
+          "salesOrderNumber": "SO-07786",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035921001-1154219000035921004-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035921001",
+          "lineItemId": "1154219000035921004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Flamingo Designs Pvt Ltd",
+          "salesOrderNumber": "SO-07786",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035921001-1154219000035921004-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035921001",
+          "lineItemId": "1154219000035921004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Flamingo Designs Pvt Ltd",
+          "salesOrderNumber": "SO-07786",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035903070": {
       "id": "1154219000035903070",
       "zohoSalesOrderId": "1154219000035903070",
@@ -9690,6 +9800,7 @@
     }
   },
   "orderIds": [
+    "1154219000035921001",
     "1154219000035903070",
     "1154219000035881013",
     "1154219000035890021",
@@ -9741,8 +9852,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T07:40:56.479Z",
-  "lastAttemptAt": "2026-08-21T07:44:48.305Z",
+  "lastSuccessfulSyncAt": "2026-08-21T07:45:11.678Z",
+  "lastAttemptAt": "2026-08-21T07:45:11.678Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
