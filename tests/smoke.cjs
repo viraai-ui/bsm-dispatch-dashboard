@@ -37,7 +37,7 @@ async function run() {
 
   for (const path of ['/', '/orders', '/orders/so-1001', '/orders/so-1002', '/packaging-tv', '/wooden-packing', '/media-proof', '/vehicle-dispatch', '/ready-to-ship', '/salesman-view', '/units-generator', '/database', '/crm-serial-database', '/settings', '/api/orders', '/api/ready-to-ship', '/api/salesman-view', '/api/sync/status', '/api/media-proof/cleanup']) {
     const { response } = await fetchText(path, { headers: { cookie } })
-    assert.equal(response.status, 200, `${path} should return 200`)
+    assert.equal(response.status, 200, `${path} should return 200\nServer output:\n${serverOutput.slice(-4000)}`)
   }
 
   const operationsCookie = await login('operations', '1231')

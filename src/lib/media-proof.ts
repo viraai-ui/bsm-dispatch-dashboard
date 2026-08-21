@@ -1,6 +1,6 @@
 import type { Order } from '@/types/domain'
 import { uploadBufferToGithubMedia } from './github-media'
-import { githubReadJson, githubWriteJson, listProcessedOrders } from './workflow-store'
+import { githubReadJson, githubStoreConfigured, githubWriteJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 import { isMachineLineItem } from './item-classification'
@@ -49,7 +49,7 @@ export async function readMediaProofStore(stage: MediaStage = 'packing') {
   const path = mediaPath(stage)
   const { data } = await githubReadJson<MediaProofStore>(path, { records: {} })
   const cleaned = await cleanupExpiredMediaProofStore({ records: data.records || {} })
-  if (cleaned.changed) await githubWriteJson(path, cleaned.store, `Cleanup expired ${stageLabel(stage)} files`)
+  if (cleaned.changed && githubStoreConfigured()) await githubWriteJson(path, cleaned.store, `Cleanup expired ${stageLabel(stage)} files`)
   return { records: cleaned.store.records || {} }
 }
 
@@ -95,8 +95,10 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
       }
     }
   }
-  if (packingChanged) await githubWriteJson(mediaPath('packing'), packingStore, 'Auto-close packing video-not-required orders')
-  if (loadingChanged) await githubWriteJson(mediaPath('loading'), loadingStore, 'Auto-close loading video-not-required orders')
+  // Local/read-only deployments still use bundled stores. Keep page reads usable
+  // there; these opportunistic maintenance writes require a configured remote.
+  if (packingChanged && githubStoreConfigured()) await githubWriteJson(mediaPath('packing'), packingStore, 'Auto-close packing video-not-required orders')
+  if (loadingChanged && githubStoreConfigured()) await githubWriteJson(mediaPath('loading'), loadingStore, 'Auto-close loading video-not-required orders')
 
   const orders = sourceOrders
     .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))

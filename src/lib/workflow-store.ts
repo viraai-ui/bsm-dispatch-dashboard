@@ -55,6 +55,10 @@ function ghConfig() {
   }
 }
 
+export function githubStoreConfigured() {
+  return Boolean(ghConfig().token)
+}
+
 export async function githubRequest(path: string, init: RequestInit = {}) {
   const { token, owner, repo } = ghConfig()
   if (!token) throw new Error('Workflow database is not configured')
