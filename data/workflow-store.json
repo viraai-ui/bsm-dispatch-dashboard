@@ -16232,7 +16232,7 @@
           "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 7
     },
     "1154219000035921001": {
       "salesOrderId": "1154219000035921001",
@@ -16429,7 +16429,7 @@
       "salesOrderId": "1154219000035903106",
       "salesOrderNumber": "SO-07787",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-21T08:54:55.299Z",
       "processedOrder": {
         "id": "1154219000035903106",
@@ -16495,7 +16495,8 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
