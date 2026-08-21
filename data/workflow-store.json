@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271028,
+  "serialCounter": 26271029,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -16422,6 +16422,67 @@
           "processedAt": "2026-08-21T08:16:05.618Z",
           "dispatchNote": "local",
           "vendor": "Rawal"
+        }
+      }
+    },
+    "1154219000035903106": {
+      "salesOrderId": "1154219000035903106",
+      "salesOrderNumber": "SO-07787",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035903106",
+        "zohoSalesOrderId": "1154219000035903106",
+        "salesOrderNumber": "SO-07787",
+        "status": "open",
+        "customerName": "P L G INTERNATIONAL",
+        "shippingAddress": "Plot No-134-B, Kh No. 72/10/2, Swarn Park, Industrial AreaDELHI- 110041",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035903109",
+            "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 15 Inch)",
+            "sku": "8918-15",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035903106-1154219000035903109-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035903106",
+            "lineItemId": "1154219000035903109",
+            "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 15 Inch)",
+            "sku": "8918-15",
+            "customerName": "P L G INTERNATIONAL",
+            "salesOrderNumber": "SO-07787",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035903106-1154219000035903109-1": {
+          "machineUnitId": "1154219000035903106-1154219000035903109-1",
+          "lineItemId": "1154219000035903109",
+          "serialNumber": "26271029",
+          "qrToken": "26271029",
+          "qrStatus": "pending"
         }
       }
     }
