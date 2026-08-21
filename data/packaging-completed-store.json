@@ -10681,6 +10681,62 @@
       "machineIds": [
         "1154219000035901077-1154219000035901082-1"
       ]
+    },
+    "1154219000032301006": {
+      "completedAt": "2026-08-21T05:24:53.016Z",
+      "order": {
+        "id": "1154219000032301006",
+        "zohoSalesOrderId": "1154219000032301006",
+        "salesOrderNumber": "SO-07195",
+        "status": "open",
+        "customerName": "MITAKSHI PRINT AND CRAFT",
+        "shippingAddress": "F/F, PLOT NO. 509/3, VILLAGE MUNDKA, POLE NO. MDKP804, NEAR BALMIKI CHOPAL, New Delhi, West Delhi, Delhi,, 110041",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-06-15",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000032301009",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000032301006-1154219000032301009-1",
+            "unitNumber": 1,
+            "serialNumber": "26270810",
+            "qrToken": "26270810",
+            "orderId": "1154219000032301006",
+            "lineItemId": "1154219000032301009",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "MITAKSHI PRINT AND CRAFT",
+            "salesOrderNumber": "SO-07195",
+            "deliveryDate": "2026-06-15",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-06-15"
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000032301006-1154219000032301009-1"
+      ]
     }
   }
 }
