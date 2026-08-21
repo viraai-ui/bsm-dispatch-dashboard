@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035903070": {
+      "id": "1154219000035903070",
+      "zohoSalesOrderId": "1154219000035903070",
+      "salesOrderNumber": "SO-07785",
+      "status": "open",
+      "customerName": "M/S AR KAY INDUSTRIES",
+      "shippingAddress": "Phase 2, Gate No. 242MI, Goverdhan Dham, Runkata, AGRA, Agra, Uttar Pradesh, 282007, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035903073",
+          "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
+          "sku": "003-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035903070-1154219000035903073-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035903070",
+          "lineItemId": "1154219000035903073",
+          "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
+          "sku": "003-2",
+          "customerName": "M/S AR KAY INDUSTRIES",
+          "salesOrderNumber": "SO-07785",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035881013": {
       "id": "1154219000035881013",
       "zohoSalesOrderId": "1154219000035881013",
@@ -9643,6 +9690,7 @@
     }
   },
   "orderIds": [
+    "1154219000035903070",
     "1154219000035881013",
     "1154219000035890021",
     "1154219000035858047",
@@ -9693,8 +9741,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T07:00:36.063Z",
-  "lastAttemptAt": "2026-08-21T07:20:21.642Z",
+  "lastSuccessfulSyncAt": "2026-08-21T07:20:44.923Z",
+  "lastAttemptAt": "2026-08-21T07:20:44.923Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
