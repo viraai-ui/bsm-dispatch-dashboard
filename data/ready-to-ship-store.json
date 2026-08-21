@@ -3515,6 +3515,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035814001": {
+      "id": "ship-1787302951949-k2db1",
+      "itemId": "1154219000035814001",
+      "orderId": "1154219000035814001",
+      "machineId": "1154219000035814001-1154219000035814004-1",
+      "salesOrderNumber": "SO-07747",
+      "customerName": "Shiva Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAD8506",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-21",
+      "notes": "",
+      "shippedAt": "2026-08-21T09:02:31.949Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
