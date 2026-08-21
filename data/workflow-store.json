@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271024,
+  "serialCounter": 26271028,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -16231,6 +16231,151 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035921001": {
+      "salesOrderId": "1154219000035921001",
+      "salesOrderNumber": "SO-07786",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035921001",
+        "zohoSalesOrderId": "1154219000035921001",
+        "salesOrderNumber": "SO-07786",
+        "status": "open",
+        "customerName": "Flamingo Designs Pvt Ltd",
+        "shippingAddress": "C-49, Sector-81, Phase-2, Noida, Uttar Pradesh, 201305",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "description": "",
+            "quantity": 4,
+            "pendingQuantity": 4,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035921001-1154219000035921004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035921001-1154219000035921004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035921001-1154219000035921004-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035921001-1154219000035921004-4",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035921001-1154219000035921004-1": {
+          "machineUnitId": "1154219000035921001-1154219000035921004-1",
+          "lineItemId": "1154219000035921004",
+          "serialNumber": "26271025",
+          "qrToken": "26271025",
+          "qrStatus": "pending"
+        },
+        "1154219000035921001-1154219000035921004-2": {
+          "machineUnitId": "1154219000035921001-1154219000035921004-2",
+          "lineItemId": "1154219000035921004",
+          "serialNumber": "26271026",
+          "qrToken": "26271026",
+          "qrStatus": "pending"
+        },
+        "1154219000035921001-1154219000035921004-3": {
+          "machineUnitId": "1154219000035921001-1154219000035921004-3",
+          "lineItemId": "1154219000035921004",
+          "serialNumber": "26271027",
+          "qrToken": "26271027",
+          "qrStatus": "pending"
+        },
+        "1154219000035921001-1154219000035921004-4": {
+          "machineUnitId": "1154219000035921001-1154219000035921004-4",
+          "lineItemId": "1154219000035921004",
+          "serialNumber": "26271028",
+          "qrToken": "26271028",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
