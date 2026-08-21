@@ -10737,6 +10737,72 @@
       "machineIds": [
         "1154219000032301006-1154219000032301009-1"
       ]
+    },
+    "1154219000034903010": {
+      "completedAt": "2026-08-21T05:25:45.993Z",
+      "order": {
+        "id": "1154219000034903010",
+        "zohoSalesOrderId": "1154219000034903010",
+        "salesOrderNumber": "SO-07606",
+        "status": "open",
+        "customerName": "INDO AGRITECH PRIVATE LIMITED",
+        "shippingAddress": "Survey No. 273/2/3, Seth Agro Ke Piche, Ujjain Road, Gram Tarana Tehsil Sanwer, Sanwer,, Indore,, Madhya Pradesh,, 453551, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-07-30",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034903013",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034903014",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034903010-1154219000034903013-1",
+            "unitNumber": 1,
+            "serialNumber": "26270808",
+            "qrToken": "26270808",
+            "orderId": "1154219000034903010",
+            "lineItemId": "1154219000034903013",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "INDO AGRITECH PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07606",
+            "deliveryDate": "2026-07-30",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-30"
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000034903010-1154219000034903013-1"
+      ]
     }
   }
 }
