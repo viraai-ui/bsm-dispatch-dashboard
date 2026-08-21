@@ -16237,7 +16237,9 @@
     "1154219000035921001": {
       "salesOrderId": "1154219000035921001",
       "salesOrderNumber": "SO-07786",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-21T08:16:05.618Z",
       "processedOrder": {
         "id": "1154219000035921001",
         "zohoSalesOrderId": "1154219000035921001",
@@ -16265,8 +16267,8 @@
           {
             "id": "1154219000035921001-1154219000035921004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271025",
+            "qrToken": "26271025",
             "orderId": "1154219000035921001",
             "lineItemId": "1154219000035921004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -16274,20 +16276,23 @@
             "customerName": "Flamingo Designs Pvt Ltd",
             "salesOrderNumber": "SO-07786",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035921001-1154219000035921004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271026",
+            "qrToken": "26271026",
             "orderId": "1154219000035921001",
             "lineItemId": "1154219000035921004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -16295,20 +16300,23 @@
             "customerName": "Flamingo Designs Pvt Ltd",
             "salesOrderNumber": "SO-07786",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035921001-1154219000035921004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271027",
+            "qrToken": "26271027",
             "orderId": "1154219000035921001",
             "lineItemId": "1154219000035921004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -16316,20 +16324,23 @@
             "customerName": "Flamingo Designs Pvt Ltd",
             "salesOrderNumber": "SO-07786",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035921001-1154219000035921004-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271028",
+            "qrToken": "26271028",
             "orderId": "1154219000035921001",
             "lineItemId": "1154219000035921004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -16337,14 +16348,17 @@
             "customerName": "Flamingo Designs Pvt Ltd",
             "salesOrderNumber": "SO-07786",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -16359,7 +16373,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T07:48:27.072Z",
           "zohoBackupLastAttemptAt": "2026-08-21T08:00:39.808Z",
-          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z"
+          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z",
+          "processedAt": "2026-08-21T08:16:05.618Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         },
         "1154219000035921001-1154219000035921004-2": {
           "machineUnitId": "1154219000035921001-1154219000035921004-2",
@@ -16371,7 +16388,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T07:48:27.072Z",
           "zohoBackupLastAttemptAt": "2026-08-21T08:00:39.808Z",
-          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z"
+          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z",
+          "processedAt": "2026-08-21T08:16:05.618Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         },
         "1154219000035921001-1154219000035921004-3": {
           "machineUnitId": "1154219000035921001-1154219000035921004-3",
@@ -16383,7 +16403,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T07:48:27.072Z",
           "zohoBackupLastAttemptAt": "2026-08-21T08:00:39.808Z",
-          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z"
+          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z",
+          "processedAt": "2026-08-21T08:16:05.618Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         },
         "1154219000035921001-1154219000035921004-4": {
           "machineUnitId": "1154219000035921001-1154219000035921004-4",
@@ -16395,7 +16418,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T07:48:27.072Z",
           "zohoBackupLastAttemptAt": "2026-08-21T08:00:39.808Z",
-          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z"
+          "zohoBackupSyncedAt": "2026-08-21T08:00:39.808Z",
+          "processedAt": "2026-08-21T08:16:05.618Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         }
       }
     }
