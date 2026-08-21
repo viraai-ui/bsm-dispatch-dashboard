@@ -2982,6 +2982,31 @@
           ]
         }
       }
+    },
+    "1154219000035858047": {
+      "orderId": "1154219000035858047",
+      "salesOrderNumber": "SO-07782",
+      "submittedAt": null,
+      "units": {
+        "1154219000035858047-1154219000035858050-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000035858047-1154219000035858050-1-video-1787310302720-m6uiv2",
+              "name": "VID_20260821_163210.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-21%2FSO-07782%2FThread%20Burner%20Indian%20Heavy%20Duty-1154219000035858047-1154219000035858050-1-2026-08-21T11-02-17-579Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-21/SO-07782/Thread Burner Indian Heavy Duty-1154219000035858047-1154219000035858050-1-2026-08-21T11-02-17-579Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-21T11:05:02.720Z",
+              "expiresAt": "2026-09-20T11:02:17.579Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
