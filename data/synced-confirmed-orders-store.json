@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035903106": {
+      "id": "1154219000035903106",
+      "zohoSalesOrderId": "1154219000035903106",
+      "salesOrderNumber": "SO-07787",
+      "status": "open",
+      "customerName": "P L G INTERNATIONAL",
+      "shippingAddress": "Plot No-134-B, Kh No. 72/10/2, Swarn Park, Industrial AreaDELHI- 110041",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035903109",
+          "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 15 Inch)",
+          "sku": "8918-15",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035903106-1154219000035903109-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035903106",
+          "lineItemId": "1154219000035903109",
+          "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 15 Inch)",
+          "sku": "8918-15",
+          "customerName": "P L G INTERNATIONAL",
+          "salesOrderNumber": "SO-07787",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035921001": {
       "id": "1154219000035921001",
       "zohoSalesOrderId": "1154219000035921001",
@@ -9327,6 +9374,7 @@
     }
   },
   "orderIds": [
+    "1154219000035903106",
     "1154219000035921001",
     "1154219000035903070",
     "1154219000035881013",
@@ -9372,8 +9420,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T08:48:12.169Z",
-  "lastAttemptAt": "2026-08-21T08:51:51.925Z",
+  "lastSuccessfulSyncAt": "2026-08-21T08:52:11.030Z",
+  "lastAttemptAt": "2026-08-21T08:52:11.030Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
