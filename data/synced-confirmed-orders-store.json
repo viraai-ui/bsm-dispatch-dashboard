@@ -1,5 +1,175 @@
 {
   "orders": {
+    "1154219000035881013": {
+      "id": "1154219000035881013",
+      "zohoSalesOrderId": "1154219000035881013",
+      "salesOrderNumber": "SO-07784",
+      "status": "open",
+      "customerName": "Tactix Defence Systems LLP",
+      "shippingAddress": "Ground Floor, 10/1, Lakshmi Narayan Complex, Shangri La Hotel Bengaluru, Vasant Nagar, Bengaluru, Karnataka, 560052",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035881016",
+          "itemName": "Computerized Post Bed Single Needle Roller Feed",
+          "sku": "9910RTC",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035881017",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost from BSM to VRL Logistics Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035881013-1154219000035881016-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035881013",
+          "lineItemId": "1154219000035881016",
+          "itemName": "Computerized Post Bed Single Needle Roller Feed",
+          "sku": "9910RTC",
+          "customerName": "Tactix Defence Systems LLP",
+          "salesOrderNumber": "SO-07784",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000035890021": {
+      "id": "1154219000035890021",
+      "zohoSalesOrderId": "1154219000035890021",
+      "salesOrderNumber": "SO-07783",
+      "status": "open",
+      "customerName": "Sneha Stitching",
+      "shippingAddress": "Chimankhanbar, Analberia, Marishda, Purba Medinipur, West Bengal, 721444, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035890024",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 75,
+          "pendingQuantity": 75,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        },
+        {
+          "id": "1154219000035890025",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000035858047": {
+      "id": "1154219000035858047",
+      "zohoSalesOrderId": "1154219000035858047",
+      "salesOrderNumber": "SO-07782",
+      "status": "open",
+      "customerName": "Funskool India Limited",
+      "shippingAddress": "6th Floor, 826, Tarapore Tower, Anna Salai, Chennai, Tamil Nadu, 600002",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-20",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035858050",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035858051",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035858047-1154219000035858050-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035858047",
+          "lineItemId": "1154219000035858050",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "customerName": "Funskool India Limited",
+          "salesOrderNumber": "SO-07782",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000035858047-1154219000035858051-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035858047",
+          "lineItemId": "1154219000035858051",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Funskool India Limited",
+          "salesOrderNumber": "SO-07782",
+          "deliveryDate": "2026-08-20",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges"
+        }
+      ]
+    },
     "1154219000035880022": {
       "id": "1154219000035880022",
       "zohoSalesOrderId": "1154219000035880022",
@@ -9473,6 +9643,9 @@
     }
   },
   "orderIds": [
+    "1154219000035881013",
+    "1154219000035890021",
+    "1154219000035858047",
     "1154219000035880022",
     "1154219000035895010",
     "1154219000035891025",
@@ -9520,8 +9693,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T05:21:06.969Z",
-  "lastAttemptAt": "2026-08-21T05:40:33.579Z",
+  "lastSuccessfulSyncAt": "2026-08-21T05:40:55.726Z",
+  "lastAttemptAt": "2026-08-21T05:40:55.726Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
