@@ -15533,7 +15533,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035875012": {
       "salesOrderId": "1154219000035875012",
@@ -15690,7 +15690,7 @@
       "salesOrderId": "1154219000035891025",
       "salesOrderNumber": "SO-07779",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-20T12:41:11.842Z",
       "processedOrder": {
         "id": "1154219000035891025",
@@ -15758,7 +15758,8 @@
           "zohoBackupLastAttemptAt": "2026-08-20T12:45:46.741Z",
           "zohoBackupSyncedAt": "2026-08-20T12:45:46.741Z"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035895010": {
       "salesOrderId": "1154219000035895010",
@@ -15882,7 +15883,7 @@
           "zohoBackupSyncedAt": "2026-08-20T12:45:46.741Z"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035880022": {
       "salesOrderId": "1154219000035880022",
@@ -15957,7 +15958,7 @@
           "zohoBackupSyncedAt": "2026-08-20T13:15:54.398Z"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     }
   }
 }
