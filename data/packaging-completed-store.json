@@ -10803,6 +10803,61 @@
       "machineIds": [
         "1154219000034903010-1154219000034903013-1"
       ]
+    },
+    "1154219000035014002": {
+      "completedAt": "2026-08-21T05:26:36.039Z",
+      "order": {
+        "id": "1154219000035014002",
+        "zohoSalesOrderId": "1154219000035014002",
+        "salesOrderNumber": "SO-07617",
+        "status": "open",
+        "customerName": "AJAY ENTERPRISES",
+        "shippingAddress": "GROUND FLOOR, KHASRA NO-52/53,, PLOT NO-4, 24/1/2, RUCHI VIHAR, NIHAL VIHAR,, NANGLOI, West Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-07-31",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035014005",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035014002-1154219000035014005-1",
+            "unitNumber": 1,
+            "serialNumber": "26270811",
+            "qrToken": "26270811",
+            "orderId": "1154219000035014002",
+            "lineItemId": "1154219000035014005",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "AJAY ENTERPRISES",
+            "salesOrderNumber": "SO-07617",
+            "deliveryDate": "2026-07-31",
+            "status": "Processed",
+            "selectedForBatch": true,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-31"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035014002-1154219000035014005-1"
+      ]
     }
   }
 }
