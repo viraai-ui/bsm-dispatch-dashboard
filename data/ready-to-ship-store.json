@@ -3391,6 +3391,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000034903010": {
+      "id": "ship-1787301614533-8n5y6",
+      "itemId": "1154219000034903010",
+      "orderId": "1154219000034903010",
+      "machineId": "1154219000034903010-1154219000034903013-1",
+      "salesOrderNumber": "SO-07606",
+      "customerName": "INDO AGRITECH PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-21",
+      "notes": "",
+      "shippedAt": "2026-08-21T08:40:14.533Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
