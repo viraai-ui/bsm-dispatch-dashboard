@@ -16503,7 +16503,9 @@
     "1154219000035949001": {
       "salesOrderId": "1154219000035949001",
       "salesOrderNumber": "SO-07788",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-21T11:11:24.333Z",
       "processedOrder": {
         "id": "1154219000035949001",
         "zohoSalesOrderId": "1154219000035949001",
@@ -16531,8 +16533,8 @@
           {
             "id": "1154219000035949001-1154219000035949004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271030",
+            "qrToken": "26271030",
             "orderId": "1154219000035949001",
             "lineItemId": "1154219000035949004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -16540,14 +16542,17 @@
             "customerName": "PP Solutions",
             "salesOrderNumber": "SO-07788",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Ars",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -16560,7 +16565,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-21T11:09:20.660Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-21T11:09:30.710Z"
+          "zohoBackupQueuedAt": "2026-08-21T11:09:30.710Z",
+          "processedAt": "2026-08-21T11:11:24.333Z",
+          "dispatchNote": "local",
+          "vendor": "Ars"
         }
       }
     }
