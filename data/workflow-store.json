@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271021,
+  "serialCounter": 26271022,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -15962,6 +15962,98 @@
         }
       },
       "dispatchSortOrder": 5
+    },
+    "1154219000035858047": {
+      "salesOrderId": "1154219000035858047",
+      "salesOrderNumber": "SO-07782",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035858047",
+        "zohoSalesOrderId": "1154219000035858047",
+        "salesOrderNumber": "SO-07782",
+        "status": "open",
+        "customerName": "Funskool India Limited",
+        "shippingAddress": "6th Floor, 826, Tarapore Tower, Anna Salai, Chennai, Tamil Nadu, 600002",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035858050",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035858051",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035858047-1154219000035858050-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035858047",
+            "lineItemId": "1154219000035858050",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "Funskool India Limited",
+            "salesOrderNumber": "SO-07782",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035858047-1154219000035858051-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035858047",
+            "lineItemId": "1154219000035858051",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "customerName": "Funskool India Limited",
+            "salesOrderNumber": "SO-07782",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges"
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035858047-1154219000035858050-1": {
+          "machineUnitId": "1154219000035858047-1154219000035858050-1",
+          "lineItemId": "1154219000035858050",
+          "serialNumber": "26271022",
+          "qrToken": "26271022",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
