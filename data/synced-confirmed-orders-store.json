@@ -525,115 +525,6 @@
         }
       ]
     },
-    "1154219000035873016": {
-      "id": "1154219000035873016",
-      "zohoSalesOrderId": "1154219000035873016",
-      "salesOrderNumber": "SO-07771",
-      "status": "open",
-      "customerName": "SELFIEE FOOTWEAR",
-      "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035873020",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035873019",
-          "itemName": "De lasting Jack (hydraulic)",
-          "sku": "500",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035873021",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035873016-1154219000035873020-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035873016",
-          "lineItemId": "1154219000035873020",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "customerName": "SELFIEE FOOTWEAR",
-          "salesOrderNumber": "SO-07771",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035873016-1154219000035873019-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035873016",
-          "lineItemId": "1154219000035873019",
-          "itemName": "De lasting Jack (hydraulic)",
-          "sku": "500",
-          "customerName": "SELFIEE FOOTWEAR",
-          "salesOrderNumber": "SO-07771",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035873016-1154219000035873021-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035873016",
-          "lineItemId": "1154219000035873021",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "customerName": "SELFIEE FOOTWEAR",
-          "salesOrderNumber": "SO-07771",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035898002": {
       "id": "1154219000035898002",
       "zohoSalesOrderId": "1154219000035898002",
@@ -1109,63 +1000,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Drive single phase"
-        }
-      ]
-    },
-    "1154219000035809004": {
-      "id": "1154219000035809004",
-      "zohoSalesOrderId": "1154219000035809004",
-      "salesOrderNumber": "SO-07755",
-      "status": "open",
-      "customerName": "THALIR ENTERPRISES",
-      "shippingAddress": "S F NO 533/1A3 SITE NO 6, GOLDEN AVENUE, SEERAPALAYAM MADUKKARAI, Coimbatore Industrial Estate Sub Post Office, Coimbatore,, Coimbatore, Tamil Nadu, 641021, India",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035809007",
-          "itemName": "Single Needle Walking foot (Cylinder Bed)",
-          "sku": "341",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035809008",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charge Upto 10KM from BSM to",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035809004-1154219000035809007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035809004",
-          "lineItemId": "1154219000035809007",
-          "itemName": "Single Needle Walking foot (Cylinder Bed)",
-          "sku": "341",
-          "customerName": "THALIR ENTERPRISES",
-          "salesOrderNumber": "SO-07755",
-          "deliveryDate": "2026-08-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -7279,94 +7113,6 @@
         }
       ]
     },
-    "1154219000035588022": {
-      "id": "1154219000035588022",
-      "zohoSalesOrderId": "1154219000035588022",
-      "salesOrderNumber": "SO-07719",
-      "status": "open",
-      "customerName": "Sanspareils Greenlands Pvt. Ltd.",
-      "shippingAddress": "Opp. Airpot,, Gangol Road, Partapur, Meerut, 250103",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035588025",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035588026",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035588027",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035588022-1154219000035588025-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035588022",
-          "lineItemId": "1154219000035588025",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "customerName": "Sanspareils Greenlands Pvt. Ltd.",
-          "salesOrderNumber": "SO-07719",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035588022-1154219000035588026-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035588022",
-          "lineItemId": "1154219000035588026",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "customerName": "Sanspareils Greenlands Pvt. Ltd.",
-          "salesOrderNumber": "SO-07719",
-          "deliveryDate": "2026-08-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035527004": {
       "id": "1154219000035527004",
       "zohoSalesOrderId": "1154219000035527004",
@@ -8104,53 +7850,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Size : Arm size : 500 mm Bed Size : 1000*500 mm"
-        }
-      ]
-    },
-    "1154219000034690004": {
-      "id": "1154219000034690004",
-      "zohoSalesOrderId": "1154219000034690004",
-      "salesOrderNumber": "SO-07564",
-      "status": "open",
-      "customerName": "A.P. MFG. CO",
-      "shippingAddress": "Plot No 547 F, Pace City -II, Sector-37, Gurugram, Haryana, 122001, India",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-07-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034690007",
-          "itemName": "Beam cutting Press (4 column) (40 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034690004-1154219000034690007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034690004",
-          "lineItemId": "1154219000034690007",
-          "itemName": "Beam cutting Press (4 column) (40 ton)",
-          "sku": "",
-          "customerName": "A.P. MFG. CO",
-          "salesOrderNumber": "SO-07564",
-          "deliveryDate": "2026-07-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -9684,7 +9383,6 @@
     "1154219000035884008",
     "1154219000035890003",
     "1154219000035887005",
-    "1154219000035873016",
     "1154219000035898002",
     "1154219000035891004",
     "1154219000035880001",
@@ -9693,7 +9391,6 @@
     "1154219000035867001",
     "1154219000035850002",
     "1154219000035854013",
-    "1154219000035809004",
     "1154219000035824045",
     "1154219000035795016",
     "1154219000035814001",
@@ -9703,7 +9400,6 @@
     "1154219000035691003",
     "1154219000035711007",
     "1154219000035685001",
-    "1154219000035588022",
     "1154219000035527004",
     "1154219000035510018",
     "1154219000035516005",
@@ -9712,7 +9408,6 @@
     "1154219000035356001",
     "1154219000034750001",
     "1154219000034744001",
-    "1154219000034690004",
     "1154219000034633005",
     "1154219000034263026",
     "1154219000034301018",
@@ -9725,8 +9420,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-21T08:21:11.518Z",
-  "lastAttemptAt": "2026-08-21T08:32:50.155Z",
+  "lastSuccessfulSyncAt": "2026-08-21T08:33:11.090Z",
+  "lastAttemptAt": "2026-08-21T08:33:11.090Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
