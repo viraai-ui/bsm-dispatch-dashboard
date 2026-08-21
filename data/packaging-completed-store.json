@@ -11140,6 +11140,63 @@
       "machineIds": [
         "1154219000035887005-1154219000035887008-1"
       ]
+    },
+    "1154219000035880001": {
+      "completedAt": "2026-08-21T13:13:11.418Z",
+      "order": {
+        "id": "1154219000035880001",
+        "zohoSalesOrderId": "1154219000035880001",
+        "salesOrderNumber": "SO-07767",
+        "status": "open",
+        "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+        "shippingAddress": "Ground Floor, PLOT NO. 530, M.I.E. PART-A,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035880004",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035880001-1154219000035880004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271014",
+            "qrToken": "26271014",
+            "orderId": "1154219000035880001",
+            "lineItemId": "1154219000035880004",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+            "salesOrderNumber": "SO-07767",
+            "deliveryDate": "2026-08-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000035880001-1154219000035880004-1"
+      ]
     }
   }
 }
