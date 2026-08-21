@@ -16162,7 +16162,9 @@
     "1154219000035903070": {
       "salesOrderId": "1154219000035903070",
       "salesOrderNumber": "SO-07785",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-21T07:46:55.841Z",
       "processedOrder": {
         "id": "1154219000035903070",
         "zohoSalesOrderId": "1154219000035903070",
@@ -16190,8 +16192,8 @@
           {
             "id": "1154219000035903070-1154219000035903073-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271024",
+            "qrToken": "26271024",
             "orderId": "1154219000035903070",
             "lineItemId": "1154219000035903073",
             "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
@@ -16199,14 +16201,17 @@
             "customerName": "M/S AR KAY INDUSTRIES",
             "salesOrderNumber": "SO-07785",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ]
       },
@@ -16219,7 +16224,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-21T07:45:19.705Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-21T07:45:29.950Z"
+          "zohoBackupQueuedAt": "2026-08-21T07:45:29.950Z",
+          "processedAt": "2026-08-21T07:46:55.841Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
