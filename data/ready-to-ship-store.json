@@ -3230,6 +3230,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035895010": {
+      "id": "ship-1787300308683-ozd9e",
+      "itemId": "1154219000035895010",
+      "orderId": "1154219000035895010",
+      "machineId": "1154219000035895010-1154219000035895013-1",
+      "salesOrderNumber": "SO-07780",
+      "customerName": "SHREE BALAJI POLYMERS",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAP3897",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-21",
+      "notes": "",
+      "shippedAt": "2026-08-21T08:18:28.683Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
