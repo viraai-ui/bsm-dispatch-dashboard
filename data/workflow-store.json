@@ -16564,11 +16564,13 @@
           "qrToken": "26271030",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-21T11:09:20.660Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T11:09:30.710Z",
           "processedAt": "2026-08-21T11:11:24.333Z",
           "dispatchNote": "local",
-          "vendor": "Ars"
+          "vendor": "Ars",
+          "zohoBackupLastAttemptAt": "2026-08-21T11:15:50.670Z",
+          "zohoBackupSyncedAt": "2026-08-21T11:15:50.670Z"
         }
       }
     }
