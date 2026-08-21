@@ -15536,7 +15536,7 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000035875012": {
       "salesOrderId": "1154219000035875012",
@@ -15762,7 +15762,7 @@
           "zohoBackupSyncedAt": "2026-08-20T12:45:46.741Z"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035895010": {
       "salesOrderId": "1154219000035895010",
@@ -15886,7 +15886,7 @@
           "zohoBackupSyncedAt": "2026-08-20T12:45:46.741Z"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000035880022": {
       "salesOrderId": "1154219000035880022",
@@ -15961,13 +15961,13 @@
           "zohoBackupSyncedAt": "2026-08-20T13:15:54.398Z"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000035858047": {
       "salesOrderId": "1154219000035858047",
       "salesOrderNumber": "SO-07782",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-21T06:18:05.950Z",
       "processedOrder": {
         "id": "1154219000035858047",
@@ -16068,7 +16068,8 @@
           "dispatchNote": "Wooden",
           "vendor": "Shree Sai"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     }
   }
 }
