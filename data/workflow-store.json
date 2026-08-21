@@ -15966,7 +15966,9 @@
     "1154219000035858047": {
       "salesOrderId": "1154219000035858047",
       "salesOrderNumber": "SO-07782",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-21T06:18:05.950Z",
       "processedOrder": {
         "id": "1154219000035858047",
         "zohoSalesOrderId": "1154219000035858047",
@@ -16004,8 +16006,8 @@
           {
             "id": "1154219000035858047-1154219000035858050-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271022",
+            "qrToken": "26271022",
             "orderId": "1154219000035858047",
             "lineItemId": "1154219000035858050",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -16013,14 +16015,17 @@
             "customerName": "Funskool India Limited",
             "salesOrderNumber": "SO-07782",
             "deliveryDate": "2026-08-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "vendor": "Shree Sai",
+            "dispatchNote": "Wooden"
           },
           {
             "id": "1154219000035858047-1154219000035858051-1",
@@ -16041,7 +16046,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges"
+            "itemDescription": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ]
       },
@@ -16056,7 +16063,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T06:10:31.996Z",
           "zohoBackupLastAttemptAt": "2026-08-21T06:16:07.331Z",
-          "zohoBackupSyncedAt": "2026-08-21T06:16:07.331Z"
+          "zohoBackupSyncedAt": "2026-08-21T06:16:07.331Z",
+          "processedAt": "2026-08-21T06:18:05.950Z",
+          "dispatchNote": "Wooden",
+          "vendor": "Shree Sai"
         }
       }
     }
