@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271022,
+  "serialCounter": 26271023,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -16070,6 +16070,77 @@
         }
       },
       "dispatchSortOrder": 2
+    },
+    "1154219000035881013": {
+      "salesOrderId": "1154219000035881013",
+      "salesOrderNumber": "SO-07784",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035881013",
+        "zohoSalesOrderId": "1154219000035881013",
+        "salesOrderNumber": "SO-07784",
+        "status": "open",
+        "customerName": "Tactix Defence Systems LLP",
+        "shippingAddress": "Ground Floor, 10/1, Lakshmi Narayan Complex, Shangri La Hotel Bengaluru, Vasant Nagar, Bengaluru, Karnataka, 560052",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035881016",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035881017",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight Cost from BSM to VRL Logistics Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035881013-1154219000035881016-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035881013",
+            "lineItemId": "1154219000035881016",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "Tactix Defence Systems LLP",
+            "salesOrderNumber": "SO-07784",
+            "deliveryDate": "2026-08-20",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035881013-1154219000035881016-1": {
+          "machineUnitId": "1154219000035881013-1154219000035881016-1",
+          "lineItemId": "1154219000035881016",
+          "serialNumber": "26271023",
+          "qrToken": "26271023",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
