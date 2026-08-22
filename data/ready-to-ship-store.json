@@ -3583,6 +3583,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035887005": {
+      "id": "ship-1787378610901-l283i",
+      "itemId": "1154219000035887005",
+      "orderId": "1154219000035887005",
+      "machineId": "1154219000035887005-1154219000035887008-1",
+      "salesOrderNumber": "SO-07773",
+      "customerName": "BACDA INTERNATIONAL PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "ABC Transport",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-21",
+      "notes": "",
+      "shippedAt": "2026-08-22T06:03:30.901Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
