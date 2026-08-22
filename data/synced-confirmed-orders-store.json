@@ -443,41 +443,6 @@
         }
       ]
     },
-    "1154219000035890021": {
-      "id": "1154219000035890021",
-      "zohoSalesOrderId": "1154219000035890021",
-      "salesOrderNumber": "SO-07783",
-      "status": "open",
-      "customerName": "Sneha Stitching",
-      "shippingAddress": "Chimankhanbar, Analberia, Marishda, Purba Medinipur, West Bengal, 721444, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-21",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035890024",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 75,
-          "pendingQuantity": 75,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        },
-        {
-          "id": "1154219000035890025",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": []
-    },
     "1154219000035858047": {
       "id": "1154219000035858047",
       "zohoSalesOrderId": "1154219000035858047",
@@ -3990,7 +3955,6 @@
     "1154219000035903106",
     "1154219000035921001",
     "1154219000035903070",
-    "1154219000035890021",
     "1154219000035858047",
     "1154219000035891025",
     "1154219000035884008",
@@ -4030,8 +3994,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-22T07:20:37.355Z",
-  "lastAttemptAt": "2026-08-22T07:38:47.260Z",
+  "lastSuccessfulSyncAt": "2026-08-22T07:39:07.406Z",
+  "lastAttemptAt": "2026-08-22T07:39:07.406Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
