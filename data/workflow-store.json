@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271031,
+  "serialCounter": 26271033,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -16659,6 +16659,115 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-08-21T11:30:34.649Z",
           "zohoBackupSyncedAt": "2026-08-21T11:30:34.649Z"
+        }
+      }
+    },
+    "1154219000035939003": {
+      "salesOrderId": "1154219000035939003",
+      "salesOrderNumber": "SO-07791",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035939003",
+        "zohoSalesOrderId": "1154219000035939003",
+        "salesOrderNumber": "SO-07791",
+        "status": "open",
+        "customerName": "Ashish International",
+        "shippingAddress": "Ground Floor,, Plot No. C-114, Naraina, Industrial Area Phase-1, Delhi, 110028",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035939006",
+            "itemName": "Pattern sewing machine (600x400 mm)",
+            "sku": "6040",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035939007",
+            "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
+            "sku": "291P",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035939008",
+            "itemName": "Hotmelt Polyamide Granules",
+            "sku": "7160",
+            "description": "",
+            "quantity": 25,
+            "pendingQuantity": 25,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035939003-1154219000035939006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035939003",
+            "lineItemId": "1154219000035939006",
+            "itemName": "Pattern sewing machine (600x400 mm)",
+            "sku": "6040",
+            "customerName": "Ashish International",
+            "salesOrderNumber": "SO-07791",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035939003-1154219000035939007-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035939003",
+            "lineItemId": "1154219000035939007",
+            "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
+            "sku": "291P",
+            "customerName": "Ashish International",
+            "salesOrderNumber": "SO-07791",
+            "deliveryDate": "2026-08-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035939003-1154219000035939006-1": {
+          "machineUnitId": "1154219000035939003-1154219000035939006-1",
+          "lineItemId": "1154219000035939006",
+          "serialNumber": "26271032",
+          "qrToken": "26271032",
+          "qrStatus": "pending"
+        },
+        "1154219000035939003-1154219000035939007-1": {
+          "machineUnitId": "1154219000035939003-1154219000035939007-1",
+          "lineItemId": "1154219000035939007",
+          "serialNumber": "26271033",
+          "qrToken": "26271033",
+          "qrStatus": "pending"
         }
       }
     }
