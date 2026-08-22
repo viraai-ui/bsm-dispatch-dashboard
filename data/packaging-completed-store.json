@@ -11798,6 +11798,62 @@
         "1154219000035921001-1154219000035921004-3",
         "1154219000035921001-1154219000035921004-4"
       ]
+    },
+    "1154219000035987001": {
+      "completedAt": "2026-08-22T12:34:36.231Z",
+      "order": {
+        "id": "1154219000035987001",
+        "zohoSalesOrderId": "1154219000035987001",
+        "salesOrderNumber": "SO-07793",
+        "status": "open",
+        "customerName": "APPEAL FOOTWEARS PVT. LTD.",
+        "shippingAddress": "PLOT NO-39, SECTOR-17 S.H.I.I.D.C,, BAHADURGARH, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035987004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035987001-1154219000035987004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271035",
+            "qrToken": "26271035",
+            "orderId": "1154219000035987001",
+            "lineItemId": "1154219000035987004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "APPEAL FOOTWEARS PVT. LTD.",
+            "salesOrderNumber": "SO-07793",
+            "deliveryDate": "2026-08-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-22",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035987001-1154219000035987004-1"
+      ]
     }
   }
 }
