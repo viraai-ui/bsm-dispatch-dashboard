@@ -838,53 +838,6 @@
         }
       ]
     },
-    "1154219000035873001": {
-      "id": "1154219000035873001",
-      "zohoSalesOrderId": "1154219000035873001",
-      "salesOrderNumber": "SO-07764",
-      "status": "open",
-      "customerName": "CBT FOOTWEAR",
-      "shippingAddress": "Plot No. 289, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035873004",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035873001-1154219000035873004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035873001",
-          "lineItemId": "1154219000035873004",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "customerName": "CBT FOOTWEAR",
-          "salesOrderNumber": "SO-07764",
-          "deliveryDate": "2026-08-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035867001": {
       "id": "1154219000035867001",
       "zohoSalesOrderId": "1154219000035867001",
@@ -3963,7 +3916,6 @@
     "1154219000035891004",
     "1154219000035880001",
     "1154219000035859514",
-    "1154219000035873001",
     "1154219000035867001",
     "1154219000035850002",
     "1154219000035854013",
@@ -3994,8 +3946,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-22T07:41:03.064Z",
-  "lastAttemptAt": "2026-08-22T07:53:46.165Z",
+  "lastSuccessfulSyncAt": "2026-08-22T07:54:07.112Z",
+  "lastAttemptAt": "2026-08-22T07:54:07.112Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
