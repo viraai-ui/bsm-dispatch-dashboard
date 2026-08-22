@@ -11432,6 +11432,73 @@
       "machineIds": [
         "1154219000035968003-1154219000035968006-1"
       ]
+    },
+    "1154219000035858047": {
+      "completedAt": "2026-08-22T09:34:11.533Z",
+      "order": {
+        "id": "1154219000035858047",
+        "zohoSalesOrderId": "1154219000035858047",
+        "salesOrderNumber": "SO-07782",
+        "status": "open",
+        "customerName": "Funskool India Limited",
+        "shippingAddress": "6th Floor, 826, Tarapore Tower, Anna Salai, Chennai, Tamil Nadu, 600002",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035858050",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035858051",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035858047-1154219000035858050-1",
+            "unitNumber": 1,
+            "serialNumber": "26271022",
+            "qrToken": "26271022",
+            "orderId": "1154219000035858047",
+            "lineItemId": "1154219000035858050",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "Funskool India Limited",
+            "salesOrderNumber": "SO-07782",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000035858047-1154219000035858050-1"
+      ]
     }
   }
 }
