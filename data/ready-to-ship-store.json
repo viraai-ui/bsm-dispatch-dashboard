@@ -3552,6 +3552,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035949001": {
+      "id": "ship-1787378531468-0s88k",
+      "itemId": "1154219000035949001",
+      "orderId": "1154219000035949001",
+      "machineId": "1154219000035949001-1154219000035949004-1",
+      "salesOrderNumber": "SO-07788",
+      "customerName": "PP Solutions",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP611",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-22",
+      "notes": "",
+      "shippedAt": "2026-08-22T06:02:11.468Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
