@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271034,
+  "serialCounter": 26271035,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -16859,6 +16859,67 @@
           "zohoBackupLastAttemptAt": "2026-08-22T07:15:39.213Z",
           "zohoBackupSyncedAt": "2026-08-22T07:15:39.213Z",
           "dispatchedAt": "2026-08-22T09:33:55.635Z"
+        }
+      }
+    },
+    "1154219000035987001": {
+      "salesOrderId": "1154219000035987001",
+      "salesOrderNumber": "SO-07793",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035987001",
+        "zohoSalesOrderId": "1154219000035987001",
+        "salesOrderNumber": "SO-07793",
+        "status": "open",
+        "customerName": "APPEAL FOOTWEARS PVT. LTD.",
+        "shippingAddress": "PLOT NO-39, SECTOR-17 S.H.I.I.D.C,, BAHADURGARH, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035987004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035987001-1154219000035987004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035987001",
+            "lineItemId": "1154219000035987004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "APPEAL FOOTWEARS PVT. LTD.",
+            "salesOrderNumber": "SO-07793",
+            "deliveryDate": "2026-08-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035987001-1154219000035987004-1": {
+          "machineUnitId": "1154219000035987001-1154219000035987004-1",
+          "lineItemId": "1154219000035987004",
+          "serialNumber": "26271035",
+          "qrToken": "26271035",
+          "qrStatus": "pending"
         }
       }
     }
