@@ -1,77 +1,5 @@
 {
   "orders": {
-    "1154219000036018002": {
-      "id": "1154219000036018002",
-      "zohoSalesOrderId": "1154219000036018002",
-      "salesOrderNumber": "SO-07794",
-      "status": "open",
-      "customerName": "KOUSHAL ENTERPRISES",
-      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-22",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036018005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 50,
-          "pendingQuantity": 50,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
-    "1154219000035987001": {
-      "id": "1154219000035987001",
-      "zohoSalesOrderId": "1154219000035987001",
-      "salesOrderNumber": "SO-07793",
-      "status": "open",
-      "customerName": "APPEAL FOOTWEARS PVT. LTD.",
-      "shippingAddress": "PLOT NO-39, SECTOR-17 S.H.I.I.D.C,, BAHADURGARH, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035987004",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035987001-1154219000035987004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035987001",
-          "lineItemId": "1154219000035987004",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "APPEAL FOOTWEARS PVT. LTD.",
-          "salesOrderNumber": "SO-07793",
-          "deliveryDate": "2026-08-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035968003": {
       "id": "1154219000035968003",
       "zohoSalesOrderId": "1154219000035968003",
@@ -3973,8 +3901,6 @@
     }
   },
   "orderIds": [
-    "1154219000036018002",
-    "1154219000035987001",
     "1154219000035968003",
     "1154219000035939003",
     "1154219000035947002",
@@ -4020,8 +3946,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-22T11:27:11.604Z",
-  "lastAttemptAt": "2026-08-22T11:40:39.521Z",
+  "lastSuccessfulSyncAt": "2026-08-22T11:41:00.937Z",
+  "lastAttemptAt": "2026-08-22T11:41:00.937Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
