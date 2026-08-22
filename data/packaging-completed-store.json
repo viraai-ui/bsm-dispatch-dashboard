@@ -11499,6 +11499,63 @@
       "machineIds": [
         "1154219000035858047-1154219000035858050-1"
       ]
+    },
+    "1154219000035903106": {
+      "completedAt": "2026-08-22T09:34:23.083Z",
+      "order": {
+        "id": "1154219000035903106",
+        "zohoSalesOrderId": "1154219000035903106",
+        "salesOrderNumber": "SO-07787",
+        "status": "open",
+        "customerName": "P L G INTERNATIONAL",
+        "shippingAddress": "Plot No-134-B, Kh No. 72/10/2, Swarn Park, Industrial AreaDELHI- 110041",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035903109",
+            "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 15 Inch)",
+            "sku": "8918-15",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035903106-1154219000035903109-1",
+            "unitNumber": 1,
+            "serialNumber": "26271029",
+            "qrToken": "26271029",
+            "orderId": "1154219000035903106",
+            "lineItemId": "1154219000035903109",
+            "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 15 Inch)",
+            "sku": "8918-15",
+            "customerName": "P L G INTERNATIONAL",
+            "salesOrderNumber": "SO-07787",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035903106-1154219000035903109-1"
+      ]
     }
   }
 }
