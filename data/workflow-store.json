@@ -16784,7 +16784,9 @@
     "1154219000035968003": {
       "salesOrderId": "1154219000035968003",
       "salesOrderNumber": "SO-07792",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-22T07:06:20.218Z",
       "processedOrder": {
         "id": "1154219000035968003",
         "zohoSalesOrderId": "1154219000035968003",
@@ -16812,8 +16814,8 @@
           {
             "id": "1154219000035968003-1154219000035968006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271034",
+            "qrToken": "26271034",
             "orderId": "1154219000035968003",
             "lineItemId": "1154219000035968006",
             "itemName": "Thread Trimmer (Double Motor)",
@@ -16821,14 +16823,17 @@
             "customerName": "Competence Exports Pvt Ltd",
             "salesOrderNumber": "SO-07792",
             "deliveryDate": "2026-08-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-22",
+            "vendor": "Shree Sai",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -16841,7 +16846,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-22T07:05:26.953Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-22T07:05:36.807Z"
+          "zohoBackupQueuedAt": "2026-08-22T07:05:36.807Z",
+          "processedAt": "2026-08-22T07:06:20.218Z",
+          "dispatchNote": "wooden",
+          "vendor": "Shree Sai"
         }
       }
     }
