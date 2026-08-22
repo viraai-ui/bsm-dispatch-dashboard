@@ -11613,6 +11613,63 @@
       "machineIds": [
         "1154219000035891025-1154219000035891028-1"
       ]
+    },
+    "1154219000035903070": {
+      "completedAt": "2026-08-22T09:34:41.516Z",
+      "order": {
+        "id": "1154219000035903070",
+        "zohoSalesOrderId": "1154219000035903070",
+        "salesOrderNumber": "SO-07785",
+        "status": "open",
+        "customerName": "M/S AR KAY INDUSTRIES",
+        "shippingAddress": "Phase 2, Gate No. 242MI, Goverdhan Dham, Runkata, AGRA, Agra, Uttar Pradesh, 282007, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035903073",
+            "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
+            "sku": "003-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035903070-1154219000035903073-1",
+            "unitNumber": 1,
+            "serialNumber": "26271024",
+            "qrToken": "26271024",
+            "orderId": "1154219000035903070",
+            "lineItemId": "1154219000035903073",
+            "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
+            "sku": "003-2",
+            "customerName": "M/S AR KAY INDUSTRIES",
+            "salesOrderNumber": "SO-07785",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 7
+      },
+      "machineIds": [
+        "1154219000035903070-1154219000035903073-1"
+      ]
     }
   }
 }
