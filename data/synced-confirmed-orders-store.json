@@ -1,5 +1,30 @@
 {
   "orders": {
+    "1154219000036018002": {
+      "id": "1154219000036018002",
+      "zohoSalesOrderId": "1154219000036018002",
+      "salesOrderNumber": "SO-07794",
+      "status": "open",
+      "customerName": "KOUSHAL ENTERPRISES",
+      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-22",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036018005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000035987001": {
       "id": "1154219000035987001",
       "zohoSalesOrderId": "1154219000035987001",
@@ -3948,6 +3973,7 @@
     }
   },
   "orderIds": [
+    "1154219000036018002",
     "1154219000035987001",
     "1154219000035968003",
     "1154219000035939003",
@@ -3994,8 +4020,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-22T10:00:42.625Z",
-  "lastAttemptAt": "2026-08-22T10:20:42.699Z",
+  "lastSuccessfulSyncAt": "2026-08-22T10:21:03.657Z",
+  "lastAttemptAt": "2026-08-22T10:21:03.657Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
