@@ -11556,6 +11556,63 @@
       "machineIds": [
         "1154219000035903106-1154219000035903109-1"
       ]
+    },
+    "1154219000035891025": {
+      "completedAt": "2026-08-22T09:34:32.346Z",
+      "order": {
+        "id": "1154219000035891025",
+        "zohoSalesOrderId": "1154219000035891025",
+        "salesOrderNumber": "SO-07779",
+        "status": "open",
+        "customerName": "JAMA CORPORATION PVT.LTD.",
+        "shippingAddress": "8/2-B, ARYA NAGAR, KANPUR, Kanpur Nagar, Kanpur, Uttar Pradesh, 208002, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035891028",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035891025-1154219000035891028-1",
+            "unitNumber": 1,
+            "serialNumber": "26271018",
+            "qrToken": "26271018",
+            "orderId": "1154219000035891025",
+            "lineItemId": "1154219000035891028",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "JAMA CORPORATION PVT.LTD.",
+            "salesOrderNumber": "SO-07779",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "God wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 5
+      },
+      "machineIds": [
+        "1154219000035891025-1154219000035891028-1"
+      ]
     }
   }
 }
