@@ -11670,6 +11670,134 @@
       "machineIds": [
         "1154219000035903070-1154219000035903073-1"
       ]
+    },
+    "1154219000035921001": {
+      "completedAt": "2026-08-22T12:34:21.934Z",
+      "order": {
+        "id": "1154219000035921001",
+        "zohoSalesOrderId": "1154219000035921001",
+        "salesOrderNumber": "SO-07786",
+        "status": "open",
+        "customerName": "Flamingo Designs Pvt Ltd",
+        "shippingAddress": "C-49, Sector-81, Phase-2, Noida, Uttar Pradesh, 201305",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "description": "",
+            "quantity": 4,
+            "pendingQuantity": 4,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035921001-1154219000035921004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271025",
+            "qrToken": "26271025",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035921001-1154219000035921004-2",
+            "unitNumber": 2,
+            "serialNumber": "26271026",
+            "qrToken": "26271026",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035921001-1154219000035921004-3",
+            "unitNumber": 3,
+            "serialNumber": "26271027",
+            "qrToken": "26271027",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000035921001-1154219000035921004-4",
+            "unitNumber": 4,
+            "serialNumber": "26271028",
+            "qrToken": "26271028",
+            "orderId": "1154219000035921001",
+            "lineItemId": "1154219000035921004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "Flamingo Designs Pvt Ltd",
+            "salesOrderNumber": "SO-07786",
+            "deliveryDate": "2026-08-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-21",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035921001-1154219000035921004-1",
+        "1154219000035921001-1154219000035921004-2",
+        "1154219000035921001-1154219000035921004-3",
+        "1154219000035921001-1154219000035921004-4"
+      ]
     }
   }
 }
