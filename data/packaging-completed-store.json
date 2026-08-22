@@ -11253,6 +11253,63 @@
       "machineIds": [
         "1154219000035949001-1154219000035949004-1"
       ]
+    },
+    "1154219000035850002": {
+      "completedAt": "2026-08-22T07:27:27.584Z",
+      "order": {
+        "id": "1154219000035850002",
+        "zohoSalesOrderId": "1154219000035850002",
+        "salesOrderNumber": "SO-07760",
+        "status": "open",
+        "customerName": "BELGI FOOTWEAR LLP",
+        "shippingAddress": "2 MANZIL GROUND FLOOR SLAB AND FIRST FLOOR SHED, PLOT NO. 351, HSIIDC, SECTOR-17, I E, JHAJJHAR, VILLAGE JAKHODA/KASSAR, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-20",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035850005",
+            "itemName": "Side wall Stitching (sole stitch)",
+            "sku": "168",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035850002-1154219000035850005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271006",
+            "qrToken": "26271006",
+            "orderId": "1154219000035850002",
+            "lineItemId": "1154219000035850005",
+            "itemName": "Side wall Stitching (sole stitch)",
+            "sku": "168",
+            "customerName": "BELGI FOOTWEAR LLP",
+            "salesOrderNumber": "SO-07760",
+            "deliveryDate": "2026-08-20",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-19",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000035850002-1154219000035850005-1"
+      ]
     }
   }
 }
