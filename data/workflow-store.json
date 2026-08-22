@@ -16865,7 +16865,9 @@
     "1154219000035987001": {
       "salesOrderId": "1154219000035987001",
       "salesOrderNumber": "SO-07793",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-22T09:57:31.976Z",
       "processedOrder": {
         "id": "1154219000035987001",
         "zohoSalesOrderId": "1154219000035987001",
@@ -16893,8 +16895,8 @@
           {
             "id": "1154219000035987001-1154219000035987004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271035",
+            "qrToken": "26271035",
             "orderId": "1154219000035987001",
             "lineItemId": "1154219000035987004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -16902,14 +16904,17 @@
             "customerName": "APPEAL FOOTWEARS PVT. LTD.",
             "salesOrderNumber": "SO-07793",
             "deliveryDate": "2026-08-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-22",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -16922,7 +16927,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-22T09:53:58.429Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-22T09:54:08.725Z"
+          "zohoBackupQueuedAt": "2026-08-22T09:54:08.725Z",
+          "processedAt": "2026-08-22T09:57:31.976Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
