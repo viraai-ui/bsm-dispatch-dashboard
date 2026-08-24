@@ -3843,6 +3843,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035968003": {
+      "id": "ship-1787557060626-hqpdt",
+      "itemId": "1154219000035968003",
+      "orderId": "1154219000035968003",
+      "machineId": "1154219000035968003-1154219000035968006-1",
+      "salesOrderNumber": "SO-07792",
+      "customerName": "Competence Exports Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-22",
+      "notes": "",
+      "shippedAt": "2026-08-24T07:37:40.626Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
