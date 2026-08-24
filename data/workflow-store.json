@@ -17094,7 +17094,9 @@
     "1154219000035994012": {
       "salesOrderId": "1154219000035994012",
       "salesOrderNumber": "SO-07798",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-24T07:43:33.288Z",
       "processedOrder": {
         "id": "1154219000035994012",
         "zohoSalesOrderId": "1154219000035994012",
@@ -17122,8 +17124,8 @@
           {
             "id": "1154219000035994012-1154219000035994015-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271038",
+            "qrToken": "26271038",
             "orderId": "1154219000035994012",
             "lineItemId": "1154219000035994015",
             "itemName": "Polishing & Buffing Machine (V. Speed)",
@@ -17131,14 +17133,17 @@
             "customerName": "Agarson Shoes Private Limited",
             "salesOrderNumber": "SO-07798",
             "deliveryDate": "2026-08-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Inbuilt Dust Collector in Machine"
+            "itemDescription": "Inbuilt Dust Collector in Machine",
+            "warrantyStart": "2026-08-24",
+            "vendor": "Shree Sai",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -17151,7 +17156,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T07:41:02.561Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T07:41:13.175Z"
+          "zohoBackupQueuedAt": "2026-08-24T07:41:13.175Z",
+          "processedAt": "2026-08-24T07:43:33.288Z",
+          "dispatchNote": "Local",
+          "vendor": "Shree Sai"
         }
       }
     }
