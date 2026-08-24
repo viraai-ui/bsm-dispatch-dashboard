@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271037,
+  "serialCounter": 26271038,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -17090,6 +17090,67 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035994012": {
+      "salesOrderId": "1154219000035994012",
+      "salesOrderNumber": "SO-07798",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035994012",
+        "zohoSalesOrderId": "1154219000035994012",
+        "salesOrderNumber": "SO-07798",
+        "status": "open",
+        "customerName": "Agarson Shoes Private Limited",
+        "shippingAddress": "Plot No 26/25/2, M.I.E. Part - A, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035994015",
+            "itemName": "Polishing & Buffing Machine (V. Speed)",
+            "sku": "704",
+            "description": "Inbuilt Dust Collector in Machine",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035994012-1154219000035994015-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035994012",
+            "lineItemId": "1154219000035994015",
+            "itemName": "Polishing & Buffing Machine (V. Speed)",
+            "sku": "704",
+            "customerName": "Agarson Shoes Private Limited",
+            "salesOrderNumber": "SO-07798",
+            "deliveryDate": "2026-08-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Inbuilt Dust Collector in Machine"
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035994012-1154219000035994015-1": {
+          "machineUnitId": "1154219000035994012-1154219000035994015-1",
+          "lineItemId": "1154219000035994015",
+          "serialNumber": "26271038",
+          "qrToken": "26271038",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
