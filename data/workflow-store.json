@@ -17169,7 +17169,9 @@
     "1154219000036007594": {
       "salesOrderId": "1154219000036007594",
       "salesOrderNumber": "SO-07799",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-24T08:08:59.773Z",
       "processedOrder": {
         "id": "1154219000036007594",
         "zohoSalesOrderId": "1154219000036007594",
@@ -17207,8 +17209,8 @@
           {
             "id": "1154219000036007594-1154219000036007597-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271039",
+            "qrToken": "26271039",
             "orderId": "1154219000036007594",
             "lineItemId": "1154219000036007597",
             "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -17216,14 +17218,17 @@
             "customerName": "NEW SAHELI CHAPPAL",
             "salesOrderNumber": "SO-07799",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -17236,7 +17241,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T08:06:53.422Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T08:07:03.178Z"
+          "zohoBackupQueuedAt": "2026-08-24T08:07:03.178Z",
+          "processedAt": "2026-08-24T08:08:59.773Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
