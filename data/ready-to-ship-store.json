@@ -3713,6 +3713,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035987001": {
+      "id": "ship-1787556605761-bbvsu",
+      "itemId": "1154219000035987001",
+      "orderId": "1154219000035987001",
+      "machineId": "1154219000035987001-1154219000035987004-1",
+      "salesOrderNumber": "SO-07793",
+      "customerName": "APPEAL FOOTWEARS PVT. LTD.",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-24",
+      "notes": "",
+      "shippedAt": "2026-08-24T07:30:05.762Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
