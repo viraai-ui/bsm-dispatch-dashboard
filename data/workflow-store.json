@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271038,
+  "serialCounter": 26271039,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -17165,6 +17165,77 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000036007594": {
+      "salesOrderId": "1154219000036007594",
+      "salesOrderNumber": "SO-07799",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036007594",
+        "zohoSalesOrderId": "1154219000036007594",
+        "salesOrderNumber": "SO-07799",
+        "status": "open",
+        "customerName": "NEW SAHELI CHAPPAL",
+        "shippingAddress": "OLD 11/1, NEW 33/1, BATTI BAZAR, RANIPURA,, INDORE, Madhya Pradesh, 452001, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036007597",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036007598",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036007594-1154219000036007597-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036007594",
+            "lineItemId": "1154219000036007597",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "customerName": "NEW SAHELI CHAPPAL",
+            "salesOrderNumber": "SO-07799",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036007594-1154219000036007597-1": {
+          "machineUnitId": "1154219000036007594-1154219000036007597-1",
+          "lineItemId": "1154219000036007597",
+          "serialNumber": "26271039",
+          "qrToken": "26271039",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
