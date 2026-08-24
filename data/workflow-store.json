@@ -17155,11 +17155,13 @@
           "qrToken": "26271038",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T07:41:02.561Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-24T07:41:13.175Z",
           "processedAt": "2026-08-24T07:43:33.288Z",
           "dispatchNote": "Local",
-          "vendor": "Shree Sai"
+          "vendor": "Shree Sai",
+          "zohoBackupLastAttemptAt": "2026-08-24T07:45:53.511Z",
+          "zohoBackupSyncedAt": "2026-08-24T07:45:53.511Z"
         }
       },
       "dispatchSortOrder": 1
