@@ -3775,6 +3775,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035859514": {
+      "id": "ship-1787556794242-wdurb",
+      "itemId": "1154219000035859514",
+      "orderId": "1154219000035859514",
+      "machineId": "1154219000035859514-1154219000035859517-1",
+      "salesOrderNumber": "SO-07766",
+      "customerName": "M/S AR KAY INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "OM Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-22",
+      "notes": "",
+      "shippedAt": "2026-08-24T07:33:14.242Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
