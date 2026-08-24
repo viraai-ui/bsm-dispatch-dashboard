@@ -286,53 +286,6 @@
         }
       ]
     },
-    "1154219000036026006": {
-      "id": "1154219000036026006",
-      "zohoSalesOrderId": "1154219000036026006",
-      "salesOrderNumber": "SO-07796",
-      "status": "open",
-      "customerName": "ONXY ENTERPRISES",
-      "shippingAddress": "1ST FLOOR, KH.NO.-24/29, RIGHT PORTION,, VILLAGE NITHARI, NEAR PEER BABA MAJAR,, KIRARI, Delhi, 110086, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036026009",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036026006-1154219000036026009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036026006",
-          "lineItemId": "1154219000036026009",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "ONXY ENTERPRISES",
-          "salesOrderNumber": "SO-07796",
-          "deliveryDate": "2026-08-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035939003": {
       "id": "1154219000035939003",
       "zohoSalesOrderId": "1154219000035939003",
@@ -3764,7 +3717,6 @@
     "1154219000036007594",
     "1154219000035994012",
     "1154219000035989054",
-    "1154219000036026006",
     "1154219000035939003",
     "1154219000035947002",
     "1154219000035933004",
@@ -3803,8 +3755,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-24T12:01:08.955Z",
-  "lastAttemptAt": "2026-08-24T12:18:27.564Z",
+  "lastSuccessfulSyncAt": "2026-08-24T12:18:47.715Z",
+  "lastAttemptAt": "2026-08-24T12:18:47.715Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
