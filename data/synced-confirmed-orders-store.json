@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035992010": {
+      "id": "1154219000035992010",
+      "zohoSalesOrderId": "1154219000035992010",
+      "salesOrderNumber": "SO-07803",
+      "status": "open",
+      "customerName": "3NG",
+      "shippingAddress": "149, GALI NO.-2, Moonga Nagar,, Karawal Nagar, Delhi, 110094, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035992013",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035992010-1154219000035992013-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035992010",
+          "lineItemId": "1154219000035992013",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "3NG",
+          "salesOrderNumber": "SO-07803",
+          "deliveryDate": "2026-08-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035994029": {
       "id": "1154219000035994029",
       "zohoSalesOrderId": "1154219000035994029",
@@ -3712,6 +3759,7 @@
     }
   },
   "orderIds": [
+    "1154219000035992010",
     "1154219000035994029",
     "1154219000035997009",
     "1154219000036007594",
@@ -3755,8 +3803,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-24T12:41:04.590Z",
-  "lastAttemptAt": "2026-08-24T12:44:35.790Z",
+  "lastSuccessfulSyncAt": "2026-08-24T12:44:58.251Z",
+  "lastAttemptAt": "2026-08-24T12:44:58.251Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
