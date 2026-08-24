@@ -3917,6 +3917,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035798001": {
+      "id": "ship-1787575764355-zjr7g",
+      "itemId": "1154219000035798001",
+      "orderId": "1154219000035798001",
+      "machineId": "1154219000035798001-1154219000035798004-1",
+      "salesOrderNumber": "SO-07746",
+      "customerName": "TrustKnit Pvt. Ltd.",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-24",
+      "notes": "",
+      "shippedAt": "2026-08-24T12:49:24.355Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
