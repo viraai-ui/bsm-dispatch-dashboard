@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035987021": {
+      "id": "1154219000035987021",
+      "zohoSalesOrderId": "1154219000035987021",
+      "salesOrderNumber": "SO-07800",
+      "status": "open",
+      "customerName": "COMPETENCE EXPORTS PRIVATE LIMITED",
+      "shippingAddress": "59/A/A/6, UDYOG NAGAR, DADA NAGAR,, Kanpur Nagar, Uttar Pradesh, 208022, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035987024",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035987021-1154219000035987024-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035987021",
+          "lineItemId": "1154219000035987024",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "COMPETENCE EXPORTS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07800",
+          "deliveryDate": "2026-08-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036007594": {
       "id": "1154219000036007594",
       "zohoSalesOrderId": "1154219000036007594",
@@ -3797,6 +3844,7 @@
     }
   },
   "orderIds": [
+    "1154219000035987021",
     "1154219000036007594",
     "1154219000035994012",
     "1154219000035989054",
@@ -3840,8 +3888,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-24T10:03:41.088Z",
-  "lastAttemptAt": "2026-08-24T10:20:13.632Z",
+  "lastSuccessfulSyncAt": "2026-08-24T10:20:36.259Z",
+  "lastAttemptAt": "2026-08-24T10:20:36.259Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
