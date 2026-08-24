@@ -3161,7 +3161,26 @@
       "orderId": "1154219000036026006",
       "salesOrderNumber": "SO-07796",
       "submittedAt": "2026-08-24T07:39:18.026Z",
-      "units": {},
+      "units": {
+        "1154219000036026006-1154219000036026009-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036026006-1154219000036026009-1-video-1787557271248-79hcqk",
+              "name": "VID_20260824_120430.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2F2026-08-24%2FSO-07796%2FHotmelt%20Spray%20machine%20Double%20station-1154219000036026006-1154219000036026009-1-2026-08-24T07-39-30-375Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/2026-08-24/SO-07796/Hotmelt Spray machine Double station-1154219000036026006-1154219000036026009-1-2026-08-24T07-39-30-375Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-24T07:41:11.248Z",
+              "expiresAt": "2026-09-23T07:39:30.375Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": true
     }
   }
