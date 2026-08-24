@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271036,
+  "serialCounter": 26271037,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -17013,6 +17013,67 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000035989054": {
+      "salesOrderId": "1154219000035989054",
+      "salesOrderNumber": "SO-07797",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035989054",
+        "zohoSalesOrderId": "1154219000035989054",
+        "salesOrderNumber": "SO-07797",
+        "status": "open",
+        "customerName": "ALPINE INDIA",
+        "shippingAddress": "2458, NAI WARA, Chawri Bazar, New Delhi, Central Delhi, Delhi, 110006, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035989057",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035989054-1154219000035989057-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035989054",
+            "lineItemId": "1154219000035989057",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "ALPINE INDIA",
+            "salesOrderNumber": "SO-07797",
+            "deliveryDate": "2026-08-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035989054-1154219000035989057-1": {
+          "machineUnitId": "1154219000035989054-1154219000035989057-1",
+          "lineItemId": "1154219000035989057",
+          "serialNumber": "26271037",
+          "qrToken": "26271037",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
