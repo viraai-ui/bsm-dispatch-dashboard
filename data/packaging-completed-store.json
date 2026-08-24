@@ -11854,6 +11854,63 @@
       "machineIds": [
         "1154219000035987001-1154219000035987004-1"
       ]
+    },
+    "1154219000036026006": {
+      "completedAt": "2026-08-24T09:47:19.109Z",
+      "order": {
+        "id": "1154219000036026006",
+        "zohoSalesOrderId": "1154219000036026006",
+        "salesOrderNumber": "SO-07796",
+        "status": "open",
+        "customerName": "ONXY ENTERPRISES",
+        "shippingAddress": "1ST FLOOR, KH.NO.-24/29, RIGHT PORTION,, VILLAGE NITHARI, NEAR PEER BABA MAJAR,, KIRARI, Delhi, 110086, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036026009",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036026006-1154219000036026009-1",
+            "unitNumber": 1,
+            "serialNumber": "26271036",
+            "qrToken": "26271036",
+            "orderId": "1154219000036026006",
+            "lineItemId": "1154219000036026009",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "ONXY ENTERPRISES",
+            "salesOrderNumber": "SO-07796",
+            "deliveryDate": "2026-08-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-24",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000036026006-1154219000036026009-1"
+      ]
     }
   }
 }
