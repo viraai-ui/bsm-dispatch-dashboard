@@ -3746,7 +3746,7 @@
       }
     },
     "1154219000035903070": {
-      "id": "ship-1787556762726-bgbr2",
+      "id": "ship-1787560113650-yof0g",
       "itemId": "1154219000035903070",
       "orderId": "1154219000035903070",
       "machineId": "1154219000035903070-1154219000035903073-1",
@@ -3758,13 +3758,19 @@
       "transporterName": "OM Logistics",
       "transporterPhone": "",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "shared_cn_1787555561827.pdf",
+        "type": "application/pdf",
+        "url": "/api/r2/view?key=media-proof%2F2026-08-24%2FSO-07785%2FShipment%20LR%20Builty-shipment-lr-builty-2026-08-24T08-28-32-165Z.pdf",
+        "r2Key": "media-proof/2026-08-24/SO-07785/Shipment LR Builty-shipment-lr-builty-2026-08-24T08-28-32-165Z.pdf",
+        "expiresAt": "2026-10-23T08:28:32.165Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-22",
       "notes": "",
-      "shippedAt": "2026-08-24T07:32:42.726Z",
+      "shippedAt": "2026-08-24T08:28:33.650Z",
       "messages": {
         "customer": {
           "status": "skipped",
