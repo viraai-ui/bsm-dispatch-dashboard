@@ -16944,7 +16944,9 @@
     "1154219000036026006": {
       "salesOrderId": "1154219000036026006",
       "salesOrderNumber": "SO-07796",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-24T05:51:41.833Z",
       "processedOrder": {
         "id": "1154219000036026006",
         "zohoSalesOrderId": "1154219000036026006",
@@ -16972,8 +16974,8 @@
           {
             "id": "1154219000036026006-1154219000036026009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271036",
+            "qrToken": "26271036",
             "orderId": "1154219000036026006",
             "lineItemId": "1154219000036026009",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -16981,14 +16983,17 @@
             "customerName": "ONXY ENTERPRISES",
             "salesOrderNumber": "SO-07796",
             "deliveryDate": "2026-08-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -17001,7 +17006,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T05:48:34.422Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T05:48:48.157Z"
+          "zohoBackupQueuedAt": "2026-08-24T05:48:48.157Z",
+          "processedAt": "2026-08-24T05:51:41.833Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
