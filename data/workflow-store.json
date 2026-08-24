@@ -17355,7 +17355,7 @@
           "zohoBackupSyncedAt": "2026-08-24T07:45:53.511Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000036007594": {
       "salesOrderId": "1154219000036007594",
@@ -17445,7 +17445,7 @@
       "salesOrderId": "1154219000035992010",
       "salesOrderNumber": "SO-07803",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-24T12:46:51.471Z",
       "processedOrder": {
         "id": "1154219000035992010",
@@ -17511,7 +17511,8 @@
           "dispatchNote": "local",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
