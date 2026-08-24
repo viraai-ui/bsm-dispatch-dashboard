@@ -17014,7 +17014,7 @@
           "zohoBackupSyncedAt": "2026-08-24T06:15:48.893Z"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000035989054": {
       "salesOrderId": "1154219000035989054",
@@ -17089,13 +17089,13 @@
           "zohoBackupSyncedAt": "2026-08-24T06:15:48.893Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000035994012": {
       "salesOrderId": "1154219000035994012",
       "salesOrderNumber": "SO-07798",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-24T07:43:33.288Z",
       "processedOrder": {
         "id": "1154219000035994012",
@@ -17161,7 +17161,8 @@
           "dispatchNote": "Local",
           "vendor": "Shree Sai"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
