@@ -17017,7 +17017,9 @@
     "1154219000035989054": {
       "salesOrderId": "1154219000035989054",
       "salesOrderNumber": "SO-07797",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-24T05:54:08.908Z",
       "processedOrder": {
         "id": "1154219000035989054",
         "zohoSalesOrderId": "1154219000035989054",
@@ -17045,8 +17047,8 @@
           {
             "id": "1154219000035989054-1154219000035989057-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271037",
+            "qrToken": "26271037",
             "orderId": "1154219000035989054",
             "lineItemId": "1154219000035989057",
             "itemName": "Foil Stamping machine",
@@ -17054,14 +17056,17 @@
             "customerName": "ALPINE INDIA",
             "salesOrderNumber": "SO-07797",
             "deliveryDate": "2026-08-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -17074,7 +17079,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T05:53:27.473Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T05:53:41.340Z"
+          "zohoBackupQueuedAt": "2026-08-24T05:53:41.340Z",
+          "processedAt": "2026-08-24T05:54:08.908Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
