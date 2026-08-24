@@ -12426,7 +12426,9 @@
     "1154219000035798001": {
       "salesOrderId": "1154219000035798001",
       "salesOrderNumber": "SO-07746",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-24T09:36:20.551Z",
       "processedOrder": {
         "id": "1154219000035798001",
         "zohoSalesOrderId": "1154219000035798001",
@@ -12454,8 +12456,8 @@
           {
             "id": "1154219000035798001-1154219000035798004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271040",
+            "qrToken": "26271040",
             "orderId": "1154219000035798001",
             "lineItemId": "1154219000035798004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -12463,20 +12465,23 @@
             "customerName": "TrustKnit Pvt. Ltd.",
             "salesOrderNumber": "SO-07746",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Local Fright Cost From Our BSM Side"
+            "itemDescription": "Local Fright Cost From Our BSM Side",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035798001-1154219000035798004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271041",
+            "qrToken": "26271041",
             "orderId": "1154219000035798001",
             "lineItemId": "1154219000035798004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -12484,20 +12489,23 @@
             "customerName": "TrustKnit Pvt. Ltd.",
             "salesOrderNumber": "SO-07746",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Local Fright Cost From Our BSM Side"
+            "itemDescription": "Local Fright Cost From Our BSM Side",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035798001-1154219000035798004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271042",
+            "qrToken": "26271042",
             "orderId": "1154219000035798001",
             "lineItemId": "1154219000035798004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -12505,20 +12513,23 @@
             "customerName": "TrustKnit Pvt. Ltd.",
             "salesOrderNumber": "SO-07746",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Local Fright Cost From Our BSM Side"
+            "itemDescription": "Local Fright Cost From Our BSM Side",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035798001-1154219000035798004-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271043",
+            "qrToken": "26271043",
             "orderId": "1154219000035798001",
             "lineItemId": "1154219000035798004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -12526,14 +12537,17 @@
             "customerName": "TrustKnit Pvt. Ltd.",
             "salesOrderNumber": "SO-07746",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Local Fright Cost From Our BSM Side"
+            "itemDescription": "Local Fright Cost From Our BSM Side",
+            "warrantyStart": "2026-08-24",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -12546,7 +12560,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T09:34:22.129Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z"
+          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z",
+          "processedAt": "2026-08-24T09:36:20.551Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000035798001-1154219000035798004-2": {
           "machineUnitId": "1154219000035798001-1154219000035798004-2",
@@ -12556,7 +12573,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T09:34:22.129Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z"
+          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z",
+          "processedAt": "2026-08-24T09:36:20.551Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000035798001-1154219000035798004-3": {
           "machineUnitId": "1154219000035798001-1154219000035798004-3",
@@ -12566,7 +12586,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T09:34:22.129Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z"
+          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z",
+          "processedAt": "2026-08-24T09:36:20.551Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000035798001-1154219000035798004-4": {
           "machineUnitId": "1154219000035798001-1154219000035798004-4",
@@ -12576,7 +12599,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-24T09:34:22.129Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z"
+          "zohoBackupQueuedAt": "2026-08-24T09:34:30.758Z",
+          "processedAt": "2026-08-24T09:36:20.551Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     },
