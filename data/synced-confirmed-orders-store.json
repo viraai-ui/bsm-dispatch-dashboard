@@ -141,53 +141,6 @@
         }
       ]
     },
-    "1154219000035968003": {
-      "id": "1154219000035968003",
-      "zohoSalesOrderId": "1154219000035968003",
-      "salesOrderNumber": "SO-07792",
-      "status": "open",
-      "customerName": "Competence Exports Pvt Ltd",
-      "shippingAddress": "B 10 EPIP, Industrial Area, Export Zone Hajipur, Bihar, 844101",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035968006",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035968003-1154219000035968006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035968003",
-          "lineItemId": "1154219000035968006",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "Competence Exports Pvt Ltd",
-          "salesOrderNumber": "SO-07792",
-          "deliveryDate": "2026-08-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035939003": {
       "id": "1154219000035939003",
       "zohoSalesOrderId": "1154219000035939003",
@@ -537,131 +490,6 @@
         }
       ]
     },
-    "1154219000035903070": {
-      "id": "1154219000035903070",
-      "zohoSalesOrderId": "1154219000035903070",
-      "salesOrderNumber": "SO-07785",
-      "status": "open",
-      "customerName": "M/S AR KAY INDUSTRIES",
-      "shippingAddress": "Phase 2, Gate No. 242MI, Goverdhan Dham, Runkata, AGRA, Agra, Uttar Pradesh, 282007, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-08-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035903073",
-          "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
-          "sku": "003-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035903070-1154219000035903073-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035903070",
-          "lineItemId": "1154219000035903073",
-          "itemName": "Glass jar Applicator [Double jar] (for Rubber based adhesives)",
-          "sku": "003-2",
-          "customerName": "M/S AR KAY INDUSTRIES",
-          "salesOrderNumber": "SO-07785",
-          "deliveryDate": "2026-08-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035858047": {
-      "id": "1154219000035858047",
-      "zohoSalesOrderId": "1154219000035858047",
-      "salesOrderNumber": "SO-07782",
-      "status": "open",
-      "customerName": "Funskool India Limited",
-      "shippingAddress": "6th Floor, 826, Tarapore Tower, Anna Salai, Chennai, Tamil Nadu, 600002",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035858050",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035858051",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035858047-1154219000035858050-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035858047",
-          "lineItemId": "1154219000035858050",
-          "itemName": "Thread Burner (Indian Heavy Duty)",
-          "sku": "",
-          "customerName": "Funskool India Limited",
-          "salesOrderNumber": "SO-07782",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035858047-1154219000035858051-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035858047",
-          "lineItemId": "1154219000035858051",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Funskool India Limited",
-          "salesOrderNumber": "SO-07782",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Spare Parts (Shoe Machine) Wooden Packing and Local Freight Charges"
-        }
-      ]
-    },
     "1154219000035891025": {
       "id": "1154219000035891025",
       "zohoSalesOrderId": "1154219000035891025",
@@ -932,53 +760,6 @@
         }
       ]
     },
-    "1154219000035859514": {
-      "id": "1154219000035859514",
-      "zohoSalesOrderId": "1154219000035859514",
-      "salesOrderNumber": "SO-07766",
-      "status": "open",
-      "customerName": "M/S AR KAY INDUSTRIES",
-      "shippingAddress": "Phase 2, Gate No. 242MI, Goverdhan Dham, Runkata, AGRA, Agra, Uttar Pradesh, 282007, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035859517",
-          "itemName": "Spray table (for water-based adhesive)",
-          "sku": "301",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035859514-1154219000035859517-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035859514",
-          "lineItemId": "1154219000035859517",
-          "itemName": "Spray table (for water-based adhesive)",
-          "sku": "301",
-          "customerName": "M/S AR KAY INDUSTRIES",
-          "salesOrderNumber": "SO-07766",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035867001": {
       "id": "1154219000035867001",
       "zohoSalesOrderId": "1154219000035867001",
@@ -1107,53 +888,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Plain Roller with Wooden Paking"
-        }
-      ]
-    },
-    "1154219000035850002": {
-      "id": "1154219000035850002",
-      "zohoSalesOrderId": "1154219000035850002",
-      "salesOrderNumber": "SO-07760",
-      "status": "open",
-      "customerName": "BELGI FOOTWEAR LLP",
-      "shippingAddress": "2 MANZIL GROUND FLOOR SLAB AND FIRST FLOOR SHED, PLOT NO. 351, HSIIDC, SECTOR-17, I E, JHAJJHAR, VILLAGE JAKHODA/KASSAR, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035850005",
-          "itemName": "Side wall Stitching (sole stitch)",
-          "sku": "168",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035850002-1154219000035850005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035850002",
-          "lineItemId": "1154219000035850005",
-          "itemName": "Side wall Stitching (sole stitch)",
-          "sku": "168",
-          "customerName": "BELGI FOOTWEAR LLP",
-          "salesOrderNumber": "SO-07760",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -3967,23 +3701,18 @@
     "1154219000035994012",
     "1154219000035989054",
     "1154219000036026006",
-    "1154219000035968003",
     "1154219000035939003",
     "1154219000035947002",
     "1154219000035933004",
     "1154219000035903106",
     "1154219000035921001",
-    "1154219000035903070",
-    "1154219000035858047",
     "1154219000035891025",
     "1154219000035884008",
     "1154219000035890003",
     "1154219000035898002",
     "1154219000035891004",
     "1154219000035880001",
-    "1154219000035859514",
     "1154219000035867001",
-    "1154219000035850002",
     "1154219000035854013",
     "1154219000035824045",
     "1154219000035795016",
@@ -4011,8 +3740,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-24T07:20:44.800Z",
-  "lastAttemptAt": "2026-08-24T07:40:14.533Z",
+  "lastSuccessfulSyncAt": "2026-08-24T07:40:37.616Z",
+  "lastAttemptAt": "2026-08-24T07:40:37.616Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
