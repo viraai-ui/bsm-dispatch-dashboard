@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035994012": {
+      "id": "1154219000035994012",
+      "zohoSalesOrderId": "1154219000035994012",
+      "salesOrderNumber": "SO-07798",
+      "status": "open",
+      "customerName": "Agarson Shoes Private Limited",
+      "shippingAddress": "Plot No 26/25/2, M.I.E. Part - A, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035994015",
+          "itemName": "Polishing & Buffing Machine (V. Speed)",
+          "sku": "704",
+          "description": "Inbuilt Dust Collector in Machine",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035994012-1154219000035994015-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035994012",
+          "lineItemId": "1154219000035994015",
+          "itemName": "Polishing & Buffing Machine (V. Speed)",
+          "sku": "704",
+          "customerName": "Agarson Shoes Private Limited",
+          "salesOrderNumber": "SO-07798",
+          "deliveryDate": "2026-08-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Inbuilt Dust Collector in Machine"
+        }
+      ]
+    },
     "1154219000035989054": {
       "id": "1154219000035989054",
       "zohoSalesOrderId": "1154219000035989054",
@@ -93,31 +140,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000036000005": {
-      "id": "1154219000036000005",
-      "zohoSalesOrderId": "1154219000036000005",
-      "salesOrderNumber": "SO-07795",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-24",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036000008",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 150,
-          "pendingQuantity": 150,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000035968003": {
       "id": "1154219000035968003",
@@ -3942,9 +3964,9 @@
     }
   },
   "orderIds": [
+    "1154219000035994012",
     "1154219000035989054",
     "1154219000036026006",
-    "1154219000036000005",
     "1154219000035968003",
     "1154219000035939003",
     "1154219000035947002",
@@ -3989,8 +4011,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-24T06:56:00.742Z",
-  "lastAttemptAt": "2026-08-24T07:01:19.841Z",
+  "lastSuccessfulSyncAt": "2026-08-24T07:01:45.026Z",
+  "lastAttemptAt": "2026-08-24T07:01:45.026Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
