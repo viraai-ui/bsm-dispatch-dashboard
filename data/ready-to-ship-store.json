@@ -3886,6 +3886,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036026006": {
+      "id": "ship-1787573035355-j2l2v",
+      "itemId": "1154219000036026006",
+      "orderId": "1154219000036026006",
+      "machineId": "1154219000036026006-1154219000036026009-1",
+      "salesOrderNumber": "SO-07796",
+      "customerName": "ONXY ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL04EC3957",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-24",
+      "notes": "",
+      "shippedAt": "2026-08-24T12:03:55.355Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
