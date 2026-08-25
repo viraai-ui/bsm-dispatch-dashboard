@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271046,
+  "serialCounter": 26271047,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -17648,6 +17648,67 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-08-25T06:16:31.241Z",
           "zohoBackupSyncedAt": "2026-08-25T06:16:31.241Z"
+        }
+      }
+    },
+    "1154219000036002009": {
+      "salesOrderId": "1154219000036002009",
+      "salesOrderNumber": "SO-07806",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036002009",
+        "zohoSalesOrderId": "1154219000036002009",
+        "salesOrderNumber": "SO-07806",
+        "status": "open",
+        "customerName": "Kshitij Enterprises",
+        "shippingAddress": "H-127, Sector 3, Bawana, Delhi, 110039",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036002012",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036002009-1154219000036002012-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036002009",
+            "lineItemId": "1154219000036002012",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "Kshitij Enterprises",
+            "salesOrderNumber": "SO-07806",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036002009-1154219000036002012-1": {
+          "machineUnitId": "1154219000036002009-1154219000036002012-1",
+          "lineItemId": "1154219000036002012",
+          "serialNumber": "26271047",
+          "qrToken": "26271047",
+          "qrStatus": "pending"
         }
       }
     }
