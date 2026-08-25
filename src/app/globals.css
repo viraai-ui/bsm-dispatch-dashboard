@@ -258,6 +258,22 @@ h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
   box-shadow: 0 22px 70px rgba(15,23,42,.08);
 }
 .packaging-tv-head .packaging-sync-actions { margin: 0; justify-content: flex-end; align-items: center; }
+.dispatch-heading { display: flex; align-items: flex-start; gap: 10px; }
+.dispatch-back-button {
+  margin-top: 3px;
+  padding: 2px 5px;
+  border: 0;
+  border-radius: 6px;
+  color: #64748b;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.dispatch-back-button:hover { color: var(--ink); background: rgba(226, 232, 240, .65); }
+.dispatch-back-button:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
 .dispatch-auto-sync { margin: 6px 0 0; font-size: 12px; font-weight: 850; }
 .fullscreen-btn { font-size: 18px; line-height: 1; }
 .packaging-logout { margin-top: 8px; min-height: 38px; padding: 0 12px; }

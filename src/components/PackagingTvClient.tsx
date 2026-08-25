@@ -134,8 +134,16 @@ export function PackagingTvClient({ userRole }: { userRole: AppRole }) {
     } catch { setError('Fullscreen is not available in this browser.') }
   }
 
+  function goBack() {
+    if (window.history.length > 1) {
+      window.history.back()
+      return
+    }
+    window.location.assign('/')
+  }
+
   return <main className="packaging-tv-light" ref={boardRef}>
-    <header className="top compact-top packaging-tv-head"><div><h1 className="h1">Dispatch View</h1><p className="muted dispatch-auto-sync">Auto-sync every 15 min{lastSyncedAt ? ` • Last ${formatTime(lastSyncedAt)}` : ''}</p></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncLocal()} disabled={syncing}>{syncing ? '↻' : '⟳'}</button><button className="btn light sync-icon-btn fullscreen-btn" aria-label="Fullscreen" title="Fullscreen" onClick={toggleFullscreen}>{fullscreen ? '⤢' : '⛶'}</button></div></header>
+    <header className="top compact-top packaging-tv-head"><div className="dispatch-heading">{canMoveOrders && <button type="button" className="dispatch-back-button" onClick={goBack} aria-label="Go back" title="Back">← <span>Back</span></button>}<div><h1 className="h1">Dispatch View</h1><p className="muted dispatch-auto-sync">Auto-sync every 15 min{lastSyncedAt ? ` • Last ${formatTime(lastSyncedAt)}` : ''}</p></div></div><div className="tabs packaging-sync-actions"><Badge tone="green">{orders.length} Active {orders.length === 1 ? 'Order' : 'Orders'}</Badge><button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncLocal()} disabled={syncing}>{syncing ? '↻' : '⟳'}</button><button className="btn light sync-icon-btn fullscreen-btn" aria-label="Fullscreen" title="Fullscreen" onClick={toggleFullscreen}>{fullscreen ? '⤢' : '⛶'}</button></div></header>
     {notice && <div className="form-success">{notice}</div>}
     {error && <div className="form-error">{error}</div>}
     {canMoveOrders && draggingOrderId && <>
