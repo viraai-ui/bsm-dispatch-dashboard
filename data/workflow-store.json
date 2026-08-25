@@ -17730,7 +17730,9 @@
     "1154219000035516005": {
       "salesOrderId": "1154219000035516005",
       "salesOrderNumber": "SO-07705",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-25T09:39:02.484Z",
       "processedOrder": {
         "id": "1154219000035516005",
         "zohoSalesOrderId": "1154219000035516005",
@@ -17758,8 +17760,8 @@
           {
             "id": "1154219000035516005-1154219000035824111-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271048",
+            "qrToken": "26271048",
             "orderId": "1154219000035516005",
             "lineItemId": "1154219000035824111",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -17767,14 +17769,17 @@
             "customerName": "SWAMI UPPER",
             "salesOrderNumber": "SO-07705",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "vendor": "Siphon",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -17787,7 +17792,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-25T09:38:24.830Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-25T09:38:37.050Z"
+          "zohoBackupQueuedAt": "2026-08-25T09:38:37.050Z",
+          "processedAt": "2026-08-25T09:39:02.484Z",
+          "dispatchNote": "Local",
+          "vendor": "Siphon"
         }
       }
     }
