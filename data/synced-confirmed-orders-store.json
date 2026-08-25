@@ -1,5 +1,77 @@
 {
   "orders": {
+    "1154219000036028011": {
+      "id": "1154219000036028011",
+      "zohoSalesOrderId": "1154219000036028011",
+      "salesOrderNumber": "SO-07810",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036028014",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 100,
+          "pendingQuantity": 100,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
+    "1154219000036032604": {
+      "id": "1154219000036032604",
+      "zohoSalesOrderId": "1154219000036032604",
+      "salesOrderNumber": "SO-07809",
+      "status": "open",
+      "customerName": "Jindal Enterprises",
+      "shippingAddress": "Plot No.621 MIE-A, Bahadurgarh, Haryana",
+      "salesperson": "Manoj Sir",
+      "deliveryDate": "2026-08-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036032609",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036032604-1154219000036032609-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036032604",
+          "lineItemId": "1154219000036032609",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "customerName": "Jindal Enterprises",
+          "salesOrderNumber": "SO-07809",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035991020": {
       "id": "1154219000035991020",
       "zohoSalesOrderId": "1154219000035991020",
@@ -2065,53 +2137,6 @@
         }
       ]
     },
-    "1154219000035516005": {
-      "id": "1154219000035516005",
-      "zohoSalesOrderId": "1154219000035516005",
-      "salesOrderNumber": "SO-07705",
-      "status": "open",
-      "customerName": "SHRI SHYAM UPPER",
-      "shippingAddress": "1st floor, KH NO 535, Rohtak Road, Mundka, New Delhi, West Delhi,, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035824111",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035516005-1154219000035824111-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035516005",
-          "lineItemId": "1154219000035824111",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "customerName": "SHRI SHYAM UPPER",
-          "salesOrderNumber": "SO-07705",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035531015": {
       "id": "1154219000035531015",
       "zohoSalesOrderId": "1154219000035531015",
@@ -3904,6 +3929,8 @@
     }
   },
   "orderIds": [
+    "1154219000036028011",
+    "1154219000036032604",
     "1154219000035991020",
     "1154219000036019022",
     "1154219000036013008",
@@ -3931,7 +3958,6 @@
     "1154219000035685001",
     "1154219000035527004",
     "1154219000035510018",
-    "1154219000035516005",
     "1154219000035531015",
     "1154219000035500001",
     "1154219000035356001",
@@ -3948,8 +3974,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-25T11:20:49.520Z",
-  "lastAttemptAt": "2026-08-25T11:40:47.600Z",
+  "lastSuccessfulSyncAt": "2026-08-25T11:41:11.986Z",
+  "lastAttemptAt": "2026-08-25T11:41:11.986Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
