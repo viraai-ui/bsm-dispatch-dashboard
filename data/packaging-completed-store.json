@@ -12153,6 +12153,63 @@
       "machineIds": [
         "1154219000035994012-1154219000035994015-1"
       ]
+    },
+    "1154219000035992010": {
+      "completedAt": "2026-08-25T04:49:34.900Z",
+      "order": {
+        "id": "1154219000035992010",
+        "zohoSalesOrderId": "1154219000035992010",
+        "salesOrderNumber": "SO-07803",
+        "status": "open",
+        "customerName": "3NG",
+        "shippingAddress": "149, GALI NO.-2, Moonga Nagar,, Karawal Nagar, Delhi, 110094, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035992013",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035992010-1154219000035992013-1",
+            "unitNumber": 1,
+            "serialNumber": "26271044",
+            "qrToken": "26271044",
+            "orderId": "1154219000035992010",
+            "lineItemId": "1154219000035992013",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "3NG",
+            "salesOrderNumber": "SO-07803",
+            "deliveryDate": "2026-08-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-24",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035992010-1154219000035992013-1"
+      ]
     }
   }
 }
