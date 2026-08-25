@@ -4072,6 +4072,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035516005": {
+      "id": "ship-1787657622220-qgj3i",
+      "itemId": "1154219000035516005",
+      "orderId": "1154219000035516005",
+      "machineId": "1154219000035516005-1154219000035824111-1",
+      "salesOrderNumber": "SO-07705",
+      "customerName": "SWAMI UPPER",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAF6748",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-25",
+      "notes": "",
+      "shippedAt": "2026-08-25T11:33:42.220Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
