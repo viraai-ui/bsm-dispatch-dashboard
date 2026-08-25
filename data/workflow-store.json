@@ -17804,7 +17804,9 @@
     "1154219000036019022": {
       "salesOrderId": "1154219000036019022",
       "salesOrderNumber": "SO-07807",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-25T10:13:16.045Z",
       "processedOrder": {
         "id": "1154219000036019022",
         "zohoSalesOrderId": "1154219000036019022",
@@ -17832,8 +17834,8 @@
           {
             "id": "1154219000036019022-1154219000036019025-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271049",
+            "qrToken": "26271049",
             "orderId": "1154219000036019022",
             "lineItemId": "1154219000036019025",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -17841,14 +17843,17 @@
             "customerName": "MANGLA IMPEX",
             "salesOrderNumber": "SO-07807",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -17861,7 +17866,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-25T10:10:20.231Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-25T10:10:32.835Z"
+          "zohoBackupQueuedAt": "2026-08-25T10:10:32.835Z",
+          "processedAt": "2026-08-25T10:13:16.045Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
