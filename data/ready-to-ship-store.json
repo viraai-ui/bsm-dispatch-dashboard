@@ -4010,6 +4010,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035994012": {
+      "id": "ship-1787637939515-3j9qz",
+      "itemId": "1154219000035994012",
+      "orderId": "1154219000035994012",
+      "machineId": "1154219000035994012-1154219000035994015-1",
+      "salesOrderNumber": "SO-07798",
+      "customerName": "Agarson Shoes Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAB9994",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-25",
+      "notes": "",
+      "shippedAt": "2026-08-25T06:05:39.515Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
