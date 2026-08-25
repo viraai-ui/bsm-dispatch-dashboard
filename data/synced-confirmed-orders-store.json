@@ -1992,16 +1992,6 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035516009",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
         }
       ],
       "machines": [
@@ -2014,27 +2004,6 @@
           "lineItemId": "1154219000035824111",
           "itemName": "Travel Head Cutting Press (25 ton)",
           "sku": "",
-          "customerName": "SWAMI UPPER",
-          "salesOrderNumber": "SO-07705",
-          "deliveryDate": "2026-08-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035516005-1154219000035516009-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035516005",
-          "lineItemId": "1154219000035516009",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
           "customerName": "SWAMI UPPER",
           "salesOrderNumber": "SO-07705",
           "deliveryDate": "2026-08-17",
@@ -3883,8 +3852,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-25T08:01:32.657Z",
-  "lastAttemptAt": "2026-08-25T08:20:50.725Z",
+  "lastSuccessfulSyncAt": "2026-08-25T08:21:12.097Z",
+  "lastAttemptAt": "2026-08-25T08:21:12.097Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
