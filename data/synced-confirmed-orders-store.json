@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036019022": {
+      "id": "1154219000036019022",
+      "zohoSalesOrderId": "1154219000036019022",
+      "salesOrderNumber": "SO-07807",
+      "status": "open",
+      "customerName": "MANGLA IMPEX",
+      "shippingAddress": "Plot No.390 & 391, gali no. 12 , khasra no. 155 , Pooth Industrial Area Delhi-110039, 110005",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036019025",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036019022-1154219000036019025-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036019022",
+          "lineItemId": "1154219000036019025",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "MANGLA IMPEX",
+          "salesOrderNumber": "SO-07807",
+          "deliveryDate": "2026-08-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036013008": {
       "id": "1154219000036013008",
       "zohoSalesOrderId": "1154219000036013008",
@@ -3810,6 +3857,7 @@
     }
   },
   "orderIds": [
+    "1154219000036019022",
     "1154219000036013008",
     "1154219000035994029",
     "1154219000035997009",
@@ -3852,8 +3900,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-25T10:00:28.552Z",
-  "lastAttemptAt": "2026-08-25T10:09:30.408Z",
+  "lastSuccessfulSyncAt": "2026-08-25T10:09:53.612Z",
+  "lastAttemptAt": "2026-08-25T10:09:53.612Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
