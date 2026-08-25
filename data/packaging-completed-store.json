@@ -12381,6 +12381,106 @@
       "machineIds": [
         "1154219000035516005-1154219000035824111-1"
       ]
+    },
+    "1154219000035997009": {
+      "completedAt": "2026-08-25T12:42:41.194Z",
+      "order": {
+        "id": "1154219000035997009",
+        "zohoSalesOrderId": "1154219000035997009",
+        "salesOrderNumber": "SO-07801",
+        "status": "open",
+        "customerName": "Shiv Industries",
+        "shippingAddress": "110/A-1, Sector-F, Industries Area, Sanwer Road,, Indore, Madhya Pradesh, 452015, India",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035997012",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035997013",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035997014",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035997009-1154219000035997012-1",
+            "unitNumber": 1,
+            "serialNumber": "26271045",
+            "qrToken": "26271045",
+            "orderId": "1154219000035997009",
+            "lineItemId": "1154219000035997012",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Shiv Industries",
+            "salesOrderNumber": "SO-07801",
+            "deliveryDate": "2026-08-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000035997009-1154219000035997013-1",
+            "unitNumber": 2,
+            "serialNumber": "26271046",
+            "qrToken": "26271046",
+            "orderId": "1154219000035997009",
+            "lineItemId": "1154219000035997013",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "Shiv Industries",
+            "salesOrderNumber": "SO-07801",
+            "deliveryDate": "2026-08-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035997009-1154219000035997012-1",
+        "1154219000035997009-1154219000035997013-1"
+      ]
     }
   }
 }
