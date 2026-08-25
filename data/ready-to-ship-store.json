@@ -4041,6 +4041,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036002009": {
+      "id": "ship-1787644181666-3rc0t",
+      "itemId": "1154219000036002009",
+      "orderId": "1154219000036002009",
+      "machineId": "1154219000036002009-1154219000036002012-1",
+      "salesOrderNumber": "SO-07806",
+      "customerName": "Kshitij Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL9FDA4929",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-25",
+      "notes": "",
+      "shippedAt": "2026-08-25T07:49:41.666Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
