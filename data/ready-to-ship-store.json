@@ -3979,6 +3979,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035992010": {
+      "id": "ship-1787637884502-x0maq",
+      "itemId": "1154219000035992010",
+      "orderId": "1154219000035992010",
+      "machineId": "1154219000035992010-1154219000035992013-1",
+      "salesOrderNumber": "SO-07803",
+      "customerName": "3NG",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-25",
+      "notes": "",
+      "shippedAt": "2026-08-25T06:04:44.502Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
