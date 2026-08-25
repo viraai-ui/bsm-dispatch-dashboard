@@ -12210,6 +12210,63 @@
       "machineIds": [
         "1154219000035992010-1154219000035992013-1"
       ]
+    },
+    "1154219000036002009": {
+      "completedAt": "2026-08-25T07:33:38.479Z",
+      "order": {
+        "id": "1154219000036002009",
+        "zohoSalesOrderId": "1154219000036002009",
+        "salesOrderNumber": "SO-07806",
+        "status": "open",
+        "customerName": "Kshitij Enterprises",
+        "shippingAddress": "H-127, Sector 3, Bawana, Delhi, 110039",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036002012",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036002009-1154219000036002012-1",
+            "unitNumber": 1,
+            "serialNumber": "26271047",
+            "qrToken": "26271047",
+            "orderId": "1154219000036002009",
+            "lineItemId": "1154219000036002012",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "Kshitij Enterprises",
+            "salesOrderNumber": "SO-07806",
+            "deliveryDate": "2026-08-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036002009-1154219000036002012-1"
+      ]
     }
   }
 }
