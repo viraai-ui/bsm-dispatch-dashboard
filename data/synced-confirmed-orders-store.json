@@ -503,53 +503,6 @@
         }
       ]
     },
-    "1154219000035994012": {
-      "id": "1154219000035994012",
-      "zohoSalesOrderId": "1154219000035994012",
-      "salesOrderNumber": "SO-07798",
-      "status": "open",
-      "customerName": "Agarson Shoes Private Limited",
-      "shippingAddress": "Plot No 26/25/2, M.I.E. Part - A, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035994015",
-          "itemName": "Polishing & Buffing Machine (V. Speed)",
-          "sku": "704",
-          "description": "Inbuilt Dust Collector in Machine",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035994012-1154219000035994015-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035994012",
-          "lineItemId": "1154219000035994015",
-          "itemName": "Polishing & Buffing Machine (V. Speed)",
-          "sku": "704",
-          "customerName": "Agarson Shoes Private Limited",
-          "salesOrderNumber": "SO-07798",
-          "deliveryDate": "2026-08-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Inbuilt Dust Collector in Machine"
-        }
-      ]
-    },
     "1154219000035989054": {
       "id": "1154219000035989054",
       "zohoSalesOrderId": "1154219000035989054",
@@ -3918,7 +3871,6 @@
     "1154219000035994029",
     "1154219000035997009",
     "1154219000036007594",
-    "1154219000035994012",
     "1154219000035989054",
     "1154219000035939003",
     "1154219000035947002",
@@ -3957,8 +3909,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-25T06:11:55.545Z",
-  "lastAttemptAt": "2026-08-25T06:20:20.542Z",
+  "lastSuccessfulSyncAt": "2026-08-25T06:20:46.298Z",
+  "lastAttemptAt": "2026-08-25T06:20:46.298Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
