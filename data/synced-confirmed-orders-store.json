@@ -2407,7 +2407,7 @@
           "description": "Size : Arm size : 500 mm Bed Size : 1000*500 mm",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": false,
+          "woodenPackingRequired": true,
           "dispatchCategory": "machine"
         },
         {
@@ -2436,7 +2436,7 @@
           "deliveryDate": "2026-07-25",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Not Required",
+          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -3931,8 +3931,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-25T07:27:52.861Z",
-  "lastAttemptAt": "2026-08-25T07:40:01.556Z",
+  "lastSuccessfulSyncAt": "2026-08-25T07:40:25.865Z",
+  "lastAttemptAt": "2026-08-25T07:40:25.865Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
