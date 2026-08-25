@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000035991020": {
+      "id": "1154219000035991020",
+      "zohoSalesOrderId": "1154219000035991020",
+      "salesOrderNumber": "SO-07808",
+      "status": "open",
+      "customerName": "SHAKTI INDUSTRIES",
+      "shippingAddress": "H-1410, DSIIDC NARELA INDUSTRIAL COMPLEX NARELA, New Delhi,, North Delhi, Delhi-, 110040",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035991023",
+          "itemName": "Sole Stitch Cylinder Bed Single needle (with binding)",
+          "sku": "205 B",
+          "description": "Porter Freight Including",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035991020-1154219000035991023-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035991020",
+          "lineItemId": "1154219000035991023",
+          "itemName": "Sole Stitch Cylinder Bed Single needle (with binding)",
+          "sku": "205 B",
+          "customerName": "SHAKTI INDUSTRIES",
+          "salesOrderNumber": "SO-07808",
+          "deliveryDate": "2026-09-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Porter Freight Including"
+        }
+      ]
+    },
     "1154219000036019022": {
       "id": "1154219000036019022",
       "zohoSalesOrderId": "1154219000036019022",
@@ -3857,6 +3904,7 @@
     }
   },
   "orderIds": [
+    "1154219000035991020",
     "1154219000036019022",
     "1154219000036013008",
     "1154219000035994029",
@@ -3900,8 +3948,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-25T11:01:42.211Z",
-  "lastAttemptAt": "2026-08-25T11:20:22.711Z",
+  "lastSuccessfulSyncAt": "2026-08-25T11:20:49.520Z",
+  "lastAttemptAt": "2026-08-25T11:20:49.520Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
