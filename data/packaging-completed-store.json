@@ -12324,6 +12324,63 @@
       "machineIds": [
         "1154219000036019022-1154219000036019025-1"
       ]
+    },
+    "1154219000035516005": {
+      "completedAt": "2026-08-25T11:04:50.236Z",
+      "order": {
+        "id": "1154219000035516005",
+        "zohoSalesOrderId": "1154219000035516005",
+        "salesOrderNumber": "SO-07705",
+        "status": "open",
+        "customerName": "SWAMI UPPER",
+        "shippingAddress": "GROUND FLOOR, KHASRA NO 535,, ROHTAK ROAD, Mundka, New Delhi, West Delhi,, Delhi, 110041, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035824111",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035516005-1154219000035824111-1",
+            "unitNumber": 1,
+            "serialNumber": "26271048",
+            "qrToken": "26271048",
+            "orderId": "1154219000035516005",
+            "lineItemId": "1154219000035824111",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "SWAMI UPPER",
+            "salesOrderNumber": "SO-07705",
+            "deliveryDate": "2026-08-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "dispatchNote": "Local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035516005-1154219000035824111-1"
+      ]
     }
   }
 }
