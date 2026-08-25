@@ -17521,7 +17521,9 @@
     "1154219000035997009": {
       "salesOrderId": "1154219000035997009",
       "salesOrderNumber": "SO-07801",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-25T06:13:36.197Z",
       "processedOrder": {
         "id": "1154219000035997009",
         "zohoSalesOrderId": "1154219000035997009",
@@ -17569,8 +17571,8 @@
           {
             "id": "1154219000035997009-1154219000035997012-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271045",
+            "qrToken": "26271045",
             "orderId": "1154219000035997009",
             "lineItemId": "1154219000035997012",
             "itemName": "Single needle post bed Drop feed",
@@ -17578,20 +17580,23 @@
             "customerName": "Shiv Industries",
             "salesOrderNumber": "SO-07801",
             "deliveryDate": "2026-08-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000035997009-1154219000035997013-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271046",
+            "qrToken": "26271046",
             "orderId": "1154219000035997009",
             "lineItemId": "1154219000035997013",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -17599,14 +17604,17 @@
             "customerName": "Shiv Industries",
             "salesOrderNumber": "SO-07801",
             "deliveryDate": "2026-08-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-25",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -17619,7 +17627,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-25T06:12:48.322Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-25T06:12:57.076Z"
+          "zohoBackupQueuedAt": "2026-08-25T06:12:57.076Z",
+          "processedAt": "2026-08-25T06:13:36.197Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         },
         "1154219000035997009-1154219000035997013-1": {
           "machineUnitId": "1154219000035997009-1154219000035997013-1",
@@ -17629,7 +17640,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-25T06:12:48.322Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-25T06:12:57.076Z"
+          "zohoBackupQueuedAt": "2026-08-25T06:12:57.076Z",
+          "processedAt": "2026-08-25T06:13:36.197Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
