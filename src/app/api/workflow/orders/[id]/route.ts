@@ -60,6 +60,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         const nonMachineOnlyOrder = order.machines.length === 0 && (order.lineItems || []).some((item) => item.dispatchCategory !== 'freight' && !isMachineLineItem(item))
         if (!selected.length && !nonMachineOnlyOrder) throw new Error('Please select at least one machine to process')
         const alreadyLocked = selected.filter((machine) => machines[machine.id]?.processedAt || machines[machine.id]?.dispatchedAt)
+        // A timed-out client may retry after the authoritative write completed. Treat an
+        // exact replay as success; mixed new/already-processed batches remain invalid.
+        if (alreadyLocked.length === selected.length && current?.processedAt) return current
         if (alreadyLocked.length) throw new Error(`Already processed: ${alreadyLocked.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
         const incomplete = selected.filter((machine) => !['generated', 'not_required'].includes(machines[machine.id]?.qrStatus || 'pending'))
         if (incomplete.length) throw new Error(`Incomplete selected machines: ${incomplete.map((m) => `Unit ${m.unitNumber}`).join(', ')}`)
