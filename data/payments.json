@@ -1,6 +1,20 @@
 {
   "payments": [
     {
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "salesOrderNumber": "SO-07810",
+      "paymentAmount": 450000,
+      "paymentMode": "Bank Transfer",
+      "screenshotUrl": "/api/r2/view?key=payments%2FSO-07810%2F1787743017597-df78a7ed-490c-4859-b66b-7410212c3ecd.png",
+      "screenshotKey": "payments/SO-07810/1787743017597-df78a7ed-490c-4859-b66b-7410212c3ecd.png",
+      "screenshotName": "BSM-Purchase-Logo-Transparent-1024.png",
+      "createdBy": "u-admin",
+      "id": "payment-2abd8088-43ac-46d9-9f2a-491fffc3cb84",
+      "status": "Pending",
+      "createdAt": "2026-08-26T11:16:59.237Z",
+      "updatedAt": "2026-08-26T11:16:59.237Z"
+    },
+    {
       "customerName": "Welcome Shoes",
       "salesOrderNumber": "SO-07818",
       "paymentAmount": 125000,
