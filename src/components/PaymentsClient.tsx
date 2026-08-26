@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { sortPayments, type Payment, type PaymentMode, type PaymentStatus } from '@/lib/payments'
+import type { PaymentNotification } from '@/lib/payment-notifications'
 import type { AppRole } from '@/lib/auth'
 
 type OrderSuggestion = { id: string; salesOrderNumber: string; customerName: string }
@@ -31,8 +32,61 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   const [updatingPaymentId, setUpdatingPaymentId] = useState('')
   const [pushState, setPushState] = useState<'checking' | 'unsupported' | 'prompt' | 'enabled' | 'denied' | 'error'>('checking')
   const [pushBusy, setPushBusy] = useState(false)
+  const [notifications, setNotifications] = useState<PaymentNotification[]>([])
+  const [unreadCount, setUnreadCount] = useState(0)
+  const [notificationsOpen, setNotificationsOpen] = useState(false)
+  const pollingRef = useRef(false)
+  const pollFailuresRef = useRef(0)
   const isAdmin = userRole === 'Admin'
   const isAccounts = userRole === 'Accounts'
+
+  const refreshPayments = useCallback(async () => {
+    if (pollingRef.current) return
+    pollingRef.current = true
+    try {
+      const response = await fetch('/api/payments', { cache: 'no-store' })
+      const json = await response.json().catch(() => ({}))
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not refresh payments')
+      setPayments(sortPayments(Array.isArray(json.data?.payments) ? json.data.payments : []))
+      pollFailuresRef.current = 0
+    } catch {
+      pollFailuresRef.current += 1
+      if (pollFailuresRef.current >= 3) setError('Live payment updates are temporarily unavailable. Retrying automatically.')
+    } finally { pollingRef.current = false }
+  }, [])
+
+  const refreshNotifications = useCallback(async () => {
+    try {
+      const response = await fetch('/api/payments/notifications', { cache: 'no-store' })
+      const json = await response.json().catch(() => ({}))
+      if (!response.ok || !json.ok) return
+      setNotifications(Array.isArray(json.data?.notifications) ? json.data.notifications : [])
+      setUnreadCount(Number(json.data?.unreadCount) || 0)
+    } catch { /* polling will retry */ }
+  }, [])
+
+  useEffect(() => {
+    void refreshPayments(); void refreshNotifications()
+    let timer: ReturnType<typeof setInterval> | undefined
+    const schedule = () => { if (timer) clearInterval(timer); timer = setInterval(() => { if (document.visibilityState === 'visible') { void refreshPayments(); void refreshNotifications() } }, document.visibilityState === 'visible' ? 5000 : 30000) }
+    const onVisible = () => { schedule(); if (document.visibilityState === 'visible') { void refreshPayments(); void refreshNotifications() } }
+    const onFocus = () => { void refreshPayments(); void refreshNotifications() }
+    schedule(); document.addEventListener('visibilitychange', onVisible); window.addEventListener('focus', onFocus)
+    return () => { if (timer) clearInterval(timer); document.removeEventListener('visibilitychange', onVisible); window.removeEventListener('focus', onFocus) }
+  }, [refreshNotifications, refreshPayments])
+
+  async function markNotificationRead(id?: string) {
+    const response = await fetch('/api/payments/notifications', { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(id ? { id } : { all: true }) })
+    const json = await response.json().catch(() => ({}))
+    if (response.ok && json.ok) { setNotifications(json.data.notifications || []); setUnreadCount(json.data.unreadCount || 0) }
+  }
+
+  async function openNotification(notification: PaymentNotification) {
+    if (!notification.readAt) await markNotificationRead(notification.id)
+    setNotificationsOpen(false)
+    await refreshPayments()
+    requestAnimationFrame(() => { const element = document.querySelector(`[data-payment-id="${CSS.escape(notification.paymentId)}"]`); element?.scrollIntoView({ behavior: 'smooth', block: 'center' }); element?.classList.add('payment-highlight'); setTimeout(() => element?.classList.remove('payment-highlight'), 2200) })
+  }
 
   useEffect(() => {
     if (!isAdmin && !isAccounts) return
@@ -159,12 +213,12 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   }
 
   return <section className="payments-page">
-    <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div><div className="payments-header-actions"><button className="notification-bell" type="button" disabled={pushBusy || pushState === 'enabled'} onClick={() => void enablePush()} aria-label="Payment notification settings" title={pushState === 'enabled' ? 'Notifications enabled' : 'Enable notifications'}><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" /></svg></button>{isAdmin && <><button className="payment-sync-button" type="button" disabled={syncing} onClick={() => void syncOpenOrders()} aria-label="Sync open Zoho sales orders" title={syncing ? 'Syncing open Zoho sales orders' : 'Sync open Zoho sales orders'}><span aria-hidden="true" className={syncing ? 'payment-sync-icon spinning' : 'payment-sync-icon'}>↻</span></button><span className="payment-action-gap" aria-hidden="true" /><button className="btn red" onClick={() => { setError(''); setSyncMessage(''); setOpen(true) }}>+ Add Payment</button></>}</div></header>
+    <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div><div className="payments-header-actions"><div className="notification-center"><button className="notification-bell" type="button" onClick={() => { setNotificationsOpen((value) => !value); void refreshNotifications() }} aria-expanded={notificationsOpen} aria-haspopup="dialog" aria-label={`Payment notifications, ${unreadCount} unread`} title="Payment notifications"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" /></svg>{unreadCount > 0 && <span className="notification-count">{unreadCount > 99 ? '99+' : unreadCount}</span>}</button>{notificationsOpen && <section className="notification-panel" role="dialog" aria-label="Payment notifications"><header><div><strong>Notifications</strong><span>{unreadCount ? `${unreadCount} unread` : 'All caught up'}</span></div>{unreadCount > 0 && <button type="button" onClick={() => void markNotificationRead()}>Mark all read</button>}</header><div className="notification-list">{notifications.length === 0 ? <div className="notification-empty"><strong>No payment notifications</strong><span>New payment alerts will appear here.</span></div> : notifications.map((notification) => <button type="button" key={notification.id} className={notification.readAt ? 'notification-item' : 'notification-item unread'} onClick={() => void openNotification(notification)}><span className="notification-dot" aria-hidden="true" /><span className="notification-copy"><strong>New payment · {notification.salesOrderNumber}</strong><span>{notification.customerName} · {formatAmount(notification.paymentAmount)}</span><time>{new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(notification.createdAt))}</time></span></button>)}</div></section>}</div>{isAdmin && <><button className="payment-sync-button" type="button" disabled={syncing} onClick={() => void syncOpenOrders()} aria-label="Sync open Zoho sales orders" title={syncing ? 'Syncing open Zoho sales orders' : 'Sync open Zoho sales orders'}><span aria-hidden="true" className={syncing ? 'payment-sync-icon spinning' : 'payment-sync-icon'}>↻</span></button><span className="payment-action-gap" aria-hidden="true" /><button className="btn red" onClick={() => { setError(''); setSyncMessage(''); setOpen(true) }}>+ Add Payment</button></>}</div></header>
     {(isAdmin || isAccounts) && pushState !== 'enabled' && pushState !== 'checking' && <div className="notification-consent"><div><strong>Get new payment alerts</strong><span>{pushState === 'unsupported' ? 'This browser does not support Web Push. On iPhone/iPad, install the site to your Home Screen, then try again.' : pushState === 'denied' ? 'Notifications are blocked. Allow them in your browser settings, then use the bell.' : 'Enable mobile or desktop notifications when a new payment needs approval.'}</span></div>{pushState !== 'unsupported' && pushState !== 'denied' && <button className="btn red" type="button" disabled={pushBusy} onClick={() => void enablePush()}>{pushBusy ? 'Enabling…' : 'Enable notifications'}</button>}<button className="drawer-close" aria-label="Dismiss notification prompt" type="button" onClick={() => { localStorage.setItem('payment-push-consent-dismissed', '1'); setPushState('checking') }}>×</button></div>}
     {syncMessage && <div className="form-success payments-error">{syncMessage}</div>}
     {error && !open && <div className="form-error payments-error">{error}</div>}
     <div className="card payments-card">
-      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you add the first record.</span></div> : <><div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th className="payments-actions-heading"><span>Action / Status</span></th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? 'payment-row-received' : 'payment-row-pending'}><td>{formatPaymentDate(payment.createdAt)}</td><td>{payment.salesOrderNumber}</td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{formatAmount(payment.paymentAmount)}</td><td>{payment.screenshotKey || payment.screenshotUrl ? <a className="payment-proof-link" href={payment.screenshotKey ? `/api/r2/view?key=${encodeURIComponent(payment.screenshotKey)}` : payment.screenshotUrl} target="_blank" rel="noreferrer">View</a> : <span className="payment-no-attachment">—</span>}</td><td className="payment-status-cell"><div className="payment-status-control"><select className={`payment-status-select ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} title="Update payment status" value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Payment Received</option></select></div></td></tr>)}</tbody></table></div><div className="payment-mobile-list">{payments.map((payment) => { const proofUrl = payment.screenshotKey ? `/api/r2/view?key=${encodeURIComponent(payment.screenshotKey)}` : payment.screenshotUrl; return <article key={payment.id} className={`payment-mobile-card ${payment.status === 'Payment Received' ? 'received' : 'pending'}`}><div className="payment-mobile-top"><time dateTime={payment.createdAt}>{formatPaymentDate(payment.createdAt)}</time><select className={`payment-mobile-status ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Payment Received</option></select></div><div className="payment-mobile-primary"><h2>{payment.salesOrderNumber}</h2><p>{payment.customerName}</p></div><div className="payment-mobile-details"><span>{payment.paymentMode || 'Mode unavailable'}</span><strong>{formatAmount(payment.paymentAmount)}</strong></div><div className="payment-mobile-footer">{proofUrl ? <a className="payment-mobile-proof" href={proofUrl} target="_blank" rel="noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg>View Screenshot</a> : <span className="payment-mobile-no-proof"><span aria-hidden="true">—</span> No screenshot</span>}</div></article> })}</div></>}
+      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you add the first record.</span></div> : <><div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th className="payments-actions-heading"><span>Action / Status</span></th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} data-payment-id={payment.id} className={payment.status === 'Payment Received' ? 'payment-row-received' : 'payment-row-pending'}><td>{formatPaymentDate(payment.createdAt)}</td><td>{payment.salesOrderNumber}</td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{formatAmount(payment.paymentAmount)}</td><td>{payment.screenshotKey || payment.screenshotUrl ? <a className="payment-proof-link" href={payment.screenshotKey ? `/api/r2/view?key=${encodeURIComponent(payment.screenshotKey)}` : payment.screenshotUrl} target="_blank" rel="noreferrer">View</a> : <span className="payment-no-attachment">—</span>}</td><td className="payment-status-cell"><div className="payment-status-control"><select className={`payment-status-select ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} title="Update payment status" value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Payment Received</option></select></div></td></tr>)}</tbody></table></div><div className="payment-mobile-list">{payments.map((payment) => { const proofUrl = payment.screenshotKey ? `/api/r2/view?key=${encodeURIComponent(payment.screenshotKey)}` : payment.screenshotUrl; return <article key={payment.id} data-payment-id={payment.id} className={`payment-mobile-card ${payment.status === 'Payment Received' ? 'received' : 'pending'}`}><div className="payment-mobile-top"><time dateTime={payment.createdAt}>{formatPaymentDate(payment.createdAt)}</time><select className={`payment-mobile-status ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Payment Received</option></select></div><div className="payment-mobile-primary"><h2>{payment.salesOrderNumber}</h2><p>{payment.customerName}</p></div><div className="payment-mobile-details"><span>{payment.paymentMode || 'Mode unavailable'}</span><strong>{formatAmount(payment.paymentAmount)}</strong></div><div className="payment-mobile-footer">{proofUrl ? <a className="payment-mobile-proof" href={proofUrl} target="_blank" rel="noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg>View Screenshot</a> : <span className="payment-mobile-no-proof"><span aria-hidden="true">—</span> No screenshot</span>}</div></article> })}</div></>}
     </div>
     {isAdmin && open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={() => setOpen(false)}>×</button></div>
       <form className="payment-form" onSubmit={addPayment}>

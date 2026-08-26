@@ -2,6 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { createPayment, listPayments, updatePaymentStatus, type PaymentMode, type PaymentStatus } from '@/lib/payments'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
+import { createPaymentNotifications } from '@/lib/payment-notifications'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -12,7 +13,11 @@ const PAYMENT_MODES: PaymentMode[] = ['Bank Transfer', 'UPI', 'Credit Card', 'De
 export async function GET() {
   const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
-  try { return apiOk({ payments: await listPayments() }) }
+  try {
+    const response = apiOk({ payments: await listPayments() })
+    response.headers.set('Cache-Control', 'no-store, max-age=0')
+    return response
+  }
   catch (error) { return apiError(error instanceof Error ? error.message : 'Could not load payments', 500) }
 }
 
@@ -32,6 +37,7 @@ export async function POST(request: Request) {
   if (!PAYMENT_MODES.includes(paymentMode)) return apiError('Invalid payment mode', 400)
   try {
     const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, screenshotUrl, screenshotKey, screenshotName, createdBy: auth.user.id })
+    await createPaymentNotifications(payment, auth.user.id).catch((error) => console.error('Payment created but in-app notification failed', error))
     await notifyAccountsOfNewPayment(payment).catch((error) => console.error('Payment created but notification failed', error))
     return apiOk({ payment })
   } catch (error) { return apiError(error instanceof Error ? error.message : 'Could not add payment', 500) }
