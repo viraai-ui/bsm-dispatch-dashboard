@@ -1,5 +1,99 @@
 {
   "orders": {
+    "1154219000036081003": {
+      "id": "1154219000036081003",
+      "zohoSalesOrderId": "1154219000036081003",
+      "salesOrderNumber": "SO-07818",
+      "status": "open",
+      "customerName": "Welcome Shoes",
+      "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036081006",
+          "itemName": "Zigzag Flatbed",
+          "sku": "20U",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036081003-1154219000036081006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036081003",
+          "lineItemId": "1154219000036081006",
+          "itemName": "Zigzag Flatbed",
+          "sku": "20U",
+          "customerName": "Welcome Shoes",
+          "salesOrderNumber": "SO-07818",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000036051008": {
+      "id": "1154219000036051008",
+      "zohoSalesOrderId": "1154219000036051008",
+      "salesOrderNumber": "SO-07817",
+      "status": "open",
+      "customerName": "Sunil Prabhulal Chauhan",
+      "shippingAddress": "Chandervdai nagar, CC Road, Jawar ki nadi, (Roshni Photo Studio), Ajmer, Rajasthan, 305202, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036051011",
+          "itemName": "Strobel Sewing machine (Disc feed)",
+          "sku": "600",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036051008-1154219000036051011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036051008",
+          "lineItemId": "1154219000036051011",
+          "itemName": "Strobel Sewing machine (Disc feed)",
+          "sku": "600",
+          "customerName": "Sunil Prabhulal Chauhan",
+          "salesOrderNumber": "SO-07817",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036064016": {
       "id": "1154219000036064016",
       "zohoSalesOrderId": "1154219000036064016",
@@ -4608,6 +4702,8 @@
     }
   },
   "orderIds": [
+    "1154219000036081003",
+    "1154219000036051008",
     "1154219000036064016",
     "1154219000036064003",
     "1154219000036050001",
@@ -4657,8 +4753,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T09:41:09.930Z",
-  "lastAttemptAt": "2026-08-26T09:45:03.677Z",
+  "lastSuccessfulSyncAt": "2026-08-26T09:45:27.114Z",
+  "lastAttemptAt": "2026-08-26T09:45:27.114Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
