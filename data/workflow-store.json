@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271049,
+  "serialCounter": 26271052,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -17881,6 +17881,133 @@
         }
       },
       "dispatchSortOrder": 2
+    },
+    "1154219000036006017": {
+      "salesOrderId": "1154219000036006017",
+      "salesOrderNumber": "SO-07811",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036006017",
+        "zohoSalesOrderId": "1154219000036006017",
+        "salesOrderNumber": "SO-07811",
+        "status": "open",
+        "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+        "shippingAddress": "INDUSTRIAL PLOT NO-1, STREET NO-3 SECTOR-5, DADRI TOE, Reliance Distribution Centre, Reliance Model Economic Township, Jhajjar, Haryana, 124515",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-26",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036006020",
+            "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
+            "sku": "291P",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036006021",
+            "itemName": "Tape folding machine (heavy duty)",
+            "sku": "12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036006017-1154219000036006020-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036006017",
+            "lineItemId": "1154219000036006020",
+            "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
+            "sku": "291P",
+            "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+            "salesOrderNumber": "SO-07811",
+            "deliveryDate": "2026-08-26",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036006017-1154219000036006020-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036006017",
+            "lineItemId": "1154219000036006020",
+            "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
+            "sku": "291P",
+            "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+            "salesOrderNumber": "SO-07811",
+            "deliveryDate": "2026-08-26",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036006017-1154219000036006021-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036006017",
+            "lineItemId": "1154219000036006021",
+            "itemName": "Tape folding machine (heavy duty)",
+            "sku": "12",
+            "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+            "salesOrderNumber": "SO-07811",
+            "deliveryDate": "2026-08-26",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036006017-1154219000036006020-1": {
+          "machineUnitId": "1154219000036006017-1154219000036006020-1",
+          "lineItemId": "1154219000036006020",
+          "serialNumber": "26271050",
+          "qrToken": "26271050",
+          "qrStatus": "pending"
+        },
+        "1154219000036006017-1154219000036006020-2": {
+          "machineUnitId": "1154219000036006017-1154219000036006020-2",
+          "lineItemId": "1154219000036006020",
+          "serialNumber": "26271051",
+          "qrToken": "26271051",
+          "qrStatus": "pending"
+        },
+        "1154219000036006017-1154219000036006021-1": {
+          "machineUnitId": "1154219000036006017-1154219000036006021-1",
+          "lineItemId": "1154219000036006021",
+          "serialNumber": "26271052",
+          "qrToken": "26271052",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
