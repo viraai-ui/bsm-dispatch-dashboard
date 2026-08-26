@@ -18277,7 +18277,7 @@
     "1154219000036050001": {
       "salesOrderId": "1154219000036050001",
       "salesOrderNumber": "SO-07814",
-      "status": "open",
+      "status": "qr_generated",
       "machines": {
         "1154219000036050001-1154219000036050004-1": {
           "machineUnitId": "1154219000036050001-1154219000036050004-1",
@@ -18285,7 +18285,7 @@
           "serialNumber": "26271058",
           "qrToken": "26271058",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-08-26T05:27:51.935Z",
+          "qrGeneratedAt": "2026-08-26T05:29:58.353Z",
           "zohoBackupStatus": "pending",
           "zohoBackupQueuedAt": "2026-08-26T05:27:58.942Z"
         },
