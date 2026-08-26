@@ -1,5 +1,125 @@
 {
   "orders": {
+    "1154219000036057006": {
+      "id": "1154219000036057006",
+      "zohoSalesOrderId": "1154219000036057006",
+      "salesOrderNumber": "SO-07821",
+      "status": "open",
+      "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+      "shippingAddress": "Plot No 310, Sec-17 HSIDC FOOTWEAR PARK BAHADURGARH, Haryana",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036057009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Drum type Bladder",
+          "quantity": 3,
+          "pendingQuantity": 3,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036057010",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Thread Burner SSR",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036057006-1154219000036057009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036057006",
+          "lineItemId": "1154219000036057009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+          "salesOrderNumber": "SO-07821",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum type Bladder"
+        },
+        {
+          "id": "1154219000036057006-1154219000036057009-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036057006",
+          "lineItemId": "1154219000036057009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+          "salesOrderNumber": "SO-07821",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum type Bladder"
+        },
+        {
+          "id": "1154219000036057006-1154219000036057009-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036057006",
+          "lineItemId": "1154219000036057009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+          "salesOrderNumber": "SO-07821",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum type Bladder"
+        },
+        {
+          "id": "1154219000036057006-1154219000036057010-1",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036057006",
+          "lineItemId": "1154219000036057010",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Welcome Shoes Pvt. Ltd ( UNIT - II )(310)",
+          "salesOrderNumber": "SO-07821",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Thread Burner SSR"
+        }
+      ]
+    },
     "1154219000036060006": {
       "id": "1154219000036060006",
       "zohoSalesOrderId": "1154219000036060006",
@@ -4713,6 +4833,7 @@
     }
   },
   "orderIds": [
+    "1154219000036057006",
     "1154219000036060006",
     "1154219000036081003",
     "1154219000036051008",
@@ -4764,8 +4885,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T11:06:23.848Z",
-  "lastAttemptAt": "2026-08-26T11:09:51.475Z",
+  "lastSuccessfulSyncAt": "2026-08-26T11:10:16.582Z",
+  "lastAttemptAt": "2026-08-26T11:10:16.582Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
