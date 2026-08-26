@@ -18408,7 +18408,9 @@
     "1154219000034263026": {
       "salesOrderId": "1154219000034263026",
       "salesOrderNumber": "SO-07514",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-26T07:03:43.739Z",
       "processedOrder": {
         "id": "1154219000034263026",
         "zohoSalesOrderId": "1154219000034263026",
@@ -18476,8 +18478,8 @@
           {
             "id": "1154219000034263026-1154219000034263029-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271060",
+            "qrToken": "26271060",
             "orderId": "1154219000034263026",
             "lineItemId": "1154219000034263029",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -18485,20 +18487,23 @@
             "customerName": "Cultsport Private Limited (Bahadurgarh)",
             "salesOrderNumber": "SO-07514",
             "deliveryDate": "2026-07-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000034263026-1154219000034263029-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271061",
+            "qrToken": "26271061",
             "orderId": "1154219000034263026",
             "lineItemId": "1154219000034263029",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -18506,20 +18511,23 @@
             "customerName": "Cultsport Private Limited (Bahadurgarh)",
             "salesOrderNumber": "SO-07514",
             "deliveryDate": "2026-07-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000034263026-1154219000034263030-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271062",
+            "qrToken": "26271062",
             "orderId": "1154219000034263026",
             "lineItemId": "1154219000034263030",
             "itemName": "zigzag binding (Cylinder bed)",
@@ -18527,20 +18535,23 @@
             "customerName": "Cultsport Private Limited (Bahadurgarh)",
             "salesOrderNumber": "SO-07514",
             "deliveryDate": "2026-07-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000034263026-1154219000034263031-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271063",
+            "qrToken": "26271063",
             "orderId": "1154219000034263026",
             "lineItemId": "1154219000034263031",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -18548,14 +18559,17 @@
             "customerName": "Cultsport Private Limited (Bahadurgarh)",
             "salesOrderNumber": "SO-07514",
             "deliveryDate": "2026-07-20",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000034263026-1154219000034263032-1",
@@ -18576,7 +18590,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "UV Light for Sole Marking Machine"
+            "itemDescription": "UV Light for Sole Marking Machine",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ]
       },
@@ -18589,7 +18605,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T07:00:38.289Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z"
+          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z",
+          "processedAt": "2026-08-26T07:03:43.739Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000034263026-1154219000034263029-2": {
           "machineUnitId": "1154219000034263026-1154219000034263029-2",
@@ -18599,7 +18618,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T07:00:38.289Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z"
+          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z",
+          "processedAt": "2026-08-26T07:03:43.739Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000034263026-1154219000034263030-1": {
           "machineUnitId": "1154219000034263026-1154219000034263030-1",
@@ -18609,7 +18631,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T07:00:38.289Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z"
+          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z",
+          "processedAt": "2026-08-26T07:03:43.739Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000034263026-1154219000034263031-1": {
           "machineUnitId": "1154219000034263026-1154219000034263031-1",
@@ -18619,7 +18644,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T07:00:38.289Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z"
+          "zohoBackupQueuedAt": "2026-08-26T07:00:47.302Z",
+          "processedAt": "2026-08-26T07:03:43.739Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         }
       }
     }
