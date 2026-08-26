@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271063,
+  "serialCounter": 26271064,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -18648,6 +18648,67 @@
           "processedAt": "2026-08-26T07:03:43.739Z",
           "dispatchNote": "local",
           "vendor": "Rawal"
+        }
+      }
+    },
+    "1154219000036032604": {
+      "salesOrderId": "1154219000036032604",
+      "salesOrderNumber": "SO-07809",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036032604",
+        "zohoSalesOrderId": "1154219000036032604",
+        "salesOrderNumber": "SO-07809",
+        "status": "open",
+        "customerName": "Jindal Enterprises",
+        "shippingAddress": "Plot No.621 MIE-A, Bahadurgarh, Haryana",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-08-26",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036032609",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036032604-1154219000036032609-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036032604",
+            "lineItemId": "1154219000036032609",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "Jindal Enterprises",
+            "salesOrderNumber": "SO-07809",
+            "deliveryDate": "2026-08-26",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036032604-1154219000036032609-1": {
+          "machineUnitId": "1154219000036032604-1154219000036032609-1",
+          "lineItemId": "1154219000036032609",
+          "serialNumber": "26271064",
+          "qrToken": "26271064",
+          "qrStatus": "pending"
         }
       }
     }
