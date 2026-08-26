@@ -10,9 +10,9 @@ export type Payment = {
   paymentAmount?: number
   /** Optional only for records created before payment details were introduced. */
   paymentMode?: PaymentMode
-  screenshotUrl: string
-  screenshotKey: string
-  screenshotName: string
+  screenshotUrl?: string
+  screenshotKey?: string
+  screenshotName?: string
   status: PaymentStatus
   createdBy: string
   createdAt: string

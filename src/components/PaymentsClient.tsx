@@ -27,8 +27,42 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   const [activeSuggestion, setActiveSuggestion] = useState(0)
   const [syncing, setSyncing] = useState(false)
   const [syncMessage, setSyncMessage] = useState('')
+  const [pushState, setPushState] = useState<'checking' | 'unsupported' | 'prompt' | 'enabled' | 'denied' | 'error'>('checking')
+  const [pushBusy, setPushBusy] = useState(false)
   const isAdmin = userRole === 'Admin'
   const isAccounts = userRole === 'Accounts'
+
+  useEffect(() => {
+    if (!isAccounts) return
+    if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) { setPushState('unsupported'); return }
+    navigator.serviceWorker.register('/payment-push-sw.js').then((registration) => registration.pushManager.getSubscription()).then((subscription) => {
+      if (subscription) setPushState('enabled')
+      else if (Notification.permission === 'denied') setPushState('denied')
+      else setPushState(localStorage.getItem('payment-push-consent-dismissed') ? 'checking' : 'prompt')
+    }).catch(() => setPushState('error'))
+  }, [isAccounts])
+
+  async function enablePush() {
+    setPushBusy(true); setError('')
+    try {
+      if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) throw new Error('Notifications are not supported in this browser. On iPhone/iPad, install this site to your Home Screen first.')
+      const permission = await Notification.requestPermission()
+      if (permission !== 'granted') { setPushState(permission === 'denied' ? 'denied' : 'prompt'); localStorage.setItem('payment-push-consent-dismissed', '1'); return }
+      const configResponse = await fetch('/api/payments/push-subscription', { cache: 'no-store' })
+      const config = await configResponse.json().catch(() => ({}))
+      if (!configResponse.ok || !config.ok) throw new Error(config.error || 'Notifications are not configured')
+      const registration = await navigator.serviceWorker.ready
+      const key = config.data.publicKey.replace(/-/g, '+').replace(/_/g, '/')
+      const padding = '='.repeat((4 - key.length % 4) % 4)
+      const applicationServerKey = Uint8Array.from(atob(key + padding), (character) => character.charCodeAt(0))
+      const subscription = await registration.pushManager.getSubscription() || await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey })
+      const response = await fetch('/api/payments/push-subscription', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ subscription: subscription.toJSON() }) })
+      const json = await response.json().catch(() => ({}))
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not enable notifications')
+      localStorage.removeItem('payment-push-consent-dismissed'); setPushState('enabled')
+    } catch (reason) { setPushState('error'); setError(reason instanceof Error ? reason.message : 'Could not enable notifications') }
+    finally { setPushBusy(false) }
+  }
 
   useEffect(() => {
     if (!open || ordersLoaded || ordersLoading) return
@@ -87,15 +121,18 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
     const amount = Number(paymentAmount)
     if (!selectedOrderNumber || selectedOrderNumber !== salesOrderNumber) { setError('Select an open sales order from the suggestions.'); return }
     if (!Number.isFinite(amount) || amount <= 0) { setError('Enter a valid payment amount greater than zero.'); return }
-    if (!file) { setError('Select a payment screenshot.'); return }
     setBusy(true); setError('')
     try {
-      const targetResponse = await fetch('/api/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber }) })
-      const targetJson = await targetResponse.json().catch(() => ({}))
-      if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare upload')
-      const uploadResponse = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': file.type }, body: file })
-      if (!uploadResponse.ok) throw new Error('Screenshot upload failed')
-      const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, paymentAmount: amount, paymentMode, screenshotUrl: targetJson.data.publicUrl, screenshotKey: targetJson.data.key, screenshotName: file.name }) })
+      let screenshot = {}
+      if (file) {
+        const targetResponse = await fetch('/api/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber }) })
+        const targetJson = await targetResponse.json().catch(() => ({}))
+        if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare upload')
+        const uploadResponse = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': file.type }, body: file })
+        if (!uploadResponse.ok) throw new Error('Screenshot upload failed')
+        screenshot = { screenshotUrl: targetJson.data.publicUrl, screenshotKey: targetJson.data.key, screenshotName: file.name }
+      }
+      const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, paymentAmount: amount, paymentMode, ...screenshot }) })
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not add payment')
       setPayments((items) => [json.data.payment, ...items])
@@ -113,11 +150,12 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   }
 
   return <section className="payments-page">
-    <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div>{isAdmin && <div className="payments-header-actions"><button className="btn light" type="button" disabled={syncing} onClick={() => void syncOpenOrders()} aria-label="Sync open Zoho sales orders">{syncing ? '↻ Syncing…' : '↻ Sync Orders'}</button><button className="btn red" onClick={() => { setError(''); setSyncMessage(''); setOpen(true) }}>+ Add Payment</button></div>}</header>
+    <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div>{isAccounts && <button className="notification-bell" type="button" disabled={pushBusy || pushState === 'enabled'} onClick={() => void enablePush()} aria-label="Payment notification settings" title={pushState === 'enabled' ? 'Notifications enabled' : 'Enable notifications'}>🔔 <span>{pushState === 'enabled' ? 'Enabled' : 'Enable alerts'}</span></button>}{isAdmin && <div className="payments-header-actions"><button className="btn light" type="button" disabled={syncing} onClick={() => void syncOpenOrders()} aria-label="Sync open Zoho sales orders">{syncing ? '↻ Syncing…' : '↻ Sync Orders'}</button><button className="btn red" onClick={() => { setError(''); setSyncMessage(''); setOpen(true) }}>+ Add Payment</button></div>}</header>
+    {isAccounts && pushState !== 'enabled' && pushState !== 'checking' && <div className="notification-consent"><div><strong>Get new payment alerts</strong><span>{pushState === 'unsupported' ? 'This browser does not support Web Push. On iPhone/iPad, install the site to your Home Screen, then try again.' : pushState === 'denied' ? 'Notifications are blocked. Allow them in your browser settings, then use the bell.' : 'Enable mobile or desktop notifications when a new payment needs approval.'}</span></div>{pushState !== 'unsupported' && pushState !== 'denied' && <button className="btn red" type="button" disabled={pushBusy} onClick={() => void enablePush()}>{pushBusy ? 'Enabling…' : 'Enable notifications'}</button>}<button className="drawer-close" aria-label="Dismiss notification prompt" type="button" onClick={() => { localStorage.setItem('payment-push-consent-dismissed', '1'); setPushState('checking') }}>×</button></div>}
     {syncMessage && <div className="form-success payments-error">{syncMessage}</div>}
     {error && !open && <div className="form-error payments-error">{error}</div>}
     <div className="card payments-card">
-      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you upload the first screenshot.</span></div> : <div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Customer</th><th>Sales Order</th><th>Amount</th><th>Mode</th><th>Screenshot</th><th>Added</th><th className="payments-actions-heading">Actions / Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id}><td data-label="Customer"><strong>{payment.customerName}</strong></td><td data-label="Sales Order">{payment.salesOrderNumber}</td><td data-label="Amount">{formatAmount(payment.paymentAmount)}</td><td data-label="Mode">{payment.paymentMode || '—'}</td><td data-label="Screenshot"><a className="payment-proof-link" href={payment.screenshotUrl} target="_blank" rel="noreferrer">View screenshot ↗</a></td><td data-label="Added">{new Date(payment.createdAt).toLocaleDateString()}</td><td data-label="Actions / Status" className="payment-status-cell">{isAccounts && payment.status === 'Pending' ? <button className="btn payment-approve" type="button" onClick={() => void setStatus(payment.id, 'Payment Received')}>Mark Payment Received</button> : <span className={payment.status === 'Payment Received' ? 'payment-status received' : 'payment-status pending'}>{payment.status}</span>}</td></tr>)}</tbody></table></div>}
+      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you upload the first screenshot.</span></div> : <div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Customer</th><th>Sales Order</th><th>Amount</th><th>Mode</th><th>Screenshot</th><th>Added</th><th className="payments-actions-heading">Actions / Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id}><td data-label="Customer">{payment.customerName}</td><td data-label="Sales Order">{payment.salesOrderNumber}</td><td data-label="Amount">{formatAmount(payment.paymentAmount)}</td><td data-label="Mode">{payment.paymentMode || '—'}</td><td data-label="Screenshot">{payment.screenshotUrl ? <a className="payment-proof-link" href={payment.screenshotUrl} target="_blank" rel="noreferrer">View screenshot ↗</a> : '—'}</td><td data-label="Added">{new Date(payment.createdAt).toLocaleDateString()}</td><td data-label="Actions / Status" className="payment-status-cell">{isAccounts && payment.status === 'Pending' ? <button className="btn payment-approve" type="button" onClick={() => void setStatus(payment.id, 'Payment Received')}>Mark Payment Received</button> : <span className={payment.status === 'Payment Received' ? 'payment-status received' : 'payment-status pending'}>{payment.status}</span>}</td></tr>)}</tbody></table></div>}
     </div>
     {isAdmin && open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={() => setOpen(false)}>×</button></div>
       <form className="payment-form" onSubmit={addPayment}>
@@ -125,7 +163,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
         <label>Customer Name<input required readOnly value={customerName} placeholder="Filled after selecting a sales order" /></label>
         <label>Payment Amount (₹)<input required type="number" min="0.01" step="0.01" inputMode="decimal" value={paymentAmount} onChange={(event) => setPaymentAmount(event.target.value)} placeholder="Enter payment amount" /></label>
         <label>Payment Mode<select required value={paymentMode} onChange={(event) => setPaymentMode(event.target.value as PaymentMode)}>{PAYMENT_MODES.map((mode) => <option key={mode} value={mode}>{mode}</option>)}</select></label>
-        <label>Payment Screenshot<input required type="file" accept="image/png,image/jpeg,image/webp,image/heic,image/heif" onChange={(event) => setFile(event.target.files?.[0] || null)} /></label>
+        <label>Payment Screenshot <span className="field-help">(optional)</span><input type="file" accept="image/png,image/jpeg,image/webp,image/heic,image/heif" onChange={(event) => setFile(event.target.files?.[0] || null)} /></label>
         {error && <div className="form-error">{error}</div>}
         <div className="modal-actions"><button className="btn" type="button" disabled={busy} onClick={() => setOpen(false)}>Cancel</button><button className="btn red" type="submit" disabled={busy}>{busy ? 'Uploading…' : 'Submit Payment'}</button></div>
       </form>

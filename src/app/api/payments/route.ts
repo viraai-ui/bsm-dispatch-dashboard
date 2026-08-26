@@ -1,6 +1,7 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { createPayment, listPayments, updatePaymentStatus, type PaymentMode, type PaymentStatus } from '@/lib/payments'
+import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -26,11 +27,12 @@ export async function POST(request: Request) {
   const screenshotUrl = text(body.screenshotUrl)
   const screenshotKey = text(body.screenshotKey)
   const screenshotName = text(body.screenshotName)
-  if (!customerName || !salesOrderNumber || !screenshotUrl || !screenshotKey) return apiError('Customer, sales order number and payment screenshot are required', 400)
+  if (!customerName || !salesOrderNumber) return apiError('Customer name and sales order number are required', 400)
   if (!Number.isFinite(paymentAmount) || paymentAmount <= 0) return apiError('Payment amount must be greater than zero', 400)
   if (!PAYMENT_MODES.includes(paymentMode)) return apiError('Invalid payment mode', 400)
   try {
     const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, screenshotUrl, screenshotKey, screenshotName, createdBy: auth.user.id })
+    await notifyAccountsOfNewPayment(payment).catch((error) => console.error('Payment created but notification failed', error))
     return apiOk({ payment })
   } catch (error) { return apiError(error instanceof Error ? error.message : 'Could not add payment', 500) }
 }
