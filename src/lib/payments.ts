@@ -15,6 +15,8 @@ export type Payment = {
   screenshotName?: string
   status: PaymentStatus
   createdBy: string
+  /** Server-generated deduplication key for public submissions; never returned by public APIs. */
+  idempotencyKey?: string
   createdAt: string
   updatedAt: string
 }
@@ -61,6 +63,21 @@ export async function createPayment(input: Omit<Payment, 'id' | 'status' | 'crea
   const payment: Payment = { ...input, id: `payment-${crypto.randomUUID()}`, status: 'Pending', createdAt: now, updatedAt: now }
   await updateStore((payments) => [payment, ...payments])
   return payment
+}
+
+/** Creates once per key in the payment store, including across client retries. */
+export async function createPublicPayment(input: Omit<Payment, 'id' | 'status' | 'createdAt' | 'updatedAt' | 'createdBy' | 'idempotencyKey'>, idempotencyKey: string) {
+  let result: Payment | undefined
+  let duplicate = false
+  await updateStore((payments) => {
+    const existing = payments.find((payment) => payment.idempotencyKey === idempotencyKey)
+    if (existing) { result = existing; duplicate = true; return payments }
+    const now = new Date().toISOString()
+    result = { ...input, id: `payment-${crypto.randomUUID()}`, status: 'Pending', createdBy: 'public-salesman', idempotencyKey, createdAt: now, updatedAt: now }
+    return [result, ...payments]
+  })
+  if (!result) throw new Error('Could not create payment')
+  return { payment: result, duplicate }
 }
 
 export async function updatePaymentStatus(id: string, status: PaymentStatus) {

@@ -43,7 +43,7 @@ async function updateStore(updater: (items: PaymentNotification[]) => PaymentNot
 
 export async function createPaymentNotifications(payment: Payment, creatorUserId: string) {
   const { users } = await getUserStore()
-  const recipients = users.filter((user) => user.active && user.role === 'Accounts' && user.id !== creatorUserId)
+  const recipients = users.filter((user) => user.active && (user.role === 'Admin' || user.role === 'Accounts') && user.id !== creatorUserId)
   if (!recipients.length) return []
   const createdAt = new Date().toISOString()
   const created = recipients.map((user) => ({

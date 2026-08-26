@@ -8,6 +8,7 @@ const databaseOnly = '/database'
 const accountsOnly = '/payments'
 const mediaAllowed = ['/media-proof']
 const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/salesman-view', '/units-generator', '/payments']
+const explicitlyPublicRoutes = ['/submit-payment']
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
@@ -16,6 +17,7 @@ function secretKey() {
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  if (explicitlyPublicRoutes.some((route) => pathname === route || pathname.startsWith(`${route}/`))) return NextResponse.next()
   if (!protectedRoutes.some((route) => pathname === route || (route !== '/' && pathname.startsWith(`${route}/`)))) return NextResponse.next()
   const token = request.cookies.get(cookieName)?.value
   if (!token) return NextResponse.next()
