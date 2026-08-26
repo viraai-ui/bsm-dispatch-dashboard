@@ -38,7 +38,7 @@ test('Admin can explicitly sync fresh open Zoho orders and Accounts has approval
   const orders = await read('../src/app/api/orders/route.ts')
   assert.match(client, /fetch\('\/api\/orders', \{ method: 'POST'/)
   assert.match(client, /Syncing…/)
-  assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(false\)/)
+  assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(true\)/)
   assert.match(client, /isAdmin && open/)
   assert.match(client, /isAccounts && payment\.status === 'Pending'/)
   assert.match(orders, /paymentOrderSuggestions: paymentOrderSuggestions\(orders\)/)

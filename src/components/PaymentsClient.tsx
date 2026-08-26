@@ -77,7 +77,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
       setSyncMessage(`Synced ${latest.length} open Zoho sales order${latest.length === 1 ? '' : 's'}.`)
       setSuggestionsOpen(open)
     } catch (reason) {
-      setOrders([]); setOrdersLoaded(false)
+      setOrders([]); setOrdersLoaded(true)
       setError(reason instanceof Error ? reason.message : 'Could not sync open Zoho sales orders')
     } finally { setSyncing(false) }
   }
