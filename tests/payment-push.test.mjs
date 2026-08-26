@@ -16,16 +16,16 @@ test('screenshot is optional while core fields remain server validated', async (
   assert.match(store, /screenshotUrl\?: string/)
 })
 
-test('push is Accounts-only and runs only after successful create', async () => {
+test('push supports Admin and Accounts and runs only after successful create, never PATCH', async () => {
   const route = await read('../src/app/api/payments/route.ts')
   const pushRoute = await read('../src/app/api/payments/push-subscription/route.ts')
   const client = await read('../src/components/PaymentsClient.tsx')
-  assert.match(pushRoute, /requireUser\(\['Accounts'\]\)/)
+  assert.match(pushRoute, /requireUser\(\['Admin', 'Accounts'\]\)/)
   assert.doesNotMatch(pushRoute, /subscriptions:/)
   assert.ok(route.indexOf('notifyAccountsOfNewPayment(payment)') > route.indexOf('await createPayment'))
   const patchBody = route.slice(route.indexOf('export async function PATCH'))
   assert.doesNotMatch(patchBody, /notifyAccountsOfNewPayment/)
-  assert.match(client, /isAccounts && <button className="notification-bell"/)
+  assert.match(client, /<button className="notification-bell"/)
   assert.match(client, /payment-push-consent-dismissed/)
 })
 
@@ -33,6 +33,6 @@ test('dead push endpoints are cleaned and delivery cannot fail creation', async 
   const push = await read('../src/lib/payment-push.ts')
   const route = await read('../src/app/api/payments/route.ts')
   assert.match(push, /status === 404 \|\| status === 410/)
-  assert.match(push, /role === 'Accounts'/)
+  assert.match(push, /role === 'Accounts' \|\| item\.role === 'Admin'/)
   assert.match(route, /notifyAccountsOfNewPayment\(payment\)\.catch/)
 })

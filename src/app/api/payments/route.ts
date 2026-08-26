@@ -38,7 +38,7 @@ export async function POST(request: Request) {
 }
 
 export async function PATCH(request: Request) {
-  const auth = await requireUser(['Accounts'])
+  const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
   const body = await request.json().catch(() => ({}))
   const id = text(body.id)

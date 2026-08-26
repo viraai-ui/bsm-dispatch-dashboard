@@ -13,12 +13,12 @@ test('Accounts user is idempotently migrated with a bcrypt password and restrict
   assert.doesNotMatch(auth, /passwordHash:\s*'account'/)
 })
 
-test('payment API enforces creator and approver segregation', async () => {
+test('payment API permits Admin and Accounts status updates while creation remains Admin-only', async () => {
   const route = await read('../src/app/api/payments/route.ts')
   const upload = await read('../src/app/api/payments/upload-target/route.ts')
   assert.match(route, /GET\(\)[\s\S]*requireUser\(\['Admin', 'Accounts'\]\)/)
   assert.match(route, /POST\(request: Request\)[\s\S]*requireUser\(\['Admin'\]\)/)
-  assert.match(route, /PATCH\(request: Request\)[\s\S]*requireUser\(\['Accounts'\]\)/)
+  assert.match(route, /PATCH\(request: Request\)[\s\S]*requireUser\(\['Admin', 'Accounts'\]\)/)
   assert.match(route, /\['Pending', 'Payment Received'\]/)
   assert.match(upload, /requireUser\(\['Admin'\]\)/)
 })
@@ -33,16 +33,15 @@ test('Accounts route and navigation are Payments-only', async () => {
   assert.match(proxy, /payload\.role === 'Accounts' && pathname !== accountsOnly/)
 })
 
-test('Admin can explicitly sync fresh open Zoho orders and Accounts has approval-only UI', async () => {
+test('Admin can sync orders and both payment roles can update status', async () => {
   const client = await read('../src/components/PaymentsClient.tsx')
   const orders = await read('../src/app/api/orders/route.ts')
   assert.match(client, /fetch\('\/api\/orders', \{ method: 'POST'/)
   assert.match(client, /payment-sync-icon spinning/)
   assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(true\)/)
   assert.match(client, /isAdmin && open/)
-  assert.match(client, /disabled=\{!isAccounts \|\| updatingPaymentId === payment\.id\}/)
-  assert.match(client, /Approval available from Accounts login/)
-  assert.match(client, /if \(!isAccounts\) return/)
+  assert.match(client, /disabled=\{updatingPaymentId === payment\.id\}/)
+  assert.match(client, /if \(!isAdmin && !isAccounts\) return/)
   assert.match(orders, /paymentOrderSuggestions: paymentOrderSuggestions\(orders\)/)
   assert.match(orders, /filter\(isOpenZohoSalesOrder\)/)
 })

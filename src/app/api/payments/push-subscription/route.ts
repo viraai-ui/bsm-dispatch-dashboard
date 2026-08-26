@@ -12,7 +12,7 @@ function validSubscription(value: unknown): value is { endpoint: string; keys: {
 }
 
 export async function GET() {
-  const auth = await requireUser(['Accounts'])
+  const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
   const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || ''
   if (!publicKey) return apiError('Push notifications are not configured', 503)
@@ -20,16 +20,16 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Accounts'])
+  const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
   const body = await request.json().catch(() => ({}))
   if (!validSubscription(body.subscription)) return apiError('Invalid push subscription', 400)
-  try { await savePaymentPushSubscription(auth.user.id, body.subscription); return apiOk({ subscribed: true }) }
+  try { await savePaymentPushSubscription(auth.user.id, auth.user.role as 'Admin' | 'Accounts', body.subscription); return apiOk({ subscribed: true }) }
   catch (error) { return apiError(error instanceof Error ? error.message : 'Could not save subscription', 500) }
 }
 
 export async function DELETE(request: Request) {
-  const auth = await requireUser(['Accounts'])
+  const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
   const body = await request.json().catch(() => ({}))
   const endpoint = String(body.endpoint || '')
