@@ -4134,6 +4134,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036032604": {
+      "id": "ship-1787734640976-p6gqs",
+      "itemId": "1154219000036032604",
+      "orderId": "1154219000036032604",
+      "machineId": "1154219000036032604-1154219000036032609-1",
+      "salesOrderNumber": "SO-07809",
+      "customerName": "Jindal Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Manoj Sir",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAF4506",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-26",
+      "notes": "",
+      "shippedAt": "2026-08-26T08:57:20.976Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
