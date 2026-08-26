@@ -18810,7 +18810,9 @@
     "1154219000036081003": {
       "salesOrderId": "1154219000036081003",
       "salesOrderNumber": "SO-07818",
-      "status": "open",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-26T11:49:18.824Z",
       "processedOrder": {
         "id": "1154219000036081003",
         "zohoSalesOrderId": "1154219000036081003",
@@ -18820,7 +18822,7 @@
         "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
         "salesperson": "Anuj Kumar",
         "deliveryDate": "2026-08-27",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -18838,8 +18840,8 @@
           {
             "id": "1154219000036081003-1154219000036081006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271066",
+            "qrToken": "26271066",
             "orderId": "1154219000036081003",
             "lineItemId": "1154219000036081006",
             "itemName": "Zigzag Flatbed",
@@ -18847,14 +18849,16 @@
             "customerName": "Welcome Shoes",
             "salesOrderNumber": "SO-07818",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -18868,7 +18872,10 @@
           "qrGeneratedAt": "2026-08-26T11:15:18.559Z",
           "zohoBackupStatus": "synced",
           "zohoBackupLastAttemptAt": "2026-08-26T11:15:18.559Z",
-          "zohoBackupSyncedAt": "2026-08-26T11:15:18.559Z"
+          "zohoBackupSyncedAt": "2026-08-26T11:15:18.559Z",
+          "processedAt": "2026-08-26T11:49:18.824Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
