@@ -1,14 +1,21 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import type { Payment, PaymentStatus } from '@/lib/payments'
+import type { Payment, PaymentMode, PaymentStatus } from '@/lib/payments'
+
+type OrderSuggestion = { id: string; salesOrderNumber: string; customerName: string }
+
+const PAYMENT_MODES: PaymentMode[] = ['Bank Transfer', 'UPI', 'Credit Card', 'Debit Card', 'Other']
+const formatAmount = (amount?: number) => amount == null ? '—' : new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(amount)
 
 export function PaymentsClient({ initialPayments }: { initialPayments: Payment[] }) {
-  type OrderSuggestion = { id: string; salesOrderNumber: string; customerName: string }
   const [payments, setPayments] = useState(initialPayments)
   const [open, setOpen] = useState(false)
   const [customerName, setCustomerName] = useState('')
   const [salesOrderNumber, setSalesOrderNumber] = useState('')
+  const [selectedOrderNumber, setSelectedOrderNumber] = useState('')
+  const [paymentAmount, setPaymentAmount] = useState('')
+  const [paymentMode, setPaymentMode] = useState<PaymentMode>('Bank Transfer')
   const [file, setFile] = useState<File | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -17,7 +24,6 @@ export function PaymentsClient({ initialPayments }: { initialPayments: Payment[]
   const [ordersLoaded, setOrdersLoaded] = useState(false)
   const [suggestionsOpen, setSuggestionsOpen] = useState(false)
   const [activeSuggestion, setActiveSuggestion] = useState(0)
-  const [customerEdited, setCustomerEdited] = useState(false)
 
   useEffect(() => {
     if (!open || ordersLoaded || ordersLoading) return
@@ -39,7 +45,8 @@ export function PaymentsClient({ initialPayments }: { initialPayments: Payment[]
 
   function selectOrder(order: OrderSuggestion) {
     setSalesOrderNumber(order.salesOrderNumber)
-    if (!customerEdited) setCustomerName(order.customerName)
+    setSelectedOrderNumber(order.salesOrderNumber)
+    setCustomerName(order.customerName)
     setSuggestionsOpen(false)
   }
 
@@ -50,8 +57,15 @@ export function PaymentsClient({ initialPayments }: { initialPayments: Payment[]
     else if (event.key === 'Escape') setSuggestionsOpen(false)
   }
 
+  function resetForm() {
+    setCustomerName(''); setSalesOrderNumber(''); setSelectedOrderNumber(''); setPaymentAmount(''); setPaymentMode('Bank Transfer'); setFile(null)
+  }
+
   async function addPayment(event: React.FormEvent) {
     event.preventDefault()
+    const amount = Number(paymentAmount)
+    if (!selectedOrderNumber || selectedOrderNumber !== salesOrderNumber) { setError('Select an open sales order from the suggestions.'); return }
+    if (!Number.isFinite(amount) || amount <= 0) { setError('Enter a valid payment amount greater than zero.'); return }
     if (!file) { setError('Select a payment screenshot.'); return }
     setBusy(true); setError('')
     try {
@@ -60,11 +74,11 @@ export function PaymentsClient({ initialPayments }: { initialPayments: Payment[]
       if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare upload')
       const uploadResponse = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': file.type }, body: file })
       if (!uploadResponse.ok) throw new Error('Screenshot upload failed')
-      const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, screenshotUrl: targetJson.data.publicUrl, screenshotKey: targetJson.data.key, screenshotName: file.name }) })
+      const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, paymentAmount: amount, paymentMode, screenshotUrl: targetJson.data.publicUrl, screenshotKey: targetJson.data.key, screenshotName: file.name }) })
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not add payment')
       setPayments((items) => [json.data.payment, ...items])
-      setCustomerName(''); setCustomerEdited(false); setSalesOrderNumber(''); setFile(null); setOpen(false)
+      resetForm(); setOpen(false)
     } catch (err) { setError(err instanceof Error ? err.message : 'Could not add payment') }
     finally { setBusy(false) }
   }
@@ -81,8 +95,18 @@ export function PaymentsClient({ initialPayments }: { initialPayments: Payment[]
     <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div><button className="btn red" onClick={() => { setError(''); setOpen(true) }}>+ Add Payment</button></header>
     {error && !open && <div className="form-error payments-error">{error}</div>}
     <div className="card payments-card">
-      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you upload the first screenshot.</span></div> : <div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Customer</th><th>Sales Order</th><th>Screenshot</th><th>Added</th><th className="payments-actions-heading">Actions / Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id}><td data-label="Customer"><strong>{payment.customerName}</strong></td><td data-label="Sales Order">{payment.salesOrderNumber}</td><td data-label="Screenshot"><a className="payment-proof-link" href={payment.screenshotUrl} target="_blank" rel="noreferrer">View screenshot ↗</a></td><td data-label="Added">{new Date(payment.createdAt).toLocaleDateString()}</td><td data-label="Actions / Status" className="payment-status-cell"><select aria-label={`Status for ${payment.customerName}`} className={payment.status === 'Payment Received' ? 'payment-status received' : 'payment-status pending'} value={payment.status} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option>Pending</option><option>Payment Received</option></select></td></tr>)}</tbody></table></div>}
+      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you upload the first screenshot.</span></div> : <div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Customer</th><th>Sales Order</th><th>Amount</th><th>Mode</th><th>Screenshot</th><th>Added</th><th className="payments-actions-heading">Actions / Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id}><td data-label="Customer"><strong>{payment.customerName}</strong></td><td data-label="Sales Order">{payment.salesOrderNumber}</td><td data-label="Amount">{formatAmount(payment.paymentAmount)}</td><td data-label="Mode">{payment.paymentMode || '—'}</td><td data-label="Screenshot"><a className="payment-proof-link" href={payment.screenshotUrl} target="_blank" rel="noreferrer">View screenshot ↗</a></td><td data-label="Added">{new Date(payment.createdAt).toLocaleDateString()}</td><td data-label="Actions / Status" className="payment-status-cell"><select aria-label={`Status for ${payment.customerName}`} className={payment.status === 'Payment Received' ? 'payment-status received' : 'payment-status pending'} value={payment.status} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option>Pending</option><option>Payment Received</option></select></td></tr>)}</tbody></table></div>}
     </div>
-    {open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={() => setOpen(false)}>×</button></div><form className="payment-form" onSubmit={addPayment}><label>Customer name<input required autoFocus value={customerName} onChange={(e) => { setCustomerName(e.target.value); setCustomerEdited(true) }} placeholder="Enter customer name" /></label><label>Sales order number<div className="payment-order-combobox"><input required role="combobox" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="payment-order-options" aria-activedescendant={suggestionsOpen && matchingOrders[activeSuggestion] ? `payment-order-${matchingOrders[activeSuggestion].id}` : undefined} value={salesOrderNumber} onFocus={() => setSuggestionsOpen(true)} onBlur={() => setTimeout(() => setSuggestionsOpen(false), 100)} onKeyDown={handleOrderKeyDown} onChange={(e) => { setSalesOrderNumber(e.target.value); setActiveSuggestion(0); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" />{suggestionsOpen && <div className="payment-order-options" id="payment-order-options" role="listbox">{ordersLoading ? <div className="payment-order-message">Loading open Zoho orders…</div> : matchingOrders.length ? matchingOrders.map((order, index) => <button id={`payment-order-${order.id}`} role="option" aria-selected={index === activeSuggestion} className={index === activeSuggestion ? 'active' : ''} type="button" key={order.id} onMouseDown={(event) => event.preventDefault()} onClick={() => selectOrder(order)}><strong>{order.salesOrderNumber}</strong><span>{order.customerName}</span></button>) : <div className="payment-order-message">No matching open sales orders</div>}</div>}</div><span className="field-help">Only open Zoho sales orders are suggested; you can search by order or customer.</span></label><label>Payment screenshot<input required type="file" accept="image/*" onChange={(e) => setFile(e.target.files?.[0] || null)} /><span className="field-help">PNG, JPG or other image, up to 15 MB</span></label>{error && <div className="form-error">{error}</div>}<div className="payment-form-actions"><button type="button" className="btn light" disabled={busy} onClick={() => setOpen(false)}>Cancel</button><button type="submit" className="btn red" disabled={busy}>{busy ? 'Uploading…' : 'Add Payment'}</button></div></form></section></div>}
+    {open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={() => setOpen(false)}>×</button></div>
+      <form className="payment-form" onSubmit={addPayment}>
+        <label>Sales Order Number<div className="payment-order-combobox"><input required autoFocus role="combobox" autoComplete="off" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="payment-order-options" aria-activedescendant={suggestionsOpen && matchingOrders[activeSuggestion] ? `payment-order-${matchingOrders[activeSuggestion].id}` : undefined} value={salesOrderNumber} onFocus={() => setSuggestionsOpen(true)} onBlur={() => setTimeout(() => setSuggestionsOpen(false), 100)} onKeyDown={handleOrderKeyDown} onChange={(event) => { setSalesOrderNumber(event.target.value); setSelectedOrderNumber(''); setCustomerName(''); setActiveSuggestion(0); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" />{suggestionsOpen && <div className="payment-order-options" id="payment-order-options" role="listbox">{ordersLoading ? <div className="payment-order-message">Loading open Zoho orders…</div> : matchingOrders.length ? matchingOrders.map((order, index) => <button id={`payment-order-${order.id}`} role="option" aria-selected={index === activeSuggestion} className={index === activeSuggestion ? 'active' : ''} type="button" key={order.id} onMouseDown={(event) => event.preventDefault()} onClick={() => selectOrder(order)}><strong>{order.salesOrderNumber}</strong><span>{order.customerName}</span></button>) : <div className="payment-order-message">No matching open sales orders</div>}</div>}</div></label>
+        <label>Customer Name<input required readOnly value={customerName} placeholder="Filled after selecting a sales order" /></label>
+        <label>Payment Amount (₹)<input required type="number" min="0.01" step="0.01" inputMode="decimal" value={paymentAmount} onChange={(event) => setPaymentAmount(event.target.value)} placeholder="Enter payment amount" /></label>
+        <label>Payment Mode<select required value={paymentMode} onChange={(event) => setPaymentMode(event.target.value as PaymentMode)}>{PAYMENT_MODES.map((mode) => <option key={mode} value={mode}>{mode}</option>)}</select></label>
+        <label>Payment Screenshot<input required type="file" accept="image/png,image/jpeg,image/webp,image/heic,image/heif" onChange={(event) => setFile(event.target.files?.[0] || null)} /></label>
+        {error && <div className="form-error">{error}</div>}
+        <div className="modal-actions"><button className="btn" type="button" disabled={busy} onClick={() => setOpen(false)}>Cancel</button><button className="btn red" type="submit" disabled={busy}>{busy ? 'Uploading…' : 'Submit Payment'}</button></div>
+      </form>
+    </section></div>}
   </section>
 }

@@ -1,10 +1,15 @@
 import { githubReadJson, githubRequest } from './workflow-store'
 
 export type PaymentStatus = 'Pending' | 'Payment Received'
+export type PaymentMode = 'Bank Transfer' | 'UPI' | 'Credit Card' | 'Debit Card' | 'Other'
 export type Payment = {
   id: string
   customerName: string
   salesOrderNumber: string
+  /** Optional only for records created before payment details were introduced. */
+  paymentAmount?: number
+  /** Optional only for records created before payment details were introduced. */
+  paymentMode?: PaymentMode
   screenshotUrl: string
   screenshotKey: string
   screenshotName: string
