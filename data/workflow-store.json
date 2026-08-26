@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271064,
+  "serialCounter": 26271065,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -18730,6 +18730,67 @@
           "zohoBackupLastAttemptAt": "2026-08-26T07:30:53.725Z",
           "zohoBackupSyncedAt": "2026-08-26T07:30:53.725Z",
           "dispatchedAt": "2026-08-26T08:44:48.233Z"
+        }
+      }
+    },
+    "1154219000036064016": {
+      "salesOrderId": "1154219000036064016",
+      "salesOrderNumber": "SO-07816",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036064016",
+        "zohoSalesOrderId": "1154219000036064016",
+        "salesOrderNumber": "SO-07816",
+        "status": "open",
+        "customerName": "MANPREET SHAWLS",
+        "shippingAddress": "VILLAGE JAMALPUR AWANA, 2220/9E/18E, TAJPUR ROAD, NEAR CENTRAL JAIL, LUDHIANA, Ludhiana, Punjab - 141010",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-26",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036064019",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036064016-1154219000036064019-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036064016",
+            "lineItemId": "1154219000036064019",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "MANPREET SHAWLS",
+            "salesOrderNumber": "SO-07816",
+            "deliveryDate": "2026-08-26",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036064016-1154219000036064019-1": {
+          "machineUnitId": "1154219000036064016-1154219000036064019-1",
+          "lineItemId": "1154219000036064019",
+          "serialNumber": "26271065",
+          "qrToken": "26271065",
+          "qrStatus": "pending"
         }
       }
     }
