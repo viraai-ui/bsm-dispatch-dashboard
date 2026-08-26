@@ -12886,6 +12886,62 @@
         "1154219000034263026-1154219000034263030-1",
         "1154219000034263026-1154219000034263031-1"
       ]
+    },
+    "1154219000036064016": {
+      "completedAt": "2026-08-26T12:31:16.730Z",
+      "order": {
+        "id": "1154219000036064016",
+        "zohoSalesOrderId": "1154219000036064016",
+        "salesOrderNumber": "SO-07816",
+        "status": "open",
+        "customerName": "MANPREET SHAWLS",
+        "shippingAddress": "VILLAGE JAMALPUR AWANA, 2220/9E/18E, TAJPUR ROAD, NEAR CENTRAL JAIL, LUDHIANA, Ludhiana, Punjab - 141010",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-26",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036064019",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036064016-1154219000036064019-1",
+            "unitNumber": 1,
+            "serialNumber": "26271065",
+            "qrToken": "26271065",
+            "orderId": "1154219000036064016",
+            "lineItemId": "1154219000036064019",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "MANPREET SHAWLS",
+            "salesOrderNumber": "SO-07816",
+            "deliveryDate": "2026-08-26",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036064016-1154219000036064019-1"
+      ]
     }
   }
 }
