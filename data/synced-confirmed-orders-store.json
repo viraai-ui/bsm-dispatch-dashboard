@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036047010": {
+      "id": "1154219000036047010",
+      "zohoSalesOrderId": "1154219000036047010",
+      "salesOrderNumber": "SO-07822",
+      "status": "open",
+      "customerName": "Adda Uniglobe Pvt. Ltd.",
+      "shippingAddress": "Plot No.179 F, Sec.16 Industrial Area HSIIDC, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036047013",
+          "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9920",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036047010-1154219000036047013-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036047010",
+          "lineItemId": "1154219000036047013",
+          "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9920",
+          "customerName": "Adda Uniglobe Pvt. Ltd.",
+          "salesOrderNumber": "SO-07822",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036057006": {
       "id": "1154219000036057006",
       "zohoSalesOrderId": "1154219000036057006",
@@ -1470,63 +1517,6 @@
         }
       ]
     },
-    "1154219000036007594": {
-      "id": "1154219000036007594",
-      "zohoSalesOrderId": "1154219000036007594",
-      "salesOrderNumber": "SO-07799",
-      "status": "open",
-      "customerName": "NEW SAHELI CHAPPAL",
-      "shippingAddress": "OLD 11/1, NEW 33/1, BATTI BAZAR, RANIPURA,, INDORE, Madhya Pradesh, 452001, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036007597",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036007598",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036007594-1154219000036007597-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036007594",
-          "lineItemId": "1154219000036007597",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "customerName": "NEW SAHELI CHAPPAL",
-          "salesOrderNumber": "SO-07799",
-          "deliveryDate": "2026-08-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035989054": {
       "id": "1154219000035989054",
       "zohoSalesOrderId": "1154219000035989054",
@@ -1563,94 +1553,6 @@
           "customerName": "ALPINE INDIA",
           "salesOrderNumber": "SO-07797",
           "deliveryDate": "2026-08-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035939003": {
-      "id": "1154219000035939003",
-      "zohoSalesOrderId": "1154219000035939003",
-      "salesOrderNumber": "SO-07791",
-      "status": "open",
-      "customerName": "Ashish International",
-      "shippingAddress": "Ground Floor,, Plot No. C-114, Naraina, Industrial Area Phase-1, Delhi, 110028",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035939006",
-          "itemName": "Pattern sewing machine (600x400 mm)",
-          "sku": "6040",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035939007",
-          "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
-          "sku": "291P",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035939008",
-          "itemName": "Hotmelt Polyamide Granules",
-          "sku": "7160",
-          "description": "",
-          "quantity": 25,
-          "pendingQuantity": 25,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035939003-1154219000035939006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035939003",
-          "lineItemId": "1154219000035939006",
-          "itemName": "Pattern sewing machine (600x400 mm)",
-          "sku": "6040",
-          "customerName": "Ashish International",
-          "salesOrderNumber": "SO-07791",
-          "deliveryDate": "2026-08-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035939003-1154219000035939007-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035939003",
-          "lineItemId": "1154219000035939007",
-          "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
-          "sku": "291P",
-          "customerName": "Ashish International",
-          "salesOrderNumber": "SO-07791",
-          "deliveryDate": "2026-08-21",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
@@ -4812,6 +4714,7 @@
     }
   },
   "orderIds": [
+    "1154219000036047010",
     "1154219000036057006",
     "1154219000036060006",
     "1154219000036081003",
@@ -4826,9 +4729,7 @@
     "1154219000036013008",
     "1154219000035994029",
     "1154219000035997009",
-    "1154219000036007594",
     "1154219000035989054",
-    "1154219000035939003",
     "1154219000035947002",
     "1154219000035933004",
     "1154219000035903106",
@@ -4864,8 +4765,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T12:40:24.887Z",
-  "lastAttemptAt": "2026-08-26T12:48:55.539Z",
+  "lastSuccessfulSyncAt": "2026-08-26T12:49:17.696Z",
+  "lastAttemptAt": "2026-08-26T12:49:17.696Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
