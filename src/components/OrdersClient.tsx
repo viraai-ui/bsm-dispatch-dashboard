@@ -197,12 +197,14 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
       const nextQrCodes: Record<string, string> = { ...qrCodes }
       for (const entry of generatedEntries) nextQrCodes[entry.machineId] = entry.qrCode
       const workflowMachines: MachineWorkflow[] = updated.filter((machine) => selected.has(machine.id)).map((machine) => ({ machineUnitId: machine.id, lineItemId: machine.lineItemId, serialNumber: machine.serialNumber, qrToken: machine.qrToken, qrStatus: 'generated', qrGeneratedAt: new Date().toISOString() }))
+      // Persist generated eligibility before presenting success or allowing Process Order.
+      // A fire-and-forget write left allocated serials at qrStatus=pending when users
+      // processed immediately or navigated away (the exact SO-07818 failure mode).
+      await saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
       setMachines(updated)
       setQrCodes(nextQrCodes)
       await generateBarcodePdf({ order, machines: updated.filter((machine) => selected.has(machine.id)), qrCodes: nextQrCodes })
-      setMessage('Serial saved; PDF downloaded. Zoho backup queued (non-blocking).')
-      void saveWorkflow(order.id, { action: 'generate', order: { ...order, machines: updated }, machines: workflowMachines })
-        .catch(() => setMessage('PDF downloaded; serial is allocated. Workflow/Zoho mirror is queued for retry.'))
+      setMessage('Serial and workflow saved; PDF downloaded. Zoho backup queued (non-blocking).')
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Serial generation failed. Please retry.')
     } finally {

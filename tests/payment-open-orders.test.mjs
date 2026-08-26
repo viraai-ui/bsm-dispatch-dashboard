@@ -23,3 +23,15 @@ test('payment screenshot upload target persists directly to Cloudflare R2', asyn
   assert.match(client, /targetJson\.data\.uploadUrl/)
   assert.match(client, /screenshotKey: targetJson\.data\.key/)
 })
+
+test('payment state cannot feed operational Orders and generated workflow is durable before success', async () => {
+  const ordersRoute = await readFile(new URL('../src/app/api/orders/route.ts', import.meta.url), 'utf8')
+  const paymentsRoute = await readFile(new URL('../src/app/api/payments/route.ts', import.meta.url), 'utf8')
+  const client = await readFile(new URL('../src/components/OrdersClient.tsx', import.meta.url), 'utf8')
+  assert.doesNotMatch(ordersRoute, /payment/i)
+  assert.doesNotMatch(paymentsRoute, /workflow|order-stage|media-proof|syncConfirmedOrders/)
+  const save = client.indexOf("await saveWorkflow(order.id, { action: 'generate'")
+  const success = client.indexOf("setMessage('Serial and workflow saved;")
+  assert.ok(save >= 0 && success > save, 'generation workflow must persist before success')
+  assert.doesNotMatch(client.slice(save, success), /void saveWorkflow/)
+})

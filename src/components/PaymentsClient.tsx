@@ -123,11 +123,11 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   useEffect(() => {
     if (!open || ordersLoaded || ordersLoading) return
     setOrdersLoading(true)
-    fetch('/api/orders', { cache: 'no-store' })
+    fetch('/api/payments/open-sales-orders', { cache: 'no-store' })
       .then(async (response) => {
         const json = await response.json().catch(() => ({}))
         if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load open sales orders')
-        setOrders(Array.isArray(json.data?.paymentOrderSuggestions) ? json.data.paymentOrderSuggestions : [])
+        setOrders(Array.isArray(json.data?.orders) ? json.data.orders : [])
       })
       .catch((reason) => setError(reason instanceof Error ? reason.message : 'Could not load open sales orders'))
       .finally(() => { setOrdersLoading(false); setOrdersLoaded(true) })
@@ -159,10 +159,10 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   async function syncOpenOrders() {
     setSyncing(true); setError(''); setSyncMessage('')
     try {
-      const response = await fetch('/api/orders', { method: 'POST', cache: 'no-store' })
+      const response = await fetch('/api/payments/open-sales-orders?refresh=1', { cache: 'no-store' })
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync open Zoho sales orders')
-      const latest = Array.isArray(json.data?.paymentOrderSuggestions) ? json.data.paymentOrderSuggestions : []
+      const latest = Array.isArray(json.data?.orders) ? json.data.orders : []
       setOrders(latest); setOrdersLoaded(true); setSelectedOrderNumber(''); setSalesOrderNumber(''); setCustomerName('')
       setSyncMessage(`Synced ${latest.length} open Zoho sales order${latest.length === 1 ? '' : 's'}.`)
       setSuggestionsOpen(open)

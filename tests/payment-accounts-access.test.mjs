@@ -33,17 +33,20 @@ test('Accounts route and navigation are Payments-only', async () => {
   assert.match(proxy, /payload\.role === 'Accounts' && pathname !== accountsOnly/)
 })
 
-test('Admin can sync orders and both payment roles can update status', async () => {
+test('Payments uses its dedicated read-only sales-order API', async () => {
   const client = await read('../src/components/PaymentsClient.tsx')
   const orders = await read('../src/app/api/orders/route.ts')
-  assert.match(client, /fetch\('\/api\/orders', \{ method: 'POST'/)
+  const paymentOrders = await read('../src/app/api/payments/open-sales-orders/route.ts')
+  assert.match(client, /fetch\('\/api\/payments\/open-sales-orders\?refresh=1'/)
+  assert.doesNotMatch(client, /fetch\('\/api\/orders'/)
   assert.match(client, /payment-sync-icon spinning/)
   assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(true\)/)
   assert.match(client, /isAdmin && open/)
   assert.match(client, /disabled=\{updatingPaymentId === payment\.id\}/)
   assert.match(client, /if \(!isAdmin && !isAccounts\) return/)
-  assert.match(orders, /paymentOrderSuggestions: paymentOrderSuggestions\(orders\)/)
-  assert.match(orders, /filter\(isOpenZohoSalesOrder\)/)
+  assert.doesNotMatch(orders, /paymentOrderSuggestions|isOpenZohoSalesOrder|payments/)
+  assert.match(paymentOrders, /export async function GET/)
+  assert.doesNotMatch(paymentOrders, /export async function POST|syncConfirmedOrders|workflow/)
 })
 
 test('authenticated object viewer segregates payment and media-proof access', async () => {
