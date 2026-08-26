@@ -2,7 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
-import { createPublicPayment, type PaymentMode } from '@/lib/payments'
+import { createPublicPayment, listPayments, type PaymentMode } from '@/lib/payments'
 import { checkRateLimit, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
 
 export const runtime = 'nodejs'
@@ -10,6 +10,30 @@ export const dynamic = 'force-dynamic'
 const MODES: PaymentMode[] = ['Bank Transfer', 'UPI', 'Credit Card', 'Debit Card', 'Other']
 const MAX_BODY = 20_000
 function value(input: unknown) { return String(input || '').trim() }
+
+/** Read-only salesman facade. Keep this deliberately narrower than the authenticated payment API. */
+export async function GET(request: Request) {
+  const rate = checkRateLimit(request, 'public-payment-list', 120)
+  if (!rate.allowed) return publicApiHeaders(apiError('Too many requests', 429))
+  try {
+    const payments = (await listPayments()).map((payment) => ({
+      id: payment.id,
+      date: payment.createdAt,
+      salesOrderNumber: payment.salesOrderNumber,
+      customerName: payment.customerName,
+      paymentMode: payment.paymentMode || null,
+      paymentAmount: payment.paymentAmount ?? null,
+      status: payment.status,
+      hasScreenshot: Boolean(payment.screenshotKey),
+      proofUrl: payment.screenshotKey ? `/api/public/payments/${encodeURIComponent(payment.id)}/proof` : null,
+    }))
+    const response = apiOk({ payments })
+    response.headers.set('Cache-Control', 'no-store, max-age=0')
+    return publicApiHeaders(response)
+  } catch (error) {
+    return publicApiHeaders(apiError(error instanceof Error ? error.message : 'Could not load payments', 500))
+  }
+}
 
 export async function POST(request: Request) {
   if (!sameOrigin(request)) return publicApiHeaders(apiError('Invalid request origin', 403))

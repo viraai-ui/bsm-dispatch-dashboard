@@ -46,10 +46,23 @@ test('public screenshot target is image-only, bounded, short-lived and isolated 
   assert.match(route, /sameOrigin/); assert.match(route, /verifySubmissionToken/); assert.match(route, /checkRateLimit/)
 })
 
-test('mobile UI contract has decimal text input, 44px targets and narrow breakpoint', async () => {
+test('public dashboard has list, read-only statuses, add form, polling and responsive cards', async () => {
   const [client, css] = await Promise.all([read('../src/app/submit-payment/PublicPaymentForm.tsx'), read('../src/app/submit-payment/submit-payment.module.css')])
   assert.match(client, /type="text" inputMode="decimal"/)
   assert.doesNotMatch(client, /type="number"/)
-  assert.match(css, /min-height:48px/); assert.match(css, /@media\(max-width:340px\)/)
-  assert.doesNotMatch(client, /payment history|notification|status history/i)
+  assert.match(client, /Date.*Sales Order.*Customer Name.*Mode.*Amount.*Screenshot.*Status/s)
+  assert.match(client, /setInterval\(.*5000/s); assert.match(client, /addEventListener\('focus'/)
+  assert.doesNotMatch(client, /method: 'PATCH'|notification|syncOpenOrders/)
+  assert.match(css, /min-height:48px/); assert.match(css, /@media\(max-width:340px\)/); assert.match(css, /\.mobileList/)
+})
+
+test('public list exposes presentation fields only and proof lookup never accepts a caller key', async () => {
+  const [route, proof] = await Promise.all([read('../src/app/api/public/payments/route.ts'), read('../src/app/api/public/payments/[id]/proof/route.ts')])
+  assert.match(route, /export async function GET/)
+  for (const field of ['date', 'salesOrderNumber', 'customerName', 'paymentMode', 'paymentAmount', 'status', 'hasScreenshot', 'proofUrl']) assert.match(route, new RegExp(field))
+  const getBlock = route.slice(route.indexOf('export async function GET'), route.indexOf('export async function POST'))
+  for (const privateField of ['createdBy', 'idempotencyKey', 'screenshotKey:', 'screenshotUrl']) assert.doesNotMatch(getBlock, new RegExp(privateField))
+  assert.match(proof, /find\(\(item\) => item\.id === id\)/)
+  assert.doesNotMatch(proof, /searchParams|get\('key'\)/)
+  assert.match(proof, /safePublicPaymentKey/)
 })
