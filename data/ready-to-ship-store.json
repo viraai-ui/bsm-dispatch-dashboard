@@ -4165,6 +4165,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036006017": {
+      "id": "ship-1787740740165-mclql",
+      "itemId": "1154219000036006017",
+      "orderId": "1154219000036006017",
+      "machineId": "1154219000036006017-1154219000036006020-1",
+      "salesOrderNumber": "SO-07811",
+      "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK3987",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-26",
+      "notes": "",
+      "shippedAt": "2026-08-26T10:39:00.165Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
