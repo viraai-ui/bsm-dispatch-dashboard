@@ -1,5 +1,115 @@
 {
   "orders": {
+    "1154219000036060006": {
+      "id": "1154219000036060006",
+      "zohoSalesOrderId": "1154219000036060006",
+      "salesOrderNumber": "SO-07820",
+      "status": "open",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036060009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "RTV Tube",
+          "quantity": 4,
+          "pendingQuantity": 4,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036060006-1154219000036060009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036060006",
+          "lineItemId": "1154219000036060009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-07820",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "RTV Tube"
+        },
+        {
+          "id": "1154219000036060006-1154219000036060009-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036060006",
+          "lineItemId": "1154219000036060009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-07820",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "RTV Tube"
+        },
+        {
+          "id": "1154219000036060006-1154219000036060009-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036060006",
+          "lineItemId": "1154219000036060009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-07820",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "RTV Tube"
+        },
+        {
+          "id": "1154219000036060006-1154219000036060009-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036060006",
+          "lineItemId": "1154219000036060009",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-07820",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "RTV Tube"
+        }
+      ]
+    },
     "1154219000036081003": {
       "id": "1154219000036081003",
       "zohoSalesOrderId": "1154219000036081003",
@@ -4603,6 +4713,7 @@
     }
   },
   "orderIds": [
+    "1154219000036060006",
     "1154219000036081003",
     "1154219000036051008",
     "1154219000036064016",
@@ -4653,8 +4764,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T11:04:47.220Z",
-  "lastAttemptAt": "2026-08-26T11:06:03.245Z",
+  "lastSuccessfulSyncAt": "2026-08-26T11:06:23.848Z",
+  "lastAttemptAt": "2026-08-26T11:06:23.848Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
