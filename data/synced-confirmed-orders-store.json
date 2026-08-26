@@ -1,51 +1,5 @@
 {
   "orders": {
-    "1154219000036061522": {
-      "id": "1154219000036061522",
-      "zohoSalesOrderId": "1154219000036061522",
-      "salesOrderNumber": "SO-07819",
-      "status": "open",
-      "customerName": "ARS FOOTWEAR MACHINERY (Sonu Satnam)",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-08-26",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036061527",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036061522-1154219000036061527-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036061522",
-          "lineItemId": "1154219000036061527",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "ARS FOOTWEAR MACHINERY (Sonu Satnam)",
-          "salesOrderNumber": "SO-07819",
-          "deliveryDate": "2026-08-26",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000036081003": {
       "id": "1154219000036081003",
       "zohoSalesOrderId": "1154219000036081003",
@@ -811,105 +765,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Laser Tube (100W)"
-        }
-      ]
-    },
-    "1154219000036006017": {
-      "id": "1154219000036006017",
-      "zohoSalesOrderId": "1154219000036006017",
-      "salesOrderNumber": "SO-07811",
-      "status": "open",
-      "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
-      "shippingAddress": "INDUSTRIAL PLOT NO-1, STREET NO-3 SECTOR-5, DADRI TOE, Reliance Distribution Centre, Reliance Model Economic Township, Jhajjar, Haryana, 124515",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-26",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036006020",
-          "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
-          "sku": "291P",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036006021",
-          "itemName": "Tape folding machine (heavy duty)",
-          "sku": "12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036006017-1154219000036006020-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036006017",
-          "lineItemId": "1154219000036006020",
-          "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
-          "sku": "291P",
-          "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
-          "salesOrderNumber": "SO-07811",
-          "deliveryDate": "2026-08-26",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036006017-1154219000036006020-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036006017",
-          "lineItemId": "1154219000036006020",
-          "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
-          "sku": "291P",
-          "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
-          "salesOrderNumber": "SO-07811",
-          "deliveryDate": "2026-08-26",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036006017-1154219000036006021-1",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036006017",
-          "lineItemId": "1154219000036006021",
-          "itemName": "Tape folding machine (heavy duty)",
-          "sku": "12",
-          "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
-          "salesOrderNumber": "SO-07811",
-          "deliveryDate": "2026-08-26",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -4748,7 +4603,6 @@
     }
   },
   "orderIds": [
-    "1154219000036061522",
     "1154219000036081003",
     "1154219000036051008",
     "1154219000036064016",
@@ -4756,7 +4610,6 @@
     "1154219000036050001",
     "1154219000035985020",
     "1154219000036022017",
-    "1154219000036006017",
     "1154219000036028011",
     "1154219000035991020",
     "1154219000036013008",
@@ -4800,8 +4653,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T10:21:07.971Z",
-  "lastAttemptAt": "2026-08-26T10:40:15.701Z",
+  "lastSuccessfulSyncAt": "2026-08-26T10:40:39.012Z",
+  "lastAttemptAt": "2026-08-26T10:40:39.012Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
