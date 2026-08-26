@@ -17885,7 +17885,9 @@
     "1154219000036006017": {
       "salesOrderId": "1154219000036006017",
       "salesOrderNumber": "SO-07811",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-26T05:02:16.946Z",
       "processedOrder": {
         "id": "1154219000036006017",
         "zohoSalesOrderId": "1154219000036006017",
@@ -17923,8 +17925,8 @@
           {
             "id": "1154219000036006017-1154219000036006020-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271050",
+            "qrToken": "26271050",
             "orderId": "1154219000036006017",
             "lineItemId": "1154219000036006020",
             "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
@@ -17932,20 +17934,23 @@
             "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
             "salesOrderNumber": "SO-07811",
             "deliveryDate": "2026-08-26",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036006017-1154219000036006020-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271051",
+            "qrToken": "26271051",
             "orderId": "1154219000036006017",
             "lineItemId": "1154219000036006020",
             "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
@@ -17953,20 +17958,23 @@
             "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
             "salesOrderNumber": "SO-07811",
             "deliveryDate": "2026-08-26",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036006017-1154219000036006021-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271052",
+            "qrToken": "26271052",
             "orderId": "1154219000036006017",
             "lineItemId": "1154219000036006021",
             "itemName": "Tape folding machine (heavy duty)",
@@ -17974,14 +17982,17 @@
             "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
             "salesOrderNumber": "SO-07811",
             "deliveryDate": "2026-08-26",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -17996,7 +18007,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-26T04:56:17.303Z",
           "zohoBackupLastAttemptAt": "2026-08-26T05:00:17.093Z",
-          "zohoBackupSyncedAt": "2026-08-26T05:00:17.093Z"
+          "zohoBackupSyncedAt": "2026-08-26T05:00:17.093Z",
+          "processedAt": "2026-08-26T05:02:16.946Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036006017-1154219000036006020-2": {
           "machineUnitId": "1154219000036006017-1154219000036006020-2",
@@ -18008,7 +18022,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-26T04:56:17.303Z",
           "zohoBackupLastAttemptAt": "2026-08-26T05:00:17.093Z",
-          "zohoBackupSyncedAt": "2026-08-26T05:00:17.093Z"
+          "zohoBackupSyncedAt": "2026-08-26T05:00:17.093Z",
+          "processedAt": "2026-08-26T05:02:16.946Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036006017-1154219000036006021-1": {
           "machineUnitId": "1154219000036006017-1154219000036006021-1",
@@ -18020,7 +18037,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-26T04:56:17.303Z",
           "zohoBackupLastAttemptAt": "2026-08-26T05:00:17.093Z",
-          "zohoBackupSyncedAt": "2026-08-26T05:00:17.093Z"
+          "zohoBackupSyncedAt": "2026-08-26T05:00:17.093Z",
+          "processedAt": "2026-08-26T05:02:16.946Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
