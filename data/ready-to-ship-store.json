@@ -4103,6 +4103,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036019022": {
+      "id": "ship-1787722380418-r3vvi",
+      "itemId": "1154219000036019022",
+      "orderId": "1154219000036019022",
+      "machineId": "1154219000036019022-1154219000036019025-1",
+      "salesOrderNumber": "SO-07807",
+      "customerName": "MANGLA IMPEX",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-26",
+      "notes": "",
+      "shippedAt": "2026-08-26T05:33:00.418Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
