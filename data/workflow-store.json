@@ -18047,7 +18047,9 @@
     "1154219000035985020": {
       "salesOrderId": "1154219000035985020",
       "salesOrderNumber": "SO-07813",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-26T05:07:19.664Z",
       "processedOrder": {
         "id": "1154219000035985020",
         "zohoSalesOrderId": "1154219000035985020",
@@ -18075,8 +18077,8 @@
           {
             "id": "1154219000035985020-1154219000035985023-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271053",
+            "qrToken": "26271053",
             "orderId": "1154219000035985020",
             "lineItemId": "1154219000035985023",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -18084,20 +18086,23 @@
             "customerName": "ACME CORP (GHAZIABAD)",
             "salesOrderNumber": "SO-07813",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035985020-1154219000035985023-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271054",
+            "qrToken": "26271054",
             "orderId": "1154219000035985020",
             "lineItemId": "1154219000035985023",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -18105,20 +18110,23 @@
             "customerName": "ACME CORP (GHAZIABAD)",
             "salesOrderNumber": "SO-07813",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035985020-1154219000035985023-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271055",
+            "qrToken": "26271055",
             "orderId": "1154219000035985020",
             "lineItemId": "1154219000035985023",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -18126,20 +18134,23 @@
             "customerName": "ACME CORP (GHAZIABAD)",
             "salesOrderNumber": "SO-07813",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035985020-1154219000035985023-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271056",
+            "qrToken": "26271056",
             "orderId": "1154219000035985020",
             "lineItemId": "1154219000035985023",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -18147,20 +18158,23 @@
             "customerName": "ACME CORP (GHAZIABAD)",
             "salesOrderNumber": "SO-07813",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000035985020-1154219000035985023-5",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271057",
+            "qrToken": "26271057",
             "orderId": "1154219000035985020",
             "lineItemId": "1154219000035985023",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -18168,14 +18182,17 @@
             "customerName": "ACME CORP (GHAZIABAD)",
             "salesOrderNumber": "SO-07813",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-26",
+            "vendor": "",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -18188,7 +18205,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T05:04:31.363Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z"
+          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z",
+          "processedAt": "2026-08-26T05:07:19.664Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000035985020-1154219000035985023-2": {
           "machineUnitId": "1154219000035985020-1154219000035985023-2",
@@ -18198,7 +18218,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T05:04:31.363Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z"
+          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z",
+          "processedAt": "2026-08-26T05:07:19.664Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000035985020-1154219000035985023-3": {
           "machineUnitId": "1154219000035985020-1154219000035985023-3",
@@ -18208,7 +18231,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T05:04:31.363Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z"
+          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z",
+          "processedAt": "2026-08-26T05:07:19.664Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000035985020-1154219000035985023-4": {
           "machineUnitId": "1154219000035985020-1154219000035985023-4",
@@ -18218,7 +18244,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T05:04:31.363Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z"
+          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z",
+          "processedAt": "2026-08-26T05:07:19.664Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000035985020-1154219000035985023-5": {
           "machineUnitId": "1154219000035985020-1154219000035985023-5",
@@ -18228,7 +18257,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-26T05:04:31.363Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z"
+          "zohoBackupQueuedAt": "2026-08-26T05:04:42.347Z",
+          "processedAt": "2026-08-26T05:07:19.664Z",
+          "dispatchNote": "local",
+          "vendor": ""
         }
       }
     }
