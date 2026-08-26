@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271052,
+  "serialCounter": 26271057,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -18041,6 +18041,179 @@
           "processedAt": "2026-08-26T05:02:16.946Z",
           "dispatchNote": "local",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000035985020": {
+      "salesOrderId": "1154219000035985020",
+      "salesOrderNumber": "SO-07813",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035985020",
+        "zohoSalesOrderId": "1154219000035985020",
+        "salesOrderNumber": "SO-07813",
+        "status": "open",
+        "customerName": "ACME CORP (GHAZIABAD)",
+        "shippingAddress": "H-61, Durga Industrial park,near rajender nagar metro station, Sahibabad, Ghaziabad, Uttar Pradesh 201005, Ghaziabad, Uttar Pradesh, 201010, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035985023",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035985020-1154219000035985023-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035985020",
+            "lineItemId": "1154219000035985023",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "ACME CORP (GHAZIABAD)",
+            "salesOrderNumber": "SO-07813",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035985020-1154219000035985023-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035985020",
+            "lineItemId": "1154219000035985023",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "ACME CORP (GHAZIABAD)",
+            "salesOrderNumber": "SO-07813",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035985020-1154219000035985023-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035985020",
+            "lineItemId": "1154219000035985023",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "ACME CORP (GHAZIABAD)",
+            "salesOrderNumber": "SO-07813",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035985020-1154219000035985023-4",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035985020",
+            "lineItemId": "1154219000035985023",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "ACME CORP (GHAZIABAD)",
+            "salesOrderNumber": "SO-07813",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035985020-1154219000035985023-5",
+            "unitNumber": 5,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035985020",
+            "lineItemId": "1154219000035985023",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "ACME CORP (GHAZIABAD)",
+            "salesOrderNumber": "SO-07813",
+            "deliveryDate": "2026-08-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000035985020-1154219000035985023-1": {
+          "machineUnitId": "1154219000035985020-1154219000035985023-1",
+          "lineItemId": "1154219000035985023",
+          "serialNumber": "26271053",
+          "qrToken": "26271053",
+          "qrStatus": "pending"
+        },
+        "1154219000035985020-1154219000035985023-2": {
+          "machineUnitId": "1154219000035985020-1154219000035985023-2",
+          "lineItemId": "1154219000035985023",
+          "serialNumber": "26271054",
+          "qrToken": "26271054",
+          "qrStatus": "pending"
+        },
+        "1154219000035985020-1154219000035985023-3": {
+          "machineUnitId": "1154219000035985020-1154219000035985023-3",
+          "lineItemId": "1154219000035985023",
+          "serialNumber": "26271055",
+          "qrToken": "26271055",
+          "qrStatus": "pending"
+        },
+        "1154219000035985020-1154219000035985023-4": {
+          "machineUnitId": "1154219000035985020-1154219000035985023-4",
+          "lineItemId": "1154219000035985023",
+          "serialNumber": "26271056",
+          "qrToken": "26271056",
+          "qrStatus": "pending"
+        },
+        "1154219000035985020-1154219000035985023-5": {
+          "machineUnitId": "1154219000035985020-1154219000035985023-5",
+          "lineItemId": "1154219000035985023",
+          "serialNumber": "26271057",
+          "qrToken": "26271057",
+          "qrStatus": "pending"
         }
       }
     }
