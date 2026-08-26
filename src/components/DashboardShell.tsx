@@ -14,6 +14,7 @@ const nav: NavItem[] = [
   { label: 'Database', href: '/database' },
   { label: 'Settings', href: '/settings' },
   { label: 'Salesman View', href: '/salesman-view' },
+  { label: 'Payments', href: '/payments' },
 ]
 
 const utilityNav: NavItem[] = [
@@ -27,7 +28,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
   const dispatchOnly = user.role === 'Dispatch'
   const mediaOnly = user.role === 'Media'
   const databaseOnly = user.role === 'Database'
-  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof') : databaseOnly ? nav.filter((item) => item.href === '/database') : user.role === 'Operations' ? nav.filter((item) => item.href !== '/settings' && item.href !== '/media-proof' && item.href !== '/salesman-view') : nav
+  const visibleNav = dispatchOnly ? nav.filter((item) => item.href === '/packaging-tv') : mediaOnly ? nav.filter((item) => item.href === '/media-proof') : databaseOnly ? nav.filter((item) => item.href === '/database') : user.role === 'Operations' ? nav.filter((item) => !['/settings', '/media-proof', '/salesman-view', '/payments'].includes(item.href)) : nav
   const canUseUtilities = user.role === 'Admin' || user.role === 'Operations'
   const visibleUtilityNav = canUseUtilities ? utilityNav : []
   const mobileHidden = new Set(['/packaging-tv', '/settings'])
