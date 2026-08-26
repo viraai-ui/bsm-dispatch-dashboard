@@ -1,5 +1,93 @@
 {
   "orders": {
+    "1154219000036050001": {
+      "id": "1154219000036050001",
+      "zohoSalesOrderId": "1154219000036050001",
+      "salesOrderNumber": "SO-07814",
+      "status": "open",
+      "customerName": "GLL Industries",
+      "shippingAddress": "Plot No 16,17,18 EPIP Phase I,, Baddi Solan, Jhar Majri, Solan, Himachal Pradesh, 174103",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036050004",
+          "itemName": "Eyelet punching double channel [400 & 600 Number]",
+          "sku": "989",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036050005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Wooden Packing Cost",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036050006",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight BSM to Punjabi Bagh Zip Line",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036050001-1154219000036050004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036050001",
+          "lineItemId": "1154219000036050004",
+          "itemName": "Eyelet punching double channel [400 & 600 Number]",
+          "sku": "989",
+          "customerName": "GLL Industries",
+          "salesOrderNumber": "SO-07814",
+          "deliveryDate": "2026-08-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036050001-1154219000036050005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036050001",
+          "lineItemId": "1154219000036050005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "GLL Industries",
+          "salesOrderNumber": "SO-07814",
+          "deliveryDate": "2026-08-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Wooden Packing Cost"
+        }
+      ]
+    },
     "1154219000035985020": {
       "id": "1154219000035985020",
       "zohoSalesOrderId": "1154219000035985020",
@@ -4331,6 +4419,7 @@
     }
   },
   "orderIds": [
+    "1154219000036050001",
     "1154219000035985020",
     "1154219000036022017",
     "1154219000036006017",
@@ -4379,8 +4468,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T04:40:52.800Z",
-  "lastAttemptAt": "2026-08-26T05:10:43.875Z",
+  "lastSuccessfulSyncAt": "2026-08-26T05:11:05.479Z",
+  "lastAttemptAt": "2026-08-26T05:11:05.479Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
