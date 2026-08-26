@@ -22,8 +22,8 @@ test('payment form follows required order and list exposes responsive details', 
     previous = index
   }
   assert.match(client, /readOnly value=\{customerName\}/)
-  assert.match(client, /data-label="Amount"/)
-  assert.match(client, /data-label="Mode"/)
+  assert.match(client, /payment-mobile-details[\s\S]*payment\.paymentMode/)
+  assert.match(client, /payment-mobile-details[\s\S]*formatAmount\(payment\.paymentAmount\)/)
   assert.match(client, /targetJson\.data\.uploadUrl/)
 })
 

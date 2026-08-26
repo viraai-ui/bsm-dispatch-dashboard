@@ -34,3 +34,18 @@ test('sync control is icon-only, accessible, and admin-only', async () => {
   assert.match(css, /\.payment-status-select\{[^}]*height:38px/)
   assert.match(css, /\.payments-actions-heading span\{[^}]*width:168px[^}]*text-align:center/)
 })
+
+test('mobile payments use deliberate responsive cards with complete functionality', async () => {
+  const client = await read('../src/components/PaymentsClient.tsx')
+  const css = await read('../src/app/globals.css')
+  assert.match(client, /payment-mobile-card/)
+  assert.match(client, /formatPaymentDate[\s\S]*day: '2-digit'[\s\S]*month: '2-digit'/)
+  assert.match(client, />View Screenshot<\/a>/)
+  assert.match(client, /No screenshot/)
+  assert.match(client, /payment-mobile-status[\s\S]*onChange=\{\(event\) => void setStatus/)
+  assert.match(css, /@media\(max-width:700px\)[\s\S]*\.payments-table-wrap\{display:none\}/)
+  assert.match(css, /\.payment-mobile-status\{[^}]*height:44px/)
+  assert.match(css, /\.payment-mobile-proof\{[^}]*min-height:44px/)
+  assert.match(css, /\.payment-mobile-card\.received\{[^}]*#f5fcf7/)
+  assert.match(css, /@media\(max-width:340px\)/)
+})
