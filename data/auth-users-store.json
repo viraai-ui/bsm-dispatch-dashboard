@@ -54,6 +54,17 @@
       "passwordHash": "$2b$10$1.5Wpf9UHJCKIb7XaIkYjuepE.2rR6xGnzFYBRJdqvi1pSa21ClOa",
       "createdAt": "2026-07-29T07:46:51.851Z",
       "updatedAt": "2026-07-29T07:46:51.851Z"
+    },
+    {
+      "id": "u-accounts",
+      "name": "Accounts",
+      "email": "accounts@bsmindia.com",
+      "username": "account",
+      "role": "Accounts",
+      "active": true,
+      "passwordHash": "$2b$10$29TvaE0kQelQlPzBw.NZ9OltNcYbfYNlvkQ5QwuELWd0Spo.PkqE.",
+      "createdAt": "2026-08-26T10:45:32.268Z",
+      "updatedAt": "2026-08-26T10:45:32.268Z"
     }
   ]
 }
