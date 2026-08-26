@@ -9,9 +9,10 @@ const AuthContext = createContext<AuthContextValue | null>(null)
 const dispatchOnlyPath = '/packaging-tv'
 const mediaOnlyPath = '/media-proof'
 const databaseOnlyPath = '/database'
+const accountsOnlyPath = '/payments'
 const mediaAllowedPaths = ['/media-proof']
-const adminOnlyPaths: string[] = ['/salesman-view', '/payments']
-function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : role === 'Database' ? databaseOnlyPath : '/' }
+const adminOnlyPaths: string[] = ['/salesman-view']
+function homeForRole(role: string) { return role === 'Dispatch' ? dispatchOnlyPath : role === 'Media' ? mediaOnlyPath : role === 'Database' ? databaseOnlyPath : role === 'Accounts' ? accountsOnlyPath : '/' }
 
 export function useAuth() {
   const value = useContext(AuthContext)
@@ -38,6 +39,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) router.replace(dispatchOnlyPath)
     if (user.role === 'Media' && !mediaAllowedPaths.includes(pathname)) router.replace(mediaOnlyPath)
     if (user.role === 'Database' && pathname !== databaseOnlyPath) router.replace(databaseOnlyPath)
+    if (user.role === 'Accounts' && pathname !== accountsOnlyPath) router.replace(accountsOnlyPath)
     if (user.role === 'Operations' && (pathname === '/settings' || pathname === '/media-proof')) router.replace('/')
     if (adminOnlyPaths.includes(pathname) && user.role !== 'Admin') router.replace(homeForRole(user.role))
   }, [pathname, router, user])
@@ -94,6 +96,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   if (user.role === 'Dispatch' && pathname !== dispatchOnlyPath) return null
   if (user.role === 'Media' && !mediaAllowedPaths.includes(pathname)) return null
   if (user.role === 'Database' && pathname !== databaseOnlyPath) return null
+  if (user.role === 'Accounts' && pathname !== accountsOnlyPath) return null
   if (adminOnlyPaths.includes(pathname) && user.role !== 'Admin') return null
   return <AuthContext.Provider value={{ user, logout }}>{children}</AuthContext.Provider>
 }

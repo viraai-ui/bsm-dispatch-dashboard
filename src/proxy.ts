@@ -5,8 +5,9 @@ const cookieName = 'bsm_dispatch_session'
 const dispatchOnly = '/packaging-tv'
 const mediaOnly = '/media-proof'
 const databaseOnly = '/database'
+const accountsOnly = '/payments'
 const mediaAllowed = ['/media-proof']
-const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/salesman-view', '/units-generator']
+const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/salesman-view', '/units-generator', '/payments']
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
@@ -28,6 +29,9 @@ export async function proxy(request: NextRequest) {
     }
     if (payload.role === 'Database' && pathname !== databaseOnly) {
       return NextResponse.redirect(new URL(databaseOnly, request.url))
+    }
+    if (payload.role === 'Accounts' && pathname !== accountsOnly) {
+      return NextResponse.redirect(new URL(accountsOnly, request.url))
     }
     if (payload.role === 'Operations' && (pathname === '/settings' || pathname === '/media-proof')) {
       return NextResponse.redirect(new URL('/', request.url))

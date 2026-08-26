@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict'
+import test from 'node:test'
+import { readFile } from 'node:fs/promises'
+
+const read = (path) => readFile(new URL(path, import.meta.url), 'utf8')
+
+test('Accounts user is idempotently migrated with a bcrypt password and restricted role', async () => {
+  const auth = await read('../src/lib/auth.ts')
+  assert.match(auth, /'Accounts'/)
+  assert.match(auth, /username: 'account'/)
+  assert.match(auth, /bcrypt\.hash\('account', 10\)/)
+  assert.match(auth, /const accounts = store\.users\.find/)
+  assert.doesNotMatch(auth, /passwordHash:\s*'account'/)
+})
+
+test('payment API enforces creator and approver segregation', async () => {
+  const route = await read('../src/app/api/payments/route.ts')
+  const upload = await read('../src/app/api/payments/upload-target/route.ts')
+  assert.match(route, /GET\(\)[\s\S]*requireUser\(\['Admin', 'Accounts'\]\)/)
+  assert.match(route, /POST\(request: Request\)[\s\S]*requireUser\(\['Admin'\]\)/)
+  assert.match(route, /PATCH\(request: Request\)[\s\S]*requireUser\(\['Accounts'\]\)/)
+  assert.match(route, /status !== 'Payment Received'/)
+  assert.match(upload, /requireUser\(\['Admin'\]\)/)
+})
+
+test('Accounts route and navigation are Payments-only', async () => {
+  const gate = await read('../src/components/AuthGate.tsx')
+  const shell = await read('../src/components/DashboardShell.tsx')
+  const proxy = await read('../src/proxy.ts')
+  assert.match(gate, /role === 'Accounts' \? accountsOnlyPath/)
+  assert.match(gate, /user\.role === 'Accounts' && pathname !== accountsOnlyPath/)
+  assert.match(shell, /accountsOnly \? nav\.filter\(\(item\) => item\.href === '\/payments'\)/)
+  assert.match(proxy, /payload\.role === 'Accounts' && pathname !== accountsOnly/)
+})
+
+test('Admin can explicitly sync fresh open Zoho orders and Accounts has approval-only UI', async () => {
+  const client = await read('../src/components/PaymentsClient.tsx')
+  const orders = await read('../src/app/api/orders/route.ts')
+  assert.match(client, /fetch\('\/api\/orders', \{ method: 'POST'/)
+  assert.match(client, /Syncing…/)
+  assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(false\)/)
+  assert.match(client, /isAdmin && open/)
+  assert.match(client, /isAccounts && payment\.status === 'Pending'/)
+  assert.match(orders, /paymentOrderSuggestions: paymentOrderSuggestions\(orders\)/)
+  assert.match(orders, /filter\(isOpenZohoSalesOrder\)/)
+})

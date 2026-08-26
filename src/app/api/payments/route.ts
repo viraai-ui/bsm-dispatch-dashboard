@@ -9,7 +9,7 @@ function text(value: unknown) { return String(value || '').trim() }
 const PAYMENT_MODES: PaymentMode[] = ['Bank Transfer', 'UPI', 'Credit Card', 'Debit Card', 'Other']
 
 export async function GET() {
-  const auth = await requireUser(['Admin'])
+  const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
   try { return apiOk({ payments: await listPayments() }) }
   catch (error) { return apiError(error instanceof Error ? error.message : 'Could not load payments', 500) }
@@ -36,12 +36,12 @@ export async function POST(request: Request) {
 }
 
 export async function PATCH(request: Request) {
-  const auth = await requireUser(['Admin'])
+  const auth = await requireUser(['Accounts'])
   if (!auth.ok) return auth.response
   const body = await request.json().catch(() => ({}))
   const id = text(body.id)
   const status = text(body.status) as PaymentStatus
-  if (!id || !['Pending', 'Payment Received'].includes(status)) return apiError('Invalid payment status update', 400)
+  if (!id || status !== 'Payment Received') return apiError('Accounts may only approve pending payments', 400)
   try {
     const payment = await updatePaymentStatus(id, status)
     if (!payment) return apiError('Payment not found', 404)
