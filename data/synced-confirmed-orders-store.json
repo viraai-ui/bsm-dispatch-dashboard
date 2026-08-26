@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036064016": {
+      "id": "1154219000036064016",
+      "zohoSalesOrderId": "1154219000036064016",
+      "salesOrderNumber": "SO-07816",
+      "status": "open",
+      "customerName": "MANPREET SHAWLS",
+      "shippingAddress": "VILLAGE JAMALPUR AWANA, 2220/9E/18E, TAJPUR ROAD, NEAR CENTRAL JAIL, LUDHIANA, Ludhiana, Punjab - 141010",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036064019",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036064016-1154219000036064019-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036064016",
+          "lineItemId": "1154219000036064019",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "MANPREET SHAWLS",
+          "salesOrderNumber": "SO-07816",
+          "deliveryDate": "2026-08-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036064003": {
       "id": "1154219000036064003",
       "zohoSalesOrderId": "1154219000036064003",
@@ -750,53 +797,6 @@
         }
       ],
       "machines": []
-    },
-    "1154219000036032604": {
-      "id": "1154219000036032604",
-      "zohoSalesOrderId": "1154219000036032604",
-      "salesOrderNumber": "SO-07809",
-      "status": "open",
-      "customerName": "Jindal Enterprises",
-      "shippingAddress": "Plot No.621 MIE-A, Bahadurgarh, Haryana",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-08-26",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036032609",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036032604-1154219000036032609-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036032604",
-          "lineItemId": "1154219000036032609",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "customerName": "Jindal Enterprises",
-          "salesOrderNumber": "SO-07809",
-          "deliveryDate": "2026-08-26",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
     },
     "1154219000035991020": {
       "id": "1154219000035991020",
@@ -4608,13 +4608,13 @@
     }
   },
   "orderIds": [
+    "1154219000036064016",
     "1154219000036064003",
     "1154219000036050001",
     "1154219000035985020",
     "1154219000036022017",
     "1154219000036006017",
     "1154219000036028011",
-    "1154219000036032604",
     "1154219000035991020",
     "1154219000036013008",
     "1154219000035994029",
@@ -4657,8 +4657,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T08:40:57.775Z",
-  "lastAttemptAt": "2026-08-26T09:01:17.267Z",
+  "lastSuccessfulSyncAt": "2026-08-26T09:01:39.160Z",
+  "lastAttemptAt": "2026-08-26T09:01:39.160Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
