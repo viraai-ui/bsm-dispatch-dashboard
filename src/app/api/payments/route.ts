@@ -43,7 +43,7 @@ export async function PATCH(request: Request) {
   const body = await request.json().catch(() => ({}))
   const id = text(body.id)
   const status = text(body.status) as PaymentStatus
-  if (!id || status !== 'Payment Received') return apiError('Accounts may only approve pending payments', 400)
+  if (!id || !(['Pending', 'Payment Received'] as PaymentStatus[]).includes(status)) return apiError('Invalid payment status', 400)
   try {
     const payment = await updatePaymentStatus(id, status)
     if (!payment) return apiError('Payment not found', 404)

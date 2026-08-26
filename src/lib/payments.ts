@@ -22,9 +22,16 @@ export type Payment = {
 type PaymentStore = { payments: Payment[] }
 const STORE_PATH = 'data/payments.json'
 
+export function sortPayments(payments: Payment[]) {
+  return [...payments].sort((a, b) => {
+    const statusOrder = Number(a.status === 'Payment Received') - Number(b.status === 'Payment Received')
+    return statusOrder || b.createdAt.localeCompare(a.createdAt)
+  })
+}
+
 export async function listPayments() {
   const { data } = await githubReadJson<PaymentStore>(STORE_PATH, { payments: [] })
-  return (data.payments || []).sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+  return sortPayments(data.payments || [])
 }
 
 async function updateStore(updater: (payments: Payment[]) => Payment[]) {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import type { Payment, PaymentMode, PaymentStatus } from '@/lib/payments'
+import { sortPayments, type Payment, type PaymentMode, type PaymentStatus } from '@/lib/payments'
 import type { AppRole } from '@/lib/auth'
 
 type OrderSuggestion = { id: string; salesOrderNumber: string; customerName: string }
@@ -10,7 +10,7 @@ const PAYMENT_MODES: PaymentMode[] = ['Bank Transfer', 'UPI', 'Credit Card', 'De
 const formatAmount = (amount?: number) => amount == null ? '—' : new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(amount)
 
 export function PaymentsClient({ initialPayments, userRole }: { initialPayments: Payment[]; userRole: AppRole }) {
-  const [payments, setPayments] = useState(initialPayments)
+  const [payments, setPayments] = useState(() => sortPayments(initialPayments))
   const [open, setOpen] = useState(false)
   const [customerName, setCustomerName] = useState('')
   const [salesOrderNumber, setSalesOrderNumber] = useState('')
@@ -27,6 +27,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   const [activeSuggestion, setActiveSuggestion] = useState(0)
   const [syncing, setSyncing] = useState(false)
   const [syncMessage, setSyncMessage] = useState('')
+  const [updatingPaymentId, setUpdatingPaymentId] = useState('')
   const [pushState, setPushState] = useState<'checking' | 'unsupported' | 'prompt' | 'enabled' | 'denied' | 'error'>('checking')
   const [pushBusy, setPushBusy] = useState(false)
   const isAdmin = userRole === 'Admin'
@@ -135,7 +136,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
       const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, paymentAmount: amount, paymentMode, ...screenshot }) })
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not add payment')
-      setPayments((items) => [json.data.payment, ...items])
+      setPayments((items) => sortPayments([json.data.payment, ...items]))
       resetForm(); setOpen(false)
     } catch (err) { setError(err instanceof Error ? err.message : 'Could not add payment') }
     finally { setBusy(false) }
@@ -143,19 +144,25 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
 
   async function setStatus(id: string, status: PaymentStatus) {
     const previous = payments
-    setPayments((items) => items.map((item) => item.id === id ? { ...item, status } : item))
-    const response = await fetch('/api/payments', { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id, status }) })
-    const json = await response.json().catch(() => ({}))
-    if (!response.ok || !json.ok) { setPayments(previous); setError(json.error || 'Could not update status') }
+    setError(''); setUpdatingPaymentId(id)
+    setPayments((items) => sortPayments(items.map((item) => item.id === id ? { ...item, status } : item)))
+    try {
+      const response = await fetch('/api/payments', { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id, status }) })
+      const json = await response.json().catch(() => ({}))
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not update status')
+      setPayments((items) => sortPayments(items.map((item) => item.id === id ? json.data.payment : item)))
+    } catch (reason) {
+      setPayments(previous); setError(reason instanceof Error ? reason.message : 'Could not update status')
+    } finally { setUpdatingPaymentId('') }
   }
 
   return <section className="payments-page">
-    <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div>{isAccounts && <button className="notification-bell" type="button" disabled={pushBusy || pushState === 'enabled'} onClick={() => void enablePush()} aria-label="Payment notification settings" title={pushState === 'enabled' ? 'Notifications enabled' : 'Enable notifications'}>🔔 <span>{pushState === 'enabled' ? 'Enabled' : 'Enable alerts'}</span></button>}{isAdmin && <div className="payments-header-actions"><button className="btn light" type="button" disabled={syncing} onClick={() => void syncOpenOrders()} aria-label="Sync open Zoho sales orders">{syncing ? '↻ Syncing…' : '↻ Sync Orders'}</button><button className="btn red" onClick={() => { setError(''); setSyncMessage(''); setOpen(true) }}>+ Add Payment</button></div>}</header>
+    <header className="payments-header"><div><p className="eyebrow">Finance</p><h1>Payments</h1><p className="muted">Track customer payment proofs and receipt status.</p></div>{isAccounts && <button className="notification-bell" type="button" disabled={pushBusy || pushState === 'enabled'} onClick={() => void enablePush()} aria-label="Payment notification settings" title={pushState === 'enabled' ? 'Notifications enabled' : 'Enable notifications'}>🔔 <span>{pushState === 'enabled' ? 'Enabled' : 'Enable alerts'}</span></button>}{isAdmin && <div className="payments-header-actions"><button className="payment-sync-button" type="button" disabled={syncing} onClick={() => void syncOpenOrders()} aria-label="Sync open Zoho sales orders" title={syncing ? 'Syncing open Zoho sales orders' : 'Sync open Zoho sales orders'}><span aria-hidden="true" className={syncing ? 'payment-sync-icon spinning' : 'payment-sync-icon'}>↻</span></button><button className="btn red" onClick={() => { setError(''); setSyncMessage(''); setOpen(true) }}>+ Add Payment</button></div>}</header>
     {isAccounts && pushState !== 'enabled' && pushState !== 'checking' && <div className="notification-consent"><div><strong>Get new payment alerts</strong><span>{pushState === 'unsupported' ? 'This browser does not support Web Push. On iPhone/iPad, install the site to your Home Screen, then try again.' : pushState === 'denied' ? 'Notifications are blocked. Allow them in your browser settings, then use the bell.' : 'Enable mobile or desktop notifications when a new payment needs approval.'}</span></div>{pushState !== 'unsupported' && pushState !== 'denied' && <button className="btn red" type="button" disabled={pushBusy} onClick={() => void enablePush()}>{pushBusy ? 'Enabling…' : 'Enable notifications'}</button>}<button className="drawer-close" aria-label="Dismiss notification prompt" type="button" onClick={() => { localStorage.setItem('payment-push-consent-dismissed', '1'); setPushState('checking') }}>×</button></div>}
     {syncMessage && <div className="form-success payments-error">{syncMessage}</div>}
     {error && !open && <div className="form-error payments-error">{error}</div>}
     <div className="card payments-card">
-      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you upload the first screenshot.</span></div> : <div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Customer</th><th>Sales Order</th><th>Amount</th><th>Mode</th><th>Screenshot</th><th>Added</th><th className="payments-actions-heading">Actions / Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id}><td data-label="Customer">{payment.customerName}</td><td data-label="Sales Order">{payment.salesOrderNumber}</td><td data-label="Amount">{formatAmount(payment.paymentAmount)}</td><td data-label="Mode">{payment.paymentMode || '—'}</td><td data-label="Screenshot">{payment.screenshotUrl ? <a className="payment-proof-link" href={payment.screenshotUrl} target="_blank" rel="noreferrer">View screenshot ↗</a> : '—'}</td><td data-label="Added">{new Date(payment.createdAt).toLocaleDateString()}</td><td data-label="Actions / Status" className="payment-status-cell">{isAccounts && payment.status === 'Pending' ? <button className="btn payment-approve" type="button" onClick={() => void setStatus(payment.id, 'Payment Received')}>Mark Payment Received</button> : <span className={payment.status === 'Payment Received' ? 'payment-status received' : 'payment-status pending'}>{payment.status}</span>}</td></tr>)}</tbody></table></div>}
+      {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you add the first record.</span></div> : <div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th className="payments-actions-heading">Action / Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? 'payment-row-received' : 'payment-row-pending'}><td data-label="Date">{new Date(payment.createdAt).toLocaleDateString()}</td><td data-label="Sales Order">{payment.salesOrderNumber}</td><td data-label="Customer Name">{payment.customerName}</td><td data-label="Mode">{payment.paymentMode || '—'}</td><td data-label="Amount">{formatAmount(payment.paymentAmount)}</td><td data-label="Screenshot">{payment.screenshotUrl ? <a className="payment-proof-link" href={payment.screenshotUrl} target="_blank" rel="noreferrer">View</a> : <span className="payment-no-attachment">—</span>}</td><td data-label="Action / Status" className="payment-status-cell">{isAccounts ? <select className={`payment-status-select ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Payment Received</option></select> : <span className={`payment-status ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} title="Status is read-only for Admin">{payment.status}</span>}</td></tr>)}</tbody></table></div>}
     </div>
     {isAdmin && open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={() => setOpen(false)}>×</button></div>
       <form className="payment-form" onSubmit={addPayment}>
