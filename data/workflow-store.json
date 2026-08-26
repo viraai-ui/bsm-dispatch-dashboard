@@ -17886,7 +17886,7 @@
       "salesOrderId": "1154219000036006017",
       "salesOrderNumber": "SO-07811",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-26T05:02:16.946Z",
       "processedOrder": {
         "id": "1154219000036006017",
@@ -18042,7 +18042,8 @@
           "dispatchNote": "local",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035985020": {
       "salesOrderId": "1154219000035985020",
@@ -18273,7 +18274,7 @@
           "zohoBackupSyncedAt": "2026-08-26T05:15:44.239Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000036050001": {
       "salesOrderId": "1154219000036050001",
