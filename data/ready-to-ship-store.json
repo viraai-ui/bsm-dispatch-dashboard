@@ -4196,6 +4196,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036007594": {
+      "id": "ship-1787748372916-ymskq",
+      "itemId": "1154219000036007594",
+      "orderId": "1154219000036007594",
+      "machineId": "1154219000036007594-1154219000036007597-1",
+      "salesOrderNumber": "SO-07799",
+      "customerName": "NEW SAHELI CHAPPAL",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Jai Road Lines",
+      "transporterPhone": "9454638687",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-26",
+      "notes": "",
+      "shippedAt": "2026-08-26T12:46:12.916Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
