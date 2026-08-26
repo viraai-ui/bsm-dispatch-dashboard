@@ -701,7 +701,7 @@
       "salesOrderNumber": "SO-07813",
       "status": "open",
       "customerName": "ACME CORP (GHAZIABAD)",
-      "shippingAddress": "H-61, Durga Industrial park,near rajender nagar metro station, Sahibabad, Ghaziabad, Uttar Pradesh 201005, Ghaziabad, Uttar Pradesh, 201010, India",
+      "shippingAddress": "H-61, Durga Industrial park,near rajender nagar metro station, Sahibabad,, Ghaziabad, Uttar Pradesh, 201005, India",
       "salesperson": "Karan Singh",
       "deliveryDate": "2026-08-25",
       "dashboardStatus": "Not Generated",
@@ -712,8 +712,8 @@
           "itemName": "Hotmelt Roller Coater (16 inch)",
           "sku": "831-2",
           "description": "",
-          "quantity": 5,
-          "pendingQuantity": 5,
+          "quantity": 4,
+          "pendingQuantity": 4,
           "woodenPackingRequired": true,
           "dispatchCategory": "machine"
         }
@@ -785,27 +785,6 @@
         {
           "id": "1154219000035985020-1154219000035985023-4",
           "unitNumber": 4,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035985020",
-          "lineItemId": "1154219000035985023",
-          "itemName": "Hotmelt Roller Coater (16 inch)",
-          "sku": "831-2",
-          "customerName": "ACME CORP (GHAZIABAD)",
-          "salesOrderNumber": "SO-07813",
-          "deliveryDate": "2026-08-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035985020-1154219000035985023-5",
-          "unitNumber": 5,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000035985020",
@@ -4885,8 +4864,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-26T11:32:23.729Z",
-  "lastAttemptAt": "2026-08-26T11:34:01.843Z",
+  "lastSuccessfulSyncAt": "2026-08-26T11:34:26.085Z",
+  "lastAttemptAt": "2026-08-26T11:34:26.085Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
