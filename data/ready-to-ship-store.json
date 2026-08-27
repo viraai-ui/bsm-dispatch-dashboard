@@ -4289,6 +4289,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036072005": {
+      "id": "ship-1787816684675-apu1u",
+      "itemId": "1154219000036072005",
+      "orderId": "1154219000036072005",
+      "machineId": "1154219000036072005-1154219000036072008-1",
+      "salesOrderNumber": "SO-07823",
+      "customerName": "Unisole India Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK7504",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-27",
+      "notes": "",
+      "shippedAt": "2026-08-27T07:44:44.675Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
