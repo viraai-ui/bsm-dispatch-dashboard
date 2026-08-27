@@ -13502,6 +13502,63 @@
       "machineIds": [
         "1154219000036103087-1154219000036103092-1"
       ]
+    },
+    "1154219000036051008": {
+      "completedAt": "2026-08-27T11:04:08.282Z",
+      "order": {
+        "id": "1154219000036051008",
+        "zohoSalesOrderId": "1154219000036051008",
+        "salesOrderNumber": "SO-07817",
+        "status": "open",
+        "customerName": "Sunil Prabhulal Chauhan",
+        "shippingAddress": "Chandervdai nagar, CC Road, Jawar ki nadi, (Roshni Photo Studio), Ajmer, Rajasthan, 305202, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036080009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036051008-1154219000036080009-1",
+            "unitNumber": 1,
+            "serialNumber": "26271071",
+            "qrToken": "26271071",
+            "orderId": "1154219000036051008",
+            "lineItemId": "1154219000036080009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "Sunil Prabhulal Chauhan",
+            "salesOrderNumber": "SO-07817",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000036051008-1154219000036080009-1"
+      ]
     }
   }
 }
