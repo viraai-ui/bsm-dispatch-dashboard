@@ -19180,7 +19180,9 @@
     "1154219000036051008": {
       "salesOrderId": "1154219000036051008",
       "salesOrderNumber": "SO-07817",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-27T05:49:09.019Z",
       "processedOrder": {
         "id": "1154219000036051008",
         "zohoSalesOrderId": "1154219000036051008",
@@ -19208,8 +19210,8 @@
           {
             "id": "1154219000036051008-1154219000036080009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271071",
+            "qrToken": "26271071",
             "orderId": "1154219000036051008",
             "lineItemId": "1154219000036080009",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -19217,14 +19219,17 @@
             "customerName": "Sunil Prabhulal Chauhan",
             "salesOrderNumber": "SO-07817",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -19237,7 +19242,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T05:46:57.186Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-27T05:47:00.392Z"
+          "zohoBackupQueuedAt": "2026-08-27T05:47:00.392Z",
+          "processedAt": "2026-08-27T05:49:09.019Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
