@@ -73,7 +73,7 @@ export default function PublicPaymentForm() {
     try {
       let screenshotKey = '', screenshotUrl = '', screenshotName = ''
       if (file) {
-        const targetResponse = await fetch('/api/public/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, submissionToken: token }) })
+        const targetResponse = await fetch('/api/public/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber: selected.salesOrderNumber, submissionToken: token }) })
         const targetJson: Api<{ key: string; uploadUrl: string; publicUrl: string; uploadContentType: string }> = await targetResponse.json().catch(() => ({} as Api<never>))
         if (!targetResponse.ok || !targetJson.data) throw new Error(targetJson.error || 'Could not prepare screenshot upload')
         const upload = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': targetJson.data.uploadContentType }, body: file }).catch(() => null)

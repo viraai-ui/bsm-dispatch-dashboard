@@ -13,6 +13,19 @@ const SERVICE = 's3'
 const CORS_ORIGIN = 'https://dispatch.bsmindia.com'
 const R2_REQUEST_TIMEOUT_MS = 10_000
 let corsRepairInFlight: Promise<void> | null = null
+let corsReadyUntil = 0
+export const R2_VIDEO_MAX_BYTES = 250 * 1024 * 1024
+export const R2_DOCUMENT_MAX_BYTES = 15 * 1024 * 1024
+export type R2ObjectMetadata = { exists: boolean; contentType: string; contentLength: number; etag: string | null }
+const ALLOWED_PREFIXES = ['media-proof/', 'payments/'] as const
+
+/** Allows persisted legacy spaces while rejecting traversal and unsafe bytes. */
+export function isSafeR2Key(key: string, prefixes: readonly string[] = ALLOWED_PREFIXES) {
+  if (!key || key.length > 900 || !prefixes.some((prefix) => key.startsWith(prefix))) return false
+  if (key.includes('\\') || /[\0-\x1f\x7f]/.test(key)) return false
+  const segments = key.split('/')
+  return segments.length > 1 && segments.every((segment) => segment.length > 0 && segment !== '.' && segment !== '..')
+}
 
 function r2Config() {
   const accountId = process.env.R2_ACCOUNT_ID || ''
@@ -29,11 +42,11 @@ export function r2Configured() {
   return Boolean(process.env.R2_ACCOUNT_ID && process.env.R2_ACCESS_KEY_ID && process.env.R2_SECRET_ACCESS_KEY && process.env.R2_BUCKET)
 }
 
-export function buildR2Key(parts: { salesOrderNumber: string; machineName: string; machineId: string; originalName: string; mimeType: string }) {
+export function buildR2Key(parts: { salesOrderNumber: string; machineName: string; machineId: string; originalName: string; mimeType: string; stage?: 'packing' | 'loading' | 'shipment' }) {
   const extension = parts.originalName.includes('.') ? parts.originalName.split('.').pop() : mimeExtension(parts.mimeType)
   const date = new Date().toISOString().slice(0, 10)
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
-  return ['media-proof', date, safeSegment(parts.salesOrderNumber), `${safeSegment(parts.machineName)}-${safeSegment(parts.machineId)}-${stamp}${extension ? `.${extension}` : ''}`].join('/')
+  return ['media-proof', parts.stage || 'packing', date, safeSegment(parts.salesOrderNumber), safeSegment(parts.machineId), `${safeSegment(parts.machineName)}-${stamp}${extension ? `.${safeSegment(extension)}` : ''}`].join('/')
 }
 
 export function createR2UploadTarget(key: string, contentType: string, expiresInSeconds = 900, retentionDays = 30): R2UploadTarget {
@@ -129,13 +142,20 @@ export async function checkR2BrowserCors(uploadUrl: string) {
 }
 
 export async function ensureR2BrowserCors(uploadUrl: string) {
+  if (corsReadyUntil > Date.now()) return { corsReady: true as const, cached: true as const }
   const initial = await checkR2BrowserCors(uploadUrl)
-  if (initial.corsReady) return initial
+  if (initial.corsReady) { corsReadyUntil = Date.now() + 5 * 60_000; return initial }
   await ensureR2Cors()
-  return checkR2BrowserCors(uploadUrl)
+  const repaired = await checkR2BrowserCors(uploadUrl)
+  if (repaired.corsReady) corsReadyUntil = Date.now() + 5 * 60_000
+  return repaired
 }
 
 export function createR2ViewUrl(key: string, expiresInSeconds = 3600) {
+  return createR2SignedUrl(key, 'GET', expiresInSeconds)
+}
+
+function createR2SignedUrl(key: string, method: 'GET' | 'HEAD', expiresInSeconds: number) {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
   const amzDate = toAmzDate(now)
@@ -153,14 +173,37 @@ export function createR2ViewUrl(key: string, expiresInSeconds = 3600) {
   }
   const canonicalQuery = canonicalQueryString(query)
   const canonicalHeaders = `host:${host}\n`
-  const canonicalRequest = ['GET', canonicalUri, canonicalQuery, canonicalHeaders, 'host', 'UNSIGNED-PAYLOAD'].join('\n')
+  const canonicalRequest = [method, canonicalUri, canonicalQuery, canonicalHeaders, 'host', 'UNSIGNED-PAYLOAD'].join('\n')
   const stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, sha256Hex(canonicalRequest)].join('\n')
   const signature = hmacHex(signingKey(secretAccessKey, dateStamp), stringToSign)
   return `${endpoint}${canonicalUri}?${canonicalQuery}&X-Amz-Signature=${signature}`
 }
 
+export async function headR2Object(key: string): Promise<R2ObjectMetadata> {
+  if (!isSafeR2Key(key)) throw new Error('Invalid R2 object key')
+  const response = await fetch(createR2SignedUrl(key, 'HEAD', 60), { method: 'HEAD', cache: 'no-store', signal: AbortSignal.timeout(R2_REQUEST_TIMEOUT_MS) })
+  if (response.status === 404) return { exists: false, contentType: '', contentLength: 0, etag: null }
+  if (!response.ok) throw new Error(`Cloudflare R2 HEAD failed: HTTP ${response.status}`)
+  const length = Number(response.headers.get('content-length'))
+  return { exists: true, contentType: (response.headers.get('content-type') || '').split(';')[0].trim().toLowerCase(), contentLength: Number.isSafeInteger(length) && length >= 0 ? length : -1, etag: response.headers.get('etag') }
+}
+
+export async function verifyR2Object(key: string, options: { prefixes: readonly string[]; expectedTypes: readonly string[]; maxBytes: number; order?: string; machineId?: string; stage?: string }) {
+  if (!isSafeR2Key(key, options.prefixes)) throw new Error('Invalid R2 object key')
+  const segments = key.split('/')
+  if (options.stage && segments[1] !== options.stage) throw new Error('Upload key does not match this workflow stage')
+  if (options.order && !segments.includes(safeSegment(options.order))) throw new Error('Upload key does not match this sales order')
+  if (options.machineId && !segments.includes(safeSegment(options.machineId))) throw new Error('Upload key does not match this machine')
+  const metadata = await headR2Object(key)
+  if (!metadata.exists) throw new Error('Uploaded object was not found')
+  if (metadata.contentLength <= 0 || metadata.contentLength > options.maxBytes) throw new Error('Uploaded object exceeds the allowed size or is empty')
+  if (!options.expectedTypes.some((type) => type.endsWith('/') ? metadata.contentType.startsWith(type) : metadata.contentType === type)) throw new Error('Uploaded object has an unsupported content type')
+  return metadata
+}
+
 export async function deleteR2Object(key: string | null | undefined) {
   if (!key) return false
+  if (!isSafeR2Key(key)) throw new Error('Invalid R2 object key')
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
   const amzDate = toAmzDate(now)
@@ -188,7 +231,7 @@ export async function deleteR2Object(key: string | null | undefined) {
 }
 
 function mediaExpiresAt(now: Date, days = 30) { return new Date(now.getTime() + days * 24 * 60 * 60 * 1000).toISOString() }
-function safeSegment(value: string) { return value.replace(/[^a-zA-Z0-9._ -]/g, '').replace(/\s+/g, ' ').trim().slice(0, 90) || 'video' }
+function safeSegment(value: string) { return value.trim().replace(/[^a-zA-Z0-9._-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'video' }
 function mimeExtension(type: string) { if (type.includes('mp4')) return 'mp4'; if (type.includes('quicktime')) return 'mov'; if (type.includes('webm')) return 'webm'; return '' }
 function toAmzDate(date: Date) { return date.toISOString().replace(/[:-]|\.\d{3}/g, '') }
 function sha256Hex(value: string) { return crypto.createHash('sha256').update(value).digest('hex') }

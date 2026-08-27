@@ -1,6 +1,7 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { addTransporter, deleteTransporter, listReadyToShipItems, processShipment, readTransportersStore, updateTransporter } from '@/lib/ready-to-ship'
+import { R2_DOCUMENT_MAX_BYTES, verifyR2Object } from '@/lib/r2'
 
 export async function GET() {
   const auth = await requireUser(['Admin', 'Operations'])
@@ -24,6 +25,14 @@ export async function POST(request: Request) {
       return apiOk({ transporter: await updateTransporter({ id: String(body.id || ''), name: String(body.name || ''), phone: String(body.phone || ''), notes: String(body.notes || '') }) })
     }
     if (body.action === 'process_shipment') {
+      let lrCopy = null
+      if (body.lrCopy && typeof body.lrCopy === 'object') {
+        const item = (await listReadyToShipItems()).find((candidate) => candidate.id === String(body.itemId || ''))
+        if (!item) return apiError('Ready-to-ship item not found', 404)
+        const key = String(body.lrCopy.r2Key || '')
+        const metadata = await verifyR2Object(key, { prefixes: ['media-proof/'], expectedTypes: ['image/', 'application/pdf'], maxBytes: R2_DOCUMENT_MAX_BYTES, order: item.salesOrderNumber, machineId: 'shipment-lr-builty', stage: 'shipment' })
+        lrCopy = { name: String(body.lrCopy.name || '').slice(0, 180), type: metadata.contentType, url: `/api/r2/view?key=${encodeURIComponent(key)}`, r2Key: key, expiresAt: null }
+      }
       return apiOk({ shipment: await processShipment({
         itemId: String(body.itemId || ''),
         vehicleNumber: String(body.vehicleNumber || ''),
@@ -38,7 +47,7 @@ export async function POST(request: Request) {
         salespersonPhone: String(body.salespersonPhone || ''),
         sendWhatsapp: Boolean(body.sendWhatsapp),
         shipmentType: body.shipmentType === 'transporter' ? 'transporter' : 'direct',
-        lrCopy: body.lrCopy && typeof body.lrCopy === 'object' ? { name: String(body.lrCopy.name || ''), type: String(body.lrCopy.type || ''), url: String(body.lrCopy.url || ''), r2Key: body.lrCopy.r2Key ? String(body.lrCopy.r2Key) : undefined, expiresAt: body.lrCopy.expiresAt ? String(body.lrCopy.expiresAt) : null } : null,
+        lrCopy,
       }) })
     }
     return apiError('Unknown Ready to Ship action', 400)

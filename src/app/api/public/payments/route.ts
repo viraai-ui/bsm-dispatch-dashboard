@@ -4,6 +4,8 @@ import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPublicPayment, listPayments, type PaymentMode } from '@/lib/payments'
 import { checkRateLimit, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
+import { verifyR2Object } from '@/lib/r2'
+import { PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -68,6 +70,7 @@ export async function POST(request: Request) {
   try {
     const order = (await listPaymentOpenSalesOrders(false)).find((item) => item.id === orderId && item.salesOrderNumber === salesOrderNumber)
     if (!order) return publicApiHeaders(apiError('Sales order is no longer open. Please select another.', 400))
+    if (screenshotKey) await verifyR2Object(screenshotKey, { prefixes: ['payments/public/'], expectedTypes: ['image/'], maxBytes: PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES, order: order.salesOrderNumber })
     const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, screenshotKey, screenshotUrl, screenshotName }, idempotencyKey)
     if (!result.duplicate) {
       await createPaymentNotifications(result.payment, 'public-salesman').catch((error) => console.error('Public payment notification failed', error))

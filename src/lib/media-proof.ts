@@ -4,7 +4,7 @@ import { githubReadJson, githubStoreConfigured, githubWriteJson, listProcessedOr
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 import { isMachineLineItem } from './item-classification'
-import { buildR2Key, r2Configured, uploadBufferToR2 } from './r2'
+import { buildR2Key, deleteR2Object, R2_VIDEO_MAX_BYTES, r2Configured, uploadBufferToR2, verifyR2Object } from './r2'
 import { isLocallyTerminal } from './operational-orders'
 
 export type MediaStage = 'packing' | 'loading'
@@ -48,9 +48,7 @@ function stageLabel(stage: MediaStage) { return stage === 'loading' ? 'loading v
 export async function readMediaProofStore(stage: MediaStage = 'packing') {
   const path = mediaPath(stage)
   const { data } = await githubReadJson<MediaProofStore>(path, { records: {} })
-  const cleaned = await cleanupExpiredMediaProofStore({ records: data.records || {} })
-  if (cleaned.changed && githubStoreConfigured()) await githubWriteJson(path, cleaned.store, `Cleanup expired ${stageLabel(stage)} files`)
-  return { records: cleaned.store.records || {} }
+  return { records: data.records || {} }
 }
 
 export async function cleanupExpiredMediaProofs(stage: MediaStage = 'packing') {
@@ -199,7 +197,9 @@ export async function registerWorkDriveVideo(order: Order, machineId: string, up
 }
 
 export async function registerR2Video(order: Order, machineId: string, upload: { name: string; type: string; key: string; url: string; expiresAt?: string | null }, stage: MediaStage = 'packing') {
-  return registerStoredVideo(order, machineId, { name: upload.name, type: upload.type, fileId: null, url: upload.url, key: upload.key, expiresAt: upload.expiresAt, provider: 'r2' }, stage)
+  const expectedMachine = stage === 'loading' ? LOADING_ORDER_UNIT_ID : machineId
+  const metadata = await verifyR2Object(upload.key, { prefixes: ['media-proof/'], expectedTypes: ['video/'], maxBytes: R2_VIDEO_MAX_BYTES, order: order.salesOrderNumber, machineId: expectedMachine, stage })
+  return registerStoredVideo(order, machineId, { name: upload.name.slice(0, 180), type: metadata.contentType, fileId: null, url: `/api/r2/view?key=${encodeURIComponent(upload.key)}`, key: upload.key, expiresAt: null, provider: 'r2' }, stage)
 }
 
 export async function deleteMediaVideo(order: Order, machineId: string, videoId: string, stage: MediaStage = 'packing') {
@@ -209,6 +209,8 @@ export async function deleteMediaVideo(order: Order, machineId: string, videoId:
   if (!record) throw new Error(`No ${stageLabel(stage)} record found for this order`)
   const unit = record.units[machineId]
   if (!unit) throw new Error('Video not found')
+  const deleting = (unit.videos || []).find((video) => video.id === videoId)
+  if (deleting?.r2Key) await deleteR2Object(deleting.r2Key)
   const nextVideos = (unit.videos || []).filter((video) => video.id !== videoId)
   if (nextVideos.length === (unit.videos || []).length) throw new Error('Video not found')
   record.units[machineId] = { ...unit, videos: nextVideos }

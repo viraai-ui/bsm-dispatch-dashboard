@@ -227,7 +227,7 @@ function uploadBlobToR2(uploadUrl: string, file: File, contentType: string, onPr
     xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.max(1, Math.min(95, Math.round((event.loaded / event.total) * 100)))) }
     xhr.onload = () => { window.clearTimeout(timeout); if (xhr.status >= 200 && xhr.status < 300) { onProgress(100); resolve() } else reject(new Error(`Cloudflare R2 upload failed: HTTP ${xhr.status}. Please try again.`)) }
     xhr.onerror = () => { window.clearTimeout(timeout); reject(new Error('Upload failed due to network connection. Please try again on stronger internet.')) }
-    xhr.onabort = () => window.clearTimeout(timeout)
+    xhr.onabort = () => { window.clearTimeout(timeout); reject(new Error('Upload was cancelled or timed out. Please retry.')) }
     xhr.send(file)
   })
 }

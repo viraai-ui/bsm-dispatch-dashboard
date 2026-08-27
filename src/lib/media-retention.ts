@@ -43,12 +43,14 @@ export async function cleanupExpiredMediaProofStore(store: MediaProofStore, now 
         const expired = isMediaExpired(normalized, now)
         if (!file.expiresAt) changed = true
         if (expired) {
-          orderTouched = true
-          changed = true
-          result.removedFiles += 1
-          const deleted = await deleteStoredMedia(normalized)
-          if (deleted) result.errors.push(deleted)
-          continue
+          const deletionError = await deleteStoredMedia(normalized)
+          if (!deletionError) {
+            orderTouched = true
+            changed = true
+            result.removedFiles += 1
+            continue
+          }
+          result.errors.push(`${normalized.r2Key || normalized.id}: ${deletionError}`)
         }
         if (normalized.kind === 'photo') photos.push(normalized)
         else videos.push(normalized)

@@ -27,7 +27,7 @@ export async function POST(request: Request) {
       if (!type.startsWith('image/') && type !== 'application/pdf') return apiError('Only image or PDF files are allowed', 400)
     } else if (!type.startsWith('video/')) return apiError('Only video files are allowed', 400)
 
-    const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: shipmentDocument ? 'Shipment LR Builty' : machine?.itemName || 'Loading Video', machineId: shipmentDocument ? 'shipment-lr-builty' : machineId, originalName: String(body.name || (shipmentDocument ? 'shipment-document' : 'video.mp4')), mimeType: type })
+    const key = buildR2Key({ salesOrderNumber: order.salesOrderNumber, machineName: shipmentDocument ? 'Shipment LR Builty' : machine?.itemName || 'Loading Video', machineId: shipmentDocument ? 'shipment-lr-builty' : machineId, originalName: String(body.name || (shipmentDocument ? 'shipment-document' : 'video.mp4')), mimeType: type, stage })
     const target = createR2UploadTarget(key, type, 900, shipmentDocument ? 60 : 30)
     const cors = await ensureR2BrowserCors(target.uploadUrl)
     if (!cors.corsReady) return apiError(cors.corsError, 503)

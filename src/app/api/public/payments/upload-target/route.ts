@@ -19,7 +19,9 @@ export async function POST(request: Request) {
   if (!image) return publicApiHeaders(apiError('Only JPEG, PNG, WebP, HEIC or HEIF images are allowed', 400))
   if (!Number.isSafeInteger(size) || size <= 0 || size > PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES) return publicApiHeaders(apiError('Screenshot must be a non-empty image up to 10 MB', 400))
   try {
-    const key = `payments/public/${new Date().toISOString().slice(0, 10)}/${Date.now()}-${crypto.randomUUID()}-${safe(name.replace(/\.[^.]+$/, ''))}.${image.extension}`
+    const salesOrderNumber = safe(String(body.salesOrderNumber || ''))
+    if (salesOrderNumber === 'payment') return publicApiHeaders(apiError('Sales order number is required', 400))
+    const key = `payments/public/${salesOrderNumber}/${new Date().toISOString().slice(0, 10)}/${Date.now()}-${crypto.randomUUID()}-${safe(name.replace(/\.[^.]+$/, ''))}.${image.extension}`
     const target = createR2UploadTarget(key, image.mimeType, 300, 3650)
     const cors = await ensureR2BrowserCors(target.uploadUrl)
     if (!cors.corsReady) return publicApiHeaders(apiError(cors.corsError, 503))

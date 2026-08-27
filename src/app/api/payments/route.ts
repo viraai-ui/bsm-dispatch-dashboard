@@ -3,6 +3,8 @@ import { requireUser } from '@/lib/auth'
 import { createPayment, listPayments, updatePaymentStatus, type PaymentMode, type PaymentStatus } from '@/lib/payments'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
+import { verifyR2Object } from '@/lib/r2'
+import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -36,7 +38,12 @@ export async function POST(request: Request) {
   if (!Number.isFinite(paymentAmount) || paymentAmount <= 0) return apiError('Payment amount must be greater than zero', 400)
   if (!PAYMENT_MODES.includes(paymentMode)) return apiError('Invalid payment mode', 400)
   try {
-    const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, screenshotUrl, screenshotKey, screenshotName, createdBy: auth.user.id })
+    let normalizedScreenshotUrl = screenshotUrl
+    if (screenshotKey) {
+      await verifyR2Object(screenshotKey, { prefixes: ['payments/'], expectedTypes: ['image/'], maxBytes: INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, order: salesOrderNumber })
+      normalizedScreenshotUrl = `/api/r2/view?key=${encodeURIComponent(screenshotKey)}`
+    }
+    const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, screenshotUrl: normalizedScreenshotUrl, screenshotKey, screenshotName, createdBy: auth.user.id })
     await createPaymentNotifications(payment, auth.user.id).catch((error) => console.error('Payment created but in-app notification failed', error))
     await notifyAccountsOfNewPayment(payment).catch((error) => console.error('Payment created but notification failed', error))
     return apiOk({ payment })
