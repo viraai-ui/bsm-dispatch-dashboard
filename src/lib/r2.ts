@@ -81,6 +81,7 @@ export async function uploadBufferToR2(key: string, contentType: string, buffer:
     headers: { 'content-type': contentType || 'application/octet-stream' },
     body: new Uint8Array(buffer),
     cache: 'no-store',
+    signal: AbortSignal.timeout(R2_REQUEST_TIMEOUT_MS),
   })
   if (!response.ok) throw new Error(`Cloudflare R2 upload failed: HTTP ${response.status}`)
   return target
@@ -224,6 +225,7 @@ export async function deleteR2Object(key: string | null | undefined) {
       'x-amz-date': amzDate,
     },
     cache: 'no-store',
+    signal: AbortSignal.timeout(R2_REQUEST_TIMEOUT_MS),
   })
   if (response.status === 404) return false
   if (!response.ok) throw new Error(`Cloudflare R2 delete failed: HTTP ${response.status}`)
