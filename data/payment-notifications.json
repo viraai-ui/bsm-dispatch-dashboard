@@ -1,28 +1,6 @@
 {
   "notifications": [
     {
-      "id": "payment-notification-50b08f84-4a25-4af0-950e-b669d59d5171",
-      "type": "payment-created",
-      "recipientUserId": "u-admin",
-      "paymentId": "payment-21067e06-c97b-4c1b-910c-e494de4f89eb",
-      "salesOrderNumber": "SO-07826",
-      "customerName": "AASHI VENTURE PRIVATE LIMITED",
-      "paymentAmount": 20000,
-      "createdAt": "2026-08-27T08:34:31.469Z",
-      "readAt": null
-    },
-    {
-      "id": "payment-notification-1b4ece28-a4fd-47e9-9098-4d3cb20e58a5",
-      "type": "payment-created",
-      "recipientUserId": "u-accounts",
-      "paymentId": "payment-21067e06-c97b-4c1b-910c-e494de4f89eb",
-      "salesOrderNumber": "SO-07826",
-      "customerName": "AASHI VENTURE PRIVATE LIMITED",
-      "paymentAmount": 20000,
-      "createdAt": "2026-08-27T08:34:31.469Z",
-      "readAt": null
-    },
-    {
       "id": "payment-notification-6ca1aa34-6e6b-4e15-9d0e-d2e345ee59c7",
       "type": "payment-created",
       "recipientUserId": "u-admin",
