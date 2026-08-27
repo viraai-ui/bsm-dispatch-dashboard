@@ -18958,7 +18958,9 @@
     "1154219000036072005": {
       "salesOrderId": "1154219000036072005",
       "salesOrderNumber": "SO-07823",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-27T05:03:53.247Z",
       "processedOrder": {
         "id": "1154219000036072005",
         "zohoSalesOrderId": "1154219000036072005",
@@ -18986,8 +18988,8 @@
           {
             "id": "1154219000036072005-1154219000036072008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271068",
+            "qrToken": "26271068",
             "orderId": "1154219000036072005",
             "lineItemId": "1154219000036072008",
             "itemName": "Flesh trimming Machine",
@@ -18995,14 +18997,17 @@
             "customerName": "Unisole India Pvt Ltd",
             "salesOrderNumber": "SO-07823",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -19015,7 +19020,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T05:01:45.792Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-27T05:01:49.252Z"
+          "zohoBackupQueuedAt": "2026-08-27T05:01:49.252Z",
+          "processedAt": "2026-08-27T05:03:53.247Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
