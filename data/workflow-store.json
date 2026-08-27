@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271071,
+  "serialCounter": 26271072,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -19256,6 +19256,77 @@
         }
       },
       "dispatchSortOrder": 3
+    },
+    "1154219000036058005": {
+      "salesOrderId": "1154219000036058005",
+      "salesOrderNumber": "SO-07827",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036058005",
+        "zohoSalesOrderId": "1154219000036058005",
+        "salesOrderNumber": "SO-07827",
+        "status": "open",
+        "customerName": "SHAKUN INDUSTRIES",
+        "shippingAddress": "P-09, STREET-12, SECTOR-3, RELIANCE MODEL ECONOMIC TOWNSHIP, DADRI TOE, JHAJJAR GURGAON, HARYANA, Jhajjar, Haryana, 124105",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036058008",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036058009",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036058005-1154219000036058008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036058005",
+            "lineItemId": "1154219000036058008",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "SHAKUN INDUSTRIES",
+            "salesOrderNumber": "SO-07827",
+            "deliveryDate": "2026-08-27",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036058005-1154219000036058008-1": {
+          "machineUnitId": "1154219000036058005-1154219000036058008-1",
+          "lineItemId": "1154219000036058008",
+          "serialNumber": "26271072",
+          "qrToken": "26271072",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
