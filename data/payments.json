@@ -1,6 +1,22 @@
 {
   "payments": [
     {
+      "customerName": "Nepal Jutta Factory Pvt Ltd",
+      "salesOrderNumber": "SO-07812",
+      "paymentAmount": 56200,
+      "paymentMode": "Bank Transfer",
+      "screenshotKey": "payments/public/SO-07812/2026-08-27/1787829420736-e1b4e248-e455-435d-b134-c680b97261e2-WhatsApp-Image-2026-08-27-at-4.43.27-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07812%2F2026-08-27%2F1787829420736-e1b4e248-e455-435d-b134-c680b97261e2-WhatsApp-Image-2026-08-27-at-4.43.27-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-08-27 at 4.43.27 PM.jpeg",
+      "publicDeleteTokenHash": "def384035ed24764475b3f6960d0de1408ee0a92f46e2596604825cdae757421",
+      "id": "payment-06af8d57-9596-4022-80bb-6ff50ce9f3b3",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "16663d4d9dde46dd91a53bf1ea6d2d5a",
+      "createdAt": "2026-08-27T11:17:02.675Z",
+      "updatedAt": "2026-08-27T11:17:02.675Z"
+    },
+    {
       "customerName": "KC ARTS",
       "salesOrderNumber": "SO-07832",
       "paymentAmount": 5000,
