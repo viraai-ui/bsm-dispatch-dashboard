@@ -4475,6 +4475,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036051008": {
+      "id": "ship-1787832793696-3d6cm",
+      "itemId": "1154219000036051008",
+      "orderId": "1154219000036051008",
+      "machineId": "1154219000036051008-1154219000036080009-1",
+      "salesOrderNumber": "SO-07817",
+      "customerName": "Sunil Prabhulal Chauhan",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-27",
+      "notes": "",
+      "shippedAt": "2026-08-27T12:13:13.696Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
