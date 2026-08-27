@@ -34,7 +34,8 @@ test('payment amount has no number controls and proof upload supports PDF', asyn
 
   assert.ok(amountInput, 'payment amount should use a decimal text input')
   assert.doesNotMatch(amountInput, /type="number"/)
-  assert.match(client, /Add screenshot or PDF/)
-  assert.match(client, /application\/pdf,\.pdf/)
+  assert.match(client, /Add images or PDFs/)
+  assert.match(client, /<input ref=\{fileInputRef\} required type="file" multiple accept="image\/png,image\/jpeg,image\/webp,image\/heic,image\/heif,application\/pdf,\.pdf"/)
+  assert.match(client, /files\.length < 1 \|\| files\.length > 10/)
   assert.match(css, /\.payment-field-label,\.payment-field-label \.field-help\{display:inline\}/)
 })

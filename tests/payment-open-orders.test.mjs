@@ -22,7 +22,8 @@ test('payment screenshot upload target persists directly to Cloudflare R2', asyn
   assert.match(route, /`payments\//)
   assert.match(client, /targetJson\.data\.uploadUrl/)
   assert.match(client, /targetJson\.data\.uploadContentType/)
-  assert.match(client, /screenshotKey: targetJson\.data\.key/)
+  assert.match(client, /attachments\.push\(\{ key: targetJson\.data\.key, name: file\.name \}\)/)
+  assert.match(client, /for \(let index = 0; index < files\.length; index \+= 3\)/)
 })
 
 test('payment state cannot feed operational Orders and generated workflow is durable before success', async () => {

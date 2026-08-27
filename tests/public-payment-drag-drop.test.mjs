@@ -28,15 +28,15 @@ test('drop overlay is full-screen, accessible, premium, and non-intercepting', a
 
 test('native picker and drop share normalization, state, ref, and submit path', async () => {
   const ui = await read('../src/app/submit-payment/PublicPaymentForm.tsx')
-  assert.match(ui, /onChange=\{\(e\) => attachPaymentProof\(e\.target\.files\?\.\[0\] \|\| null\)\}/)
-  assert.match(ui, /attachPaymentProof\(supported\)/)
-  assert.match(ui, /setFile\(normalized\)/)
-  assert.match(ui, /fileInputRef\.current\.files = transfer\.files/)
-  assert.match(ui, /if \(file\) \{/)
+  assert.match(ui, /onChange=\{\(e\) => attachPaymentProof\(Array\.from\(e\.target\.files \|\| \[\]\)\)\}/)
+  assert.match(ui, /attachPaymentProof\(files\)/)
+  assert.match(ui, /candidates\.map\(normalizePaymentScreenshotFile\)/)
+  assert.match(ui, /return \[\.\.\.current, \.\.\.additions\]/)
+  assert.match(ui, /current\.length \+ additions\.length > 10/)
   assert.match(ui, /body: file/)
-  assert.match(ui, /setFile\(null\)/)
+  assert.match(ui, /setFiles\(\[\]\)/)
   assert.match(ui, /fileInputRef\.current\.value = ''/)
-  assert.match(ui, /file\.name/)
+  assert.match(ui, /item\.name/)
 })
 
 test('proof normalization enforces allowlist, empty files, 10 MB, and blank Android MIME', async () => {

@@ -3,16 +3,16 @@ import test from 'node:test'
 import { readFile } from 'node:fs/promises'
 const read = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 
-test('screenshot is optional while core fields remain server validated', async () => {
+test('one to ten proofs are required while core fields remain server validated', async () => {
   const route = await read('../src/app/api/payments/route.ts')
   const client = await read('../src/components/PaymentsClient.tsx')
   const store = await read('../src/lib/payments.ts')
   assert.match(route, /if \(!customerName \|\| !salesOrderNumber\)/)
   assert.match(route, /paymentAmount <= 0/)
   assert.match(route, /PAYMENT_MODES\.includes/)
-  assert.doesNotMatch(route, /!screenshotUrl \|\| !screenshotKey/)
-  assert.match(client, /if \(file\) \{/)
-  assert.doesNotMatch(client, /<input required type="file"/)
+  assert.match(route, /requested\.length < 1 \|\| requested\.length > 10/)
+  assert.match(client, /files\.length < 1 \|\| files\.length > 10/)
+  assert.match(client, /required type="file" multiple/)
   assert.match(store, /screenshotUrl\?: string/)
 })
 

@@ -3,7 +3,7 @@ import { requireUser } from '@/lib/auth'
 import { createPayment, listPayments, paymentAttachments, updatePaymentStatus, type PaymentAttachment, type PaymentMode, type PaymentStatus } from '@/lib/payments'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
-import { verifyR2Object } from '@/lib/r2'
+import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, PAYMENT_PROOF_MIME_TYPES } from '@/lib/payment-screenshot'
 
 export const runtime = 'nodejs'
@@ -28,9 +28,10 @@ export async function POST(request: Request) {
   if (!Number.isFinite(paymentAmount) || paymentAmount <= 0) return apiError('Payment amount must be greater than zero', 400)
   if (!PAYMENT_MODES.includes(paymentMode)) return apiError('Invalid payment mode', 400)
   if (remarks.length > 500) return apiError('Remarks must be 500 characters or fewer', 400)
-  if (requested.length > 10) return apiError('Up to 10 payment proofs are allowed', 400)
+  if (requested.length < 1 || requested.length > 10) return apiError('Between 1 and 10 payment proofs are required', 400)
+  const attachments: PaymentAttachment[] = []
   try {
-    const seen = new Set<string>(); const attachments: PaymentAttachment[] = []
+    const seen = new Set<string>()
     for (const item of requested) {
       const key = text(item?.key); if (!key || seen.has(key)) return apiError('Invalid or duplicate payment proof', 400); seen.add(key)
       const metadata = await verifyR2Object(key, { prefixes: ['payments/'], expectedTypes: PAYMENT_PROOF_MIME_TYPES, maxBytes: INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, order: salesOrderNumber })
@@ -40,7 +41,10 @@ export async function POST(request: Request) {
     const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, remarks: remarks || undefined, attachments, screenshotUrl: first?.url, screenshotKey: first?.key, screenshotName: first?.name, createdBy: auth.user.id })
     await createPaymentNotifications(payment, auth.user.id).catch(console.error); await notifyAccountsOfNewPayment(payment).catch(console.error)
     return apiOk({ payment: { ...payment, attachments: paymentAttachments(payment).map((proof, index) => ({ ...proof, key: '', url: `/api/payments/${payment.id}/proof?index=${index}` })) } })
-  } catch (error) { return apiError(error instanceof Error ? error.message : 'Could not add payment', 500) }
+  } catch (error) {
+    await Promise.allSettled(attachments.map((proof) => deleteR2Object(proof.key)))
+    return apiError(error instanceof Error ? error.message : 'Could not add payment', 500)
+  }
 }
 
 export async function PATCH(request: Request) {

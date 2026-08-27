@@ -4,7 +4,7 @@ import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPublicPayment, listPayments, paymentAttachments, type PaymentAttachment, type PaymentMode } from '@/lib/payments'
 import { checkRateLimit, issuePaymentDeleteCapability, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
-import { verifyR2Object } from '@/lib/r2'
+import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { PAYMENT_PROOF_MIME_TYPES, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
 
 export const runtime = 'nodejs'
@@ -71,12 +71,13 @@ export async function POST(request: Request) {
   const remarks = value(body.remarks)
   const requested = Array.isArray(body.attachments) ? body.attachments : screenshotKey ? [{ key: screenshotKey, name: screenshotName }] : []
   if (remarks.length > 500) return publicApiHeaders(apiError('Remarks must be 500 characters or fewer', 400))
-  if (requested.length > 10) return publicApiHeaders(apiError('Up to 10 payment proofs are allowed', 400))
+  if (requested.length < 1 || requested.length > 10) return publicApiHeaders(apiError('Between 1 and 10 payment proofs are required', 400))
   if (screenshotKey && (!/^payments\/public\/[a-zA-Z0-9._/-]{1,220}$/.test(screenshotKey) || screenshotUrl !== `/api/r2/view?key=${encodeURIComponent(screenshotKey)}`)) return publicApiHeaders(apiError('Invalid screenshot reference', 400))
+  const attachments: PaymentAttachment[] = []
   try {
     const order = (await listPaymentOpenSalesOrders(false)).find((item) => item.id === orderId && item.salesOrderNumber === salesOrderNumber)
     if (!order) return publicApiHeaders(apiError('Sales order is no longer open. Please select another.', 400))
-    const seen = new Set<string>(); const attachments: PaymentAttachment[] = []
+    const seen = new Set<string>()
     for (const rawItem of requested) {
       const item = rawItem && typeof rawItem === 'object' ? rawItem as Record<string, unknown> : {}; const key = value(item.key)
       if (!key || seen.has(key) || !/^payments\/public\/[a-zA-Z0-9._/-]{1,400}$/.test(key)) return publicApiHeaders(apiError('Invalid or duplicate payment proof', 400))
@@ -86,12 +87,14 @@ export async function POST(request: Request) {
     const first = attachments[0]
     const deleteCapability = issuePaymentDeleteCapability()
     const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, remarks: remarks || undefined, attachments, screenshotKey: first?.key || screenshotKey, screenshotUrl: first?.url || screenshotUrl, screenshotName: first?.name || screenshotName, publicDeleteTokenHash: deleteCapability.hash }, idempotencyKey)
+    if (result.duplicate) await Promise.allSettled(attachments.map((proof) => deleteR2Object(proof.key)))
     if (!result.duplicate) {
       await createPaymentNotifications(result.payment, 'public-salesman').catch((error) => console.error('Public payment notification failed', error))
       await notifyAccountsOfNewPayment(result.payment).catch((error) => console.error('Public payment push failed', error))
     }
     return publicApiHeaders(apiOk({ receipt: { id: result.payment.id, salesOrderNumber: result.payment.salesOrderNumber, paymentAmount: result.payment.paymentAmount, status: result.payment.status }, deleteToken: result.duplicate ? undefined : deleteCapability.token, duplicate: result.duplicate }))
   } catch (error) {
+    await Promise.allSettled(attachments.map((proof) => deleteR2Object(proof.key)))
     return publicApiHeaders(apiError(error instanceof Error ? error.message : 'Could not submit payment', 500))
   }
 }
