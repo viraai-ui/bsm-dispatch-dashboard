@@ -21,6 +21,7 @@ test('payment screenshot upload target persists directly to Cloudflare R2', asyn
   assert.match(route, /createR2UploadTarget/)
   assert.match(route, /`payments\//)
   assert.match(client, /targetJson\.data\.uploadUrl/)
+  assert.match(client, /targetJson\.data\.uploadContentType/)
   assert.match(client, /screenshotKey: targetJson\.data\.key/)
 })
 

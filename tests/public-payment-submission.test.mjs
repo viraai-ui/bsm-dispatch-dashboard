@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { readFile } from 'node:fs/promises'
 import { issueSubmissionToken, verifySubmissionToken, sameOrigin } from '../src/lib/public-payment-security.ts'
+import { paymentScreenshotType, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '../src/lib/payment-screenshot.ts'
 
 const read = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 
@@ -41,9 +42,18 @@ test('signed token validates and origin rejects foreign sites', () => {
 
 test('public screenshot target is image-only, bounded, short-lived and isolated prefix', async () => {
   const route = await read('../src/app/api/public/payments/upload-target/route.ts')
-  assert.match(route, /image\/jpeg/); assert.match(route, /10 \* 1024 \* 1024/)
-  assert.match(route, /payments\/public\//); assert.match(route, /createR2UploadTarget\(key, type, 300/)
+  assert.match(route, /paymentScreenshotType/); assert.match(route, /PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES/)
+  assert.match(route, /payments\/public\//); assert.match(route, /createR2UploadTarget\(key, image\.mimeType, 300/)
   assert.match(route, /sameOrigin/); assert.match(route, /verifySubmissionToken/); assert.match(route, /checkRateLimit/)
+})
+
+test('mobile screenshots with blank File.type get a canonical signed PUT content type', () => {
+  assert.deepEqual(paymentScreenshotType('iphone screenshot.HEIC', ''), { mimeType: 'image/heic', extension: 'heic' })
+  assert.deepEqual(paymentScreenshotType('proof.jpeg', 'image/jpg'), { mimeType: 'image/jpeg', extension: 'jpg' })
+  assert.deepEqual(paymentScreenshotType('proof', 'image/webp; charset=binary'), { mimeType: 'image/webp', extension: 'webp' })
+  assert.equal(paymentScreenshotType('fake.png', 'image/jpeg'), null)
+  assert.equal(paymentScreenshotType('proof.pdf', ''), null)
+  assert.equal(PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES, 10 * 1024 * 1024)
 })
 
 test('public dashboard has list, read-only statuses, add form, polling and responsive cards', async () => {

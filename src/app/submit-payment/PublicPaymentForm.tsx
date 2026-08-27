@@ -74,10 +74,10 @@ export default function PublicPaymentForm() {
       let screenshotKey = '', screenshotUrl = '', screenshotName = ''
       if (file) {
         const targetResponse = await fetch('/api/public/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, submissionToken: token }) })
-        const targetJson: Api<{ key: string; uploadUrl: string; publicUrl: string }> = await targetResponse.json()
+        const targetJson: Api<{ key: string; uploadUrl: string; publicUrl: string; uploadContentType: string }> = await targetResponse.json().catch(() => ({} as Api<never>))
         if (!targetResponse.ok || !targetJson.data) throw new Error(targetJson.error || 'Could not prepare screenshot upload')
-        const upload = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': file.type }, body: file })
-        if (!upload.ok) throw new Error('Screenshot upload failed. Please try again.')
+        const upload = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': targetJson.data.uploadContentType }, body: file }).catch(() => null)
+        if (!upload?.ok) throw new Error('Screenshot upload failed. Check your connection and tap Submit Payment to retry.')
         screenshotKey = targetJson.data.key; screenshotUrl = targetJson.data.publicUrl; screenshotName = file.name
       }
       const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, screenshotKey, screenshotUrl, screenshotName, submissionToken: token, website: '' }) })

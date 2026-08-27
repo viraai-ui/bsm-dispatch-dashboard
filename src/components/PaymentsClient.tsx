@@ -184,8 +184,8 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
         const targetResponse = await fetch('/api/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber }) })
         const targetJson = await targetResponse.json().catch(() => ({}))
         if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare upload')
-        const uploadResponse = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': file.type }, body: file })
-        if (!uploadResponse.ok) throw new Error('Screenshot upload failed')
+        const uploadResponse = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': targetJson.data.uploadContentType }, body: file }).catch(() => null)
+        if (!uploadResponse?.ok) throw new Error('Screenshot upload failed. Check your connection and submit again to retry.')
         screenshot = { screenshotUrl: targetJson.data.publicUrl, screenshotKey: targetJson.data.key, screenshotName: file.name }
       }
       const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, paymentAmount: amount, paymentMode, ...screenshot }) })
