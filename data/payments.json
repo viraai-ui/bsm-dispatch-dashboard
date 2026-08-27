@@ -1,3 +1,20 @@
 {
-  "payments": []
+  "payments": [
+    {
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "salesOrderNumber": "SO-07830",
+      "paymentAmount": 17110,
+      "paymentMode": "Bank Transfer",
+      "screenshotKey": "payments/public/SO-07830/2026-08-27/1787828731972-16bd1cc7-db12-4b58-853b-eba3143cea91-26ac5221-9620-420c-8c82-bd51c443a930.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07830%2F2026-08-27%2F1787828731972-16bd1cc7-db12-4b58-853b-eba3143cea91-26ac5221-9620-420c-8c82-bd51c443a930.jpg",
+      "screenshotName": "26ac5221-9620-420c-8c82-bd51c443a930.jpg",
+      "publicDeleteTokenHash": "518ea4a2783b14421de0bce2c8df72078988dc882a3964c251d32b92a5e33028",
+      "id": "payment-5d0df1b6-d878-401a-afcb-09d4749de6b7",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "eba9da216072492c860144102d105488",
+      "createdAt": "2026-08-27T11:05:33.349Z",
+      "updatedAt": "2026-08-27T11:05:33.349Z"
+    }
+  ]
 }
