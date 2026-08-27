@@ -19414,11 +19414,13 @@
           "qrToken": "26271073",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T10:40:17.568Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-27T10:40:19.378Z",
           "processedAt": "2026-08-27T10:44:28.183Z",
           "dispatchNote": "local",
-          "vendor": "Ishu"
+          "vendor": "Ishu",
+          "zohoBackupLastAttemptAt": "2026-08-27T10:45:44.700Z",
+          "zohoBackupSyncedAt": "2026-08-27T10:45:44.700Z"
         }
       },
       "dispatchSortOrder": 1
