@@ -17,6 +17,8 @@ export type Payment = {
   createdBy: string
   /** Server-generated deduplication key for public submissions; never returned by public APIs. */
   idempotencyKey?: string
+  /** SHA-256 verifier for a public device deletion capability. Never expose publicly. */
+  publicDeleteTokenHash?: string
   createdAt: string
   updatedAt: string
 }
@@ -78,6 +80,20 @@ export async function createPublicPayment(input: Omit<Payment, 'id' | 'status' |
   })
   if (!result) throw new Error('Could not create payment')
   return { payment: result, duplicate }
+}
+
+export async function deletePendingPublicPayment(id: string, expectedDeleteTokenHash: string) {
+  let deleted: Payment | null = null
+  let outcome: 'deleted' | 'not-found' | 'forbidden' | 'received' = 'not-found'
+  await updateStore((payments) => {
+    const payment = payments.find((item) => item.id === id)
+    if (!payment) return payments
+    if (!payment.publicDeleteTokenHash || payment.publicDeleteTokenHash !== expectedDeleteTokenHash) { outcome = 'forbidden'; return payments }
+    if (payment.status !== 'Pending') { outcome = 'received'; return payments }
+    deleted = payment; outcome = 'deleted'
+    return payments.filter((item) => item.id !== id)
+  })
+  return { outcome: outcome as 'deleted' | 'not-found' | 'forbidden' | 'received', payment: deleted }
 }
 
 export async function updatePaymentStatus(id: string, status: PaymentStatus) {

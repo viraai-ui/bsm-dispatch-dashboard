@@ -44,6 +44,23 @@ export function verifySubmissionToken(token: string) {
   try { return Number(JSON.parse(Buffer.from(payload, 'base64url').toString()).exp) > Date.now() } catch { return false }
 }
 
+/** A deletion capability is deliberately unrelated to the short-lived form token. */
+export function issuePaymentDeleteCapability() {
+  const token = crypto.randomBytes(32).toString('base64url')
+  return { token, hash: hashPaymentDeleteCapability(token) }
+}
+
+export function hashPaymentDeleteCapability(token: string) {
+  return crypto.createHash('sha256').update(token, 'utf8').digest('hex')
+}
+
+export function verifyPaymentDeleteCapability(token: string, storedHash?: string) {
+  if (!token || !storedHash || !/^[a-f0-9]{64}$/.test(storedHash)) return false
+  const supplied = Buffer.from(hashPaymentDeleteCapability(token), 'hex')
+  const expected = Buffer.from(storedHash, 'hex')
+  return supplied.length === expected.length && crypto.timingSafeEqual(supplied, expected)
+}
+
 export function publicApiHeaders(response: Response) {
   response.headers.set('Cache-Control', 'no-store, max-age=0')
   response.headers.set('X-Content-Type-Options', 'nosniff')

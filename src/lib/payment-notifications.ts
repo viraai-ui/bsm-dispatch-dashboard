@@ -72,3 +72,7 @@ export async function markPaymentNotificationsRead(userId: string, id?: string) 
   await updateStore((items) => items.map((item) => item.recipientUserId === userId && !item.readAt && (!id || item.id === id) ? { ...item, readAt: now } : item))
   return listPaymentNotifications(userId)
 }
+
+export async function removePaymentNotifications(paymentId: string) {
+  return updateStore((items) => items.filter((item) => item.paymentId !== paymentId))
+}

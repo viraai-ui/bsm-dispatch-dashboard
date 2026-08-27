@@ -7,12 +7,24 @@ type Order = { id: string; salesOrderNumber: string; customerName: string }
 type Receipt = { id: string; salesOrderNumber: string; paymentAmount: number; status: 'Pending' }
 type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; hasScreenshot: boolean; proofUrl: string | null }
 type Api<T> = { ok: boolean; data?: T; error?: string }
+type Capabilities = Record<string, string>
+const CAPABILITY_KEY = 'bsm-public-payment-delete-capabilities-v1'
 const money = (amount: number | null) => amount == null ? '—' : new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(amount)
 const date = (value: string) => new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(value))
+
+function readCapabilities(): Capabilities {
+  try { const value = JSON.parse(localStorage.getItem(CAPABILITY_KEY) || '{}'); return value && typeof value === 'object' ? value : {} } catch { return {} }
+}
 
 export default function PublicPaymentForm() {
   const [payments, setPayments] = useState<Payment[]>([])
   const [listReady, setListReady] = useState(false)
+  const [capabilities, setCapabilities] = useState<Capabilities>({})
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [deleting, setDeleting] = useState<Payment | null>(null)
+  const [deleteBusy, setDeleteBusy] = useState(false)
+  const [deleteError, setDeleteError] = useState('')
+  const [toast, setToast] = useState('')
   const [open, setOpen] = useState(false)
   const [orders, setOrders] = useState<Order[]>([])
   const [token, setToken] = useState('')
@@ -26,6 +38,14 @@ export default function PublicPaymentForm() {
   const [receipt, setReceipt] = useState<Receipt | null>(null)
   const polling = useRef(false)
 
+  useEffect(() => { setCapabilities(readCapabilities()) }, [])
+  useEffect(() => {
+    const closeMenus = (event: PointerEvent) => { if (!(event.target as Element).closest('[data-payment-menu]')) setOpenMenu(null) }
+    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setOpenMenu(null); if (!deleteBusy) setDeleting(null) } }
+    document.addEventListener('pointerdown', closeMenus); document.addEventListener('keydown', escape)
+    return () => { document.removeEventListener('pointerdown', closeMenus); document.removeEventListener('keydown', escape) }
+  }, [deleteBusy])
+
   const refreshPayments = useCallback(async () => {
     if (polling.current) return
     polling.current = true
@@ -34,7 +54,7 @@ export default function PublicPaymentForm() {
       const json: Api<{ payments: Payment[] }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Could not load payments')
       setPayments(json.data.payments)
-    } catch { /* silent polling retry; avoid noisy UI */ }
+    } catch { /* silent polling retry */ }
     finally { polling.current = false; setListReady(true) }
   }, [])
 
@@ -81,23 +101,52 @@ export default function PublicPaymentForm() {
         screenshotKey = targetJson.data.key; screenshotUrl = targetJson.data.publicUrl; screenshotName = file.name
       }
       const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, screenshotKey, screenshotUrl, screenshotName, submissionToken: token, website: '' }) })
-      const json: Api<{ receipt: Receipt }> = await response.json()
+      const json: Api<{ receipt: Receipt; deleteToken?: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Payment could not be submitted')
+      if (json.data.deleteToken) {
+        const next = { ...readCapabilities(), [json.data.receipt.id]: json.data.deleteToken }
+        localStorage.setItem(CAPABILITY_KEY, JSON.stringify(next)); setCapabilities(next)
+      }
       setReceipt(json.data.receipt); await refreshPayments()
     } catch (cause) { setError(cause instanceof Error ? cause.message : 'Payment could not be submitted') }
     finally { setBusy(false) }
   }
 
+  async function deletePayment() {
+    if (!deleting) return
+    const capability = capabilities[deleting.id]
+    if (!capability) { setDeleteError('This device is not authorized to delete this payment.'); return }
+    setDeleteBusy(true); setDeleteError('')
+    try {
+      const response = await fetch(`/api/public/payments/${encodeURIComponent(deleting.id)}`, { method: 'DELETE', headers: { 'x-payment-delete-token': capability } })
+      const json: Api<{ deleted: boolean }> = await response.json().catch(() => ({} as Api<never>))
+      if (!response.ok) throw new Error(json.error || 'Could not delete payment. Please retry.')
+      setPayments((items) => items.filter((item) => item.id !== deleting.id))
+      const next = { ...capabilities }; delete next[deleting.id]
+      localStorage.setItem(CAPABILITY_KEY, JSON.stringify(next)); setCapabilities(next)
+      setOpenMenu(null); setDeleting(null); setToast('Payment deleted')
+      window.setTimeout(() => setToast(''), 2400)
+    } catch (cause) { setDeleteError(cause instanceof Error ? cause.message : 'Could not delete payment. Please retry.') }
+    finally { setDeleteBusy(false) }
+  }
+
+  const menu = (payment: Payment) => capabilities[payment.id] && payment.status === 'Pending' ? <div className={styles.menuWrap} data-payment-menu>
+    <button className={styles.menuButton} type="button" aria-label={`Actions for ${payment.salesOrderNumber}`} aria-expanded={openMenu === payment.id} onClick={() => setOpenMenu((id) => id === payment.id ? null : payment.id)}>•••</button>
+    {openMenu === payment.id && <div className={styles.menu} role="menu"><button type="button" role="menuitem" onClick={() => { setDeleting(payment); setDeleteError(''); setOpenMenu(null) }}>Delete</button></div>}
+  </div> : null
+
   return <main className={styles.shell}>
     <section className={styles.page}>
-      <header className={styles.header}><div><div className={styles.brand}><span>BSM</span><small>India</small></div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Track customer payment proofs and receipt status.</p></div><button className={styles.add} type="button" onClick={() => setOpen(true)}>+ Add Payment</button></header>
+      <header className={styles.header}><div><div className={styles.brand}><span>BSM</span><small>India</small></div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Submit customer payment proofs and wait for Accounts to confirm receipt.</p></div><button className={styles.add} type="button" onClick={() => setOpen(true)}>+ Add Payment</button></header>
       <section className={styles.listCard} aria-live="polite">
         {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
-          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th>Status</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.proofUrl ? <a href={payment.proofUrl} target="_blank" rel="noreferrer">View</a> : '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status}</span></td></tr>)}</tbody></table></div>
-          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><div><small>{date(payment.date)}</small><strong>{payment.salesOrderNumber}</strong></div><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status}</span></div><h2>{payment.customerName}</h2><dl><div><dt>Mode</dt><dd>{payment.paymentMode || '—'}</dd></div><div><dt>Amount</dt><dd>{money(payment.paymentAmount)}</dd></div></dl>{payment.proofUrl && <a className={styles.proof} href={payment.proofUrl} target="_blank" rel="noreferrer">View Screenshot ↗</a>}</article>)}</div>
+          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.proofUrl ? <a href={payment.proofUrl} target="_blank" rel="noreferrer">View</a> : '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
+          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><div><small>{date(payment.date)}</small><strong>{payment.salesOrderNumber}</strong></div><div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status}</span>{menu(payment)}</div></div><h2>{payment.customerName}</h2><dl><div><dt>Mode</dt><dd>{payment.paymentMode || '—'}</dd></div><div><dt>Amount</dt><dd>{money(payment.paymentAmount)}</dd></div></dl>{payment.proofUrl && <a className={styles.proof} href={payment.proofUrl} target="_blank" rel="noreferrer">View Screenshot ↗</a>}</article>)}</div>
         </>}
       </section>
     </section>
+    {toast && <div className={styles.toast} role="status">✓ {toast}</div>}
+    {deleting && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="delete-payment-title"><section className={`${styles.modal} ${styles.deleteModal}`}><div className={styles.deleteIcon}>!</div><h2 id="delete-payment-title">Delete payment?</h2><p>This removes the pending submission and its screenshot. This action cannot be undone.</p><dl><div><dt>Sales Order</dt><dd>{deleting.salesOrderNumber}</dd></div><div><dt>Customer</dt><dd>{deleting.customerName}</dd></div><div><dt>Amount</dt><dd>{money(deleting.paymentAmount)}</dd></div></dl>{deleteError && <p className={styles.error} role="alert">{deleteError}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} disabled={deleteBusy} onClick={() => setDeleting(null)}>Cancel</button><button type="button" className={styles.deleteButton} disabled={deleteBusy} onClick={() => void deletePayment()}>{deleteBusy ? 'Deleting…' : 'Delete Payment'}</button></div></section></div>}
     {open && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className={styles.modal}>
       {receipt ? <div className={styles.success}><button className={styles.close} onClick={close} aria-label="Close">×</button><div className={styles.successIcon}>✓</div><h2>Payment submitted</h2><p>Your payment is safely queued for approval.</p><dl><div><dt>Sales Order</dt><dd>{receipt.salesOrderNumber}</dd></div><div><dt>Amount</dt><dd>{money(receipt.paymentAmount)}</dd></div><div><dt>Status</dt><dd><span className={styles.pending}>Pending</span></dd></div></dl><button className={styles.add} onClick={again}>Submit another payment</button></div> : <><header className={styles.modalHead}><div><p className={styles.eyebrow}>New record</p><h2 id="add-payment-title">Add Payment</h2></div><button className={styles.close} type="button" onClick={close} disabled={busy} aria-label="Close">×</button></header><form onSubmit={submit} noValidate>
         <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><input value={query} onChange={(e) => { setQuery(e.target.value.toUpperCase()); setSelected(null) }} placeholder="Search SO number or customer" autoComplete="off" required />{query && !selected && matches.length > 0 && <div className={styles.suggestions}>{matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></button>)}</div>}</div>

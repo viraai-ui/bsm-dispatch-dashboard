@@ -3,7 +3,7 @@ import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPublicPayment, listPayments, type PaymentMode } from '@/lib/payments'
-import { checkRateLimit, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
+import { checkRateLimit, issuePaymentDeleteCapability, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
 import { verifyR2Object } from '@/lib/r2'
 import { PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
 
@@ -71,12 +71,13 @@ export async function POST(request: Request) {
     const order = (await listPaymentOpenSalesOrders(false)).find((item) => item.id === orderId && item.salesOrderNumber === salesOrderNumber)
     if (!order) return publicApiHeaders(apiError('Sales order is no longer open. Please select another.', 400))
     if (screenshotKey) await verifyR2Object(screenshotKey, { prefixes: ['payments/public/'], expectedTypes: ['image/'], maxBytes: PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES, order: order.salesOrderNumber })
-    const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, screenshotKey, screenshotUrl, screenshotName }, idempotencyKey)
+    const deleteCapability = issuePaymentDeleteCapability()
+    const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, screenshotKey, screenshotUrl, screenshotName, publicDeleteTokenHash: deleteCapability.hash }, idempotencyKey)
     if (!result.duplicate) {
       await createPaymentNotifications(result.payment, 'public-salesman').catch((error) => console.error('Public payment notification failed', error))
       await notifyAccountsOfNewPayment(result.payment).catch((error) => console.error('Public payment push failed', error))
     }
-    return publicApiHeaders(apiOk({ receipt: { id: result.payment.id, salesOrderNumber: result.payment.salesOrderNumber, paymentAmount: result.payment.paymentAmount, status: result.payment.status }, duplicate: result.duplicate }))
+    return publicApiHeaders(apiOk({ receipt: { id: result.payment.id, salesOrderNumber: result.payment.salesOrderNumber, paymentAmount: result.payment.paymentAmount, status: result.payment.status }, deleteToken: result.duplicate ? undefined : deleteCapability.token, duplicate: result.duplicate }))
   } catch (error) {
     return publicApiHeaders(apiError(error instanceof Error ? error.message : 'Could not submit payment', 500))
   }
