@@ -18879,7 +18879,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 6
     },
     "1154219000036047010": {
       "salesOrderId": "1154219000036047010",
@@ -19029,7 +19029,7 @@
           "zohoBackupSyncedAt": "2026-08-27T05:15:15.405Z"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 4
     },
     "1154219000036080017": {
       "salesOrderId": "1154219000036080017",
@@ -19104,7 +19104,7 @@
           "zohoBackupSyncedAt": "2026-08-27T05:45:43.215Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     },
     "1154219000036067005": {
       "salesOrderId": "1154219000036067005",
@@ -19179,13 +19179,13 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 4
+      "dispatchSortOrder": 5
     },
     "1154219000036051008": {
       "salesOrderId": "1154219000036051008",
       "salesOrderNumber": "SO-07817",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-27T05:49:09.019Z",
       "processedOrder": {
         "id": "1154219000036051008",
@@ -19251,7 +19251,8 @@
           "dispatchNote": "wooden",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
