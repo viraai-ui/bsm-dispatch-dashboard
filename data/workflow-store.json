@@ -18960,7 +18960,7 @@
           "zohoBackupSyncedAt": "2026-08-27T05:00:24.371Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000036072005": {
       "salesOrderId": "1154219000036072005",
@@ -19354,7 +19354,7 @@
       "salesOrderId": "1154219000036103087",
       "salesOrderNumber": "SO-07830",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-27T10:44:28.183Z",
       "processedOrder": {
         "id": "1154219000036103087",
@@ -19420,7 +19420,8 @@
           "dispatchNote": "local",
           "vendor": "Ishu"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
