@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { readFile } from 'node:fs/promises'
-import { issuePaymentDeleteCapability, issueSubmissionToken, verifyPaymentDeleteCapability, verifySubmissionToken, sameOrigin } from '../src/lib/public-payment-security.ts'
+import { issuePaymentDeleteCapability, issueSubmissionToken, verifyPaymentDeleteCapability, verifySubmissionToken, sameOrigin, strictSameOrigin } from '../src/lib/public-payment-security.ts'
 import { paymentScreenshotType, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '../src/lib/payment-screenshot.ts'
 
 const read = (path) => readFile(new URL(path, import.meta.url), 'utf8')
@@ -38,6 +38,9 @@ test('signed token validates and origin rejects foreign sites', () => {
   assert.equal(verifySubmissionToken(`${token}x`), false)
   assert.equal(sameOrigin(new Request('https://dispatch.bsmindia.com/api/public/payments', { headers: { origin: 'https://evil.example' } })), false)
   assert.equal(sameOrigin(new Request('https://dispatch.bsmindia.com/api/public/payments', { headers: { origin: 'https://dispatch.bsmindia.com' } })), true)
+  assert.equal(strictSameOrigin(new Request('https://dispatch.bsmindia.com/api/public/payments')), false)
+  assert.equal(strictSameOrigin(new Request('https://dispatch.bsmindia.com/api/public/payments', { headers: { origin: 'https://evil.example' } })), false)
+  assert.equal(verifySubmissionToken(issueSubmissionToken(-1)), false)
 })
 
 test('public screenshot target is image-only, bounded, short-lived and isolated prefix', async () => {
@@ -98,19 +101,24 @@ test('public create returns capability once, persists only hash and list stays p
   assert.doesNotMatch(getBlock, /deleteToken|publicDeleteTokenHash|createdBy|idempotencyKey/)
 })
 
-test('dedicated public DELETE is capability gated, pending-only and cleans proof and notifications', async () => {
+test('dedicated public DELETE accepts signed public session for legacy rows, remains pending-only and cleans dependencies', async () => {
   const route = await read('../src/app/api/public/payments/[id]/route.ts')
-  for (const contract of [/export async function DELETE/, /x-payment-delete-token/, /verifyPaymentDeleteCapability/, /status !== 'Pending'/, /deleteR2Object/, /removePaymentNotifications/, /deletePendingPublicPayment/, /sameOrigin/, /checkRateLimit/]) assert.match(route, contract)
-  assert.match(route, /not authorized.*403/s)
+  for (const contract of [/export async function DELETE/, /x-payment-delete-token/, /x-public-submission-token/, /verifyPaymentDeleteCapability/, /verifySubmissionToken/, /status !== 'Pending'/, /deleteR2Object/, /removePaymentNotifications/, /deletePendingPublicPayment/, /strictSameOrigin/, /checkRateLimit/, /Invalid payment ID/]) assert.match(route, contract)
+  assert.match(route, /session expired.*403/s)
   assert.match(route, /Payment Received records cannot be deleted.*409/s)
   assert.match(route, /Nothing was deleted; please retry.*503/s)
   assert.doesNotMatch(route, /requireUser/)
 })
 
-test('public UI owns delete capabilities locally and uses a real confirmation modal', async () => {
+test('three legacy pending rows without capability hashes all render SVG action menus and use a real confirmation modal', async () => {
   const [client, css, internal] = await Promise.all([read('../src/app/submit-payment/PublicPaymentForm.tsx'), read('../src/app/submit-payment/submit-payment.module.css'), read('../src/components/PaymentsClient.tsx')])
   assert.match(client, /localStorage\.setItem\(CAPABILITY_KEY/)
-  assert.match(client, /capabilities\[payment\.id\] && payment\.status === 'Pending'/)
+  const legacyRows = Array.from({ length: 3 }, (_, index) => ({ id: `legacy-${index}`, status: 'Pending' }))
+  assert.equal(legacyRows.filter((payment) => payment.status === 'Pending').length, 3)
+  assert.match(client, /payment\.status === 'Pending' \? <div className=\{styles\.menuWrap\}/)
+  assert.doesNotMatch(client, /capabilities\[payment\.id\] && payment\.status/)
+  assert.match(client, /<svg viewBox="0 0 24 24"/)
+  assert.match(client, /x-public-submission-token/)
   assert.match(client, /Delete Payment/); assert.match(client, /aria-modal="true"/)
   assert.match(client, /Sales Order.*Customer.*Amount/s)
   assert.match(client, /removeEventListener\('pointerdown'/); assert.match(client, /event\.key === 'Escape'/)

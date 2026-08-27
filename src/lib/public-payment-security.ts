@@ -30,8 +30,16 @@ export function sameOrigin(request: Request) {
   return origin === expected || Boolean(configured && origin === configured)
 }
 
-export function issueSubmissionToken() {
-  const payload = Buffer.from(JSON.stringify({ exp: Date.now() + 10 * 60_000, nonce: crypto.randomUUID() })).toString('base64url')
+export function strictSameOrigin(request: Request) {
+  const origin = request.headers.get('origin')
+  if (!origin) return false
+  const expected = new URL(request.url).origin
+  const configured = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, '')
+  return origin === expected || Boolean(configured && origin === configured)
+}
+
+export function issueSubmissionToken(ttlMs = 10 * 60_000) {
+  const payload = Buffer.from(JSON.stringify({ exp: Date.now() + ttlMs, nonce: crypto.randomUUID() })).toString('base64url')
   const signature = crypto.createHmac('sha256', secret()).update(payload).digest('base64url')
   return `${payload}.${signature}`
 }

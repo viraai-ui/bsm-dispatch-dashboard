@@ -39,6 +39,8 @@ export default function PublicPaymentForm() {
   const polling = useRef(false)
 
   useEffect(() => { setCapabilities(readCapabilities()) }, [])
+  // The same short-lived signed session used by submission is CSRF proof for legacy deletion.
+  useEffect(() => { void loadForm() }, [])
   useEffect(() => {
     const closeMenus = (event: PointerEvent) => { if (!(event.target as Element).closest('[data-payment-menu]')) setOpenMenu(null) }
     const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setOpenMenu(null); if (!deleteBusy) setDeleting(null) } }
@@ -114,11 +116,11 @@ export default function PublicPaymentForm() {
 
   async function deletePayment() {
     if (!deleting) return
-    const capability = capabilities[deleting.id]
-    if (!capability) { setDeleteError('This device is not authorized to delete this payment.'); return }
+    const capability = capabilities[deleting.id] || ''
     setDeleteBusy(true); setDeleteError('')
     try {
-      const response = await fetch(`/api/public/payments/${encodeURIComponent(deleting.id)}`, { method: 'DELETE', headers: { 'x-payment-delete-token': capability } })
+      const sessionToken = token || await fetch('/api/public/payments/orders', { cache: 'no-store' }).then((response) => response.json()).then((json: Api<{ submissionToken: string }>) => json.data?.submissionToken || '')
+      const response = await fetch(`/api/public/payments/${encodeURIComponent(deleting.id)}`, { method: 'DELETE', headers: { 'x-payment-delete-token': capability, 'x-public-submission-token': sessionToken } })
       const json: Api<{ deleted: boolean }> = await response.json().catch(() => ({} as Api<never>))
       if (!response.ok) throw new Error(json.error || 'Could not delete payment. Please retry.')
       setPayments((items) => items.filter((item) => item.id !== deleting.id))
@@ -130,8 +132,8 @@ export default function PublicPaymentForm() {
     finally { setDeleteBusy(false) }
   }
 
-  const menu = (payment: Payment) => capabilities[payment.id] && payment.status === 'Pending' ? <div className={styles.menuWrap} data-payment-menu>
-    <button className={styles.menuButton} type="button" aria-label={`Actions for ${payment.salesOrderNumber}`} aria-expanded={openMenu === payment.id} onClick={() => setOpenMenu((id) => id === payment.id ? null : payment.id)}>•••</button>
+  const menu = (payment: Payment) => payment.status === 'Pending' ? <div className={styles.menuWrap} data-payment-menu>
+    <button className={styles.menuButton} type="button" aria-label={`Actions for ${payment.salesOrderNumber}`} aria-expanded={openMenu === payment.id} onClick={() => setOpenMenu((id) => id === payment.id ? null : payment.id)}><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
     {openMenu === payment.id && <div className={styles.menu} role="menu"><button type="button" role="menuitem" onClick={() => { setDeleting(payment); setDeleteError(''); setOpenMenu(null) }}>Delete</button></div>}
   </div> : null
 

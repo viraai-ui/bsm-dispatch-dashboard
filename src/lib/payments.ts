@@ -82,18 +82,17 @@ export async function createPublicPayment(input: Omit<Payment, 'id' | 'status' |
   return { payment: result, duplicate }
 }
 
-export async function deletePendingPublicPayment(id: string, expectedDeleteTokenHash: string) {
+export async function deletePendingPublicPayment(id: string) {
   let deleted: Payment | null = null
-  let outcome: 'deleted' | 'not-found' | 'forbidden' | 'received' = 'not-found'
+  let outcome: 'deleted' | 'not-found' | 'received' = 'not-found'
   await updateStore((payments) => {
     const payment = payments.find((item) => item.id === id)
     if (!payment) return payments
-    if (!payment.publicDeleteTokenHash || payment.publicDeleteTokenHash !== expectedDeleteTokenHash) { outcome = 'forbidden'; return payments }
     if (payment.status !== 'Pending') { outcome = 'received'; return payments }
     deleted = payment; outcome = 'deleted'
     return payments.filter((item) => item.id !== id)
   })
-  return { outcome: outcome as 'deleted' | 'not-found' | 'forbidden' | 'received', payment: deleted }
+  return { outcome: outcome as 'deleted' | 'not-found' | 'received', payment: deleted }
 }
 
 export async function updatePaymentStatus(id: string, status: PaymentStatus) {
