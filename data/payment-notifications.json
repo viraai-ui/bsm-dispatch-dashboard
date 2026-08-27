@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-ddc5328d-e719-4167-b288-d1370404511b",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-b97735ff-dae2-4393-8dce-bf373eb1549c",
+      "salesOrderNumber": "SO-07822",
+      "customerName": "Adda Uniglobe Pvt. Ltd.",
+      "paymentAmount": 500000,
+      "createdAt": "2026-08-27T08:42:50.597Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-fc04e819-b40d-4f93-b970-4ec3dd263df3",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-b97735ff-dae2-4393-8dce-bf373eb1549c",
+      "salesOrderNumber": "SO-07822",
+      "customerName": "Adda Uniglobe Pvt. Ltd.",
+      "paymentAmount": 500000,
+      "createdAt": "2026-08-27T08:42:50.597Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-06b7f47f-81df-4b6b-897d-b1706488f1f4",
       "type": "payment-created",
       "recipientUserId": "u-admin",
