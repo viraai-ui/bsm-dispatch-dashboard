@@ -13331,6 +13331,63 @@
       "machineIds": [
         "1154219000036058005-1154219000036058008-1"
       ]
+    },
+    "1154219000036067005": {
+      "completedAt": "2026-08-27T08:10:58.166Z",
+      "order": {
+        "id": "1154219000036067005",
+        "zohoSalesOrderId": "1154219000036067005",
+        "salesOrderNumber": "SO-07824",
+        "status": "open",
+        "customerName": "Laxmi Plastic",
+        "shippingAddress": "M I E PLOT NO.-1435, PART -B M I E,BAHADURGARH, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036067008",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "with stand table",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036067005-1154219000036067008-1",
+            "unitNumber": 1,
+            "serialNumber": "26271070",
+            "qrToken": "26271070",
+            "orderId": "1154219000036067005",
+            "lineItemId": "1154219000036067008",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "Laxmi Plastic",
+            "salesOrderNumber": "SO-07824",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "with stand table",
+            "warrantyStart": "2026-08-27",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 6
+      },
+      "machineIds": [
+        "1154219000036067005-1154219000036067008-1"
+      ]
     }
   }
 }
