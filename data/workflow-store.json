@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271069,
+  "serialCounter": 26271070,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -19098,6 +19098,67 @@
           "processedAt": "2026-08-27T05:43:17.321Z",
           "dispatchNote": "local",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000036067005": {
+      "salesOrderId": "1154219000036067005",
+      "salesOrderNumber": "SO-07824",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036067005",
+        "zohoSalesOrderId": "1154219000036067005",
+        "salesOrderNumber": "SO-07824",
+        "status": "open",
+        "customerName": "Laxmi Plastic",
+        "shippingAddress": "M I E PLOT NO.-1435, PART -B M I E,BAHADURGARH, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036067008",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "with stand table",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036067005-1154219000036067008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036067005",
+            "lineItemId": "1154219000036067008",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "Laxmi Plastic",
+            "salesOrderNumber": "SO-07824",
+            "deliveryDate": "2026-08-27",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "with stand table"
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036067005-1154219000036067008-1": {
+          "machineUnitId": "1154219000036067005-1154219000036067008-1",
+          "lineItemId": "1154219000036067008",
+          "serialNumber": "26271070",
+          "qrToken": "26271070",
+          "qrStatus": "pending"
         }
       }
     }
