@@ -46,7 +46,7 @@ test('mobile payments use deliberate responsive cards with complete functionalit
   assert.match(css, /@media\(max-width:700px\)[\s\S]*\.payments-table-wrap\{display:none\}/)
   assert.match(css, /\.payment-mobile-status\{[^}]*height:44px/)
   assert.match(css, /\.payment-mobile-proof\{[^}]*min-height:44px/)
-  assert.match(css, /\.payment-mobile-card\.received\{[^}]*border-color:#cce4d3[^}]*background:#fff/)
+  assert.match(css, /\.payment-mobile-card\.accounts-received\{[^}]*border-color:#bfdcc8[^}]*background:#f2fbf5[^}]*box-shadow:[^}]*rgba\(24,105,58,\.11\)/)
   assert.match(css, /@media\(max-width:340px\)/)
 })
 
