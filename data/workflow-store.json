@@ -19260,7 +19260,9 @@
     "1154219000036058005": {
       "salesOrderId": "1154219000036058005",
       "salesOrderNumber": "SO-07827",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-27T07:05:58.032Z",
       "processedOrder": {
         "id": "1154219000036058005",
         "zohoSalesOrderId": "1154219000036058005",
@@ -19298,8 +19300,8 @@
           {
             "id": "1154219000036058005-1154219000036058008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271072",
+            "qrToken": "26271072",
             "orderId": "1154219000036058005",
             "lineItemId": "1154219000036058008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -19307,14 +19309,17 @@
             "customerName": "SHAKUN INDUSTRIES",
             "salesOrderNumber": "SO-07827",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -19327,7 +19332,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T07:05:03.776Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-27T07:05:05.013Z"
+          "zohoBackupQueuedAt": "2026-08-27T07:05:05.013Z",
+          "processedAt": "2026-08-27T07:05:58.032Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
