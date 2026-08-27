@@ -193,53 +193,6 @@
         }
       ]
     },
-    "1154219000036067005": {
-      "id": "1154219000036067005",
-      "zohoSalesOrderId": "1154219000036067005",
-      "salesOrderNumber": "SO-07824",
-      "status": "open",
-      "customerName": "Laxmi Plastic",
-      "shippingAddress": "M I E PLOT NO.-1435, PART -B M I E,BAHADURGARH, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036067008",
-          "itemName": "Flesh trimming Machine",
-          "sku": "206",
-          "description": "with stand table",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036067005-1154219000036067008-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036067005",
-          "lineItemId": "1154219000036067008",
-          "itemName": "Flesh trimming Machine",
-          "sku": "206",
-          "customerName": "Laxmi Plastic",
-          "salesOrderNumber": "SO-07824",
-          "deliveryDate": "2026-08-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "with stand table"
-        }
-      ]
-    },
     "1154219000036047010": {
       "id": "1154219000036047010",
       "zohoSalesOrderId": "1154219000036047010",
@@ -1106,31 +1059,6 @@
           "itemDescription": "Laser Tube (100W)"
         }
       ]
-    },
-    "1154219000036028011": {
-      "id": "1154219000036028011",
-      "zohoSalesOrderId": "1154219000036028011",
-      "salesOrderNumber": "SO-07810",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-27",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036028014",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 100,
-          "pendingQuantity": 100,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
     },
     "1154219000035991020": {
       "id": "1154219000035991020",
@@ -4669,7 +4597,6 @@
     "1154219000036072023",
     "1154219000036058005",
     "1154219000036084004",
-    "1154219000036067005",
     "1154219000036047010",
     "1154219000036057006",
     "1154219000036060006",
@@ -4678,7 +4605,6 @@
     "1154219000036064003",
     "1154219000036050001",
     "1154219000036022017",
-    "1154219000036028011",
     "1154219000035991020",
     "1154219000036013008",
     "1154219000035994029",
@@ -4718,8 +4644,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T08:22:16.963Z",
-  "lastAttemptAt": "2026-08-27T08:36:54.109Z",
+  "lastSuccessfulSyncAt": "2026-08-27T08:37:16.433Z",
+  "lastAttemptAt": "2026-08-27T08:37:16.433Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
