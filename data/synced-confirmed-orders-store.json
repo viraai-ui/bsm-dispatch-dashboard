@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036103087": {
+      "id": "1154219000036103087",
+      "zohoSalesOrderId": "1154219000036103087",
+      "salesOrderNumber": "SO-07830",
+      "status": "open",
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036103092",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036103087-1154219000036103092-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036103087",
+          "lineItemId": "1154219000036103092",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "ROSEUS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07830",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036072023": {
       "id": "1154219000036072023",
       "zohoSalesOrderId": "1154219000036072023",
@@ -4401,6 +4448,7 @@
     }
   },
   "orderIds": [
+    "1154219000036103087",
     "1154219000036072023",
     "1154219000036084004",
     "1154219000036047010",
@@ -4448,8 +4496,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T10:28:40.458Z",
-  "lastAttemptAt": "2026-08-27T10:39:19.008Z",
+  "lastSuccessfulSyncAt": "2026-08-27T10:39:43.642Z",
+  "lastAttemptAt": "2026-08-27T10:39:43.642Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
