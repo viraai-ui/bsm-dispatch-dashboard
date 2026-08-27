@@ -4382,6 +4382,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036058005": {
+      "id": "ship-1787825625220-4a8u2",
+      "itemId": "1154219000036058005",
+      "orderId": "1154219000036058005",
+      "machineId": "1154219000036058005-1154219000036058008-1",
+      "salesOrderNumber": "SO-07827",
+      "customerName": "SHAKUN INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51EV3482",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-27",
+      "notes": "",
+      "shippedAt": "2026-08-27T10:13:45.220Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
