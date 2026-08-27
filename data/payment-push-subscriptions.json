@@ -1,6 +1,17 @@
 {
   "subscriptions": [
     {
+      "endpoint": "https://web.push.apple.com/QCXs4C84ifybHzjGFnpWfWRDmKhe4S4RqLdxAI47V3sZRAZszP69IEwix_OY5y2S1beZ-PVJXYcKzGxzusQFHuBNWIP6a6rw-EKoVahiZ8a9U8_qrt4tTOnPBiRdP9ABYClYZMlisBpyTWxwtE0CPY0xHWj9eUXGvwU4iLcDrQQ",
+      "keys": {
+        "p256dh": "BFSz-qgORFYhTdlAHIl0UKGtWHiZdvPmPF95cS1L-LRnKxOhoyQqLg0L9fBqRAv9pjA4IqQ_a5i0_6i3xCS5I_I",
+        "auth": "D659jBWdwIwCwaRcZ4BMTw"
+      },
+      "userId": "u-accounts",
+      "role": "Accounts",
+      "createdAt": "2026-08-27T07:41:05.839Z",
+      "updatedAt": "2026-08-27T07:41:05.839Z"
+    },
+    {
       "endpoint": "https://fcm.googleapis.com/fcm/send/caC3FQFeLjs:APA91bGOWxwZJuSHm7eS-WpkWqSNkL8FZkkCsPL36W7hylngDXZO7U9W0Zd1Fxq2k6dDJAQfKAyQpIoSA05z0WkIz-jiySUPZRL1WjFnbSYdO2pRVlmsOFLf8NBgEB-iwbjN7i_gQRGc",
       "expirationTime": null,
       "keys": {
