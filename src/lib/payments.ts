@@ -1,7 +1,8 @@
 import { githubReadJson, githubRequest } from './workflow-store'
 
 export type PaymentStatus = 'Pending' | 'Payment Received'
-export type PaymentMode = 'Bank Transfer' | 'UPI' | 'Credit Card' | 'Debit Card' | 'Other'
+export type PaymentMode = 'Bank Transfer' | 'UPI' | 'Cash' | 'Credit Card' | 'Debit Card' | 'Other'
+export type PaymentAttachment = { key: string; url: string; name: string; contentType: string; size: number }
 export type Payment = {
   id: string
   customerName: string
@@ -13,6 +14,9 @@ export type Payment = {
   screenshotUrl?: string
   screenshotKey?: string
   screenshotName?: string
+  /** Canonical proof collection. Legacy screenshot fields remain readable. */
+  attachments?: PaymentAttachment[]
+  remarks?: string
   status: PaymentStatus
   createdBy: string
   /** Server-generated deduplication key for public submissions; never returned by public APIs. */
@@ -31,6 +35,12 @@ export function sortPayments(payments: Payment[]) {
     const statusOrder = Number(a.status === 'Payment Received') - Number(b.status === 'Payment Received')
     return statusOrder || b.createdAt.localeCompare(a.createdAt)
   })
+}
+
+export function paymentAttachments(payment: Payment): PaymentAttachment[] {
+  if (Array.isArray(payment.attachments) && payment.attachments.length) return payment.attachments.slice(0, 10)
+  if (!payment.screenshotKey && !payment.screenshotUrl) return []
+  return [{ key: payment.screenshotKey || '', url: payment.screenshotUrl || '', name: payment.screenshotName || 'Payment proof', contentType: '', size: 0 }]
 }
 
 export async function listPayments() {

@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { removePaymentNotifications } from '@/lib/payment-notifications'
-import { deletePendingPublicPayment, listPayments } from '@/lib/payments'
+import { deletePendingPublicPayment, listPayments, paymentAttachments } from '@/lib/payments'
 import { checkRateLimit, publicApiHeaders, strictSameOrigin, verifyPaymentDeleteCapability, verifySubmissionToken } from '@/lib/public-payment-security'
 import { deleteR2Object } from '@/lib/r2'
 
@@ -29,8 +29,8 @@ export async function DELETE(request: Request, context: { params: Promise<{ id: 
     if (payment.status !== 'Pending') return publicApiHeaders(apiError('Payment Received records cannot be deleted.', 409))
 
     // Fail closed: retain the visible payment whenever proof cleanup fails.
-    if (payment.screenshotKey) {
-      try { await deleteR2Object(payment.screenshotKey) }
+    if (paymentAttachments(payment).some((proof) => proof.key)) {
+      try { await Promise.all(paymentAttachments(payment).filter((proof) => proof.key).map((proof) => deleteR2Object(proof.key))) }
       catch { return publicApiHeaders(apiError('Could not remove the payment screenshot. Nothing was deleted; please retry.', 503)) }
     }
     const result = await deletePendingPublicPayment(id)

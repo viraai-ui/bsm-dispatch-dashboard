@@ -2,11 +2,12 @@
 
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './submit-payment.module.css'
-import { normalizePaymentScreenshotFile, paymentScreenshotType } from '@/lib/payment-screenshot'
+import { normalizePaymentScreenshotFile } from '@/lib/payment-screenshot'
+import { PaymentProofViewer, type ViewerProof } from '@/components/PaymentProofViewer'
 
 type Order = { id: string; salesOrderNumber: string; customerName: string }
 type Receipt = { id: string; salesOrderNumber: string; paymentAmount: number; status: 'Pending' }
-type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; hasScreenshot: boolean; proofUrl: string | null }
+type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; hasScreenshot: boolean; proofUrl: string | null; remarks: string | null; attachments: ViewerProof[] }
 type Api<T> = { ok: boolean; data?: T; error?: string }
 type Capabilities = Record<string, string>
 const CAPABILITY_KEY = 'bsm-public-payment-delete-capabilities-v1'
@@ -33,7 +34,9 @@ export default function PublicPaymentForm() {
   const [selected, setSelected] = useState<Order | null>(null)
   const [amount, setAmount] = useState('')
   const [mode, setMode] = useState('')
-  const [file, setFile] = useState<File | null>(null)
+  const [files, setFiles] = useState<File[]>([])
+  const [remarks, setRemarks] = useState('')
+  const [viewer, setViewer] = useState<ViewerProof[] | null>(null)
   const [dragActive, setDragActive] = useState(false)
   const [fileAnnouncement, setFileAnnouncement] = useState('')
   const [busy, setBusy] = useState(false)
@@ -83,23 +86,22 @@ export default function PublicPaymentForm() {
 
   const resetPaymentForm = useCallback(() => {
     orderRequest.current?.controller.abort(); orderRequest.current = null; requestGeneration.current += 1
-    setQuery(''); setSelected(null); setAmount(''); setMode(''); setFile(null); setToken(''); setOrders([])
+    setQuery(''); setSelected(null); setAmount(''); setMode(''); setFiles([]); setRemarks(''); setToken(''); setOrders([])
     setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); setDragActive(false); setFileAnnouncement(''); dragDepth.current = 0; loadedAt.current = 0
     if (fileInputRef.current) fileInputRef.current.value = ''
   }, [])
 
-  const attachPaymentProof = useCallback((candidate: File | null) => {
+  const attachPaymentProof = useCallback((candidates: File[]) => {
     try {
-      if (!candidate) throw new Error('Folders cannot be attached. Choose an image or PDF.')
-      const normalized = normalizePaymentScreenshotFile(candidate)
-      setFile(normalized); setError(''); setFileAnnouncement(`${normalized.name} attached.`)
-      if (fileInputRef.current && typeof DataTransfer !== 'undefined') {
-        try { const transfer = new DataTransfer(); transfer.items.add(normalized); fileInputRef.current.files = transfer.files } catch { /* state remains authoritative */ }
-      }
+      if (!candidates.length) throw new Error('Folders cannot be attached. Choose images or PDFs.')
+      const normalized = candidates.map(normalizePaymentScreenshotFile)
+      setFiles((current) => { const keys = new Set(current.map((file) => `${file.name}:${file.size}:${file.lastModified}`)); const additions = normalized.filter((file) => !keys.has(`${file.name}:${file.size}:${file.lastModified}`)); if (current.length + additions.length > 10) { setError('You can attach up to 10 files.'); return current } return [...current, ...additions] })
+      setError(''); setFileAnnouncement(`${normalized.length} file${normalized.length === 1 ? '' : 's'} attached.`)
+      if (fileInputRef.current) fileInputRef.current.value = ''
       return true
     } catch (cause) {
       const message = cause instanceof Error ? cause.message : 'Could not attach payment proof.'
-      setFile(null); if (fileInputRef.current) fileInputRef.current.value = ''
+      if (fileInputRef.current) fileInputRef.current.value = ''
       setError(message); setFileAnnouncement(message); return false
     }
   }, [])
@@ -114,11 +116,8 @@ export default function PublicPaymentForm() {
       event.preventDefault(); event.stopPropagation(); dragDepth.current = 0; setDragActive(false)
       const items = Array.from(event.dataTransfer?.items || []).filter((item) => item.kind === 'file')
       const files = Array.from(event.dataTransfer?.files || [])
-      if (items.length && !files.length) return void attachPaymentProof(null)
-      const supported = files.find((item) => paymentScreenshotType(item.name, item.type))
-      if (!supported) return void attachPaymentProof(files[0] || null)
-      attachPaymentProof(supported)
-      if (files.length > 1) setFileAnnouncement(`${supported.name} attached. Only the first supported file was used.`)
+      if (items.length && !files.length) return void attachPaymentProof([])
+      attachPaymentProof(files)
     }
     window.addEventListener('dragenter', enter); window.addEventListener('dragover', over); window.addEventListener('dragleave', leave); window.addEventListener('drop', drop)
     return () => { window.removeEventListener('dragenter', enter); window.removeEventListener('dragover', over); window.removeEventListener('dragleave', leave); window.removeEventListener('drop', drop); dragDepth.current = 0 }
@@ -165,16 +164,17 @@ export default function PublicPaymentForm() {
     if (!mode) return setError('Select a payment mode.')
     setBusy(true)
     try {
-      let screenshotKey = '', screenshotUrl = '', screenshotName = ''
-      if (file) {
+      const uploaded: { key: string; name: string }[] = []
+      const uploadOne = async (file: File) => {
         const targetResponse = await fetch('/api/public/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber: selected.salesOrderNumber, submissionToken: token }) })
-        const targetJson: Api<{ key: string; uploadUrl: string; publicUrl: string; uploadContentType: string }> = await targetResponse.json().catch(() => ({} as Api<never>))
-        if (!targetResponse.ok || !targetJson.data) throw new Error(targetJson.error || 'Could not prepare screenshot upload')
+        const targetJson: Api<{ key: string; uploadUrl: string; uploadContentType: string }> = await targetResponse.json().catch(() => ({} as Api<never>))
+        if (!targetResponse.ok || !targetJson.data) throw new Error(targetJson.error || 'Could not prepare proof upload')
         const upload = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': targetJson.data.uploadContentType }, body: file }).catch(() => null)
-        if (!upload?.ok) throw new Error('Screenshot upload failed. Check your connection and tap Submit Payment to retry.')
-        screenshotKey = targetJson.data.key; screenshotUrl = targetJson.data.publicUrl; screenshotName = file.name
+        if (!upload?.ok) throw new Error(`Upload failed for ${file.name}. Check your connection and retry.`)
+        uploaded.push({ key: targetJson.data.key, name: file.name })
       }
-      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, screenshotKey, screenshotUrl, screenshotName, submissionToken: token, website: '' }) })
+      for (let index = 0; index < files.length; index += 3) await Promise.all(files.slice(index, index + 3).map(uploadOne))
+      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, attachments: uploaded, remarks, submissionToken: token, website: '' }) })
       const json: Api<{ receipt: Receipt; deleteToken?: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Payment could not be submitted')
       if (json.data.deleteToken) {
@@ -215,8 +215,8 @@ export default function PublicPaymentForm() {
       {(syncMessage || (!open && error)) && <p className={error ? styles.syncError : styles.syncSuccess} role="status">{error || syncMessage}</p>}
       <section className={styles.listCard} aria-live="polite">
         {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
-          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.proofUrl ? <a href={payment.proofUrl} target="_blank" rel="noreferrer">View</a> : '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
-          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div><div className={styles.cardBottom}>{payment.proofUrl ? <a className={styles.proof} href={payment.proofUrl} target="_blank" rel="noreferrer">Screenshot ↗</a> : <span className={styles.noProof}>No screenshot</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
+          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
+          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
         </>}
       </section>
     </section>
@@ -229,10 +229,12 @@ export default function PublicPaymentForm() {
         <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value.toUpperCase()); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No eligible open sales orders.</p>}</div>}</div>
         <label>Customer Name</label><div className={`${styles.readonly} ${selected ? styles.filled : ''}`}>{selected?.customerName || 'Filled after selecting a sales order'}</div>
         <label htmlFor="amount">Payment Amount<span>*</span></label><div className={styles.amount}><b>₹</b><input id="amount" type="text" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, ''))} placeholder="0.00" /></div>
-        <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>
-        <label htmlFor="shot">Payment Proof <em>Optional</em></label><label className={`${styles.upload} ${file ? styles.uploadSuccess : ''}`} htmlFor="shot"><b>{file ? '✓ File selected' : 'Add screenshot or PDF'}</b><small>{file ? `${file.name} • ${file.type === 'application/pdf' ? 'PDF' : 'Image'}` : 'JPEG, PNG, WebP, HEIC or PDF • Max 10 MB'}</small></label><input ref={fileInputRef} className={styles.file} id="shot" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.pdf" onChange={(e) => attachPaymentProof(e.target.files?.[0] || null)} />
+        <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Cash', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>
+        <label htmlFor="shot">Payment Proof <em>Optional</em></label><label className={`${styles.upload} ${files.length ? styles.uploadSuccess : ''}`} htmlFor="shot"><b>{files.length ? `✓ ${files.length}/10 selected` : 'Add images or PDFs'}</b><small>Up to 10 images or PDFs • 10 MB each</small></label><input ref={fileInputRef} className={styles.file} id="shot" type="file" multiple accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.pdf" onChange={(e) => attachPaymentProof(Array.from(e.target.files || []))} />{files.length > 0 && <div className={styles.fileQueue}>{files.map((item, index) => <div key={`${item.name}-${item.size}-${item.lastModified}`}><span title={item.name}>{item.name} · {(item.size / 1048576).toFixed(1)} MB</span><button type="button" aria-label={`Remove ${item.name}`} onClick={() => setFiles((current) => current.filter((_, itemIndex) => itemIndex !== index))}>×</button></div>)}</div>}
+        <label htmlFor="remarks">Remarks <em>Optional</em></label><textarea id="remarks" maxLength={500} rows={3} value={remarks} onChange={(e) => setRemarks(e.target.value)} placeholder="Add any payment details or notes…" />{remarks.length >= 400 && <small>{remarks.length}/500</small>}
         <input className={styles.trap} name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />{error && <p className={styles.error} role="alert">{error}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} onClick={close}>Cancel</button><button className={styles.add} disabled={busy || !token}>{busy ? 'Submitting…' : 'Submit Payment'}</button></div>
       </form></>}
     </section></div>}
+    {viewer && <PaymentProofViewer proofs={viewer} onClose={() => setViewer(null)} />}
   </main>
 }
