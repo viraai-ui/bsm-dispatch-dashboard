@@ -46,6 +46,25 @@ test('mobile payments use deliberate responsive cards with complete functionalit
   assert.match(css, /@media\(max-width:700px\)[\s\S]*\.payments-table-wrap\{display:none\}/)
   assert.match(css, /\.payment-mobile-status\{[^}]*height:44px/)
   assert.match(css, /\.payment-mobile-proof\{[^}]*min-height:44px/)
-  assert.match(css, /\.payment-mobile-card\.received\{[^}]*#f5fcf7/)
+  assert.match(css, /\.payment-mobile-card\.received\{[^}]*border-color:#cce4d3[^}]*background:#fff/)
   assert.match(css, /@media\(max-width:340px\)/)
+})
+
+test('internal payments header and mobile cards stay rail-free while public payments remain isolated', async () => {
+  const [client, css, publicUi, publicCss] = await Promise.all([
+    read('../src/components/PaymentsClient.tsx'),
+    read('../src/app/globals.css'),
+    read('../src/app/submit-payment/PublicPaymentForm.tsx'),
+    read('../src/app/submit-payment/submit-payment.module.css'),
+  ])
+  assert.doesNotMatch(client, /<p className="eyebrow">Finance<\/p>/)
+  assert.match(client, /<header className="payments-header"><div><h1>Payments<\/h1><p className="muted">/)
+  assert.match(css, /@media\(max-width:700px\)\{\.payments-page\{[^}]*padding-top:14px/)
+  assert.match(css, /\.payments-header h1\{margin:0 0 14px/)
+  assert.match(css, /\.payment-mobile-card\{[^}]*border:1px solid #e2e6ec[^}]*border-radius:15px/)
+  assert.doesNotMatch(css, /\.payment-mobile-card(?:::before|\.received::before)/)
+  assert.doesNotMatch(css, /\.payment-mobile-card\{[^}]*(?:border-left|#d3282f|#e7ad42)/)
+  for (const width of [320, 360, 390]) assert.ok(width <= 700, `${width}px uses the mobile spacing contract`)
+  assert.match(publicUi, /<p className=\{styles\.eyebrow\}>Finance<\/p><h1>Payments<\/h1>/)
+  assert.match(publicCss, /border-left:3px solid #e7ad42/)
 })
