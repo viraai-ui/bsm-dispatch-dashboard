@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-06b7f47f-81df-4b6b-897d-b1706488f1f4",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-017a8ecf-8794-44ab-a470-613a0407f04b",
+      "salesOrderNumber": "SO-07817",
+      "customerName": "Sunil Prabhulal Chauhan",
+      "paymentAmount": 45000,
+      "createdAt": "2026-08-27T08:42:06.903Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-eb085c55-ef36-442d-af33-d8810006cf0e",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-017a8ecf-8794-44ab-a470-613a0407f04b",
+      "salesOrderNumber": "SO-07817",
+      "customerName": "Sunil Prabhulal Chauhan",
+      "paymentAmount": 45000,
+      "createdAt": "2026-08-27T08:42:06.903Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-33a6e8c7-0c50-4b68-83b7-23c183a7ac8d",
       "type": "payment-created",
       "recipientUserId": "u-admin",
