@@ -1,20 +1,3 @@
 {
-  "payments": [
-    {
-      "customerName": "SHAKUN INDUSTRIES",
-      "salesOrderNumber": "SO-07827",
-      "paymentAmount": 31270,
-      "paymentMode": "Bank Transfer",
-      "screenshotKey": "payments/public/SO-07827/2026-08-27/1787817044103-84d3d48c-4fe9-4eb3-85d8-92c45fc3bf10-1000523093.jpg",
-      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07827%2F2026-08-27%2F1787817044103-84d3d48c-4fe9-4eb3-85d8-92c45fc3bf10-1000523093.jpg",
-      "screenshotName": "1000523093.jpg",
-      "publicDeleteTokenHash": "f1741a2e9ae3d1f5261d47ac86dabb982f0f76ba08c24cb072e2e26e5246de17",
-      "id": "payment-e68e77b0-62c9-4cb6-926e-d820bad05ddd",
-      "status": "Pending",
-      "createdBy": "public-salesman",
-      "idempotencyKey": "8456702d6fdc46e1b360966bb6bde887",
-      "createdAt": "2026-08-27T07:50:46.094Z",
-      "updatedAt": "2026-08-27T10:40:03.678Z"
-    }
-  ]
+  "payments": []
 }
