@@ -2,6 +2,7 @@
 
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './submit-payment.module.css'
+import { normalizePaymentScreenshotFile, paymentScreenshotType } from '@/lib/payment-screenshot'
 
 type Order = { id: string; salesOrderNumber: string; customerName: string }
 type Receipt = { id: string; salesOrderNumber: string; paymentAmount: number; status: 'Pending' }
@@ -33,6 +34,8 @@ export default function PublicPaymentForm() {
   const [amount, setAmount] = useState('')
   const [mode, setMode] = useState('')
   const [file, setFile] = useState<File | null>(null)
+  const [dragActive, setDragActive] = useState(false)
+  const [fileAnnouncement, setFileAnnouncement] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [receipt, setReceipt] = useState<Receipt | null>(null)
@@ -46,6 +49,7 @@ export default function PublicPaymentForm() {
   const orderRequest = useRef<{ controller: AbortController; generation: number } | null>(null)
   const requestGeneration = useRef(0)
   const modalHistory = useRef(false)
+  const dragDepth = useRef(0)
 
   useEffect(() => { setCapabilities(readCapabilities()) }, [])
   // The same short-lived signed session used by submission is CSRF proof for legacy deletion.
@@ -80,9 +84,45 @@ export default function PublicPaymentForm() {
   const resetPaymentForm = useCallback(() => {
     orderRequest.current?.controller.abort(); orderRequest.current = null; requestGeneration.current += 1
     setQuery(''); setSelected(null); setAmount(''); setMode(''); setFile(null); setToken(''); setOrders([])
-    setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); loadedAt.current = 0
+    setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); setDragActive(false); setFileAnnouncement(''); dragDepth.current = 0; loadedAt.current = 0
     if (fileInputRef.current) fileInputRef.current.value = ''
   }, [])
+
+  const attachPaymentProof = useCallback((candidate: File | null) => {
+    try {
+      if (!candidate) throw new Error('Folders cannot be attached. Choose an image or PDF.')
+      const normalized = normalizePaymentScreenshotFile(candidate)
+      setFile(normalized); setError(''); setFileAnnouncement(`${normalized.name} attached.`)
+      if (fileInputRef.current && typeof DataTransfer !== 'undefined') {
+        try { const transfer = new DataTransfer(); transfer.items.add(normalized); fileInputRef.current.files = transfer.files } catch { /* state remains authoritative */ }
+      }
+      return true
+    } catch (cause) {
+      const message = cause instanceof Error ? cause.message : 'Could not attach payment proof.'
+      setFile(null); if (fileInputRef.current) fileInputRef.current.value = ''
+      setError(message); setFileAnnouncement(message); return false
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!open || receipt) return
+    const containsFiles = (event: DragEvent) => Array.from(event.dataTransfer?.types || []).includes('Files')
+    const enter = (event: DragEvent) => { if (!containsFiles(event)) return; event.preventDefault(); dragDepth.current += 1; setDragActive(true) }
+    const over = (event: DragEvent) => { if (!containsFiles(event)) return; event.preventDefault(); if (event.dataTransfer) event.dataTransfer.dropEffect = 'copy' }
+    const leave = (event: DragEvent) => { if (!containsFiles(event)) return; event.preventDefault(); dragDepth.current = Math.max(0, dragDepth.current - 1); if (!dragDepth.current) setDragActive(false) }
+    const drop = (event: DragEvent) => {
+      event.preventDefault(); event.stopPropagation(); dragDepth.current = 0; setDragActive(false)
+      const items = Array.from(event.dataTransfer?.items || []).filter((item) => item.kind === 'file')
+      const files = Array.from(event.dataTransfer?.files || [])
+      if (items.length && !files.length) return void attachPaymentProof(null)
+      const supported = files.find((item) => paymentScreenshotType(item.name, item.type))
+      if (!supported) return void attachPaymentProof(files[0] || null)
+      attachPaymentProof(supported)
+      if (files.length > 1) setFileAnnouncement(`${supported.name} attached. Only the first supported file was used.`)
+    }
+    window.addEventListener('dragenter', enter); window.addEventListener('dragover', over); window.addEventListener('dragleave', leave); window.addEventListener('drop', drop)
+    return () => { window.removeEventListener('dragenter', enter); window.removeEventListener('dragover', over); window.removeEventListener('dragleave', leave); window.removeEventListener('drop', drop); dragDepth.current = 0 }
+  }, [open, receipt, attachPaymentProof])
 
   async function loadForm(force = false) {
     orderRequest.current?.controller.abort()
@@ -183,12 +223,14 @@ export default function PublicPaymentForm() {
     {toast && <div className={styles.toast} role="status">✓ {toast}</div>}
     {deleting && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="delete-payment-title"><section className={`${styles.modal} ${styles.deleteModal}`}><div className={styles.deleteIcon}>!</div><h2 id="delete-payment-title">Delete payment?</h2><p>This removes the pending submission and its screenshot. This action cannot be undone.</p><dl><div><dt>Sales Order</dt><dd>{deleting.salesOrderNumber}</dd></div><div><dt>Customer</dt><dd>{deleting.customerName}</dd></div><div><dt>Amount</dt><dd>{money(deleting.paymentAmount)}</dd></div></dl>{deleteError && <p className={styles.error} role="alert">{deleteError}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} disabled={deleteBusy} onClick={() => setDeleting(null)}>Cancel</button><button type="button" className={styles.deleteButton} disabled={deleteBusy} onClick={() => void deletePayment()}>{deleteBusy ? 'Deleting…' : 'Delete Payment'}</button></div></section></div>}
     {open && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className={styles.modal}>
+      {dragActive && <div className={styles.dropOverlay} role="status" aria-live="assertive"><div className={styles.dropPrompt}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg><strong>Drop payment proof</strong><span>Image or PDF • Max 10 MB</span></div></div>}
+      <span className={styles.srOnly} role="status" aria-live="polite">{fileAnnouncement}</span>
       {receipt ? <div className={styles.success}><button className={styles.close} onClick={close} aria-label="Close">×</button><div className={styles.successIcon}>✓</div><h2>Payment submitted</h2><p>Your payment is safely queued for approval.</p><dl><div><dt>Sales Order</dt><dd>{receipt.salesOrderNumber}</dd></div><div><dt>Amount</dt><dd>{money(receipt.paymentAmount)}</dd></div><div><dt>Status</dt><dd><span className={styles.pending}>Pending</span></dd></div></dl><button className={styles.add} onClick={again}>Submit another payment</button></div> : <><header className={styles.modalHead}><div><p className={styles.eyebrow}>New record</p><h2 id="add-payment-title">Add Payment</h2></div><button className={styles.close} type="button" onClick={close} disabled={busy} aria-label="Close">×</button></header><form onSubmit={submit} noValidate>
         <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value.toUpperCase()); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No eligible open sales orders.</p>}</div>}</div>
         <label>Customer Name</label><div className={`${styles.readonly} ${selected ? styles.filled : ''}`}>{selected?.customerName || 'Filled after selecting a sales order'}</div>
         <label htmlFor="amount">Payment Amount<span>*</span></label><div className={styles.amount}><b>₹</b><input id="amount" type="text" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, ''))} placeholder="0.00" /></div>
         <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>
-        <label htmlFor="shot">Payment Proof <em>Optional</em></label><label className={styles.upload} htmlFor="shot"><b>{file ? 'File selected' : 'Add screenshot or PDF'}</b><small>{file ? file.name : 'JPEG, PNG, WebP, HEIC or PDF • Max 10 MB'}</small></label><input ref={fileInputRef} className={styles.file} id="shot" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.pdf" onChange={(e) => setFile(e.target.files?.[0] || null)} />
+        <label htmlFor="shot">Payment Proof <em>Optional</em></label><label className={`${styles.upload} ${file ? styles.uploadSuccess : ''}`} htmlFor="shot"><b>{file ? '✓ File selected' : 'Add screenshot or PDF'}</b><small>{file ? `${file.name} • ${file.type === 'application/pdf' ? 'PDF' : 'Image'}` : 'JPEG, PNG, WebP, HEIC or PDF • Max 10 MB'}</small></label><input ref={fileInputRef} className={styles.file} id="shot" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.pdf" onChange={(e) => attachPaymentProof(e.target.files?.[0] || null)} />
         <input className={styles.trap} name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />{error && <p className={styles.error} role="alert">{error}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} onClick={close}>Cancel</button><button className={styles.add} disabled={busy || !token}>{busy ? 'Submitting…' : 'Submit Payment'}</button></div>
       </form></>}
     </section></div>}
