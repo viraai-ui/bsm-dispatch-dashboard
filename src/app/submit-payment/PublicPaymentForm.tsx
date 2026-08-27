@@ -38,13 +38,18 @@ export default function PublicPaymentForm() {
   const [receipt, setReceipt] = useState<Receipt | null>(null)
   const [suggestionsOpen, setSuggestionsOpen] = useState(false)
   const [syncing, setSyncing] = useState(false)
+  const [ordersLoading, setOrdersLoading] = useState(false)
   const [syncMessage, setSyncMessage] = useState('')
   const loadedAt = useRef(0)
   const polling = useRef(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+  const orderRequest = useRef<{ controller: AbortController; generation: number } | null>(null)
+  const requestGeneration = useRef(0)
+  const modalHistory = useRef(false)
 
   useEffect(() => { setCapabilities(readCapabilities()) }, [])
   // The same short-lived signed session used by submission is CSRF proof for legacy deletion.
-  useEffect(() => { void loadForm() }, [])
+
   useEffect(() => {
     const closeMenus = (event: PointerEvent) => { if (!(event.target as Element).closest('[data-payment-menu]')) setOpenMenu(null) }
     const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setOpenMenu(null); if (!deleteBusy) setDeleting(null) } }
@@ -72,28 +77,46 @@ export default function PublicPaymentForm() {
     return () => { clearInterval(timer); window.removeEventListener('focus', focus) }
   }, [refreshPayments])
 
+  const resetPaymentForm = useCallback(() => {
+    orderRequest.current?.controller.abort(); orderRequest.current = null; requestGeneration.current += 1
+    setQuery(''); setSelected(null); setAmount(''); setMode(''); setFile(null); setToken(''); setOrders([])
+    setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); loadedAt.current = 0
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }, [])
+
   async function loadForm(force = false) {
+    orderRequest.current?.controller.abort()
+    const controller = new AbortController(); const generation = ++requestGeneration.current
+    orderRequest.current = { controller, generation }
     setError('')
-    if (force) setSyncing(true)
+    setOrdersLoading(true); if (force) setSyncing(true)
+    const timeout = window.setTimeout(() => controller.abort('timeout'), 12_000)
     try {
-      const response = await fetch(`/api/public/payments/orders${force ? '?refresh=1' : ''}`, { cache: 'no-store' })
+      const response = await fetch(`/api/public/payments/orders${force ? '?refresh=1' : ''}`, { cache: 'no-store', signal: controller.signal })
       const json: Api<{ orders: Order[]; submissionToken: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Could not load open sales orders')
+      if (generation !== requestGeneration.current || controller.signal.aborted) return
       setOrders(json.data.orders); setToken(json.data.submissionToken); loadedAt.current = Date.now()
       if (force) setSyncMessage(`Synced ${json.data.orders.length} open sales orders`)
     } catch (cause) {
+      if (generation !== requestGeneration.current) return
       setOrders([]); setSyncMessage(''); setError(cause instanceof Error ? cause.message : 'Could not load form')
-    } finally { if (force) setSyncing(false) }
+    } finally { clearTimeout(timeout); if (generation === requestGeneration.current) { setOrdersLoading(false); if (force) setSyncing(false) } }
   }
-  useEffect(() => { if (open) { setSuggestionsOpen(true); void loadForm(!loadedAt.current || Date.now() - loadedAt.current > 60_000) } }, [open])
+  useEffect(() => () => orderRequest.current?.controller.abort(), [])
+  useEffect(() => {
+    const back = () => { if (modalHistory.current) { modalHistory.current = false; resetPaymentForm(); setOpen(false) } }
+    window.addEventListener('popstate', back); return () => window.removeEventListener('popstate', back)
+  }, [resetPaymentForm])
   const matches = useMemo(() => {
     const needle = query.toLowerCase().trim()
     return orders.filter((order) => !needle || `${order.salesOrderNumber} ${order.customerName}`.toLowerCase().includes(needle))
   }, [orders, query])
   function choose(order: Order) { setSelected(order); setQuery(order.salesOrderNumber); setSuggestionsOpen(false); setError('') }
   function showSuggestions() { setSuggestionsOpen(true); if (!orders.length || Date.now() - loadedAt.current > 60_000) void loadForm(true) }
-  function close() { if (!busy) { setOpen(false); setReceipt(null); setError('') } }
-  function again() { setReceipt(null); setQuery(''); setSelected(null); setAmount(''); setMode(''); setFile(null); setToken(''); void loadForm() }
+  function openPaymentForm() { resetPaymentForm(); setOpen(true); setSuggestionsOpen(true); modalHistory.current = true; history.pushState({ paymentModal: true }, ''); void loadForm() }
+  function close() { if (!busy) { resetPaymentForm(); setOpen(false); if (modalHistory.current) { modalHistory.current = false; history.back() } } }
+  function again() { resetPaymentForm(); setSuggestionsOpen(true); void loadForm() }
 
   async function submit(event: FormEvent) {
     event.preventDefault(); setError('')
@@ -118,7 +141,7 @@ export default function PublicPaymentForm() {
         const next = { ...readCapabilities(), [json.data.receipt.id]: json.data.deleteToken }
         localStorage.setItem(CAPABILITY_KEY, JSON.stringify(next)); setCapabilities(next)
       }
-      setReceipt(json.data.receipt); await refreshPayments()
+      const submittedReceipt = json.data.receipt; resetPaymentForm(); setReceipt(submittedReceipt); await refreshPayments()
     } catch (cause) { setError(cause instanceof Error ? cause.message : 'Payment could not be submitted') }
     finally { setBusy(false) }
   }
@@ -148,7 +171,7 @@ export default function PublicPaymentForm() {
 
   return <main className={styles.shell}>
     <section className={styles.page}>
-      <header className={styles.header}><div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Submit customer payments and wait for approval.</p></div><div className={styles.headerActions}><button className={styles.sync} type="button" title="Sync open sales orders" aria-label="Sync open sales orders" disabled={syncing} onClick={() => void loadForm(true)}><svg className={syncing ? styles.spinning : ''} viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5M4 18v-5h5M6.1 9A7 7 0 0 1 18 6.5L20 11M4 13l2 4.5A7 7 0 0 0 17.9 15"/></svg></button><button className={styles.add} type="button" onClick={() => setOpen(true)}>+ Add Payment</button></div></header>
+      <header className={styles.header}><div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Submit customer payments and wait for approval.</p></div><div className={styles.headerActions}><button className={styles.sync} type="button" title="Sync open sales orders" aria-label="Sync open sales orders" disabled={syncing} onClick={() => void loadForm(true)}><svg className={syncing ? styles.spinning : ''} viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5M4 18v-5h5M6.1 9A7 7 0 0 1 18 6.5L20 11M4 13l2 4.5A7 7 0 0 0 17.9 15"/></svg></button><button className={styles.add} type="button" onClick={openPaymentForm}>+ Add Payment</button></div></header>
       {(syncMessage || (!open && error)) && <p className={error ? styles.syncError : styles.syncSuccess} role="status">{error || syncMessage}</p>}
       <section className={styles.listCard} aria-live="polite">
         {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
@@ -161,11 +184,11 @@ export default function PublicPaymentForm() {
     {deleting && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="delete-payment-title"><section className={`${styles.modal} ${styles.deleteModal}`}><div className={styles.deleteIcon}>!</div><h2 id="delete-payment-title">Delete payment?</h2><p>This removes the pending submission and its screenshot. This action cannot be undone.</p><dl><div><dt>Sales Order</dt><dd>{deleting.salesOrderNumber}</dd></div><div><dt>Customer</dt><dd>{deleting.customerName}</dd></div><div><dt>Amount</dt><dd>{money(deleting.paymentAmount)}</dd></div></dl>{deleteError && <p className={styles.error} role="alert">{deleteError}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} disabled={deleteBusy} onClick={() => setDeleting(null)}>Cancel</button><button type="button" className={styles.deleteButton} disabled={deleteBusy} onClick={() => void deletePayment()}>{deleteBusy ? 'Deleting…' : 'Delete Payment'}</button></div></section></div>}
     {open && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className={styles.modal}>
       {receipt ? <div className={styles.success}><button className={styles.close} onClick={close} aria-label="Close">×</button><div className={styles.successIcon}>✓</div><h2>Payment submitted</h2><p>Your payment is safely queued for approval.</p><dl><div><dt>Sales Order</dt><dd>{receipt.salesOrderNumber}</dd></div><div><dt>Amount</dt><dd>{money(receipt.paymentAmount)}</dd></div><div><dt>Status</dt><dd><span className={styles.pending}>Pending</span></dd></div></dl><button className={styles.add} onClick={again}>Submit another payment</button></div> : <><header className={styles.modalHead}><div><p className={styles.eyebrow}>New record</p><h2 id="add-payment-title">Add Payment</h2></div><button className={styles.close} type="button" onClick={close} disabled={busy} aria-label="Close">×</button></header><form onSubmit={submit} noValidate>
-        <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value.toUpperCase()); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{syncing ? <p>Syncing open sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></button>) : <p>{error ? 'Could not load orders. Focus to retry.' : 'No eligible open sales orders.'}</p>}</div>}</div>
+        <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value.toUpperCase()); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No eligible open sales orders.</p>}</div>}</div>
         <label>Customer Name</label><div className={`${styles.readonly} ${selected ? styles.filled : ''}`}>{selected?.customerName || 'Filled after selecting a sales order'}</div>
         <label htmlFor="amount">Payment Amount<span>*</span></label><div className={styles.amount}><b>₹</b><input id="amount" type="text" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, ''))} placeholder="0.00" /></div>
         <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>
-        <label htmlFor="shot">Payment Screenshot <em>Optional</em></label><label className={styles.upload} htmlFor="shot"><b>{file ? 'Image selected' : 'Add screenshot'}</b><small>{file ? file.name : 'JPEG, PNG, WebP or HEIC · Max 10 MB'}</small></label><input className={styles.file} id="shot" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" onChange={(e) => setFile(e.target.files?.[0] || null)} />
+        <label htmlFor="shot">Payment Proof <em>Optional</em></label><label className={styles.upload} htmlFor="shot"><b>{file ? 'File selected' : 'Add screenshot or PDF'}</b><small>{file ? file.name : 'JPEG, PNG, WebP, HEIC or PDF • Max 10 MB'}</small></label><input ref={fileInputRef} className={styles.file} id="shot" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.pdf" onChange={(e) => setFile(e.target.files?.[0] || null)} />
         <input className={styles.trap} name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />{error && <p className={styles.error} role="alert">{error}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} onClick={close}>Cancel</button><button className={styles.add} disabled={busy || !token}>{busy ? 'Submitting…' : 'Submit Payment'}</button></div>
       </form></>}
     </section></div>}

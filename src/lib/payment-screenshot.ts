@@ -5,6 +5,7 @@ const MIME_TO_EXTENSION: Record<string, string> = {
   'image/webp': 'webp',
   'image/heic': 'heic',
   'image/heif': 'heif',
+  'application/pdf': 'pdf',
 }
 
 const EXTENSION_TO_MIME: Record<string, string> = {
@@ -14,6 +15,7 @@ const EXTENSION_TO_MIME: Record<string, string> = {
   webp: 'image/webp',
   heic: 'image/heic',
   heif: 'image/heif',
+  pdf: 'application/pdf',
 }
 
 /** Mobile Safari and Android webviews can provide an empty or non-standard File.type. */
@@ -29,4 +31,5 @@ export function paymentScreenshotType(name: string, declaredType: string) {
 }
 
 export const PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES = 10 * 1024 * 1024
-export const INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES = 15 * 1024 * 1024
+export const INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES = 10 * 1024 * 1024
+export const PAYMENT_PROOF_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif', 'application/pdf'] as const

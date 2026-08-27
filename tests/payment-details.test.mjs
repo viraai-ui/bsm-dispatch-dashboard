@@ -27,13 +27,14 @@ test('payment form follows required order and list exposes responsive details', 
   assert.match(client, /targetJson\.data\.uploadUrl/)
 })
 
-test('payment amount has no number controls and screenshot optional marker stays inline', async () => {
+test('payment amount has no number controls and proof upload supports PDF', async () => {
   const client = await readFile(new URL('../src/components/PaymentsClient.tsx', import.meta.url), 'utf8')
   const css = await readFile(new URL('../src/app/globals.css', import.meta.url), 'utf8')
   const amountInput = client.match(/<input required type="text" inputMode="decimal"[^>]+value=\{paymentAmount\}/)?.[0] || ''
 
   assert.ok(amountInput, 'payment amount should use a decimal text input')
   assert.doesNotMatch(amountInput, /type="number"/)
-  assert.match(client, /<span className="payment-field-label">Payment Screenshot <span className="field-help">\(optional\)<\/span><\/span><input type="file"/)
+  assert.match(client, /Add screenshot or PDF/)
+  assert.match(client, /application\/pdf,\.pdf/)
   assert.match(css, /\.payment-field-label,\.payment-field-label \.field-help\{display:inline\}/)
 })

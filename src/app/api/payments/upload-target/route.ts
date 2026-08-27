@@ -16,8 +16,8 @@ export async function POST(request: Request) {
     const image = paymentScreenshotType(name, String(body.type || ''))
     const size = Number(body.size)
     const salesOrderNumber = String(body.salesOrderNumber || '')
-    if (!image) return apiError('Only JPEG, PNG, WebP, HEIC or HEIF images are allowed', 400)
-    if (!Number.isSafeInteger(size) || size <= 0 || size > INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES) return apiError('Screenshot must be a non-empty image up to 15 MB', 400)
+    if (!image) return apiError('Only a supported image or PDF is allowed (JPEG, PNG, WebP, HEIC or PDF)', 400)
+    if (!Number.isSafeInteger(size) || size <= 0 || size > INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES) return apiError('Payment proof must be non-empty and no larger than 10 MB', 400)
     const key = `payments/${safe(salesOrderNumber)}/${Date.now()}-${crypto.randomUUID()}.${image.extension}`
     const target = createR2UploadTarget(key, image.mimeType, 900, 3650)
     const cors = await ensureR2BrowserCors(target.uploadUrl)

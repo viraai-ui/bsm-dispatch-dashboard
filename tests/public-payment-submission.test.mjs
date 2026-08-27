@@ -56,7 +56,9 @@ test('mobile screenshots with blank File.type get a canonical signed PUT content
   assert.deepEqual(paymentScreenshotType('proof.jpeg', 'image/jpg'), { mimeType: 'image/jpeg', extension: 'jpg' })
   assert.deepEqual(paymentScreenshotType('proof', 'image/webp; charset=binary'), { mimeType: 'image/webp', extension: 'webp' })
   assert.equal(paymentScreenshotType('fake.png', 'image/jpeg'), null)
-  assert.equal(paymentScreenshotType('proof.pdf', ''), null)
+  assert.deepEqual(paymentScreenshotType('proof.pdf', ''), { mimeType: 'application/pdf', extension: 'pdf' })
+  assert.deepEqual(paymentScreenshotType('proof', 'application/pdf'), { mimeType: 'application/pdf', extension: 'pdf' })
+  assert.equal(paymentScreenshotType('fake.pdf', 'image/jpeg'), null)
   assert.equal(PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES, 10 * 1024 * 1024)
 })
 

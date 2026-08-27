@@ -36,6 +36,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   const [unreadCount, setUnreadCount] = useState(0)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const pollingRef = useRef(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const pollFailuresRef = useRef(0)
   const isAdmin = userRole === 'Admin'
   const isAccounts = userRole === 'Accounts'
@@ -152,9 +153,13 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
     else if (event.key === 'Escape') setSuggestionsOpen(false)
   }
 
-  function resetForm() {
+  function resetPaymentForm() {
     setCustomerName(''); setSalesOrderNumber(''); setSelectedOrderNumber(''); setPaymentAmount(''); setPaymentMode('Bank Transfer'); setFile(null)
+    setOrders([]); setOrdersLoaded(false); setOrdersLoading(false); setSuggestionsOpen(false); setActiveSuggestion(0); setError(''); setSyncMessage('')
+    if (fileInputRef.current) fileInputRef.current.value = ''
   }
+  function openPaymentForm() { resetPaymentForm(); setOpen(true); setSuggestionsOpen(true) }
+  function closePaymentForm() { if (!busy) { resetPaymentForm(); setOpen(false) } }
 
   async function syncOpenOrders() {
     setSyncing(true); setError(''); setSyncMessage('')
@@ -192,7 +197,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not add payment')
       setPayments((items) => sortPayments([json.data.payment, ...items]))
-      resetForm(); setOpen(false)
+      resetPaymentForm(); setOpen(false)
     } catch (err) { setError(err instanceof Error ? err.message : 'Could not add payment') }
     finally { setBusy(false) }
   }
@@ -220,15 +225,15 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
     <div className="card payments-card">
       {payments.length === 0 ? <div className="payments-empty"><strong>No payments added yet</strong><span>Payment records will appear here after you add the first record.</span></div> : <><div className="payments-table-wrap"><table className="payments-table"><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Screenshot</th><th className="payments-actions-heading"><span>Status</span></th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} data-payment-id={payment.id} className={payment.status === 'Payment Received' ? 'payment-row-received' : 'payment-row-pending'}><td>{formatPaymentDate(payment.createdAt)}</td><td>{payment.salesOrderNumber}</td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{formatAmount(payment.paymentAmount)}</td><td>{payment.screenshotKey || payment.screenshotUrl ? <a className="payment-proof-link" href={payment.screenshotKey ? `/api/r2/view?key=${encodeURIComponent(payment.screenshotKey)}` : payment.screenshotUrl} target="_blank" rel="noreferrer">View</a> : <span className="payment-no-attachment">—</span>}</td><td className="payment-status-cell"><div className="payment-status-control"><select className={`payment-status-select ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} title="Update payment status" value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Received</option></select></div></td></tr>)}</tbody></table></div><div className="payment-mobile-list">{payments.map((payment) => { const proofUrl = payment.screenshotKey ? `/api/r2/view?key=${encodeURIComponent(payment.screenshotKey)}` : payment.screenshotUrl; return <article key={payment.id} data-payment-id={payment.id} className={`payment-mobile-card ${payment.status === 'Payment Received' ? 'received' : 'pending'}`}><div className="payment-mobile-top"><h2>{payment.salesOrderNumber}</h2><time dateTime={payment.createdAt}>{formatPaymentDate(payment.createdAt)}</time></div><div className="payment-mobile-primary payment-mobile-details"><p>{payment.customerName}</p><span>{payment.paymentMode || 'Mode unavailable'}</span><strong>{formatAmount(payment.paymentAmount)}</strong></div><div className="payment-mobile-footer">{proofUrl ? <a className="payment-mobile-proof" href={proofUrl} target="_blank" rel="noreferrer">Screenshot</a> : <span className="payment-mobile-no-proof">No screenshot</span>}<select className={`payment-mobile-status ${payment.status === 'Payment Received' ? 'received' : 'pending'}`} aria-label={`Status for ${payment.salesOrderNumber}`} value={payment.status} disabled={updatingPaymentId === payment.id} onChange={(event) => void setStatus(payment.id, event.target.value as PaymentStatus)}><option value="Pending">Pending</option><option value="Payment Received">Received</option></select></div></article> })}</div></>}
     </div>
-    {isAdmin && open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={() => setOpen(false)}>×</button></div>
+    {isAdmin && open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={closePaymentForm}>×</button></div>
       <form className="payment-form" onSubmit={addPayment}>
         <label>Sales Order Number<div className="payment-order-combobox"><input required autoFocus role="combobox" autoComplete="off" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="payment-order-options" aria-activedescendant={suggestionsOpen && matchingOrders[activeSuggestion] ? `payment-order-${matchingOrders[activeSuggestion].id}` : undefined} value={salesOrderNumber} onFocus={() => setSuggestionsOpen(true)} onBlur={() => setTimeout(() => setSuggestionsOpen(false), 100)} onKeyDown={handleOrderKeyDown} onChange={(event) => { setSalesOrderNumber(event.target.value); setSelectedOrderNumber(''); setCustomerName(''); setActiveSuggestion(0); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" />{suggestionsOpen && <div className="payment-order-options" id="payment-order-options" role="listbox">{ordersLoading ? <div className="payment-order-message">Loading open Zoho orders…</div> : matchingOrders.length ? matchingOrders.map((order, index) => <button id={`payment-order-${order.id}`} role="option" aria-selected={index === activeSuggestion} className={index === activeSuggestion ? 'active' : ''} type="button" key={order.id} onMouseDown={(event) => event.preventDefault()} onClick={() => selectOrder(order)}><strong>{order.salesOrderNumber}</strong><span>{order.customerName}</span></button>) : <div className="payment-order-message">No matching open sales orders</div>}</div>}</div></label>
         <label>Customer Name<input required readOnly value={customerName} placeholder="Filled after selecting a sales order" /></label>
         <label>Payment Amount (₹)<input required type="text" inputMode="decimal" pattern="[0-9]+(?:\.[0-9]{1,2})?" value={paymentAmount} onChange={(event) => { const nextAmount = event.target.value; if (/^\d*(?:\.\d{0,2})?$/.test(nextAmount)) setPaymentAmount(nextAmount) }} placeholder="Enter payment amount" /></label>
         <label>Payment Mode<select required value={paymentMode} onChange={(event) => setPaymentMode(event.target.value as PaymentMode)}>{PAYMENT_MODES.map((mode) => <option key={mode} value={mode}>{mode}</option>)}</select></label>
-        <label><span className="payment-field-label">Payment Screenshot <span className="field-help">(optional)</span></span><input type="file" accept="image/png,image/jpeg,image/webp,image/heic,image/heif" onChange={(event) => setFile(event.target.files?.[0] || null)} /></label>
+        <label><span className="payment-field-label">Add screenshot or PDF <span className="field-help">(optional) · JPEG, PNG, WebP, HEIC or PDF • Max 10 MB</span></span><input ref={fileInputRef} type="file" accept="image/png,image/jpeg,image/webp,image/heic,image/heif,application/pdf,.pdf" aria-label="Add screenshot or PDF" onChange={(event) => setFile(event.target.files?.[0] || null)} />{file && <span className="field-help">{file.name}</span>}</label>
         {error && <div className="form-error">{error}</div>}
-        <div className="modal-actions"><button className="btn" type="button" disabled={busy} onClick={() => setOpen(false)}>Cancel</button><button className="btn red" type="submit" disabled={busy}>{busy ? 'Uploading…' : 'Submit Payment'}</button></div>
+        <div className="modal-actions"><button className="btn" type="button" disabled={busy} onClick={closePaymentForm}>Cancel</button><button className="btn red" type="submit" disabled={busy}>{busy ? 'Uploading…' : 'Submit Payment'}</button></div>
       </form>
     </section></div>}
   </section>

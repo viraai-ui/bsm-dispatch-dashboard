@@ -4,7 +4,7 @@ import { createPayment, listPayments, updatePaymentStatus, type PaymentMode, typ
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { verifyR2Object } from '@/lib/r2'
-import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
+import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, PAYMENT_PROOF_MIME_TYPES } from '@/lib/payment-screenshot'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   try {
     let normalizedScreenshotUrl = screenshotUrl
     if (screenshotKey) {
-      await verifyR2Object(screenshotKey, { prefixes: ['payments/'], expectedTypes: ['image/'], maxBytes: INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, order: salesOrderNumber })
+      await verifyR2Object(screenshotKey, { prefixes: ['payments/'], expectedTypes: PAYMENT_PROOF_MIME_TYPES, maxBytes: INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, order: salesOrderNumber })
       normalizedScreenshotUrl = `/api/r2/view?key=${encodeURIComponent(screenshotKey)}`
     }
     const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, screenshotUrl: normalizedScreenshotUrl, screenshotKey, screenshotName, createdBy: auth.user.id })

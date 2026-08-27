@@ -16,8 +16,8 @@ export async function POST(request: Request) {
   const name = String(body.name || '')
   const image = paymentScreenshotType(name, String(body.type || ''))
   const size = Number(body.size)
-  if (!image) return publicApiHeaders(apiError('Only JPEG, PNG, WebP, HEIC or HEIF images are allowed', 400))
-  if (!Number.isSafeInteger(size) || size <= 0 || size > PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES) return publicApiHeaders(apiError('Screenshot must be a non-empty image up to 10 MB', 400))
+  if (!image) return publicApiHeaders(apiError('Only a supported image or PDF is allowed (JPEG, PNG, WebP, HEIC or PDF)', 400))
+  if (!Number.isSafeInteger(size) || size <= 0 || size > PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES) return publicApiHeaders(apiError('Payment proof must be non-empty and no larger than 10 MB', 400))
   try {
     const salesOrderNumber = safe(String(body.salesOrderNumber || ''))
     if (salesOrderNumber === 'payment') return publicApiHeaders(apiError('Sales order number is required', 400))
