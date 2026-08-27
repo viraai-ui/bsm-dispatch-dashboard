@@ -1,22 +1,6 @@
 {
   "payments": [
     {
-      "customerName": "GARWARE FULFLEX I PVT LTD",
-      "salesOrderNumber": "SO-07828",
-      "paymentAmount": 111111,
-      "paymentMode": "Bank Transfer",
-      "screenshotKey": "",
-      "screenshotUrl": "",
-      "screenshotName": "",
-      "publicDeleteTokenHash": "410ab7031fb137980485e92ae6820ea53915ca8f1b2eb99be43fc1d1cdd196fa",
-      "id": "payment-2a24d909-e0fe-4d0a-a63c-5aaf7b2661d9",
-      "status": "Pending",
-      "createdBy": "public-salesman",
-      "idempotencyKey": "3fe3e41f824a438584951226dea4a067",
-      "createdAt": "2026-08-27T08:41:13.199Z",
-      "updatedAt": "2026-08-27T08:41:13.199Z"
-    },
-    {
       "customerName": "SHAKUN INDUSTRIES",
       "salesOrderNumber": "SO-07827",
       "paymentAmount": 31270,
