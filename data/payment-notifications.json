@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-bf57577e-0272-4783-ae16-56dc54257b6b",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-085a98a6-216a-4e02-8a5e-88f79a39b54f",
+      "salesOrderNumber": "SO-07832",
+      "customerName": "KC ARTS",
+      "paymentAmount": 5000,
+      "createdAt": "2026-08-27T11:16:10.792Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-67c8eede-9de6-4b13-8eff-c36518061b46",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-085a98a6-216a-4e02-8a5e-88f79a39b54f",
+      "salesOrderNumber": "SO-07832",
+      "customerName": "KC ARTS",
+      "paymentAmount": 5000,
+      "createdAt": "2026-08-27T11:16:10.792Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-b851e13b-6104-4f41-829a-bfe2a7d62b63",
       "type": "payment-created",
       "recipientUserId": "u-admin",
