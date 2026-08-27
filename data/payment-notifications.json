@@ -1,3 +1,26 @@
 {
-  "notifications": []
+  "notifications": [
+    {
+      "id": "payment-notification-b851e13b-6104-4f41-829a-bfe2a7d62b63",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-5d0df1b6-d878-401a-afcb-09d4749de6b7",
+      "salesOrderNumber": "SO-07830",
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "paymentAmount": 17110,
+      "createdAt": "2026-08-27T11:05:34.534Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ae6debd2-7c19-4f00-9a75-0a7169399968",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-5d0df1b6-d878-401a-afcb-09d4749de6b7",
+      "salesOrderNumber": "SO-07830",
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "paymentAmount": 17110,
+      "createdAt": "2026-08-27T11:05:34.534Z",
+      "readAt": null
+    }
+  ]
 }
