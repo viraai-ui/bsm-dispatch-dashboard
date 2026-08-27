@@ -13388,6 +13388,63 @@
       "machineIds": [
         "1154219000036067005-1154219000036067008-1"
       ]
+    },
+    "1154219000036047010": {
+      "completedAt": "2026-08-27T11:03:44.285Z",
+      "order": {
+        "id": "1154219000036047010",
+        "zohoSalesOrderId": "1154219000036047010",
+        "salesOrderNumber": "SO-07822",
+        "status": "open",
+        "customerName": "Adda Uniglobe Pvt. Ltd.",
+        "shippingAddress": "Plot No.179 F, Sec.16 Industrial Area HSIIDC, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-26",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036047013",
+            "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9920",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036047010-1154219000036047013-1",
+            "unitNumber": 1,
+            "serialNumber": "26271067",
+            "qrToken": "26271067",
+            "orderId": "1154219000036047010",
+            "lineItemId": "1154219000036047013",
+            "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9920",
+            "customerName": "Adda Uniglobe Pvt. Ltd.",
+            "salesOrderNumber": "SO-07822",
+            "deliveryDate": "2026-08-26",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000036047010-1154219000036047013-1"
+      ]
     }
   }
 }
