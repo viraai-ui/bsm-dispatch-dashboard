@@ -19353,7 +19353,59 @@
     "1154219000036103087": {
       "salesOrderId": "1154219000036103087",
       "salesOrderNumber": "SO-07830",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-27T10:44:28.183Z",
+      "processedOrder": {
+        "id": "1154219000036103087",
+        "zohoSalesOrderId": "1154219000036103087",
+        "salesOrderNumber": "SO-07830",
+        "status": "open",
+        "customerName": "ROSEUS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036103092",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036103087-1154219000036103092-1",
+            "unitNumber": 1,
+            "serialNumber": "26271073",
+            "qrToken": "26271073",
+            "orderId": "1154219000036103087",
+            "lineItemId": "1154219000036103092",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "ROSEUS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07830",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "vendor": "Ishu",
+            "dispatchNote": "local"
+          }
+        ]
+      },
       "machines": {
         "1154219000036103087-1154219000036103092-1": {
           "machineUnitId": "1154219000036103087-1154219000036103092-1",
@@ -19363,7 +19415,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T10:40:17.568Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-27T10:40:19.378Z"
+          "zohoBackupQueuedAt": "2026-08-27T10:40:19.378Z",
+          "processedAt": "2026-08-27T10:44:28.183Z",
+          "dispatchNote": "local",
+          "vendor": "Ishu"
         }
       }
     }
