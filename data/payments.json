@@ -1,6 +1,22 @@
 {
   "payments": [
     {
+      "customerName": "3NG",
+      "salesOrderNumber": "SO-07833",
+      "paymentAmount": 62500,
+      "paymentMode": "UPI",
+      "screenshotKey": "payments/public/SO-07833/2026-08-27/1787830442173-8014a700-b992-49bd-ac8b-c584b76cc1b3-b2ce5d63-9dd2-4588-994f-3aeefb618917.png",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07833%2F2026-08-27%2F1787830442173-8014a700-b992-49bd-ac8b-c584b76cc1b3-b2ce5d63-9dd2-4588-994f-3aeefb618917.png",
+      "screenshotName": "b2ce5d63-9dd2-4588-994f-3aeefb618917.png",
+      "publicDeleteTokenHash": "6d29e614a57ef2cbc746953393b8ce497ad8698ac8a24edcf9605aa401dc7c79",
+      "id": "payment-c1e4f253-899e-4107-aaa4-9a4e9ee2b667",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "df30c3d7e96440eb9a393caaf9011282",
+      "createdAt": "2026-08-27T11:34:03.638Z",
+      "updatedAt": "2026-08-27T11:34:03.638Z"
+    },
+    {
       "customerName": "Nepal Jutta Factory Pvt Ltd",
       "salesOrderNumber": "SO-07812",
       "paymentAmount": 56200,
