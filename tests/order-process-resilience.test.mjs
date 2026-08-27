@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 
 const ui = await readFile(new URL('../src/components/OrdersClient.tsx', import.meta.url), 'utf8')
 const route = await readFile(new URL('../src/app/api/workflow/orders/[id]/route.ts', import.meta.url), 'utf8')
-const store = JSON.parse(await readFile(new URL('../data/workflow-store.json', import.meta.url), 'utf8'))
+const store = JSON.parse(await readFile(new URL('./fixtures/order-process-resilience.json', import.meta.url), 'utf8'))
 
 assert.match(ui, /setProcessed\(true\)[\s\S]*?try \{[\s\S]*?catch \(error\)[\s\S]*?finally \{\s*setProcessed\(false\)/, 'Process busy state must always clear')
 assert.ok(ui.includes("processed ? 'Processing…' : 'Proceed'"), 'Process button must expose progress')

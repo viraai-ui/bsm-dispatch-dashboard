@@ -13,7 +13,8 @@ export async function GET(request: Request) {
   }
   try {
     // Deliberately uses only the dedicated read-only payment lookup; no state is persisted.
-    const orders = (await listPaymentOpenSalesOrders(false)).map(({ id, salesOrderNumber, customerName }) => ({ id, salesOrderNumber, customerName }))
+    const refresh = new URL(request.url).searchParams.get('refresh') === '1'
+    const orders = (await listPaymentOpenSalesOrders(refresh)).map(({ id, salesOrderNumber, customerName }) => ({ id, salesOrderNumber, customerName }))
     return publicApiHeaders(apiOk({ orders, submissionToken: issueSubmissionToken() }))
   } catch (error) {
     return publicApiHeaders(apiError(error instanceof Error ? error.message : 'Could not load sales orders', 502))

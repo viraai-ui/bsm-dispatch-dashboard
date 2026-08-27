@@ -51,10 +51,10 @@ test('Payments uses its dedicated read-only sales-order API', async () => {
 
 test('authenticated object viewer segregates payment and media-proof access', async () => {
   const view = await read('../src/app/api/r2/view/route.ts')
-  assert.match(view, /requireUser\(\['Admin', 'Operations', 'Media', 'Accounts'\]\)/)
+  assert.match(view, /requireUser\(\['Admin', 'Operations', 'Media', 'Accounts', 'Database'\]\)/)
   assert.match(view, /canViewPayment = \['Admin', 'Accounts'\]/)
-  assert.match(view, /canViewMediaProof = \['Admin', 'Operations', 'Media'\]/)
-  assert.match(view, /safeObjectKey\(key, 'payments\/'\)/)
-  assert.match(view, /segment !== '\.\.'/)
+  assert.match(view, /canViewMediaProof = \['Admin', 'Operations', 'Media', 'Database'\]/)
+  assert.match(view, /isSafeR2Key\(key, \['payments\/'\]\)/)
+  assert.match(view, /isSafeR2Key\(key, \['media-proof\/'\]\)/)
   assert.match(view, /if \(!allowed\) return new NextResponse\('Invalid media key'/)
 })

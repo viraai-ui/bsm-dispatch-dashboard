@@ -229,6 +229,27 @@ export async function fetchZohoOpenOrders(maxPages = 1): Promise<Order[]> {
   return summaries.map(mapOrderSummary)
 }
 
+/** Complete, read-only feed for payment suggestions; it never persists orders. */
+export async function fetchZohoPaymentOpenOrders(): Promise<Order[]> {
+  if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
+  const token = await getZohoAccessToken()
+  const summaries: any[] = []
+  for (let page = 1; page <= 500; page += 1) {
+    const list = await zohoGetWithRetry(`/inventory/v1/salesorders?per_page=200&page=${page}&sort_column=created_time&sort_order=D`, token)
+    const rows = list.salesorders || []
+    if (!Array.isArray(rows)) throw new Error(`Invalid Zoho sales order page ${page}`)
+    summaries.push(...rows)
+    if (!list.page_context?.has_more_page || rows.length === 0) break
+    if (page === 500) throw new Error('Zoho pagination limit reached before completion')
+  }
+  const seen = new Set<string>()
+  return summaries.map(mapOrderSummary).filter((order) => {
+    if (!order.id || seen.has(order.id)) return false
+    seen.add(order.id)
+    return true
+  })
+}
+
 export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getZohoAccessToken()

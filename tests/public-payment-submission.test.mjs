@@ -17,7 +17,8 @@ test('public payment page and only dedicated facade are unauthenticated', async 
 
 test('lookup is minimum-field, read-only and never touches operational APIs/stores', async () => {
   const route = await read('../src/app/api/public/payments/orders/route.ts')
-  assert.match(route, /listPaymentOpenSalesOrders\(false\)/)
+  assert.match(route, /listPaymentOpenSalesOrders\(refresh\)/)
+  assert.match(route, /searchParams\.get\('refresh'\) === '1'/)
   assert.match(route, /id, salesOrderNumber, customerName/)
   assert.doesNotMatch(route, /api\/orders|syncConfirmed|workflow|writeSynced|githubRequest/)
 })
