@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271070,
+  "serialCounter": 26271071,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -19174,6 +19174,67 @@
           "processedAt": "2026-08-27T05:45:51.299Z",
           "dispatchNote": "local",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000036051008": {
+      "salesOrderId": "1154219000036051008",
+      "salesOrderNumber": "SO-07817",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036051008",
+        "zohoSalesOrderId": "1154219000036051008",
+        "salesOrderNumber": "SO-07817",
+        "status": "open",
+        "customerName": "Sunil Prabhulal Chauhan",
+        "shippingAddress": "Chandervdai nagar, CC Road, Jawar ki nadi, (Roshni Photo Studio), Ajmer, Rajasthan, 305202, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036080009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036051008-1154219000036080009-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036051008",
+            "lineItemId": "1154219000036080009",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "Sunil Prabhulal Chauhan",
+            "salesOrderNumber": "SO-07817",
+            "deliveryDate": "2026-08-27",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036051008-1154219000036080009-1": {
+          "machineUnitId": "1154219000036051008-1154219000036080009-1",
+          "lineItemId": "1154219000036080009",
+          "serialNumber": "26271071",
+          "qrToken": "26271071",
+          "qrStatus": "pending"
         }
       }
     }
