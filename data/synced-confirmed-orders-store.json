@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000036072023": {
+      "id": "1154219000036072023",
+      "zohoSalesOrderId": "1154219000036072023",
+      "salesOrderNumber": "SO-07828",
+      "status": "open",
+      "customerName": "GARWARE FULFLEX I PVT LTD",
+      "shippingAddress": "2ND FLOOR, MAKER BHAVAN II,, 2A-3, 18 VITTHALDAS THACKAREY MARG, NEW MARINE LINES, CHRUCHGATE, Mumbai, Maharashtra, 400020, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036072026",
+          "itemName": "Automatic Screen Printing Machine (Single Station)",
+          "sku": "",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036072023-1154219000036072026-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036072023",
+          "lineItemId": "1154219000036072026",
+          "itemName": "Automatic Screen Printing Machine (Single Station)",
+          "sku": "",
+          "customerName": "GARWARE FULFLEX I PVT LTD",
+          "salesOrderNumber": "SO-07828",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036072023-1154219000036072026-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036072023",
+          "lineItemId": "1154219000036072026",
+          "itemName": "Automatic Screen Printing Machine (Single Station)",
+          "sku": "",
+          "customerName": "GARWARE FULFLEX I PVT LTD",
+          "salesOrderNumber": "SO-07828",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036058005": {
       "id": "1154219000036058005",
       "zohoSalesOrderId": "1154219000036058005",
@@ -4933,6 +5001,7 @@
     }
   },
   "orderIds": [
+    "1154219000036072023",
     "1154219000036058005",
     "1154219000036084004",
     "1154219000036067005",
@@ -4988,8 +5057,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T07:04:45.919Z",
-  "lastAttemptAt": "2026-08-27T07:19:19.079Z",
+  "lastSuccessfulSyncAt": "2026-08-27T07:19:41.650Z",
+  "lastAttemptAt": "2026-08-27T07:19:41.650Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
