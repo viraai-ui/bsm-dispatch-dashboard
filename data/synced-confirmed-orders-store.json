@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000036084004": {
+      "id": "1154219000036084004",
+      "zohoSalesOrderId": "1154219000036084004",
+      "salesOrderNumber": "SO-07826",
+      "status": "open",
+      "customerName": "AASHI VENTURE PRIVATE LIMITED",
+      "shippingAddress": "GROUND FLOOR, E 49 B, SAWARA BANSWAR ROAD, RIICO, Sagwara, Dungarpur, Rajasthan, 314025, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036084007",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036084004-1154219000036084007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036084004",
+          "lineItemId": "1154219000036084007",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "AASHI VENTURE PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07826",
+          "deliveryDate": "2026-08-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036084004-1154219000036084007-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036084004",
+          "lineItemId": "1154219000036084007",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "AASHI VENTURE PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07826",
+          "deliveryDate": "2026-08-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036080017": {
       "id": "1154219000036080017",
       "zohoSalesOrderId": "1154219000036080017",
@@ -4855,6 +4923,7 @@
     }
   },
   "orderIds": [
+    "1154219000036084004",
     "1154219000036080017",
     "1154219000036067005",
     "1154219000036072005",
@@ -4909,8 +4978,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T06:20:59.671Z",
-  "lastAttemptAt": "2026-08-27T06:35:52.027Z",
+  "lastSuccessfulSyncAt": "2026-08-27T06:36:16.076Z",
+  "lastAttemptAt": "2026-08-27T06:36:16.076Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
