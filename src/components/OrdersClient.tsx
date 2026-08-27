@@ -2,8 +2,10 @@
 
 import QRCode from 'qrcode'
 import { jsPDF } from 'jspdf'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Badge } from '@/components/DashboardShell'
+import { PaymentStatusChip } from '@/components/PaymentStatusChip'
+import { normalizeSalesOrderNumber, type ProjectedPaymentStatus } from '@/lib/payment-status-projection'
 import { dispatchCategoryLabel } from '@/lib/item-classification'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
@@ -30,6 +32,17 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [workflowByOrder, setWorkflowByOrder] = useState<Record<string, OrderWorkflow>>({})
   const [stageByOrder, setStageByOrder] = useState<Record<string, OrderStage>>({})
   const [statusFilter, setStatusFilter] = useState<OrderStage | 'all'>('all')
+  const [paymentBySalesOrder, setPaymentBySalesOrder] = useState<Record<string, ProjectedPaymentStatus>>({})
+
+  const refreshPaymentProjection = useCallback(async () => {
+    try {
+      const response = await fetch('/api/payment-status-projection', { cache: 'no-store' })
+      if (!response.ok) return
+      const json = await response.json()
+      if (json?.bySalesOrder && typeof json.bySalesOrder === 'object') setPaymentBySalesOrder(json.bySalesOrder)
+    } catch { /* Display-only enrichment: operational behavior must fail open. */ }
+  }, [])
+  const paymentStatus = (order: Order) => paymentBySalesOrder[normalizeSalesOrderNumber(order.salesOrderNumber)]
 
   useEffect(() => {
     // Migrate the obsolete cache that duplicated full orders and base64 QR images.
@@ -42,9 +55,16 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       for (const item of json.data?.orders || []) map[item.salesOrderId] = item
       setWorkflowByOrder(map)
     }).catch(() => {})
+    void refreshPaymentProjection()
     if (live) void loadOrders(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [live])
+  }, [live, refreshPaymentProjection])
+
+  useEffect(() => {
+    const focus = () => void refreshPaymentProjection()
+    window.addEventListener('focus', focus)
+    return () => window.removeEventListener('focus', focus)
+  }, [refreshPaymentProjection])
 
   useEffect(() => {
     const timer = window.setInterval(() => { void syncOrders(false) }, ORDERS_AUTO_SYNC_MS)
@@ -61,6 +81,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       const nextRows = sanitizeOrders(json.data?.orders || [])
       setStageByOrder(json.data?.stages || {})
       setRows(nextRows); cacheOrders(nextRows); setLastSyncAt(json.data?.lastSuccessfulSyncAt || null)
+      void refreshPaymentProjection()
     } catch (err) { if (showErrors) setError(err instanceof Error ? err.message : 'Could not load saved orders') }
   }
 
@@ -79,6 +100,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       setRows(nextRows)
       cacheOrders(nextRows)
       setLastSyncAt(json.data?.lastSuccessfulSyncAt || null)
+      void refreshPaymentProjection()
       if (showErrors) setNotice('Sync completed successfully.')
     } catch (err) {
       if (showErrors) setError(err instanceof Error ? err.message : 'Failed to sync Zoho. Showing last saved data.')
@@ -124,14 +146,14 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       {syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}
       {notice && <div className="form-success">{notice}</div>}
       {error && <div className="form-error">{error}</div>}
-      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Action</th></tr></thead><tbody>{filteredOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div>
-      <div className="mobile-cards">{filteredOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" disabled={loadingId === o.id} onClick={(event) => { event.stopPropagation(); openOrder(o) }}>{loadingId === o.id ? 'Opening…' : 'View'}</button></div></article>)}</div>
+      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Payment</th><th>Action</th></tr></thead><tbody>{filteredOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></td><td><PaymentStatusChip status={paymentStatus(o)} />{!paymentStatus(o) && '—'}</td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div>
+      <div className="mobile-cards">{filteredOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="order-status-strip"><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge><PaymentStatusChip status={paymentStatus(o)} /></div></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" disabled={loadingId === o.id} onClick={(event) => { event.stopPropagation(); openOrder(o) }}>{loadingId === o.id ? 'Opening…' : 'View'}</button></div></article>)}</div>
     </section>
-    {active && <OrderModal order={active} stage={activeStage} workflow={activeWorkflow} onClose={() => setActive(null)} />}
+    {active && <OrderModal order={active} stage={activeStage} workflow={activeWorkflow} paymentStatus={paymentStatus(active)} onClose={() => setActive(null)} />}
   </>
 }
 
-function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: OrderStage; workflow: OrderWorkflow | null; onClose: () => void }) {
+function OrderModal({ order, stage, workflow, paymentStatus, onClose }: { order: Order; stage: OrderStage; workflow: OrderWorkflow | null; paymentStatus?: ProjectedPaymentStatus; onClose: () => void }) {
   const [selected, setSelected] = useState(() => new Set(order.machines.filter((m) => m.selectedForBatch && !isLockedMachine(m)).map((m) => m.id)))
   const [machines, setMachines] = useState(order.machines)
   const [qrCodes, setQrCodes] = useState<Record<string, string>>(() => initialQrCodes(order, workflow))
@@ -280,11 +302,11 @@ function OrderModal({ order, stage, workflow, onClose }: { order: Order; stage: 
     }
   }
 
-  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge></div><div className="modal-head-actions"><div className="order-menu-wrap"><button className="drawer-close menu-dot-btn" aria-label="Order actions" onClick={() => setMenuOpen((open) => !open)}>⋯</button>{menuOpen && <div className="order-menu"><button type="button" onClick={undoOrder} disabled={undoing}>{undoing ? 'Undoing…' : 'Undo Order'}</button></div>}</div><button className="drawer-close" onClick={onClose}>×</button></div></div>
+  return <div className="modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card"><div className="modal-head"><div><h1>{order.salesOrderNumber}</h1><div className="order-status-strip"><Badge tone={stageTone(modalStage)}>{stageLabel(modalStage)}</Badge><PaymentStatusChip status={paymentStatus} /></div></div><div className="modal-head-actions"><div className="order-menu-wrap"><button className="drawer-close menu-dot-btn" aria-label="Order actions" onClick={() => setMenuOpen((open) => !open)}>⋯</button>{menuOpen && <div className="order-menu"><button type="button" onClick={undoOrder} disabled={undoing}>{undoing ? 'Undoing…' : 'Undo Order'}</button></div>}</div><button className="drawer-close" onClick={onClose}>×</button></div></div>
     {message && <div className={message.toLowerCase().includes('success') || message.startsWith('Serial saved;') || message.startsWith('Barcode PDF generated') ? 'form-success process-success-tape' : 'form-error'}>{message}</div>}
     <StageTracker stage={modalStage} />
     <div className="grid two details-grid"><Info k="Customer Name" v={order.customerName} /><Info k="Customer Address" v={order.shippingAddress ?? '—'} /><Info k="Salesperson" v={order.salesperson ?? '—'} /><Info k="Expected Delivery Date" v={formatDate(order.deliveryDate)} /></div>
-    <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap line-items-wrap"><table className="table line-items-table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Type</th><th>Wooden</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td><ItemName name={item.itemName} description={item.description} /></td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{dispatchCategoryLabel(item.dispatchCategory)}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td></tr>)}</tbody></table></div></section>
+    <section className="modal-section"><h2>Line Items</h2><div className="desktop-table table-wrap line-items-wrap"><table className="table line-items-table"><thead><tr><th>Item</th><th>SKU</th><th>Order Qty</th><th>Pending</th><th>Type</th><th>Wooden</th><th className="line-payment-column" title="Payment status applies to the sales order">Payment</th></tr></thead><tbody>{order.lineItems.map((item) => <tr key={item.id}><td><ItemName name={item.itemName} description={item.description} /></td><td>{item.sku}</td><td>{item.quantity}</td><td>{item.pendingQuantity}</td><td>{dispatchCategoryLabel(item.dispatchCategory)}</td><td>{item.woodenPackingRequired ? 'Yes' : 'No'}</td><td className="line-payment-column" title="Payment status applies to the sales order"><PaymentStatusChip status={paymentStatus} />{!paymentStatus && '—'}</td></tr>)}</tbody></table></div></section>
     <section className="modal-section"><div className="modal-section-title"><h2>Machine Units</h2><div className="machine-select-actions"><button className="btn light" type="button" disabled={!selectableMachines.length} onClick={toggleSelectAll}>{allSelectableSelected ? 'Clear Selection' : 'Select All'}</button><Badge tone="blue">{selectedCount} selected</Badge></div></div>{machines.length ? <div className="unit-grid">{machines.map((m) => <label className={`unit-card ${isLockedMachine(m) ? 'unit-card-disabled' : ''}`} key={m.id}><input type="checkbox" disabled={isLockedMachine(m)} checked={selected.has(m.id)} onChange={() => toggle(m.id)} /><span><strong>Unit {m.unitNumber}</strong><em>{m.itemName}</em>{displayDescription(m.itemName, m.itemDescription) && <small className="item-description">{displayDescription(m.itemName, m.itemDescription)}</small>}<small>{m.serialNumber ? `Serial Number: ${m.serialNumber}` : m.status === 'Dispatched' ? 'Dispatched without serial' : m.status === 'Processed' ? 'Processed without serial' : 'Serial pending'}</small></span>{m.serialNumber && canDownloadQr ? <button type="button" className="btn light unit-action" disabled={downloadingId === m.id} onClick={(event) => { event.preventDefault(); void downloadExistingQr(m) }}>{downloadingId === m.id ? 'Preparing…' : 'Download QR PDF'}</button> : m.status === 'Dispatched' ? <Badge tone="green">Dispatched</Badge> : m.status === 'Processed' ? <Badge tone="amber">Processed</Badge> : <Badge tone="amber">Not Generated</Badge>}</label>)}</div> : <div className="machine-row compact"><span>No machine units for adhesive/consumable-only items.</span><Badge tone="gray">QR Not Required</Badge></div>}</section>
     <section className="modal-actions"><button className="btn light" onClick={proceedWithoutQr}>Proceed Without QR & Serial</button><button className="btn red" disabled={!selectedCount || generating || processed} onClick={generateSelected}>{generating ? 'Generating PDF…' : `Generate Serial & Barcodes for ${selectedCount}`}</button><button className="btn" disabled={processed} onClick={openPriorityPrompt}>{processed ? 'Processed' : 'Process Order'}</button></section>
     {processConfirm && <div className="modal-backdrop nested" role="dialog" aria-modal="true"><section className="card process-confirm-modal"><button className="process-close" aria-label="Close" disabled={processSuccess} onClick={() => setProcessConfirm(false)}>×</button>{processSuccess ? <div className="success-animation"><span>✓</span><h2>Order Processed Successfully</h2></div> : <><h2>Process Order Confirmation</h2><p className="muted">Review the selected machines and add dispatch notes before moving them to Dispatch View.</p><div className="process-type-actions"><button className={`btn ${dispatchPriority === 'urgent' ? 'red' : 'light'}`} onClick={() => setDispatchPriority('urgent')}>Urgent Order</button><button className={`btn ${dispatchPriority === 'regular' ? '' : 'light'}`} onClick={() => setDispatchPriority('regular')}>Regular Order</button></div><div className="confirm-table-wrap"><table className="confirm-table"><thead><tr><th>Machine Name</th><th>Serial Number</th><th>SKU</th><th>Qty</th><th>Wooden Packing</th><th>Vendor</th><th>Notes</th></tr></thead><tbody>{machines.filter((machine) => selected.has(machine.id)).map((machine) => <tr key={machine.id}><td><ItemName name={machine.itemName} description={machine.itemDescription} /></td><td><span className="inline-serials">{machine.serialNumber || 'QR Not Required'}</span></td><td>{machine.sku || '—'}</td><td>1</td><td>{machine.woodenPacking !== 'Not Required' ? 'Yes' : 'No'}</td><td><input className="vendor-input" placeholder="Vendor / Make" value={dispatchVendors[machine.id] || ''} onChange={(event) => setDispatchVendors((prev) => ({ ...prev, [machine.id]: event.target.value }))} /></td><td><textarea className="dispatch-note-input" placeholder="Add dispatch note…" value={dispatchNotes[machine.id] || ''} onChange={(event) => setDispatchNotes((prev) => ({ ...prev, [machine.id]: event.target.value }))} /></td></tr>)}</tbody></table></div><div className="modal-actions"><button className="btn light" disabled={processed} onClick={() => setProcessConfirm(false)}>Cancel</button><button className="btn green" disabled={processed} onClick={processOrder}>{processed ? 'Processing…' : 'Proceed'}</button></div></>}</section></div>}

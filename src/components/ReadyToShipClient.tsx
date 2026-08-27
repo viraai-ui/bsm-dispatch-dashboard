@@ -1,7 +1,9 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Badge } from './DashboardShell'
+import { PaymentStatusChip } from './PaymentStatusChip'
+import { normalizeSalesOrderNumber, type ProjectedPaymentStatus } from '@/lib/payment-status-projection'
 import type { ReadyToShipItem, Transporter } from '@/lib/ready-to-ship'
 
 function formatDate(value?: string) {
@@ -25,6 +27,16 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
   const [busy, setBusy] = useState('')
   const [showAddTransporter, setShowAddTransporter] = useState(false)
   const [editingTransporter, setEditingTransporter] = useState<Transporter | null>(null)
+  const [paymentBySalesOrder, setPaymentBySalesOrder] = useState<Record<string, ProjectedPaymentStatus>>({})
+  const refreshPaymentProjection = useCallback(async () => {
+    try {
+      const response = await fetch('/api/payment-status-projection', { cache: 'no-store' })
+      if (!response.ok) return
+      const json = await response.json()
+      if (json?.bySalesOrder && typeof json.bySalesOrder === 'object') setPaymentBySalesOrder(json.bySalesOrder)
+    } catch { /* Display-only and deliberately independent of shipment data/actions. */ }
+  }, [])
+  const paymentStatus = (item: ReadyToShipItem) => paymentBySalesOrder[normalizeSalesOrderNumber(item.salesOrderNumber)]
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -45,14 +57,18 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not refresh Ready to Ship')
       setItems(json.data.items || [])
       setTransporters(json.data.transporters || [])
+      void refreshPaymentProjection()
     } catch (error) { if (!options.silent) setMessage(error instanceof Error ? error.message : 'Could not refresh Ready to Ship') }
     finally { if (!options.silent) setBusy('') }
   }
 
   useEffect(() => {
+    void refreshPaymentProjection()
     const interval = window.setInterval(() => { void refresh({ sync: true, silent: true }) }, 15 * 60 * 1000)
-    return () => window.clearInterval(interval)
-  }, [])
+    const focus = () => void refreshPaymentProjection()
+    window.addEventListener('focus', focus)
+    return () => { window.clearInterval(interval); window.removeEventListener('focus', focus) }
+  }, [refreshPaymentProjection])
 
   async function addNewTransporter(event: React.FormEvent) {
     event.preventDefault()
@@ -124,7 +140,7 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
           {filtered.map((item) => { const needsBuilty = item.shipment?.shipmentType === 'transporter' && !item.shipment.lrCopy?.url; return <article className={`ready-machine-card ${item.shipment ? 'shipped' : ''} ${needsBuilty ? 'builty-needed' : ''}`} key={item.id}>
             <div className="ready-machine-main">
               <div><strong>{item.salesOrderNumber}</strong><span>{item.customerName}</span></div>
-              <Badge tone={needsBuilty ? 'red' : item.shipment ? 'blue' : 'green'}>{needsBuilty ? 'Builty Needed' : item.shipment ? 'Shipped' : 'Machine Packed'}</Badge>
+              <div className="ready-status-cluster"><Badge tone={needsBuilty ? 'red' : item.shipment ? 'blue' : 'green'}>{needsBuilty ? 'Builty Needed' : item.shipment ? 'Shipped' : 'Machine Packed'}</Badge><PaymentStatusChip status={paymentStatus(item)} /></div>
             </div>
             <div className="ready-customer-address">{item.shippingAddress || 'Address not available'}</div>
             <div className="ready-machine-list-inline">{item.machines.map((machine) => { const videos = item.machineVideos?.[machine.id] || []; return <div className="ready-machine-line" key={machine.id}><div className="ready-machine-line-main"><strong>{machine.itemName}</strong><span>Qty 1</span>{machine.serialNumber && <em>Serial {machine.serialNumber}</em>}</div>{videos.length > 0 && <div className="ready-machine-video-links">{videos.map((video, index) => <a className="ready-item-video-link" href={video.workdriveUrl || video.url} target="_blank" key={video.id}>View Video{videos.length > 1 ? ` ${index + 1}` : ''}</a>)}</div>}</div>})}</div>
@@ -160,11 +176,11 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
       </aside>
     </div>
     {editingTransporter && <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card transporter-edit-modal"><div className="modal-head"><div><h1>Edit Transporter</h1><p className="muted">Change name, phone or notes</p></div><button className="drawer-close" onClick={() => setEditingTransporter(null)}>×</button></div><form className="transporter-edit-form" onSubmit={saveTransporterEdit}><label>Name<input value={editingTransporter.name} onChange={(event) => setEditingTransporter({ ...editingTransporter, name: event.target.value })} /></label><label>Phone<input value={editingTransporter.phone} onChange={(event) => setEditingTransporter({ ...editingTransporter, phone: event.target.value })} /></label><label>Notes<input value={editingTransporter.notes || ''} onChange={(event) => setEditingTransporter({ ...editingTransporter, notes: event.target.value })} placeholder="Notes / route / vehicle type" /></label><div className="transporter-edit-actions"><button className="btn light" type="button" onClick={() => setEditingTransporter(null)}>Cancel</button><button className="btn red" type="submit" disabled={busy === 'edit-transporter'}>{busy === 'edit-transporter' ? 'Saving…' : 'Save Changes'}</button><button className="btn light danger-text" type="button" disabled={busy === 'delete-transporter'} onClick={deleteEditingTransporter}>{busy === 'delete-transporter' ? 'Deleting…' : 'Delete'}</button></div></form></section></div>}
-    {activeItem && <ShipmentModal item={activeItem} transporters={transporters} busy={busy} setBusy={setBusy} onClose={() => setActiveItem(null)} onSaved={(updated) => { const stillNeedsBuilty = updated.shipment?.shipmentType === 'transporter' && !updated.shipment.lrCopy?.url; setItems((prev) => stillNeedsBuilty ? prev.map((item) => item.id === updated.id ? updated : item) : prev.filter((item) => item.id !== updated.id)); setActiveItem(null); setMessage(stillNeedsBuilty ? 'Shipment saved. Builty/LR still needed.' : 'Shipment saved.') }} />}
+    {activeItem && <ShipmentModal item={activeItem} paymentStatus={paymentStatus(activeItem)} transporters={transporters} busy={busy} setBusy={setBusy} onClose={() => setActiveItem(null)} onSaved={(updated) => { const stillNeedsBuilty = updated.shipment?.shipmentType === 'transporter' && !updated.shipment.lrCopy?.url; setItems((prev) => stillNeedsBuilty ? prev.map((item) => item.id === updated.id ? updated : item) : prev.filter((item) => item.id !== updated.id)); setActiveItem(null); setMessage(stillNeedsBuilty ? 'Shipment saved. Builty/LR still needed.' : 'Shipment saved.') }} />}
   </section>
 }
 
-function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
+function ShipmentModal({ item, paymentStatus, transporters, busy, setBusy, onClose, onSaved }: { item: ReadyToShipItem; paymentStatus?: ProjectedPaymentStatus; transporters: Transporter[]; busy: string; setBusy: (value: string) => void; onClose: () => void; onSaved: (item: ReadyToShipItem) => void }) {
   const existing = item.shipment
   const dropdownTransporters = [...transporters, { id: 'special-porter', name: 'Porter', phone: '', notes: '', createdAt: '' }, { id: 'special-customer-own-transport', name: "Customer's Own Transport", phone: '', notes: '', createdAt: '' }]
   const [shipmentType, setShipmentType] = useState<'direct' | 'transporter'>(existing?.shipmentType || 'direct')
@@ -214,7 +230,7 @@ function ShipmentModal({ item, transporters, busy, setBusy, onClose, onSaved }: 
   }
 
   return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card shipment-modal">
-    <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.customerName}</p></div><button className="drawer-close" onClick={onClose}>×</button></div>
+    <div className="modal-head"><div><h1>{item.salesOrderNumber}</h1><p className="muted">{item.customerName}</p><PaymentStatusChip status={paymentStatus} /></div><button className="drawer-close" onClick={onClose}>×</button></div>
     <div className="shipment-order-context"><strong>{item.shippingAddress || 'Address not available'}</strong><div>{item.machines.map((machine) => <span key={machine.id}>{machine.itemName} · Qty 1{machine.serialNumber ? ` · Serial ${machine.serialNumber}` : ''}</span>)}</div><em>{item.packingVideoUploaded ? '✅' : '⚠️'} Packaging Video: {item.packingVideoUploaded ? 'Yes' : 'No'}</em></div>
     <div className="shipment-type-selector"><button type="button" className={shipmentType === 'direct' ? 'active' : ''} onClick={() => setShipmentType('direct')}>Direct</button><button type="button" className={shipmentType === 'transporter' ? 'active' : ''} onClick={() => setShipmentType('transporter')}>Via Transport</button></div>
     {error && <div className="form-error">{error}</div>}
