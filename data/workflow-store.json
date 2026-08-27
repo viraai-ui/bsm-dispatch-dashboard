@@ -19431,7 +19431,9 @@
     "1154219000036134002": {
       "salesOrderId": "1154219000036134002",
       "salesOrderNumber": "SO-07833",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-27T11:40:31.777Z",
       "processedOrder": {
         "id": "1154219000036134002",
         "zohoSalesOrderId": "1154219000036134002",
@@ -19469,8 +19471,8 @@
           {
             "id": "1154219000036134002-1154219000036134005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271074",
+            "qrToken": "26271074",
             "orderId": "1154219000036134002",
             "lineItemId": "1154219000036134005",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -19478,14 +19480,17 @@
             "customerName": "3NG",
             "salesOrderNumber": "SO-07833",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -19500,7 +19505,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-27T11:32:41.448Z",
           "zohoBackupLastAttemptAt": "2026-08-27T11:32:50.419Z",
-          "zohoBackupSyncedAt": "2026-08-27T11:32:50.419Z"
+          "zohoBackupSyncedAt": "2026-08-27T11:32:50.419Z",
+          "processedAt": "2026-08-27T11:40:31.777Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
