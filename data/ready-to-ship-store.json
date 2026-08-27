@@ -4512,6 +4512,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036103087": {
+      "id": "ship-1787835080137-rtjy3",
+      "itemId": "1154219000036103087",
+      "orderId": "1154219000036103087",
+      "machineId": "1154219000036103087-1154219000036103092-1",
+      "salesOrderNumber": "SO-07830",
+      "customerName": "ROSEUS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL03SFL2010",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-27",
+      "notes": "",
+      "shippedAt": "2026-08-27T12:51:20.137Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
