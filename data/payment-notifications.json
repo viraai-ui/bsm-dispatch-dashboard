@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-e1ad62fd-1f0f-48bc-a0e5-b27e9fd9d6b0",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-e68e77b0-62c9-4cb6-926e-d820bad05ddd",
+      "salesOrderNumber": "SO-07827",
+      "customerName": "SHAKUN INDUSTRIES",
+      "paymentAmount": 31270,
+      "createdAt": "2026-08-27T07:50:47.401Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-51de68c9-6d86-4eab-8c51-2f90c89fbd17",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-e68e77b0-62c9-4cb6-926e-d820bad05ddd",
+      "salesOrderNumber": "SO-07827",
+      "customerName": "SHAKUN INDUSTRIES",
+      "paymentAmount": 31270,
+      "createdAt": "2026-08-27T07:50:47.401Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-c8a29408-3340-4b96-ac4c-7c3bf6f0b1e4",
       "type": "payment-created",
       "recipientUserId": "u-admin",
