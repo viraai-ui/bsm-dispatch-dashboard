@@ -1,18 +1,3 @@
 {
-  "payments": [
-    {
-      "customerName": "Welcome Shoes",
-      "salesOrderNumber": "SO-07818",
-      "paymentAmount": 125000,
-      "paymentMode": "Bank Transfer",
-      "screenshotUrl": "/api/r2/view?key=payments%2FSO-07818%2F1787741246235-ce893a1b-77d9-4a67-88f5-a903e0b0d0e1.jpg",
-      "screenshotKey": "payments/SO-07818/1787741246235-ce893a1b-77d9-4a67-88f5-a903e0b0d0e1.jpg",
-      "screenshotName": "karaa global pdf 1 (1)_page-0001.jpg",
-      "createdBy": "u-admin",
-      "id": "payment-62a4e3aa-2f75-4ae5-a796-1ceed1b95270",
-      "status": "Pending",
-      "createdAt": "2026-08-26T10:47:27.786Z",
-      "updatedAt": "2026-08-26T11:55:42.199Z"
-    }
-  ]
+  "payments": []
 }
