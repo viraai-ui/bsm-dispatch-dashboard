@@ -1,5 +1,62 @@
 {
   "orders": {
+    "1154219000036058005": {
+      "id": "1154219000036058005",
+      "zohoSalesOrderId": "1154219000036058005",
+      "salesOrderNumber": "SO-07827",
+      "status": "open",
+      "customerName": "SHAKUN INDUSTRIES",
+      "shippingAddress": "P-09, STREET-12, SECTOR-3, RELIANCE MODEL ECONOMIC TOWNSHIP, DADRI TOE, JHAJJAR GURGAON, HARYANA, Jhajjar, Haryana, 124105",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036058008",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036058009",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036058005-1154219000036058008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036058005",
+          "lineItemId": "1154219000036058008",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "SHAKUN INDUSTRIES",
+          "salesOrderNumber": "SO-07827",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036084004": {
       "id": "1154219000036084004",
       "zohoSalesOrderId": "1154219000036084004",
@@ -4876,6 +4933,7 @@
     }
   },
   "orderIds": [
+    "1154219000036058005",
     "1154219000036084004",
     "1154219000036067005",
     "1154219000036072005",
@@ -4930,8 +4988,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T07:02:02.043Z",
-  "lastAttemptAt": "2026-08-27T07:04:22.158Z",
+  "lastSuccessfulSyncAt": "2026-08-27T07:04:45.919Z",
+  "lastAttemptAt": "2026-08-27T07:04:45.919Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
