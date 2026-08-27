@@ -21,15 +21,22 @@ test('notification API is role protected and scoped to authenticated user', asyn
   assert.match(store, /user\.id !== creatorUserId/)
 })
 
-test('bell inbox has count, explicit reads, compact mobile panel and payment focus', async () => {
+test('bell inbox stays right-aligned and opens a viewport-safe panel below the bell', async () => {
   const client = await read('../src/components/PaymentsClient.tsx')
   const css = await read('../src/app/globals.css')
   assert.match(client, /unreadCount > 99 \? '99\+' : unreadCount/)
   assert.match(client, /Payment notifications, \$\{unreadCount\} unread/)
   assert.match(client, /Mark all read/)
   assert.match(client, /data-payment-id/)
-  assert.match(css, /width:min\(360px,calc\(100vw - 32px\)\)/)
-  assert.match(css, /@media\(max-width:700px\).*notification-panel/)
+  assert.match(css, /\.notification-bell\{[^}]*width:44px;height:44px/)
+  assert.match(css, /\.notification-panel\{[^}]*position:absolute;[^}]*top:calc\(100% \+ 8px\);right:0;width:min\(340px,calc\(100vw - 24px\)\);[^}]*max-height:/)
+  const mobileNotificationRules = css.slice(css.lastIndexOf('@media(max-width:700px){.payments-header-actions{display:flex'))
+  assert.match(mobileNotificationRules, /^@media\(max-width:700px\)\{\.payments-header-actions\{display:flex;width:100%\}/)
+  assert.match(mobileNotificationRules, /\.payments-header-actions \.notification-center\{order:3;margin-left:auto\}/)
+  assert.match(css, /\.notification-list\{[^}]*overflow-y:auto/)
+  const panelRules = [...css.matchAll(/\.notification-panel\{([^}]*)\}/g)].map((match) => match[1]).join(';')
+  assert.doesNotMatch(panelRules, /(?:^|;)bottom:/)
+  assert.doesNotMatch(panelRules, /transform:/)
 })
 
 test('payments poll every five seconds with no-store and refresh on focus and visibility', async () => {
