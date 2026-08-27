@@ -13445,6 +13445,63 @@
       "machineIds": [
         "1154219000036047010-1154219000036047013-1"
       ]
+    },
+    "1154219000036103087": {
+      "completedAt": "2026-08-27T11:03:58.573Z",
+      "order": {
+        "id": "1154219000036103087",
+        "zohoSalesOrderId": "1154219000036103087",
+        "salesOrderNumber": "SO-07830",
+        "status": "open",
+        "customerName": "ROSEUS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036103092",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036103087-1154219000036103092-1",
+            "unitNumber": 1,
+            "serialNumber": "26271073",
+            "qrToken": "26271073",
+            "orderId": "1154219000036103087",
+            "lineItemId": "1154219000036103092",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "ROSEUS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07830",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036103087-1154219000036103092-1"
+      ]
     }
   }
 }
