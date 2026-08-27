@@ -3,6 +3,22 @@
     {
       "customerName": "AASHI VENTURE PRIVATE LIMITED",
       "salesOrderNumber": "SO-07826",
+      "paymentAmount": 20000,
+      "paymentMode": "Bank Transfer",
+      "screenshotKey": "",
+      "screenshotUrl": "",
+      "screenshotName": "",
+      "publicDeleteTokenHash": "8d01fd8775a73be90159f1c80aae4fc3b9515b3a2b8f054b4438bdc6f619d212",
+      "id": "payment-21067e06-c97b-4c1b-910c-e494de4f89eb",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "522b12a934444ad79c67a4062819eb0f",
+      "createdAt": "2026-08-27T08:34:30.112Z",
+      "updatedAt": "2026-08-27T08:34:30.112Z"
+    },
+    {
+      "customerName": "AASHI VENTURE PRIVATE LIMITED",
+      "salesOrderNumber": "SO-07826",
       "paymentAmount": 86016,
       "paymentMode": "Bank Transfer",
       "screenshotKey": "payments/public/SO-07826/2026-08-27/1787819406953-89c2aadd-0ffe-4aed-b1fc-403def3266ee-8c9325c1-f873-445f-b3a2-a273b8ea56c6.jpg",
