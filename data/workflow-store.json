@@ -18884,7 +18884,9 @@
     "1154219000036047010": {
       "salesOrderId": "1154219000036047010",
       "salesOrderNumber": "SO-07822",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-27T05:00:22.350Z",
       "processedOrder": {
         "id": "1154219000036047010",
         "zohoSalesOrderId": "1154219000036047010",
@@ -18912,8 +18914,8 @@
           {
             "id": "1154219000036047010-1154219000036047013-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271067",
+            "qrToken": "26271067",
             "orderId": "1154219000036047010",
             "lineItemId": "1154219000036047013",
             "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
@@ -18921,14 +18923,17 @@
             "customerName": "Adda Uniglobe Pvt. Ltd.",
             "salesOrderNumber": "SO-07822",
             "deliveryDate": "2026-08-26",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -18941,7 +18946,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T04:56:35.043Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-27T04:56:38.293Z"
+          "zohoBackupQueuedAt": "2026-08-27T04:56:38.293Z",
+          "processedAt": "2026-08-27T05:00:22.350Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
