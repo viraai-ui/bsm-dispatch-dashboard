@@ -1,6 +1,22 @@
 {
   "payments": [
     {
+      "customerName": "KC ARTS",
+      "salesOrderNumber": "SO-07832",
+      "paymentAmount": 5000,
+      "paymentMode": "UPI",
+      "screenshotKey": "payments/public/SO-07832/2026-08-27/1787829367979-c6007822-b847-44df-92af-4ec9bd50bf61-6554f0fd-0ac6-480e-a22f-c3a10ab7cdae.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07832%2F2026-08-27%2F1787829367979-c6007822-b847-44df-92af-4ec9bd50bf61-6554f0fd-0ac6-480e-a22f-c3a10ab7cdae.jpg",
+      "screenshotName": "6554f0fd-0ac6-480e-a22f-c3a10ab7cdae.jpg",
+      "publicDeleteTokenHash": "d27ee87b8a448e8bd04af0a79f481df3e53e70b4179569c398eef3aeffec098a",
+      "id": "payment-085a98a6-216a-4e02-8a5e-88f79a39b54f",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "2829a02a94354ac4a60a9d9c8352c0f2",
+      "createdAt": "2026-08-27T11:16:09.650Z",
+      "updatedAt": "2026-08-27T11:16:09.650Z"
+    },
+    {
       "customerName": "ROSEUS PRIVATE LIMITED",
       "salesOrderNumber": "SO-07830",
       "paymentAmount": 17110,
