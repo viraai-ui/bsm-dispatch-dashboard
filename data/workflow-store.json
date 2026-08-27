@@ -19245,11 +19245,13 @@
           "qrToken": "26271071",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-27T05:46:57.186Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-27T05:47:00.392Z",
           "processedAt": "2026-08-27T05:49:09.019Z",
           "dispatchNote": "wooden",
-          "vendor": "K S"
+          "vendor": "K S",
+          "zohoBackupLastAttemptAt": "2026-08-27T06:00:20.114Z",
+          "zohoBackupSyncedAt": "2026-08-27T06:00:20.114Z"
         }
       },
       "dispatchSortOrder": 3
