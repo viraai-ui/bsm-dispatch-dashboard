@@ -12942,6 +12942,63 @@
       "machineIds": [
         "1154219000036064016-1154219000036064019-1"
       ]
+    },
+    "1154219000036080017": {
+      "completedAt": "2026-08-27T06:21:01.771Z",
+      "order": {
+        "id": "1154219000036080017",
+        "zohoSalesOrderId": "1154219000036080017",
+        "salesOrderNumber": "SO-07825",
+        "status": "open",
+        "customerName": "Combit Footwear Private Limited",
+        "shippingAddress": "Plot No. 341, Sec-17, Footwear Park, HSIIDC, Industrial Estate, Bahadurgarh, Jhajjar-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036080020",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036080017-1154219000036080020-1",
+            "unitNumber": 1,
+            "serialNumber": "26271069",
+            "qrToken": "26271069",
+            "orderId": "1154219000036080017",
+            "lineItemId": "1154219000036080020",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "Combit Footwear Private Limited",
+            "salesOrderNumber": "SO-07825",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-27",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000036080017-1154219000036080020-1"
+      ]
     }
   }
 }
