@@ -4227,6 +4227,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036080017": {
+      "id": "ship-1787812912418-zgfr3",
+      "itemId": "1154219000036080017",
+      "orderId": "1154219000036080017",
+      "machineId": "1154219000036080017-1154219000036080020-1",
+      "salesOrderNumber": "SO-07825",
+      "customerName": "Combit Footwear Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-27",
+      "notes": "",
+      "shippedAt": "2026-08-27T06:41:52.418Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
