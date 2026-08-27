@@ -384,9 +384,9 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036051011",
-          "itemName": "Strobel Sewing machine (Disc feed)",
-          "sku": "600",
+          "id": "1154219000036080009",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
@@ -396,14 +396,14 @@
       ],
       "machines": [
         {
-          "id": "1154219000036051008-1154219000036051011-1",
+          "id": "1154219000036051008-1154219000036080009-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036051008",
-          "lineItemId": "1154219000036051011",
-          "itemName": "Strobel Sewing machine (Disc feed)",
-          "sku": "600",
+          "lineItemId": "1154219000036080009",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
           "customerName": "Sunil Prabhulal Chauhan",
           "salesOrderNumber": "SO-07817",
           "deliveryDate": "2026-08-27",
@@ -4813,8 +4813,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T05:27:06.259Z",
-  "lastAttemptAt": "2026-08-27T05:40:39.556Z",
+  "lastSuccessfulSyncAt": "2026-08-27T05:41:03.333Z",
+  "lastAttemptAt": "2026-08-27T05:41:03.333Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
