@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036072005": {
+      "id": "1154219000036072005",
+      "zohoSalesOrderId": "1154219000036072005",
+      "salesOrderNumber": "SO-07823",
+      "status": "open",
+      "customerName": "Unisole India Pvt Ltd",
+      "shippingAddress": "A-38, HOSIERY COMPLEX, EXTN. PHASE-II, UTTAR PRADESH, Uttar Pradesh, 201305",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036072008",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036072005-1154219000036072008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036072005",
+          "lineItemId": "1154219000036072008",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "customerName": "Unisole India Pvt Ltd",
+          "salesOrderNumber": "SO-07823",
+          "deliveryDate": "2026-08-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036047010": {
       "id": "1154219000036047010",
       "zohoSalesOrderId": "1154219000036047010",
@@ -4714,6 +4761,7 @@
     }
   },
   "orderIds": [
+    "1154219000036072005",
     "1154219000036047010",
     "1154219000036057006",
     "1154219000036060006",
@@ -4765,8 +4813,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-27T04:40:25.377Z",
-  "lastAttemptAt": "2026-08-27T04:55:51.400Z",
+  "lastSuccessfulSyncAt": "2026-08-27T04:56:14.000Z",
+  "lastAttemptAt": "2026-08-27T04:56:14.000Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
