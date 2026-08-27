@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271072,
+  "serialCounter": 26271074,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -19427,6 +19427,77 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000036134002": {
+      "salesOrderId": "1154219000036134002",
+      "salesOrderNumber": "SO-07833",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036134002",
+        "zohoSalesOrderId": "1154219000036134002",
+        "salesOrderNumber": "SO-07833",
+        "status": "open",
+        "customerName": "3NG",
+        "shippingAddress": "149, GALI NO.-2, Moonga Nagar,, Karawal Nagar, Delhi, 110094, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036134005",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036134006",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036134002-1154219000036134005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036134002",
+            "lineItemId": "1154219000036134005",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "3NG",
+            "salesOrderNumber": "SO-07833",
+            "deliveryDate": "2026-08-27",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036134002-1154219000036134005-1": {
+          "machineUnitId": "1154219000036134002-1154219000036134005-1",
+          "lineItemId": "1154219000036134005",
+          "serialNumber": "26271074",
+          "qrToken": "26271074",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
