@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-c0042538-56b9-462d-bbde-4429afeaa5cf",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-06af8d57-9596-4022-80bb-6ff50ce9f3b3",
+      "salesOrderNumber": "SO-07812",
+      "customerName": "Nepal Jutta Factory Pvt Ltd",
+      "paymentAmount": 56200,
+      "createdAt": "2026-08-27T11:17:03.958Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-a6d7f198-6a4e-4769-bddc-9230fa37975a",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-06af8d57-9596-4022-80bb-6ff50ce9f3b3",
+      "salesOrderNumber": "SO-07812",
+      "customerName": "Nepal Jutta Factory Pvt Ltd",
+      "paymentAmount": 56200,
+      "createdAt": "2026-08-27T11:17:03.958Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-bf57577e-0272-4783-ae16-56dc54257b6b",
       "type": "payment-created",
       "recipientUserId": "u-admin",
