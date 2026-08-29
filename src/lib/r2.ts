@@ -224,7 +224,11 @@ export async function verifyR2Object(key: string, options: { prefixes: readonly 
   if (!isSafeR2Key(key, options.prefixes)) throw new Error('Invalid R2 object key')
   const segments = key.split('/')
   if (options.stage && segments[1] !== options.stage) throw new Error('Upload key does not match this workflow stage')
-  if (options.order && !segments.includes(safeSegment(options.order))) throw new Error('Upload key does not match this sales order')
+  if (options.order) {
+    const expected = options.order.split('/').map(safeSegment)
+    const matches = segments.some((_, index) => expected.every((segment, offset) => segments[index + offset] === segment))
+    if (!matches) throw new Error('Upload key does not match this sales order')
+  }
   if (options.machineId && !segments.includes(safeSegment(options.machineId))) throw new Error('Upload key does not match this machine')
   const metadata = await headR2Object(key)
   if (!metadata.exists) throw new Error('Uploaded object was not found')
