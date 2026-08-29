@@ -156,6 +156,11 @@ export function createR2ViewUrl(key: string, expiresInSeconds = 3600) {
   return createR2SignedUrl(key, 'GET', expiresInSeconds)
 }
 
+/** HEAD signatures are method-bound by AWS SigV4 and cannot reuse a GET URL. */
+export function createR2HeadUrl(key: string, expiresInSeconds = 3600) {
+  return createR2SignedUrl(key, 'HEAD', expiresInSeconds)
+}
+
 function createR2SignedUrl(key: string, method: 'GET' | 'HEAD', expiresInSeconds: number) {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()

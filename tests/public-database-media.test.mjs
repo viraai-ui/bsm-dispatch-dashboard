@@ -33,6 +33,7 @@ test('public resolver is read-only, rate limited and private; authenticated R2 r
   assert.match(route, /private, no-store/)
   assert.match(route, /status: 429/)
   assert.match(route, /createR2ViewUrl\(capability.value, 120\)/)
+  assert.match(route, /createR2HeadUrl\(capability.value, 120\)/)
   assert.match(route, /capabilityIsReferenced/)
   assert.match(route, /request.headers.get\('range'\)/)
   assert.match(authenticated, /requireUser\(\['Admin', 'Operations', 'Media', 'Accounts', 'Database'\]\)/)

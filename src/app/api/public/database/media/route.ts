@@ -3,7 +3,7 @@ import { loadDatabaseOrders } from '@/lib/database-orders'
 import { readMediaProofStore } from '@/lib/media-proof'
 import { readShipmentStore } from '@/lib/ready-to-ship'
 import { capabilityIsReferenced, isAllowedGithubUrl, verifyPublicMediaCapability } from '@/lib/public-database-media'
-import { createR2ViewUrl } from '@/lib/r2'
+import { createR2HeadUrl, createR2ViewUrl } from '@/lib/r2'
 import { getZohoAccessToken } from '@/lib/zoho'
 
 export const runtime = 'nodejs'
@@ -31,7 +31,8 @@ async function resolveMedia(request: NextRequest) {
   }
 
   if (capability.source === 'r2') {
-    const response = NextResponse.redirect(createR2ViewUrl(capability.value, 120), 302)
+    const signedUrl = request.method === 'HEAD' ? createR2HeadUrl(capability.value, 120) : createR2ViewUrl(capability.value, 120)
+    const response = NextResponse.redirect(signedUrl, 302)
     for (const [key, value] of Object.entries(PRIVATE_HEADERS)) response.headers.set(key, value)
     return response
   }
