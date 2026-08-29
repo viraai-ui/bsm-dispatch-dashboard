@@ -1903,6 +1903,31 @@
           ]
         }
       }
+    },
+    "1154219000036050001": {
+      "orderId": "1154219000036050001",
+      "salesOrderNumber": "SO-07814",
+      "submittedAt": null,
+      "units": {
+        "loading-order": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "loading-order-video-1788002725149-e79ojg",
+              "name": "SO-07814 - Machine.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "https://raw.githubusercontent.com/viraai-ui/bsm-dispatch-dashboard/main/data/media-uploads/2026-08-29T11-25-21-433Z-SO-07814 - Machine.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": null,
+              "storageProvider": "github",
+              "uploadedAt": "2026-08-29T11:25:25.149Z",
+              "expiresAt": "2026-09-28T11:25:25.149Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
