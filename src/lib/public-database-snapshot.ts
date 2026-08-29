@@ -29,7 +29,9 @@ async function buildSnapshot():Promise<PublicDatabaseSnapshot>{
   haystacks[order.id]=normalize([order.salesOrderNumber,order.customerName,order.salesperson,order.deliveryDate,status.lifecycleLabel,status.mediaLabel,shipment?.transporterName,shipment?.transporterPhone,shipment?.vehicleNumber,shipment?.driverName,shipment?.driverPhone,...order.machines.flatMap(m=>[m.serialNumber,m.itemName,m.vendor])].join(' '))
  }
  const rows=databaseOrders.map(o=>{const s=statuses[o.id];return{id:o.id,salesOrderNumber:o.salesOrderNumber,customerName:o.customerName,units:o.machines.length,warrantyDate:warrantyDates[o.id]||'',warrantyEnd:warrantyEnd(warrantyDates[o.id]),mediaLabel:s?.mediaLabel||'Pending',mediaTone:s?.mediaTone||'amber',lifecycleLabel:s?.lifecycleLabel||'Open',builtyUploaded:Boolean(shipmentRecords[o.id]?.lrCopy)}})
- const version=crypto.createHash('sha256').update(JSON.stringify({generatedAt,rows,media})).digest('hex').slice(0,20)
+ // Content-derived: every cold instance serving the same durable store has the
+ // same immutable version; wall-clock generation time must never split it.
+ const version=crypto.createHash('sha256').update(JSON.stringify({rows,details,media})).digest('hex').slice(0,20)
  return {schema:1,snapshotVersion:version,generatedAt,rows,details,media,haystacks}
 }
 function collect(orderId:string,kind:'packing'|'loading',record:any,out:PublicMediaRef[]){for(const unit of Object.values(record?.units||{}) as any[])for(const file of [...(unit.videos||[]),...(unit.photos||[])]){const source=sourceFor(file);if(source)out.push(makeRef(orderId,kind,source,file.name))}}
