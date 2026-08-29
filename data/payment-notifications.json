@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-f719e906-278f-42fa-9c56-823b8be468b9",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-9f4ba536-f1cf-4931-bfe5-35b19621f94e",
+      "salesOrderNumber": "SO-07841",
+      "customerName": "NITCO SEWING MACHINE COMPANY",
+      "paymentAmount": 90300,
+      "createdAt": "2026-08-29T12:30:26.433Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-59fb3f7f-9f73-494b-9584-886df787fcd3",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-9f4ba536-f1cf-4931-bfe5-35b19621f94e",
+      "salesOrderNumber": "SO-07841",
+      "customerName": "NITCO SEWING MACHINE COMPANY",
+      "paymentAmount": 90300,
+      "createdAt": "2026-08-29T12:30:26.433Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-952bab3f-7103-4413-963c-f2980b9fa766",
       "type": "payment-created",
       "recipientUserId": "u-admin",
