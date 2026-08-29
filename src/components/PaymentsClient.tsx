@@ -44,6 +44,9 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   const pollingRef = useRef(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const pollFailuresRef = useRef(0)
+  const orderRequestRef = useRef<AbortController | null>(null)
+  const orderGenerationRef = useRef(0)
+  const orderCacheRef = useRef(new Map<string, OrderSuggestion[]>())
   const isAdmin = userRole === 'Admin'
   const isAccounts = userRole === 'Accounts'
 
@@ -128,22 +131,28 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   }
 
   useEffect(() => {
-    if (!open || ordersLoaded || ordersLoading) return
+    if (!open || selectedOrder) return
+    const search = salesOrderNumber.trim()
+    const cached = orderCacheRef.current.get(search)
+    if (cached) { setOrders(cached); setOrdersLoaded(true); return }
+    const timer = window.setTimeout(() => {
+    orderRequestRef.current?.abort(); const controller = new AbortController(); orderRequestRef.current = controller; const generation = ++orderGenerationRef.current
     setOrdersLoading(true)
-    fetch('/api/payments/open-sales-orders', { cache: 'no-store' })
+    const timeout = window.setTimeout(() => controller.abort(), 8_000)
+    fetch(`/api/payments/open-sales-orders?limit=${search ? 25 : 10}${search ? `&q=${encodeURIComponent(search)}` : ''}`, { cache: 'no-store', signal: controller.signal })
       .then(async (response) => {
         const json = await response.json().catch(() => ({}))
         if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load sales orders')
-        setOrders(Array.isArray(json.data?.orders) ? json.data.orders : [])
+        if (generation !== orderGenerationRef.current) return
+        const next = Array.isArray(json.data?.orders) ? json.data.orders : []; orderCacheRef.current.set(search, next); setOrders(next)
       })
-      .catch((reason) => setError(reason instanceof Error ? reason.message : 'Could not load sales orders'))
-      .finally(() => { setOrdersLoading(false); setOrdersLoaded(true) })
-  }, [open, ordersLoaded, ordersLoading])
+      .catch((reason) => { if (generation === orderGenerationRef.current && reason?.name !== 'AbortError') setError(reason instanceof Error ? reason.message : 'Could not load sales orders') })
+      .finally(() => { clearTimeout(timeout); if (generation === orderGenerationRef.current) { setOrdersLoading(false); setOrdersLoaded(true) } })
+    }, search ? 225 : 0)
+    return () => { clearTimeout(timer); orderRequestRef.current?.abort() }
+  }, [open, salesOrderNumber, selectedOrder])
 
-  const matchingOrders = useMemo(() => {
-    const query = salesOrderNumber.toLocaleLowerCase().replace(/\s+/g, '')
-    return orders.filter((order) => !query || `${order.salesOrderNumber}${order.customerName}`.toLocaleLowerCase().replace(/\s+/g, '').includes(query)).slice(0, query ? 50 : 10)
-  }, [orders, salesOrderNumber])
+  const matchingOrders = useMemo(() => orders, [orders])
 
   function selectOrder(order: OrderSuggestion) {
     setSalesOrderNumber(order.salesOrderNumber)
@@ -161,6 +170,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   }
 
   function resetPaymentForm() {
+    orderRequestRef.current?.abort(); orderGenerationRef.current += 1
     setCustomerName(''); setSalesOrderNumber(''); setSelectedOrderNumber(''); setSelectedOrder(null); setPaymentAmount(''); setPaymentMode('Bank Transfer'); setAddedBy(''); setFiles([]); setRemarks('')
     setOrders([]); setOrdersLoaded(false); setOrdersLoading(false); setSuggestionsOpen(false); setActiveSuggestion(0); setError(''); setSyncMessage('')
     if (fileInputRef.current) fileInputRef.current.value = ''
@@ -171,12 +181,13 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   async function syncOpenOrders() {
     setSyncing(true); setError(''); setSyncMessage('')
     try {
-      const response = await fetch('/api/payments/open-sales-orders?refresh=1', { cache: 'no-store' })
+      const controller = new AbortController(); const timeout = window.setTimeout(() => controller.abort(), 60_000)
+      const response = await fetch('/api/payments/open-sales-orders?refresh=1&limit=10', { cache: 'no-store', signal: controller.signal }).finally(() => clearTimeout(timeout))
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync Zoho sales orders')
       const latest = Array.isArray(json.data?.orders) ? json.data.orders : []
       setOrders(latest); setOrdersLoaded(true); setSelectedOrderNumber(''); setSelectedOrder(null); setSalesOrderNumber(''); setCustomerName('')
-      setSyncMessage(`Synced ${latest.length} Zoho sales order${latest.length === 1 ? '' : 's'}.`)
+      orderCacheRef.current.clear(); orderCacheRef.current.set('', latest); setSyncMessage('Sales-order search index refreshed.')
       setSuggestionsOpen(open)
     } catch (reason) {
       setOrders([]); setOrdersLoaded(true)

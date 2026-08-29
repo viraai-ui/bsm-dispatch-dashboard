@@ -37,7 +37,7 @@ test('Payments uses its dedicated read-only sales-order API', async () => {
   const client = await read('../src/components/PaymentsClient.tsx')
   const orders = await read('../src/app/api/orders/route.ts')
   const paymentOrders = await read('../src/app/api/payments/open-sales-orders/route.ts')
-  assert.match(client, /fetch\('\/api\/payments\/open-sales-orders\?refresh=1'/)
+  assert.match(client, /fetch\('\/api\/payments\/open-sales-orders\?refresh=1&limit=10'/)
   assert.doesNotMatch(client, /fetch\('\/api\/orders'/)
   assert.match(client, /payment-sync-icon spinning/)
   assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(true\)/)

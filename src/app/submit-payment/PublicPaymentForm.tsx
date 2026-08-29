@@ -48,7 +48,7 @@ export default function PublicPaymentForm() {
   const [syncing, setSyncing] = useState(false)
   const [ordersLoading, setOrdersLoading] = useState(false)
   const [syncMessage, setSyncMessage] = useState('')
-  const loadedAt = useRef(0)
+  const searchCache = useRef(new Map<string, Order[]>())
   const polling = useRef(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const orderRequest = useRef<{ controller: AbortController; generation: number } | null>(null)
@@ -89,7 +89,7 @@ export default function PublicPaymentForm() {
   const resetPaymentForm = useCallback(() => {
     orderRequest.current?.controller.abort(); orderRequest.current = null; requestGeneration.current += 1
     setQuery(''); setSelected(null); setAmount(''); setMode(''); setAddedBy(''); setFiles([]); setRemarks(''); setToken(''); setOrders([])
-    setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); setDragActive(false); setFileAnnouncement(''); dragDepth.current = 0; loadedAt.current = 0
+    setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); setDragActive(false); setFileAnnouncement(''); dragDepth.current = 0
     if (fileInputRef.current) fileInputRef.current.value = ''
   }, [])
 
@@ -125,36 +125,42 @@ export default function PublicPaymentForm() {
     return () => { window.removeEventListener('dragenter', enter); window.removeEventListener('dragover', over); window.removeEventListener('dragleave', leave); window.removeEventListener('drop', drop); dragDepth.current = 0 }
   }, [open, receipt, attachPaymentProof])
 
-  async function loadForm(force = false) {
+  async function loadForm(force = false, search = '') {
     orderRequest.current?.controller.abort()
     const controller = new AbortController(); const generation = ++requestGeneration.current
     orderRequest.current = { controller, generation }
     setError('')
     setOrdersLoading(true); if (force) setSyncing(true)
-    const timeout = window.setTimeout(() => controller.abort('timeout'), 12_000)
+    const timeout = window.setTimeout(() => controller.abort('timeout'), force ? 60_000 : 8_000)
     try {
-      const response = await fetch(`/api/public/payments/orders${force ? '?refresh=1' : ''}`, { cache: 'no-store', signal: controller.signal })
+      const params = new URLSearchParams({ limit: search ? '25' : '10' }); if (search) params.set('q', search); if (force) params.set('refresh', '1')
+      const response = await fetch(`/api/public/payments/orders?${params}`, { cache: 'no-store', signal: controller.signal })
       const json: Api<{ orders: Order[]; submissionToken: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Could not load sales orders')
       if (generation !== requestGeneration.current || controller.signal.aborted) return
-      setOrders(json.data.orders); setToken(json.data.submissionToken); loadedAt.current = Date.now()
-      if (force) setSyncMessage(`Synced ${json.data.orders.length} Zoho sales orders`)
+      setOrders(json.data.orders); searchCache.current.set(search, json.data.orders); setToken(json.data.submissionToken)
+      if (force) setSyncMessage('Sales-order search index refreshed')
     } catch (cause) {
       if (generation !== requestGeneration.current) return
-      setOrders([]); setSyncMessage(''); setError(cause instanceof Error ? cause.message : 'Could not load form')
+      setSyncMessage(''); setError(controller.signal.aborted ? 'Sales-order lookup timed out. Please retry.' : cause instanceof Error ? cause.message : 'Could not load form')
     } finally { clearTimeout(timeout); if (generation === requestGeneration.current) { setOrdersLoading(false); if (force) setSyncing(false) } }
   }
   useEffect(() => () => orderRequest.current?.controller.abort(), [])
   useEffect(() => {
+    if (!open || selected) return
+    const search = query.trim()
+    const cached = searchCache.current.get(search)
+    if (cached) { setOrders(cached); return }
+    const timer = window.setTimeout(() => void loadForm(false, search), search ? 225 : 0)
+    return () => window.clearTimeout(timer)
+  }, [open, query, selected])
+  useEffect(() => {
     const back = () => { if (modalHistory.current) { modalHistory.current = false; resetPaymentForm(); setOpen(false) } }
     window.addEventListener('popstate', back); return () => window.removeEventListener('popstate', back)
   }, [resetPaymentForm])
-  const matches = useMemo(() => {
-    const needle = query.toLocaleLowerCase().replace(/\s+/g, '')
-    return orders.filter((order) => !needle || `${order.salesOrderNumber}${order.customerName}`.toLocaleLowerCase().replace(/\s+/g, '').includes(needle)).slice(0, needle ? 50 : 10)
-  }, [orders, query])
+  const matches = useMemo(() => orders, [orders])
   function choose(order: Order) { setSelected(order); setQuery(order.salesOrderNumber); setSuggestionsOpen(false); setError('') }
-  function showSuggestions() { setSuggestionsOpen(true); if (!orders.length || Date.now() - loadedAt.current > 60_000) void loadForm(true) }
+  function showSuggestions() { setSuggestionsOpen(true); if (!orders.length) void loadForm(false, query.trim()) }
   function openPaymentForm() { resetPaymentForm(); setOpen(true); setSuggestionsOpen(true); modalHistory.current = true; history.pushState({ paymentModal: true }, ''); void loadForm() }
   function close() { if (!busy) { resetPaymentForm(); setOpen(false); if (modalHistory.current) { modalHistory.current = false; history.back() } } }
   function again() { resetPaymentForm(); setSuggestionsOpen(true); void loadForm() }

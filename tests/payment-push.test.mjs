@@ -8,7 +8,7 @@ test('one to ten proofs are required while core fields remain server validated',
   const client = await read('../src/components/PaymentsClient.tsx')
   const store = await read('../src/lib/payments.ts')
   assert.match(route, /if \(!salesOrderId \|\| !customerName \|\| !salesOrderNumber\)/)
-  assert.match(route, /order\.id === salesOrderId.*order\.salesOrderNumber === salesOrderNumber.*order\.customerName === customerName/)
+  assert.match(route, /validatePaymentOrder\(salesOrderId, salesOrderNumber, customerName\)/)
   assert.match(route, /paymentAmount <= 0/)
   assert.match(route, /PAYMENT_MODES\.includes/)
   assert.match(route, /requested\.length < 1 \|\| requested\.length > 10/)

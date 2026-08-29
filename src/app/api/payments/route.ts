@@ -5,7 +5,7 @@ import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, PAYMENT_PROOF_MIME_TYPES } from '@/lib/payment-screenshot'
-import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
+import { validatePaymentOrder } from '@/lib/payment-order-search'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
   if (requested.length < 1 || requested.length > 10) return apiError('Between 1 and 10 payment proofs are required', 400)
   const attachments: PaymentAttachment[] = []
   try {
-    const authoritativeOrder = (await listPaymentOpenSalesOrders(true)).find((order) => order.id === salesOrderId && order.salesOrderNumber === salesOrderNumber && order.customerName === customerName)
+    const authoritativeOrder = await validatePaymentOrder(salesOrderId, salesOrderNumber, customerName)
     if (!authoritativeOrder) return apiError('Sales order details do not match Zoho. Please select it again.', 400)
     const seen = new Set<string>()
     for (const item of requested) {

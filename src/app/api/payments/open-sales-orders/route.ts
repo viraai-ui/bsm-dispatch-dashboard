@@ -1,14 +1,17 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
+import { refreshPaymentOrderIndex, searchPaymentOrders } from '@/lib/payment-order-search'
 
 export async function GET(request: Request) {
   const auth = await requireUser(['Admin', 'Accounts'])
   if (!auth.ok) return auth.response
   try {
-    const refresh = new URL(request.url).searchParams.get('refresh') === '1'
-    const orders = await listPaymentOpenSalesOrders(refresh)
-    return apiOk({ source: refresh ? 'zoho_read_only' : 'local_synced_read_only', orders })
+    const url = new URL(request.url)
+    const refresh = url.searchParams.get('refresh') === '1'
+    if (refresh) await refreshPaymentOrderIndex(true)
+    const q = String(url.searchParams.get('q') || '').slice(0, 100)
+    const result = await searchPaymentOrders(q, Math.min(Number(url.searchParams.get('limit')) || (q ? 25 : 10), 50))
+    return apiOk({ source: 'payment_order_index', ...result })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Could not load open sales orders', 502)
   }

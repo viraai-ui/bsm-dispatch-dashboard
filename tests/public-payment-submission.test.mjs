@@ -17,15 +17,15 @@ test('public payment page and only dedicated facade are unauthenticated', async 
 
 test('lookup is minimum-field, read-only and never touches operational APIs/stores', async () => {
   const route = await read('../src/app/api/public/payments/orders/route.ts')
-  assert.match(route, /listPaymentOpenSalesOrders\(refresh\)/)
+  assert.match(route, /searchPaymentOrders\(q, limit\)/)
   assert.match(route, /searchParams\.get\('refresh'\) === '1'/)
-  assert.match(route, /id, salesOrderNumber, customerName/)
+  assert.match(route, /limit.*q \? 25 : 10/)
   assert.doesNotMatch(route, /api\/orders|syncConfirmed|workflow|writeSynced|githubRequest/)
 })
 
 test('submission enforces authoritative SO identity, accepts terminal SOs, and retains anti-abuse and notifications', async () => {
   const [route, store] = await Promise.all([read('../src/app/api/public/payments/route.ts'), read('../src/lib/payments.ts')])
-  for (const contract of [/sameOrigin/, /checkRateLimit/, /verifySubmissionToken/, /website/, /idempotency-key/, /MAX_BODY/, /listPaymentOpenSalesOrders\(true\)/, /item\.id === orderId/, /item\.salesOrderNumber === salesOrderNumber/, /item\.customerName === customerName/, /createPaymentNotifications/, /notifyAccountsOfNewPayment/]) assert.match(route, contract)
+  for (const contract of [/sameOrigin/, /checkRateLimit/, /verifySubmissionToken/, /website/, /idempotency-key/, /MAX_BODY/, /validatePaymentOrder\(orderId, salesOrderNumber, customerName\)/, /createPaymentNotifications/, /notifyAccountsOfNewPayment/]) assert.match(route, contract)
   assert.match(store, /createdBy: 'public-salesman'/)
   assert.match(store, /status: 'Pending'/)
   assert.match(store, /idempotencyKey === idempotencyKey/)

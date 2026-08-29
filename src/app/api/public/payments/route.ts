@@ -1,5 +1,5 @@
 import { apiError, apiOk } from '@/lib/api'
-import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
+import { validatePaymentOrder } from '@/lib/payment-order-search'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPublicPayment, isPaymentAddedBy, listPayments, paymentAttachments, type PaymentAttachment, type PaymentMode } from '@/lib/payments'
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
   if (screenshotKey && (!/^payments\/public\/[a-zA-Z0-9._/-]{1,220}$/.test(screenshotKey) || screenshotUrl !== `/api/r2/view?key=${encodeURIComponent(screenshotKey)}`)) return publicApiHeaders(apiError('Invalid screenshot reference', 400))
   const attachments: PaymentAttachment[] = []
   try {
-    const order = (await listPaymentOpenSalesOrders(true)).find((item) => item.id === orderId && item.salesOrderNumber === salesOrderNumber && item.customerName === customerName)
+    const order = await validatePaymentOrder(orderId, salesOrderNumber, customerName)
     if (!order) return publicApiHeaders(apiError('Sales order details do not match Zoho. Please select it again.', 400))
     const seen = new Set<string>()
     for (const rawItem of requested) {
