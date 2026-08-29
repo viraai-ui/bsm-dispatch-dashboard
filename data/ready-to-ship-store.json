@@ -4574,6 +4574,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036047010": {
+      "id": "ship-1787988769498-iqxzi",
+      "itemId": "1154219000036047010",
+      "orderId": "1154219000036047010",
+      "machineId": "1154219000036047010-1154219000036047013-1",
+      "salesOrderNumber": "SO-07822",
+      "customerName": "Adda Uniglobe Pvt. Ltd.",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK8106",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-29",
+      "notes": "",
+      "shippedAt": "2026-08-29T07:32:49.498Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
