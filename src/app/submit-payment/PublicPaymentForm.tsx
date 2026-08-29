@@ -12,6 +12,7 @@ type Payment = { id: string; date: string; salesOrderNumber?: string; customerNa
 type Api<T> = { ok: boolean; data?: T; error?: string }
 type Capabilities = Record<string, string>
 const CAPABILITY_KEY = 'bsm-public-payment-delete-capabilities-v1'
+const normalizeListSearch = (value: unknown) => String(value ?? '').trim().replace(/\s+/g, ' ').toLocaleLowerCase()
 const money = (amount: number | null) => amount == null ? '—' : new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(amount)
 const date = (value: string) => new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(value))
 
@@ -28,6 +29,9 @@ export default function PublicPaymentForm() {
   const [deleteBusy, setDeleteBusy] = useState(false)
   const [deleteError, setDeleteError] = useState('')
   const [toast, setToast] = useState('')
+  const [listSearch, setListSearch] = useState('')
+  const [userFilter, setUserFilter] = useState<PaymentAddedBy | ''>('')
+  const [filterOpen, setFilterOpen] = useState(false)
   const [open, setOpen] = useState(false)
   const [orders, setOrders] = useState<Order[]>([])
   const [token, setToken] = useState('')
@@ -62,8 +66,8 @@ export default function PublicPaymentForm() {
   // The same short-lived signed session used by submission is CSRF proof for legacy deletion.
 
   useEffect(() => {
-    const closeMenus = (event: PointerEvent) => { if (!(event.target as Element).closest('[data-payment-menu]')) setOpenMenu(null) }
-    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setOpenMenu(null); if (!deleteBusy) setDeleting(null) } }
+    const closeMenus = (event: PointerEvent) => { if (!(event.target as Element).closest('[data-payment-menu]')) setOpenMenu(null); if (!(event.target as Element).closest('[data-user-filter]')) setFilterOpen(false) }
+    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setOpenMenu(null); setFilterOpen(false); if (!deleteBusy) setDeleting(null) } }
     document.addEventListener('pointerdown', closeMenus); document.addEventListener('keydown', escape)
     return () => { document.removeEventListener('pointerdown', closeMenus); document.removeEventListener('keydown', escape) }
   }, [deleteBusy])
@@ -168,6 +172,17 @@ export default function PublicPaymentForm() {
     window.addEventListener('popstate', back); return () => window.removeEventListener('popstate', back)
   }, [resetPaymentForm])
   const matches = useMemo(() => orders, [orders])
+  const visiblePayments = useMemo(() => {
+    const needle = normalizeListSearch(listSearch)
+    return payments.filter((payment) => {
+      if (userFilter && payment.addedBy !== userFilter) return false
+      if (!needle) return true
+      return normalizeListSearch([
+        payment.salesOrderNumber || 'No Sales Order', payment.customerName,
+        payment.remarks, payment.addedBy,
+      ].join(' ')).includes(needle)
+    })
+  }, [payments, listSearch, userFilter])
   function choose(order: Order) { setSelected(order); setQuery(order.salesOrderNumber); setCustomerName(order.customerName); setSuggestionsOpen(false); setError('') }
   function clearOrder() { setSelected(null); setQuery(''); setCustomerName(''); setSuggestionsOpen(false) }
   function showSuggestions() { setOrderInteracted(true); setSuggestionsOpen(true); if (!orders.length) void loadForm(false, query.trim()) }
@@ -236,10 +251,19 @@ export default function PublicPaymentForm() {
     <section className={styles.page}>
       <header className={styles.header}><div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Submit customer payments and wait for approval.</p></div><div className={styles.headerActions}><button className={styles.sync} type="button" title="Sync sales orders" aria-label="Sync sales orders" disabled={syncing} onClick={() => void loadForm(true)}><svg className={syncing ? styles.spinning : ''} viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5M4 18v-5h5M6.1 9A7 7 0 0 1 18 6.5L20 11M4 13l2 4.5A7 7 0 0 0 17.9 15"/></svg></button><button className={styles.add} type="button" onClick={openPaymentForm}>+ Add Payment</button></div></header>
       {(syncMessage || (!open && error)) && <p className={error ? styles.syncError : styles.syncSuccess} role="status">{error || syncMessage}</p>}
+      <div className={styles.listTools}>
+        <div className={styles.paymentSearch}><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" value={listSearch} onChange={(event) => setListSearch(event.target.value)} aria-label="Search payments" placeholder="Search payments" />{listSearch && <button type="button" aria-label="Clear payment search" onClick={() => setListSearch('')}>×</button>}</div>
+        <div className={styles.userFilter} data-user-filter>
+          <button className={styles.filterButton} type="button" aria-label="Filter payments by added-by user" aria-haspopup="menu" aria-expanded={filterOpen} onClick={() => setFilterOpen((value) => !value)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>{userFilter && <span className={styles.filterDot}/>}</button>
+          {filterOpen && <div className={styles.filterPopover} role="menu" aria-label="Added by"><strong>Added by</strong>{(['', ...PAYMENT_ADDED_BY_USERS] as const).map((user) => <button type="button" role="menuitemradio" aria-checked={userFilter === user} key={user || 'all'} onClick={() => { setUserFilter(user); setFilterOpen(false) }}><span>{user || 'All users'}</span>{userFilter === user && <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>}</button>)}</div>}
+        </div>
+        {userFilter && <button type="button" className={styles.filterChip} aria-label={`Clear ${userFilter} filter`} onClick={() => setUserFilter('')}>{userFilter} <span aria-hidden="true">×</span></button>}
+        <span className={styles.resultCount}>{visiblePayments.length} payment{visiblePayments.length === 1 ? '' : 's'}</span>
+      </div>
       <section className={styles.listCard} aria-live="polite">
-        {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
-          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber || 'No Sales Order'}</strong></td><td>{payment.customerName}<small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small></td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
-          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber || 'No Sales Order'}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div><small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
+        {listReady && visiblePayments.length === 0 ? <div className={styles.empty}><strong>No payments found</strong><span>{payments.length ? 'Try another search or user filter.' : 'New payment records will appear here.'}</span></div> : <>
+          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{visiblePayments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber || 'No Sales Order'}</strong></td><td>{payment.customerName}<small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small></td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
+          <div className={styles.mobileList}>{visiblePayments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber || 'No Sales Order'}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div><small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
         </>}
       </section>
     </section>
