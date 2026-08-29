@@ -4741,6 +4741,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036179029": {
+      "id": "ship-1788006325036-atmxq",
+      "itemId": "1154219000036179029",
+      "orderId": "1154219000036179029",
+      "machineId": "1154219000036179029-1154219000036179032-1",
+      "salesOrderNumber": "SO-07841",
+      "customerName": "NITCO SEWING MACHINE COMPANY",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS1371",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-29",
+      "notes": "",
+      "shippedAt": "2026-08-29T12:25:25.036Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
