@@ -195,9 +195,12 @@ function mapOrderSummary(order: any): Order {
 }
 
 function mapPaymentOrderSummary(order: any): Order {
-  const rawStatus = [order.status, order.current_sub_status, order.order_status, order.salesorder_status, order.shipment_status, order.invoiced_status]
-    .map((value) => String(value || '').trim()).find((value) => /closed|void|cancelled|canceled|shipped|invoiced/i.test(value))
-    || String(order.status || order.current_sub_status || order.order_status || order.salesorder_status || order.shipment_status || order.invoiced_status || '')
+  const values = [order.status, order.current_sub_status, order.order_status, order.salesorder_status, order.shipment_status, order.invoiced_status]
+    .map((value) => String(value || '').trim()).filter(Boolean)
+  const rawStatus = values.find((value) => {
+    const words = value.toLowerCase().replace(/[_-]+/g, ' ').split(/\s+/)
+    return words.some((word, index) => ['closed', 'void', 'cancelled', 'canceled', 'shipped', 'invoiced'].includes(word) && words[index - 1] !== 'not')
+  }) || values[0] || ''
   return { ...mapOrderSummary(order), status: rawStatus as Order['status'] }
 }
 

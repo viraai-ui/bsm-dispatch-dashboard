@@ -19,6 +19,8 @@ test('payment display maps every terminal variant and keeps unknown neutral', ()
   for (const status of ['closed', 'void', 'cancelled', 'canceled', 'shipped', 'invoiced', 'Partially_Shipped and invoiced']) assert.equal(paymentOrderStatus(status), 'Closed', status)
   for (const status of ['open', 'draft', 'confirmed']) assert.equal(paymentOrderStatus(status), 'Open', status)
   assert.equal(paymentOrderStatus('unexpected-future-state'), 'Status unknown')
+  assert.equal(paymentOrderStatus('not_invoiced'), 'Status unknown')
+  assert.equal(paymentOrderStatus('not_shipped'), 'Status unknown')
   assert.equal(paymentOrderStatus(''), 'Status unknown')
 })
 
