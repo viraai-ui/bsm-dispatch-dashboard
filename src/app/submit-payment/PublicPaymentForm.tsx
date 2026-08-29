@@ -7,8 +7,8 @@ import { PaymentProofViewer, type ViewerProof } from '@/components/PaymentProofV
 import { PAYMENT_ADDED_BY_USERS, type PaymentAddedBy } from '@/lib/payments'
 
 type Order = { id: string; salesOrderNumber: string; customerName: string; status: 'Open' | 'Closed' | 'Status unknown'; rawStatus: string }
-type Receipt = { id: string; salesOrderNumber: string; paymentAmount: number; status: 'Pending' }
-type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; addedBy: PaymentAddedBy | null; hasScreenshot: boolean; proofUrl: string | null; remarks: string | null; attachments: ViewerProof[] }
+type Receipt = { id: string; salesOrderNumber?: string; paymentAmount: number; status: 'Pending' }
+type Payment = { id: string; date: string; salesOrderNumber?: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; addedBy: PaymentAddedBy | null; hasScreenshot: boolean; proofUrl: string | null; remarks: string | null; attachments: ViewerProof[] }
 type Api<T> = { ok: boolean; data?: T; error?: string }
 type Capabilities = Record<string, string>
 const CAPABILITY_KEY = 'bsm-public-payment-delete-capabilities-v1'
@@ -33,6 +33,8 @@ export default function PublicPaymentForm() {
   const [token, setToken] = useState('')
   const [query, setQuery] = useState('')
   const [selected, setSelected] = useState<Order | null>(null)
+  const [customerName, setCustomerName] = useState('')
+  const [orderInteracted, setOrderInteracted] = useState(false)
   const [amount, setAmount] = useState('')
   const [mode, setMode] = useState('')
   const [addedBy, setAddedBy] = useState<PaymentAddedBy | ''>('')
@@ -66,6 +68,13 @@ export default function PublicPaymentForm() {
     return () => { document.removeEventListener('pointerdown', closeMenus); document.removeEventListener('keydown', escape) }
   }, [deleteBusy])
 
+  useEffect(() => {
+    if (!open) return
+    const closeOrders = (event: PointerEvent) => { if (!(event.target as Element).closest(`.${styles.searchWrap}`)) setSuggestionsOpen(false) }
+    document.addEventListener('pointerdown', closeOrders)
+    return () => document.removeEventListener('pointerdown', closeOrders)
+  }, [open])
+
   const refreshPayments = useCallback(async () => {
     if (polling.current) return
     polling.current = true
@@ -88,7 +97,7 @@ export default function PublicPaymentForm() {
 
   const resetPaymentForm = useCallback(() => {
     orderRequest.current?.controller.abort(); orderRequest.current = null; requestGeneration.current += 1
-    setQuery(''); setSelected(null); setAmount(''); setMode(''); setAddedBy(''); setFiles([]); setRemarks(''); setToken(''); setOrders([])
+    setQuery(''); setSelected(null); setCustomerName(''); setOrderInteracted(false); setAmount(''); setMode(''); setAddedBy(''); setFiles([]); setRemarks(''); setToken(''); setOrders([])
     setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); setDragActive(false); setFileAnnouncement(''); dragDepth.current = 0
     if (fileInputRef.current) fileInputRef.current.value = ''
   }, [])
@@ -147,27 +156,30 @@ export default function PublicPaymentForm() {
   }
   useEffect(() => () => orderRequest.current?.controller.abort(), [])
   useEffect(() => {
-    if (!open || selected) return
+    if (!open || selected || !orderInteracted) return
     const search = query.trim()
     const cached = searchCache.current.get(search)
     if (cached) { setOrders(cached); return }
     const timer = window.setTimeout(() => void loadForm(false, search), search ? 225 : 0)
     return () => window.clearTimeout(timer)
-  }, [open, query, selected])
+  }, [open, query, selected, orderInteracted])
   useEffect(() => {
     const back = () => { if (modalHistory.current) { modalHistory.current = false; resetPaymentForm(); setOpen(false) } }
     window.addEventListener('popstate', back); return () => window.removeEventListener('popstate', back)
   }, [resetPaymentForm])
   const matches = useMemo(() => orders, [orders])
-  function choose(order: Order) { setSelected(order); setQuery(order.salesOrderNumber); setSuggestionsOpen(false); setError('') }
-  function showSuggestions() { setSuggestionsOpen(true); if (!orders.length) void loadForm(false, query.trim()) }
-  function openPaymentForm() { resetPaymentForm(); setOpen(true); setSuggestionsOpen(true); modalHistory.current = true; history.pushState({ paymentModal: true }, ''); void loadForm() }
+  function choose(order: Order) { setSelected(order); setQuery(order.salesOrderNumber); setCustomerName(order.customerName); setSuggestionsOpen(false); setError('') }
+  function clearOrder() { setSelected(null); setQuery(''); setCustomerName(''); setSuggestionsOpen(false) }
+  function showSuggestions() { setOrderInteracted(true); setSuggestionsOpen(true); if (!orders.length) void loadForm(false, query.trim()) }
+  function openPaymentForm() { resetPaymentForm(); setOpen(true); modalHistory.current = true; history.pushState({ paymentModal: true }, ''); void loadForm() }
   function close() { if (!busy) { resetPaymentForm(); setOpen(false); if (modalHistory.current) { modalHistory.current = false; history.back() } } }
-  function again() { resetPaymentForm(); setSuggestionsOpen(true); void loadForm() }
+  function again() { resetPaymentForm(); void loadForm() }
 
   async function submit(event: FormEvent) {
     event.preventDefault(); setError('')
-    if (!selected || query !== selected.salesOrderNumber) return setError('Select a sales order from the suggestions.')
+    const linked = Boolean(selected && query === selected.salesOrderNumber)
+    const manualCustomer = customerName.trim()
+    if (!manualCustomer || manualCustomer.length > 120 || /[\u0000-\u001f\u007f-\u009f<>]/u.test(manualCustomer)) return setError('Enter a valid customer name (maximum 120 characters).')
     if (!/^\d{1,10}(\.\d{1,2})?$/.test(amount) || Number(amount) <= 0) return setError('Enter a valid amount with up to 2 decimal places.')
     if (!mode) return setError('Select a payment mode.')
     if (!addedBy) return setError('Select who added the payment.')
@@ -175,16 +187,17 @@ export default function PublicPaymentForm() {
     setBusy(true)
     try {
       const uploaded: { key: string; name: string }[] = []
+      let uploadScope = ''
       const uploadOne = async (file: File) => {
-        const targetResponse = await fetch('/api/public/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber: selected.salesOrderNumber, submissionToken: token }) })
-        const targetJson: Api<{ key: string; uploadUrl: string; uploadContentType: string }> = await targetResponse.json().catch(() => ({} as Api<never>))
+        const targetResponse = await fetch('/api/public/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber: linked ? selected!.salesOrderNumber : '', uploadScope, submissionToken: token }) })
+        const targetJson: Api<{ key: string; uploadUrl: string; uploadContentType: string; uploadScope: string }> = await targetResponse.json().catch(() => ({} as Api<never>))
         if (!targetResponse.ok || !targetJson.data) throw new Error(targetJson.error || 'Could not prepare proof upload')
         const upload = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': targetJson.data.uploadContentType }, body: file }).catch(() => null)
         if (!upload?.ok) throw new Error(`Upload failed for ${file.name}. Check your connection and retry.`)
-        uploaded.push({ key: targetJson.data.key, name: file.name })
+        uploadScope = targetJson.data.uploadScope; uploaded.push({ key: targetJson.data.key, name: file.name })
       }
-      for (let index = 0; index < files.length; index += 3) await Promise.all(files.slice(index, index + 3).map(uploadOne))
-      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, customerName: selected.customerName, paymentAmount: amount, paymentMode: mode, addedBy, attachments: uploaded, remarks, submissionToken: token, website: '' }) })
+      for (const file of files) await uploadOne(file)
+      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ ...(linked ? { salesOrderId: selected!.id, salesOrderNumber: selected!.salesOrderNumber } : {}), customerName: linked ? selected!.customerName : manualCustomer, paymentAmount: amount, paymentMode: mode, addedBy, attachments: uploaded, uploadScope, remarks, submissionToken: token, website: '' }) })
       const json: Api<{ receipt: Receipt; deleteToken?: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Payment could not be submitted')
       if (json.data.deleteToken) {
@@ -215,7 +228,7 @@ export default function PublicPaymentForm() {
   }
 
   const menu = (payment: Payment) => payment.status === 'Pending' ? <div className={styles.menuWrap} data-payment-menu>
-    <button className={styles.menuButton} type="button" aria-label={`Actions for ${payment.salesOrderNumber}`} aria-expanded={openMenu === payment.id} onClick={() => setOpenMenu((id) => id === payment.id ? null : payment.id)}><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
+    <button className={styles.menuButton} type="button" aria-label={`Actions for ${payment.salesOrderNumber || 'No Sales Order'}`} aria-expanded={openMenu === payment.id} onClick={() => setOpenMenu((id) => id === payment.id ? null : payment.id)}><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
     {openMenu === payment.id && <div className={styles.menu} role="menu"><button type="button" role="menuitem" onClick={() => { setDeleting(payment); setDeleteError(''); setOpenMenu(null) }}>Delete</button></div>}
   </div> : null
 
@@ -225,8 +238,8 @@ export default function PublicPaymentForm() {
       {(syncMessage || (!open && error)) && <p className={error ? styles.syncError : styles.syncSuccess} role="status">{error || syncMessage}</p>}
       <section className={styles.listCard} aria-live="polite">
         {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
-          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}<small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small></td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
-          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div><small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
+          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber || 'No Sales Order'}</strong></td><td>{payment.customerName}<small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small></td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
+          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber || 'No Sales Order'}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div><small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
         </>}
       </section>
     </section>
@@ -235,9 +248,9 @@ export default function PublicPaymentForm() {
     {open && <div className={styles.backdrop} role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className={styles.modal}>
       {dragActive && <div className={styles.dropOverlay} role="status" aria-live="assertive"><div className={styles.dropPrompt}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg><strong>Drop payment proof</strong><span>Image or PDF • Max 10 MB</span></div></div>}
       <span className={styles.srOnly} role="status" aria-live="polite">{fileAnnouncement}</span>
-      {receipt ? <div className={styles.success}><button className={styles.close} onClick={close} aria-label="Close">×</button><div className={styles.successIcon}>✓</div><h2>Payment submitted</h2><p>Your payment is safely queued for approval.</p><dl><div><dt>Sales Order</dt><dd>{receipt.salesOrderNumber}</dd></div><div><dt>Amount</dt><dd>{money(receipt.paymentAmount)}</dd></div><div><dt>Status</dt><dd><span className={styles.pending}>Pending</span></dd></div></dl><button className={styles.add} onClick={again}>Submit another payment</button></div> : <><header className={styles.modalHead}><div><p className={styles.eyebrow}>New record</p><h2 id="add-payment-title">Add Payment</h2></div><button className={styles.close} type="button" onClick={close} disabled={busy} aria-label="Close">×</button></header><form onSubmit={submit} noValidate>
-        <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><div className={styles.orderInputRow}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{selected && <span className={`${styles.orderStatus} ${selected.status === 'Closed' ? styles.orderClosed : selected.status === 'Open' ? styles.orderOpen : styles.orderUnknown}`} title={selected.rawStatus || selected.status}>{selected.status}</span>}</div>{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><span><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></span><em className={`${styles.orderStatus} ${order.status === 'Closed' ? styles.orderClosed : order.status === 'Open' ? styles.orderOpen : styles.orderUnknown}`} title={order.rawStatus || order.status}>{order.status}</em></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No matching sales orders.</p>}</div>}</div>
-        <label>Customer Name</label><div className={`${styles.readonly} ${selected ? styles.filled : ''}`}>{selected?.customerName || 'Filled after selecting a sales order'}</div>
+      {receipt ? <div className={styles.success}><button className={styles.close} onClick={close} aria-label="Close">×</button><div className={styles.successIcon}>✓</div><h2>Payment submitted</h2><p>Your payment is safely queued for approval.</p><dl><div><dt>Sales Order</dt><dd>{receipt.salesOrderNumber || 'No Sales Order'}</dd></div><div><dt>Amount</dt><dd>{money(receipt.paymentAmount)}</dd></div><div><dt>Status</dt><dd><span className={styles.pending}>Pending</span></dd></div></dl><button className={styles.add} onClick={again}>Submit another payment</button></div> : <><header className={styles.modalHead}><div><p className={styles.eyebrow}>New record</p><h2 id="add-payment-title">Add Payment</h2></div><button className={styles.close} type="button" onClick={close} disabled={busy} aria-label="Close">×</button></header><form onSubmit={submit} noValidate>
+        <label>Sales Order (optional)</label><div className={styles.searchWrap}><div className={styles.orderInputRow}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onKeyDown={(event) => { if (event.key === 'Escape') setSuggestionsOpen(false) }} onChange={(e) => { setOrderInteracted(true); setQuery(e.target.value); setSelected(null); setCustomerName(''); setSuggestionsOpen(true) }} placeholder="Search by SO number or customer" autoComplete="off" />{selected && <><span className={`${styles.orderStatus} ${selected.status === 'Closed' ? styles.orderClosed : selected.status === 'Open' ? styles.orderOpen : styles.orderUnknown}`} title={selected.rawStatus || selected.status}>{selected.status}</span><button type="button" aria-label="Clear selected sales order" onClick={clearOrder}>×</button></>}</div>{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><span><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></span><em className={`${styles.orderStatus} ${order.status === 'Closed' ? styles.orderClosed : order.status === 'Open' ? styles.orderOpen : styles.orderUnknown}`} title={order.rawStatus || order.status}>{order.status}</em></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No matching sales orders.</p>}</div>}<small>No sales order? Leave this blank and enter the customer name.</small></div>
+        <label htmlFor="customer-name">Customer Name<span>*</span></label><input id="customer-name" required maxLength={120} readOnly={Boolean(selected)} value={customerName} onChange={(event) => setCustomerName(event.target.value)} placeholder={selected ? 'Linked to selected sales order' : 'Enter customer name'} />
         <label htmlFor="amount">Payment Amount<span>*</span></label><div className={styles.amount}><b>₹</b><input id="amount" type="text" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, ''))} placeholder="0.00" /></div>
         <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Cash', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>
         <label htmlFor="added-by">Added by<span>*</span></label><div className={styles.selectWrap}><select id="added-by" required value={addedBy} onChange={(e) => setAddedBy(e.target.value as PaymentAddedBy | '')}><option value="">Select user</option>{PAYMENT_ADDED_BY_USERS.map((user) => <option key={user} value={user}>{user}</option>)}</select></div>

@@ -11,7 +11,8 @@ export type PaymentAttachment = { key: string; url: string; name: string; conten
 export type Payment = {
   id: string
   customerName: string
-  salesOrderNumber: string
+  /** Absent for a manually entered customer payment. */
+  salesOrderNumber?: string
   /** Optional only for records created before payment details were introduced. */
   paymentAmount?: number
   /** Optional only for records created before payment details were introduced. */

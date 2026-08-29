@@ -6,6 +6,7 @@ import { createPublicPayment, isPaymentAddedBy, listPayments, paymentAttachments
 import { checkRateLimit, issuePaymentDeleteCapability, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
 import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { PAYMENT_PROOF_MIME_TYPES, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
+import { cleanPaymentCustomerName, verifyPaymentUploadScope } from '@/lib/payment-manual'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -60,7 +61,12 @@ export async function POST(request: Request) {
   if (!/^[a-zA-Z0-9_-]{16,100}$/.test(idempotencyKey)) return publicApiHeaders(apiError('Invalid submission key', 400))
   const orderId = value(body.salesOrderId)
   const salesOrderNumber = value(body.salesOrderNumber)
-  const customerName = value(body.customerName)
+  const customerName = cleanPaymentCustomerName(body.customerName)
+  const linked = Boolean(orderId && salesOrderNumber)
+  if (Boolean(orderId) !== Boolean(salesOrderNumber)) return publicApiHeaders(apiError('Do not submit an unselected sales order', 400))
+  if (!customerName) return publicApiHeaders(apiError('Enter a valid customer name (maximum 120 characters)', 400))
+  const manualScope = linked ? null : verifyPaymentUploadScope(body.uploadScope)
+  if (!linked && !manualScope) return publicApiHeaders(apiError('Invalid or expired manual payment upload scope', 400))
   const amountText = value(body.paymentAmount)
   if (!/^\d{1,10}(\.\d{1,2})?$/.test(amountText)) return publicApiHeaders(apiError('Enter a valid payment amount with up to 2 decimal places', 400))
   const paymentAmount = Number(amountText)
@@ -79,18 +85,18 @@ export async function POST(request: Request) {
   if (screenshotKey && (!/^payments\/public\/[a-zA-Z0-9._/-]{1,220}$/.test(screenshotKey) || screenshotUrl !== `/api/r2/view?key=${encodeURIComponent(screenshotKey)}`)) return publicApiHeaders(apiError('Invalid screenshot reference', 400))
   const attachments: PaymentAttachment[] = []
   try {
-    const order = await validatePaymentOrder(orderId, salesOrderNumber, customerName)
-    if (!order) return publicApiHeaders(apiError('Sales order details do not match Zoho. Please select it again.', 400))
+    const order = linked ? await validatePaymentOrder(orderId, salesOrderNumber, customerName) : null
+    if (linked && !order) return publicApiHeaders(apiError('Sales order details do not match Zoho. Please select it again.', 400))
     const seen = new Set<string>()
     for (const rawItem of requested) {
       const item = rawItem && typeof rawItem === 'object' ? rawItem as Record<string, unknown> : {}; const key = value(item.key)
       if (!key || seen.has(key) || !/^payments\/public\/[a-zA-Z0-9._/-]{1,400}$/.test(key)) return publicApiHeaders(apiError('Invalid or duplicate payment proof', 400))
-      seen.add(key); const metadata = await verifyR2Object(key, { prefixes: ['payments/public/'], expectedTypes: PAYMENT_PROOF_MIME_TYPES, maxBytes: PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES, order: order.salesOrderNumber })
+      seen.add(key); const metadata = await verifyR2Object(key, { prefixes: ['payments/public/'], expectedTypes: PAYMENT_PROOF_MIME_TYPES, maxBytes: PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES, order: linked ? order!.salesOrderNumber : `manual/${manualScope}` })
       attachments.push({ key, url: `/api/r2/view?key=${encodeURIComponent(key)}`, name: value(item.name).slice(0, 180) || 'Payment proof', contentType: metadata.contentType, size: metadata.contentLength })
     }
     const first = attachments[0]
     const deleteCapability = issuePaymentDeleteCapability()
-    const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotKey: first?.key || screenshotKey, screenshotUrl: first?.url || screenshotUrl, screenshotName: first?.name || screenshotName, publicDeleteTokenHash: deleteCapability.hash }, idempotencyKey)
+    const result = await createPublicPayment({ customerName: linked ? order!.customerName : customerName, ...(linked ? { salesOrderNumber: order!.salesOrderNumber } : {}), paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotKey: first?.key || screenshotKey, screenshotUrl: first?.url || screenshotUrl, screenshotName: first?.name || screenshotName, publicDeleteTokenHash: deleteCapability.hash }, idempotencyKey)
     if (result.duplicate) await Promise.allSettled(attachments.map((proof) => deleteR2Object(proof.key)))
     if (!result.duplicate) {
       await createPaymentNotifications(result.payment, 'public-salesman').catch((error) => console.error('Public payment notification failed', error))

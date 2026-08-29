@@ -2,6 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { createR2UploadTarget, ensureR2BrowserCors } from '@/lib/r2'
 import { checkRateLimit, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
 import { paymentScreenshotType, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
+import { issuePaymentUploadScope, verifyPaymentUploadScope } from '@/lib/payment-manual'
 
 export const runtime = 'nodejs'
 function safe(value: string) { return value.replace(/[^a-zA-Z0-9._-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70) || 'payment' }
@@ -19,12 +20,14 @@ export async function POST(request: Request) {
   if (!image) return publicApiHeaders(apiError('Only a supported image or PDF is allowed (JPEG, PNG, WebP, HEIC or PDF)', 400))
   if (!Number.isSafeInteger(size) || size <= 0 || size > PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES) return publicApiHeaders(apiError('Payment proof must be non-empty and no larger than 10 MB', 400))
   try {
-    const salesOrderNumber = safe(String(body.salesOrderNumber || ''))
-    if (salesOrderNumber === 'payment') return publicApiHeaders(apiError('Sales order number is required', 400))
-    const key = `payments/public/${salesOrderNumber}/${new Date().toISOString().slice(0, 10)}/${Date.now()}-${crypto.randomUUID()}-${safe(name.replace(/\.[^.]+$/, ''))}.${image.extension}`
+    const rawOrder = String(body.salesOrderNumber || '').trim()
+    const suppliedScope = verifyPaymentUploadScope(body.uploadScope)
+    const issued = suppliedScope ? { scope: suppliedScope, token: String(body.uploadScope) } : issuePaymentUploadScope()
+    const binding = rawOrder ? safe(rawOrder) : `manual/${issued.scope}`
+    const key = `payments/public/${binding}/${new Date().toISOString().slice(0, 10)}/${Date.now()}-${crypto.randomUUID()}-${safe(name.replace(/\.[^.]+$/, ''))}.${image.extension}`
     const target = createR2UploadTarget(key, image.mimeType, 300, 3650)
     const cors = await ensureR2BrowserCors(target.uploadUrl)
     if (!cors.corsReady) return publicApiHeaders(apiError(cors.corsError, 503))
-    return publicApiHeaders(apiOk({ ...target, uploadContentType: image.mimeType }))
+    return publicApiHeaders(apiOk({ ...target, uploadContentType: image.mimeType, uploadScope: issued.token }))
   } catch (error) { return publicApiHeaders(apiError(error instanceof Error ? error.message : 'Could not prepare upload', 500)) }
 }

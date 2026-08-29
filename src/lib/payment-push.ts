@@ -33,7 +33,7 @@ export async function removePaymentPushSubscription(userId: string, endpoint: st
   await updateStore((items) => items.filter((item) => !(item.userId === userId && item.endpoint === endpoint)))
 }
 
-export async function notifyAccountsOfNewPayment(payment: { id: string; customerName: string; salesOrderNumber: string; paymentAmount?: number }) {
+export async function notifyAccountsOfNewPayment(payment: { id: string; customerName: string; salesOrderNumber?: string; paymentAmount?: number }) {
   const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
   const privateKey = process.env.VAPID_PRIVATE_KEY
   const subject = process.env.VAPID_SUBJECT || 'mailto:accounts@bsmindia.com'
@@ -46,7 +46,7 @@ export async function notifyAccountsOfNewPayment(payment: { id: string; customer
   const amount = payment.paymentAmount == null ? '' : ` • ₹${payment.paymentAmount.toLocaleString('en-IN')}`
   await Promise.allSettled(recipients.map(async (subscription) => {
     try {
-      await webpush.sendNotification(subscription, JSON.stringify({ title: 'New payment awaiting approval', body: `${payment.customerName} • ${payment.salesOrderNumber}${amount}`, url: '/payments', tag: payment.id }), { TTL: 60 * 60, urgency: 'high' })
+      await webpush.sendNotification(subscription, JSON.stringify({ title: 'New payment awaiting approval', body: `${payment.customerName} • ${payment.salesOrderNumber || 'No Sales Order'}${amount}`, url: '/payments', tag: payment.id }), { TTL: 60 * 60, urgency: 'high' })
       sent += 1
     } catch (error) {
       const status = (error as { statusCode?: number }).statusCode

@@ -51,7 +51,7 @@ export async function createPaymentNotifications(payment: Payment, creatorUserId
     type: 'payment-created' as const,
     recipientUserId: user.id,
     paymentId: payment.id,
-    salesOrderNumber: payment.salesOrderNumber,
+    salesOrderNumber: payment.salesOrderNumber || 'No Sales Order',
     customerName: payment.customerName,
     paymentAmount: payment.paymentAmount,
     createdAt,
