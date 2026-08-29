@@ -4,6 +4,7 @@ import { buildOrderStatusMap, type StatusTone } from './status-projection'
 import type { MediaUpload } from './media-proof'
 import { isAllowedGithubUrl } from './public-database-media'
 import { isSafeR2Key } from './r2'
+import durableSnapshot from '../../data/public-database-snapshot.json'
 
 export type PublicDatabaseRow = { id:string; salesOrderNumber:string; customerName:string; units:number; warrantyDate:string; warrantyEnd:string; mediaLabel:string; mediaTone:StatusTone; lifecycleLabel:string; builtyUploaded:boolean }
 export type PublicMediaRef = { id:string; orderId:string; kind:'packing'|'loading'|'builty'; source:'r2'|'github'|'workdrive'; value:string; name?:string; contentType?:string }
@@ -11,10 +12,13 @@ export type PublicDatabaseDetail = { id:string; salesOrderNumber:string; custome
 export type PublicDatabaseSnapshot = { schema:1; snapshotVersion:string; generatedAt:string; rows:PublicDatabaseRow[]; details:Record<string,PublicDatabaseDetail>; media:Record<string,PublicMediaRef>; haystacks:Record<string,string> }
 
 let current: Promise<PublicDatabaseSnapshot>|undefined
-export function getPublicDatabaseSnapshot(){ return current ||= buildSnapshot().catch(e=>{current=undefined;throw e}) }
+// Public request paths only read this build-time, immutable last-known-good file.
+// Aggregating the mutable operational stores is deliberately confined to the
+// explicit snapshot generation job.
+export function getPublicDatabaseSnapshot(){ return current ||= Promise.resolve(durableSnapshot as PublicDatabaseSnapshot) }
 export function clearPublicDatabaseSnapshot(){ current=undefined }
 
-async function buildSnapshot():Promise<PublicDatabaseSnapshot>{
+export async function buildPublicDatabaseSnapshot():Promise<PublicDatabaseSnapshot>{
  const {databaseOrders,workflows,warrantyDates,shipmentRecords}=await loadDatabaseOrders()
  const {statuses,packingMediaRecords,loadingMediaRecords}=await buildOrderStatusMap(databaseOrders,workflows)
  const generatedAt=new Date().toISOString(); const media:Record<string,PublicMediaRef>={}; const details:Record<string,PublicDatabaseDetail>={}; const haystacks:Record<string,string>={}

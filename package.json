@@ -20,6 +20,7 @@
     "test:r2-mobile-upload": "node --test tests/r2-mobile-upload.test.mjs",
     "test:lifecycle": "node --experimental-strip-types --test tests/operational-lifecycle.test.mjs",
     "typecheck": "tsc --noEmit"
+    ,"snapshot:public": "npx --yes tsx scripts/generate-public-database-snapshot.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

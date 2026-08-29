@@ -1,3 +1,4 @@
+import crypto from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyImmutablePublicMediaCapability } from '@/lib/public-database-media'
 import { getPublicDatabaseSnapshot } from '@/lib/public-database-snapshot'
@@ -12,8 +13,17 @@ const LIMIT = 60
 const WINDOW_MS = 60_000
 const PRIVATE_HEADERS = { 'Cache-Control': 'private, no-store, max-age=0', 'X-Content-Type-Options': 'nosniff' }
 
-export async function GET(request: NextRequest) { return resolveMedia(request) }
-export async function HEAD(request: NextRequest) { return resolveMedia(request) }
+export async function GET(request: NextRequest) { return safelyResolveMedia(request) }
+export async function HEAD(request: NextRequest) { return safelyResolveMedia(request) }
+
+async function safelyResolveMedia(request: NextRequest) {
+  try { return await resolveMedia(request) }
+  catch (error) {
+    const requestId=crypto.randomUUID()
+    console.error(JSON.stringify({event:'public_media_failure',requestId,error:error instanceof Error?error.message:String(error)}))
+    return new NextResponse(`Attachment service unavailable. Reference: ${requestId}`,{status:502,headers:PRIVATE_HEADERS})
+  }
+}
 
 async function resolveMedia(request: NextRequest) {
   if (!withinRateLimit(request)) return new NextResponse('Too many media requests. Please try again shortly.', { status: 429, headers: { ...PRIVATE_HEADERS, 'Retry-After': '60' } })

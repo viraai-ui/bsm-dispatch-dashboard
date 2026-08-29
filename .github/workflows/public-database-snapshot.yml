@@ -1,0 +1,26 @@
+name: Refresh public database snapshot
+on: { workflow_dispatch: {} }
+concurrency: { group: public-database-snapshot, cancel-in-progress: false }
+permissions: { contents: write }
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run snapshot:public
+        env:
+          GITHUB_TOKEN: ${{ secrets.SNAPSHOT_GITHUB_TOKEN }}
+          ZOHO_CLIENT_ID: ${{ secrets.ZOHO_CLIENT_ID }}
+          ZOHO_CLIENT_SECRET: ${{ secrets.ZOHO_CLIENT_SECRET }}
+          ZOHO_REFRESH_TOKEN: ${{ secrets.ZOHO_REFRESH_TOKEN }}
+      - run: npm run typecheck && npm test --if-present
+      - name: Atomically publish versioned last-known-good
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add data/public-database-snapshot.json
+          git diff --cached --quiet || (git commit -m 'Refresh durable public database snapshot' && git push)
