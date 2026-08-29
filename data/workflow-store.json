@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271074,
+  "serialCounter": 26271075,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -19510,6 +19510,67 @@
           "dispatchNote": "local",
           "vendor": "K S",
           "dispatchedAt": "2026-08-27T11:52:56.685Z"
+        }
+      }
+    },
+    "1154219000036116011": {
+      "salesOrderId": "1154219000036116011",
+      "salesOrderNumber": "SO-07834",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036116011",
+        "zohoSalesOrderId": "1154219000036116011",
+        "salesOrderNumber": "SO-07834",
+        "status": "open",
+        "customerName": "Adda Uniglobe Pvt. Ltd.",
+        "shippingAddress": "Plot No.179 F, Sec.16 Industrial Area HSIIDC, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036116014",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036116011-1154219000036116014-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036116011",
+            "lineItemId": "1154219000036116014",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "Adda Uniglobe Pvt. Ltd.",
+            "salesOrderNumber": "SO-07834",
+            "deliveryDate": "2026-08-29",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036116011-1154219000036116014-1": {
+          "machineUnitId": "1154219000036116011-1154219000036116014-1",
+          "lineItemId": "1154219000036116014",
+          "serialNumber": "26271075",
+          "qrToken": "26271075",
+          "qrStatus": "pending"
         }
       }
     }
