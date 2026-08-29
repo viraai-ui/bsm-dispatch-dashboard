@@ -2,7 +2,7 @@ import crypto from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyImmutablePublicMediaCapability } from '@/lib/public-database-media'
 import { getPublicDatabaseSnapshot } from '@/lib/public-database-snapshot'
-import { createR2HeadUrl, createR2ViewUrl } from '@/lib/r2'
+import { createR2HeadUrl, createR2PublicObjectUrl, createR2ViewUrl, r2PublicReadConfigured } from '@/lib/r2'
 import { getZohoAccessToken } from '@/lib/zoho'
 
 export const runtime = 'nodejs'
@@ -38,7 +38,9 @@ async function resolveMedia(request: NextRequest) {
   }
 
   if (reference.source === 'r2') {
-    const signedUrl = request.method === 'HEAD' ? createR2HeadUrl(reference.value, 120) : createR2ViewUrl(reference.value, 120)
+    const signedUrl = r2PublicReadConfigured()
+      ? createR2PublicObjectUrl(reference.value)
+      : request.method === 'HEAD' ? createR2HeadUrl(reference.value, 120) : createR2ViewUrl(reference.value, 120)
     const response = NextResponse.redirect(signedUrl, 302)
     for (const [key, value] of Object.entries(PRIVATE_HEADERS)) response.headers.set(key, value)
     return response

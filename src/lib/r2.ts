@@ -42,6 +42,32 @@ export function r2Configured() {
   return Boolean(process.env.R2_ACCOUNT_ID && process.env.R2_ACCESS_KEY_ID && process.env.R2_SECRET_ACCESS_KEY && process.env.R2_BUCKET)
 }
 
+/** A public R2/custom-domain origin is read-only configuration; it never grants listing. */
+export function r2PublicReadConfigured() {
+  return Boolean(validR2PublicBaseUrl())
+}
+
+export function r2ReadConfigured() {
+  return r2Configured() || r2PublicReadConfigured()
+}
+
+export function createR2PublicObjectUrl(key: string) {
+  if (!isSafeR2Key(key, ['media-proof/'])) throw new Error('Invalid public media key')
+  const base = validR2PublicBaseUrl()
+  if (!base) throw new Error('Cloudflare R2 public read origin is not configured')
+  return `${base}/${key.split('/').map(encodeURIComponent).join('/')}`
+}
+
+function validR2PublicBaseUrl() {
+  const value = (process.env.R2_PUBLIC_BASE_URL || '').trim().replace(/\/$/, '')
+  if (!value) return ''
+  try {
+    const url = new URL(value)
+    if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash) return ''
+    return url.toString().replace(/\/$/, '')
+  } catch { return '' }
+}
+
 export function buildR2Key(parts: { salesOrderNumber: string; machineName: string; machineId: string; originalName: string; mimeType: string; stage?: 'packing' | 'loading' | 'shipment' }) {
   const extension = parts.originalName.includes('.') ? parts.originalName.split('.').pop() : mimeExtension(parts.mimeType)
   const date = new Date().toISOString().slice(0, 10)
