@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-952bab3f-7103-4413-963c-f2980b9fa766",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-6be3db80-1f93-48dc-ad38-d812558eb0e1",
+      "salesOrderNumber": "SO-07843",
+      "customerName": "A.P. Footwear(Bahadurgarh)",
+      "paymentAmount": 49560,
+      "createdAt": "2026-08-29T11:53:04.828Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-3b1cb3f5-fc21-43f9-b6a4-cf505e8a2f68",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-6be3db80-1f93-48dc-ad38-d812558eb0e1",
+      "salesOrderNumber": "SO-07843",
+      "customerName": "A.P. Footwear(Bahadurgarh)",
+      "paymentAmount": 49560,
+      "createdAt": "2026-08-29T11:53:04.828Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-d447759c-7822-4dac-be81-777d25d3b63c",
       "type": "payment-created",
       "recipientUserId": "u-admin",
