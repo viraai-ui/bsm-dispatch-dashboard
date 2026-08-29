@@ -2,6 +2,11 @@ import { githubReadJson, githubRequest } from './workflow-store'
 
 export type PaymentStatus = 'Pending' | 'Payment Received'
 export type PaymentMode = 'Bank Transfer' | 'UPI' | 'Cash' | 'Credit Card' | 'Debit Card' | 'Other'
+export const PAYMENT_ADDED_BY_USERS = ['Anuj', 'Deepak', 'Ram', 'Karan', 'Shivani', 'Manisha', 'Sonia'] as const
+export type PaymentAddedBy = typeof PAYMENT_ADDED_BY_USERS[number]
+export function isPaymentAddedBy(value: unknown): value is PaymentAddedBy {
+  return typeof value === 'string' && PAYMENT_ADDED_BY_USERS.includes(value as PaymentAddedBy)
+}
 export type PaymentAttachment = { key: string; url: string; name: string; contentType: string; size: number }
 export type Payment = {
   id: string
@@ -17,6 +22,8 @@ export type Payment = {
   /** Canonical proof collection. Legacy screenshot fields remain readable. */
   attachments?: PaymentAttachment[]
   remarks?: string
+  /** Explicitly selected submitter. Optional only for legacy records. */
+  addedBy?: PaymentAddedBy
   status: PaymentStatus
   createdBy: string
   /** Server-generated deduplication key for public submissions; never returned by public APIs. */

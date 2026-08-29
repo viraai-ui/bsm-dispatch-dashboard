@@ -1,6 +1,6 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { createPayment, listPayments, paymentAttachments, updatePaymentStatus, type PaymentAttachment, type PaymentMode, type PaymentStatus } from '@/lib/payments'
+import { createPayment, isPaymentAddedBy, listPayments, paymentAttachments, updatePaymentStatus, type PaymentAttachment, type PaymentMode, type PaymentStatus } from '@/lib/payments'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { deleteR2Object, verifyR2Object } from '@/lib/r2'
@@ -23,10 +23,12 @@ export async function POST(request: Request) {
   const auth = await requireUser(['Admin']); if (!auth.ok) return auth.response
   const body = await request.json().catch(() => ({})); const customerName = text(body.customerName); const salesOrderNumber = text(body.salesOrderNumber)
   const paymentAmount = Number(body.paymentAmount); const paymentMode = text(body.paymentMode) as PaymentMode; const remarks = text(body.remarks)
+  const addedBy = body.addedBy
   const legacyKey = text(body.screenshotKey); const requested = Array.isArray(body.attachments) ? body.attachments : legacyKey ? [{ key: legacyKey, name: text(body.screenshotName) }] : []
   if (!customerName || !salesOrderNumber) return apiError('Customer name and sales order number are required', 400)
   if (!Number.isFinite(paymentAmount) || paymentAmount <= 0) return apiError('Payment amount must be greater than zero', 400)
   if (!PAYMENT_MODES.includes(paymentMode)) return apiError('Invalid payment mode', 400)
+  if (!isPaymentAddedBy(addedBy)) return apiError('Select a valid user who added the payment', 400)
   if (remarks.length > 500) return apiError('Remarks must be 500 characters or fewer', 400)
   if (requested.length < 1 || requested.length > 10) return apiError('Between 1 and 10 payment proofs are required', 400)
   const attachments: PaymentAttachment[] = []
@@ -38,7 +40,7 @@ export async function POST(request: Request) {
       attachments.push({ key, url: `/api/r2/view?key=${encodeURIComponent(key)}`, name: text(item?.name).slice(0, 180) || 'Payment proof', contentType: metadata.contentType, size: metadata.contentLength })
     }
     const first = attachments[0]
-    const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, remarks: remarks || undefined, attachments, screenshotUrl: first?.url, screenshotKey: first?.key, screenshotName: first?.name, createdBy: auth.user.id })
+    const payment = await createPayment({ customerName, salesOrderNumber, paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotUrl: first?.url, screenshotKey: first?.key, screenshotName: first?.name, createdBy: auth.user.id })
     await createPaymentNotifications(payment, auth.user.id).catch(console.error); await notifyAccountsOfNewPayment(payment).catch(console.error)
     return apiOk({ payment: { ...payment, attachments: paymentAttachments(payment).map((proof, index) => ({ ...proof, key: '', url: `/api/payments/${payment.id}/proof?index=${index}` })) } })
   } catch (error) {

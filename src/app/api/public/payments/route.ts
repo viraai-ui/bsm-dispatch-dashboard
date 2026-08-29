@@ -2,7 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
-import { createPublicPayment, listPayments, paymentAttachments, type PaymentAttachment, type PaymentMode } from '@/lib/payments'
+import { createPublicPayment, isPaymentAddedBy, listPayments, paymentAttachments, type PaymentAttachment, type PaymentMode } from '@/lib/payments'
 import { checkRateLimit, issuePaymentDeleteCapability, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
 import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { PAYMENT_PROOF_MIME_TYPES, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
@@ -27,6 +27,7 @@ export async function GET(request: Request) {
       paymentAmount: payment.paymentAmount ?? null,
       status: payment.status,
       remarks: payment.remarks || null,
+      addedBy: payment.addedBy || null,
       attachments: paymentAttachments(payment).map((proof, index) => ({ name: proof.name, contentType: proof.contentType, size: proof.size, url: `/api/public/payments/${encodeURIComponent(payment.id)}/proof?index=${index}` })),
       hasScreenshot: paymentAttachments(payment).length > 0,
       proofUrl: paymentAttachments(payment).length ? `/api/public/payments/${encodeURIComponent(payment.id)}/proof` : null,
@@ -65,6 +66,8 @@ export async function POST(request: Request) {
   if (paymentAmount <= 0 || paymentAmount > 9999999999.99) return publicApiHeaders(apiError('Payment amount is outside the allowed range', 400))
   const paymentMode = value(body.paymentMode) as PaymentMode
   if (!MODES.includes(paymentMode)) return publicApiHeaders(apiError('Select a valid payment mode', 400))
+  const addedBy = body.addedBy
+  if (!isPaymentAddedBy(addedBy)) return publicApiHeaders(apiError('Select a valid user who added the payment', 400))
   const screenshotKey = value(body.screenshotKey)
   const screenshotUrl = value(body.screenshotUrl)
   const screenshotName = value(body.screenshotName).slice(0, 120)
@@ -86,7 +89,7 @@ export async function POST(request: Request) {
     }
     const first = attachments[0]
     const deleteCapability = issuePaymentDeleteCapability()
-    const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, remarks: remarks || undefined, attachments, screenshotKey: first?.key || screenshotKey, screenshotUrl: first?.url || screenshotUrl, screenshotName: first?.name || screenshotName, publicDeleteTokenHash: deleteCapability.hash }, idempotencyKey)
+    const result = await createPublicPayment({ customerName: order.customerName, salesOrderNumber: order.salesOrderNumber, paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotKey: first?.key || screenshotKey, screenshotUrl: first?.url || screenshotUrl, screenshotName: first?.name || screenshotName, publicDeleteTokenHash: deleteCapability.hash }, idempotencyKey)
     if (result.duplicate) await Promise.allSettled(attachments.map((proof) => deleteR2Object(proof.key)))
     if (!result.duplicate) {
       await createPaymentNotifications(result.payment, 'public-salesman').catch((error) => console.error('Public payment notification failed', error))

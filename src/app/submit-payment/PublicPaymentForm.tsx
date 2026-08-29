@@ -4,10 +4,11 @@ import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 're
 import styles from './submit-payment.module.css'
 import { normalizePaymentScreenshotFile } from '@/lib/payment-screenshot'
 import { PaymentProofViewer, type ViewerProof } from '@/components/PaymentProofViewer'
+import { PAYMENT_ADDED_BY_USERS, type PaymentAddedBy } from '@/lib/payments'
 
 type Order = { id: string; salesOrderNumber: string; customerName: string }
 type Receipt = { id: string; salesOrderNumber: string; paymentAmount: number; status: 'Pending' }
-type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; hasScreenshot: boolean; proofUrl: string | null; remarks: string | null; attachments: ViewerProof[] }
+type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; addedBy: PaymentAddedBy | null; hasScreenshot: boolean; proofUrl: string | null; remarks: string | null; attachments: ViewerProof[] }
 type Api<T> = { ok: boolean; data?: T; error?: string }
 type Capabilities = Record<string, string>
 const CAPABILITY_KEY = 'bsm-public-payment-delete-capabilities-v1'
@@ -34,6 +35,7 @@ export default function PublicPaymentForm() {
   const [selected, setSelected] = useState<Order | null>(null)
   const [amount, setAmount] = useState('')
   const [mode, setMode] = useState('')
+  const [addedBy, setAddedBy] = useState<PaymentAddedBy | ''>('')
   const [files, setFiles] = useState<File[]>([])
   const [remarks, setRemarks] = useState('')
   const [viewer, setViewer] = useState<ViewerProof[] | null>(null)
@@ -86,7 +88,7 @@ export default function PublicPaymentForm() {
 
   const resetPaymentForm = useCallback(() => {
     orderRequest.current?.controller.abort(); orderRequest.current = null; requestGeneration.current += 1
-    setQuery(''); setSelected(null); setAmount(''); setMode(''); setFiles([]); setRemarks(''); setToken(''); setOrders([])
+    setQuery(''); setSelected(null); setAmount(''); setMode(''); setAddedBy(''); setFiles([]); setRemarks(''); setToken(''); setOrders([])
     setBusy(false); setError(''); setReceipt(null); setSuggestionsOpen(false); setSyncing(false); setOrdersLoading(false); setSyncMessage(''); setDragActive(false); setFileAnnouncement(''); dragDepth.current = 0; loadedAt.current = 0
     if (fileInputRef.current) fileInputRef.current.value = ''
   }, [])
@@ -162,6 +164,7 @@ export default function PublicPaymentForm() {
     if (!selected || query !== selected.salesOrderNumber) return setError('Select a sales order from the suggestions.')
     if (!/^\d{1,10}(\.\d{1,2})?$/.test(amount) || Number(amount) <= 0) return setError('Enter a valid amount with up to 2 decimal places.')
     if (!mode) return setError('Select a payment mode.')
+    if (!addedBy) return setError('Select who added the payment.')
     if (files.length < 1 || files.length > 10) return setError('Attach between 1 and 10 payment proofs.')
     setBusy(true)
     try {
@@ -175,7 +178,7 @@ export default function PublicPaymentForm() {
         uploaded.push({ key: targetJson.data.key, name: file.name })
       }
       for (let index = 0; index < files.length; index += 3) await Promise.all(files.slice(index, index + 3).map(uploadOne))
-      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, attachments: uploaded, remarks, submissionToken: token, website: '' }) })
+      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, addedBy, attachments: uploaded, remarks, submissionToken: token, website: '' }) })
       const json: Api<{ receipt: Receipt; deleteToken?: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Payment could not be submitted')
       if (json.data.deleteToken) {
@@ -216,8 +219,8 @@ export default function PublicPaymentForm() {
       {(syncMessage || (!open && error)) && <p className={error ? styles.syncError : styles.syncSuccess} role="status">{error || syncMessage}</p>}
       <section className={styles.listCard} aria-live="polite">
         {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
-          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}</td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
-          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
+          <div className={styles.tableWrap}><table><thead><tr><th>Date</th><th>Sales Order</th><th>Customer Name</th><th>Mode</th><th>Amount</th><th>Proofs</th><th>Remarks</th><th>Status</th><th className={styles.actionHead}>Actions</th></tr></thead><tbody>{payments.map((payment) => <tr key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedRow : ''}><td>{date(payment.date)}</td><td><strong>{payment.salesOrderNumber}</strong></td><td>{payment.customerName}<small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small></td><td>{payment.paymentMode || '—'}</td><td>{money(payment.paymentAmount)}</td><td>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : '—'}</td><td title={payment.remarks || ''}>{payment.remarks || '—'}</td><td><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span></td><td className={styles.actionCell}>{menu(payment)}</td></tr>)}</tbody></table></div>
+          <div className={styles.mobileList}>{payments.map((payment) => <article key={payment.id} className={payment.status === 'Payment Received' ? styles.receivedCard : styles.mobileCard}><div className={styles.cardTop}><strong>{payment.salesOrderNumber}</strong><small>{date(payment.date)}</small></div><div className={styles.cardMiddle}><h2>{payment.customerName}</h2><span>{payment.paymentMode || 'Mode unavailable'}</span><b>{money(payment.paymentAmount)}</b></div><small className={styles.addedBy}>Added by {payment.addedBy || '—'}</small>{payment.remarks && <p title={payment.remarks}>{payment.remarks}</p>}<div className={styles.cardBottom}>{payment.attachments?.length ? <button type="button" className={styles.proof} onClick={() => setViewer(payment.attachments)}>View Proof{payment.attachments.length > 1 ? `s (${payment.attachments.length})` : ''}</button> : <span className={styles.noProof}>No proof</span>}<div className={styles.mobileTools}><span className={payment.status === 'Payment Received' ? styles.received : styles.pending}>{payment.status === 'Payment Received' ? 'Received' : 'Pending'}</span>{menu(payment)}</div></div></article>)}</div>
         </>}
       </section>
     </section>
@@ -231,6 +234,7 @@ export default function PublicPaymentForm() {
         <label>Customer Name</label><div className={`${styles.readonly} ${selected ? styles.filled : ''}`}>{selected?.customerName || 'Filled after selecting a sales order'}</div>
         <label htmlFor="amount">Payment Amount<span>*</span></label><div className={styles.amount}><b>₹</b><input id="amount" type="text" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, ''))} placeholder="0.00" /></div>
         <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Cash', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>
+        <label htmlFor="added-by">Added by<span>*</span></label><div className={styles.selectWrap}><select id="added-by" required value={addedBy} onChange={(e) => setAddedBy(e.target.value as PaymentAddedBy | '')}><option value="">Select user</option>{PAYMENT_ADDED_BY_USERS.map((user) => <option key={user} value={user}>{user}</option>)}</select></div>
         <label htmlFor="shot">Payment Proof<span>*</span></label><label className={`${styles.upload} ${files.length ? styles.uploadSuccess : ''}`} htmlFor="shot"><b>{files.length ? `✓ ${files.length}/10 selected` : 'Add images or PDFs'}</b><small>Up to 10 images or PDFs • 10 MB each</small></label><input ref={fileInputRef} className={styles.file} id="shot" type="file" required multiple accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.pdf" onChange={(e) => attachPaymentProof(Array.from(e.target.files || []))} />{files.length > 0 && <div className={styles.fileQueue}>{files.map((item, index) => <div key={`${item.name}-${item.size}-${item.lastModified}`}><span title={item.name}>{item.name} · {(item.size / 1048576).toFixed(1)} MB</span><button type="button" aria-label={`Remove ${item.name}`} onClick={() => setFiles((current) => current.filter((_, itemIndex) => itemIndex !== index))}>×</button></div>)}</div>}
         <label htmlFor="remarks">Remarks <em>Optional</em></label><textarea id="remarks" maxLength={500} rows={3} value={remarks} onChange={(e) => setRemarks(e.target.value)} placeholder="Add any payment details or notes…" />{remarks.length >= 400 && <small>{remarks.length}/500</small>}
         <input className={styles.trap} name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />{error && <p className={styles.error} role="alert">{error}</p>}<div className={styles.actions}><button type="button" className={styles.cancel} onClick={close}>Cancel</button><button className={styles.add} disabled={busy || !token}>{busy ? 'Submitting…' : 'Submit Payment'}</button></div>
