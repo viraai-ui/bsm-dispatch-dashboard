@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "Upright Luggage Industries",
+      "salesOrderNumber": "SO-07844",
+      "paymentAmount": 10620,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07844/2026-08-29/1788007233584-aed49e65-71fc-4031-9041-752401d66fbe-FT_Receipt_29-08-2026-18-00-26.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07844%2F2026-08-29%2F1788007233584-aed49e65-71fc-4031-9041-752401d66fbe-FT_Receipt_29-08-2026-18-00-26.pdf",
+          "name": "FT_Receipt_29-08-2026-18-00-26.pdf",
+          "contentType": "application/pdf",
+          "size": 67358
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07844/2026-08-29/1788007233584-aed49e65-71fc-4031-9041-752401d66fbe-FT_Receipt_29-08-2026-18-00-26.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07844%2F2026-08-29%2F1788007233584-aed49e65-71fc-4031-9041-752401d66fbe-FT_Receipt_29-08-2026-18-00-26.pdf",
+      "screenshotName": "FT_Receipt_29-08-2026-18-00-26.pdf",
+      "publicDeleteTokenHash": "488b83b6e6c8e048db827919f9542b22e1580aeae5217256b69317160eb16d23",
+      "id": "payment-a9cdc56e-21dc-45c2-8e2d-1be5df548be6",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "003d86a5d7ea48729d60927d2855333c",
+      "createdAt": "2026-08-29T12:40:35.219Z",
+      "updatedAt": "2026-08-29T12:40:35.219Z"
+    },
+    {
       "customerName": "NITCO SEWING MACHINE COMPANY",
       "salesOrderNumber": "SO-07841",
       "paymentAmount": 90300,
