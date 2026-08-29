@@ -4809,6 +4809,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036084004": {
+      "id": "ship-1788006949137-ube70",
+      "itemId": "1154219000036084004",
+      "orderId": "1154219000036084004",
+      "machineId": "1154219000036084004-1154219000036084007-1",
+      "salesOrderNumber": "SO-07826",
+      "customerName": "AASHI VENTURE PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Lgistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-29",
+      "notes": "",
+      "shippedAt": "2026-08-29T12:35:49.137Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
