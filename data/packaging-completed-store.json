@@ -13625,6 +13625,62 @@
       "machineIds": [
         "1154219000036134002-1154219000036134005-1"
       ]
+    },
+    "1154219000036116011": {
+      "completedAt": "2026-08-29T07:13:35.899Z",
+      "order": {
+        "id": "1154219000036116011",
+        "zohoSalesOrderId": "1154219000036116011",
+        "salesOrderNumber": "SO-07834",
+        "status": "open",
+        "customerName": "Adda Uniglobe Pvt. Ltd.",
+        "shippingAddress": "Plot No.179 F, Sec.16 Industrial Area HSIIDC, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036116014",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036116011-1154219000036116014-1",
+            "unitNumber": 1,
+            "serialNumber": "26271075",
+            "qrToken": "26271075",
+            "orderId": "1154219000036116011",
+            "lineItemId": "1154219000036116014",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "Adda Uniglobe Pvt. Ltd.",
+            "salesOrderNumber": "SO-07834",
+            "deliveryDate": "2026-08-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036116011-1154219000036116014-1"
+      ]
     }
   }
 }
