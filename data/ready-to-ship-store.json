@@ -4483,7 +4483,7 @@
       }
     },
     "1154219000036051008": {
-      "id": "ship-1787832793696-3d6cm",
+      "id": "ship-1787991241402-0swwh",
       "itemId": "1154219000036051008",
       "orderId": "1154219000036051008",
       "machineId": "1154219000036051008-1154219000036080009-1",
@@ -4495,13 +4495,19 @@
       "transporterName": "VRL Logistics",
       "transporterPhone": "",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "1150 Sunil Prabhulal.pdf",
+        "type": "application/pdf",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-08-29%2FSO-07817%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-08-29T08-13-57-309Z.pdf",
+        "r2Key": "media-proof/shipment/2026-08-29/SO-07817/shipment-lr-builty/Shipment-LR-Builty-2026-08-29T08-13-57-309Z.pdf",
+        "expiresAt": null
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-08-27",
       "notes": "",
-      "shippedAt": "2026-08-27T12:13:13.696Z",
+      "shippedAt": "2026-08-29T08:14:01.402Z",
       "messages": {
         "customer": {
           "status": "skipped",
