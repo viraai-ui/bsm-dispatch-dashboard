@@ -4772,6 +4772,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036050001": {
+      "id": "ship-1788006871074-ie1yn",
+      "itemId": "1154219000036050001",
+      "orderId": "1154219000036050001",
+      "machineId": "1154219000036050001-1154219000036050004-1",
+      "salesOrderNumber": "SO-07814",
+      "customerName": "GLL Industries",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Zipline logistics",
+      "transporterPhone": "9818113588",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-08-29 at 5.58.24 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-08-29%2FSO-07814%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-08-29T12-34-27-319Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-08-29/SO-07814/shipment-lr-builty/Shipment-LR-Builty-2026-08-29T12-34-27-319Z.jpeg",
+        "expiresAt": null
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-29",
+      "notes": "",
+      "shippedAt": "2026-08-29T12:34:31.075Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
