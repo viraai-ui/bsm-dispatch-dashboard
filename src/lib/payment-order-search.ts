@@ -11,6 +11,7 @@ type Indexed = PaymentOrderSuggestion & { search: string }
 type Cache = { loadedAt: number; updatedAt: string; orders: Indexed[] }
 
 let cache: Cache | null = null
+let coldFlight: Promise<Cache> | null = null
 let loadFlight: Promise<Cache> | null = null
 let refreshFlight: Promise<Cache> | null = null
 let lastRefreshStarted = 0
@@ -36,12 +37,25 @@ async function readBundled(): Promise<PaymentOrderSnapshot> {
 
 async function loadSnapshot() {
   if (cache) return cache
-  if (!loadFlight) loadFlight = (async () => {
-    const bundled = await readBundled()
-    const { data } = await githubReadJson<PaymentOrderSnapshot>(STORE_PATH, bundled)
-    const loaded = decode(data.orders?.length ? data : bundled)
+  // The deployed snapshot is the cold-start path: never put GitHub or Zoho on
+  // the modal's critical path. Explicit Sync updates the durable GitHub copy;
+  // background SWR below picks that up for warm instances.
+  if (!coldFlight) coldFlight = (async () => {
+    const loaded = decode(await readBundled())
     if (!loaded.orders.length) throw new Error('Payment sales-order index is unavailable. Use Sync to retry.')
-    return (cache = loaded)
+    cache = loaded
+    void reloadDurableSnapshot().catch((error) => console.warn('[payment-order-index] background revalidation failed', error instanceof Error ? error.message : error))
+    return loaded
+  })().finally(() => { coldFlight = null })
+  return coldFlight
+}
+
+async function reloadDurableSnapshot() {
+  if (!loadFlight) loadFlight = (async () => {
+    const fallback = cache || decode(await readBundled())
+    const { data } = await githubReadJson<PaymentOrderSnapshot>(STORE_PATH, { version: 1, updatedAt: fallback.updatedAt, orders: [] })
+    const loaded = decode(data.orders?.length ? data : { version: 1, updatedAt: fallback.updatedAt, orders: [] })
+    return loaded.orders.length ? (cache = loaded) : fallback
   })().finally(() => { loadFlight = null })
   return loadFlight
 }
@@ -65,7 +79,9 @@ export async function refreshPaymentOrderIndex(force = false) {
 export async function searchPaymentOrders(query = '', limit = 10) {
   const started = performance.now()
   const current = await loadSnapshot()
-  if (Date.now() - current.loadedAt > FRESH_MS && !refreshFlight) void refreshPaymentOrderIndex().catch((error) => console.warn('[payment-order-index] background refresh failed', error instanceof Error ? error.message : error))
+  // Normal reads only revalidate the durable compact snapshot. The expensive
+  // full Zoho traversal is reserved for the explicit, rate-limited Sync action.
+  if (Date.now() - current.loadedAt > FRESH_MS && !loadFlight) void reloadDurableSnapshot().catch((error) => console.warn('[payment-order-index] background revalidation failed', error instanceof Error ? error.message : error))
   const needle = normalizePaymentOrderSearch(query)
   const orders = (needle ? current.orders.filter((order) => order.search.includes(needle)) : current.orders).slice(0, Math.max(1, Math.min(limit, 50)))
     .map(({ search: _search, ...safe }) => safe)
@@ -77,4 +93,4 @@ export async function validatePaymentOrder(id: string, number: string, customer:
   return current.orders.find((order) => order.id === id && order.salesOrderNumber === number && order.customerName === customer) || null
 }
 
-export function resetPaymentOrderSearchForTests() { cache = null; loadFlight = null; refreshFlight = null; lastRefreshStarted = 0 }
+export function resetPaymentOrderSearchForTests() { cache = null; coldFlight = null; loadFlight = null; refreshFlight = null; lastRefreshStarted = 0 }
