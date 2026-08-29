@@ -29,8 +29,10 @@ test('submission enforces authoritative SO identity, accepts terminal SOs, and r
   assert.match(store, /createdBy: 'public-salesman'/)
   assert.match(store, /status: 'Pending'/)
   assert.match(store, /idempotencyKey === idempotencyKey/)
-  assert.match(route, /customerName = value\(body/)
-  assert.match(route, /customerName: order\.customerName/)
+  assert.match(route, /customerName = cleanPaymentCustomerName\(body\.customerName\)/)
+  assert.match(route, /Boolean\(orderId\) !== Boolean\(salesOrderNumber\)/)
+  assert.match(route, /linked \? await validatePaymentOrder\(orderId, salesOrderNumber, customerName\) : null/)
+  assert.match(route, /customerName: linked \? order!\.customerName : customerName/)
   assert.doesNotMatch(route, /api\/orders|workflow|serial|packaging|dispatch/)
 })
 

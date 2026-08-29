@@ -48,7 +48,7 @@ export async function POST(request: Request) {
       attachments.push({ key, url: `/api/r2/view?key=${encodeURIComponent(key)}`, name: text(item?.name).slice(0, 180) || 'Payment proof', contentType: metadata.contentType, size: metadata.contentLength })
     }
     const first = attachments[0]
-    const payment = await createPayment({ customerName, ...(linked ? { salesOrderNumber: authoritativeOrder!.salesOrderNumber } : {}), paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotUrl: first?.url, screenshotKey: first?.key, screenshotName: first?.name, createdBy: auth.user.id })
+    const payment = await createPayment({ customerName: linked ? authoritativeOrder!.customerName : customerName, ...(linked ? { salesOrderNumber: authoritativeOrder!.salesOrderNumber } : {}), paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotUrl: first?.url, screenshotKey: first?.key, screenshotName: first?.name, createdBy: auth.user.id })
     await createPaymentNotifications(payment, auth.user.id).catch(console.error); await notifyAccountsOfNewPayment(payment).catch(console.error)
     return apiOk({ payment: { ...payment, attachments: paymentAttachments(payment).map((proof, index) => ({ ...proof, key: '', url: `/api/payments/${payment.id}/proof?index=${index}` })) } })
   } catch (error) {

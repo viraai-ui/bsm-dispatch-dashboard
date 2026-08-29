@@ -27,7 +27,7 @@ test('both creation forms require a blank-first Added by selector and submit it'
     assert.match(source, /<select[^>]*required[^>]*value=\{addedBy\}/)
     assert.match(source, /<option value="">Select user<\/option>\{PAYMENT_ADDED_BY_USERS\.map/)
     assert.match(source, /setAddedBy\(''\)/)
-    assert.match(source, /JSON\.stringify\(\{[^}]*addedBy/)
+    assert.match(source, /body: JSON\.stringify\(\{[\s\S]{0,500}addedBy/)
   }
 })
 

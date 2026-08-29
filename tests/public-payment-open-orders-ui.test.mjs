@@ -20,7 +20,8 @@ test('public sales-order suggestions load without typing and refresh safely', as
     read('../src/lib/payment-open-sales-orders.ts'),
     read('../src/lib/zoho.ts'),
   ])
-  assert.match(ui, /function openPaymentForm\(\) \{ resetPaymentForm\(\); setOpen\(true\); setSuggestionsOpen\(true\);[\s\S]*void loadForm\(\)/)
+  assert.match(ui, /function openPaymentForm\(\) \{ resetPaymentForm\(\); setOpen\(true\); modalHistory[\s\S]*void loadForm\(\)/)
+  assert.doesNotMatch(ui, /function openPaymentForm\(\)[^{]*\{[^}]*setSuggestionsOpen\(true\)/)
   assert.match(ui, /new AbortController\(\)/)
   assert.match(ui, /generation !== requestGeneration\.current/)
   assert.match(ui, /controller\.abort\('timeout'\)/)
