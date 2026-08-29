@@ -19704,7 +19704,9 @@
     "1154219000035991020": {
       "salesOrderId": "1154219000035991020",
       "salesOrderNumber": "SO-07808",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-29T08:42:22.406Z",
       "processedOrder": {
         "id": "1154219000035991020",
         "zohoSalesOrderId": "1154219000035991020",
@@ -19732,8 +19734,8 @@
           {
             "id": "1154219000035991020-1154219000035991023-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271078",
+            "qrToken": "26271078",
             "orderId": "1154219000035991020",
             "lineItemId": "1154219000035991023",
             "itemName": "Sole Stitch Cylinder Bed Single needle (with binding)",
@@ -19741,14 +19743,17 @@
             "customerName": "SHAKTI INDUSTRIES",
             "salesOrderNumber": "SO-07808",
             "deliveryDate": "2026-09-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Porter Freight Including"
+            "itemDescription": "Porter Freight Including",
+            "warrantyStart": "2026-08-29",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -19761,7 +19766,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T08:36:26.059Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-29T08:36:33.289Z"
+          "zohoBackupQueuedAt": "2026-08-29T08:36:33.289Z",
+          "processedAt": "2026-08-29T08:42:22.406Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
