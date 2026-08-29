@@ -1,28 +1,6 @@
 {
   "notifications": [
     {
-      "id": "payment-notification-7d540c7b-0cb6-451e-822f-5d82edfc4a86",
-      "type": "payment-created",
-      "recipientUserId": "u-admin",
-      "paymentId": "payment-ae098f2a-c748-4fc6-873f-954d1ebdd0ff",
-      "salesOrderNumber": "No Sales Order",
-      "customerName": "Dispatch E2E Canary",
-      "paymentAmount": 1,
-      "createdAt": "2026-08-29T11:38:12.076Z",
-      "readAt": null
-    },
-    {
-      "id": "payment-notification-73d58ffa-9552-425f-b799-6418b1d564c5",
-      "type": "payment-created",
-      "recipientUserId": "u-accounts",
-      "paymentId": "payment-ae098f2a-c748-4fc6-873f-954d1ebdd0ff",
-      "salesOrderNumber": "No Sales Order",
-      "customerName": "Dispatch E2E Canary",
-      "paymentAmount": 1,
-      "createdAt": "2026-08-29T11:38:12.076Z",
-      "readAt": null
-    },
-    {
       "id": "payment-notification-d447759c-7822-4dac-be81-777d25d3b63c",
       "type": "payment-created",
       "recipientUserId": "u-admin",
