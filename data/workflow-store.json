@@ -20046,7 +20046,9 @@
     "1154219000036112004": {
       "salesOrderId": "1154219000036112004",
       "salesOrderNumber": "SO-07832",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-29T11:50:33.161Z",
       "processedOrder": {
         "id": "1154219000036112004",
         "zohoSalesOrderId": "1154219000036112004",
@@ -20074,8 +20076,8 @@
           {
             "id": "1154219000036112004-1154219000036112007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271083",
+            "qrToken": "26271083",
             "orderId": "1154219000036112004",
             "lineItemId": "1154219000036112007",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -20083,20 +20085,23 @@
             "customerName": "KC ARTS",
             "salesOrderNumber": "SO-07832",
             "deliveryDate": "2026-08-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036112004-1154219000036112007-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271084",
+            "qrToken": "26271084",
             "orderId": "1154219000036112004",
             "lineItemId": "1154219000036112007",
             "itemName": "Hotmelt Roller Coater (16 inch)",
@@ -20104,14 +20109,17 @@
             "customerName": "KC ARTS",
             "salesOrderNumber": "SO-07832",
             "deliveryDate": "2026-08-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20124,7 +20132,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T11:49:02.710Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-29T11:49:10.315Z"
+          "zohoBackupQueuedAt": "2026-08-29T11:49:10.315Z",
+          "processedAt": "2026-08-29T11:50:33.161Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000036112004-1154219000036112007-2": {
           "machineUnitId": "1154219000036112004-1154219000036112007-2",
@@ -20134,7 +20145,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T11:49:02.710Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-29T11:49:10.315Z"
+          "zohoBackupQueuedAt": "2026-08-29T11:49:10.315Z",
+          "processedAt": "2026-08-29T11:50:33.161Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         }
       }
     }
