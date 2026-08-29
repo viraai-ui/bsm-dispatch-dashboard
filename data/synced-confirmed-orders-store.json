@@ -115,53 +115,6 @@
         }
       ]
     },
-    "1154219000036162006": {
-      "id": "1154219000036162006",
-      "zohoSalesOrderId": "1154219000036162006",
-      "salesOrderNumber": "SO-07840",
-      "status": "open",
-      "customerName": "RAMESH UPPER",
-      "shippingAddress": "IST FLOOR, H.NO.24, KHASRA NO 628/468/480, SULTANPUR MAJRA, DELHI, North West Delhi, Delhi,, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036162009",
-          "itemName": "Hotmelt Roller Coater (12 inch)",
-          "sku": "831",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036162006-1154219000036162009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036162006",
-          "lineItemId": "1154219000036162009",
-          "itemName": "Hotmelt Roller Coater (12 inch)",
-          "sku": "831",
-          "customerName": "RAMESH UPPER",
-          "salesOrderNumber": "SO-07840",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000036185001": {
       "id": "1154219000036185001",
       "zohoSalesOrderId": "1154219000036185001",
@@ -7559,7 +7512,6 @@
   "orderIds": [
     "1154219000036193002",
     "1154219000036179029",
-    "1154219000036162006",
     "1154219000036185001",
     "1154219000036165003",
     "1154219000036157003",
@@ -7608,8 +7560,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-29T11:00:36.334Z",
-  "lastAttemptAt": "2026-08-29T11:20:25.292Z",
+  "lastSuccessfulSyncAt": "2026-08-29T11:20:29.911Z",
+  "lastAttemptAt": "2026-08-29T11:20:29.911Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
