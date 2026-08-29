@@ -1,55 +1,5 @@
 {
   "orders": {
-    "1154219000036161007": {
-      "id": "1154219000036161007",
-      "zohoSalesOrderId": "1154219000036161007",
-      "salesOrderNumber": "SO-07837",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036161010",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 100,
-          "pendingQuantity": 100,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
-    "1154219000036177001": {
-      "id": "1154219000036177001",
-      "zohoSalesOrderId": "1154219000036177001",
-      "salesOrderNumber": "SO-07836",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036177004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 100,
-          "pendingQuantity": 100,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000036157003": {
       "id": "1154219000036157003",
       "zohoSalesOrderId": "1154219000036157003",
@@ -104,53 +54,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "Roller Roller of 16 Inch Hot melt Machine"
-        }
-      ]
-    },
-    "1154219000036116011": {
-      "id": "1154219000036116011",
-      "zohoSalesOrderId": "1154219000036116011",
-      "salesOrderNumber": "SO-07834",
-      "status": "open",
-      "customerName": "Adda Uniglobe Pvt. Ltd.",
-      "shippingAddress": "Plot No.179 F, Sec.16 Industrial Area HSIIDC, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036116014",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036116011-1154219000036116014-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036116011",
-          "lineItemId": "1154219000036116014",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "Adda Uniglobe Pvt. Ltd.",
-          "salesOrderNumber": "SO-07834",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -3393,53 +3296,6 @@
           "customerName": "AASHI VENTURE PRIVATE LIMITED",
           "salesOrderNumber": "SO-07826",
           "deliveryDate": "2026-08-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000036047010": {
-      "id": "1154219000036047010",
-      "zohoSalesOrderId": "1154219000036047010",
-      "salesOrderNumber": "SO-07822",
-      "status": "open",
-      "customerName": "Adda Uniglobe Pvt. Ltd.",
-      "shippingAddress": "Plot No.179 F, Sec.16 Industrial Area HSIIDC, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-26",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036047013",
-          "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
-          "sku": "9920",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036047010-1154219000036047013-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036047010",
-          "lineItemId": "1154219000036047013",
-          "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
-          "sku": "9920",
-          "customerName": "Adda Uniglobe Pvt. Ltd.",
-          "salesOrderNumber": "SO-07822",
-          "deliveryDate": "2026-08-26",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
@@ -7512,15 +7368,11 @@
     }
   },
   "orderIds": [
-    "1154219000036161007",
-    "1154219000036177001",
     "1154219000036157003",
-    "1154219000036116011",
     "1154219000036112004",
     "1154219000036137001",
     "1154219000036072023",
     "1154219000036084004",
-    "1154219000036047010",
     "1154219000036057006",
     "1154219000036064003",
     "1154219000036050001",
@@ -7563,8 +7415,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-29T07:20:35.190Z",
-  "lastAttemptAt": "2026-08-29T07:38:35.055Z",
+  "lastSuccessfulSyncAt": "2026-08-29T07:38:45.264Z",
+  "lastAttemptAt": "2026-08-29T07:38:45.264Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
