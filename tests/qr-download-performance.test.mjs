@@ -9,7 +9,8 @@ const route = await readFile(new URL('../src/app/api/workflow/orders/[id]/route.
 
 assert.match(ui, /machine\.serialNumber \|\| allocated\[machine\.id\]/, 'existing serial must be reused')
 assert.match(ui, /machineIds: string\[\]\) \{ if \(!machineIds\.length\) return \{\}/, 'existing serial must skip allocation request')
-assert.ok(ui.indexOf('generateBarcodePdf({ order') < ui.indexOf("void saveWorkflow(order.id, { action: 'generate'"), 'download must start before background persistence')
+const generateSelected = ui.slice(ui.indexOf('const generateSelected = async'))
+assert.ok(generateSelected.indexOf("await saveWorkflow(order.id, { action: 'generate'") < generateSelected.indexOf('generateBarcodePdf({ order'), 'durable workflow persistence must complete before download and success')
 assert.ok(!route.includes('upsertGeneratedSerialsToMasterDatabase'), 'generate API must not await Neon master mirror')
 assert.ok(!ui.includes('qrCode: nextQrCodes[machine.id]'), 'workflow payload must not contain oversized QR data URLs')
 assert.ok(ui.includes('Download QR PDF'), 'existing serials need an explicit PDF action')
