@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000036179029": {
+      "id": "1154219000036179029",
+      "zohoSalesOrderId": "1154219000036179029",
+      "salesOrderNumber": "SO-07841",
+      "status": "open",
+      "customerName": "NITCO SEWING MACHINE COMPANY",
+      "shippingAddress": "GF, D-8, YAMUNA VIHAR ROAD, NORTH GHONDA, DELHI, North East Delhi, Delhi, 110053, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036179032",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036179029-1154219000036179032-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036179029",
+          "lineItemId": "1154219000036179032",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "NITCO SEWING MACHINE COMPANY",
+          "salesOrderNumber": "SO-07841",
+          "deliveryDate": "2026-08-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036179029-1154219000036179032-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036179029",
+          "lineItemId": "1154219000036179032",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "NITCO SEWING MACHINE COMPANY",
+          "salesOrderNumber": "SO-07841",
+          "deliveryDate": "2026-08-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036162006": {
       "id": "1154219000036162006",
       "zohoSalesOrderId": "1154219000036162006",
@@ -7442,6 +7510,7 @@
     }
   },
   "orderIds": [
+    "1154219000036179029",
     "1154219000036162006",
     "1154219000036185001",
     "1154219000036165003",
@@ -7491,8 +7560,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-29T10:40:35.123Z",
-  "lastAttemptAt": "2026-08-29T10:44:10.374Z",
+  "lastSuccessfulSyncAt": "2026-08-29T10:44:20.210Z",
+  "lastAttemptAt": "2026-08-29T10:44:20.210Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
