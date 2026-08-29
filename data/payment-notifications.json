@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-e6686406-7c3d-41ed-bb1c-86da694025f8",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-a9cdc56e-21dc-45c2-8e2d-1be5df548be6",
+      "salesOrderNumber": "SO-07844",
+      "customerName": "Upright Luggage Industries",
+      "paymentAmount": 10620,
+      "createdAt": "2026-08-29T12:40:36.849Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-7bc9a179-d040-4d0d-b206-b4a13aa8e32b",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-a9cdc56e-21dc-45c2-8e2d-1be5df548be6",
+      "salesOrderNumber": "SO-07844",
+      "customerName": "Upright Luggage Industries",
+      "paymentAmount": 10620,
+      "createdAt": "2026-08-29T12:40:36.849Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-f719e906-278f-42fa-9c56-823b8be468b9",
       "type": "payment-created",
       "recipientUserId": "u-admin",
