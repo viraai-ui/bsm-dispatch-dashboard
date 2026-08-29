@@ -1,5 +1,73 @@
 {
   "orders": {
+    "1154219000036165003": {
+      "id": "1154219000036165003",
+      "zohoSalesOrderId": "1154219000036165003",
+      "salesOrderNumber": "SO-07838",
+      "status": "open",
+      "customerName": "PLUGA PUMPS AND MOTORS PRIVATE LIMITED",
+      "shippingAddress": "PLOT 21, ALINDRA GIDC,\nMANJUSAR, SAVLI\n[CIN: U29219GJ2013PTC076653], VADODARA, Gujarat, 391775",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036165006",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036165003-1154219000036165006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036165003",
+          "lineItemId": "1154219000036165006",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "customerName": "PLUGA PUMPS AND MOTORS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07838",
+          "deliveryDate": "2026-08-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036165003-1154219000036165006-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036165003",
+          "lineItemId": "1154219000036165006",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "customerName": "PLUGA PUMPS AND MOTORS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07838",
+          "deliveryDate": "2026-08-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036157003": {
       "id": "1154219000036157003",
       "zohoSalesOrderId": "1154219000036157003",
@@ -4303,94 +4371,6 @@
         }
       ]
     },
-    "1154219000035997009": {
-      "id": "1154219000035997009",
-      "zohoSalesOrderId": "1154219000035997009",
-      "salesOrderNumber": "SO-07801",
-      "status": "open",
-      "customerName": "Shiv Industries",
-      "shippingAddress": "110/A-1, Sector-F, Industries Area, Sanwer Road,, Indore, Madhya Pradesh, 452015, India",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035997012",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035997013",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
-          "sku": "335",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035997014",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035997009-1154219000035997012-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035997009",
-          "lineItemId": "1154219000035997012",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "Shiv Industries",
-          "salesOrderNumber": "SO-07801",
-          "deliveryDate": "2026-08-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000035997009-1154219000035997013-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035997009",
-          "lineItemId": "1154219000035997013",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
-          "sku": "335",
-          "customerName": "Shiv Industries",
-          "salesOrderNumber": "SO-07801",
-          "deliveryDate": "2026-08-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035989054": {
       "id": "1154219000035989054",
       "zohoSalesOrderId": "1154219000035989054",
@@ -7368,6 +7348,7 @@
     }
   },
   "orderIds": [
+    "1154219000036165003",
     "1154219000036157003",
     "1154219000036112004",
     "1154219000036137001",
@@ -7380,7 +7361,6 @@
     "1154219000035991020",
     "1154219000036013008",
     "1154219000035994029",
-    "1154219000035997009",
     "1154219000035989054",
     "1154219000035947002",
     "1154219000035933004",
@@ -7415,8 +7395,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-29T08:21:34.762Z",
-  "lastAttemptAt": "2026-08-29T08:40:25.585Z",
+  "lastSuccessfulSyncAt": "2026-08-29T08:40:35.738Z",
+  "lastAttemptAt": "2026-08-29T08:40:35.738Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
