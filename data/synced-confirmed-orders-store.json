@@ -1,52 +1,5 @@
 {
   "orders": {
-    "1154219000036164006": {
-      "id": "1154219000036164006",
-      "zohoSalesOrderId": "1154219000036164006",
-      "salesOrderNumber": "SO-07843",
-      "status": "open",
-      "customerName": "A.P. Footwear(Bahadurgarh)",
-      "shippingAddress": "1257, Red Cross Road, MIE Part-B, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036164009",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036164006-1154219000036164009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036164006",
-          "lineItemId": "1154219000036164009",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "customerName": "A.P. Footwear(Bahadurgarh)",
-          "salesOrderNumber": "SO-07843",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000036193002": {
       "id": "1154219000036193002",
       "zohoSalesOrderId": "1154219000036193002",
@@ -86,74 +39,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000036179029": {
-      "id": "1154219000036179029",
-      "zohoSalesOrderId": "1154219000036179029",
-      "salesOrderNumber": "SO-07841",
-      "status": "open",
-      "customerName": "NITCO SEWING MACHINE COMPANY",
-      "shippingAddress": "GF, D-8, YAMUNA VIHAR ROAD, NORTH GHONDA, DELHI, North East Delhi, Delhi, 110053, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036179032",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036179029-1154219000036179032-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036179029",
-          "lineItemId": "1154219000036179032",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "customerName": "NITCO SEWING MACHINE COMPANY",
-          "salesOrderNumber": "SO-07841",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036179029-1154219000036179032-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036179029",
-          "lineItemId": "1154219000036179032",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "customerName": "NITCO SEWING MACHINE COMPANY",
-          "salesOrderNumber": "SO-07841",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -206,74 +91,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "37 Feet Lasting Conveyor Rod Type With 2 Heating Chamber (6 Feet + 6 Feet) With NIR System"
-        }
-      ]
-    },
-    "1154219000036165003": {
-      "id": "1154219000036165003",
-      "zohoSalesOrderId": "1154219000036165003",
-      "salesOrderNumber": "SO-07838",
-      "status": "open",
-      "customerName": "PLUGA PUMPS AND MOTORS PRIVATE LIMITED",
-      "shippingAddress": "PLOT 21, ALINDRA GIDC,\nMANJUSAR, SAVLI\n[CIN: U29219GJ2013PTC076653], VADODARA, Gujarat, 391775",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036165006",
-          "itemName": "Damping Container (Air Tight Pressure Container)",
-          "sku": "",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036165003-1154219000036165006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036165003",
-          "lineItemId": "1154219000036165006",
-          "itemName": "Damping Container (Air Tight Pressure Container)",
-          "sku": "",
-          "customerName": "PLUGA PUMPS AND MOTORS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07838",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036165003-1154219000036165006-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036165003",
-          "lineItemId": "1154219000036165006",
-          "itemName": "Damping Container (Air Tight Pressure Container)",
-          "sku": "",
-          "customerName": "PLUGA PUMPS AND MOTORS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07838",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ]
     },
@@ -3940,94 +3757,6 @@
         }
       ]
     },
-    "1154219000036050001": {
-      "id": "1154219000036050001",
-      "zohoSalesOrderId": "1154219000036050001",
-      "salesOrderNumber": "SO-07814",
-      "status": "open",
-      "customerName": "GLL Industries",
-      "shippingAddress": "Plot No 16,17,18 EPIP Phase I,, Baddi Solan, Jhar Majri, Solan, Himachal Pradesh, 174103",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036050004",
-          "itemName": "Eyelet punching double channel [400 & 600 Number]",
-          "sku": "989",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036050005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "Wooden Packing Cost",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036050006",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Freight BSM to Punjabi Bagh Zip Line",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036050001-1154219000036050004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036050001",
-          "lineItemId": "1154219000036050004",
-          "itemName": "Eyelet punching double channel [400 & 600 Number]",
-          "sku": "989",
-          "customerName": "GLL Industries",
-          "salesOrderNumber": "SO-07814",
-          "deliveryDate": "2026-08-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036050001-1154219000036050005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036050001",
-          "lineItemId": "1154219000036050005",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "GLL Industries",
-          "salesOrderNumber": "SO-07814",
-          "deliveryDate": "2026-08-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Wooden Packing Cost"
-        }
-      ]
-    },
     "1154219000036022017": {
       "id": "1154219000036022017",
       "zohoSalesOrderId": "1154219000036022017",
@@ -7557,11 +7286,8 @@
     }
   },
   "orderIds": [
-    "1154219000036164006",
     "1154219000036193002",
-    "1154219000036179029",
     "1154219000036185001",
-    "1154219000036165003",
     "1154219000036157003",
     "1154219000036112004",
     "1154219000036137001",
@@ -7569,7 +7295,6 @@
     "1154219000036084004",
     "1154219000036057006",
     "1154219000036064003",
-    "1154219000036050001",
     "1154219000036022017",
     "1154219000035991020",
     "1154219000036013008",
@@ -7608,8 +7333,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-29T12:21:34.133Z",
-  "lastAttemptAt": "2026-08-29T12:40:24.894Z",
+  "lastSuccessfulSyncAt": "2026-08-29T12:40:34.342Z",
+  "lastAttemptAt": "2026-08-29T12:40:34.342Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
