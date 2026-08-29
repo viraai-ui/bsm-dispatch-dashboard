@@ -19516,7 +19516,9 @@
     "1154219000036116011": {
       "salesOrderId": "1154219000036116011",
       "salesOrderNumber": "SO-07834",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-29T05:02:02.771Z",
       "processedOrder": {
         "id": "1154219000036116011",
         "zohoSalesOrderId": "1154219000036116011",
@@ -19544,8 +19546,8 @@
           {
             "id": "1154219000036116011-1154219000036116014-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271075",
+            "qrToken": "26271075",
             "orderId": "1154219000036116011",
             "lineItemId": "1154219000036116014",
             "itemName": "Tape Cutting machine [Electronic]",
@@ -19553,14 +19555,17 @@
             "customerName": "Adda Uniglobe Pvt. Ltd.",
             "salesOrderNumber": "SO-07834",
             "deliveryDate": "2026-08-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -19573,7 +19578,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T04:55:37.315Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-29T04:55:44.100Z"
+          "zohoBackupQueuedAt": "2026-08-29T04:55:44.100Z",
+          "processedAt": "2026-08-29T05:02:02.771Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
