@@ -1,32 +1,6 @@
 {
   "payments": [
     {
-      "customerName": "Dispatch E2E Canary",
-      "paymentAmount": 1,
-      "paymentMode": "Other",
-      "addedBy": "Anuj",
-      "remarks": "Automated end-to-end canary; immediately deleted",
-      "attachments": [
-        {
-          "key": "payments/public/manual/1d53d8f5-831a-4ba2-a803-1fb8e0322f6b/2026-08-29/1788003488964-7d7a9f23-8d54-4424-a1f8-c4f2143c3a87-dispatch-canary.png",
-          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F1d53d8f5-831a-4ba2-a803-1fb8e0322f6b%2F2026-08-29%2F1788003488964-7d7a9f23-8d54-4424-a1f8-c4f2143c3a87-dispatch-canary.png",
-          "name": "dispatch-canary.png",
-          "contentType": "image/png",
-          "size": 68
-        }
-      ],
-      "screenshotKey": "payments/public/manual/1d53d8f5-831a-4ba2-a803-1fb8e0322f6b/2026-08-29/1788003488964-7d7a9f23-8d54-4424-a1f8-c4f2143c3a87-dispatch-canary.png",
-      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F1d53d8f5-831a-4ba2-a803-1fb8e0322f6b%2F2026-08-29%2F1788003488964-7d7a9f23-8d54-4424-a1f8-c4f2143c3a87-dispatch-canary.png",
-      "screenshotName": "dispatch-canary.png",
-      "publicDeleteTokenHash": "2692a8ce2dee10d8289b294fb7b1896a2cdfbfc9efb40615590977c5796e3b2a",
-      "id": "payment-ae098f2a-c748-4fc6-873f-954d1ebdd0ff",
-      "status": "Pending",
-      "createdBy": "public-salesman",
-      "idempotencyKey": "884c048058634109a27f27536ddc6978",
-      "createdAt": "2026-08-29T11:38:10.628Z",
-      "updatedAt": "2026-08-29T11:38:10.628Z"
-    },
-    {
       "customerName": "3NG",
       "salesOrderNumber": "SO-07833",
       "paymentAmount": 62500,
