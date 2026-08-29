@@ -1,5 +1,30 @@
 {
   "orders": {
+    "1154219000036206001": {
+      "id": "1154219000036206001",
+      "zohoSalesOrderId": "1154219000036206001",
+      "salesOrderNumber": "SO-07844",
+      "status": "open",
+      "customerName": "Upright Luggage Industries",
+      "shippingAddress": "182/184, 1st Floor Pathe Bapurao Marg Next to Alfred Threatre, Girgaon, Mumbai, 400008, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-29",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036206004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000036193002": {
       "id": "1154219000036193002",
       "zohoSalesOrderId": "1154219000036193002",
@@ -4356,6 +4381,73 @@
         }
       ]
     },
+    "1154219000035939003": {
+      "id": "1154219000035939003",
+      "zohoSalesOrderId": "1154219000035939003",
+      "salesOrderNumber": "SO-07791",
+      "status": "open",
+      "customerName": "Ashish International",
+      "shippingAddress": "Ground Floor,, Plot No. C-114, Naraina, Industrial Area Phase-1, Delhi, 110028",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035939006",
+          "itemName": "Pattern sewing machine (600x400 mm)",
+          "sku": "6040",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035939007",
+          "itemName": "Edge Folding Machine With Glue (Power Saving Motor)",
+          "sku": "291P",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 0,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035939008",
+          "itemName": "Hotmelt Polyamide Granules",
+          "sku": "7160",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 0,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035939003-1154219000035939006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035939003",
+          "lineItemId": "1154219000035939006",
+          "itemName": "Pattern sewing machine (600x400 mm)",
+          "sku": "6040",
+          "customerName": "Ashish International",
+          "salesOrderNumber": "SO-07791",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000035947002": {
       "id": "1154219000035947002",
       "zohoSalesOrderId": "1154219000035947002",
@@ -4452,53 +4544,6 @@
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000035903106": {
-      "id": "1154219000035903106",
-      "zohoSalesOrderId": "1154219000035903106",
-      "salesOrderNumber": "SO-07787",
-      "status": "open",
-      "customerName": "P L G INTERNATIONAL",
-      "shippingAddress": "Plot No-134-B, Kh No. 72/10/2, Swarn Park, Industrial AreaDELHI- 110041",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-08-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035962038",
-          "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 18 Inch)",
-          "sku": "8918-18",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035903106-1154219000035962038-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035903106",
-          "lineItemId": "1154219000035962038",
-          "itemName": "Single Needle High Post Bed (28 Inch) (Body Gap: 18 Inch)",
-          "sku": "8918-18",
-          "customerName": "P L G INTERNATIONAL",
-          "salesOrderNumber": "SO-07787",
-          "deliveryDate": "2026-08-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -7286,6 +7331,7 @@
     }
   },
   "orderIds": [
+    "1154219000036206001",
     "1154219000036193002",
     "1154219000036185001",
     "1154219000036157003",
@@ -7300,9 +7346,9 @@
     "1154219000036013008",
     "1154219000035994029",
     "1154219000035989054",
+    "1154219000035939003",
     "1154219000035947002",
     "1154219000035933004",
-    "1154219000035903106",
     "1154219000035891025",
     "1154219000035884008",
     "1154219000035890003",
@@ -7333,8 +7379,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-29T12:40:34.342Z",
-  "lastAttemptAt": "2026-08-29T12:57:11.557Z",
+  "lastSuccessfulSyncAt": "2026-08-29T12:57:21.086Z",
+  "lastAttemptAt": "2026-08-29T12:57:21.086Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
