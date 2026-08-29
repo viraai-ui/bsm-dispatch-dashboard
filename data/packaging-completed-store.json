@@ -13895,6 +13895,87 @@
       "machineIds": [
         "1154219000036162006-1154219000036162009-1"
       ]
+    },
+    "1154219000036179029": {
+      "completedAt": "2026-08-29T12:09:53.271Z",
+      "order": {
+        "id": "1154219000036179029",
+        "zohoSalesOrderId": "1154219000036179029",
+        "salesOrderNumber": "SO-07841",
+        "status": "open",
+        "customerName": "NITCO SEWING MACHINE COMPANY",
+        "shippingAddress": "GF, D-8, YAMUNA VIHAR ROAD, NORTH GHONDA, DELHI, North East Delhi, Delhi, 110053, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036179032",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036179029-1154219000036179032-1",
+            "unitNumber": 1,
+            "serialNumber": "26271080",
+            "qrToken": "26271080",
+            "orderId": "1154219000036179029",
+            "lineItemId": "1154219000036179032",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "customerName": "NITCO SEWING MACHINE COMPANY",
+            "salesOrderNumber": "SO-07841",
+            "deliveryDate": "2026-08-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036179029-1154219000036179032-2",
+            "unitNumber": 2,
+            "serialNumber": "26271081",
+            "qrToken": "26271081",
+            "orderId": "1154219000036179029",
+            "lineItemId": "1154219000036179032",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "customerName": "NITCO SEWING MACHINE COMPANY",
+            "salesOrderNumber": "SO-07841",
+            "deliveryDate": "2026-08-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036179029-1154219000036179032-1",
+        "1154219000036179029-1154219000036179032-2"
+      ]
     }
   }
 }
