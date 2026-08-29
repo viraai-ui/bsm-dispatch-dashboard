@@ -60,6 +60,7 @@ export async function POST(request: Request) {
   if (!/^[a-zA-Z0-9_-]{16,100}$/.test(idempotencyKey)) return publicApiHeaders(apiError('Invalid submission key', 400))
   const orderId = value(body.salesOrderId)
   const salesOrderNumber = value(body.salesOrderNumber)
+  const customerName = value(body.customerName)
   const amountText = value(body.paymentAmount)
   if (!/^\d{1,10}(\.\d{1,2})?$/.test(amountText)) return publicApiHeaders(apiError('Enter a valid payment amount with up to 2 decimal places', 400))
   const paymentAmount = Number(amountText)
@@ -78,8 +79,8 @@ export async function POST(request: Request) {
   if (screenshotKey && (!/^payments\/public\/[a-zA-Z0-9._/-]{1,220}$/.test(screenshotKey) || screenshotUrl !== `/api/r2/view?key=${encodeURIComponent(screenshotKey)}`)) return publicApiHeaders(apiError('Invalid screenshot reference', 400))
   const attachments: PaymentAttachment[] = []
   try {
-    const order = (await listPaymentOpenSalesOrders(false)).find((item) => item.id === orderId && item.salesOrderNumber === salesOrderNumber)
-    if (!order) return publicApiHeaders(apiError('Sales order is no longer open. Please select another.', 400))
+    const order = (await listPaymentOpenSalesOrders(true)).find((item) => item.id === orderId && item.salesOrderNumber === salesOrderNumber && item.customerName === customerName)
+    if (!order) return publicApiHeaders(apiError('Sales order details do not match Zoho. Please select it again.', 400))
     const seen = new Set<string>()
     for (const rawItem of requested) {
       const item = rawItem && typeof rawItem === 'object' ? rawItem as Record<string, unknown> : {}; const key = value(item.key)

@@ -23,13 +23,14 @@ test('lookup is minimum-field, read-only and never touches operational APIs/stor
   assert.doesNotMatch(route, /api\/orders|syncConfirmed|workflow|writeSynced|githubRequest/)
 })
 
-test('submission enforces open SO, server-owned identity/status, anti-abuse and notifications', async () => {
+test('submission enforces authoritative SO identity, accepts terminal SOs, and retains anti-abuse and notifications', async () => {
   const [route, store] = await Promise.all([read('../src/app/api/public/payments/route.ts'), read('../src/lib/payments.ts')])
-  for (const contract of [/sameOrigin/, /checkRateLimit/, /verifySubmissionToken/, /website/, /idempotency-key/, /MAX_BODY/, /listPaymentOpenSalesOrders\(false\)/, /item\.id === orderId/, /createPaymentNotifications/, /notifyAccountsOfNewPayment/]) assert.match(route, contract)
+  for (const contract of [/sameOrigin/, /checkRateLimit/, /verifySubmissionToken/, /website/, /idempotency-key/, /MAX_BODY/, /listPaymentOpenSalesOrders\(true\)/, /item\.id === orderId/, /item\.salesOrderNumber === salesOrderNumber/, /item\.customerName === customerName/, /createPaymentNotifications/, /notifyAccountsOfNewPayment/]) assert.match(route, contract)
   assert.match(store, /createdBy: 'public-salesman'/)
   assert.match(store, /status: 'Pending'/)
   assert.match(store, /idempotencyKey === idempotencyKey/)
-  assert.doesNotMatch(route, /customerName = value\(body/)
+  assert.match(route, /customerName = value\(body/)
+  assert.match(route, /customerName: order\.customerName/)
   assert.doesNotMatch(route, /api\/orders|workflow|serial|packaging|dispatch/)
 })
 

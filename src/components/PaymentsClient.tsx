@@ -7,7 +7,7 @@ import type { AppRole } from '@/lib/auth'
 import { PaymentProofViewer, type ViewerProof } from './PaymentProofViewer'
 import { normalizePaymentScreenshotFile } from '@/lib/payment-screenshot'
 
-type OrderSuggestion = { id: string; salesOrderNumber: string; customerName: string }
+type OrderSuggestion = { id: string; salesOrderNumber: string; customerName: string; status: 'Open' | 'Closed' | 'Status unknown'; rawStatus: string }
 
 const PAYMENT_MODES: PaymentMode[] = ['Bank Transfer', 'UPI', 'Cash', 'Credit Card', 'Debit Card', 'Other']
 const formatAmount = (amount?: number) => amount == null ? '—' : new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(amount)
@@ -19,6 +19,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   const [customerName, setCustomerName] = useState('')
   const [salesOrderNumber, setSalesOrderNumber] = useState('')
   const [selectedOrderNumber, setSelectedOrderNumber] = useState('')
+  const [selectedOrder, setSelectedOrder] = useState<OrderSuggestion | null>(null)
   const [paymentAmount, setPaymentAmount] = useState('')
   const [paymentMode, setPaymentMode] = useState<PaymentMode>('Bank Transfer')
   const [addedBy, setAddedBy] = useState<PaymentAddedBy | ''>('')
@@ -132,21 +133,22 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
     fetch('/api/payments/open-sales-orders', { cache: 'no-store' })
       .then(async (response) => {
         const json = await response.json().catch(() => ({}))
-        if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load open sales orders')
+        if (!response.ok || !json.ok) throw new Error(json.error || 'Could not load sales orders')
         setOrders(Array.isArray(json.data?.orders) ? json.data.orders : [])
       })
-      .catch((reason) => setError(reason instanceof Error ? reason.message : 'Could not load open sales orders'))
+      .catch((reason) => setError(reason instanceof Error ? reason.message : 'Could not load sales orders'))
       .finally(() => { setOrdersLoading(false); setOrdersLoaded(true) })
   }, [open, ordersLoaded, ordersLoading])
 
   const matchingOrders = useMemo(() => {
-    const query = salesOrderNumber.trim().toLowerCase()
-    return orders.filter((order) => !query || order.salesOrderNumber.toLowerCase().includes(query) || order.customerName.toLowerCase().includes(query)).slice(0, 50)
+    const query = salesOrderNumber.toLocaleLowerCase().replace(/\s+/g, '')
+    return orders.filter((order) => !query || `${order.salesOrderNumber}${order.customerName}`.toLocaleLowerCase().replace(/\s+/g, '').includes(query)).slice(0, query ? 50 : 10)
   }, [orders, salesOrderNumber])
 
   function selectOrder(order: OrderSuggestion) {
     setSalesOrderNumber(order.salesOrderNumber)
     setSelectedOrderNumber(order.salesOrderNumber)
+    setSelectedOrder(order)
     setCustomerName(order.customerName)
     setSuggestionsOpen(false)
   }
@@ -159,7 +161,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
   }
 
   function resetPaymentForm() {
-    setCustomerName(''); setSalesOrderNumber(''); setSelectedOrderNumber(''); setPaymentAmount(''); setPaymentMode('Bank Transfer'); setAddedBy(''); setFiles([]); setRemarks('')
+    setCustomerName(''); setSalesOrderNumber(''); setSelectedOrderNumber(''); setSelectedOrder(null); setPaymentAmount(''); setPaymentMode('Bank Transfer'); setAddedBy(''); setFiles([]); setRemarks('')
     setOrders([]); setOrdersLoaded(false); setOrdersLoading(false); setSuggestionsOpen(false); setActiveSuggestion(0); setError(''); setSyncMessage('')
     if (fileInputRef.current) fileInputRef.current.value = ''
   }
@@ -171,21 +173,21 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
     try {
       const response = await fetch('/api/payments/open-sales-orders?refresh=1', { cache: 'no-store' })
       const json = await response.json().catch(() => ({}))
-      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync open Zoho sales orders')
+      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not sync Zoho sales orders')
       const latest = Array.isArray(json.data?.orders) ? json.data.orders : []
-      setOrders(latest); setOrdersLoaded(true); setSelectedOrderNumber(''); setSalesOrderNumber(''); setCustomerName('')
-      setSyncMessage(`Synced ${latest.length} open Zoho sales order${latest.length === 1 ? '' : 's'}.`)
+      setOrders(latest); setOrdersLoaded(true); setSelectedOrderNumber(''); setSelectedOrder(null); setSalesOrderNumber(''); setCustomerName('')
+      setSyncMessage(`Synced ${latest.length} Zoho sales order${latest.length === 1 ? '' : 's'}.`)
       setSuggestionsOpen(open)
     } catch (reason) {
       setOrders([]); setOrdersLoaded(true)
-      setError(reason instanceof Error ? reason.message : 'Could not sync open Zoho sales orders')
+      setError(reason instanceof Error ? reason.message : 'Could not sync Zoho sales orders')
     } finally { setSyncing(false) }
   }
 
   async function addPayment(event: React.FormEvent) {
     event.preventDefault()
     const amount = Number(paymentAmount)
-    if (!selectedOrderNumber || selectedOrderNumber !== salesOrderNumber) { setError('Select an open sales order from the suggestions.'); return }
+    if (!selectedOrder || !selectedOrderNumber || selectedOrderNumber !== salesOrderNumber) { setError('Select a sales order from the suggestions.'); return }
     if (!Number.isFinite(amount) || amount <= 0) { setError('Enter a valid payment amount greater than zero.'); return }
     if (!addedBy) { setError('Select who added the payment.'); return }
     if (files.length < 1 || files.length > 10) { setError('Attach between 1 and 10 payment proofs.'); return }
@@ -194,7 +196,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
       const attachments: { key: string; name: string }[] = []
       const uploadOne = async (file: File) => { const targetResponse = await fetch('/api/payments/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: file.name, type: file.type, size: file.size, salesOrderNumber }) }); const targetJson = await targetResponse.json().catch(() => ({})); if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'Could not prepare upload'); const uploadResponse = await fetch(targetJson.data.uploadUrl, { method: 'PUT', headers: { 'content-type': targetJson.data.uploadContentType }, body: file }).catch(() => null); if (!uploadResponse?.ok) throw new Error(`Upload failed for ${file.name}`); attachments.push({ key: targetJson.data.key, name: file.name }) }
       for (let index = 0; index < files.length; index += 3) await Promise.all(files.slice(index, index + 3).map(uploadOne))
-      const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ customerName, salesOrderNumber, paymentAmount: amount, paymentMode, addedBy, attachments, remarks }) })
+      const response = await fetch('/api/payments', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ salesOrderId: selectedOrder.id, customerName, salesOrderNumber, paymentAmount: amount, paymentMode, addedBy, attachments, remarks }) })
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok) throw new Error(json.error || 'Could not add payment')
       setPayments((items) => sortPayments([json.data.payment, ...items]))
@@ -228,7 +230,7 @@ export function PaymentsClient({ initialPayments, userRole }: { initialPayments:
     </div>
     {isAdmin && open && <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="add-payment-title"><section className="order-modal card payment-modal"><div className="modal-head"><div><p className="eyebrow">New record</p><h1 id="add-payment-title">Add Payment</h1></div><button className="drawer-close" type="button" aria-label="Close" disabled={busy} onClick={closePaymentForm}>×</button></div>
       <form className="payment-form" onSubmit={addPayment}>
-        <label>Sales Order Number<div className="payment-order-combobox"><input required autoFocus role="combobox" autoComplete="off" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="payment-order-options" aria-activedescendant={suggestionsOpen && matchingOrders[activeSuggestion] ? `payment-order-${matchingOrders[activeSuggestion].id}` : undefined} value={salesOrderNumber} onFocus={() => setSuggestionsOpen(true)} onBlur={() => setTimeout(() => setSuggestionsOpen(false), 100)} onKeyDown={handleOrderKeyDown} onChange={(event) => { setSalesOrderNumber(event.target.value); setSelectedOrderNumber(''); setCustomerName(''); setActiveSuggestion(0); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" />{suggestionsOpen && <div className="payment-order-options" id="payment-order-options" role="listbox">{ordersLoading ? <div className="payment-order-message">Loading open Zoho orders…</div> : matchingOrders.length ? matchingOrders.map((order, index) => <button id={`payment-order-${order.id}`} role="option" aria-selected={index === activeSuggestion} className={index === activeSuggestion ? 'active' : ''} type="button" key={order.id} onMouseDown={(event) => event.preventDefault()} onClick={() => selectOrder(order)}><strong>{order.salesOrderNumber}</strong><span>{order.customerName}</span></button>) : <div className="payment-order-message">No matching open sales orders</div>}</div>}</div></label>
+        <label>Sales Order Number<div className="payment-order-combobox"><div className="payment-order-input-row"><input required autoFocus role="combobox" autoComplete="off" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="payment-order-options" aria-activedescendant={suggestionsOpen && matchingOrders[activeSuggestion] ? `payment-order-${matchingOrders[activeSuggestion].id}` : undefined} value={salesOrderNumber} onFocus={() => setSuggestionsOpen(true)} onBlur={() => setTimeout(() => setSuggestionsOpen(false), 100)} onKeyDown={handleOrderKeyDown} onChange={(event) => { setSalesOrderNumber(event.target.value); setSelectedOrderNumber(''); setSelectedOrder(null); setCustomerName(''); setActiveSuggestion(0); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" />{selectedOrder && <span className={`payment-order-chip ${selectedOrder.status === 'Closed' ? 'closed' : selectedOrder.status === 'Open' ? 'open' : 'unknown'}`} title={selectedOrder.rawStatus || selectedOrder.status}>{selectedOrder.status}</span>}</div>{suggestionsOpen && <div className="payment-order-options" id="payment-order-options" role="listbox">{ordersLoading ? <div className="payment-order-message">Loading Zoho orders…</div> : matchingOrders.length ? matchingOrders.map((order, index) => <button id={`payment-order-${order.id}`} role="option" aria-selected={index === activeSuggestion} className={index === activeSuggestion ? 'active' : ''} type="button" key={order.id} onMouseDown={(event) => event.preventDefault()} onClick={() => selectOrder(order)}><span><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></span><em className={`payment-order-chip ${order.status === 'Closed' ? 'closed' : order.status === 'Open' ? 'open' : 'unknown'}`} title={order.rawStatus || order.status}>{order.status}</em></button>) : <div className="payment-order-message">No matching sales orders</div>}</div>}</div></label>
         <label>Customer Name<input required readOnly value={customerName} placeholder="Filled after selecting a sales order" /></label>
         <label>Payment Amount (₹)<input required type="text" inputMode="decimal" pattern="[0-9]+(?:\.[0-9]{1,2})?" value={paymentAmount} onChange={(event) => { const nextAmount = event.target.value; if (/^\d*(?:\.\d{0,2})?$/.test(nextAmount)) setPaymentAmount(nextAmount) }} placeholder="Enter payment amount" /></label>
         <label>Payment Mode<select required value={paymentMode} onChange={(event) => setPaymentMode(event.target.value as PaymentMode)}>{PAYMENT_MODES.map((mode) => <option key={mode} value={mode}>{mode}</option>)}</select></label>

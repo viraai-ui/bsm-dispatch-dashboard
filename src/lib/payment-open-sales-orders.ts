@@ -1,17 +1,19 @@
 import type { Order } from '@/types/domain'
-import { isOpenZohoSalesOrder } from './open-sales-orders'
-import { readSyncedOrdersStore } from './synced-orders'
 import { fetchZohoPaymentOpenOrders } from './zoho'
+import { paymentOrderStatus, type PaymentOrderDisplayStatus } from './payment-order-lookup'
 
-export type PaymentOrderSuggestion = Pick<Order, 'id' | 'salesOrderNumber' | 'customerName' | 'status'>
+export type PaymentOrderSuggestion = Pick<Order, 'id' | 'salesOrderNumber' | 'customerName'> & { status: PaymentOrderDisplayStatus; rawStatus: string }
 
 export function toPaymentOrderSuggestions(orders: Order[]): PaymentOrderSuggestion[] {
-  return orders.filter(isOpenZohoSalesOrder).map(({ id, salesOrderNumber, customerName, status }) => ({ id, salesOrderNumber, customerName, status }))
+  return orders.filter((order) => Boolean(order?.id && order.salesOrderNumber) && !String(order.id).startsWith('manual-serial-') && !String(order.salesOrderNumber).startsWith('SERIAL-'))
+    .map(({ id, salesOrderNumber, customerName, status }) => ({ id, salesOrderNumber, customerName, rawStatus: String(status || ''), status: paymentOrderStatus(status) }))
 }
 
-/** Read-only payment lookup: it never reads or writes workflow/media/payment state. */
+/** Complete, read-only payment lookup; never reads or writes operational workflow state. */
 export async function listPaymentOpenSalesOrders(refresh = false) {
-  if (refresh) return toPaymentOrderSuggestions(await fetchZohoPaymentOpenOrders())
-  const store = await readSyncedOrdersStore()
-  return toPaymentOrderSuggestions(store.orderIds.map((id) => store.orders[id]).filter((order): order is Order => Boolean(order)))
+  // Legacy export name is retained for route compatibility. The operational
+  // synced store intentionally excludes terminal orders, so payment lookup must
+  // use Zoho's complete newest-first feed.
+  void refresh
+  return toPaymentOrderSuggestions(await fetchZohoPaymentOpenOrders())
 }

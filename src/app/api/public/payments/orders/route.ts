@@ -14,8 +14,10 @@ export async function GET(request: Request) {
   try {
     // Deliberately uses only the dedicated read-only payment lookup; no state is persisted.
     const refresh = new URL(request.url).searchParams.get('refresh') === '1'
-    const orders = (await listPaymentOpenSalesOrders(refresh)).map(({ id, salesOrderNumber, customerName }) => ({ id, salesOrderNumber, customerName }))
-    return publicApiHeaders(apiOk({ orders, submissionToken: issueSubmissionToken() }))
+    const orders = (await listPaymentOpenSalesOrders(refresh)).map(({ id, salesOrderNumber, customerName, status, rawStatus }) => ({ id, salesOrderNumber, customerName, status, rawStatus }))
+    const response = apiOk({ orders, submissionToken: issueSubmissionToken() })
+    response.headers.set('Cache-Control', 'no-store, max-age=0')
+    return publicApiHeaders(response)
   } catch (error) {
     return publicApiHeaders(apiError(error instanceof Error ? error.message : 'Could not load sales orders', 502))
   }

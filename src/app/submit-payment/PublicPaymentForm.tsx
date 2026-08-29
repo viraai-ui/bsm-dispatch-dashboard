@@ -6,7 +6,7 @@ import { normalizePaymentScreenshotFile } from '@/lib/payment-screenshot'
 import { PaymentProofViewer, type ViewerProof } from '@/components/PaymentProofViewer'
 import { PAYMENT_ADDED_BY_USERS, type PaymentAddedBy } from '@/lib/payments'
 
-type Order = { id: string; salesOrderNumber: string; customerName: string }
+type Order = { id: string; salesOrderNumber: string; customerName: string; status: 'Open' | 'Closed' | 'Status unknown'; rawStatus: string }
 type Receipt = { id: string; salesOrderNumber: string; paymentAmount: number; status: 'Pending' }
 type Payment = { id: string; date: string; salesOrderNumber: string; customerName: string; paymentMode: string | null; paymentAmount: number | null; status: 'Pending' | 'Payment Received'; addedBy: PaymentAddedBy | null; hasScreenshot: boolean; proofUrl: string | null; remarks: string | null; attachments: ViewerProof[] }
 type Api<T> = { ok: boolean; data?: T; error?: string }
@@ -135,10 +135,10 @@ export default function PublicPaymentForm() {
     try {
       const response = await fetch(`/api/public/payments/orders${force ? '?refresh=1' : ''}`, { cache: 'no-store', signal: controller.signal })
       const json: Api<{ orders: Order[]; submissionToken: string }> = await response.json()
-      if (!response.ok || !json.data) throw new Error(json.error || 'Could not load open sales orders')
+      if (!response.ok || !json.data) throw new Error(json.error || 'Could not load sales orders')
       if (generation !== requestGeneration.current || controller.signal.aborted) return
       setOrders(json.data.orders); setToken(json.data.submissionToken); loadedAt.current = Date.now()
-      if (force) setSyncMessage(`Synced ${json.data.orders.length} open sales orders`)
+      if (force) setSyncMessage(`Synced ${json.data.orders.length} Zoho sales orders`)
     } catch (cause) {
       if (generation !== requestGeneration.current) return
       setOrders([]); setSyncMessage(''); setError(cause instanceof Error ? cause.message : 'Could not load form')
@@ -150,8 +150,8 @@ export default function PublicPaymentForm() {
     window.addEventListener('popstate', back); return () => window.removeEventListener('popstate', back)
   }, [resetPaymentForm])
   const matches = useMemo(() => {
-    const needle = query.toLowerCase().trim()
-    return orders.filter((order) => !needle || `${order.salesOrderNumber} ${order.customerName}`.toLowerCase().includes(needle))
+    const needle = query.toLocaleLowerCase().replace(/\s+/g, '')
+    return orders.filter((order) => !needle || `${order.salesOrderNumber}${order.customerName}`.toLocaleLowerCase().replace(/\s+/g, '').includes(needle)).slice(0, needle ? 50 : 10)
   }, [orders, query])
   function choose(order: Order) { setSelected(order); setQuery(order.salesOrderNumber); setSuggestionsOpen(false); setError('') }
   function showSuggestions() { setSuggestionsOpen(true); if (!orders.length || Date.now() - loadedAt.current > 60_000) void loadForm(true) }
@@ -178,7 +178,7 @@ export default function PublicPaymentForm() {
         uploaded.push({ key: targetJson.data.key, name: file.name })
       }
       for (let index = 0; index < files.length; index += 3) await Promise.all(files.slice(index, index + 3).map(uploadOne))
-      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, paymentAmount: amount, paymentMode: mode, addedBy, attachments: uploaded, remarks, submissionToken: token, website: '' }) })
+      const response = await fetch('/api/public/payments', { method: 'POST', headers: { 'content-type': 'application/json', 'idempotency-key': crypto.randomUUID().replaceAll('-', '') }, body: JSON.stringify({ salesOrderId: selected.id, salesOrderNumber: selected.salesOrderNumber, customerName: selected.customerName, paymentAmount: amount, paymentMode: mode, addedBy, attachments: uploaded, remarks, submissionToken: token, website: '' }) })
       const json: Api<{ receipt: Receipt; deleteToken?: string }> = await response.json()
       if (!response.ok || !json.data) throw new Error(json.error || 'Payment could not be submitted')
       if (json.data.deleteToken) {
@@ -215,7 +215,7 @@ export default function PublicPaymentForm() {
 
   return <main className={styles.shell}>
     <section className={styles.page}>
-      <header className={styles.header}><div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Submit customer payments and wait for approval.</p></div><div className={styles.headerActions}><button className={styles.sync} type="button" title="Sync open sales orders" aria-label="Sync open sales orders" disabled={syncing} onClick={() => void loadForm(true)}><svg className={syncing ? styles.spinning : ''} viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5M4 18v-5h5M6.1 9A7 7 0 0 1 18 6.5L20 11M4 13l2 4.5A7 7 0 0 0 17.9 15"/></svg></button><button className={styles.add} type="button" onClick={openPaymentForm}>+ Add Payment</button></div></header>
+      <header className={styles.header}><div><p className={styles.eyebrow}>Finance</p><h1>Payments</h1><p className={styles.lead}>Submit customer payments and wait for approval.</p></div><div className={styles.headerActions}><button className={styles.sync} type="button" title="Sync sales orders" aria-label="Sync sales orders" disabled={syncing} onClick={() => void loadForm(true)}><svg className={syncing ? styles.spinning : ''} viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6v5h-5M4 18v-5h5M6.1 9A7 7 0 0 1 18 6.5L20 11M4 13l2 4.5A7 7 0 0 0 17.9 15"/></svg></button><button className={styles.add} type="button" onClick={openPaymentForm}>+ Add Payment</button></div></header>
       {(syncMessage || (!open && error)) && <p className={error ? styles.syncError : styles.syncSuccess} role="status">{error || syncMessage}</p>}
       <section className={styles.listCard} aria-live="polite">
         {listReady && payments.length === 0 ? <div className={styles.empty}><strong>No payments added yet</strong><span>New payment records will appear here.</span></div> : <>
@@ -230,7 +230,7 @@ export default function PublicPaymentForm() {
       {dragActive && <div className={styles.dropOverlay} role="status" aria-live="assertive"><div className={styles.dropPrompt}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg><strong>Drop payment proof</strong><span>Image or PDF • Max 10 MB</span></div></div>}
       <span className={styles.srOnly} role="status" aria-live="polite">{fileAnnouncement}</span>
       {receipt ? <div className={styles.success}><button className={styles.close} onClick={close} aria-label="Close">×</button><div className={styles.successIcon}>✓</div><h2>Payment submitted</h2><p>Your payment is safely queued for approval.</p><dl><div><dt>Sales Order</dt><dd>{receipt.salesOrderNumber}</dd></div><div><dt>Amount</dt><dd>{money(receipt.paymentAmount)}</dd></div><div><dt>Status</dt><dd><span className={styles.pending}>Pending</span></dd></div></dl><button className={styles.add} onClick={again}>Submit another payment</button></div> : <><header className={styles.modalHead}><div><p className={styles.eyebrow}>New record</p><h2 id="add-payment-title">Add Payment</h2></div><button className={styles.close} type="button" onClick={close} disabled={busy} aria-label="Close">×</button></header><form onSubmit={submit} noValidate>
-        <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value.toUpperCase()); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No eligible open sales orders.</p>}</div>}</div>
+        <label>Sales Order Number<span>*</span></label><div className={styles.searchWrap}><div className={styles.orderInputRow}><input role="combobox" aria-expanded={suggestionsOpen} aria-controls="public-payment-order-options" value={query} onFocus={showSuggestions} onClick={showSuggestions} onChange={(e) => { setQuery(e.target.value); setSelected(null); setSuggestionsOpen(true) }} placeholder="Search SO number or customer" autoComplete="off" required />{selected && <span className={`${styles.orderStatus} ${selected.status === 'Closed' ? styles.orderClosed : selected.status === 'Open' ? styles.orderOpen : styles.orderUnknown}`} title={selected.rawStatus || selected.status}>{selected.status}</span>}</div>{suggestionsOpen && !selected && <div id="public-payment-order-options" className={styles.suggestions}>{ordersLoading ? <p>Loading sales orders…</p> : matches.length ? matches.map((order) => <button type="button" key={order.id} onClick={() => choose(order)}><span><strong>{order.salesOrderNumber}</strong><small>{order.customerName}</small></span><em className={`${styles.orderStatus} ${order.status === 'Closed' ? styles.orderClosed : order.status === 'Open' ? styles.orderOpen : styles.orderUnknown}`} title={order.rawStatus || order.status}>{order.status}</em></button>) : error ? <p>Could not load orders. <button type="button" onClick={() => void loadForm(true)}>Retry</button></p> : <p>No matching sales orders.</p>}</div>}</div>
         <label>Customer Name</label><div className={`${styles.readonly} ${selected ? styles.filled : ''}`}>{selected?.customerName || 'Filled after selecting a sales order'}</div>
         <label htmlFor="amount">Payment Amount<span>*</span></label><div className={styles.amount}><b>₹</b><input id="amount" type="text" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, ''))} placeholder="0.00" /></div>
         <label htmlFor="mode">Payment Mode<span>*</span></label><select id="mode" value={mode} onChange={(e) => setMode(e.target.value)}><option value="">Select payment mode</option>{['Bank Transfer', 'UPI', 'Cash', 'Credit Card', 'Debit Card', 'Other'].map((item) => <option key={item}>{item}</option>)}</select>

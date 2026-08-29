@@ -194,6 +194,13 @@ function mapOrderSummary(order: any): Order {
   }
 }
 
+function mapPaymentOrderSummary(order: any): Order {
+  const rawStatus = [order.status, order.current_sub_status, order.order_status, order.salesorder_status, order.shipment_status, order.invoiced_status]
+    .map((value) => String(value || '').trim()).find((value) => /closed|void|cancelled|canceled|shipped|invoiced/i.test(value))
+    || String(order.status || order.current_sub_status || order.order_status || order.salesorder_status || order.shipment_status || order.invoiced_status || '')
+  return { ...mapOrderSummary(order), status: rawStatus as Order['status'] }
+}
+
 function mapOrder(order: any): Order {
   const lineItems = mapLineItems(order)
   const machines = buildUnits(order, lineItems)
@@ -243,7 +250,7 @@ export async function fetchZohoPaymentOpenOrders(): Promise<Order[]> {
     if (page === 500) throw new Error('Zoho pagination limit reached before completion')
   }
   const seen = new Set<string>()
-  return summaries.map(mapOrderSummary).filter((order) => {
+  return summaries.map(mapPaymentOrderSummary).filter((order) => {
     if (!order.id || seen.has(order.id)) return false
     seen.add(order.id)
     return true

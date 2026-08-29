@@ -5,6 +5,7 @@ import { notifyAccountsOfNewPayment } from '@/lib/payment-push'
 import { createPaymentNotifications } from '@/lib/payment-notifications'
 import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, PAYMENT_PROOF_MIME_TYPES } from '@/lib/payment-screenshot'
+import { listPaymentOpenSalesOrders } from '@/lib/payment-open-sales-orders'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -21,11 +22,11 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const auth = await requireUser(['Admin']); if (!auth.ok) return auth.response
-  const body = await request.json().catch(() => ({})); const customerName = text(body.customerName); const salesOrderNumber = text(body.salesOrderNumber)
+  const body = await request.json().catch(() => ({})); const customerName = text(body.customerName); const salesOrderNumber = text(body.salesOrderNumber); const salesOrderId = text(body.salesOrderId)
   const paymentAmount = Number(body.paymentAmount); const paymentMode = text(body.paymentMode) as PaymentMode; const remarks = text(body.remarks)
   const addedBy = body.addedBy
   const legacyKey = text(body.screenshotKey); const requested = Array.isArray(body.attachments) ? body.attachments : legacyKey ? [{ key: legacyKey, name: text(body.screenshotName) }] : []
-  if (!customerName || !salesOrderNumber) return apiError('Customer name and sales order number are required', 400)
+  if (!salesOrderId || !customerName || !salesOrderNumber) return apiError('Select a Zoho sales order', 400)
   if (!Number.isFinite(paymentAmount) || paymentAmount <= 0) return apiError('Payment amount must be greater than zero', 400)
   if (!PAYMENT_MODES.includes(paymentMode)) return apiError('Invalid payment mode', 400)
   if (!isPaymentAddedBy(addedBy)) return apiError('Select a valid user who added the payment', 400)
@@ -33,6 +34,8 @@ export async function POST(request: Request) {
   if (requested.length < 1 || requested.length > 10) return apiError('Between 1 and 10 payment proofs are required', 400)
   const attachments: PaymentAttachment[] = []
   try {
+    const authoritativeOrder = (await listPaymentOpenSalesOrders(true)).find((order) => order.id === salesOrderId && order.salesOrderNumber === salesOrderNumber && order.customerName === customerName)
+    if (!authoritativeOrder) return apiError('Sales order details do not match Zoho. Please select it again.', 400)
     const seen = new Set<string>()
     for (const item of requested) {
       const key = text(item?.key); if (!key || seen.has(key)) return apiError('Invalid or duplicate payment proof', 400); seen.add(key)
