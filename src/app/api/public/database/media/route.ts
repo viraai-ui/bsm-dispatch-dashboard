@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { loadDatabaseOrders } from '@/lib/database-orders'
-import { readMediaProofStore } from '@/lib/media-proof'
-import { readShipmentStore } from '@/lib/ready-to-ship'
-import { capabilityIsReferenced, isAllowedGithubUrl, verifyPublicMediaCapability } from '@/lib/public-database-media'
+import { verifyImmutablePublicMediaCapability } from '@/lib/public-database-media'
+import { getPublicDatabaseSnapshot } from '@/lib/public-database-snapshot'
 import { createR2HeadUrl, createR2ViewUrl } from '@/lib/r2'
 import { getZohoAccessToken } from '@/lib/zoho'
 
@@ -20,30 +18,29 @@ export async function HEAD(request: NextRequest) { return resolveMedia(request) 
 async function resolveMedia(request: NextRequest) {
   if (!withinRateLimit(request)) return new NextResponse('Too many media requests. Please try again shortly.', { status: 429, headers: { ...PRIVATE_HEADERS, 'Retry-After': '60' } })
   const token = request.nextUrl.searchParams.get('token') || ''
-  const capability = verifyPublicMediaCapability(token)
+  const capability = verifyImmutablePublicMediaCapability(token)
   if (!capability) return new NextResponse('This media link is invalid or expired. Refresh the Database page and try again.', { status: 403, headers: PRIVATE_HEADERS })
 
-  const [{ databaseOrders }, packing, loading, shipmentStore] = await Promise.all([
-    loadDatabaseOrders(), readMediaProofStore('packing'), readMediaProofStore('loading'), readShipmentStore(),
-  ])
-  if (!databaseOrders.some((order) => order.id === capability.orderId) || !capabilityIsReferenced(capability, packing.records, loading.records, shipmentStore.shipments)) {
+  const snapshot = await getPublicDatabaseSnapshot()
+  const reference = snapshot.media[capability.mediaRefId]
+  if (snapshot.snapshotVersion !== capability.snapshotVersion || !reference || reference.orderId !== capability.orderId) {
     return new NextResponse('This attachment is no longer available on the public Database record.', { status: 404, headers: PRIVATE_HEADERS })
   }
 
-  if (capability.source === 'r2') {
-    const signedUrl = request.method === 'HEAD' ? createR2HeadUrl(capability.value, 120) : createR2ViewUrl(capability.value, 120)
+  if (reference.source === 'r2') {
+    const signedUrl = request.method === 'HEAD' ? createR2HeadUrl(reference.value, 120) : createR2ViewUrl(reference.value, 120)
     const response = NextResponse.redirect(signedUrl, 302)
     for (const [key, value] of Object.entries(PRIVATE_HEADERS)) response.headers.set(key, value)
     return response
   }
-  if (capability.source === 'github' && isAllowedGithubUrl(capability.value)) {
-    const response = NextResponse.redirect(capability.value, 302)
+  if (reference.source === 'github') {
+    const response = NextResponse.redirect(reference.value, 302)
     for (const [key, value] of Object.entries(PRIVATE_HEADERS)) response.headers.set(key, value)
     return response
   }
 
   const tokenValue = await getZohoAccessToken()
-  const upstream = await fetch(`${zohoApiDomain()}/workdrive/api/v1/download/${encodeURIComponent(capability.value)}`, {
+  const upstream = await fetch(`${zohoApiDomain()}/workdrive/api/v1/download/${encodeURIComponent(reference.value)}`, {
     method: request.method === 'HEAD' ? 'HEAD' : 'GET',
     headers: {
       Authorization: `Zoho-oauthtoken ${tokenValue}`,

@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';import { getPublicDatabaseSnapshot } from '@/lib/public-database-snapshot'
+export async function GET(){try{const s=await getPublicDatabaseSnapshot();return NextResponse.json({ok:true,count:s.rows.length,mediaCount:Object.keys(s.media).length,snapshotVersion:s.snapshotVersion,generatedAt:s.generatedAt,ageSeconds:Math.floor((Date.now()-Date.parse(s.generatedAt))/1000),deployment:process.env.VERCEL_GIT_COMMIT_SHA?.slice(0,12)||'local'})}catch(e){return NextResponse.json({ok:false,error:'snapshot_unavailable'},{status:503})}}

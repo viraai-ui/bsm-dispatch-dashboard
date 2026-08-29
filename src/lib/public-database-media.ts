@@ -13,6 +13,21 @@ export type PublicMediaCapability = {
 }
 
 const CAPABILITY_TTL_SECONDS = 10 * 60
+const IMMUTABLE_CAPABILITY_TTL_SECONDS = 60 * 60
+
+export type ImmutablePublicMediaCapability = { v: 2; snapshotVersion: string; orderId: string; mediaRefId: string; exp: number }
+
+export function signImmutablePublicMediaCapability(input: Omit<ImmutablePublicMediaCapability, 'v'|'exp'>, now=Date.now()) {
+  const value: ImmutablePublicMediaCapability = { v:2, ...input, exp:Math.floor(now/1000)+IMMUTABLE_CAPABILITY_TTL_SECONDS }
+  const payload=Buffer.from(JSON.stringify(value)).toString('base64url')
+  return `${payload}.${signature(payload)}`
+}
+
+export function verifyImmutablePublicMediaCapability(token:string, now=Date.now()):ImmutablePublicMediaCapability|null {
+  const [payload,supplied,extra]=token.split('.'); if(!payload||!supplied||extra)return null
+  const expected=signature(payload); if(supplied.length!==expected.length||!crypto.timingSafeEqual(Buffer.from(supplied),Buffer.from(expected)))return null
+  try { const v=JSON.parse(Buffer.from(payload,'base64url').toString()) as ImmutablePublicMediaCapability; return v.v===2&&Boolean(v.snapshotVersion&&v.orderId&&v.mediaRefId)&&v.exp>=Math.floor(now/1000)?v:null } catch{return null}
+}
 
 function secret() {
   const value = process.env.PUBLIC_DATABASE_MEDIA_SECRET || process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || process.env.R2_SECRET_ACCESS_KEY || process.env.GITHUB_TOKEN

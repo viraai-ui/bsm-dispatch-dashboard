@@ -13,6 +13,7 @@ assert.match(css, /\.database-filter-wrap select\s*\{[^}]*min-height:\s*44px;[^}
 assert.match(css, /\.database-filter-wrap select option\s*\{[^}]*font-weight:\s*400;/)
 assert.match(component, /className="database-filter-wrap"/)
 assert.match(databasePage, /<DatabaseClient/)
-assert.match(publicPage, /<DatabaseClient/)
+assert.match(publicPage, /<PublicDatabaseClient/)
+assert.doesNotMatch(publicPage, /orders=|mediaRecords=|loadDatabaseOrders/)
 
 console.log('database filter UI regression checks passed')
