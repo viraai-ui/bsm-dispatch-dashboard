@@ -20131,11 +20131,13 @@
           "qrToken": "26271083",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T11:49:02.710Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-29T11:49:10.315Z",
           "processedAt": "2026-08-29T11:50:33.161Z",
           "dispatchNote": "local",
-          "vendor": "Sunrise"
+          "vendor": "Sunrise",
+          "zohoBackupLastAttemptAt": "2026-08-29T12:00:32.341Z",
+          "zohoBackupSyncedAt": "2026-08-29T12:00:32.341Z"
         },
         "1154219000036112004-1154219000036112007-2": {
           "machineUnitId": "1154219000036112004-1154219000036112007-2",
@@ -20144,11 +20146,13 @@
           "qrToken": "26271084",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T11:49:02.710Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-29T11:49:10.315Z",
           "processedAt": "2026-08-29T11:50:33.161Z",
           "dispatchNote": "local",
-          "vendor": "Sunrise"
+          "vendor": "Sunrise",
+          "zohoBackupLastAttemptAt": "2026-08-29T12:00:32.341Z",
+          "zohoBackupSyncedAt": "2026-08-29T12:00:32.341Z"
         }
       }
     }
