@@ -19780,7 +19780,9 @@
     "1154219000036162006": {
       "salesOrderId": "1154219000036162006",
       "salesOrderNumber": "SO-07840",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-29T10:07:59.639Z",
       "processedOrder": {
         "id": "1154219000036162006",
         "zohoSalesOrderId": "1154219000036162006",
@@ -19808,8 +19810,8 @@
           {
             "id": "1154219000036162006-1154219000036162009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271079",
+            "qrToken": "26271079",
             "orderId": "1154219000036162006",
             "lineItemId": "1154219000036162009",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -19817,14 +19819,17 @@
             "customerName": "RAMESH UPPER",
             "salesOrderNumber": "SO-07840",
             "deliveryDate": "2026-08-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -19837,7 +19842,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T10:06:19.998Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-29T10:06:27.680Z"
+          "zohoBackupQueuedAt": "2026-08-29T10:06:27.680Z",
+          "processedAt": "2026-08-29T10:07:59.639Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
