@@ -19972,7 +19972,9 @@
     "1154219000036164006": {
       "salesOrderId": "1154219000036164006",
       "salesOrderNumber": "SO-07843",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-29T11:29:21.949Z",
       "processedOrder": {
         "id": "1154219000036164006",
         "zohoSalesOrderId": "1154219000036164006",
@@ -20000,8 +20002,8 @@
           {
             "id": "1154219000036164006-1154219000036164009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271082",
+            "qrToken": "26271082",
             "orderId": "1154219000036164006",
             "lineItemId": "1154219000036164009",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -20009,14 +20011,17 @@
             "customerName": "A.P. Footwear(Bahadurgarh)",
             "salesOrderNumber": "SO-07843",
             "deliveryDate": "2026-08-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-29",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20029,7 +20034,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-29T11:27:48.431Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-29T11:27:56.002Z"
+          "zohoBackupQueuedAt": "2026-08-29T11:27:56.002Z",
+          "processedAt": "2026-08-29T11:29:21.949Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         }
       }
     }
