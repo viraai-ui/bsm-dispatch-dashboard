@@ -4710,6 +4710,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036164006": {
+      "id": "ship-1788006208815-akjrm",
+      "itemId": "1154219000036164006",
+      "orderId": "1154219000036164006",
+      "machineId": "1154219000036164006-1154219000036164009-1",
+      "salesOrderNumber": "SO-07843",
+      "customerName": "A.P. Footwear(Bahadurgarh)",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL04EC3957",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-29",
+      "notes": "",
+      "shippedAt": "2026-08-29T12:23:28.815Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
