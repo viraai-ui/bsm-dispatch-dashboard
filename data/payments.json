@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "NITCO SEWING MACHINE COMPANY",
+      "salesOrderNumber": "SO-07841",
+      "paymentAmount": 90300,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Manisha",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07841/2026-08-29/1788006623502-cd2898f1-9592-42cf-ac91-fcbedd4afdb7-InitiateSingleEntryPaymentSummaryUX529-08-2026-1.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07841%2F2026-08-29%2F1788006623502-cd2898f1-9592-42cf-ac91-fcbedd4afdb7-InitiateSingleEntryPaymentSummaryUX529-08-2026-1.pdf",
+          "name": "InitiateSingleEntryPaymentSummaryUX529-08-2026 (1).pdf",
+          "contentType": "application/pdf",
+          "size": 79892
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07841/2026-08-29/1788006623502-cd2898f1-9592-42cf-ac91-fcbedd4afdb7-InitiateSingleEntryPaymentSummaryUX529-08-2026-1.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07841%2F2026-08-29%2F1788006623502-cd2898f1-9592-42cf-ac91-fcbedd4afdb7-InitiateSingleEntryPaymentSummaryUX529-08-2026-1.pdf",
+      "screenshotName": "InitiateSingleEntryPaymentSummaryUX529-08-2026 (1).pdf",
+      "publicDeleteTokenHash": "9cfb89f132b4b492e0b3e90b087c9fb1462c369b959bf6223abe02ccc397c66e",
+      "id": "payment-9f4ba536-f1cf-4931-bfe5-35b19621f94e",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "5325b84ce50143ddb5d79c3337856753",
+      "createdAt": "2026-08-29T12:30:24.844Z",
+      "updatedAt": "2026-08-29T12:30:24.844Z"
+    },
+    {
       "customerName": "A.P. Footwear(Bahadurgarh)",
       "salesOrderNumber": "SO-07843",
       "paymentAmount": 49560,
