@@ -4648,6 +4648,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035997009": {
+      "id": "ship-1787992280635-3aana",
+      "itemId": "1154219000035997009",
+      "orderId": "1154219000035997009",
+      "machineId": "1154219000035997009-1154219000035997012-1",
+      "salesOrderNumber": "SO-07801",
+      "customerName": "Shiv Industries",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Suraj Goods transport",
+      "transporterPhone": "9300078895",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-29",
+      "notes": "",
+      "shippedAt": "2026-08-29T08:31:20.635Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
