@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-1a130cb5-0360-44f7-a91c-e7a6ba4101c3",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-d7334788-1d9a-49d7-bce8-3f6318733436",
+      "salesOrderNumber": "SO-07845",
+      "customerName": "SHREENATHJI RUBBER INDUSTRIES",
+      "paymentAmount": 349280,
+      "createdAt": "2026-08-30T15:28:48.542Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-73b78d90-5c95-4abf-8c48-52e658a15316",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-d7334788-1d9a-49d7-bce8-3f6318733436",
+      "salesOrderNumber": "SO-07845",
+      "customerName": "SHREENATHJI RUBBER INDUSTRIES",
+      "paymentAmount": 349280,
+      "createdAt": "2026-08-30T15:28:48.542Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-e6686406-7c3d-41ed-bb1c-86da694025f8",
       "type": "payment-created",
       "recipientUserId": "u-admin",
