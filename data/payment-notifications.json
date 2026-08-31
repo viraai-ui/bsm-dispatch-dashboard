@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-24375ef5-21a8-4a53-8420-ff7df03bde54",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-5704c30f-538c-4faa-8cb4-98a2b0794049",
+      "salesOrderNumber": "SO-07828",
+      "customerName": "GARWARE FULFLEX I PVT LTD",
+      "paymentAmount": 303480,
+      "createdAt": "2026-08-31T15:06:50.875Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-00b8f2af-4a89-468b-8dea-2efef3325dbb",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-5704c30f-538c-4faa-8cb4-98a2b0794049",
+      "salesOrderNumber": "SO-07828",
+      "customerName": "GARWARE FULFLEX I PVT LTD",
+      "paymentAmount": 303480,
+      "createdAt": "2026-08-31T15:06:50.875Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-31012298-92fa-4e55-a2ac-375afebdf0a4",
       "type": "payment-created",
       "recipientUserId": "u-admin",
