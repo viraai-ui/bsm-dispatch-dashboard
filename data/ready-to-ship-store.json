@@ -4933,6 +4933,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036281002": {
+      "id": "ship-1788165239057-5uwzt",
+      "itemId": "1154219000036281002",
+      "orderId": "1154219000036281002",
+      "machineId": "1154219000036281002-1154219000036281005-1",
+      "salesOrderNumber": "SO-07851",
+      "customerName": "IBS Safety India Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "",
+      "shippedAt": "2026-08-31T08:33:59.057Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
