@@ -197,53 +197,6 @@
         }
       ]
     },
-    "1154219000036193002": {
-      "id": "1154219000036193002",
-      "zohoSalesOrderId": "1154219000036193002",
-      "salesOrderNumber": "SO-07842",
-      "status": "open",
-      "customerName": "Silver Panacea",
-      "shippingAddress": "Plot No. 106, Sy No. 187, Plastic Park, Mankhal, Maheshwaram Mandal, Hyderabad, Rangareddy, Telangana, 501359",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036193005",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036193002-1154219000036193005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036193002",
-          "lineItemId": "1154219000036193005",
-          "itemName": "Thread Trimmer (Double Motor)",
-          "sku": "",
-          "customerName": "Silver Panacea",
-          "salesOrderNumber": "SO-07842",
-          "deliveryDate": "2026-08-29",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000036185001": {
       "id": "1154219000036185001",
       "zohoSalesOrderId": "1154219000036185001",
@@ -5331,53 +5284,6 @@
         }
       ]
     },
-    "1154219000035531015": {
-      "id": "1154219000035531015",
-      "zohoSalesOrderId": "1154219000035531015",
-      "salesOrderNumber": "SO-07703",
-      "status": "open",
-      "customerName": "T-MED TECHNOLOGIES PRIVATE LIMITED",
-      "shippingAddress": "PLOT NO A-15, T-MED TECHNOLOGIES PRIVATE LIMITED, SECTOR 56, SAS NAGAR MOHALI,, SAS Nagar, Punjab, 160055, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035531018",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035531015-1154219000035531018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035531015",
-          "lineItemId": "1154219000035531018",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "T-MED TECHNOLOGIES PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07703",
-          "deliveryDate": "2026-08-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000035500001": {
       "id": "1154219000035500001",
       "zohoSalesOrderId": "1154219000035500001",
@@ -7127,7 +7033,6 @@
     "1154219000036281017",
     "1154219000036296003",
     "1154219000036271001",
-    "1154219000036193002",
     "1154219000036185001",
     "1154219000036157003",
     "1154219000036137001",
@@ -7153,7 +7058,6 @@
     "1154219000035685001",
     "1154219000035527004",
     "1154219000035510018",
-    "1154219000035531015",
     "1154219000035500001",
     "1154219000035356001",
     "1154219000034750001",
@@ -7169,8 +7073,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T12:40:36.663Z",
-  "lastAttemptAt": "2026-08-31T12:58:44.798Z",
+  "lastSuccessfulSyncAt": "2026-08-31T12:58:55.637Z",
+  "lastAttemptAt": "2026-08-31T12:58:55.637Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
