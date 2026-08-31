@@ -14431,6 +14431,62 @@
       "machineIds": [
         "1154219000036281002-1154219000036281005-1"
       ]
+    },
+    "1154219000036294001": {
+      "completedAt": "2026-08-31T10:36:52.903Z",
+      "order": {
+        "id": "1154219000036294001",
+        "zohoSalesOrderId": "1154219000036294001",
+        "salesOrderNumber": "SO-07852",
+        "status": "open",
+        "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
+        "shippingAddress": "Plot no 8&9 ,GFloor, KH no 25/4 & 25/7, Laxmi park , Kamruddin Nagar, Nangloi, 110041, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036294004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036294001-1154219000036294004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271091",
+            "qrToken": "26271091",
+            "orderId": "1154219000036294001",
+            "lineItemId": "1154219000036294004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07852",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036294001-1154219000036294004-1"
+      ]
     }
   }
 }
