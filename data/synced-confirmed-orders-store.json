@@ -1,5 +1,30 @@
 {
   "orders": {
+    "1154219000036274004": {
+      "id": "1154219000036274004",
+      "zohoSalesOrderId": "1154219000036274004",
+      "salesOrderNumber": "SO-07848",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036274007",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 150,
+          "pendingQuantity": 150,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": []
+    },
     "1154219000036287001": {
       "id": "1154219000036287001",
       "zohoSalesOrderId": "1154219000036287001",
@@ -7367,6 +7392,7 @@
     }
   },
   "orderIds": [
+    "1154219000036274004",
     "1154219000036287001",
     "1154219000036260002",
     "1154219000036271001",
@@ -7416,8 +7442,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T05:40:41.345Z",
-  "lastAttemptAt": "2026-08-31T05:42:46.047Z",
+  "lastSuccessfulSyncAt": "2026-08-31T05:42:58.598Z",
+  "lastAttemptAt": "2026-08-31T05:42:58.598Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
