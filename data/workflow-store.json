@@ -20165,7 +20165,7 @@
       "salesOrderId": "1154219000036260002",
       "salesOrderNumber": "SO-07846",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-31T05:33:18.687Z",
       "processedOrder": {
         "id": "1154219000036260002",
@@ -20233,13 +20233,14 @@
           "zohoBackupLastAttemptAt": "2026-08-31T05:45:32.976Z",
           "zohoBackupSyncedAt": "2026-08-31T05:45:32.976Z"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000036287001": {
       "salesOrderId": "1154219000036287001",
       "salesOrderNumber": "SO-07847",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-31T05:36:34.004Z",
       "processedOrder": {
         "id": "1154219000036287001",
@@ -20307,7 +20308,8 @@
           "zohoBackupLastAttemptAt": "2026-08-31T05:45:32.976Z",
           "zohoBackupSyncedAt": "2026-08-31T05:45:32.976Z"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000036263131": {
       "salesOrderId": "1154219000036263131",
