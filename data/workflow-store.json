@@ -20807,11 +20807,13 @@
           "qrToken": "26271093",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T11:39:26.480Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-31T11:39:27.498Z",
           "processedAt": "2026-08-31T11:42:15.639Z",
           "dispatchNote": "wooden",
-          "vendor": "Ishu Traders"
+          "vendor": "Ishu Traders",
+          "zohoBackupLastAttemptAt": "2026-08-31T11:45:33.152Z",
+          "zohoBackupSyncedAt": "2026-08-31T11:45:33.152Z"
         }
       }
     }
