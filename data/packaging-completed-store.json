@@ -14112,6 +14112,63 @@
         "1154219000036112004-1154219000036112007-1",
         "1154219000036112004-1154219000036112007-2"
       ]
+    },
+    "1154219000036260002": {
+      "completedAt": "2026-08-31T06:45:03.391Z",
+      "order": {
+        "id": "1154219000036260002",
+        "zohoSalesOrderId": "1154219000036260002",
+        "salesOrderNumber": "SO-07846",
+        "status": "open",
+        "customerName": "BUSHRA ENTERPRISES",
+        "shippingAddress": "D-1,KH NO-325, GALI NO-1, NEHRU VIHAR, DAYAL PUR K-NAGAR, North East Delhi, Delhi, 110094",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036260005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036260002-1154219000036260005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271085",
+            "qrToken": "26271085",
+            "orderId": "1154219000036260002",
+            "lineItemId": "1154219000036260005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "BUSHRA ENTERPRISES",
+            "salesOrderNumber": "SO-07846",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000036260002-1154219000036260005-1"
+      ]
     }
   }
 }
