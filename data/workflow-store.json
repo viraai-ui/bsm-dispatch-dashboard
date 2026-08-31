@@ -20500,11 +20500,13 @@
           "qrToken": "26271089",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T06:27:26.441Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-31T06:27:27.052Z",
           "processedAt": "2026-08-31T06:29:29.815Z",
           "dispatchNote": "local",
-          "vendor": "S S Enterprises"
+          "vendor": "S S Enterprises",
+          "zohoBackupLastAttemptAt": "2026-08-31T06:30:33.133Z",
+          "zohoBackupSyncedAt": "2026-08-31T06:30:33.133Z"
         }
       },
       "dispatchSortOrder": 1
