@@ -19778,7 +19778,7 @@
           "zohoBackupSyncedAt": "2026-08-29T08:46:21.532Z"
         }
       },
-      "dispatchSortOrder": 5
+      "dispatchSortOrder": 4
     },
     "1154219000036162006": {
       "salesOrderId": "1154219000036162006",
@@ -20512,13 +20512,13 @@
           "zohoBackupSyncedAt": "2026-08-31T06:30:33.133Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000036281002": {
       "salesOrderId": "1154219000036281002",
       "salesOrderNumber": "SO-07851",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-31T06:54:04.132Z",
       "processedOrder": {
         "id": "1154219000036281002",
@@ -20586,7 +20586,8 @@
           "zohoBackupLastAttemptAt": "2026-08-31T07:01:21.239Z",
           "zohoBackupSyncedAt": "2026-08-31T07:01:21.239Z"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
