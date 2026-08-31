@@ -197,31 +197,6 @@
         }
       ]
     },
-    "1154219000036206001": {
-      "id": "1154219000036206001",
-      "zohoSalesOrderId": "1154219000036206001",
-      "salesOrderNumber": "SO-07844",
-      "status": "open",
-      "customerName": "Upright Luggage Industries",
-      "shippingAddress": "182/184, 1st Floor Pathe Bapurao Marg Next to Alfred Threatre, Girgaon, Mumbai, 400008, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-29",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036206004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 25,
-          "pendingQuantity": 25,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000036193002": {
       "id": "1154219000036193002",
       "zohoSalesOrderId": "1154219000036193002",
@@ -7324,7 +7299,6 @@
     "1154219000036281017",
     "1154219000036296003",
     "1154219000036271001",
-    "1154219000036206001",
     "1154219000036193002",
     "1154219000036185001",
     "1154219000036157003",
@@ -7368,8 +7342,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T12:01:32.806Z",
-  "lastAttemptAt": "2026-08-31T12:07:26.496Z",
+  "lastSuccessfulSyncAt": "2026-08-31T12:07:39.456Z",
+  "lastAttemptAt": "2026-08-31T12:07:39.456Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
