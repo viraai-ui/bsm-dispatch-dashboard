@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "P & M SAFETY PRODUCTS",
+      "salesOrderNumber": "SO-07853",
+      "paymentAmount": 16520,
+      "paymentMode": "UPI",
+      "addedBy": "Manisha",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07853/2026-08-31/1788174139603-2b6049f8-ca68-4377-9395-f0463cc4b0b3-WhatsApp-Image-2026-08-31-at-16.04.11.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07853%2F2026-08-31%2F1788174139603-2b6049f8-ca68-4377-9395-f0463cc4b0b3-WhatsApp-Image-2026-08-31-at-16.04.11.jpg",
+          "name": "WhatsApp Image 2026-08-31 at 16.04.11.jpeg",
+          "contentType": "image/jpeg",
+          "size": 78385
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07853/2026-08-31/1788174139603-2b6049f8-ca68-4377-9395-f0463cc4b0b3-WhatsApp-Image-2026-08-31-at-16.04.11.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07853%2F2026-08-31%2F1788174139603-2b6049f8-ca68-4377-9395-f0463cc4b0b3-WhatsApp-Image-2026-08-31-at-16.04.11.jpg",
+      "screenshotName": "WhatsApp Image 2026-08-31 at 16.04.11.jpeg",
+      "publicDeleteTokenHash": "b06ed8306acbeb0a4f22506ff61d5c67a2f564dcb9b1efec57c8078f6587687b",
+      "id": "payment-46673a7a-e625-4204-99d5-10aab6b682cf",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "493e242f3d844700ad148018f097745e",
+      "createdAt": "2026-08-31T11:02:21.471Z",
+      "updatedAt": "2026-08-31T11:02:21.471Z"
+    },
+    {
       "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
       "salesOrderNumber": "SO-07852",
       "paymentAmount": 51920,
