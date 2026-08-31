@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036281002": {
+      "id": "1154219000036281002",
+      "zohoSalesOrderId": "1154219000036281002",
+      "salesOrderNumber": "SO-07851",
+      "status": "open",
+      "customerName": "IBS Safety India Pvt Ltd",
+      "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036281005",
+          "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036281002-1154219000036281005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036281002",
+          "lineItemId": "1154219000036281005",
+          "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
+          "sku": "",
+          "customerName": "IBS Safety India Pvt Ltd",
+          "salesOrderNumber": "SO-07851",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036276002": {
       "id": "1154219000036276002",
       "zohoSalesOrderId": "1154219000036276002",
@@ -7492,6 +7539,7 @@
     }
   },
   "orderIds": [
+    "1154219000036281002",
     "1154219000036276002",
     "1154219000036263131",
     "1154219000036274004",
@@ -7543,8 +7591,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T06:40:41.644Z",
-  "lastAttemptAt": "2026-08-31T06:47:26.850Z",
+  "lastSuccessfulSyncAt": "2026-08-31T06:47:42.838Z",
+  "lastAttemptAt": "2026-08-31T06:47:42.838Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
