@@ -14487,6 +14487,63 @@
       "machineIds": [
         "1154219000036294001-1154219000036294004-1"
       ]
+    },
+    "1154219000036263889": {
+      "completedAt": "2026-08-31T10:52:26.104Z",
+      "order": {
+        "id": "1154219000036263889",
+        "zohoSalesOrderId": "1154219000036263889",
+        "salesOrderNumber": "SO-07853",
+        "status": "open",
+        "customerName": "P & M SAFETY PRODUCTS",
+        "shippingAddress": "PROP NO 187, DR. MUKHERJEE NAGAR, DELHI, North West Delhi, Delhi, 110009, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036263892",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036263889-1154219000036263892-1",
+            "unitNumber": 1,
+            "serialNumber": "26271092",
+            "qrToken": "26271092",
+            "orderId": "1154219000036263889",
+            "lineItemId": "1154219000036263892",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "P & M SAFETY PRODUCTS",
+            "salesOrderNumber": "SO-07853",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036263889-1154219000036263892-1"
+      ]
     }
   }
 }
