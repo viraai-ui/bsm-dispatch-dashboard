@@ -1,6 +1,33 @@
 {
   "payments": [
     {
+      "customerName": "GARWARE FULFLEX I PVT LTD",
+      "salesOrderNumber": "SO-07828",
+      "paymentAmount": 303480,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "remarks": "90% payment Received",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07828/2026-08-31/1788188806326-47ca133d-c74c-4411-8919-584a08332260-EFT9522026083120160000_3.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07828%2F2026-08-31%2F1788188806326-47ca133d-c74c-4411-8919-584a08332260-EFT9522026083120160000_3.pdf",
+          "name": "EFT9522026083120160000_3.pdf",
+          "contentType": "application/pdf",
+          "size": 40237
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07828/2026-08-31/1788188806326-47ca133d-c74c-4411-8919-584a08332260-EFT9522026083120160000_3.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07828%2F2026-08-31%2F1788188806326-47ca133d-c74c-4411-8919-584a08332260-EFT9522026083120160000_3.pdf",
+      "screenshotName": "EFT9522026083120160000_3.pdf",
+      "publicDeleteTokenHash": "8e96823d3a52e263d3f90b3b7bbdffc7b8b8ef70064adee422c50d2b55c2be7c",
+      "id": "payment-5704c30f-538c-4faa-8cb4-98a2b0794049",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "814afa81aa41446a99a43ad592b5a734",
+      "createdAt": "2026-08-31T15:06:49.177Z",
+      "updatedAt": "2026-08-31T15:06:49.177Z"
+    },
+    {
       "customerName": "P & M SAFETY PRODUCTS",
       "salesOrderNumber": "SO-07853",
       "paymentAmount": 16520,
