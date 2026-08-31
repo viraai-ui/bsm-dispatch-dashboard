@@ -20439,7 +20439,9 @@
     "1154219000036276002": {
       "salesOrderId": "1154219000036276002",
       "salesOrderNumber": "SO-07850",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T06:29:29.815Z",
       "processedOrder": {
         "id": "1154219000036276002",
         "zohoSalesOrderId": "1154219000036276002",
@@ -20467,8 +20469,8 @@
           {
             "id": "1154219000036276002-1154219000036276005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271089",
+            "qrToken": "26271089",
             "orderId": "1154219000036276002",
             "lineItemId": "1154219000036276005",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -20476,14 +20478,17 @@
             "customerName": "Shree Ram Footwear",
             "salesOrderNumber": "SO-07850",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "S S Enterprises",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20496,7 +20501,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T06:27:26.441Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T06:27:27.052Z"
+          "zohoBackupQueuedAt": "2026-08-31T06:27:27.052Z",
+          "processedAt": "2026-08-31T06:29:29.815Z",
+          "dispatchNote": "local",
+          "vendor": "S S Enterprises"
         }
       }
     }
