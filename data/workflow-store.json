@@ -20670,7 +20670,9 @@
     "1154219000036263889": {
       "salesOrderId": "1154219000036263889",
       "salesOrderNumber": "SO-07853",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T10:40:18.095Z",
       "processedOrder": {
         "id": "1154219000036263889",
         "zohoSalesOrderId": "1154219000036263889",
@@ -20698,8 +20700,8 @@
           {
             "id": "1154219000036263889-1154219000036263892-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271092",
+            "qrToken": "26271092",
             "orderId": "1154219000036263889",
             "lineItemId": "1154219000036263892",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -20707,14 +20709,17 @@
             "customerName": "P & M SAFETY PRODUCTS",
             "salesOrderNumber": "SO-07853",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "Ss Enterprises",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20727,7 +20732,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T10:38:09.511Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T10:38:10.665Z"
+          "zohoBackupQueuedAt": "2026-08-31T10:38:10.665Z",
+          "processedAt": "2026-08-31T10:40:18.095Z",
+          "dispatchNote": "local",
+          "vendor": "Ss Enterprises"
         }
       }
     }
