@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271088,
+  "serialCounter": 26271089,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -20435,6 +20435,67 @@
         }
       },
       "dispatchSortOrder": 2
+    },
+    "1154219000036276002": {
+      "salesOrderId": "1154219000036276002",
+      "salesOrderNumber": "SO-07850",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036276002",
+        "zohoSalesOrderId": "1154219000036276002",
+        "salesOrderNumber": "SO-07850",
+        "status": "open",
+        "customerName": "Shree Ram Footwear",
+        "shippingAddress": "635 A, Delhi Rohtak Road, Mahavir Park Sanjay Hospital, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036276005",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036276002-1154219000036276005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036276002",
+            "lineItemId": "1154219000036276005",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "customerName": "Shree Ram Footwear",
+            "salesOrderNumber": "SO-07850",
+            "deliveryDate": "2026-08-31",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036276002-1154219000036276005-1": {
+          "machineUnitId": "1154219000036276002-1154219000036276005-1",
+          "lineItemId": "1154219000036276005",
+          "serialNumber": "26271089",
+          "qrToken": "26271089",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
