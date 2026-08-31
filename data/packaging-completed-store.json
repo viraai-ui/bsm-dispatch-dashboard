@@ -14544,6 +14544,63 @@
       "machineIds": [
         "1154219000036263889-1154219000036263892-1"
       ]
+    },
+    "1154219000036193002": {
+      "completedAt": "2026-08-31T12:07:35.043Z",
+      "order": {
+        "id": "1154219000036193002",
+        "zohoSalesOrderId": "1154219000036193002",
+        "salesOrderNumber": "SO-07842",
+        "status": "open",
+        "customerName": "Silver Panacea",
+        "shippingAddress": "Plot No. 106, Sy No. 187, Plastic Park, Mankhal, Maheshwaram Mandal, Hyderabad, Rangareddy, Telangana, 501359",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036193005",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036193002-1154219000036193005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271093",
+            "qrToken": "26271093",
+            "orderId": "1154219000036193002",
+            "lineItemId": "1154219000036193005",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "Silver Panacea",
+            "salesOrderNumber": "SO-07842",
+            "deliveryDate": "2026-08-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036193002-1154219000036193005-1"
+      ]
     }
   }
 }
