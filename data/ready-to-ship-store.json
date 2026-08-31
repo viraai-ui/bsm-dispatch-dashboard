@@ -4964,6 +4964,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036260002": {
+      "id": "ship-1788166122504-vfqtt",
+      "itemId": "1154219000036260002",
+      "orderId": "1154219000036260002",
+      "machineId": "1154219000036260002-1154219000036260005-1",
+      "salesOrderNumber": "SO-07846",
+      "customerName": "BUSHRA ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK9412",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "",
+      "shippedAt": "2026-08-31T08:48:42.504Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
