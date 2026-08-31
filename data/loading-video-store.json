@@ -2053,6 +2053,31 @@
           ]
         }
       }
+    },
+    "1154219000036276002": {
+      "orderId": "1154219000036276002",
+      "salesOrderNumber": "SO-07850",
+      "submittedAt": null,
+      "units": {
+        "loading-order": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "loading-order-video-1788164107405-9u4mv5",
+              "name": "video_20260831_134432.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Floading%2F2026-08-31%2FSO-07850%2Floading-order%2FLoading-Video-2026-08-31T08-14-56-920Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/loading/2026-08-31/SO-07850/loading-order/Loading-Video-2026-08-31T08-14-56-920Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-08-31T08:15:07.405Z",
+              "expiresAt": "2026-09-30T08:15:07.405Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
