@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "SHREE RAM POLYMER",
+      "salesOrderNumber": "SO-07849",
+      "paymentAmount": 108560,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Manisha",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07849/2026-08-31/1788158325923-ceb3f205-f3dc-4b7a-8b2b-3ddc179a8dba-WhatsApp-Image-2026-08-31-at-12.05.08.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07849%2F2026-08-31%2F1788158325923-ceb3f205-f3dc-4b7a-8b2b-3ddc179a8dba-WhatsApp-Image-2026-08-31-at-12.05.08.jpg",
+          "name": "WhatsApp Image 2026-08-31 at 12.05.08.jpeg",
+          "contentType": "image/jpeg",
+          "size": 54790
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07849/2026-08-31/1788158325923-ceb3f205-f3dc-4b7a-8b2b-3ddc179a8dba-WhatsApp-Image-2026-08-31-at-12.05.08.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07849%2F2026-08-31%2F1788158325923-ceb3f205-f3dc-4b7a-8b2b-3ddc179a8dba-WhatsApp-Image-2026-08-31-at-12.05.08.jpg",
+      "screenshotName": "WhatsApp Image 2026-08-31 at 12.05.08.jpeg",
+      "publicDeleteTokenHash": "a6db3eae14801f7d091d1983852e65d2610a5aca062ab4ea43640e6a82319f6d",
+      "id": "payment-0196f190-36a6-43da-9ad0-77f4f58f2d3c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "de729c4f33fd4dce8dbdf75e8f422dc2",
+      "createdAt": "2026-08-31T06:38:48.019Z",
+      "updatedAt": "2026-08-31T06:38:48.019Z"
+    },
+    {
       "customerName": "NEW TRENDZ FOOTWEAR",
       "salesOrderNumber": "SO-04580",
       "paymentAmount": 56640,
