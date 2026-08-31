@@ -1,5 +1,177 @@
 {
   "orders": {
+    "1154219000036287001": {
+      "id": "1154219000036287001",
+      "zohoSalesOrderId": "1154219000036287001",
+      "salesOrderNumber": "SO-07847",
+      "status": "open",
+      "customerName": "NEW TRENDZ FOOTWEAR",
+      "shippingAddress": "I 222, SECTOR 1 , BAWANA INDUSTRIAL AREA, 110006, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036287004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036287001-1154219000036287004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036287001",
+          "lineItemId": "1154219000036287004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "NEW TRENDZ FOOTWEAR",
+          "salesOrderNumber": "SO-07847",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000036260002": {
+      "id": "1154219000036260002",
+      "zohoSalesOrderId": "1154219000036260002",
+      "salesOrderNumber": "SO-07846",
+      "status": "open",
+      "customerName": "BUSHRA ENTERPRISES",
+      "shippingAddress": "D-1,KH NO-325, GALI NO-1, NEHRU VIHAR, DAYAL PUR K-NAGAR, North East Delhi, Delhi, 110094",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036260005",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036260002-1154219000036260005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036260002",
+          "lineItemId": "1154219000036260005",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "BUSHRA ENTERPRISES",
+          "salesOrderNumber": "SO-07846",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
+    "1154219000036271001": {
+      "id": "1154219000036271001",
+      "zohoSalesOrderId": "1154219000036271001",
+      "salesOrderNumber": "SO-07845",
+      "status": "open",
+      "customerName": "SHREENATHJI RUBBER INDUSTRIES",
+      "shippingAddress": "PLOT 9A/7,, SHREENATHJI RUBBER INDUSTRIES, ROAD B-4, PHASE-1, G.I.D.C, VITTHAL UDYOGNAGAR, Anand, Gujarat, 388121, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-08-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036271004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036271005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036271001-1154219000036271004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036271001",
+          "lineItemId": "1154219000036271004",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "SHREENATHJI RUBBER INDUSTRIES",
+          "salesOrderNumber": "SO-07845",
+          "deliveryDate": "2026-08-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036271001-1154219000036271005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036271001",
+          "lineItemId": "1154219000036271005",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "SHREENATHJI RUBBER INDUSTRIES",
+          "salesOrderNumber": "SO-07845",
+          "deliveryDate": "2026-08-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036206001": {
       "id": "1154219000036206001",
       "zohoSalesOrderId": "1154219000036206001",
@@ -7195,6 +7367,9 @@
     }
   },
   "orderIds": [
+    "1154219000036287001",
+    "1154219000036260002",
+    "1154219000036271001",
     "1154219000036206001",
     "1154219000036193002",
     "1154219000036185001",
@@ -7241,8 +7416,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T05:20:39.092Z",
-  "lastAttemptAt": "2026-08-31T05:30:20.223Z",
+  "lastSuccessfulSyncAt": "2026-08-31T05:30:36.893Z",
+  "lastAttemptAt": "2026-08-31T05:30:36.893Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
