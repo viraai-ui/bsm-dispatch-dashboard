@@ -4902,6 +4902,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036276002": {
+      "id": "ship-1788164362262-3h3sf",
+      "itemId": "1154219000036276002",
+      "orderId": "1154219000036276002",
+      "machineId": "1154219000036276002-1154219000036276005-1",
+      "salesOrderNumber": "SO-07850",
+      "customerName": "Shree Ram Footwear",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "DL8SDT7551",
+      "shippedAt": "2026-08-31T08:19:22.262Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
