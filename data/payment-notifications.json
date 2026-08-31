@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-9ca8a027-ab27-41f9-ad59-38f92e296412",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-387a558f-a08e-476d-9259-d73e936db6b8",
+      "salesOrderNumber": "SO-07852",
+      "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
+      "paymentAmount": 51920,
+      "createdAt": "2026-08-31T07:49:03.594Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-6c814410-c7c6-4d50-8f9a-5526fbe976db",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-387a558f-a08e-476d-9259-d73e936db6b8",
+      "salesOrderNumber": "SO-07852",
+      "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
+      "paymentAmount": 51920,
+      "createdAt": "2026-08-31T07:49:03.594Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-b9e9a615-ec12-4229-b286-422aeb91c3a4",
       "type": "payment-created",
       "recipientUserId": "u-admin",
