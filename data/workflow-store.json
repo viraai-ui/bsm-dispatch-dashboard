@@ -20746,7 +20746,9 @@
     "1154219000036193002": {
       "salesOrderId": "1154219000036193002",
       "salesOrderNumber": "SO-07842",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T11:42:15.639Z",
       "processedOrder": {
         "id": "1154219000036193002",
         "zohoSalesOrderId": "1154219000036193002",
@@ -20774,8 +20776,8 @@
           {
             "id": "1154219000036193002-1154219000036193005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271093",
+            "qrToken": "26271093",
             "orderId": "1154219000036193002",
             "lineItemId": "1154219000036193005",
             "itemName": "Thread Trimmer (Double Motor)",
@@ -20783,14 +20785,17 @@
             "customerName": "Silver Panacea",
             "salesOrderNumber": "SO-07842",
             "deliveryDate": "2026-08-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "Ishu Traders",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -20803,7 +20808,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T11:39:26.480Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T11:39:27.498Z"
+          "zohoBackupQueuedAt": "2026-08-31T11:39:27.498Z",
+          "processedAt": "2026-08-31T11:42:15.639Z",
+          "dispatchNote": "wooden",
+          "vendor": "Ishu Traders"
         }
       }
     }
