@@ -5057,6 +5057,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036263889": {
+      "id": "ship-1788175531907-ps04j",
+      "itemId": "1154219000036263889",
+      "orderId": "1154219000036263889",
+      "machineId": "1154219000036263889-1154219000036263892-1",
+      "salesOrderNumber": "SO-07853",
+      "customerName": "P & M SAFETY PRODUCTS",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "",
+      "shippedAt": "2026-08-31T11:25:31.907Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
