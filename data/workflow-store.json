@@ -20820,7 +20820,9 @@
     "1154219000036281030": {
       "salesOrderId": "1154219000036281030",
       "salesOrderNumber": "SO-07856",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T11:51:33.123Z",
       "processedOrder": {
         "id": "1154219000036281030",
         "zohoSalesOrderId": "1154219000036281030",
@@ -20848,8 +20850,8 @@
           {
             "id": "1154219000036281030-1154219000036281033-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271094",
+            "qrToken": "26271094",
             "orderId": "1154219000036281030",
             "lineItemId": "1154219000036281033",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -20857,14 +20859,17 @@
             "customerName": "ACCLAIM INDUSTRIS",
             "salesOrderNumber": "SO-07856",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20877,7 +20882,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T11:49:40.119Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T11:49:41.150Z"
+          "zohoBackupQueuedAt": "2026-08-31T11:49:41.150Z",
+          "processedAt": "2026-08-31T11:51:33.123Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
