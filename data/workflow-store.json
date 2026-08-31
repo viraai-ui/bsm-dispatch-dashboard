@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271084,
+  "serialCounter": 26271085,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -20158,6 +20158,67 @@
           "zohoBackupLastAttemptAt": "2026-08-29T12:00:32.341Z",
           "zohoBackupSyncedAt": "2026-08-29T12:00:32.341Z",
           "dispatchedAt": "2026-08-29T12:45:54.866Z"
+        }
+      }
+    },
+    "1154219000036260002": {
+      "salesOrderId": "1154219000036260002",
+      "salesOrderNumber": "SO-07846",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036260002",
+        "zohoSalesOrderId": "1154219000036260002",
+        "salesOrderNumber": "SO-07846",
+        "status": "open",
+        "customerName": "BUSHRA ENTERPRISES",
+        "shippingAddress": "D-1,KH NO-325, GALI NO-1, NEHRU VIHAR, DAYAL PUR K-NAGAR, North East Delhi, Delhi, 110094",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036260005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036260002-1154219000036260005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036260002",
+            "lineItemId": "1154219000036260005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "BUSHRA ENTERPRISES",
+            "salesOrderNumber": "SO-07846",
+            "deliveryDate": "2026-08-31",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036260002-1154219000036260005-1": {
+          "machineUnitId": "1154219000036260002-1154219000036260005-1",
+          "lineItemId": "1154219000036260005",
+          "serialNumber": "26271085",
+          "qrToken": "26271085",
+          "qrStatus": "pending"
         }
       }
     }
