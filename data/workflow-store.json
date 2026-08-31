@@ -20578,11 +20578,13 @@
           "qrToken": "26271090",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T06:48:22.299Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-31T06:48:23.098Z",
           "processedAt": "2026-08-31T06:54:04.132Z",
           "dispatchNote": "good wrapping",
-          "vendor": "Ayaan Clothing"
+          "vendor": "Ayaan Clothing",
+          "zohoBackupLastAttemptAt": "2026-08-31T07:01:21.239Z",
+          "zohoBackupSyncedAt": "2026-08-31T07:01:21.239Z"
         }
       }
     }
