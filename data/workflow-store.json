@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271093,
+  "serialCounter": 26271094,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -20814,6 +20814,67 @@
           "vendor": "Ishu Traders",
           "zohoBackupLastAttemptAt": "2026-08-31T11:45:33.152Z",
           "zohoBackupSyncedAt": "2026-08-31T11:45:33.152Z"
+        }
+      }
+    },
+    "1154219000036281030": {
+      "salesOrderId": "1154219000036281030",
+      "salesOrderNumber": "SO-07856",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036281030",
+        "zohoSalesOrderId": "1154219000036281030",
+        "salesOrderNumber": "SO-07856",
+        "status": "open",
+        "customerName": "ACCLAIM INDUSTRIS",
+        "shippingAddress": "Sector-17 Plot No. 318, HSIIDC, Footwear Park, Bahadurgarh-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036281033",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036281030-1154219000036281033-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036281030",
+            "lineItemId": "1154219000036281033",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "ACCLAIM INDUSTRIS",
+            "salesOrderNumber": "SO-07856",
+            "deliveryDate": "2026-09-01",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036281030-1154219000036281033-1": {
+          "machineUnitId": "1154219000036281030-1154219000036281033-1",
+          "lineItemId": "1154219000036281033",
+          "serialNumber": "26271094",
+          "qrToken": "26271094",
+          "qrStatus": "pending"
         }
       }
     }
