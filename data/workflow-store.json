@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271085,
+  "serialCounter": 26271086,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -20230,6 +20230,67 @@
           "processedAt": "2026-08-31T05:33:18.687Z",
           "dispatchNote": "local",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000036287001": {
+      "salesOrderId": "1154219000036287001",
+      "salesOrderNumber": "SO-07847",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036287001",
+        "zohoSalesOrderId": "1154219000036287001",
+        "salesOrderNumber": "SO-07847",
+        "status": "open",
+        "customerName": "NEW TRENDZ FOOTWEAR",
+        "shippingAddress": "I 222, SECTOR 1 , BAWANA INDUSTRIAL AREA, 110006, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036287004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036287001-1154219000036287004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036287001",
+            "lineItemId": "1154219000036287004",
+            "itemName": "Cover Type Sole Press (pneumatic)",
+            "sku": "2003",
+            "customerName": "NEW TRENDZ FOOTWEAR",
+            "salesOrderNumber": "SO-07847",
+            "deliveryDate": "2026-08-31",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036287001-1154219000036287004-1": {
+          "machineUnitId": "1154219000036287001-1154219000036287004-1",
+          "lineItemId": "1154219000036287004",
+          "serialNumber": "26271086",
+          "qrToken": "26271086",
+          "qrStatus": "pending"
         }
       }
     }
