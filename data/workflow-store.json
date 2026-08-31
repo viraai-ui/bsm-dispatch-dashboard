@@ -20164,7 +20164,9 @@
     "1154219000036260002": {
       "salesOrderId": "1154219000036260002",
       "salesOrderNumber": "SO-07846",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T05:33:18.687Z",
       "processedOrder": {
         "id": "1154219000036260002",
         "zohoSalesOrderId": "1154219000036260002",
@@ -20192,8 +20194,8 @@
           {
             "id": "1154219000036260002-1154219000036260005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271085",
+            "qrToken": "26271085",
             "orderId": "1154219000036260002",
             "lineItemId": "1154219000036260005",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -20201,14 +20203,17 @@
             "customerName": "BUSHRA ENTERPRISES",
             "salesOrderNumber": "SO-07846",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20221,7 +20226,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T05:32:07.915Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T05:32:07.602Z"
+          "zohoBackupQueuedAt": "2026-08-31T05:32:07.602Z",
+          "processedAt": "2026-08-31T05:33:18.687Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
