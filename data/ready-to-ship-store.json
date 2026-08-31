@@ -4995,6 +4995,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035989054": {
+      "id": "ship-1788167459718-sh3tx",
+      "itemId": "1154219000035989054",
+      "orderId": "1154219000035989054",
+      "machineId": "1154219000035989054-1154219000035989057-1",
+      "salesOrderNumber": "SO-07797",
+      "customerName": "ALPINE INDIA",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP8462",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "",
+      "shippedAt": "2026-08-31T09:10:59.718Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
