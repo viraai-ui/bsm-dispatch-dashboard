@@ -14374,6 +14374,63 @@
       "machineIds": [
         "1154219000036276002-1154219000036276005-1"
       ]
+    },
+    "1154219000036281002": {
+      "completedAt": "2026-08-31T07:43:02.856Z",
+      "order": {
+        "id": "1154219000036281002",
+        "zohoSalesOrderId": "1154219000036281002",
+        "salesOrderNumber": "SO-07851",
+        "status": "open",
+        "customerName": "IBS Safety India Pvt Ltd",
+        "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036281005",
+            "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036281002-1154219000036281005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271090",
+            "qrToken": "26271090",
+            "orderId": "1154219000036281002",
+            "lineItemId": "1154219000036281005",
+            "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
+            "sku": "",
+            "customerName": "IBS Safety India Pvt Ltd",
+            "salesOrderNumber": "SO-07851",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "good wrapping"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036281002-1154219000036281005-1"
+      ]
     }
   }
 }
