@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-31012298-92fa-4e55-a2ac-375afebdf0a4",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-46673a7a-e625-4204-99d5-10aab6b682cf",
+      "salesOrderNumber": "SO-07853",
+      "customerName": "P & M SAFETY PRODUCTS",
+      "paymentAmount": 16520,
+      "createdAt": "2026-08-31T11:02:23.791Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-64f5c913-6db3-4d98-9376-3ac9145f1c44",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-46673a7a-e625-4204-99d5-10aab6b682cf",
+      "salesOrderNumber": "SO-07853",
+      "customerName": "P & M SAFETY PRODUCTS",
+      "paymentAmount": 16520,
+      "createdAt": "2026-08-31T11:02:23.791Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-9ca8a027-ab27-41f9-ad59-38f92e296412",
       "type": "payment-created",
       "recipientUserId": "u-admin",
