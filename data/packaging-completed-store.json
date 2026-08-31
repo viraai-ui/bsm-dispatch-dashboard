@@ -14169,6 +14169,97 @@
       "machineIds": [
         "1154219000036260002-1154219000036260005-1"
       ]
+    },
+    "1154219000036263131": {
+      "completedAt": "2026-08-31T06:45:42.730Z",
+      "order": {
+        "id": "1154219000036263131",
+        "zohoSalesOrderId": "1154219000036263131",
+        "salesOrderNumber": "SO-07849",
+        "status": "open",
+        "customerName": "SHREE RAM POLYMER",
+        "shippingAddress": "Ground Floor, Plot No at KH No. 93/18, Mundka Village, Swatantrata Senani Vedpal Marg, New Delhi, West Delhi, Delhi, 110041, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036263134",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036263135",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036263131-1154219000036263134-1",
+            "unitNumber": 1,
+            "serialNumber": "26271087",
+            "qrToken": "26271087",
+            "orderId": "1154219000036263131",
+            "lineItemId": "1154219000036263134",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "SHREE RAM POLYMER",
+            "salesOrderNumber": "SO-07849",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036263131-1154219000036263135-1",
+            "unitNumber": 2,
+            "serialNumber": "26271088",
+            "qrToken": "26271088",
+            "orderId": "1154219000036263131",
+            "lineItemId": "1154219000036263135",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "SHREE RAM POLYMER",
+            "salesOrderNumber": "SO-07849",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000036263131-1154219000036263134-1",
+        "1154219000036263131-1154219000036263135-1"
+      ]
     }
   }
 }
