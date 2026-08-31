@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036263889": {
+      "id": "1154219000036263889",
+      "zohoSalesOrderId": "1154219000036263889",
+      "salesOrderNumber": "SO-07853",
+      "status": "open",
+      "customerName": "P & M SAFETY PRODUCTS",
+      "shippingAddress": "PROP NO 187, DR. MUKHERJEE NAGAR, DELHI, North West Delhi, Delhi, 110009, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036263892",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036263889-1154219000036263892-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036263889",
+          "lineItemId": "1154219000036263892",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "P & M SAFETY PRODUCTS",
+          "salesOrderNumber": "SO-07853",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036294001": {
       "id": "1154219000036294001",
       "zohoSalesOrderId": "1154219000036294001",
@@ -7248,6 +7295,7 @@
     }
   },
   "orderIds": [
+    "1154219000036263889",
     "1154219000036294001",
     "1154219000036271001",
     "1154219000036206001",
@@ -7294,8 +7342,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T10:21:38.651Z",
-  "lastAttemptAt": "2026-08-31T10:37:18.007Z",
+  "lastSuccessfulSyncAt": "2026-08-31T10:37:31.007Z",
+  "lastAttemptAt": "2026-08-31T10:37:31.007Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
