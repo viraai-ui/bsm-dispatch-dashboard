@@ -20236,7 +20236,9 @@
     "1154219000036287001": {
       "salesOrderId": "1154219000036287001",
       "salesOrderNumber": "SO-07847",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T05:36:34.004Z",
       "processedOrder": {
         "id": "1154219000036287001",
         "zohoSalesOrderId": "1154219000036287001",
@@ -20264,8 +20266,8 @@
           {
             "id": "1154219000036287001-1154219000036287004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271086",
+            "qrToken": "26271086",
             "orderId": "1154219000036287001",
             "lineItemId": "1154219000036287004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -20273,14 +20275,17 @@
             "customerName": "NEW TRENDZ FOOTWEAR",
             "salesOrderNumber": "SO-07847",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "Aradhya",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20293,7 +20298,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T05:35:41.471Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T05:35:41.215Z"
+          "zohoBackupQueuedAt": "2026-08-31T05:35:41.215Z",
+          "processedAt": "2026-08-31T05:36:34.004Z",
+          "dispatchNote": "local",
+          "vendor": "Aradhya"
         }
       }
     }
