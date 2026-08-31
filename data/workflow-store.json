@@ -20594,7 +20594,9 @@
     "1154219000036294001": {
       "salesOrderId": "1154219000036294001",
       "salesOrderNumber": "SO-07852",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T07:38:19.725Z",
       "processedOrder": {
         "id": "1154219000036294001",
         "zohoSalesOrderId": "1154219000036294001",
@@ -20622,8 +20624,8 @@
           {
             "id": "1154219000036294001-1154219000036294004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271091",
+            "qrToken": "26271091",
             "orderId": "1154219000036294001",
             "lineItemId": "1154219000036294004",
             "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
@@ -20631,14 +20633,17 @@
             "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07852",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20651,7 +20656,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T07:35:00.598Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T07:35:01.467Z"
+          "zohoBackupQueuedAt": "2026-08-31T07:35:01.467Z",
+          "processedAt": "2026-08-31T07:38:19.725Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
