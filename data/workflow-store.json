@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271091,
+  "serialCounter": 26271092,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -20664,6 +20664,67 @@
           "zohoBackupLastAttemptAt": "2026-08-31T07:45:33.582Z",
           "zohoBackupSyncedAt": "2026-08-31T07:45:33.582Z",
           "dispatchedAt": "2026-08-31T10:36:52.903Z"
+        }
+      }
+    },
+    "1154219000036263889": {
+      "salesOrderId": "1154219000036263889",
+      "salesOrderNumber": "SO-07853",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036263889",
+        "zohoSalesOrderId": "1154219000036263889",
+        "salesOrderNumber": "SO-07853",
+        "status": "open",
+        "customerName": "P & M SAFETY PRODUCTS",
+        "shippingAddress": "PROP NO 187, DR. MUKHERJEE NAGAR, DELHI, North West Delhi, Delhi, 110009, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036263892",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036263889-1154219000036263892-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036263889",
+            "lineItemId": "1154219000036263892",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "P & M SAFETY PRODUCTS",
+            "salesOrderNumber": "SO-07853",
+            "deliveryDate": "2026-08-31",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ]
+      },
+      "machines": {
+        "1154219000036263889-1154219000036263892-1": {
+          "machineUnitId": "1154219000036263889-1154219000036263892-1",
+          "lineItemId": "1154219000036263892",
+          "serialNumber": "26271092",
+          "qrToken": "26271092",
+          "qrStatus": "pending"
         }
       }
     }
