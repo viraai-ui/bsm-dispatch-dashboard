@@ -19778,7 +19778,7 @@
           "zohoBackupSyncedAt": "2026-08-29T08:46:21.532Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 5
     },
     "1154219000036162006": {
       "salesOrderId": "1154219000036162006",
@@ -20440,7 +20440,7 @@
       "salesOrderId": "1154219000036276002",
       "salesOrderNumber": "SO-07850",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-08-31T06:29:29.815Z",
       "processedOrder": {
         "id": "1154219000036276002",
@@ -20506,7 +20506,8 @@
           "dispatchNote": "local",
           "vendor": "S S Enterprises"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
