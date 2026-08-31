@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036281030": {
+      "id": "1154219000036281030",
+      "zohoSalesOrderId": "1154219000036281030",
+      "salesOrderNumber": "SO-07856",
+      "status": "open",
+      "customerName": "ACCLAIM INDUSTRIS",
+      "shippingAddress": "Sector-17 Plot No. 318, HSIIDC, Footwear Park, Bahadurgarh-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036281033",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036281030-1154219000036281033-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036281030",
+          "lineItemId": "1154219000036281033",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "ACCLAIM INDUSTRIS",
+          "salesOrderNumber": "SO-07856",
+          "deliveryDate": "2026-09-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036281017": {
       "id": "1154219000036281017",
       "zohoSalesOrderId": "1154219000036281017",
@@ -60,53 +107,6 @@
           "sku": "",
           "customerName": "Chaudhary Labels Pvt. Ltd.",
           "salesOrderNumber": "SO-07854",
-          "deliveryDate": "2026-08-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
-    "1154219000036294001": {
-      "id": "1154219000036294001",
-      "zohoSalesOrderId": "1154219000036294001",
-      "salesOrderNumber": "SO-07852",
-      "status": "open",
-      "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
-      "shippingAddress": "Plot no 8&9 ,GFloor, KH no 25/4 & 25/7, Laxmi park , Kamruddin Nagar, Nangloi, 110041, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036294004",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036294001-1154219000036294004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036294001",
-          "lineItemId": "1154219000036294004",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07852",
           "deliveryDate": "2026-08-31",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -7320,9 +7320,9 @@
     }
   },
   "orderIds": [
+    "1154219000036281030",
     "1154219000036281017",
     "1154219000036296003",
-    "1154219000036294001",
     "1154219000036271001",
     "1154219000036206001",
     "1154219000036193002",
@@ -7368,8 +7368,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T11:40:39.529Z",
-  "lastAttemptAt": "2026-08-31T11:47:10.536Z",
+  "lastSuccessfulSyncAt": "2026-08-31T11:47:24.561Z",
+  "lastAttemptAt": "2026-08-31T11:47:24.561Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
