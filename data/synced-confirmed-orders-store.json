@@ -1,5 +1,52 @@
 {
   "orders": {
+    "1154219000036276002": {
+      "id": "1154219000036276002",
+      "zohoSalesOrderId": "1154219000036276002",
+      "salesOrderNumber": "SO-07850",
+      "status": "open",
+      "customerName": "Shree Ram Footwear",
+      "shippingAddress": "635 A, Delhi Rohtak Road, Mahavir Park Sanjay Hospital, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036276005",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036276002-1154219000036276005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036276002",
+          "lineItemId": "1154219000036276005",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "customerName": "Shree Ram Footwear",
+          "salesOrderNumber": "SO-07850",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036263131": {
       "id": "1154219000036263131",
       "zohoSalesOrderId": "1154219000036263131",
@@ -4832,31 +4879,6 @@
         }
       ]
     },
-    "1154219000035898002": {
-      "id": "1154219000035898002",
-      "zohoSalesOrderId": "1154219000035898002",
-      "salesOrderNumber": "SO-07770",
-      "status": "open",
-      "customerName": "Surbhi Polymers Pvt. Ltd. - NEPAL",
-      "shippingAddress": "8/125, Main Road, Birat Nagar, Nepal",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-19",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035898005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": []
-    },
     "1154219000035891004": {
       "id": "1154219000035891004",
       "zohoSalesOrderId": "1154219000035891004",
@@ -7470,6 +7492,7 @@
     }
   },
   "orderIds": [
+    "1154219000036276002",
     "1154219000036263131",
     "1154219000036274004",
     "1154219000036287001",
@@ -7494,7 +7517,6 @@
     "1154219000035891025",
     "1154219000035884008",
     "1154219000035890003",
-    "1154219000035898002",
     "1154219000035891004",
     "1154219000035880001",
     "1154219000035854013",
@@ -7521,8 +7543,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T06:01:41.241Z",
-  "lastAttemptAt": "2026-08-31T06:21:23.832Z",
+  "lastSuccessfulSyncAt": "2026-08-31T06:21:40.087Z",
+  "lastAttemptAt": "2026-08-31T06:21:40.087Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
