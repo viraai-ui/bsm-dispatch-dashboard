@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
+      "salesOrderNumber": "SO-07852",
+      "paymentAmount": 51920,
+      "paymentMode": "UPI",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07852/2026-08-31/1788162540466-fd07cd91-98ca-40e9-998b-5e8d97aa7f67-33cbc86d-c451-4d03-9042-894f9a731c99.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07852%2F2026-08-31%2F1788162540466-fd07cd91-98ca-40e9-998b-5e8d97aa7f67-33cbc86d-c451-4d03-9042-894f9a731c99.jpg",
+          "name": "33cbc86d-c451-4d03-9042-894f9a731c99.jpg",
+          "contentType": "image/jpeg",
+          "size": 59875
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07852/2026-08-31/1788162540466-fd07cd91-98ca-40e9-998b-5e8d97aa7f67-33cbc86d-c451-4d03-9042-894f9a731c99.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07852%2F2026-08-31%2F1788162540466-fd07cd91-98ca-40e9-998b-5e8d97aa7f67-33cbc86d-c451-4d03-9042-894f9a731c99.jpg",
+      "screenshotName": "33cbc86d-c451-4d03-9042-894f9a731c99.jpg",
+      "publicDeleteTokenHash": "9f2290bce7f0d489e79fcd766769ebcbde62e95e062a87f05a3d792fbfda79ce",
+      "id": "payment-387a558f-a08e-476d-9259-d73e936db6b8",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "23fd2c0f178e4960ba50b4ebc195b3c5",
+      "createdAt": "2026-08-31T07:49:01.971Z",
+      "updatedAt": "2026-08-31T07:49:01.971Z"
+    },
+    {
       "customerName": "SHREE RAM POLYMER",
       "salesOrderNumber": "SO-07849",
       "paymentAmount": 108560,
