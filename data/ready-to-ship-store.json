@@ -4871,6 +4871,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036287001": {
+      "id": "ship-1788160662008-vnali",
+      "itemId": "1154219000036287001",
+      "orderId": "1154219000036287001",
+      "machineId": "1154219000036287001-1154219000036287004-1",
+      "salesOrderNumber": "SO-07847",
+      "customerName": "NEW TRENDZ FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51GD6742",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "",
+      "shippedAt": "2026-08-31T07:17:42.008Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
