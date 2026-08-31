@@ -20312,7 +20312,9 @@
     "1154219000036263131": {
       "salesOrderId": "1154219000036263131",
       "salesOrderNumber": "SO-07849",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T05:50:37.731Z",
       "processedOrder": {
         "id": "1154219000036263131",
         "zohoSalesOrderId": "1154219000036263131",
@@ -20350,8 +20352,8 @@
           {
             "id": "1154219000036263131-1154219000036263134-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271087",
+            "qrToken": "26271087",
             "orderId": "1154219000036263131",
             "lineItemId": "1154219000036263134",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -20359,20 +20361,23 @@
             "customerName": "SHREE RAM POLYMER",
             "salesOrderNumber": "SO-07849",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036263131-1154219000036263135-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271088",
+            "qrToken": "26271088",
             "orderId": "1154219000036263131",
             "lineItemId": "1154219000036263135",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -20380,14 +20385,17 @@
             "customerName": "SHREE RAM POLYMER",
             "salesOrderNumber": "SO-07849",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -20400,7 +20408,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T05:46:40.617Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T05:46:40.551Z"
+          "zohoBackupQueuedAt": "2026-08-31T05:46:40.551Z",
+          "processedAt": "2026-08-31T05:50:37.731Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000036263131-1154219000036263135-1": {
           "machineUnitId": "1154219000036263131-1154219000036263135-1",
@@ -20410,7 +20421,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T05:46:40.617Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T05:46:40.551Z"
+          "zohoBackupQueuedAt": "2026-08-31T05:46:40.551Z",
+          "processedAt": "2026-08-31T05:50:37.731Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
