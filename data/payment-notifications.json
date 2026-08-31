@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-5f630977-87dd-42bc-a465-9be8c40eeaf6",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-e843e9c1-d08f-49f2-a347-88dff0e80e8a",
+      "salesOrderNumber": "SO-04580",
+      "customerName": "NEW TRENDZ FOOTWEAR",
+      "paymentAmount": 56640,
+      "createdAt": "2026-08-31T05:24:09.641Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-be04dd9c-99f5-4674-9f34-68da776384eb",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-e843e9c1-d08f-49f2-a347-88dff0e80e8a",
+      "salesOrderNumber": "SO-04580",
+      "customerName": "NEW TRENDZ FOOTWEAR",
+      "paymentAmount": 56640,
+      "createdAt": "2026-08-31T05:24:09.641Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-1a130cb5-0360-44f7-a91c-e7a6ba4101c3",
       "type": "payment-created",
       "recipientUserId": "u-admin",
