@@ -20517,7 +20517,9 @@
     "1154219000036281002": {
       "salesOrderId": "1154219000036281002",
       "salesOrderNumber": "SO-07851",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-08-31T06:54:04.132Z",
       "processedOrder": {
         "id": "1154219000036281002",
         "zohoSalesOrderId": "1154219000036281002",
@@ -20545,8 +20547,8 @@
           {
             "id": "1154219000036281002-1154219000036281005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271090",
+            "qrToken": "26271090",
             "orderId": "1154219000036281002",
             "lineItemId": "1154219000036281005",
             "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
@@ -20554,14 +20556,17 @@
             "customerName": "IBS Safety India Pvt Ltd",
             "salesOrderNumber": "SO-07851",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "vendor": "Ayaan Clothing",
+            "dispatchNote": "good wrapping"
           }
         ]
       },
@@ -20574,7 +20579,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T06:48:22.299Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-08-31T06:48:23.098Z"
+          "zohoBackupQueuedAt": "2026-08-31T06:48:23.098Z",
+          "processedAt": "2026-08-31T06:54:04.132Z",
+          "dispatchNote": "good wrapping",
+          "vendor": "Ayaan Clothing"
         }
       }
     }
