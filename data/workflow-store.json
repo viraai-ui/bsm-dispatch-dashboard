@@ -20731,11 +20731,13 @@
           "qrToken": "26271092",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-08-31T10:38:09.511Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-31T10:38:10.665Z",
           "processedAt": "2026-08-31T10:40:18.095Z",
           "dispatchNote": "local",
-          "vendor": "Ss Enterprises"
+          "vendor": "Ss Enterprises",
+          "zohoBackupLastAttemptAt": "2026-08-31T10:45:31.892Z",
+          "zohoBackupSyncedAt": "2026-08-31T10:45:31.892Z"
         }
       },
       "dispatchSortOrder": 1
