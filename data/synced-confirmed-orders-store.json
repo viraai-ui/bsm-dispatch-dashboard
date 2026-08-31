@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000036263131": {
+      "id": "1154219000036263131",
+      "zohoSalesOrderId": "1154219000036263131",
+      "salesOrderNumber": "SO-07849",
+      "status": "open",
+      "customerName": "SHREE RAM POLYMER",
+      "shippingAddress": "Ground Floor, Plot No at KH No. 93/18, Mundka Village, Swatantrata Senani Vedpal Marg, New Delhi, West Delhi, Delhi, 110041, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-08-31",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036263134",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036263135",
+          "itemName": "Drum type Sole Press (pneumatic)",
+          "sku": "2002",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036263131-1154219000036263134-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036263131",
+          "lineItemId": "1154219000036263134",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "SHREE RAM POLYMER",
+          "salesOrderNumber": "SO-07849",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036263131-1154219000036263135-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036263131",
+          "lineItemId": "1154219000036263135",
+          "itemName": "Drum type Sole Press (pneumatic)",
+          "sku": "2002",
+          "customerName": "SHREE RAM POLYMER",
+          "salesOrderNumber": "SO-07849",
+          "deliveryDate": "2026-08-31",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ]
+    },
     "1154219000036274004": {
       "id": "1154219000036274004",
       "zohoSalesOrderId": "1154219000036274004",
@@ -4028,10 +4106,10 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000035991023",
-          "itemName": "Sole Stitch Cylinder Bed Single needle (with binding)",
-          "sku": "205 B",
-          "description": "Porter Freight Including",
+          "id": "1154219000036263101",
+          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+          "sku": "205",
+          "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
@@ -4040,14 +4118,14 @@
       ],
       "machines": [
         {
-          "id": "1154219000035991020-1154219000035991023-1",
+          "id": "1154219000035991020-1154219000036263101-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000035991020",
-          "lineItemId": "1154219000035991023",
-          "itemName": "Sole Stitch Cylinder Bed Single needle (with binding)",
-          "sku": "205 B",
+          "lineItemId": "1154219000036263101",
+          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+          "sku": "205",
           "customerName": "SHAKTI INDUSTRIES",
           "salesOrderNumber": "SO-07808",
           "deliveryDate": "2026-09-10",
@@ -4058,7 +4136,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": "Porter Freight Including"
+          "itemDescription": ""
         }
       ]
     },
@@ -7392,6 +7470,7 @@
     }
   },
   "orderIds": [
+    "1154219000036263131",
     "1154219000036274004",
     "1154219000036287001",
     "1154219000036260002",
@@ -7442,8 +7521,8 @@
     "1154219000030035027",
     "1154219000028400007"
   ],
-  "lastSuccessfulSyncAt": "2026-08-31T05:42:58.598Z",
-  "lastAttemptAt": "2026-08-31T05:45:42.787Z",
+  "lastSuccessfulSyncAt": "2026-08-31T05:45:56.816Z",
+  "lastAttemptAt": "2026-08-31T05:45:56.816Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
