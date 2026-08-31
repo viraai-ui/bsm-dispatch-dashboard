@@ -5088,6 +5088,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036294001": {
+      "id": "ship-1788176608897-npg22",
+      "itemId": "1154219000036294001",
+      "orderId": "1154219000036294001",
+      "machineId": "1154219000036294001-1154219000036294004-1",
+      "salesOrderNumber": "SO-07852",
+      "customerName": "AMAZOX SOLUTIONS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-08-31",
+      "notes": "",
+      "shippedAt": "2026-08-31T11:43:28.897Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
