@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-b9e9a615-ec12-4229-b286-422aeb91c3a4",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-0196f190-36a6-43da-9ad0-77f4f58f2d3c",
+      "salesOrderNumber": "SO-07849",
+      "customerName": "SHREE RAM POLYMER",
+      "paymentAmount": 108560,
+      "createdAt": "2026-08-31T06:38:50.510Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-b10bebf0-0ec8-4709-a094-a7d2a4434538",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-0196f190-36a6-43da-9ad0-77f4f58f2d3c",
+      "salesOrderNumber": "SO-07849",
+      "customerName": "SHREE RAM POLYMER",
+      "paymentAmount": 108560,
+      "createdAt": "2026-08-31T06:38:50.510Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-5f630977-87dd-42bc-a465-9be8c40eeaf6",
       "type": "payment-created",
       "recipientUserId": "u-admin",
