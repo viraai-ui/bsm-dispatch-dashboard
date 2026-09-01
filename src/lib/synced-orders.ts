@@ -2,6 +2,7 @@ import type { MachineUnit, Order } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { fetchZohoConfirmedOrders } from './zoho'
 import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
+import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 
 export type SyncedOrdersStore = {
   orders: Record<string, Order>
@@ -46,8 +47,8 @@ export function isOperationalZohoOrder(order: Order | null | undefined) {
 }
 
 export async function getOperationalOrderIds() {
-  const store = await readSyncedOrdersStore()
-  return new Set(store.orderIds.filter((id) => isOperationalZohoOrder(store.orders[id])))
+  const [store, baseline] = await Promise.all([readSyncedOrdersStore(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
+  return new Set(store.orderIds.filter((id) => isOperationalZohoOrder(store.orders[id]) && !isOrderTombstoned(store.orders[id], baseline.data.tombstones)))
 }
 
 function normalizeStore(store: SyncedOrdersStore): SyncedOrdersStore {
@@ -71,17 +72,17 @@ export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message =
 }
 
 export async function listOrdersModuleOrders() {
-  const store = await readSyncedOrdersStore()
-  const workflows = await listWorkflows()
+  const [store, workflows, baseline] = await Promise.all([readSyncedOrdersStore(), listWorkflows(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
   return store.orderIds
     .map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null)
     .filter((order): order is Order => order !== null)
     .filter(isOperationalZohoOrder)
+    .filter((order) => !isOrderTombstoned(order, baseline.data.tombstones))
 }
 
 export async function listSyncedOrders() {
-  const [store, workflows] = await Promise.all([readSyncedOrdersStore(), listWorkflows()])
-  return listSyncedOrdersFromSnapshots(store, workflows)
+  const [store, workflows, baseline] = await Promise.all([readSyncedOrdersStore(), listWorkflows(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
+  return listSyncedOrdersFromSnapshots(store, workflows).filter((order) => !isOrderTombstoned(order, baseline.data.tombstones))
 }
 
 export function listSyncedOrdersFromSnapshots(store: SyncedOrdersStore, workflows: Record<string, OrderWorkflow>) {

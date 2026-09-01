@@ -1,9 +1,10 @@
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { getOrderWorkflow, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
+import { getOrderWorkflow, githubReadJson, upsertOrderWorkflow, type MachineWorkflow } from '@/lib/workflow-store'
 import { allocateSerialNumbers } from '@/lib/serial-allocation-service'
 import { isMachineLineItem } from '@/lib/item-classification'
 import { markSerialStatus } from '@/lib/serial-ledger'
+import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from '@/lib/operational-orders'
 
 import type { Order } from '@/types/domain'
 
@@ -23,8 +24,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const body = await request.json()
     const action = body.action as string
     if (action === 'undo') {
+      const order = body.order as Order | undefined
+      const baseline = await githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })
+      if (order && isOrderTombstoned(order, baseline.data.tombstones)) throw new Error('This order was cancelled from the dashboard. Undo cannot restore cancelled orders.')
       const workflow = await upsertOrderWorkflow(id, (current) => {
-        const order = body.order as Order | undefined
         return {
           salesOrderId: id,
           salesOrderNumber: order?.salesOrderNumber || current?.salesOrderNumber || '',

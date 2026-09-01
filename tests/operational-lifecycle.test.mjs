@@ -44,6 +44,16 @@ test('baseline tombstone has precedence over active Zoho and no-LR local state',
   assert.equal(result.byId.precedence, undefined)
 })
 
+test('admin cancellation matches stable id first and normalized SO fallback while preserving history inputs', () => {
+  const saved = { ...order('new-source-id'), salesOrderNumber: 'SO-00123' }
+  const history = { completedAt: 'x', order: saved }
+  const cancelled = { ...tombstone('legacy-source-id'), salesOrderNumber: 'so 00123', reason: 'cancelled_from_dashboard', actor: { id: 'admin', name: 'Admin', email: 'admin@example.test' } }
+  const result = project({ synced: [saved], workflows: { 'new-source-id': workflow('new-source-id', saved) }, completed: { 'new-source-id': history }, tombstones: { 'legacy-source-id': cancelled } })
+  assert.equal(result.byId['new-source-id'], undefined)
+  assert.equal(history.order.salesOrderNumber, 'SO-00123')
+  assert.equal(cancelled.actor.id, 'admin')
+})
+
 test('packaging completion advances order and removes it from dispatch projection', () => {
   const saved = order('packed')
   const result = project({ workflows: { packed: workflow('packed', saved) }, completed: { packed: { completedAt: '2026-01-02', order: saved } } })

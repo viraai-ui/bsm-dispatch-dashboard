@@ -19,14 +19,26 @@ export type OperationalProjectionInput = {
 export type LifecycleTombstone = {
   orderId: string
   salesOrderNumber: string
-  reason: 'baseline_pre_cutover_zoho_closed_or_omitted'
+  reason: 'baseline_pre_cutover_zoho_closed_or_omitted' | 'cancelled_from_dashboard'
   stageAtCutover: OperationalStage
   tombstonedAt: string
   cutoverVersion: string
   cutoverDate: string
+  actor?: { id: string; name: string; email: string }
+  sourceRevision?: string
 }
 export type LifecycleBaselineStore = { version: 1; cutoverVersion: string; cutoverDate: string; tombstones: Record<string, LifecycleTombstone> }
 export const LIFECYCLE_BASELINE_PATH = 'data/operational-lifecycle-baseline.json'
+
+export function normalizeOrderNumber(value?: string) {
+  return String(value || '').trim().toUpperCase().replace(/[^A-Z0-9]/g, '')
+}
+
+export function isOrderTombstoned(order: Pick<Order, 'id' | 'zohoSalesOrderId' | 'salesOrderNumber'>, tombstones: Record<string, LifecycleTombstone>) {
+  if (tombstones[order.id] || (order.zohoSalesOrderId && tombstones[order.zohoSalesOrderId])) return true
+  const number = normalizeOrderNumber(order.salesOrderNumber)
+  return Boolean(number && Object.values(tombstones).some((item) => normalizeOrderNumber(item.salesOrderNumber) === number))
+}
 
 export function isLocallyTerminal(shipment?: Shipment) {
   if (!shipment?.shippedAt) return false
@@ -52,8 +64,9 @@ export function projectOperationalOrders(input: OperationalProjectionInput) {
   const byId: Record<string, { order: Order; stage: OperationalStage; showInDispatch: boolean; showInPackingVideo: boolean; showInLoadingVideo: boolean; showInReadyToShip: boolean }> = {}
 
   for (const id of ids) {
-    // Baseline terminal decisions win; source workflow/media/history remain intact.
-    if (tombstones[id]) continue
+    const candidate = syncedById.get(id) || workflows[id]?.processedOrder || completed[id]?.order
+    // Durable terminal decisions win; source workflow/media/history remain intact.
+    if (tombstones[id] || (candidate && isOrderTombstoned(candidate, tombstones))) continue
     const workflow = workflows[id]
     const durableOrder = workflow?.processedOrder || completed[id]?.order
     const synced = syncedById.get(id)
