@@ -1,5 +1,12 @@
 import type { Order } from '@/types/domain'
 
+const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
+export function isGitHubWriteConflict(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error)
+  return SHA_CONFLICT_PATTERNS.some((pattern) => pattern.test(message))
+}
+export function githubWriteRetryDelay(attempt: number) { return Math.min(100 * (2 ** Math.max(0, attempt)), 1_000) }
+
 export type MachineWorkflow = {
   machineUnitId: string
   lineItemId: string
@@ -161,8 +168,8 @@ export async function upsertOrderWorkflow(orderId: string, updater: (current: Or
       return next
     } catch (error) {
       lastError = error
-      const message = error instanceof Error ? error.message : ''
-      if (!message.includes('sha') && !message.includes('409') && !message.includes('does not match')) break
+      if (!isGitHubWriteConflict(error)) break
+      if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, githubWriteRetryDelay(attempt)))
     }
   }
   throw lastError instanceof Error ? lastError : new Error('Workflow update conflict')
