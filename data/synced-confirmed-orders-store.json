@@ -4203,53 +4203,6 @@
         }
       ]
     },
-    "1154219000035991020": {
-      "id": "1154219000035991020",
-      "zohoSalesOrderId": "1154219000035991020",
-      "salesOrderNumber": "SO-07808",
-      "status": "open",
-      "customerName": "SHAKTI INDUSTRIES",
-      "shippingAddress": "H-1410, DSIIDC NARELA INDUSTRIAL COMPLEX NARELA, New Delhi,, North Delhi, Delhi-, 110040",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036263101",
-          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
-          "sku": "205",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035991020-1154219000036263101-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035991020",
-          "lineItemId": "1154219000036263101",
-          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
-          "sku": "205",
-          "customerName": "SHAKTI INDUSTRIES",
-          "salesOrderNumber": "SO-07808",
-          "deliveryDate": "2026-09-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ]
-    },
     "1154219000036013008": {
       "id": "1154219000036013008",
       "zohoSalesOrderId": "1154219000036013008",
@@ -7427,7 +7380,6 @@
     "1154219000036072023",
     "1154219000036057006",
     "1154219000036064003",
-    "1154219000035991020",
     "1154219000036013008",
     "1154219000035994029",
     "1154219000035939003",
@@ -7460,8 +7412,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-01T07:33:17.439Z",
-  "lastAttemptAt": "2026-09-01T07:40:25.454Z",
+  "lastSuccessfulSyncAt": "2026-09-01T07:40:39.119Z",
+  "lastAttemptAt": "2026-09-01T07:40:39.119Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
