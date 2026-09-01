@@ -5150,6 +5150,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035991020": {
+      "id": "ship-1788248335461-93591",
+      "itemId": "1154219000035991020",
+      "orderId": "1154219000035991020",
+      "machineId": "1154219000035991020-1154219000035991023-1",
+      "salesOrderNumber": "SO-07808",
+      "customerName": "SHAKTI INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK5982",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-01",
+      "notes": "",
+      "shippedAt": "2026-09-01T07:38:55.461Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
