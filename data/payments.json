@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "ACCLAIM INDUSTRIS",
+      "salesOrderNumber": "SO-07856",
+      "paymentAmount": 560000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07856/2026-09-01/1788247728589-76939584-fa5d-40e4-8442-0d01fb4b3f49-f0c099be-dab1-4fe3-a81e-1fe795ff7d56.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07856%2F2026-09-01%2F1788247728589-76939584-fa5d-40e4-8442-0d01fb4b3f49-f0c099be-dab1-4fe3-a81e-1fe795ff7d56.jpg",
+          "name": "f0c099be-dab1-4fe3-a81e-1fe795ff7d56.jpg",
+          "contentType": "image/jpeg",
+          "size": 40199
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07856/2026-09-01/1788247728589-76939584-fa5d-40e4-8442-0d01fb4b3f49-f0c099be-dab1-4fe3-a81e-1fe795ff7d56.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07856%2F2026-09-01%2F1788247728589-76939584-fa5d-40e4-8442-0d01fb4b3f49-f0c099be-dab1-4fe3-a81e-1fe795ff7d56.jpg",
+      "screenshotName": "f0c099be-dab1-4fe3-a81e-1fe795ff7d56.jpg",
+      "publicDeleteTokenHash": "21c3acb592c97c854f40e9cc5b20a7b756cb45caff0e3b7b7a662d642672a228",
+      "id": "payment-f0c2dff4-fc10-4d12-9c41-19b432a93b71",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "86229bafb53249ca8b93b7f14f249969",
+      "createdAt": "2026-09-01T07:28:50.799Z",
+      "updatedAt": "2026-09-01T07:28:50.799Z"
+    },
+    {
       "customerName": "SHAKTI INDUSTRIES",
       "salesOrderNumber": "SO-07808",
       "paymentAmount": 168000,
