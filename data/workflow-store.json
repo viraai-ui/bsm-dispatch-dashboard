@@ -21165,7 +21165,9 @@
     "1154219000036259722": {
       "salesOrderId": "1154219000036259722",
       "salesOrderNumber": "SO-07864",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-01T12:19:41.688Z",
       "processedOrder": {
         "id": "1154219000036259722",
         "zohoSalesOrderId": "1154219000036259722",
@@ -21175,7 +21177,7 @@
         "shippingAddress": "KH NO.-88/14,88/15 MUNDKA ,WEST DELHI, Delhi, 110041",
         "salesperson": "Manoj Sir",
         "deliveryDate": "2026-09-01",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -21231,8 +21233,8 @@
           {
             "id": "1154219000036259722-1154219000036259725-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271099",
+            "qrToken": "26271099",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259725",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -21240,20 +21242,22 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036259722-1154219000036259725-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271100",
+            "qrToken": "26271100",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259725",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -21261,20 +21265,22 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036259722-1154219000036259726-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271101",
+            "qrToken": "26271101",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259726",
             "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
@@ -21282,20 +21288,22 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036259722-1154219000036259727-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271102",
+            "qrToken": "26271102",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259727",
             "itemName": "De lasting Jack (hydraulic)",
@@ -21303,20 +21311,22 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036259722-1154219000036259728-1",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271103",
+            "qrToken": "26271103",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259728",
             "itemName": "Seat lasting Machine",
@@ -21324,14 +21334,16 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-01T17:06:52+0530"
@@ -21347,7 +21359,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
-          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z"
+          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+          "processedAt": "2026-09-01T12:19:41.688Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000036259722-1154219000036259725-2": {
           "machineUnitId": "1154219000036259722-1154219000036259725-2",
@@ -21359,7 +21374,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
-          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z"
+          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+          "processedAt": "2026-09-01T12:19:41.688Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000036259722-1154219000036259726-1": {
           "machineUnitId": "1154219000036259722-1154219000036259726-1",
@@ -21371,7 +21389,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
-          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z"
+          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+          "processedAt": "2026-09-01T12:19:41.688Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000036259722-1154219000036259727-1": {
           "machineUnitId": "1154219000036259722-1154219000036259727-1",
@@ -21383,7 +21404,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
-          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z"
+          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+          "processedAt": "2026-09-01T12:19:41.688Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000036259722-1154219000036259728-1": {
           "machineUnitId": "1154219000036259722-1154219000036259728-1",
@@ -21395,7 +21419,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
-          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z"
+          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+          "processedAt": "2026-09-01T12:19:41.688Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
