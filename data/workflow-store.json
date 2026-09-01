@@ -21152,11 +21152,13 @@
           "qrToken": "26271098",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-01T12:06:08.322Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:06:10.839Z",
           "processedAt": "2026-09-01T12:08:05.621Z",
           "dispatchNote": "local",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
+          "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z"
         }
       }
     },
