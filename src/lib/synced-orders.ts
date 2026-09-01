@@ -70,8 +70,8 @@ function normalizeOrder(order: Order): Order {
   return { ...order, lineItems, machines: (order.machines || []).filter((machine) => machineLineIds.has(machine.lineItemId)) }
 }
 
-export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message = 'Update confirmed sales order sync store') {
-  await githubWriteJson(SYNCED_ORDERS_PATH, normalizeStore(store), message)
+export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message = 'Update confirmed sales order sync store', expectedSha?: string) {
+  await githubWriteJson(SYNCED_ORDERS_PATH, normalizeStore(store), message, expectedSha)
 }
 
 export async function listOrdersModuleOrders() {
@@ -133,13 +133,16 @@ async function performSingleOrderSync(id: string, actor: string) {
   const remote = await fetchZohoOrderDetail(local.zohoSalesOrderId)
   const workflows = await listWorkflows(); const workflowIds = new Set(Object.keys(workflows[local.id]?.machines || {})); const at = new Date().toISOString()
   for (let attempt = 0; attempt < 3; attempt++) {
-    const current = await readSyncedOrdersStore(); const latest = current.orders[local.id]
+    // Read data and its revision together, then use a compare-and-swap write. This
+    // prevents another server instance's operational update from being overwritten.
+    const snapshot = await githubReadJson<SyncedOrdersStore>(SYNCED_ORDERS_PATH, fallbackStore)
+    const current = normalizeStore(snapshot.data); const latest = current.orders[local.id]
     if (!latest) throw new Error('Order disappeared during sync')
     const result = reconcileOrder(latest, remote, workflowIds, at)
     const audit = { actor, at, previousRevision: latest.zohoLastModifiedTime, currentRevision: remote.zohoLastModifiedTime, outcome: (result.changed ? 'changed' : 'unchanged') as 'changed' | 'unchanged', diff: result.diff }
     const next = { ...current, orders: { ...current.orders, [local.id]: result.order }, lastSuccessfulSyncAt: at, orderSyncAudit: { ...(current.orderSyncAudit || {}), [local.id]: [...(current.orderSyncAudit?.[local.id] || []).slice(-49), audit] } }
     try {
-      await writeSyncedOrdersStore(next, `Sync ${local.salesOrderNumber} from Zoho`)
+      await writeSyncedOrdersStore(next, `Sync ${local.salesOrderNumber} from Zoho`, snapshot.sha)
       const verified = await readSyncedOrdersStore()
       if (verified.orders[local.id]?.zohoLastModifiedTime !== result.order.zohoLastModifiedTime) throw new Error('Order sync verification failed')
       return { order: result.order, diff: result.diff, changed: result.changed, audit }

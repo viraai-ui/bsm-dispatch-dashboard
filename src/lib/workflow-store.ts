@@ -101,8 +101,8 @@ export async function githubReadJson<T>(path: string, fallback: T): Promise<{ da
   }
 }
 
-export async function githubWriteJson<T>(path: string, data: T, message: string) {
-  const current = await githubReadJson<T>(path, data)
+export async function githubWriteJson<T>(path: string, data: T, message: string, expectedSha?: string) {
+  const current = expectedSha === undefined ? await githubReadJson<T>(path, data) : { data, sha: expectedSha }
   const body: Record<string, string> = { message, content: Buffer.from(JSON.stringify(data, null, 2)).toString('base64') }
   if (current.sha) body.sha = current.sha
   await githubRequest(`/contents/${path}`, { method: 'PUT', body: JSON.stringify(body) })
