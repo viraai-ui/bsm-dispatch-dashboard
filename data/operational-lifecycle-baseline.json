@@ -353,6 +353,16 @@
       "tombstonedAt": "2026-08-19T12:48:35.718Z",
       "cutoverVersion": "operational-lifecycle-baseline-v1",
       "cutoverDate": "2026-08-19"
+    },
+    "1154219000035903106": {
+      "orderId": "1154219000035903106",
+      "salesOrderNumber": "SO-07787",
+      "reason": "cancelled_from_dashboard",
+      "stageAtCutover": "ready_to_ship",
+      "tombstonedAt": "2026-09-01T08:23:29Z",
+      "cutoverVersion": "cancel-rts-reconciliation-v1",
+      "cutoverDate": "2026-09-01",
+      "sourceRevision": "2a4befb3c59896aed341ea7ee7e1dff3805e4ae4"
     }
   }
 }
