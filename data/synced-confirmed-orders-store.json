@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036269021": {
+      "id": "1154219000036269021",
+      "zohoSalesOrderId": "1154219000036269021",
+      "salesOrderNumber": "SO-07860",
+      "status": "open",
+      "customerName": "LANDMARK ENTERPRISES",
+      "shippingAddress": "105/03 A-2, PREM NAGAR, KANPUR, Kanpur Nagar, Uttar Pradesh, 208001",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036269024",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000277612",
+          "rate": 260000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036269021-1154219000036269024-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036269021",
+          "lineItemId": "1154219000036269024",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "LANDMARK ENTERPRISES",
+          "salesOrderNumber": "SO-07860",
+          "deliveryDate": "2026-09-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-01T13:25:20+0530"
+    },
     "1154219000036291007": {
       "id": "1154219000036291007",
       "zohoSalesOrderId": "1154219000036291007",
@@ -395,56 +445,6 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": "LowerLimit Switch"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-01T11:25:48+0530"
-    },
-    "1154219000036269008": {
-      "id": "1154219000036269008",
-      "zohoSalesOrderId": "1154219000036269008",
-      "salesOrderNumber": "SO-07857",
-      "status": "open",
-      "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
-      "shippingAddress": "Khasra No. 25/14 min, 15min, 26/11, 12/1,12/2, 12/3, 13/1, 13/2, 14/1min, 14/2min, 19, 20, 27//11/1/1/1, Bahadurgarh, Kassar, Jhajjar, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-01",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036269011",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000002187978",
-          "rate": 38000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036269008-1154219000036269011-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036269008",
-          "lineItemId": "1154219000036269011",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07857",
-          "deliveryDate": "2026-09-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ],
       "zohoLastModifiedTime": "2026-09-01T11:25:48+0530"
@@ -7673,9 +7673,9 @@
     }
   },
   "orderIds": [
+    "1154219000036269021",
     "1154219000036291007",
     "1154219000036295003",
-    "1154219000036269008",
     "1154219000036281030",
     "1154219000036281017",
     "1154219000036296003",
@@ -7718,8 +7718,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-01T07:48:15.637Z",
-  "lastAttemptAt": "2026-09-01T08:00:26.097Z",
+  "lastSuccessfulSyncAt": "2026-09-01T08:00:38.996Z",
+  "lastAttemptAt": "2026-09-01T08:00:38.996Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
