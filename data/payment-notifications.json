@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-691049dc-ebf9-4f53-b6da-4ada6a5b0125",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-f0c2dff4-fc10-4d12-9c41-19b432a93b71",
+      "salesOrderNumber": "SO-07856",
+      "customerName": "ACCLAIM INDUSTRIS",
+      "paymentAmount": 560000,
+      "createdAt": "2026-09-01T07:28:52.540Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-9a48eccb-3cc7-4d77-98df-c66d022fad56",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-f0c2dff4-fc10-4d12-9c41-19b432a93b71",
+      "salesOrderNumber": "SO-07856",
+      "customerName": "ACCLAIM INDUSTRIS",
+      "paymentAmount": 560000,
+      "createdAt": "2026-09-01T07:28:52.540Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-4c07f4bc-58b2-4da1-8e57-fdb4b981f597",
       "type": "payment-created",
       "recipientUserId": "u-admin",
