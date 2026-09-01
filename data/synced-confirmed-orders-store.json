@@ -7411,53 +7411,6 @@
           "itemDescription": ""
         }
       ]
-    },
-    "1154219000028400007": {
-      "id": "1154219000028400007",
-      "zohoSalesOrderId": "1154219000028400007",
-      "salesOrderNumber": "SO-06856",
-      "status": "open",
-      "customerName": "Trust Footwear Pvt. Ltd.",
-      "shippingAddress": "Tokha NagarPalika , Ward No:- 03 Saibaba Chowk ,, Kathmandu, Nepal",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-04-08",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000028400013",
-          "itemName": "Conveyor",
-          "sku": "",
-          "description": "56 Feet Pasting Conveyor with 3 Heating Chamber (6 Feet, 6 Feet, 8 Feet)",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000028400007-1154219000028400013-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000028400007",
-          "lineItemId": "1154219000028400013",
-          "itemName": "Conveyor",
-          "sku": "",
-          "customerName": "Trust Footwear Pvt. Ltd.",
-          "salesOrderNumber": "SO-06856",
-          "deliveryDate": "2026-04-08",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "56 Feet Pasting Conveyor with 3 Heating Chamber (6 Feet, 6 Feet, 8 Feet)"
-        }
-      ]
     }
   },
   "orderIds": [
@@ -7505,11 +7458,10 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000031446006",
-    "1154219000030035027",
-    "1154219000028400007"
+    "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-01T07:18:17.514Z",
-  "lastAttemptAt": "2026-09-01T07:20:25.279Z",
+  "lastSuccessfulSyncAt": "2026-09-01T07:20:39.581Z",
+  "lastAttemptAt": "2026-09-01T07:20:39.582Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
