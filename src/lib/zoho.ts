@@ -122,6 +122,8 @@ function mapLineItems(order: any): OrderLineItem[] {
       pendingQuantity: Math.max(0, quantity - shipped),
       woodenPackingRequired: woodenRequired,
       dimensions: item.dimensions,
+      zohoItemId: item.item_id ? String(item.item_id) : undefined,
+      rate: Number.isFinite(Number(item.rate)) ? Number(item.rate) : undefined,
     }
     return { ...lineItem, dispatchCategory: classifyDispatchItem(lineItem) }
   })
@@ -222,6 +224,7 @@ function mapOrder(order: any): Order {
     reviewRequired: false,
     lineItems,
     machines,
+    zohoLastModifiedTime: order.last_modified_time || order.updated_time || undefined,
   }
 }
 
@@ -326,7 +329,9 @@ async function enrichZohoLineItemDescriptions(order: any, token: string) {
 
 async function fetchZohoOrderDetailWithToken(id: string, token: string): Promise<Order> {
   const detail = await zohoGetWithRetry(`/inventory/v1/salesorders/${id}`, token)
-  if (!detail.salesorder?.salesorder_id) throw new Error(`Invalid Zoho sales order detail for ${id}`)
+  if (!detail.salesorder?.salesorder_id || String(detail.salesorder.salesorder_id) !== String(id)) throw new Error(`Invalid Zoho sales order detail for ${id}`)
+  const sourceStatus = String(detail.salesorder.status || detail.salesorder.current_sub_status || detail.salesorder.order_status || '').toLowerCase()
+  if (['cancelled', 'canceled', 'void', 'closed', 'rejected', 'deleted'].includes(sourceStatus)) throw new Error('ORDER_UNAVAILABLE_IN_ZOHO')
   await enrichZohoLineItemDescriptions(detail.salesorder, token)
   return mapOrder(detail.salesorder)
 }

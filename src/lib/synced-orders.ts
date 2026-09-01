@@ -1,6 +1,7 @@
 import type { MachineUnit, Order } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
-import { fetchZohoConfirmedOrders } from './zoho'
+import { fetchZohoConfirmedOrders, fetchZohoOrderDetail } from './zoho'
+import { reconcileOrder, type OrderSyncDiff } from './order-reconcile'
 import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
 import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 
@@ -11,10 +12,12 @@ export type SyncedOrdersStore = {
   lastAttemptAt?: string | null
   lastError?: string | null
   syncing?: boolean
+  orderSyncAudit?: Record<string, Array<{ actor: string; at: string; previousRevision?: string; currentRevision?: string; outcome: 'changed' | 'unchanged'; diff: OrderSyncDiff }>>
 }
 
 const SYNCED_ORDERS_PATH = 'data/synced-confirmed-orders-store.json'
 let inMemorySync: Promise<SyncedOrdersStore> | null = null
+const orderSyncs = new Map<string, Promise<unknown>>()
 
 const fallbackStore: SyncedOrdersStore = { orders: {}, orderIds: [], lastSuccessfulSyncAt: null }
 
@@ -111,6 +114,41 @@ export async function syncConfirmedOrders() {
   if (inMemorySync) return inMemorySync
   inMemorySync = performSync().finally(() => { inMemorySync = null })
   return inMemorySync
+}
+
+export async function syncSingleOrder(id: string, actor: string) {
+  const running = orderSyncs.get(id)
+  if (running) return running
+  const task = performSingleOrderSync(id, actor).finally(() => orderSyncs.delete(id))
+  orderSyncs.set(id, task)
+  return task
+}
+
+async function performSingleOrderSync(id: string, actor: string) {
+  const baseline = await githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })
+  const before = await readSyncedOrdersStore()
+  const local = before.orders[id] || Object.values(before.orders).find((o) => o.zohoSalesOrderId === id)
+  if (!local) throw new Error('Order not found')
+  if (isOrderTombstoned(local, baseline.data.tombstones)) throw new Error('CANCELLED_ORDER_TOMBSTONE')
+  const remote = await fetchZohoOrderDetail(local.zohoSalesOrderId)
+  const workflows = await listWorkflows(); const workflowIds = new Set(Object.keys(workflows[local.id]?.machines || {})); const at = new Date().toISOString()
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const current = await readSyncedOrdersStore(); const latest = current.orders[local.id]
+    if (!latest) throw new Error('Order disappeared during sync')
+    const result = reconcileOrder(latest, remote, workflowIds, at)
+    const audit = { actor, at, previousRevision: latest.zohoLastModifiedTime, currentRevision: remote.zohoLastModifiedTime, outcome: (result.changed ? 'changed' : 'unchanged') as 'changed' | 'unchanged', diff: result.diff }
+    const next = { ...current, orders: { ...current.orders, [local.id]: result.order }, lastSuccessfulSyncAt: at, orderSyncAudit: { ...(current.orderSyncAudit || {}), [local.id]: [...(current.orderSyncAudit?.[local.id] || []).slice(-49), audit] } }
+    try {
+      await writeSyncedOrdersStore(next, `Sync ${local.salesOrderNumber} from Zoho`)
+      const verified = await readSyncedOrdersStore()
+      if (verified.orders[local.id]?.zohoLastModifiedTime !== result.order.zohoLastModifiedTime) throw new Error('Order sync verification failed')
+      return { order: result.order, diff: result.diff, changed: result.changed, audit }
+    } catch (error) {
+      if (attempt === 2 || !String(error).match(/sha|409|does not match/i)) throw error
+      await new Promise((resolve) => setTimeout(resolve, 100 * (2 ** attempt)))
+    }
+  }
+  throw new Error('Order sync conflict')
 }
 
 async function performSync() {

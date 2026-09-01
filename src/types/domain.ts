@@ -14,6 +14,8 @@ export type OrderLineItem = {
   dispatchCategory?: DispatchCategory
   description?: string
   dimensions?: string
+  zohoItemId?: string
+  rate?: number
 }
 
 export type MachineUnit = {
@@ -41,6 +43,7 @@ export type MachineUnit = {
   warrantyEnd?: string
   vendor?: string
   dispatchNote?: string
+  sourceRemovedAt?: string
 }
 
 export type Order = {
@@ -58,6 +61,8 @@ export type Order = {
   reviewRequired: boolean
   lineItems: OrderLineItem[]
   machines: MachineUnit[]
+  retiredMachines?: MachineUnit[]
+  zohoLastModifiedTime?: string
 }
 
 export const statusTabs: { label: string; status: MachineStatus }[] = [
