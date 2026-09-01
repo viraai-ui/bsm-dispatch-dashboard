@@ -14771,6 +14771,73 @@
       "machineIds": [
         "1154219000036269008-1154219000036269011-1"
       ]
+    },
+    "1154219000035891004": {
+      "completedAt": "2026-09-01T10:36:28.551Z",
+      "order": {
+        "id": "1154219000035891004",
+        "zohoSalesOrderId": "1154219000035891004",
+        "salesOrderNumber": "SO-07769",
+        "status": "open",
+        "customerName": "DSI Industrial Automation and Machineries",
+        "shippingAddress": "132/2A, Suthi Mahalakshmi Nagar East, Malumichampatti, Coimbatore, Tamil Nadu, 641050",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-08-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035891007",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035891008",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight Cost Extra from BSM to VRL Logistics Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035891004-1154219000035891007-1",
+            "unitNumber": 1,
+            "serialNumber": "26271013",
+            "qrToken": "26271013",
+            "orderId": "1154219000035891004",
+            "lineItemId": "1154219000035891007",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "customerName": "DSI Industrial Automation and Machineries",
+            "salesOrderNumber": "SO-07769",
+            "deliveryDate": "2026-08-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-20",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035891004-1154219000035891007-1"
+      ]
     }
   }
 }
