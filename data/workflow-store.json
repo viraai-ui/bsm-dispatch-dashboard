@@ -20899,7 +20899,9 @@
     "1154219000036072023": {
       "salesOrderId": "1154219000036072023",
       "salesOrderNumber": "SO-07828",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-01T06:14:41.933Z",
       "processedOrder": {
         "id": "1154219000036072023",
         "zohoSalesOrderId": "1154219000036072023",
@@ -20927,8 +20929,8 @@
           {
             "id": "1154219000036072023-1154219000036072026-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271095",
+            "qrToken": "26271095",
             "orderId": "1154219000036072023",
             "lineItemId": "1154219000036072026",
             "itemName": "Automatic Screen Printing Machine (Single Station)",
@@ -20936,20 +20938,23 @@
             "customerName": "GARWARE FULFLEX I PVT LTD",
             "salesOrderNumber": "SO-07828",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000036072023-1154219000036072026-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271096",
+            "qrToken": "26271096",
             "orderId": "1154219000036072023",
             "lineItemId": "1154219000036072026",
             "itemName": "Automatic Screen Printing Machine (Single Station)",
@@ -20957,14 +20962,17 @@
             "customerName": "GARWARE FULFLEX I PVT LTD",
             "salesOrderNumber": "SO-07828",
             "deliveryDate": "2026-08-27",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ]
       },
@@ -20977,7 +20985,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-01T06:10:55.966Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-01T06:10:59.209Z"
+          "zohoBackupQueuedAt": "2026-09-01T06:10:59.209Z",
+          "processedAt": "2026-09-01T06:14:41.933Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000036072023-1154219000036072026-2": {
           "machineUnitId": "1154219000036072023-1154219000036072026-2",
@@ -20987,7 +20998,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-01T06:10:55.966Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-01T06:10:59.209Z"
+          "zohoBackupQueuedAt": "2026-09-01T06:10:59.209Z",
+          "processedAt": "2026-09-01T06:14:41.933Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
