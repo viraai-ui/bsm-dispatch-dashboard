@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "STEP STON FOOTWEARS LLP",
+      "salesOrderNumber": "SO-07758",
+      "paymentAmount": 18800,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Shivani",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07758/2026-09-01/1788275186275-dc7a6eef-c398-4a8b-acfa-aeab41511fd8-937f2328-6c2d-499d-9036-b6e1ac9a686a.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07758%2F2026-09-01%2F1788275186275-dc7a6eef-c398-4a8b-acfa-aeab41511fd8-937f2328-6c2d-499d-9036-b6e1ac9a686a.jpg",
+          "name": "937f2328-6c2d-499d-9036-b6e1ac9a686a.jpg",
+          "contentType": "image/jpeg",
+          "size": 54362
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07758/2026-09-01/1788275186275-dc7a6eef-c398-4a8b-acfa-aeab41511fd8-937f2328-6c2d-499d-9036-b6e1ac9a686a.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07758%2F2026-09-01%2F1788275186275-dc7a6eef-c398-4a8b-acfa-aeab41511fd8-937f2328-6c2d-499d-9036-b6e1ac9a686a.jpg",
+      "screenshotName": "937f2328-6c2d-499d-9036-b6e1ac9a686a.jpg",
+      "publicDeleteTokenHash": "bc5773d2705afc7bc408615317da2c49e2c01a66ee65d9dbae4dc0f340655b69",
+      "id": "payment-b15f04ac-2ed6-4c01-b060-98b842e80dab",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "b67d15e33ab64078967a7b25e9255754",
+      "createdAt": "2026-09-01T15:06:28.984Z",
+      "updatedAt": "2026-09-01T15:06:28.984Z"
+    },
+    {
       "customerName": "ACCLAIM INDUSTRIS",
       "salesOrderNumber": "SO-07856",
       "paymentAmount": 560000,
