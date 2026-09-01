@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-f86b436a-cb92-4ed1-98fc-0234240fa81c",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-b15f04ac-2ed6-4c01-b060-98b842e80dab",
+      "salesOrderNumber": "SO-07758",
+      "customerName": "STEP STON FOOTWEARS LLP",
+      "paymentAmount": 18800,
+      "createdAt": "2026-09-01T15:06:30.909Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-a3dd885e-e7d3-4ad6-b5bd-8dc4bedc45d4",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-b15f04ac-2ed6-4c01-b060-98b842e80dab",
+      "salesOrderNumber": "SO-07758",
+      "customerName": "STEP STON FOOTWEARS LLP",
+      "paymentAmount": 18800,
+      "createdAt": "2026-09-01T15:06:30.909Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-691049dc-ebf9-4f53-b6da-4ada6a5b0125",
       "type": "payment-created",
       "recipientUserId": "u-admin",
