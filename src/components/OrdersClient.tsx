@@ -315,6 +315,7 @@ function OrderModal({ order, stage, workflow, paymentStatus, canCancel, onClose,
       const json = await response.json().catch(() => ({}))
       if (!response.ok || !json.ok || !json.data?.cancelled) throw new Error(json.error || 'Cancellation could not be verified. Please retry.')
       onCancelled(order)
+      window.dispatchEvent(new Event('active-orders-invalidated'))
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Could not remove order. It remains visible; please retry.')
       setCancelConfirm(false)

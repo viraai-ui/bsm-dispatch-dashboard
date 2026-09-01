@@ -1,4 +1,5 @@
 import type { Order } from '@/types/domain'
+import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { uploadBufferToGithubMedia } from './github-media'
 import { githubReadJson, githubStoreConfigured, githubWriteJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
@@ -62,7 +63,7 @@ export async function cleanupExpiredMediaProofs(stage: MediaStage = 'packing') {
 export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   const { data: completedStore } = await githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} })
   const { data: shipmentStore } = await githubReadJson<ShipmentStore>('data/ready-to-ship-store.json', { shipments: {} })
-  const { data: baseline } = await githubReadJson<{ tombstones?: Record<string, unknown> }>('data/operational-lifecycle-baseline.json', {})
+  const { data: baseline } = await githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })
   const completed = completedStore.completed || {}
   const completedAtByOrderId = new Map(Object.entries(completed).map(([orderId, item]) => [orderId, Date.parse(item.completedAt || '') || 0]))
   const processedWorkflows = stage === 'packing' ? await listProcessedOrders() : []
@@ -74,7 +75,7 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
 
   const sourceOrders = (stage === 'packing' ? processedWorkflows.map((workflow) => workflow.processedOrder) : Object.values(completed).map((item) => item.order))
     .filter((order): order is Order => Boolean(order))
-    .filter((order) => !baseline.tombstones?.[order.id])
+    .filter((order) => !isOrderTombstoned(order, baseline.tombstones))
     .filter((order) => !isLocallyTerminal(shipmentStore.shipments[order.id]))
 
   const sortTimeByOrderId = stage === 'packing'

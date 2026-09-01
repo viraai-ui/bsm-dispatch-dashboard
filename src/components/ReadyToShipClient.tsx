@@ -64,10 +64,13 @@ export function ReadyToShipClient({ initialItems, initialTransporters }: { initi
 
   useEffect(() => {
     void refreshPaymentProjection()
+    void refresh({ silent: true })
     const interval = window.setInterval(() => { void refresh({ sync: true, silent: true }) }, 15 * 60 * 1000)
-    const focus = () => void refreshPaymentProjection()
+    const focus = () => { void refreshPaymentProjection(); void refresh({ silent: true }) }
+    const invalidated = () => void refresh({ silent: true })
     window.addEventListener('focus', focus)
-    return () => { window.clearInterval(interval); window.removeEventListener('focus', focus) }
+    window.addEventListener('active-orders-invalidated', invalidated)
+    return () => { window.clearInterval(interval); window.removeEventListener('focus', focus); window.removeEventListener('active-orders-invalidated', invalidated) }
   }, [refreshPaymentProjection])
 
   async function addNewTransporter(event: React.FormEvent) {

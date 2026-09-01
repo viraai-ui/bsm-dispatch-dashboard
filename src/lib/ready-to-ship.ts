@@ -1,6 +1,7 @@
 import type { MachineUnit, Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson } from './workflow-store'
 import { readMediaProofStore, type MediaUpload } from './media-proof'
+import { isOrderIdentityTombstoned, type LifecycleBaselineStore } from './operational-orders'
 
 
 const COMPLETED_PATH = 'data/packaging-completed-store.json'
@@ -71,14 +72,14 @@ export async function listReadyToShipItems() {
     githubReadJson<CompletedStore>(COMPLETED_PATH, { completed: {} }),
     readMediaProofStore('packing'),
     readShipmentStore(),
-    githubReadJson<{ tombstones?: Record<string, unknown> }>('data/operational-lifecycle-baseline.json', {}),
+    githubReadJson<LifecycleBaselineStore>('data/operational-lifecycle-baseline.json', { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} }),
   ])
 
   const items: ReadyToShipItem[] = []
   for (const [orderId, completed] of Object.entries(completedStore.completed || {})) {
-    if (baseline.tombstones?.[orderId]) continue
     const order = completed.order
     if (!order) continue
+    if (isOrderIdentityTombstoned({ orderId, zohoSalesOrderId: order.zohoSalesOrderId, salesOrderNumber: order.salesOrderNumber }, baseline.tombstones)) continue
 
     const allowedMachineIds = new Set(completed.machineIds?.length ? completed.machineIds : (order.machines || []).map((machine) => machine.id))
     const record = packingStore.records[orderId]

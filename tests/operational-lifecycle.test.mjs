@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { projectOperationalOrders, isLocallyTerminal } from '../src/lib/operational-orders.ts'
+import { projectOperationalOrders, isLocallyTerminal, isOrderIdentityTombstoned } from '../src/lib/operational-orders.ts'
 
 const order = (id, status = 'confirmed') => ({ id, status, salesOrderNumber: id, customerName: id, lineItems: [], machines: [] })
 const workflow = (id, snapshot = order(id)) => ({ salesOrderId: id, salesOrderNumber: id, status: 'processed', processedAt: '2026-01-01T00:00:00Z', processedOrder: snapshot, machines: {} })
@@ -52,6 +52,15 @@ test('admin cancellation matches stable id first and normalized SO fallback whil
   assert.equal(result.byId['new-source-id'], undefined)
   assert.equal(history.order.salesOrderNumber, 'SO-00123')
   assert.equal(cancelled.actor.id, 'admin')
+})
+
+test('queue identity matching uses stable id first and normalized SO fallback without mutating history', () => {
+  const cancelled = { ...tombstone('source-id'), salesOrderNumber: 'SO-07787', reason: 'cancelled_from_dashboard' }
+  const tombstones = { 'source-id': cancelled }
+  assert.equal(isOrderIdentityTombstoned({ orderId: 'source-id', salesOrderNumber: 'unrelated' }, tombstones), true)
+  assert.equal(isOrderIdentityTombstoned({ orderId: 'legacy-queue-id', salesOrderNumber: ' so 07787 ' }, tombstones), true)
+  assert.equal(isOrderIdentityTombstoned({ orderId: 'other', salesOrderNumber: 'SO-07788' }, tombstones), false)
+  assert.equal(cancelled.salesOrderNumber, 'SO-07787')
 })
 
 test('packaging completion advances order and removes it from dispatch projection', () => {

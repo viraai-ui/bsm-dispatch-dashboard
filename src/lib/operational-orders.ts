@@ -35,8 +35,14 @@ export function normalizeOrderNumber(value?: string) {
 }
 
 export function isOrderTombstoned(order: Pick<Order, 'id' | 'zohoSalesOrderId' | 'salesOrderNumber'>, tombstones: Record<string, LifecycleTombstone>) {
-  if (tombstones[order.id] || (order.zohoSalesOrderId && tombstones[order.zohoSalesOrderId])) return true
-  const number = normalizeOrderNumber(order.salesOrderNumber)
+  return isOrderIdentityTombstoned({ orderId: order.id, zohoSalesOrderId: order.zohoSalesOrderId, salesOrderNumber: order.salesOrderNumber }, tombstones)
+}
+
+/** Cancellation boundary for queue/read-model records that may not carry a full Order.
+ * Stable source IDs win; normalized SO is the compatibility fallback for legacy snapshots. */
+export function isOrderIdentityTombstoned(identity: { orderId?: string; zohoSalesOrderId?: string; salesOrderNumber?: string }, tombstones: Record<string, LifecycleTombstone>) {
+  if ((identity.orderId && tombstones[identity.orderId]) || (identity.zohoSalesOrderId && tombstones[identity.zohoSalesOrderId])) return true
+  const number = normalizeOrderNumber(identity.salesOrderNumber)
   return Boolean(number && Object.values(tombstones).some((item) => normalizeOrderNumber(item.salesOrderNumber) === number))
 }
 

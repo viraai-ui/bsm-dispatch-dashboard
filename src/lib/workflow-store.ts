@@ -1,4 +1,5 @@
 import type { Order } from '@/types/domain'
+import { isOrderIdentityTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
 export function isGitHubWriteConflict(error: unknown) {
@@ -149,9 +150,9 @@ export async function listWorkflows() {
 }
 
 export async function listProcessedOrders() {
-  const [{ store }, baseline] = await Promise.all([readStoreWithSha(), githubReadJson<{ tombstones?: Record<string, unknown> }>('data/operational-lifecycle-baseline.json', {})])
+  const [{ store }, baseline] = await Promise.all([readStoreWithSha(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
   return Object.values(store.orders).filter((order) => {
-    if (baseline.data.tombstones?.[order.salesOrderId]) return false
+    if (isOrderIdentityTombstoned({ orderId: order.salesOrderId, zohoSalesOrderId: order.processedOrder?.zohoSalesOrderId, salesOrderNumber: order.salesOrderNumber || order.processedOrder?.salesOrderNumber }, baseline.data.tombstones)) return false
     const machines = Object.values(order.machines || {})
     return machines.some((machine) => machine.processedAt && !machine.dispatchedAt) || (order.status === 'processed' && order.processedOrder && machines.length === 0)
   })
