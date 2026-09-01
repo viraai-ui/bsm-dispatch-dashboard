@@ -5212,6 +5212,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036281030": {
+      "id": "ship-1788258189041-i007q",
+      "itemId": "1154219000036281030",
+      "orderId": "1154219000036281030",
+      "machineId": "1154219000036281030-1154219000036281033-1",
+      "salesOrderNumber": "SO-07856",
+      "customerName": "ACCLAIM INDUSTRIS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "HR63D4992",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-01",
+      "notes": "",
+      "shippedAt": "2026-09-01T10:23:09.041Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
