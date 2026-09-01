@@ -21012,7 +21012,9 @@
     "1154219000036269008": {
       "salesOrderId": "1154219000036269008",
       "salesOrderNumber": "SO-07857",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-01T06:49:18.059Z",
       "processedOrder": {
         "id": "1154219000036269008",
         "zohoSalesOrderId": "1154219000036269008",
@@ -21040,8 +21042,8 @@
           {
             "id": "1154219000036269008-1154219000036269011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271097",
+            "qrToken": "26271097",
             "orderId": "1154219000036269008",
             "lineItemId": "1154219000036269011",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -21049,14 +21051,17 @@
             "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07857",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "vendor": "Rawal Ji",
+            "dispatchNote": "local"
           }
         ]
       },
@@ -21071,7 +21076,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T06:45:58.671Z",
           "zohoBackupLastAttemptAt": "2026-09-01T06:46:32.128Z",
-          "zohoBackupSyncedAt": "2026-09-01T06:46:32.128Z"
+          "zohoBackupSyncedAt": "2026-09-01T06:46:32.128Z",
+          "processedAt": "2026-09-01T06:49:18.059Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal Ji"
         }
       }
     }
