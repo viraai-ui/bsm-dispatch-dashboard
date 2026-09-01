@@ -14715,6 +14715,62 @@
       "machineIds": [
         "1154219000036281030-1154219000036281033-1"
       ]
+    },
+    "1154219000036269008": {
+      "completedAt": "2026-09-01T07:44:44.018Z",
+      "order": {
+        "id": "1154219000036269008",
+        "zohoSalesOrderId": "1154219000036269008",
+        "salesOrderNumber": "SO-07857",
+        "status": "open",
+        "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
+        "shippingAddress": "Khasra No. 25/14 min, 15min, 26/11, 12/1,12/2, 12/3, 13/1, 13/2, 14/1min, 14/2min, 19, 20, 27//11/1/1/1, Bahadurgarh, Kassar, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036269011",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036269008-1154219000036269011-1",
+            "unitNumber": 1,
+            "serialNumber": "26271097",
+            "qrToken": "26271097",
+            "orderId": "1154219000036269008",
+            "lineItemId": "1154219000036269011",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07857",
+            "deliveryDate": "2026-09-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036269008-1154219000036269011-1"
+      ]
     }
   }
 }
