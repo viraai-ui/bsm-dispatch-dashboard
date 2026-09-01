@@ -5181,6 +5181,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036269008": {
+      "id": "ship-1788248958278-ms9nm",
+      "itemId": "1154219000036269008",
+      "orderId": "1154219000036269008",
+      "machineId": "1154219000036269008-1154219000036269011-1",
+      "salesOrderNumber": "SO-07857",
+      "customerName": "NEXGEN FOOTWEARS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL0LAP8199",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-01",
+      "notes": "",
+      "shippedAt": "2026-09-01T07:49:18.278Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
