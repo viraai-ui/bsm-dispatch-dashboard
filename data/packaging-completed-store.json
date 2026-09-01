@@ -14658,6 +14658,63 @@
       "machineIds": [
         "1154219000035991020-1154219000035991023-1"
       ]
+    },
+    "1154219000036281030": {
+      "completedAt": "2026-09-01T05:51:15.641Z",
+      "order": {
+        "id": "1154219000036281030",
+        "zohoSalesOrderId": "1154219000036281030",
+        "salesOrderNumber": "SO-07856",
+        "status": "open",
+        "customerName": "ACCLAIM INDUSTRIS",
+        "shippingAddress": "Sector-17 Plot No. 318, HSIIDC, Footwear Park, Bahadurgarh-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036281033",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036281030-1154219000036281033-1",
+            "unitNumber": 1,
+            "serialNumber": "26271094",
+            "qrToken": "26271094",
+            "orderId": "1154219000036281030",
+            "lineItemId": "1154219000036281033",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "ACCLAIM INDUSTRIS",
+            "salesOrderNumber": "SO-07856",
+            "deliveryDate": "2026-09-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-08-31",
+            "dispatchNote": "local"
+          }
+        ],
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000036281030-1154219000036281033-1"
+      ]
     }
   }
 }
