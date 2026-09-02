@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-6e564288-facf-44a6-a2f3-aea5e2092904",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-3a6f69c6-d10a-4e4d-abc1-9eb6618a2fad",
+      "salesOrderNumber": "SO-07867",
+      "customerName": "GURUJI FOOTWEAR",
+      "paymentAmount": 20060,
+      "createdAt": "2026-09-02T07:39:33.300Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-2a6bc898-dc75-4bb1-9e10-e8e61e7acee9",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-3a6f69c6-d10a-4e4d-abc1-9eb6618a2fad",
+      "salesOrderNumber": "SO-07867",
+      "customerName": "GURUJI FOOTWEAR",
+      "paymentAmount": 20060,
+      "createdAt": "2026-09-02T07:39:33.300Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-16f0f879-08c2-4d88-8d00-e8a80b3e3760",
       "type": "payment-created",
       "recipientUserId": "u-admin",
