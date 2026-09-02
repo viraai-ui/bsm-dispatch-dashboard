@@ -14918,6 +14918,66 @@
         "1154219000036072023-1154219000036072026-1",
         "1154219000036072023-1154219000036072026-2"
       ]
+    },
+    "1154219000036315004": {
+      "completedAt": "2026-09-02T04:54:59.619Z",
+      "order": {
+        "id": "1154219000036315004",
+        "zohoSalesOrderId": "1154219000036315004",
+        "salesOrderNumber": "SO-07863",
+        "status": "open",
+        "customerName": "Everest Footwear Industries",
+        "shippingAddress": "Plor No. 32/6/2, Mie, Part-A, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-02",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036315007",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000279556",
+            "rate": 450000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036315004-1154219000036315007-1",
+            "unitNumber": 1,
+            "serialNumber": "26271098",
+            "qrToken": "26271098",
+            "orderId": "1154219000036315004",
+            "lineItemId": "1154219000036315007",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "customerName": "Everest Footwear Industries",
+            "salesOrderNumber": "SO-07863",
+            "deliveryDate": "2026-09-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-01T17:08:24+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036315004-1154219000036315007-1"
+      ]
     }
   }
 }
