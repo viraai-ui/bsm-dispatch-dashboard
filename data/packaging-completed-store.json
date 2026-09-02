@@ -15143,6 +15143,78 @@
         "1154219000036386001-1154219000036386004-2",
         "1154219000036386001-1154219000036386004-3"
       ]
+    },
+    "1154219000036356475": {
+      "completedAt": "2026-09-02T11:21:26.008Z",
+      "order": {
+        "id": "1154219000036356475",
+        "zohoSalesOrderId": "1154219000036356475",
+        "salesOrderNumber": "SO-07870",
+        "status": "open",
+        "customerName": "NIKHIL UDHYOG NAGAR",
+        "shippingAddress": "D-14, UDYOG NAGAR, MAIN ROHTAK ROAD, DELHI, North Delhi, Delhi, 110041, Delhi",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-02",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036356478",
+            "itemName": "Sole Hammering Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280139",
+            "rate": 137000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036356479",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 500,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036356475-1154219000036356478-1",
+            "unitNumber": 1,
+            "serialNumber": "26271109",
+            "qrToken": "26271109",
+            "orderId": "1154219000036356475",
+            "lineItemId": "1154219000036356478",
+            "itemName": "Sole Hammering Machine",
+            "sku": "",
+            "customerName": "NIKHIL UDHYOG NAGAR",
+            "salesOrderNumber": "SO-07870",
+            "deliveryDate": "2026-09-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-02",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-02T15:52:38+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000036356475-1154219000036356478-1"
+      ]
     }
   }
 }
