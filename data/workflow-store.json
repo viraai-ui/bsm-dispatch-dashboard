@@ -21613,8 +21613,10 @@
           "qrToken": "26271105",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-02T08:40:12.566Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
+          "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
+          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
         },
         "1154219000036386001-1154219000036386004-2": {
           "machineUnitId": "1154219000036386001-1154219000036386004-2",
@@ -21623,8 +21625,10 @@
           "qrToken": "26271106",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-02T08:40:12.566Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
+          "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
+          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
         },
         "1154219000036386001-1154219000036386004-3": {
           "machineUnitId": "1154219000036386001-1154219000036386004-3",
@@ -21633,8 +21637,10 @@
           "qrToken": "26271107",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-02T08:40:12.566Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
+          "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
+          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
         }
       }
     }
