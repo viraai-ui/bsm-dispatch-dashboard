@@ -1,5 +1,117 @@
 {
   "orders": {
+    "1154219000036356475": {
+      "id": "1154219000036356475",
+      "zohoSalesOrderId": "1154219000036356475",
+      "salesOrderNumber": "SO-07870",
+      "status": "open",
+      "customerName": "NIKHIL UDHYOG NAGAR",
+      "shippingAddress": "D-14, UDYOG NAGAR, MAIN ROHTAK ROAD, DELHI, North Delhi, Delhi, 110041, Delhi",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-09-02",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036356478",
+          "itemName": "Sole Hammering Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000280139",
+          "rate": 137000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036356479",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 500,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036356475-1154219000036356478-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036356475",
+          "lineItemId": "1154219000036356478",
+          "itemName": "Sole Hammering Machine",
+          "sku": "",
+          "customerName": "NIKHIL UDHYOG NAGAR",
+          "salesOrderNumber": "SO-07870",
+          "deliveryDate": "2026-09-02",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-02T15:52:38+0530"
+    },
+    "1154219000036402003": {
+      "id": "1154219000036402003",
+      "zohoSalesOrderId": "1154219000036402003",
+      "salesOrderNumber": "SO-07869",
+      "status": "open",
+      "customerName": "Shanti Impex India",
+      "shippingAddress": "Sector-53, Plot No 179,, Ph-V, HSIIDC, Industrial Estate, Kundli, Sonipat, Haryana, 131028",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-02",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036402006",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "description": "(One Year Service) (Spare Parts Chargeable)",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225837",
+          "rate": 38000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036402003-1154219000036402006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036402003",
+          "lineItemId": "1154219000036402006",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "customerName": "Shanti Impex India",
+          "salesOrderNumber": "SO-07869",
+          "deliveryDate": "2026-09-02",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "(One Year Service) (Spare Parts Chargeable)"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-02T15:52:38+0530"
+    },
     "1154219000036386001": {
       "id": "1154219000036386001",
       "zohoSalesOrderId": "1154219000036386001",
@@ -7977,6 +8089,8 @@
     }
   },
   "orderIds": [
+    "1154219000036356475",
+    "1154219000036402003",
     "1154219000036386001",
     "1154219000036259722",
     "1154219000036315004",
@@ -8022,8 +8136,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T10:20:41.473Z",
-  "lastAttemptAt": "2026-09-02T10:22:44.762Z",
+  "lastSuccessfulSyncAt": "2026-09-02T10:22:57.102Z",
+  "lastAttemptAt": "2026-09-02T10:22:57.102Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
