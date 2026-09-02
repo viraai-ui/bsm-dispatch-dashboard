@@ -5317,6 +5317,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036356475": {
+      "id": "ship-1788348713958-fzyw5",
+      "itemId": "1154219000036356475",
+      "orderId": "1154219000036356475",
+      "machineId": "1154219000036356475-1154219000036356478-1",
+      "salesOrderNumber": "SO-07870",
+      "customerName": "NIKHIL UDHYOG NAGAR",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL04EC3957",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-02",
+      "notes": "",
+      "shippedAt": "2026-09-02T11:31:53.958Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
