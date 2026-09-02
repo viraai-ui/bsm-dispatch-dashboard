@@ -15038,6 +15038,111 @@
       "machineIds": [
         "1154219000036383001-1154219000036383004-1"
       ]
+    },
+    "1154219000036386001": {
+      "completedAt": "2026-09-02T10:31:39.716Z",
+      "order": {
+        "id": "1154219000036386001",
+        "zohoSalesOrderId": "1154219000036386001",
+        "salesOrderNumber": "SO-07868",
+        "status": "open",
+        "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
+        "shippingAddress": "Building No.7/527 Y, Plot No.36, Industrial Growth Center, KSIDC,Kinaloor, Balusseri, Kozhikode, KERALA, 673612, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-02",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036386004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "Plain Roller Including Wooden",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 48000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036386001-1154219000036386004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271105",
+            "qrToken": "26271105",
+            "orderId": "1154219000036386001",
+            "lineItemId": "1154219000036386004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
+            "salesOrderNumber": "SO-07868",
+            "deliveryDate": "2026-09-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller Including Wooden",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036386001-1154219000036386004-2",
+            "unitNumber": 2,
+            "serialNumber": "26271106",
+            "qrToken": "26271106",
+            "orderId": "1154219000036386001",
+            "lineItemId": "1154219000036386004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
+            "salesOrderNumber": "SO-07868",
+            "deliveryDate": "2026-09-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller Including Wooden",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036386001-1154219000036386004-3",
+            "unitNumber": 3,
+            "serialNumber": "26271107",
+            "qrToken": "26271107",
+            "orderId": "1154219000036386001",
+            "lineItemId": "1154219000036386004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
+            "salesOrderNumber": "SO-07868",
+            "deliveryDate": "2026-09-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Plain Roller Including Wooden",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-02T14:11:50+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036386001-1154219000036386004-1",
+        "1154219000036386001-1154219000036386004-2",
+        "1154219000036386001-1154219000036386004-3"
+      ]
     }
   }
 }
