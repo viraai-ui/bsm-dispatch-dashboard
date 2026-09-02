@@ -21433,7 +21433,9 @@
     "1154219000036383001": {
       "salesOrderId": "1154219000036383001",
       "salesOrderNumber": "SO-07867",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-02T07:00:12.338Z",
       "processedOrder": {
         "id": "1154219000036383001",
         "zohoSalesOrderId": "1154219000036383001",
@@ -21463,8 +21465,8 @@
           {
             "id": "1154219000036383001-1154219000036383004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271104",
+            "qrToken": "26271104",
             "orderId": "1154219000036383001",
             "lineItemId": "1154219000036383004",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -21472,14 +21474,17 @@
             "customerName": "GURUJI FOOTWEAR",
             "salesOrderNumber": "SO-07867",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-02",
+            "vendor": "S S Enterprises",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-02T12:24:35+0530"
@@ -21493,7 +21498,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-02T06:56:50.600Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-02T06:56:54.483Z"
+          "zohoBackupQueuedAt": "2026-09-02T06:56:54.483Z",
+          "processedAt": "2026-09-02T07:00:12.338Z",
+          "dispatchNote": "local",
+          "vendor": "S S Enterprises"
         }
       }
     }
