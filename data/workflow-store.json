@@ -21647,7 +21647,9 @@
     "1154219000036402003": {
       "salesOrderId": "1154219000036402003",
       "salesOrderNumber": "SO-07869",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-02T10:25:45.584Z",
       "processedOrder": {
         "id": "1154219000036402003",
         "zohoSalesOrderId": "1154219000036402003",
@@ -21677,8 +21679,8 @@
           {
             "id": "1154219000036402003-1154219000036402006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271108",
+            "qrToken": "26271108",
             "orderId": "1154219000036402003",
             "lineItemId": "1154219000036402006",
             "itemName": "Flesh trimming Machine",
@@ -21686,14 +21688,17 @@
             "customerName": "Shanti Impex India",
             "salesOrderNumber": "SO-07869",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )"
+            "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )",
+            "warrantyStart": "2026-09-02",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-02T15:53:44+0530"
@@ -21707,7 +21712,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-02T10:24:53.043Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-02T10:24:56.391Z"
+          "zohoBackupQueuedAt": "2026-09-02T10:24:56.391Z",
+          "processedAt": "2026-09-02T10:25:45.584Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
