@@ -5255,6 +5255,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036383001": {
+      "id": "ship-1788342668637-tv7qx",
+      "itemId": "1154219000036383001",
+      "orderId": "1154219000036383001",
+      "machineId": "1154219000036383001-1154219000036383004-1",
+      "salesOrderNumber": "SO-07867",
+      "customerName": "GURUJI FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-02",
+      "notes": "",
+      "shippedAt": "2026-09-02T09:51:08.637Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
