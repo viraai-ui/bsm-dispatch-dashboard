@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-f2a5e16f-01d3-4a86-8ae0-0392b27f0349",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-9906d618-6273-4e3a-b827-a6b079c2cdcf",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Ankit Aggarwal",
+      "paymentAmount": 137500,
+      "createdAt": "2026-09-02T10:32:06.512Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-7854bb09-6ed2-4541-8edb-30162bc3c50d",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-9906d618-6273-4e3a-b827-a6b079c2cdcf",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Ankit Aggarwal",
+      "paymentAmount": 137500,
+      "createdAt": "2026-09-02T10:32:06.512Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-0ab993f9-5253-4d6b-9f01-98ba7422c5fe",
       "type": "payment-created",
       "recipientUserId": "u-admin",
