@@ -21722,7 +21722,9 @@
     "1154219000036356475": {
       "salesOrderId": "1154219000036356475",
       "salesOrderNumber": "SO-07870",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-02T10:27:05.069Z",
       "processedOrder": {
         "id": "1154219000036356475",
         "zohoSalesOrderId": "1154219000036356475",
@@ -21764,8 +21766,8 @@
           {
             "id": "1154219000036356475-1154219000036356478-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271109",
+            "qrToken": "26271109",
             "orderId": "1154219000036356475",
             "lineItemId": "1154219000036356478",
             "itemName": "Sole Hammering Machine",
@@ -21773,14 +21775,17 @@
             "customerName": "NIKHIL UDHYOG NAGAR",
             "salesOrderNumber": "SO-07870",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-02",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-02T15:52:38+0530"
@@ -21794,7 +21799,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-02T10:26:26.528Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-02T10:26:29.796Z"
+          "zohoBackupQueuedAt": "2026-09-02T10:26:29.796Z",
+          "processedAt": "2026-09-02T10:27:05.069Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
