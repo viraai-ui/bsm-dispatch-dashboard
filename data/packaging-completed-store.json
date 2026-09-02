@@ -15215,6 +15215,66 @@
       "machineIds": [
         "1154219000036356475-1154219000036356478-1"
       ]
+    },
+    "1154219000036402003": {
+      "completedAt": "2026-09-02T11:21:34.831Z",
+      "order": {
+        "id": "1154219000036402003",
+        "zohoSalesOrderId": "1154219000036402003",
+        "salesOrderNumber": "SO-07869",
+        "status": "open",
+        "customerName": "Shanti Impex India",
+        "shippingAddress": "Sector-53, Plot No 179,, Ph-V, HSIIDC, Industrial Estate, Kundli, Sonipat, Haryana, 131028",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-02",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036402006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "(One Year Service) (Spare Parts Chargeable) ( Only head )",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225837",
+            "rate": 38000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036402003-1154219000036402006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271108",
+            "qrToken": "26271108",
+            "orderId": "1154219000036402003",
+            "lineItemId": "1154219000036402006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "Shanti Impex India",
+            "salesOrderNumber": "SO-07869",
+            "deliveryDate": "2026-09-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )",
+            "warrantyStart": "2026-09-02",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-02T15:53:44+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000036402003-1154219000036402006-1"
+      ]
     }
   }
 }
