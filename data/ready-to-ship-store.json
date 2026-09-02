@@ -5286,6 +5286,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036402003": {
+      "id": "ship-1788348134552-1vg29",
+      "itemId": "1154219000036402003",
+      "orderId": "1154219000036402003",
+      "machineId": "1154219000036402003-1154219000036402006-1",
+      "salesOrderNumber": "SO-07869",
+      "customerName": "Shanti Impex India",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-02",
+      "notes": "",
+      "shippedAt": "2026-09-02T11:22:14.552Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
