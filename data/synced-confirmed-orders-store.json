@@ -71,11 +71,11 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000000280139",
-          "rate": 137000,
+          "rate": 136576.28,
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000036356479",
+          "id": "1154219000036359635",
           "itemName": "Freight/ Transportation Charges",
           "sku": "",
           "description": "",
@@ -83,7 +83,7 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000004888581",
-          "rate": 500,
+          "rate": 424,
           "dispatchCategory": "freight"
         }
       ],
@@ -110,7 +110,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-02T16:30:12+0530"
+      "zohoLastModifiedTime": "2026-09-02T16:48:05+0530"
     },
     "1154219000036402003": {
       "id": "1154219000036402003",
@@ -8187,8 +8187,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T11:00:39.965Z",
-  "lastAttemptAt": "2026-09-02T11:20:25.164Z",
+  "lastSuccessfulSyncAt": "2026-09-02T11:20:39.079Z",
+  "lastAttemptAt": "2026-09-02T11:20:39.079Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
