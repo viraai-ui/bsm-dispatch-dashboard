@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036356561": {
+      "id": "1154219000036356561",
+      "zohoSalesOrderId": "1154219000036356561",
+      "salesOrderNumber": "SO-07871",
+      "status": "open",
+      "customerName": "V R SEWING MACHINE",
+      "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-02",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036356564",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226814",
+          "rate": 75000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036356561-1154219000036356564-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036356561",
+          "lineItemId": "1154219000036356564",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "customerName": "V R SEWING MACHINE",
+          "salesOrderNumber": "SO-07871",
+          "deliveryDate": "2026-09-02",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-02T16:06:38+0530"
+    },
     "1154219000036356475": {
       "id": "1154219000036356475",
       "zohoSalesOrderId": "1154219000036356475",
@@ -8089,6 +8139,7 @@
     }
   },
   "orderIds": [
+    "1154219000036356561",
     "1154219000036356475",
     "1154219000036402003",
     "1154219000036386001",
@@ -8136,8 +8187,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T10:24:07.742Z",
-  "lastAttemptAt": "2026-09-02T10:40:25.148Z",
+  "lastSuccessfulSyncAt": "2026-09-02T10:40:39.617Z",
+  "lastAttemptAt": "2026-09-02T10:40:39.617Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
