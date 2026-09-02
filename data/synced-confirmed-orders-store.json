@@ -1,32 +1,54 @@
 {
   "orders": {
-    "1154219000036371007": {
-      "id": "1154219000036371007",
-      "zohoSalesOrderId": "1154219000036371007",
-      "salesOrderNumber": "SO-07866",
+    "1154219000036383001": {
+      "id": "1154219000036383001",
+      "zohoSalesOrderId": "1154219000036383001",
+      "salesOrderNumber": "SO-07867",
       "status": "open",
-      "customerName": "RAJYAREKHA TRADE PVT. LTD.",
-      "shippingAddress": "Plot No. 1021, MIE-A, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
+      "customerName": "GURUJI FOOTWEAR",
+      "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
+      "salesperson": "Karan Singh",
       "deliveryDate": "2026-09-02",
-      "dashboardStatus": "Review Required",
+      "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036371010",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
+          "id": "1154219000036383004",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
           "description": "",
-          "quantity": 25,
-          "pendingQuantity": 25,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 320,
-          "dispatchCategory": "adhesive"
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000278601",
+          "rate": 17000,
+          "dispatchCategory": "machine"
         }
       ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-02T11:55:35+0530"
+      "machines": [
+        {
+          "id": "1154219000036383001-1154219000036383004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036383001",
+          "lineItemId": "1154219000036383004",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "customerName": "GURUJI FOOTWEAR",
+          "salesOrderNumber": "SO-07867",
+          "deliveryDate": "2026-09-02",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-02T12:24:35+0530"
     },
     "1154219000036378001": {
       "id": "1154219000036378001",
@@ -7941,7 +7963,7 @@
     }
   },
   "orderIds": [
-    "1154219000036371007",
+    "1154219000036383001",
     "1154219000036378001",
     "1154219000036259722",
     "1154219000036315004",
@@ -7987,8 +8009,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T06:53:34.972Z",
-  "lastAttemptAt": "2026-09-02T06:55:44.719Z",
+  "lastSuccessfulSyncAt": "2026-09-02T06:55:59.801Z",
+  "lastAttemptAt": "2026-09-02T06:55:59.801Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
