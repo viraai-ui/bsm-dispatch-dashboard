@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271107,
+  "serialCounter": 26271108,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -21641,6 +21641,70 @@
           "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
           "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
           "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
+        }
+      }
+    },
+    "1154219000036402003": {
+      "salesOrderId": "1154219000036402003",
+      "salesOrderNumber": "SO-07869",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036402003",
+        "zohoSalesOrderId": "1154219000036402003",
+        "salesOrderNumber": "SO-07869",
+        "status": "open",
+        "customerName": "Shanti Impex India",
+        "shippingAddress": "Sector-53, Plot No 179,, Ph-V, HSIIDC, Industrial Estate, Kundli, Sonipat, Haryana, 131028",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-02",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036402006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "(One Year Service) (Spare Parts Chargeable) ( Only head )",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225837",
+            "rate": 38000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036402003-1154219000036402006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036402003",
+            "lineItemId": "1154219000036402006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "Shanti Impex India",
+            "salesOrderNumber": "SO-07869",
+            "deliveryDate": "2026-09-02",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-02T15:53:44+0530"
+      },
+      "machines": {
+        "1154219000036402003-1154219000036402006-1": {
+          "machineUnitId": "1154219000036402003-1154219000036402006-1",
+          "lineItemId": "1154219000036402006",
+          "serialNumber": "26271108",
+          "qrToken": "26271108",
+          "qrStatus": "pending"
         }
       }
     }
