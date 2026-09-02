@@ -5161,56 +5161,6 @@
       ],
       "zohoLastModifiedTime": "2026-08-21T16:44:17+0530"
     },
-    "1154219000035891025": {
-      "id": "1154219000035891025",
-      "zohoSalesOrderId": "1154219000035891025",
-      "salesOrderNumber": "SO-07779",
-      "status": "open",
-      "customerName": "JAMA CORPORATION PVT.LTD.",
-      "shippingAddress": "8/2-B, ARYA NAGAR, KANPUR, Kanpur Nagar, Kanpur, Uttar Pradesh, 208002, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-20",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035891028",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278034",
-          "rate": 565000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035891025-1154219000035891028-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035891025",
-          "lineItemId": "1154219000035891028",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "JAMA CORPORATION PVT.LTD.",
-          "salesOrderNumber": "SO-07779",
-          "deliveryDate": "2026-08-20",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-08-20T17:14:31+0530"
-    },
     "1154219000035884008": {
       "id": "1154219000035884008",
       "zohoSalesOrderId": "1154219000035884008",
@@ -7996,7 +7946,6 @@
     "1154219000035939003",
     "1154219000035947002",
     "1154219000035933004",
-    "1154219000035891025",
     "1154219000035884008",
     "1154219000035890003",
     "1154219000035891004",
@@ -8022,8 +7971,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T11:52:21.607Z",
-  "lastAttemptAt": "2026-09-02T12:00:25.371Z",
+  "lastSuccessfulSyncAt": "2026-09-02T12:00:40.130Z",
+  "lastAttemptAt": "2026-09-02T12:00:40.130Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
