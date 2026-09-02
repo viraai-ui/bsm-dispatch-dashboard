@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Ankit Aggarwal",
+      "paymentAmount": 137500,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Manisha",
+      "attachments": [
+        {
+          "key": "payments/public/manual/52eef81d-cb37-452a-b784-cddfeda2d4d8/2026-09-02/1788345095509-3cde5d32-c903-4ea6-bfa3-a1cde05fa407-WhatsApp-Image-2026-09-02-at-15.26.25.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F52eef81d-cb37-452a-b784-cddfeda2d4d8%2F2026-09-02%2F1788345095509-3cde5d32-c903-4ea6-bfa3-a1cde05fa407-WhatsApp-Image-2026-09-02-at-15.26.25.jpg",
+          "name": "WhatsApp Image 2026-09-02 at 15.26.25.jpeg",
+          "contentType": "image/jpeg",
+          "size": 65742
+        }
+      ],
+      "screenshotKey": "payments/public/manual/52eef81d-cb37-452a-b784-cddfeda2d4d8/2026-09-02/1788345095509-3cde5d32-c903-4ea6-bfa3-a1cde05fa407-WhatsApp-Image-2026-09-02-at-15.26.25.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F52eef81d-cb37-452a-b784-cddfeda2d4d8%2F2026-09-02%2F1788345095509-3cde5d32-c903-4ea6-bfa3-a1cde05fa407-WhatsApp-Image-2026-09-02-at-15.26.25.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-02 at 15.26.25.jpeg",
+      "publicDeleteTokenHash": "61d9e480f8cf4f753bc117c2872264bc740c32b9746ae7c042f11947d2f290b9",
+      "id": "payment-9906d618-6273-4e3a-b827-a6b079c2cdcf",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "42bdad7896264088bfa29dbe5ee35290",
+      "createdAt": "2026-09-02T10:32:04.820Z",
+      "updatedAt": "2026-09-02T10:32:04.820Z"
+    },
+    {
       "customerName": "GURUJI FOOTWEAR",
       "salesOrderNumber": "SO-07865",
       "paymentAmount": 235410,
