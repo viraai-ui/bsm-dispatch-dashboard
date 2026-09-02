@@ -2,6 +2,32 @@
   "payments": [
     {
       "customerName": "GURUJI FOOTWEAR",
+      "salesOrderNumber": "SO-07867",
+      "paymentAmount": 17000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07867/2026-09-02/1788331993917-9e1b34ee-f500-40e1-a1b1-438b65e49ae0-07b50d83-a343-430f-a547-dfed2c54cb8a.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07867%2F2026-09-02%2F1788331993917-9e1b34ee-f500-40e1-a1b1-438b65e49ae0-07b50d83-a343-430f-a547-dfed2c54cb8a.jpg",
+          "name": "07b50d83-a343-430f-a547-dfed2c54cb8a.jpg",
+          "contentType": "image/jpeg",
+          "size": 68802
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07867/2026-09-02/1788331993917-9e1b34ee-f500-40e1-a1b1-438b65e49ae0-07b50d83-a343-430f-a547-dfed2c54cb8a.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07867%2F2026-09-02%2F1788331993917-9e1b34ee-f500-40e1-a1b1-438b65e49ae0-07b50d83-a343-430f-a547-dfed2c54cb8a.jpg",
+      "screenshotName": "07b50d83-a343-430f-a547-dfed2c54cb8a.jpg",
+      "publicDeleteTokenHash": "74313575c4a339dc95c321ded7b02aad48967ff8d1b2ed668dda2a500b4cd059",
+      "id": "payment-2aca1450-6a33-4ec9-8e95-613b7c33f037",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "816f243ccd5546f2bb65ff817535ed57",
+      "createdAt": "2026-09-02T06:53:15.758Z",
+      "updatedAt": "2026-09-02T06:53:15.758Z"
+    },
+    {
+      "customerName": "GURUJI FOOTWEAR",
       "salesOrderNumber": "SO-07865",
       "paymentAmount": 188500,
       "paymentMode": "Bank Transfer",
