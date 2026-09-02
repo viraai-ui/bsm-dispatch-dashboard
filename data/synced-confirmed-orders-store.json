@@ -55,8 +55,8 @@
       "zohoSalesOrderId": "1154219000036356475",
       "salesOrderNumber": "SO-07870",
       "status": "open",
-      "customerName": "NIKHIL UDHYOG NAGAR",
-      "shippingAddress": "D-14, UDYOG NAGAR, MAIN ROHTAK ROAD, DELHI, North Delhi, Delhi, 110041, Delhi",
+      "customerName": "Nikhil Udyog",
+      "shippingAddress": "D- 14, Udyog Nagar, Delhi, 110041, India",
       "salesperson": "Manisha Gautam",
       "deliveryDate": "2026-09-02",
       "dashboardStatus": "Not Generated",
@@ -97,7 +97,7 @@
           "lineItemId": "1154219000036356478",
           "itemName": "Sole Hammering Machine",
           "sku": "",
-          "customerName": "NIKHIL UDHYOG NAGAR",
+          "customerName": "Nikhil Udyog",
           "salesOrderNumber": "SO-07870",
           "deliveryDate": "2026-09-02",
           "status": "Not Generated",
@@ -110,7 +110,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-02T15:52:38+0530"
+      "zohoLastModifiedTime": "2026-09-02T16:30:12+0530"
     },
     "1154219000036402003": {
       "id": "1154219000036402003",
@@ -8187,8 +8187,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T10:40:39.617Z",
-  "lastAttemptAt": "2026-09-02T11:00:25.563Z",
+  "lastSuccessfulSyncAt": "2026-09-02T11:00:39.965Z",
+  "lastAttemptAt": "2026-09-02T11:00:39.965Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
