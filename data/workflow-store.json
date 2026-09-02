@@ -21512,7 +21512,9 @@
     "1154219000036386001": {
       "salesOrderId": "1154219000036386001",
       "salesOrderNumber": "SO-07868",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-02T10:30:53.589Z",
       "processedOrder": {
         "id": "1154219000036386001",
         "zohoSalesOrderId": "1154219000036386001",
@@ -21522,7 +21524,7 @@
         "shippingAddress": "Building No.7/527 Y, Plot No.36, Industrial Growth Center, KSIDC,Kinaloor, Balusseri, Kozhikode, KERALA, 673612, India",
         "salesperson": "Anuj Kumar",
         "deliveryDate": "2026-09-02",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -21542,8 +21544,8 @@
           {
             "id": "1154219000036386001-1154219000036386004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271105",
+            "qrToken": "26271105",
             "orderId": "1154219000036386001",
             "lineItemId": "1154219000036386004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -21551,20 +21553,22 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
             "salesOrderNumber": "SO-07868",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller Including Wooden"
+            "itemDescription": "Plain Roller Including Wooden",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036386001-1154219000036386004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271106",
+            "qrToken": "26271106",
             "orderId": "1154219000036386001",
             "lineItemId": "1154219000036386004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -21572,20 +21576,22 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
             "salesOrderNumber": "SO-07868",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller Including Wooden"
+            "itemDescription": "Plain Roller Including Wooden",
+            "vendor": "Ks",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036386001-1154219000036386004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271107",
+            "qrToken": "26271107",
             "orderId": "1154219000036386001",
             "lineItemId": "1154219000036386004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -21593,17 +21599,19 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
             "salesOrderNumber": "SO-07868",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Plain Roller Including Wooden"
+            "itemDescription": "Plain Roller Including Wooden",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
-        "zohoLastModifiedTime": "2026-09-02T14:08:06+0530"
+        "zohoLastModifiedTime": "2026-09-02T14:11:50+0530"
       },
       "machines": {
         "1154219000036386001-1154219000036386004-1": {
@@ -21616,7 +21624,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
           "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
-          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
+          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z",
+          "processedAt": "2026-09-02T10:30:53.589Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036386001-1154219000036386004-2": {
           "machineUnitId": "1154219000036386001-1154219000036386004-2",
@@ -21628,7 +21639,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
           "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
-          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
+          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z",
+          "processedAt": "2026-09-02T10:30:53.589Z",
+          "dispatchNote": "local",
+          "vendor": "Ks"
         },
         "1154219000036386001-1154219000036386004-3": {
           "machineUnitId": "1154219000036386001-1154219000036386004-3",
@@ -21640,7 +21654,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-02T08:40:15.970Z",
           "zohoBackupLastAttemptAt": "2026-09-02T08:46:32.584Z",
-          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z"
+          "zohoBackupSyncedAt": "2026-09-02T08:46:32.584Z",
+          "processedAt": "2026-09-02T10:30:53.589Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     },
