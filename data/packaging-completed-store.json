@@ -14838,6 +14838,86 @@
       "machineIds": [
         "1154219000035891004-1154219000035891007-1"
       ]
+    },
+    "1154219000036072023": {
+      "completedAt": "2026-09-02T04:54:54.493Z",
+      "order": {
+        "id": "1154219000036072023",
+        "zohoSalesOrderId": "1154219000036072023",
+        "salesOrderNumber": "SO-07828",
+        "status": "open",
+        "customerName": "GARWARE FULFLEX I PVT LTD",
+        "shippingAddress": "2ND FLOOR, MAKER BHAVAN II,, 2A-3, 18 VITTHALDAS THACKAREY MARG, NEW MARINE LINES, CHRUCHGATE, Mumbai, Maharashtra, 400020, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-27",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036072026",
+            "itemName": "Automatic Screen Printing Machine (Single Station)",
+            "sku": "",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036072023-1154219000036072026-1",
+            "unitNumber": 1,
+            "serialNumber": "26271095",
+            "qrToken": "26271095",
+            "orderId": "1154219000036072023",
+            "lineItemId": "1154219000036072026",
+            "itemName": "Automatic Screen Printing Machine (Single Station)",
+            "sku": "",
+            "customerName": "GARWARE FULFLEX I PVT LTD",
+            "salesOrderNumber": "SO-07828",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000036072023-1154219000036072026-2",
+            "unitNumber": 2,
+            "serialNumber": "26271096",
+            "qrToken": "26271096",
+            "orderId": "1154219000036072023",
+            "lineItemId": "1154219000036072026",
+            "itemName": "Automatic Screen Printing Machine (Single Station)",
+            "sku": "",
+            "customerName": "GARWARE FULFLEX I PVT LTD",
+            "salesOrderNumber": "SO-07828",
+            "deliveryDate": "2026-08-27",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-01",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036072023-1154219000036072026-1",
+        "1154219000036072023-1154219000036072026-2"
+      ]
     }
   }
 }
