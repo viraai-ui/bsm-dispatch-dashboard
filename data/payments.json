@@ -27,32 +27,6 @@
       "updatedAt": "2026-09-02T06:53:15.758Z"
     },
     {
-      "customerName": "GURUJI FOOTWEAR",
-      "salesOrderNumber": "SO-07865",
-      "paymentAmount": 188500,
-      "paymentMode": "Bank Transfer",
-      "addedBy": "Karan",
-      "attachments": [
-        {
-          "key": "payments/public/SO-07865/2026-09-02/1788331570167-3fb8175a-1f78-42b9-92f8-d7c309cade4f-d3df4017-8a1f-4901-b3c0-6b1012e7eb69.jpg",
-          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07865%2F2026-09-02%2F1788331570167-3fb8175a-1f78-42b9-92f8-d7c309cade4f-d3df4017-8a1f-4901-b3c0-6b1012e7eb69.jpg",
-          "name": "d3df4017-8a1f-4901-b3c0-6b1012e7eb69.jpg",
-          "contentType": "image/jpeg",
-          "size": 69672
-        }
-      ],
-      "screenshotKey": "payments/public/SO-07865/2026-09-02/1788331570167-3fb8175a-1f78-42b9-92f8-d7c309cade4f-d3df4017-8a1f-4901-b3c0-6b1012e7eb69.jpg",
-      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07865%2F2026-09-02%2F1788331570167-3fb8175a-1f78-42b9-92f8-d7c309cade4f-d3df4017-8a1f-4901-b3c0-6b1012e7eb69.jpg",
-      "screenshotName": "d3df4017-8a1f-4901-b3c0-6b1012e7eb69.jpg",
-      "publicDeleteTokenHash": "9f5e02f396f43661b9a3316809ac5252a4fc5d5b735c56f218f7c97c034bb2ab",
-      "id": "payment-5b2ff6d6-6f00-42bd-b231-4939fda4729d",
-      "status": "Pending",
-      "createdBy": "public-salesman",
-      "idempotencyKey": "beed1192a6924425b4ced0bc3f197a82",
-      "createdAt": "2026-09-02T06:46:11.973Z",
-      "updatedAt": "2026-09-02T06:46:11.973Z"
-    },
-    {
       "customerName": "STEP STON FOOTWEARS LLP",
       "salesOrderNumber": "SO-07758",
       "paymentAmount": 18800,
