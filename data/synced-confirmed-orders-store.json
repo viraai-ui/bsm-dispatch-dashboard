@@ -1,5 +1,61 @@
 {
   "orders": {
+    "1154219000036371007": {
+      "id": "1154219000036371007",
+      "zohoSalesOrderId": "1154219000036371007",
+      "salesOrderNumber": "SO-07866",
+      "status": "open",
+      "customerName": "RAJYAREKHA TRADE PVT. LTD.",
+      "shippingAddress": "Plot No. 1021, MIE-A, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-02",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036371010",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 320,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-02T11:55:35+0530"
+    },
+    "1154219000036378001": {
+      "id": "1154219000036378001",
+      "zohoSalesOrderId": "1154219000036378001",
+      "salesOrderNumber": "SO-07865",
+      "status": "open",
+      "customerName": "GURUJI FOOTWEAR",
+      "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-02",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036378004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 700,
+          "pendingQuantity": 700,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 285,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-02T11:55:35+0530"
+    },
     "1154219000036259722": {
       "id": "1154219000036259722",
       "zohoSalesOrderId": "1154219000036259722",
@@ -7885,6 +7941,8 @@
     }
   },
   "orderIds": [
+    "1154219000036371007",
+    "1154219000036378001",
     "1154219000036259722",
     "1154219000036315004",
     "1154219000036335004",
@@ -7929,8 +7987,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T06:21:29.378Z",
-  "lastAttemptAt": "2026-09-02T06:38:18.668Z",
+  "lastSuccessfulSyncAt": "2026-09-02T06:38:35.273Z",
+  "lastAttemptAt": "2026-09-02T06:38:35.273Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
