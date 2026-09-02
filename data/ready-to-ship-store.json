@@ -5348,6 +5348,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035891025": {
+      "id": "ship-1788350165214-lt7r7",
+      "itemId": "1154219000035891025",
+      "orderId": "1154219000035891025",
+      "machineId": "1154219000035891025-1154219000035891028-1",
+      "salesOrderNumber": "SO-07779",
+      "customerName": "JAMA CORPORATION PVT.LTD.",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAL2954",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-02",
+      "notes": "",
+      "shippedAt": "2026-09-02T11:56:05.214Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
