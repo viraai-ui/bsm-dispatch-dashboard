@@ -92,56 +92,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-02T14:11:50+0530"
     },
-    "1154219000036383001": {
-      "id": "1154219000036383001",
-      "zohoSalesOrderId": "1154219000036383001",
-      "salesOrderNumber": "SO-07867",
-      "status": "open",
-      "customerName": "GURUJI FOOTWEAR",
-      "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-02",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036383004",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000278601",
-          "rate": 17000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036383001-1154219000036383004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036383001",
-          "lineItemId": "1154219000036383004",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "customerName": "GURUJI FOOTWEAR",
-          "salesOrderNumber": "SO-07867",
-          "deliveryDate": "2026-09-02",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-02T12:24:35+0530"
-    },
     "1154219000036259722": {
       "id": "1154219000036259722",
       "zohoSalesOrderId": "1154219000036259722",
@@ -8028,7 +7978,6 @@
   },
   "orderIds": [
     "1154219000036386001",
-    "1154219000036383001",
     "1154219000036259722",
     "1154219000036315004",
     "1154219000036335004",
@@ -8073,8 +8022,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-02T09:50:17.127Z",
-  "lastAttemptAt": "2026-09-02T10:03:08.020Z",
+  "lastSuccessfulSyncAt": "2026-09-02T10:03:21.176Z",
+  "lastAttemptAt": "2026-09-02T10:03:21.176Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
