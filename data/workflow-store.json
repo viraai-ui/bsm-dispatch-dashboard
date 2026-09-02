@@ -21648,7 +21648,7 @@
       "salesOrderId": "1154219000036402003",
       "salesOrderNumber": "SO-07869",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-02T10:25:45.584Z",
       "processedOrder": {
         "id": "1154219000036402003",
@@ -21717,7 +21717,8 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000036356475": {
       "salesOrderId": "1154219000036356475",
