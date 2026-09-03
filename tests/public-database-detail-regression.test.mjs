@@ -32,7 +32,7 @@ test('premium popup has exact balanced section order and full-width compact mach
   assert.match(client, /Loading Video &amp; LR Copy/)
   assert.match(client, />View<\/a>/)
   assert.doesNotMatch(client, /media\.name|\.split\('\.'\)|View packing video|View loading video|View Builty/)
-  assert.match(awaitCss, /\.pdb-machines-card\{grid-column:1\/-1;grid-row:2\}/)
+  assert.match(awaitCss, /\.pdb-premium-grid>\.pdb-machines-card\{grid-column:1\/-1;grid-row:2\}/)
 })
 
 test('shipment parity and hover prefetch are retained', () => {

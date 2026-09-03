@@ -1524,7 +1524,7 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 /* Public database popup — premium balanced detail grid */
 .pdb-premium-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;padding-top:10px}
 .pdb-premium-grid>.pdb-detail-section,.pdb-premium-grid>.pdb-warranty-box{min-width:0;margin:0;padding:16px;border-radius:17px}
-.pdb-order-card{grid-column:1;grid-row:1}.pdb-transport-card{grid-column:2;grid-row:1}.pdb-machines-card{grid-column:1/-1;grid-row:2}.pdb-warranty-card{grid-column:1;grid-row:3}.pdb-dispatch-media-card{grid-column:2;grid-row:3}
+.pdb-premium-grid>.pdb-order-card{grid-column:1;grid-row:1}.pdb-premium-grid>.pdb-transport-card{grid-column:2;grid-row:1}.pdb-premium-grid>.pdb-machines-card{grid-column:1/-1;grid-row:2}.pdb-premium-grid>.pdb-warranty-card{grid-column:1;grid-row:3}.pdb-premium-grid>.pdb-dispatch-media-card{grid-column:2;grid-row:3}
 .pdb-machine-compact{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(150px,.8fr) auto;align-items:center;gap:16px;min-height:54px;padding:8px 10px;flex-wrap:nowrap}
 .pdb-machine-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pdb-machine-serial span{display:block;color:#857b7d;font-size:10px}.pdb-machine-actions,.pdb-compact-media-row>div{display:flex;align-items:center;justify-content:flex-end;gap:6px}.pdb-machine-actions em,.pdb-compact-media-row em{color:#999093;font-size:11px;font-style:normal}
 .pdb-view-action{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:36px!important;padding:0 14px!important;border-radius:10px!important;font-size:11px!important;font-weight:600!important;white-space:nowrap}
