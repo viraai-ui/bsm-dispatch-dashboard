@@ -98,11 +98,11 @@ export function PublicDatabaseClient() {
     if (!overlayOpen) return
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape' && !videoMedia) { if (filtersOpen) setFiltersOpen(false); else closeDetail() } }
+    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape' && !document.querySelector('.pdb-video-dialog')) { if (filtersOpen) setFiltersOpen(false); else closeDetail() } }
     document.addEventListener('keydown', onKey)
     requestAnimationFrame(() => dialogRef.current?.focus())
     return () => { document.body.style.overflow = previous; document.removeEventListener('keydown', onKey) }
-  }, [overlayOpen, filtersOpen, videoMedia, closeDetail])
+  }, [overlayOpen, filtersOpen, closeDetail])
   useEffect(() => {
     if (!videoMedia) return
     const previous = document.body.style.overflow
