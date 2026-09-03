@@ -21843,7 +21843,9 @@
     "1154219000036382009": {
       "salesOrderId": "1154219000036382009",
       "salesOrderNumber": "SO-07873",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-03T06:42:11.897Z",
       "processedOrder": {
         "id": "1154219000036382009",
         "zohoSalesOrderId": "1154219000036382009",
@@ -21873,8 +21875,8 @@
           {
             "id": "1154219000036382009-1154219000036382012-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271110",
+            "qrToken": "26271110",
             "orderId": "1154219000036382009",
             "lineItemId": "1154219000036382012",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -21882,14 +21884,17 @@
             "customerName": "ASIAN FOOTWEARS PVT. LTD. (295)",
             "salesOrderNumber": "SO-07873",
             "deliveryDate": "2026-09-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-03T11:26:51+0530"
@@ -21905,7 +21910,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-03T06:23:28.295Z",
           "zohoBackupLastAttemptAt": "2026-09-03T06:30:34.501Z",
-          "zohoBackupSyncedAt": "2026-09-03T06:30:34.501Z"
+          "zohoBackupSyncedAt": "2026-09-03T06:30:34.501Z",
+          "processedAt": "2026-09-03T06:42:11.897Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
