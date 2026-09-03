@@ -3,6 +3,33 @@
     {
       "customerName": "KAMAL SONS",
       "salesOrderNumber": "SO-07874",
+      "paymentAmount": 12540,
+      "paymentMode": "UPI",
+      "addedBy": "Deepak",
+      "remarks": "50000+12540",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07874/2026-09-03/1788419576628-ab32a693-dda2-4f80-b1f5-bfd28edcceff-75af83f8-3f20-4422-aabe-3760d0adb28a.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07874%2F2026-09-03%2F1788419576628-ab32a693-dda2-4f80-b1f5-bfd28edcceff-75af83f8-3f20-4422-aabe-3760d0adb28a.jpg",
+          "name": "75af83f8-3f20-4422-aabe-3760d0adb28a.jpg",
+          "contentType": "image/jpeg",
+          "size": 151756
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07874/2026-09-03/1788419576628-ab32a693-dda2-4f80-b1f5-bfd28edcceff-75af83f8-3f20-4422-aabe-3760d0adb28a.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07874%2F2026-09-03%2F1788419576628-ab32a693-dda2-4f80-b1f5-bfd28edcceff-75af83f8-3f20-4422-aabe-3760d0adb28a.jpg",
+      "screenshotName": "75af83f8-3f20-4422-aabe-3760d0adb28a.jpg",
+      "publicDeleteTokenHash": "1297c64c78d5296b9ceb8cd14d25ba91be746d7bdd7a92d4e3ab6f136207a75d",
+      "id": "payment-59d7c9da-9b1b-479d-b7f4-d90d3f35237f",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "c23eb342648e48769d0dcff439843038",
+      "createdAt": "2026-09-03T07:13:03.935Z",
+      "updatedAt": "2026-09-03T07:13:03.935Z"
+    },
+    {
+      "customerName": "KAMAL SONS",
+      "salesOrderNumber": "SO-07874",
       "paymentAmount": 50000,
       "paymentMode": "Bank Transfer",
       "addedBy": "Deepak",
