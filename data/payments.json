@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "KOUSHAL ENTERPRISES",
+      "salesOrderNumber": "SO-07879",
+      "paymentAmount": 17700,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07879/2026-09-03/1788429508723-4d7b1b82-d253-4e13-8044-6bedbaa5034c-e1e5e06b-6623-41a0-9cba-143f68ab0a5f.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07879%2F2026-09-03%2F1788429508723-4d7b1b82-d253-4e13-8044-6bedbaa5034c-e1e5e06b-6623-41a0-9cba-143f68ab0a5f.jpg",
+          "name": "e1e5e06b-6623-41a0-9cba-143f68ab0a5f.jpg",
+          "contentType": "image/jpeg",
+          "size": 136258
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07879/2026-09-03/1788429508723-4d7b1b82-d253-4e13-8044-6bedbaa5034c-e1e5e06b-6623-41a0-9cba-143f68ab0a5f.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07879%2F2026-09-03%2F1788429508723-4d7b1b82-d253-4e13-8044-6bedbaa5034c-e1e5e06b-6623-41a0-9cba-143f68ab0a5f.jpg",
+      "screenshotName": "e1e5e06b-6623-41a0-9cba-143f68ab0a5f.jpg",
+      "publicDeleteTokenHash": "13289ea2d65feb2b812258a7c6f37858684eb3810b747bbf9afc251a437c54df",
+      "id": "payment-49bf4553-e901-4ef8-9a04-2e218a886cc2",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "699cc6f1fab64dd9808e3fcd3742c7ce",
+      "createdAt": "2026-09-03T09:58:32.760Z",
+      "updatedAt": "2026-09-03T09:58:32.760Z"
+    },
+    {
       "customerName": "AJAY FOOTWEAR",
       "salesOrderNumber": "SO-07878",
       "paymentAmount": 23625,
