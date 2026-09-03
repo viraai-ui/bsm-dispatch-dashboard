@@ -21920,7 +21920,9 @@
     "1154219000036384021": {
       "salesOrderId": "1154219000036384021",
       "salesOrderNumber": "SO-07874",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-03T06:48:29.258Z",
       "processedOrder": {
         "id": "1154219000036384021",
         "zohoSalesOrderId": "1154219000036384021",
@@ -21950,8 +21952,8 @@
           {
             "id": "1154219000036384021-1154219000036384024-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271111",
+            "qrToken": "26271111",
             "orderId": "1154219000036384021",
             "lineItemId": "1154219000036384024",
             "itemName": "Eyelet Punching Single Channel",
@@ -21959,14 +21961,17 @@
             "customerName": "KAMAL SONS",
             "salesOrderNumber": "SO-07874",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "vendor": "Gurudev",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-03T11:45:21+0530"
@@ -21980,7 +21985,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-03T06:47:33.783Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-03T06:47:34.846Z"
+          "zohoBackupQueuedAt": "2026-09-03T06:47:34.846Z",
+          "processedAt": "2026-09-03T06:48:29.258Z",
+          "dispatchNote": "local",
+          "vendor": "Gurudev"
         }
       }
     }
