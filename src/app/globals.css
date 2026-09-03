@@ -1401,3 +1401,93 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 .pdb-warranty-box>div>span,.pdb-warranty-box dt{display:block;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.pdb-warranty-box>div>strong{font-size:24px;color:#166534}.pdb-warranty-box.void>div>strong{color:#b91c1c}
 .pdb-warranty-box dl{display:flex;gap:28px;margin:0}.pdb-warranty-box dd{margin:5px 0 0;font-weight:800}.pdb-machine{flex-wrap:wrap}.pdb-machine-media{flex:1 0 100%;padding-top:12px;border-top:1px solid #e2e8f0}.pdb-machine-media>span{display:block;margin-bottom:8px;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase}.pdb-machine-media em{color:#94a3b8;font-style:normal}
 @media(max-width:700px){.pdb-warranty-box{margin:0 16px 18px;display:block}.pdb-warranty-box dl{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.pdb-machine-media .pdb-attachment{display:grid;grid-template-columns:auto 1fr}.pdb-machine-media .pdb-attachment>a{grid-column:1/-1;width:100%}}
+
+/* Public database typography tokens — intentionally scoped to this public surface. */
+.public-database-shell{
+  --pdb-type-meta:10px;
+  --pdb-type-caption:11px;
+  --pdb-type-label:12px;
+  --pdb-type-body:13px;
+  --pdb-type-control:14px;
+  --pdb-type-section:17px;
+  --pdb-type-title:30px;
+  --pdb-leading-tight:1.2;
+  --pdb-leading-body:1.5;
+  font-family:var(--font-poppins),Poppins,sans-serif;
+  font-size:var(--pdb-type-body);
+  font-weight:400;
+  line-height:var(--pdb-leading-body);
+}
+.public-database-shell :is(button,input,select,a){font-family:inherit}
+.public-database-shell :is(h1,h2,h3,p,span,strong,small,dt,dd,button,input,select,a){font-weight:inherit}
+.public-database-brand strong{font-size:16px;font-weight:600;line-height:1.25}
+.public-database-brand span{font-size:var(--pdb-type-caption);font-weight:500;line-height:1.4}
+.public-database-shell .pdb-public-access{font-size:var(--pdb-type-caption)!important;font-weight:500!important}
+.public-database-shell .pdb-eyebrow{font-size:var(--pdb-type-caption);font-weight:600;line-height:1.3}
+.public-database-shell .pdb-live{font-size:var(--pdb-type-caption);font-weight:500;line-height:1.3}
+.public-database-shell .pdb-database-hero h1{font-size:var(--pdb-type-title);font-weight:600;line-height:1.12;letter-spacing:-.035em}
+.public-database-shell .pdb-database-hero p{font-size:var(--pdb-type-body);font-weight:400;line-height:1.5}
+.public-database-shell .database-search-input-wrap input,
+.public-database-shell .database-search-panel>select{font-size:var(--pdb-type-body);font-weight:500;line-height:1.4}
+.public-database-shell .database-list-head h2{font-size:18px;font-weight:600;line-height:1.3}
+.public-database-shell .pdb-result-count,
+.public-database-shell .database-list-head>.muted{font-size:var(--pdb-type-caption)!important;font-weight:500!important;line-height:1.4}
+.public-database-shell .pdb-desktop-table thead th{font-size:var(--pdb-type-caption);font-weight:600;line-height:1.35;letter-spacing:.06em}
+.public-database-shell .pdb-desktop-table td{font-size:var(--pdb-type-body);font-weight:400;line-height:1.45}
+.public-database-shell .pdb-desktop-table td strong{font-weight:600}
+.public-database-shell .pdb-desktop-table td>small{font-size:var(--pdb-type-caption);font-weight:500;line-height:1.35}
+.public-database-shell .pdb-so-mark{font-size:var(--pdb-type-meta);font-weight:600}
+.public-database-shell .pdb-status{font-size:var(--pdb-type-caption);font-weight:600;line-height:1.2}
+.public-database-shell .pdb-row-action,
+.public-database-shell .database-pagination .btn{min-height:44px;font-size:var(--pdb-type-body);font-weight:600;line-height:1.2}
+.public-database-shell .database-pagination span{font-size:var(--pdb-type-label);font-weight:400;line-height:1.4}
+.public-database-shell .database-pagination span b{font-weight:600}
+.public-database-shell .pdb-detail-head span,
+.public-database-shell .pdb-sheet-head span{font-size:var(--pdb-type-caption);font-weight:600;line-height:1.35}
+.public-database-shell .pdb-detail-head h1{font-size:26px;font-weight:600;line-height:1.18}
+.public-database-shell .pdb-detail-head p{font-size:var(--pdb-type-body);font-weight:400;line-height:1.45}
+.public-database-shell .pdb-section-title>span{font-size:var(--pdb-type-meta);font-weight:600}
+.public-database-shell .pdb-section-title h2{font-size:var(--pdb-type-section);font-weight:600;line-height:1.35}
+.public-database-shell .pdb-section-title small{font-size:var(--pdb-type-caption);font-weight:500}
+.public-database-shell .info-tile span,
+.public-database-shell .pdb-machine span,
+.public-database-shell .pdb-attachment small,
+.public-database-shell .pdb-no-attachments span{font-size:var(--pdb-type-caption);font-weight:500;line-height:1.4}
+.public-database-shell .info-tile strong,
+.public-database-shell .pdb-machine strong,
+.public-database-shell .pdb-attachment strong,
+.public-database-shell .pdb-no-attachments strong{font-size:var(--pdb-type-body);font-weight:500;line-height:1.5}
+.public-database-shell .pdb-warranty-box>div>span,
+.public-database-shell .pdb-warranty-box dt,
+.public-database-shell .pdb-machine-media>span{font-size:var(--pdb-type-caption);font-weight:600;line-height:1.4;letter-spacing:.05em}
+.public-database-shell .pdb-warranty-box>div>strong{font-size:18px;font-weight:600;line-height:1.3}
+.public-database-shell .pdb-warranty-box dd{font-size:var(--pdb-type-control);font-weight:600;line-height:1.4}
+.public-database-shell .pdb-attachment .btn,
+.public-database-shell .pdb-refresh-record,
+.public-database-shell .pdb-sheet-actions .btn,
+.public-database-shell .pdb-filter-options label{font-size:var(--pdb-type-body);font-weight:600;line-height:1.3}
+.public-database-shell .pdb-refresh-record{min-height:44px}
+.public-database-shell .pdb-database-hero:before{font-weight:700}
+
+@media(max-width:700px){
+  .public-database-shell{--pdb-type-title:26px}
+  .public-database-shell .pdb-database-hero p{font-size:var(--pdb-type-label)}
+  .public-database-shell .database-search-input-wrap input{font-size:var(--pdb-type-body)}
+  .public-database-shell .database-list-head h2{font-size:16px!important}
+  .public-database-shell .database-list-head>.muted{font-size:var(--pdb-type-meta)!important}
+  .public-database-shell .pdb-card-top>div>span{font-size:var(--pdb-type-meta);font-weight:500;line-height:1.35}
+  .public-database-shell .pdb-card-top h3{font-size:17px;font-weight:600;line-height:1.25}
+  .public-database-shell .pdb-customer{font-size:var(--pdb-type-body);font-weight:500;line-height:1.45}
+  .public-database-shell .pdb-status{font-size:var(--pdb-type-meta);font-weight:600}
+  .public-database-shell .pdb-card-grid .info-tile span{font-size:var(--pdb-type-meta);font-weight:500;line-height:1.35}
+  .public-database-shell .pdb-card-grid .info-tile strong{font-size:var(--pdb-type-label);font-weight:500;line-height:1.4}
+  .public-database-shell .pdb-card-foot button{min-height:44px;font-size:var(--pdb-type-label);font-weight:600}
+  .public-database-shell .database-pagination span{font-size:var(--pdb-type-caption)}
+  .public-database-shell .pdb-detail-head h1{font-size:20px}
+  .public-database-shell .pdb-detail-head p{font-size:var(--pdb-type-label)}
+  .public-database-shell .pdb-section-title h2{font-size:16px}
+  .public-database-shell .pdb-warranty-box{margin:10px 12px 0;padding:16px}
+  .public-database-shell .pdb-warranty-box>div>strong{font-size:17px}
+  .public-database-shell .pdb-warranty-box dd{font-size:var(--pdb-type-body)}
+  .public-database-shell .pdb-filter-options label{min-height:46px;font-size:var(--pdb-type-body)}
+}
