@@ -3899,6 +3899,31 @@
           ]
         }
       }
+    },
+    "1154219000036382009": {
+      "orderId": "1154219000036382009",
+      "salesOrderNumber": "SO-07873",
+      "submittedAt": null,
+      "units": {
+        "1154219000036382009-1154219000036382012-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036382009-1154219000036382012-1-video-1788426023528-d2uwi1",
+              "name": "VID_20260903_142957.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-03%2FSO-07873%2F1154219000036382009-1154219000036382012-1%2FStrobel-Sewing-machine-With-Rechard-Set-2026-09-03T09-00-06-888Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-03/SO-07873/1154219000036382009-1154219000036382012-1/Strobel-Sewing-machine-With-Rechard-Set-2026-09-03T09-00-06-888Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-03T09:00:23.528Z",
+              "expiresAt": "2026-10-03T09:00:23.528Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
