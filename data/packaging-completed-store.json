@@ -15521,6 +15521,65 @@
       "machineIds": [
         "1154219000036384021-1154219000036384024-1"
       ]
+    },
+    "1154219000036382009": {
+      "completedAt": "2026-09-03T09:03:32.377Z",
+      "order": {
+        "id": "1154219000036382009",
+        "zohoSalesOrderId": "1154219000036382009",
+        "salesOrderNumber": "SO-07873",
+        "status": "open",
+        "customerName": "ASIAN FOOTWEARS PVT. LTD. (295)",
+        "shippingAddress": "Plot No.295 SECTOR-17, HSIIDC Industrial Area, Sector 17 Footwear Park,, BAHADURGARH, Haryana,, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036382012",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006379136",
+            "rate": 42000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036382009-1154219000036382012-1",
+            "unitNumber": 1,
+            "serialNumber": "26271110",
+            "qrToken": "26271110",
+            "orderId": "1154219000036382009",
+            "lineItemId": "1154219000036382012",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "ASIAN FOOTWEARS PVT. LTD. (295)",
+            "salesOrderNumber": "SO-07873",
+            "deliveryDate": "2026-09-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-03T11:26:51+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036382009-1154219000036382012-1"
+      ]
     }
   }
 }
