@@ -5379,6 +5379,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036072023": {
+      "id": "ship-1788421028811-dvoxa",
+      "itemId": "1154219000036072023",
+      "orderId": "1154219000036072023",
+      "machineId": "1154219000036072023-1154219000036072026-1",
+      "salesOrderNumber": "SO-07828",
+      "customerName": "GARWARE FULFLEX I PVT LTD",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "ACPL logistics",
+      "transporterPhone": "DL01LAF4517",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-03 at 1.06.41 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-03%2FSO-07828%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-03T07-37-04-806Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-03/SO-07828/shipment-lr-builty/Shipment-LR-Builty-2026-09-03T07-37-04-806Z.jpeg",
+        "expiresAt": null
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-03",
+      "notes": "",
+      "shippedAt": "2026-09-03T07:37:08.811Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
