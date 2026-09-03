@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-85821b0c-2a1c-4580-991b-5c9247a59a06",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-49bf4553-e901-4ef8-9a04-2e218a886cc2",
+      "salesOrderNumber": "SO-07879",
+      "customerName": "KOUSHAL ENTERPRISES",
+      "paymentAmount": 17700,
+      "createdAt": "2026-09-03T09:58:34.688Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-0ce4da22-92f6-4883-97ea-5e5e6c952efd",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-49bf4553-e901-4ef8-9a04-2e218a886cc2",
+      "salesOrderNumber": "SO-07879",
+      "customerName": "KOUSHAL ENTERPRISES",
+      "paymentAmount": 17700,
+      "createdAt": "2026-09-03T09:58:34.688Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-d9f1564f-32b4-4a05-abda-fb90fea46d4d",
       "type": "payment-created",
       "recipientUserId": "u-admin",
