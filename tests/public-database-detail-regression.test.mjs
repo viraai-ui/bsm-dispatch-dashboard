@@ -72,3 +72,15 @@ test('vendor layout remains one compact desktop row and stacks without mobile ov
   assert.match(awaitCss, /\.pdb-machine-meta\{display:grid;grid-template-columns:minmax\(110px,1fr\) minmax\(110px,1fr\)/)
   assert.match(awaitCss, /@media\(max-width:700px\)[^{]*\{[\s\S]*\.pdb-machine-name\{grid-column:1\/-1;white-space:normal\}[\s\S]*\.pdb-machine-meta\{grid-column:1;grid-row:2;grid-template-columns:minmax\(0,1fr\) minmax\(0,1fr\)/)
 })
+
+test('loading video opens an accessible inline player while packing and Builty remain links', () => {
+  assert.match(client, /media\.kind === 'loading'[\s\S]*<button[^>]*onClick=\{event => \{ event\.preventDefault\(\); onViewLoading/)
+  assert.match(client, /<video[^>]*src=\{videoMedia\.url\}[^>]*controls[^>]*autoPlay[^>]*playsInline[^>]*preload="metadata"/)
+  assert.match(client, /role="dialog" aria-modal="true" aria-labelledby="loading-video-title"/)
+  assert.match(client, /aria-label="Close loading video"/)
+  assert.match(client, /video\.pause\(\); video\.removeAttribute\('src'\); video\.load\(\)/)
+  assert.match(client, /videoTriggerRef\.current\?\.focus\(\)/)
+  assert.match(client, /return <a className="btn light pdb-view-action" href=\{media\.url\}/)
+  assert.doesNotMatch(client, /fetch\(videoMedia\.url|arrayBuffer\(|createObjectURL\(/)
+  assert.match(awaitCss, /\.pdb-video-backdrop\{position:fixed;inset:0;z-index:1100/)
+})

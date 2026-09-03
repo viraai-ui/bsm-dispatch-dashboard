@@ -31,10 +31,15 @@ export function PublicDatabaseClient() {
   const [selected, setSelected] = useState<PublicDatabaseRow>()
   const [detailLoading, setDetailLoading] = useState(false)
   const [detailError, setDetailError] = useState('')
+  const [videoMedia, setVideoMedia] = useState<Detail['media'][number]>()
   const seq = useRef(0)
   const searchAbort = useRef<AbortController | undefined>(undefined)
   const suggestionAbort = useRef<AbortController | undefined>(undefined)
   const dialogRef = useRef<HTMLElement>(null)
+  const videoDialogRef = useRef<HTMLElement>(null)
+  const videoCloseRef = useRef<HTMLButtonElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoTriggerRef = useRef<HTMLElement | null>(null)
   const detailCache = useRef(new Map<string, Detail>())
 
   const load = useCallback(async () => {
@@ -80,17 +85,42 @@ export function PublicDatabaseClient() {
     fetch(`/api/public/database/orders/${encodeURIComponent(row.id)}?snapshotVersion=${data?.snapshotVersion || ''}`, { cache: 'no-store' }).then(async response => { if (response.ok) detailCache.current.set(key, await response.json()) }).catch(() => {})
   }, [data?.snapshotVersion])
 
-  const closeDetail = useCallback(() => { setSelected(undefined); setDetail(undefined); setDetailError('') }, [])
+  const closeVideo = useCallback(() => {
+    const video = videoRef.current
+    if (video) { video.pause(); video.removeAttribute('src'); video.load() }
+    setVideoMedia(undefined)
+    requestAnimationFrame(() => videoTriggerRef.current?.focus())
+  }, [])
+  const openVideo = useCallback((media: Detail['media'][number], trigger: HTMLElement) => { videoTriggerRef.current = trigger; setVideoMedia(media) }, [])
+  const closeDetail = useCallback(() => { closeVideo(); setSelected(undefined); setDetail(undefined); setDetailError('') }, [closeVideo])
   const overlayOpen = Boolean(selected || filtersOpen)
   useEffect(() => {
     if (!overlayOpen) return
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') { if (filtersOpen) setFiltersOpen(false); else closeDetail() } }
+    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape' && !videoMedia) { if (filtersOpen) setFiltersOpen(false); else closeDetail() } }
     document.addEventListener('keydown', onKey)
     requestAnimationFrame(() => dialogRef.current?.focus())
     return () => { document.body.style.overflow = previous; document.removeEventListener('keydown', onKey) }
-  }, [overlayOpen, filtersOpen, closeDetail])
+  }, [overlayOpen, filtersOpen, videoMedia, closeDetail])
+  useEffect(() => {
+    if (!videoMedia) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { event.preventDefault(); closeVideo() }
+      if (event.key === 'Tab') {
+        const focusable = videoDialogRef.current?.querySelectorAll<HTMLElement>('button,video,[tabindex]:not([tabindex="-1"])')
+        if (!focusable?.length) return
+        const first = focusable[0]; const last = focusable[focusable.length - 1]
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus() }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    requestAnimationFrame(() => videoCloseRef.current?.focus())
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = previous }
+  }, [videoMedia, closeVideo])
 
   const updated = data ? new Date(data.generatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : ''
   return <div className="public-database-view">
@@ -122,7 +152,8 @@ export function PublicDatabaseClient() {
 
     {filtersOpen && <div className="pdb-overlay pdb-filter-overlay" onMouseDown={event => { if (event.target === event.currentTarget) setFiltersOpen(false) }}><section ref={dialogRef} tabIndex={-1} className="pdb-filter-sheet" role="dialog" aria-modal="true" aria-labelledby="filter-title"><div className="pdb-handle"/><div className="pdb-sheet-head"><div><span>Refine records</span><h2 id="filter-title">Filters</h2></div><button aria-label="Close filters" onClick={() => setFiltersOpen(false)}><Icon name="close"/></button></div><div className="pdb-filter-options">{FILTERS.map(([value, label]) => <label key={value} className={draftFilter === value ? 'selected' : ''}><span>{label}</span><input type="radio" name="record-filter" value={value} checked={draftFilter === value} onChange={() => setDraftFilter(value)}/><i/></label>)}</div><div className="pdb-sheet-actions"><button className="btn light" onClick={() => setDraftFilter('all')}>Reset</button><button className="btn" onClick={() => { setFilter(draftFilter); setPage(1); setFiltersOpen(false) }}>Apply filter</button></div></section></div>}
 
-    {selected && <div className="pdb-overlay" onMouseDown={event => { if (event.target === event.currentTarget) closeDetail() }}><section ref={dialogRef} tabIndex={-1} className="order-modal card pdb-detail-sheet" role="dialog" aria-modal="true" aria-labelledby="detail-title"><div className="pdb-handle"/><div className="pdb-detail-head"><div><span>Sales order</span><h1 id="detail-title">{detail?.salesOrderNumber || selected.salesOrderNumber}</h1><p>{detail?.customerName || selected.customerName}</p></div><button className="drawer-close" aria-label="Close details" onClick={closeDetail}><Icon name="close"/></button></div><div className="pdb-detail-body">{detailLoading ? <DetailSkeleton/> : detailError ? <div className="pdb-state"><strong>Details unavailable</strong><p>{detailError}</p><button className="btn" onClick={() => open(selected)}><Icon name="refresh"/>Retry</button></div> : detail && <DetailContent detail={detail} retry={() => open(selected)}/>}</div></section></div>}
+    {selected && <div className="pdb-overlay" onMouseDown={event => { if (event.target === event.currentTarget) closeDetail() }}><section ref={dialogRef} tabIndex={-1} className="order-modal card pdb-detail-sheet" role="dialog" aria-modal="true" aria-labelledby="detail-title"><div className="pdb-handle"/><div className="pdb-detail-head"><div><span>Sales order</span><h1 id="detail-title">{detail?.salesOrderNumber || selected.salesOrderNumber}</h1><p>{detail?.customerName || selected.customerName}</p></div><button className="drawer-close" aria-label="Close details" onClick={closeDetail}><Icon name="close"/></button></div><div className="pdb-detail-body">{detailLoading ? <DetailSkeleton/> : detailError ? <div className="pdb-state"><strong>Details unavailable</strong><p>{detailError}</p><button className="btn" onClick={() => open(selected)}><Icon name="refresh"/>Retry</button></div> : detail && <DetailContent detail={detail} retry={() => open(selected)} onViewLoading={openVideo}/>}</div></section></div>}
+    {videoMedia && <div className="pdb-video-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) closeVideo() }}><section ref={videoDialogRef} className="pdb-video-dialog" role="dialog" aria-modal="true" aria-labelledby="loading-video-title"><header><div><span>Secure attachment</span><h2 id="loading-video-title">Loading Video</h2></div><button ref={videoCloseRef} type="button" aria-label="Close loading video" onClick={closeVideo}><Icon name="close"/></button></header><div className="pdb-video-stage"><video ref={videoRef} src={videoMedia.url} controls autoPlay playsInline preload="metadata" tabIndex={0}>Your browser does not support inline video playback.</video></div></section></div>}
   </div>
 }
 
@@ -134,7 +165,7 @@ function Info({ k, v }: { k: string; v: string }) { return <div className="info-
 function SkeletonList({ embedded = false }: { embedded?: boolean }) { return <div className={`pdb-skeleton-list${embedded ? ' embedded' : ''}`} aria-hidden="true">{[1, 2, 3].map(n => <div className="pdb-skeleton-card" key={n}><i/><i/><i/><div><i/><i/></div></div>)}</div> }
 function DetailSkeleton() { return <div className="pdb-detail-skeleton" aria-label="Loading record"><i/><i/><div><i/><i/></div><i/><i/></div> }
 
-function DetailContent({ detail, retry }: { detail: Detail; retry: () => void }) {
+function DetailContent({ detail, retry, onViewLoading }: { detail: Detail; retry: () => void; onViewLoading: (media: Detail['media'][number], trigger: HTMLElement) => void }) {
   const warranty = publicWarrantyInfo(detail.deliveryDate)
   const loading = detail.media.filter(media => media.kind === 'loading')
   const builty = detail.media.filter(media => media.kind === 'builty')
@@ -144,14 +175,15 @@ function DetailContent({ detail, retry }: { detail: Detail; retry: () => void })
     <section className="pdb-detail-section pdb-transport-card"><div className="pdb-section-title"><span>02</span><h2>Transport Details</h2></div>{shipment ? <div className="pdb-detail-grid"><Info k="Shipment Type" v={shipment.shipmentType === 'transporter' ? 'Transporter' : 'Direct'}/><Info k="Transporter Name" v={shipment.transporterName || '—'}/><Info k="Transporter / Contact Number" v={shipment.transporterPhone || '—'}/><Info k="Vehicle Number" v={shipment.vehicleNumber || '—'}/><Info k="Driver Name" v={shipment.driverName || '—'}/><Info k="Driver Mobile" v={shipment.driverPhone || '—'}/><Info k="Expected Delivery" v={formatPublicDate(shipment.expectedDelivery)}/><Info k="Shipped At" v={formatPublicDate(shipment.shippedAt)}/>{shipment.notes && <div className="info-tile wide"><span>Notes</span><strong>{shipment.notes}</strong></div>}</div> : <p className="muted">Transport details have not been recorded.</p>}<button className="pdb-refresh-record" onClick={retry}><Icon name="refresh"/>Refresh record</button></section>
     <section className="pdb-detail-section pdb-machines-card"><div className="pdb-section-title"><span>03</span><h2>Machines &amp; Packing Videos</h2></div><div className="pdb-machine-list">{detail.machines.map(machine => { const packing = detail.media.filter(media => media.kind === 'packing' && media.machineId === machine.id); return <div className="pdb-machine pdb-machine-compact" key={machine.id}><strong className="pdb-machine-name">{machine.itemName}</strong><div className="pdb-machine-meta"><div className="pdb-machine-serial"><span>Serial number</span><strong>{machine.serialNumber || '—'}</strong></div><div className="pdb-machine-vendor"><span>Vendor</span><strong>{machine.vendor || '—'}</strong></div></div><div className="pdb-machine-actions">{packing.length ? packing.map(media => <AttachmentAction key={media.id} media={media}/>) : <em>Unavailable</em>}</div></div>})}</div></section>
     <section className={`pdb-warranty-box pdb-warranty-card ${warranty.valid ? 'valid' : 'void'}`}><div><span>Warranty</span><strong>{warranty.valid ? 'Warranty Valid' : 'Warranty Void'}</strong></div><dl><div><dt>Delivery Date</dt><dd>{warranty.delivery}</dd></div><div><dt>Warranty Valid Till</dt><dd>{warranty.expiry}</dd></div></dl></section>
-    <section className="pdb-detail-section pdb-dispatch-media-card"><div className="pdb-section-title"><span>04</span><h2>Loading Video &amp; LR Copy</h2></div><CompactMediaRow label="Loading Video" media={loading}/><CompactMediaRow label="Builty / LR" media={builty}/></section>
+    <section className="pdb-detail-section pdb-dispatch-media-card"><div className="pdb-section-title"><span>04</span><h2>Loading Video &amp; LR Copy</h2></div><CompactMediaRow label="Loading Video" media={loading} onViewLoading={onViewLoading}/><CompactMediaRow label="Builty / LR" media={builty}/></section>
   </div>
 }
 
-function CompactMediaRow({ label, media }: { label: string; media: Detail['media'] }) { return <div className="pdb-compact-media-row"><strong>{label}</strong><div>{media.length ? media.map(item => <AttachmentAction key={item.id} media={item}/>) : <em>Unavailable</em>}</div></div> }
+function CompactMediaRow({ label, media, onViewLoading }: { label: string; media: Detail['media']; onViewLoading?: (media: Detail['media'][number], trigger: HTMLElement) => void }) { return <div className="pdb-compact-media-row"><strong>{label}</strong><div>{media.length ? media.map(item => <AttachmentAction key={item.id} media={item} onViewLoading={onViewLoading}/>) : <em>Unavailable</em>}</div></div> }
 
 function formatPublicDate(value?: string) { if (!value) return '—'; const parsed = new Date(value); return Number.isNaN(parsed.getTime()) ? value : parsed.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) }
 
-function AttachmentAction({ media }: { media: Detail['media'][number] }) {
+function AttachmentAction({ media, onViewLoading }: { media: Detail['media'][number]; onViewLoading?: (media: Detail['media'][number], trigger: HTMLElement) => void }) {
+  if (media.kind === 'loading' && onViewLoading) return <button type="button" className="btn light pdb-view-action" onClick={event => { event.preventDefault(); onViewLoading(media, event.currentTarget) }}>View</button>
   return <a className="btn light pdb-view-action" href={media.url} target="_blank" rel="noopener noreferrer">View</a>
 }
