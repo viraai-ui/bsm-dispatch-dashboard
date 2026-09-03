@@ -3949,6 +3949,31 @@
           ]
         }
       }
+    },
+    "1154219000036422001": {
+      "orderId": "1154219000036422001",
+      "salesOrderNumber": "SO-07877",
+      "submittedAt": null,
+      "units": {
+        "1154219000036422001-1154219000036425007-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036422001-1154219000036425007-1-video-1788434144564-dsa69l",
+              "name": "VID_20260903_164519.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-03%2FSO-07877%2F1154219000036422001-1154219000036425007-1%2FSkiving-Machine-5-2026-09-03T11-15-29-862Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-03/SO-07877/1154219000036422001-1154219000036425007-1/Skiving-Machine-5-2026-09-03T11-15-29-862Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-03T11:15:44.564Z",
+              "expiresAt": "2026-10-03T11:15:44.564Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
