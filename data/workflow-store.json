@@ -22166,7 +22166,9 @@
     "1154219000036422001": {
       "salesOrderId": "1154219000036422001",
       "salesOrderNumber": "SO-07877",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-03T09:43:59.901Z",
       "processedOrder": {
         "id": "1154219000036422001",
         "zohoSalesOrderId": "1154219000036422001",
@@ -22196,8 +22198,8 @@
           {
             "id": "1154219000036422001-1154219000036425007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271114",
+            "qrToken": "26271114",
             "orderId": "1154219000036422001",
             "lineItemId": "1154219000036425007",
             "itemName": "Skiving Machine @5%",
@@ -22205,14 +22207,17 @@
             "customerName": "XO FOOTWEAR PVT LTD (34B)",
             "salesOrderNumber": "SO-07877",
             "deliveryDate": "2026-09-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-03T14:40:20+0530"
@@ -22226,7 +22231,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-03T09:43:26.591Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-03T09:43:27.918Z"
+          "zohoBackupQueuedAt": "2026-09-03T09:43:27.918Z",
+          "processedAt": "2026-09-03T09:43:59.901Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
