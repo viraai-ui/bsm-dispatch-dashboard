@@ -63,28 +63,28 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036422004",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
+          "id": "1154219000036425007",
+          "itemName": "Skiving Machine @5%",
+          "sku": "801 @5%",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225896",
+          "zohoItemId": "1154219000001940131",
           "rate": 35000,
           "dispatchCategory": "machine"
         }
       ],
       "machines": [
         {
-          "id": "1154219000036422001-1154219000036422004-1",
+          "id": "1154219000036422001-1154219000036425007-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036422001",
-          "lineItemId": "1154219000036422004",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
+          "lineItemId": "1154219000036425007",
+          "itemName": "Skiving Machine @5%",
+          "sku": "801 @5%",
           "customerName": "XO FOOTWEAR PVT LTD (34B)",
           "salesOrderNumber": "SO-07877",
           "deliveryDate": "2026-09-03",
@@ -98,7 +98,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-03T14:08:53+0530"
+      "zohoLastModifiedTime": "2026-09-03T14:40:20+0530"
     },
     "1154219000036383018": {
       "id": "1154219000036383018",
@@ -8492,8 +8492,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-03T09:03:45.312Z",
-  "lastAttemptAt": "2026-09-03T09:18:35.114Z",
+  "lastSuccessfulSyncAt": "2026-09-03T09:18:46.043Z",
+  "lastAttemptAt": "2026-09-03T09:18:46.043Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
