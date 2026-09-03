@@ -72,9 +72,9 @@ export function PublicDatabaseClient() {
 
   const updated = data ? new Date(data.generatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : ''
   return <div className="public-database-view">
-    <header className="pdb-mobile-hero">
+    <header className="pdb-mobile-hero pdb-database-hero">
       <div className="pdb-hero-top"><span className="pdb-eyebrow">Public database</span><span className="pdb-live"><i/>Live snapshot</span></div>
-      <h1>Serial Database</h1><p>Find machines, serials and order records.</p>
+      <div className="pdb-hero-copy"><h1>Serial Database</h1><p>Find machines, serials and order records.</p></div>
     </header>
 
     <section className="card search-panel database-search-panel">
@@ -90,7 +90,7 @@ export function PublicDatabaseClient() {
     {data && <section className={`card database-list-card${loading ? ' is-loading' : ''}`}>
       <div className="database-list-head"><div><h2>{q || filter !== 'all' ? 'Search results' : 'All records'}</h2><span className="pdb-result-count">{data.total.toLocaleString('en-IN')} records</span></div><span className="muted">Updated {updated}</span></div>
       {loading ? <SkeletonList embedded/> : <>
-        <div className="table-wrap"><table className="table"><thead><tr><th>SO</th><th>Customer</th><th>Units</th><th>Warranty Valid Till</th><th>Media</th><th>Action</th></tr></thead><tbody>{data.items.map(row => <tr key={row.id}><td><strong>{row.salesOrderNumber}</strong></td><td>{row.customerName}{row.builtyUploaded && <small className="database-builty-chip"> Builty Uploaded</small>}</td><td>{row.units}</td><td>{row.warrantyEnd}</td><td>{row.mediaLabel}</td><td><button className="btn light" onClick={() => open(row)}>View</button></td></tr>)}</tbody></table></div>
+        <div className="table-wrap pdb-desktop-table"><table className="table"><thead><tr><th>Sales order</th><th>Customer</th><th>Machines</th><th>Warranty valid till</th><th>Status & media</th><th><span className="sr-only">Open record</span></th></tr></thead><tbody>{data.items.map(row => <tr key={row.id} onClick={() => open(row)}><td><span className="pdb-so-mark">SO</span><strong>{row.salesOrderNumber}</strong></td><td><strong className="pdb-table-customer">{row.customerName}</strong>{row.builtyUploaded && <StatusBadge label="Builty uploaded"/>}</td><td><strong>{row.units}</strong><small>{row.units === 1 ? 'unit' : 'units'}</small></td><td><strong>{row.warrantyEnd || '—'}</strong></td><td><div className="pdb-table-statuses"><StatusBadge label={row.lifecycleLabel}/><StatusBadge label={row.mediaLabel}/></div></td><td><button className="pdb-row-action" aria-label={`View ${row.salesOrderNumber}`} onClick={event => { event.stopPropagation(); open(row) }}>View record <Icon name="chevron"/></button></td></tr>)}</tbody></table></div>
         <div className="pdb-mobile-cards">{data.items.map(row => <RecordCard key={row.id} row={row} open={open}/>)}</div>
         {!data.items.length && <div className="pdb-empty"><span className="pdb-empty-mark"><Icon name="search"/></span><strong>No matching records</strong><p>Try a different SO, serial, customer or machine.</p>{(q || filter !== 'all') && <button className="btn light" onClick={() => { setQ(''); setFilter('all'); setPage(1) }}>Clear search</button>}</div>}
       </>}

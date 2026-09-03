@@ -41,11 +41,15 @@ test('detail is lazy, accessible and attachment actions navigate safely', () => 
   assert.doesNotMatch(component, /response\.blob\(\)/)
 })
 
-test('desktop remains table-first and public client stays server-paginated/read-only', () => {
+test('desktop uses a premium operational table and public client stays server-paginated/read-only', () => {
   assert.match(component, /<table className="table">/)
+  assert.match(component, /pdb-database-hero/)
+  assert.match(component, /pdb-table-statuses/)
+  assert.match(component, /View record/)
   assert.match(component, /limit=25/)
   assert.match(component, /AbortController/)
   assert.match(component, /setTimeout\(load, 225\)/)
   assert.doesNotMatch(component, /loadDatabaseOrders|public-database-snapshot\.json|POST|PUT|PATCH|DELETE/)
   assert.match(css, /\.pdb-mobile-hero,\.pdb-mobile-cards,\.pdb-filter-button,\.pdb-announcer\{display:none\}/)
+  assert.match(css, /@media\(min-width:701px\)/)
 })
