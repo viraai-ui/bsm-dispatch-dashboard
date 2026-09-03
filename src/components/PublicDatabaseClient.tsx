@@ -5,6 +5,7 @@ import type { PublicDatabaseRow } from '@/lib/public-database-snapshot'
 import { publicWarrantyInfo } from '@/lib/warranty'
 
 type Result = { items: PublicDatabaseRow[]; page: number; pages: number; total: number; snapshotVersion: string; generatedAt: string }
+type Suggestion = { id: string; value: string; salesOrderNumber: string; customerName: string; match: string }
 type Detail = { id: string; salesOrderNumber: string; customerName: string; salesperson: string; shippingAddress: string; deliveryDate: string; warrantyDate: string; machines: Array<{ id: string; itemName: string; serialNumber: string; vendor: string }>; shipment?: { shipmentType?: string; transporterName?: string; transporterPhone?: string; vehicleNumber?: string; driverName?: string; driverPhone?: string; expectedDelivery?: string; shippedAt?: string; notes?: string }; media: Array<{ id: string; machineId?: string; kind: 'packing'|'loading'|'builty'; name?: string; url: string }>; snapshotVersion: string }
 const FILTERS = [['all', 'All records'], ['pending', 'Pending'], ['submitted', 'Media submitted'], ['closed', 'Closed'], ['builty', 'Builty uploaded']] as const
 
@@ -15,6 +16,10 @@ function Icon({ name }: { name: 'search' | 'filter' | 'close' | 'chevron' | 'fil
 
 export function PublicDatabaseClient() {
   const [q, setQ] = useState('')
+  const [draftQ, setDraftQ] = useState('')
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([])
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false)
+  const [activeSuggestion, setActiveSuggestion] = useState(-1)
   const [filter, setFilter] = useState('all')
   const [draftFilter, setDraftFilter] = useState('all')
   const [filtersOpen, setFiltersOpen] = useState(false)
@@ -28,6 +33,7 @@ export function PublicDatabaseClient() {
   const [detailError, setDetailError] = useState('')
   const seq = useRef(0)
   const searchAbort = useRef<AbortController | undefined>(undefined)
+  const suggestionAbort = useRef<AbortController | undefined>(undefined)
   const dialogRef = useRef<HTMLElement>(null)
   const detailCache = useRef(new Map<string, Detail>())
 
@@ -48,6 +54,10 @@ export function PublicDatabaseClient() {
   }, [q, filter, page])
 
   useEffect(() => { const timer = setTimeout(load, 225); return () => { clearTimeout(timer); searchAbort.current?.abort() } }, [load])
+  useEffect(() => { suggestionAbort.current?.abort(); if (!draftQ.trim() || draftQ === q) { setSuggestions([]); setSuggestionsOpen(false); return } const controller=new AbortController(); suggestionAbort.current=controller; const timer=setTimeout(async()=>{try{const response=await fetch(`/api/public/database/search?mode=suggest&q=${encodeURIComponent(draftQ)}`,{signal:controller.signal});if(!response.ok)throw new Error();const value=await response.json();setSuggestions(value.suggestions);setSuggestionsOpen(true);setActiveSuggestion(-1)}catch(reason){if(!(reason instanceof DOMException&&reason.name==='AbortError'))setSuggestions([])}},180);return()=>{clearTimeout(timer);controller.abort()}},[draftQ,q])
+
+  const commitSearch = useCallback((value=draftQ) => { const next=value.trim(); setDraftQ(next); setQ(next); setPage(1); setSuggestionsOpen(false); setActiveSuggestion(-1) }, [draftQ])
+  const clearSearch = useCallback(() => { setDraftQ(''); setQ(''); setFilter('all'); setPage(1); setSuggestions([]); setSuggestionsOpen(false) }, [])
 
   const open = useCallback(async (row: PublicDatabaseRow) => {
     const cached = detailCache.current.get(`${data?.snapshotVersion}:${row.id}`)
@@ -90,7 +100,7 @@ export function PublicDatabaseClient() {
     </header>
 
     <section className="card search-panel database-search-panel">
-      <div className="database-search-input-wrap"><Icon name="search"/><input aria-label="Search database" placeholder="Search SO, serial, customer or machine" value={q} onChange={event => { setQ(event.target.value); setPage(1) }}/>{q && <button type="button" className="database-clear-x" aria-label="Clear search" onClick={() => setQ('')}><Icon name="close"/></button>}</div>
+      <div className="database-search-input-wrap"><Icon name="search"/><input role="combobox" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="pdb-suggestions" aria-activedescendant={activeSuggestion>=0?`pdb-suggestion-${activeSuggestion}`:undefined} aria-label="Search database" placeholder="Search SO, serial, customer or machine" value={draftQ} onChange={event => setDraftQ(event.target.value)} onFocus={()=>{if(suggestions.length)setSuggestionsOpen(true)}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();setSuggestionsOpen(true);setActiveSuggestion(value=>Math.min(value+1,suggestions.length-1))}else if(event.key==='ArrowUp'){event.preventDefault();setActiveSuggestion(value=>Math.max(value-1,0))}else if(event.key==='Escape'){setSuggestionsOpen(false);setActiveSuggestion(-1)}else if(event.key==='Enter'){event.preventDefault();const choice=suggestions[activeSuggestion];commitSearch(choice?.value||draftQ)}}}/>{draftQ && <button type="button" className="database-clear-x" aria-label="Clear search and show all records" onClick={clearSearch}><Icon name="close"/></button>}{suggestionsOpen&&<div id="pdb-suggestions" role="listbox" className="pdb-suggestions">{suggestions.length?suggestions.map((item,index)=><button type="button" role="option" aria-selected={index===activeSuggestion} id={`pdb-suggestion-${index}`} className={index===activeSuggestion?'active':''} key={item.id} onMouseDown={event=>event.preventDefault()} onClick={()=>commitSearch(item.value)}><span><strong>{item.salesOrderNumber}</strong><small>{item.customerName}</small></span>{item.match&&<em>{item.match}</em>}</button>):<span className="pdb-suggestion-empty">No similar records</span>}</div>}</div>
       <select value={filter} onChange={event => { setFilter(event.target.value); setPage(1) }} aria-label="Filter database records">{FILTERS.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
       <button type="button" className="pdb-filter-button" aria-label={`Filters${filter === 'all' ? '' : ', 1 active'}`} onClick={() => { setDraftFilter(filter); setFiltersOpen(true) }}><Icon name="filter"/>{filter !== 'all' && <span>1</span>}</button>
     </section>
@@ -100,11 +110,11 @@ export function PublicDatabaseClient() {
     {loading && !data && <SkeletonList/>}
 
     {data && <section className={`card database-list-card${loading ? ' is-loading' : ''}`}>
-      <div className="database-list-head"><div><h2>{q || filter !== 'all' ? 'Search results' : 'All records'}</h2><span className="pdb-result-count">{data.total.toLocaleString('en-IN')} records</span></div><span className="muted">Updated {updated}</span></div>
+      <div className="database-list-head"><div><h2>{q || filter !== 'all' ? 'Search results' : 'All records'}</h2><span className="pdb-result-count">{data.total.toLocaleString('en-IN')} records</span>{(q||filter!=='all')&&<button className="pdb-results-clear" aria-label="Clear search and return to all records" onClick={clearSearch}><Icon name="close"/>Clear</button>}</div><span className="muted">Updated {updated}</span></div>
       {loading ? <SkeletonList embedded/> : <>
         <div className="table-wrap pdb-desktop-table"><table className="table"><thead><tr><th>Sales order</th><th>Customer</th><th>Machines</th><th>Warranty valid till</th><th>Status & media</th><th><span className="sr-only">Open record</span></th></tr></thead><tbody>{data.items.map(row => <tr key={row.id} onMouseEnter={() => prefetch(row)} onFocus={() => prefetch(row)} onClick={() => open(row)}><td><span className="pdb-so-mark">SO</span><strong>{row.salesOrderNumber}</strong></td><td><strong className="pdb-table-customer">{row.customerName}</strong>{row.builtyUploaded && <StatusBadge label="Builty uploaded"/>}</td><td><strong>{row.units}</strong><small>{row.units === 1 ? 'unit' : 'units'}</small></td><td><strong>{row.warrantyEnd || '—'}</strong></td><td><div className="pdb-table-statuses"><StatusBadge label={row.lifecycleLabel}/><StatusBadge label={row.mediaLabel}/></div></td><td><button className="pdb-row-action" aria-label={`View ${row.salesOrderNumber}`} onClick={event => { event.stopPropagation(); open(row) }}>View record <Icon name="chevron"/></button></td></tr>)}</tbody></table></div>
         <div className="pdb-mobile-cards">{data.items.map(row => <RecordCard key={row.id} row={row} open={open}/>)}</div>
-        {!data.items.length && <div className="pdb-empty"><span className="pdb-empty-mark"><Icon name="search"/></span><strong>No matching records</strong><p>Try a different SO, serial, customer or machine.</p>{(q || filter !== 'all') && <button className="btn light" onClick={() => { setQ(''); setFilter('all'); setPage(1) }}>Clear search</button>}</div>}
+        {!data.items.length && <div className="pdb-empty"><span className="pdb-empty-mark"><Icon name="search"/></span><strong>No matching records</strong><p>Try a different SO, serial, customer or machine.</p>{(q || filter !== 'all') && <button className="btn light" onClick={clearSearch}>Clear search</button>}</div>}
       </>}
       {!!data.items.length && <nav className="database-pagination" aria-label="Results pages"><button className="btn light" disabled={page <= 1 || loading} onClick={() => { setPage(value => value - 1); scrollTo({ top: 0, behavior: 'smooth' }) }}>Previous</button><span><b>{data.page}</b> of {Math.max(1, data.pages)}</span><button className="btn light" disabled={page >= data.pages || loading} onClick={() => { setPage(value => value + 1); scrollTo({ top: 0, behavior: 'smooth' }) }}>Next</button></nav>}
     </section>}
