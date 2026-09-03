@@ -21921,7 +21921,7 @@
       "salesOrderId": "1154219000036384021",
       "salesOrderNumber": "SO-07874",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-03T06:48:29.258Z",
       "processedOrder": {
         "id": "1154219000036384021",
@@ -21990,7 +21990,8 @@
           "dispatchNote": "local",
           "vendor": "Gurudev"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
