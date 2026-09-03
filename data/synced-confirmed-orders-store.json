@@ -90,56 +90,6 @@
       "machines": [],
       "zohoLastModifiedTime": "2026-09-03T12:38:22+0530"
     },
-    "1154219000036384021": {
-      "id": "1154219000036384021",
-      "zohoSalesOrderId": "1154219000036384021",
-      "salesOrderNumber": "SO-07874",
-      "status": "open",
-      "customerName": "KAMAL SONS",
-      "shippingAddress": "PLOT NO.H-17, 18, 19 BLOCK-H, DURGA ENTERPRISES INDUSTRIAL PARK,, Ghaziabad, Uttar Pradesh, 201005, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036384024",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000227370",
-          "rate": 53000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036384021-1154219000036384024-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036384021",
-          "lineItemId": "1154219000036384024",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "customerName": "KAMAL SONS",
-          "salesOrderNumber": "SO-07874",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-03T13:31:16+0530"
-    },
     "1154219000036382009": {
       "id": "1154219000036382009",
       "zohoSalesOrderId": "1154219000036382009",
@@ -8395,7 +8345,6 @@
   "orderIds": [
     "1154219000036383018",
     "1154219000036409087",
-    "1154219000036384021",
     "1154219000036382009",
     "1154219000036370004",
     "1154219000036386001",
@@ -8441,8 +8390,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-03T08:01:34.243Z",
-  "lastAttemptAt": "2026-09-03T08:18:34.844Z",
+  "lastSuccessfulSyncAt": "2026-09-03T08:18:45.649Z",
+  "lastAttemptAt": "2026-09-03T08:18:45.649Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
