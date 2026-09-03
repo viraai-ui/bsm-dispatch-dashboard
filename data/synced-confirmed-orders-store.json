@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036422001": {
+      "id": "1154219000036422001",
+      "zohoSalesOrderId": "1154219000036422001",
+      "salesOrderNumber": "SO-07877",
+      "status": "open",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036422004",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225896",
+          "rate": 35000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036422001-1154219000036422004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036422001",
+          "lineItemId": "1154219000036422004",
+          "itemName": "Skiving Machine For Leather",
+          "sku": "801",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-07877",
+          "deliveryDate": "2026-09-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-03T14:08:53+0530"
+    },
     "1154219000036383018": {
       "id": "1154219000036383018",
       "zohoSalesOrderId": "1154219000036383018",
@@ -8343,6 +8393,7 @@
     }
   },
   "orderIds": [
+    "1154219000036422001",
     "1154219000036383018",
     "1154219000036409087",
     "1154219000036382009",
@@ -8390,8 +8441,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-03T08:33:47.898Z",
-  "lastAttemptAt": "2026-09-03T08:40:25.416Z",
+  "lastSuccessfulSyncAt": "2026-09-03T08:40:37.052Z",
+  "lastAttemptAt": "2026-09-03T08:40:37.052Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
