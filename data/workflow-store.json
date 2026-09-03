@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271113,
+  "serialCounter": 26271114,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -22160,6 +22160,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-03T09:01:28.675Z",
           "zohoBackupSyncedAt": "2026-09-03T09:01:28.675Z"
+        }
+      }
+    },
+    "1154219000036422001": {
+      "salesOrderId": "1154219000036422001",
+      "salesOrderNumber": "SO-07877",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036422001",
+        "zohoSalesOrderId": "1154219000036422001",
+        "salesOrderNumber": "SO-07877",
+        "status": "open",
+        "customerName": "XO FOOTWEAR PVT LTD (34B)",
+        "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036425007",
+            "itemName": "Skiving Machine @5%",
+            "sku": "801 @5%",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000001940131",
+            "rate": 35000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036422001-1154219000036425007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036422001",
+            "lineItemId": "1154219000036425007",
+            "itemName": "Skiving Machine @5%",
+            "sku": "801 @5%",
+            "customerName": "XO FOOTWEAR PVT LTD (34B)",
+            "salesOrderNumber": "SO-07877",
+            "deliveryDate": "2026-09-03",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-03T14:40:20+0530"
+      },
+      "machines": {
+        "1154219000036422001-1154219000036425007-1": {
+          "machineUnitId": "1154219000036422001-1154219000036425007-1",
+          "lineItemId": "1154219000036425007",
+          "serialNumber": "26271114",
+          "qrToken": "26271114",
+          "qrStatus": "pending"
         }
       }
     }
