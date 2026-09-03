@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036428004": {
+      "id": "1154219000036428004",
+      "zohoSalesOrderId": "1154219000036428004",
+      "salesOrderNumber": "SO-07880",
+      "status": "open",
+      "customerName": "Samriddhi Industries",
+      "shippingAddress": "A-27, RIICO Housing Colony, Near Laxmi Roadlines,, Road No. 14 Badharna, VKI, Jaipur, Rajasthan, 302013",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036428007",
+          "itemName": "Hotmelt Roller Coater (24 Inch) Table Top",
+          "sku": "831-4",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004168252",
+          "rate": 120000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036428004-1154219000036428007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036428004",
+          "lineItemId": "1154219000036428007",
+          "itemName": "Hotmelt Roller Coater (24 Inch) Table Top",
+          "sku": "831-4",
+          "customerName": "Samriddhi Industries",
+          "salesOrderNumber": "SO-07880",
+          "deliveryDate": "2026-09-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-03T16:27:55+0530"
+    },
     "1154219000036424001": {
       "id": "1154219000036424001",
       "zohoSalesOrderId": "1154219000036424001",
@@ -8443,6 +8493,7 @@
     }
   },
   "orderIds": [
+    "1154219000036428004",
     "1154219000036424001",
     "1154219000036422001",
     "1154219000036383018",
@@ -8492,8 +8543,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-03T10:48:46.610Z",
-  "lastAttemptAt": "2026-09-03T11:00:25.439Z",
+  "lastSuccessfulSyncAt": "2026-09-03T11:00:39.044Z",
+  "lastAttemptAt": "2026-09-03T11:00:39.044Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
