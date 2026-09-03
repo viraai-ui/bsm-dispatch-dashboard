@@ -7,6 +7,8 @@ const snapshot = await readFile('src/lib/public-database-snapshot.ts', 'utf8')
 const route = await readFile('src/app/api/public/database/orders/[id]/route.ts', 'utf8')
 const warranty = await readFile('src/lib/warranty.ts', 'utf8')
 const awaitCss = await readFile('src/app/globals.css', 'utf8')
+const durableSnapshot = JSON.parse(await readFile('data/public-database-snapshot.json', 'utf8'))
+const workflowStore = JSON.parse(await readFile('data/workflow-store.json', 'utf8'))
 
 test('detail replaces status summary with explicit 13-month warranty presentation', () => {
   assert.doesNotMatch(client, /Status summary/i)
@@ -49,4 +51,24 @@ test('shipment parity and hover prefetch are retained', () => {
   assert.match(snapshot, /shippedAt:shipment\.shippedAt/)
   assert.match(client, /onMouseEnter=\{\(\) => prefetch\(row\)\}/)
   assert.match(client, /detailCache/)
+})
+
+test('canonical item vendor survives workflow to public detail and renders beside serial', () => {
+  assert.match(snapshot, /vendor:m\.vendor\|\|''/)
+  assert.match(snapshot, /machines:Array<\{id:string;itemName:string;serialNumber:string;vendor:string\}>/)
+  assert.match(client, /pdb-machine-serial[\s\S]*Serial number[\s\S]*machine\.serialNumber \|\| '—'[\s\S]*pdb-machine-vendor[\s\S]*Vendor[\s\S]*machine\.vendor \|\| '—'/)
+  assert.match(route, /\.\.\.detail,media/)
+
+  const workflow = Object.values(workflowStore.orders).find(value => value.processedOrder?.salesOrderNumber === 'SO-07808')
+  const canonicalMachine = workflow?.processedOrder?.machines?.find(machine => machine.serialNumber === '26271078')
+  const publicOrder = Object.values(durableSnapshot.details).find(detail => detail.salesOrderNumber === 'SO-07808')
+  const publicMachine = publicOrder?.machines?.find(machine => machine.serialNumber === '26271078')
+  assert.equal(canonicalMachine?.vendor, 'K S')
+  assert.equal(publicMachine?.vendor, canonicalMachine.vendor)
+})
+
+test('vendor layout remains one compact desktop row and stacks without mobile overflow', () => {
+  assert.match(awaitCss, /\.pdb-machine-compact\{display:grid;grid-template-columns:minmax\(0,1\.5fr\) minmax\(260px,1fr\) auto/)
+  assert.match(awaitCss, /\.pdb-machine-meta\{display:grid;grid-template-columns:minmax\(110px,1fr\) minmax\(110px,1fr\)/)
+  assert.match(awaitCss, /@media\(max-width:700px\)[^{]*\{[\s\S]*\.pdb-machine-name\{grid-column:1\/-1;white-space:normal\}[\s\S]*\.pdb-machine-meta\{grid-column:1;grid-row:2;grid-template-columns:minmax\(0,1fr\) minmax\(0,1fr\)/)
 })
