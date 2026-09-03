@@ -3979,7 +3979,26 @@
       "orderId": "1154219000036383018",
       "salesOrderNumber": "SO-07876",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000036383018-1154219000036383021-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036383018-1154219000036383021-1-video-1788438249181-xivaxr",
+              "name": "VID_20260903_175340.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-03%2FSO-07876%2F1154219000036383018-1154219000036383021-1%2FFlatbed-Single-Walking-Foot-2026-09-03T12-23-51-828Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-03/SO-07876/1154219000036383018-1154219000036383021-1/Flatbed-Single-Walking-Foot-2026-09-03T12-23-51-828Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-03T12:24:09.181Z",
+              "expiresAt": "2026-10-03T12:24:09.181Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     }
   }
