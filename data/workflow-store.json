@@ -22088,7 +22088,9 @@
     "1154219000036424001": {
       "salesOrderId": "1154219000036424001",
       "salesOrderNumber": "SO-07878",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-03T08:54:58.020Z",
       "processedOrder": {
         "id": "1154219000036424001",
         "zohoSalesOrderId": "1154219000036424001",
@@ -22118,8 +22120,8 @@
           {
             "id": "1154219000036424001-1154219000036424004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271113",
+            "qrToken": "26271113",
             "orderId": "1154219000036424001",
             "lineItemId": "1154219000036424004",
             "itemName": "Single needle post bed Drop feed",
@@ -22127,14 +22129,17 @@
             "customerName": "AJAY FOOTWEAR",
             "salesOrderNumber": "SO-07878",
             "deliveryDate": "2026-09-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-03T14:18:53+0530"
@@ -22148,7 +22153,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-03T08:54:09.310Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-03T08:54:10.549Z"
+          "zohoBackupQueuedAt": "2026-09-03T08:54:10.549Z",
+          "processedAt": "2026-09-03T08:54:58.020Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
