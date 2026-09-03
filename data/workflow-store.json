@@ -21984,11 +21984,13 @@
           "qrToken": "26271111",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-03T06:47:33.783Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-03T06:47:34.846Z",
           "processedAt": "2026-09-03T06:48:29.258Z",
           "dispatchNote": "local",
-          "vendor": "Gurudev"
+          "vendor": "Gurudev",
+          "zohoBackupLastAttemptAt": "2026-09-03T07:01:27.926Z",
+          "zohoBackupSyncedAt": "2026-09-03T07:01:27.926Z"
         }
       },
       "dispatchSortOrder": 1
