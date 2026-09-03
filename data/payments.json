@@ -1,6 +1,33 @@
 {
   "payments": [
     {
+      "customerName": "KAMAL SONS",
+      "salesOrderNumber": "SO-07874",
+      "paymentAmount": 50000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "remarks": "50k Advance received",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07874/2026-09-03/1788415209192-9420eb0d-fc61-481e-a21a-09535a6e89ac-a77288ba-1903-45f8-98ef-e34060318491.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07874%2F2026-09-03%2F1788415209192-9420eb0d-fc61-481e-a21a-09535a6e89ac-a77288ba-1903-45f8-98ef-e34060318491.jpg",
+          "name": "a77288ba-1903-45f8-98ef-e34060318491.jpg",
+          "contentType": "image/jpeg",
+          "size": 62989
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07874/2026-09-03/1788415209192-9420eb0d-fc61-481e-a21a-09535a6e89ac-a77288ba-1903-45f8-98ef-e34060318491.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07874%2F2026-09-03%2F1788415209192-9420eb0d-fc61-481e-a21a-09535a6e89ac-a77288ba-1903-45f8-98ef-e34060318491.jpg",
+      "screenshotName": "a77288ba-1903-45f8-98ef-e34060318491.jpg",
+      "publicDeleteTokenHash": "7c7f2c4dc4eeb8b0fe15943fbeb71fe76deeddbff69ab7b37194b3fe598d8f65",
+      "id": "payment-0902d1df-de83-4ccd-bc56-407e43c3cd3e",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "b9f3fd0867754542824ce20467319929",
+      "createdAt": "2026-09-03T06:00:15.675Z",
+      "updatedAt": "2026-09-03T06:00:15.675Z"
+    },
+    {
       "customerName": "Ankit Aggarwal",
       "paymentAmount": 137500,
       "paymentMode": "Bank Transfer",
