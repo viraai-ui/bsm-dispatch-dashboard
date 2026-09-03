@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "KAMAL SONS",
+      "salesOrderNumber": "SO-07874",
+      "paymentAmount": 12540,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07874/2026-09-03/1788436076314-de8cdee1-f338-44f6-8e4a-4cf4550acb79-555a8200-e4d0-4989-b2fd-65e957d6458d.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07874%2F2026-09-03%2F1788436076314-de8cdee1-f338-44f6-8e4a-4cf4550acb79-555a8200-e4d0-4989-b2fd-65e957d6458d.jpg",
+          "name": "555a8200-e4d0-4989-b2fd-65e957d6458d.jpg",
+          "contentType": "image/jpeg",
+          "size": 60954
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07874/2026-09-03/1788436076314-de8cdee1-f338-44f6-8e4a-4cf4550acb79-555a8200-e4d0-4989-b2fd-65e957d6458d.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07874%2F2026-09-03%2F1788436076314-de8cdee1-f338-44f6-8e4a-4cf4550acb79-555a8200-e4d0-4989-b2fd-65e957d6458d.jpg",
+      "screenshotName": "555a8200-e4d0-4989-b2fd-65e957d6458d.jpg",
+      "publicDeleteTokenHash": "18228c86456052b14c99ace9dc1657de4186474d0a120eb165f30ee10c84253c",
+      "id": "payment-c2ba8cce-564e-4ae4-adf3-a48860f708f6",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "113c7fcdb66c48cb8402118315f2d5fa",
+      "createdAt": "2026-09-03T11:47:57.662Z",
+      "updatedAt": "2026-09-03T11:47:57.662Z"
+    },
+    {
       "customerName": "GARG INDUSTRIES",
       "salesOrderNumber": "SO-07881",
       "paymentAmount": 56640,
