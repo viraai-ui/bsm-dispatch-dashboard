@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { addCalendarMonthsClamped, publicWarrantyInfo } from '../src/lib/warranty.js'
+import { addCalendarMonthsClamped, publicWarrantyInfo } from '../src/lib/warranty'
 
 test('13 calendar months clamps month-end rather than overflowing', () => {
   const end = addCalendarMonthsClamped(new Date(2025, 0, 31), 13)
