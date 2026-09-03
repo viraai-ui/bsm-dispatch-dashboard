@@ -5416,6 +5416,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036384021": {
+      "id": "ship-1788422004577-57llo",
+      "itemId": "1154219000036384021",
+      "orderId": "1154219000036384021",
+      "machineId": "1154219000036384021-1154219000036384024-1",
+      "salesOrderNumber": "SO-07874",
+      "customerName": "KAMAL SONS",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAS0496",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-03",
+      "notes": "",
+      "shippedAt": "2026-09-03T07:53:24.577Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
