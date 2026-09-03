@@ -2,9 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { PublicDatabaseRow } from '@/lib/public-database-snapshot'
+import { publicWarrantyInfo } from '@/lib/warranty'
 
 type Result = { items: PublicDatabaseRow[]; page: number; pages: number; total: number; snapshotVersion: string; generatedAt: string }
-type Detail = { id: string; salesOrderNumber: string; customerName: string; salesperson: string; shippingAddress: string; deliveryDate: string; warrantyDate: string; status: { lifecycleLabel: string; mediaLabel: string }; machines: Array<{ id: string; itemName: string; serialNumber: string; vendor: string }>; shipment?: Record<string, string>; media: Array<{ id: string; kind: string; name?: string; url: string }>; snapshotVersion: string }
+type Detail = { id: string; salesOrderNumber: string; customerName: string; salesperson: string; shippingAddress: string; deliveryDate: string; warrantyDate: string; machines: Array<{ id: string; itemName: string; serialNumber: string; vendor: string }>; shipment?: { shipmentType?: string; transporterName?: string; transporterPhone?: string; vehicleNumber?: string; driverName?: string; driverPhone?: string; expectedDelivery?: string; shippedAt?: string; notes?: string }; media: Array<{ id: string; machineId?: string; kind: 'packing'|'loading'|'builty'; name?: string; url: string }>; snapshotVersion: string }
 const FILTERS = [['all', 'All records'], ['pending', 'Pending'], ['submitted', 'Media submitted'], ['closed', 'Closed'], ['builty', 'Builty uploaded']] as const
 
 function Icon({ name }: { name: 'search' | 'filter' | 'close' | 'chevron' | 'file' | 'refresh' }) {
@@ -28,6 +29,7 @@ export function PublicDatabaseClient() {
   const seq = useRef(0)
   const searchAbort = useRef<AbortController | undefined>(undefined)
   const dialogRef = useRef<HTMLElement>(null)
+  const detailCache = useRef(new Map<string, Detail>())
 
   const load = useCallback(async () => {
     const n = ++seq.current
@@ -48,15 +50,25 @@ export function PublicDatabaseClient() {
   useEffect(() => { const timer = setTimeout(load, 225); return () => { clearTimeout(timer); searchAbort.current?.abort() } }, [load])
 
   const open = useCallback(async (row: PublicDatabaseRow) => {
-    setSelected(row); setDetail(undefined); setDetailError(''); setDetailLoading(true)
+    const cached = detailCache.current.get(`${data?.snapshotVersion}:${row.id}`)
+    setSelected(row); setDetail(cached); setDetailError(''); setDetailLoading(!cached)
+    if (cached) return
     try {
       let response = await fetch(`/api/public/database/orders/${encodeURIComponent(row.id)}?snapshotVersion=${data?.snapshotVersion || ''}`, { cache: 'no-store' })
       if (response.status === 409) { await load(); response = await fetch(`/api/public/database/orders/${encodeURIComponent(row.id)}`, { cache: 'no-store' }) }
       if (!response.ok) throw new Error()
-      setDetail(await response.json())
+      const value = await response.json() as Detail
+      detailCache.current.set(`${value.snapshotVersion}:${row.id}`, value)
+      setDetail(value)
     } catch { setDetailError('Record details could not be loaded.') }
     finally { setDetailLoading(false) }
   }, [data?.snapshotVersion, load])
+
+  const prefetch = useCallback((row: PublicDatabaseRow) => {
+    const key = `${data?.snapshotVersion}:${row.id}`
+    if (detailCache.current.has(key)) return
+    fetch(`/api/public/database/orders/${encodeURIComponent(row.id)}?snapshotVersion=${data?.snapshotVersion || ''}`, { cache: 'no-store' }).then(async response => { if (response.ok) detailCache.current.set(key, await response.json()) }).catch(() => {})
+  }, [data?.snapshotVersion])
 
   const closeDetail = useCallback(() => { setSelected(undefined); setDetail(undefined); setDetailError('') }, [])
   const overlayOpen = Boolean(selected || filtersOpen)
@@ -90,7 +102,7 @@ export function PublicDatabaseClient() {
     {data && <section className={`card database-list-card${loading ? ' is-loading' : ''}`}>
       <div className="database-list-head"><div><h2>{q || filter !== 'all' ? 'Search results' : 'All records'}</h2><span className="pdb-result-count">{data.total.toLocaleString('en-IN')} records</span></div><span className="muted">Updated {updated}</span></div>
       {loading ? <SkeletonList embedded/> : <>
-        <div className="table-wrap pdb-desktop-table"><table className="table"><thead><tr><th>Sales order</th><th>Customer</th><th>Machines</th><th>Warranty valid till</th><th>Status & media</th><th><span className="sr-only">Open record</span></th></tr></thead><tbody>{data.items.map(row => <tr key={row.id} onClick={() => open(row)}><td><span className="pdb-so-mark">SO</span><strong>{row.salesOrderNumber}</strong></td><td><strong className="pdb-table-customer">{row.customerName}</strong>{row.builtyUploaded && <StatusBadge label="Builty uploaded"/>}</td><td><strong>{row.units}</strong><small>{row.units === 1 ? 'unit' : 'units'}</small></td><td><strong>{row.warrantyEnd || '—'}</strong></td><td><div className="pdb-table-statuses"><StatusBadge label={row.lifecycleLabel}/><StatusBadge label={row.mediaLabel}/></div></td><td><button className="pdb-row-action" aria-label={`View ${row.salesOrderNumber}`} onClick={event => { event.stopPropagation(); open(row) }}>View record <Icon name="chevron"/></button></td></tr>)}</tbody></table></div>
+        <div className="table-wrap pdb-desktop-table"><table className="table"><thead><tr><th>Sales order</th><th>Customer</th><th>Machines</th><th>Warranty valid till</th><th>Status & media</th><th><span className="sr-only">Open record</span></th></tr></thead><tbody>{data.items.map(row => <tr key={row.id} onMouseEnter={() => prefetch(row)} onFocus={() => prefetch(row)} onClick={() => open(row)}><td><span className="pdb-so-mark">SO</span><strong>{row.salesOrderNumber}</strong></td><td><strong className="pdb-table-customer">{row.customerName}</strong>{row.builtyUploaded && <StatusBadge label="Builty uploaded"/>}</td><td><strong>{row.units}</strong><small>{row.units === 1 ? 'unit' : 'units'}</small></td><td><strong>{row.warrantyEnd || '—'}</strong></td><td><div className="pdb-table-statuses"><StatusBadge label={row.lifecycleLabel}/><StatusBadge label={row.mediaLabel}/></div></td><td><button className="pdb-row-action" aria-label={`View ${row.salesOrderNumber}`} onClick={event => { event.stopPropagation(); open(row) }}>View record <Icon name="chevron"/></button></td></tr>)}</tbody></table></div>
         <div className="pdb-mobile-cards">{data.items.map(row => <RecordCard key={row.id} row={row} open={open}/>)}</div>
         {!data.items.length && <div className="pdb-empty"><span className="pdb-empty-mark"><Icon name="search"/></span><strong>No matching records</strong><p>Try a different SO, serial, customer or machine.</p>{(q || filter !== 'all') && <button className="btn light" onClick={() => { setQ(''); setFilter('all'); setPage(1) }}>Clear search</button>}</div>}
       </>}
@@ -112,8 +124,23 @@ function SkeletonList({ embedded = false }: { embedded?: boolean }) { return <di
 function DetailSkeleton() { return <div className="pdb-detail-skeleton" aria-label="Loading record"><i/><i/><div><i/><i/></div><i/><i/></div> }
 
 function DetailContent({ detail, retry }: { detail: Detail; retry: () => void }) {
-  return <><section className="pdb-detail-section"><div className="pdb-section-title"><span>01</span><h2>Order details</h2></div><div className="pdb-detail-grid"><Info k="Customer" v={detail.customerName}/><Info k="Salesperson" v={detail.salesperson || '—'}/><Info k="Delivery" v={detail.deliveryDate || '—'}/><Info k="Warranty" v={detail.warrantyDate || '—'}/><div className="info-tile wide"><span>Shipping address</span><strong>{detail.shippingAddress || '—'}</strong></div></div></section><section className="pdb-detail-section"><div className="pdb-section-title"><span>02</span><h2>Machines & serials</h2></div><div className="pdb-machine-list">{detail.machines.map(machine => <div className="pdb-machine" key={machine.id}><div><strong>{machine.itemName}</strong><span>{machine.vendor || 'Vendor not listed'}</span></div><div><span>Serial number</span><strong>{machine.serialNumber || '—'}</strong></div></div>)}</div></section><section className="pdb-detail-section"><div className="pdb-section-title"><span>03</span><h2>Status summary</h2></div><div className="pdb-status-summary"><div><i/><span>Workflow</span><strong>{detail.status.lifecycleLabel}</strong></div><div><i/><span>Media</span><strong>{detail.status.mediaLabel}</strong></div></div></section><section className="pdb-detail-section"><div className="pdb-section-title"><span>04</span><h2>Attachments</h2><small>{detail.media.length}</small></div>{detail.media.length ? <div className="pdb-attachment-list">{detail.media.map(media => <AttachmentRow key={media.id} media={media}/>)}</div> : <div className="pdb-no-attachments"><Icon name="file"/><div><strong>No attachments</strong><span>Nothing has been added to this record.</span></div></div>}<button className="pdb-refresh-record" onClick={retry}><Icon name="refresh"/>Refresh record</button></section></>
+  const warranty = publicWarrantyInfo(detail.deliveryDate)
+  const loading = detail.media.filter(media => media.kind === 'loading')
+  const builty = detail.media.filter(media => media.kind === 'builty')
+  const shipment = detail.shipment
+  return <>
+    <section className="pdb-detail-section"><div className="pdb-section-title"><span>01</span><h2>Order details</h2></div><div className="pdb-detail-grid"><Info k="Customer" v={detail.customerName}/><Info k="Salesperson" v={detail.salesperson || '—'}/><div className="info-tile wide"><span>Shipping address</span><strong>{detail.shippingAddress || '—'}</strong></div></div></section>
+    <section className={`pdb-warranty-box ${warranty.valid ? 'valid' : 'void'}`}><div><span>Warranty status</span><strong>{warranty.valid ? 'Warranty Valid' : 'Warranty Void'}</strong></div><dl><div><dt>Delivery Date</dt><dd>{warranty.delivery}</dd></div><div><dt>Warranty Valid Till</dt><dd>{warranty.expiry}</dd></div></dl></section>
+    <section className="pdb-detail-section"><div className="pdb-section-title"><span>02</span><h2>Machines & packing videos</h2></div><div className="pdb-machine-list">{detail.machines.map(machine => { const packing = detail.media.filter(media => media.kind === 'packing' && media.machineId === machine.id); return <div className="pdb-machine" key={machine.id}><div><strong>{machine.itemName}</strong><span>{machine.vendor || 'Vendor not listed'}</span></div><div><span>Serial number</span><strong>{machine.serialNumber || '—'}</strong></div><div className="pdb-machine-media"><span>Packing Video</span>{packing.length ? packing.map(media => <AttachmentRow key={media.id} media={media}/>) : <em>No packing video</em>}</div></div>})}</div></section>
+    <MediaSection number="03" title="Loading Video" media={loading}/>
+    <MediaSection number="04" title="Builty / LR" media={builty}/>
+    <section className="pdb-detail-section"><div className="pdb-section-title"><span>05</span><h2>Transport Details</h2></div>{shipment ? <div className="pdb-detail-grid"><Info k="Shipment Type" v={shipment.shipmentType === 'transporter' ? 'Transporter' : 'Direct'}/><Info k="Transporter Name" v={shipment.transporterName || '—'}/><Info k="Transporter / Contact Number" v={shipment.transporterPhone || '—'}/><Info k="Vehicle Number" v={shipment.vehicleNumber || '—'}/><Info k="Driver Name" v={shipment.driverName || '—'}/><Info k="Driver Mobile" v={shipment.driverPhone || '—'}/><Info k="Expected Delivery" v={formatPublicDate(shipment.expectedDelivery)}/><Info k="Shipped At" v={formatPublicDate(shipment.shippedAt)}/>{shipment.notes && <div className="info-tile wide"><span>Notes</span><strong>{shipment.notes}</strong></div>}</div> : <p className="muted">Transport details have not been recorded.</p>}<button className="pdb-refresh-record" onClick={retry}><Icon name="refresh"/>Refresh record</button></section>
+  </>
 }
+
+function MediaSection({ number, title, media }: { number: string; title: string; media: Detail['media'] }) { return <section className="pdb-detail-section"><div className="pdb-section-title"><span>{number}</span><h2>{title}</h2><small>{media.length}</small></div>{media.length ? <div className="pdb-attachment-list">{media.map(item => <AttachmentRow key={item.id} media={item}/>)}</div> : <div className="pdb-no-attachments"><Icon name="file"/><div><strong>Not uploaded</strong><span>No {title.toLowerCase()} is available.</span></div></div>}</section> }
+
+function formatPublicDate(value?: string) { if (!value) return '—'; const parsed = new Date(value); return Number.isNaN(parsed.getTime()) ? value : parsed.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) }
 
 function AttachmentRow({ media }: { media: Detail['media'][number] }) {
   const type = media.name?.split('.').pop()?.toUpperCase() || 'FILE'

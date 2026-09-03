@@ -1395,3 +1395,9 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 }
 
 @media(min-width:701px) and (max-width:980px){.public-database-shell{padding-inline:18px}.pdb-database-hero{padding-inline:26px}.pdb-hero-top{left:26px;right:26px}.public-database-view .database-search-panel{margin-inline:14px}.pdb-overlay .pdb-detail-sheet{width:calc(100vw - 36px)}.pdb-detail-body:has(.pdb-detail-section){display:block}}
+/* Public database record: warranty and media information architecture */
+.pdb-warranty-box{margin:0 32px 24px;padding:22px 24px;border:1px solid;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(135deg,#f0fdf4,#fff)}
+.pdb-warranty-box.valid{border-color:#86efac}.pdb-warranty-box.void{border-color:#fca5a5;background:linear-gradient(135deg,#fef2f2,#fff)}
+.pdb-warranty-box>div>span,.pdb-warranty-box dt{display:block;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.pdb-warranty-box>div>strong{font-size:24px;color:#166534}.pdb-warranty-box.void>div>strong{color:#b91c1c}
+.pdb-warranty-box dl{display:flex;gap:28px;margin:0}.pdb-warranty-box dd{margin:5px 0 0;font-weight:800}.pdb-machine{flex-wrap:wrap}.pdb-machine-media{flex:1 0 100%;padding-top:12px;border-top:1px solid #e2e8f0}.pdb-machine-media>span{display:block;margin-bottom:8px;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase}.pdb-machine-media em{color:#94a3b8;font-style:normal}
+@media(max-width:700px){.pdb-warranty-box{margin:0 16px 18px;display:block}.pdb-warranty-box dl{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.pdb-machine-media .pdb-attachment{display:grid;grid-template-columns:auto 1fr}.pdb-machine-media .pdb-attachment>a{grid-column:1/-1;width:100%}}
