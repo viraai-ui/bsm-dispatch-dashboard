@@ -1,5 +1,67 @@
 {
   "orders": {
+    "1154219000036383018": {
+      "id": "1154219000036383018",
+      "zohoSalesOrderId": "1154219000036383018",
+      "salesOrderNumber": "SO-07876",
+      "status": "open",
+      "customerName": "Leisure Export Worldwide",
+      "shippingAddress": "S 24-25,, Industrial Area,, Jalandhar, 144004",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036383021",
+          "itemName": "Flatbed Single Walking Foot",
+          "sku": "302",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228181",
+          "rate": 34000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036383022",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1200,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036383018-1154219000036383021-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036383018",
+          "lineItemId": "1154219000036383021",
+          "itemName": "Flatbed Single Walking Foot",
+          "sku": "302",
+          "customerName": "Leisure Export Worldwide",
+          "salesOrderNumber": "SO-07876",
+          "deliveryDate": "2026-09-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-03T13:08:52+0530"
+    },
     "1154219000036409087": {
       "id": "1154219000036409087",
       "zohoSalesOrderId": "1154219000036409087",
@@ -4666,77 +4728,6 @@
       ],
       "zohoLastModifiedTime": "2026-08-27T16:17:14+0530"
     },
-    "1154219000036072023": {
-      "id": "1154219000036072023",
-      "zohoSalesOrderId": "1154219000036072023",
-      "salesOrderNumber": "SO-07828",
-      "status": "open",
-      "customerName": "GARWARE FULFLEX I PVT LTD",
-      "shippingAddress": "2ND FLOOR, MAKER BHAVAN II,, 2A-3, 18 VITTHALDAS THACKAREY MARG, NEW MARINE LINES, CHRUCHGATE, Mumbai, Maharashtra, 400020, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-27",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036072026",
-          "itemName": "Automatic Screen Printing Machine (Single Station)",
-          "sku": "",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000006608276",
-          "rate": 140500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036072023-1154219000036072026-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036072023",
-          "lineItemId": "1154219000036072026",
-          "itemName": "Automatic Screen Printing Machine (Single Station)",
-          "sku": "",
-          "customerName": "GARWARE FULFLEX I PVT LTD",
-          "salesOrderNumber": "SO-07828",
-          "deliveryDate": "2026-08-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036072023-1154219000036072026-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036072023",
-          "lineItemId": "1154219000036072026",
-          "itemName": "Automatic Screen Printing Machine (Single Station)",
-          "sku": "",
-          "customerName": "GARWARE FULFLEX I PVT LTD",
-          "salesOrderNumber": "SO-07828",
-          "deliveryDate": "2026-08-27",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-08-29T11:19:14+0530"
-    },
     "1154219000036057006": {
       "id": "1154219000036057006",
       "zohoSalesOrderId": "1154219000036057006",
@@ -8402,6 +8393,7 @@
     }
   },
   "orderIds": [
+    "1154219000036383018",
     "1154219000036409087",
     "1154219000036384021",
     "1154219000036382009",
@@ -8417,7 +8409,6 @@
     "1154219000036271001",
     "1154219000036185001",
     "1154219000036137001",
-    "1154219000036072023",
     "1154219000036057006",
     "1154219000036064003",
     "1154219000036013008",
@@ -8450,8 +8441,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-03T07:20:39.907Z",
-  "lastAttemptAt": "2026-09-03T07:40:25.101Z",
+  "lastSuccessfulSyncAt": "2026-09-03T07:40:38.476Z",
+  "lastAttemptAt": "2026-09-03T07:40:38.476Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
