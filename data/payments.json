@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "GARG INDUSTRIES",
+      "salesOrderNumber": "SO-07881",
+      "paymentAmount": 56640,
+      "paymentMode": "UPI",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07881/2026-09-03/1788432194150-d45f51e8-6666-40ff-8284-1fe0abcc211f-5e63594b-1cb3-41e0-8c09-f5e8468d5169.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07881%2F2026-09-03%2F1788432194150-d45f51e8-6666-40ff-8284-1fe0abcc211f-5e63594b-1cb3-41e0-8c09-f5e8468d5169.jpg",
+          "name": "5e63594b-1cb3-41e0-8c09-f5e8468d5169.jpg",
+          "contentType": "image/jpeg",
+          "size": 33393
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07881/2026-09-03/1788432194150-d45f51e8-6666-40ff-8284-1fe0abcc211f-5e63594b-1cb3-41e0-8c09-f5e8468d5169.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07881%2F2026-09-03%2F1788432194150-d45f51e8-6666-40ff-8284-1fe0abcc211f-5e63594b-1cb3-41e0-8c09-f5e8468d5169.jpg",
+      "screenshotName": "5e63594b-1cb3-41e0-8c09-f5e8468d5169.jpg",
+      "publicDeleteTokenHash": "7c91867e250e13ffbd0f53f31f990435f888b3d4559570c1f6b9300eedfb3f2d",
+      "id": "payment-8cee67d0-4b74-4329-9095-e7a36caa0238",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "9e84074c4f4d4b1bad32f5e19f456594",
+      "createdAt": "2026-09-03T10:43:15.651Z",
+      "updatedAt": "2026-09-03T10:43:15.651Z"
+    },
+    {
       "customerName": "KOUSHAL ENTERPRISES",
       "salesOrderNumber": "SO-07879",
       "paymentAmount": 17700,
