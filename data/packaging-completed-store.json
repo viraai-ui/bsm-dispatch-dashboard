@@ -15580,6 +15580,65 @@
       "machineIds": [
         "1154219000036382009-1154219000036382012-1"
       ]
+    },
+    "1154219000036424001": {
+      "completedAt": "2026-09-03T10:01:10.632Z",
+      "order": {
+        "id": "1154219000036424001",
+        "zohoSalesOrderId": "1154219000036424001",
+        "salesOrderNumber": "SO-07878",
+        "status": "open",
+        "customerName": "AJAY FOOTWEAR",
+        "shippingAddress": "PLOT NO. 2207, M.I.E., PART-B, BAHADURGARH, HARYANA-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036424004",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 22500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036424001-1154219000036424004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271113",
+            "qrToken": "26271113",
+            "orderId": "1154219000036424001",
+            "lineItemId": "1154219000036424004",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "AJAY FOOTWEAR",
+            "salesOrderNumber": "SO-07878",
+            "deliveryDate": "2026-09-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-03T14:18:53+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036424001-1154219000036424004-1"
+      ]
     }
   }
 }
