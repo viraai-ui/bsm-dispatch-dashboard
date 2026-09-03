@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036424001": {
+      "id": "1154219000036424001",
+      "zohoSalesOrderId": "1154219000036424001",
+      "salesOrderNumber": "SO-07878",
+      "status": "open",
+      "customerName": "AJAY FOOTWEAR",
+      "shippingAddress": "PLOT NO. 2207, M.I.E., PART-B, BAHADURGARH, HARYANA-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036424004",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226515",
+          "rate": 22500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036424001-1154219000036424004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036424001",
+          "lineItemId": "1154219000036424004",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "AJAY FOOTWEAR",
+          "salesOrderNumber": "SO-07878",
+          "deliveryDate": "2026-09-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-03T14:18:29+0530"
+    },
     "1154219000036422001": {
       "id": "1154219000036422001",
       "zohoSalesOrderId": "1154219000036422001",
@@ -8393,6 +8443,7 @@
     }
   },
   "orderIds": [
+    "1154219000036424001",
     "1154219000036422001",
     "1154219000036383018",
     "1154219000036409087",
@@ -8441,8 +8492,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-03T08:40:37.052Z",
-  "lastAttemptAt": "2026-09-03T08:48:34.811Z",
+  "lastSuccessfulSyncAt": "2026-09-03T08:48:44.159Z",
+  "lastAttemptAt": "2026-09-03T08:48:44.159Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
