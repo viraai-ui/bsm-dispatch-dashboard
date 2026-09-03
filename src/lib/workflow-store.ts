@@ -1,5 +1,6 @@
 import type { Order } from '@/types/domain'
 import { isOrderIdentityTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
+import { markPublicDatabaseDirty } from './public-database-freshness'
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
 export function isGitHubWriteConflict(error: unknown) {
@@ -107,6 +108,7 @@ export async function githubWriteJson<T>(path: string, data: T, message: string,
   const body: Record<string, string> = { message, content: Buffer.from(JSON.stringify(data, null, 2)).toString('base64') }
   if (current.sha) body.sha = current.sha
   await githubRequest(`/contents/${path}`, { method: 'PUT', body: JSON.stringify(body) })
+  markPublicDatabaseDirty()
 }
 
 async function readBundledWorkflowStore(): Promise<Store | null> {
@@ -137,6 +139,7 @@ async function writeStore(store: Store, sha?: string) {
   const body: Record<string, string> = { message: 'Update dispatch workflow store', content: Buffer.from(JSON.stringify(store, null, 2)).toString('base64') }
   if (sha) body.sha = sha
   await githubRequest(`/contents/${STORE_PATH}`, { method: 'PUT', body: JSON.stringify(body) })
+  markPublicDatabaseDirty()
 }
 
 export async function getOrderWorkflow(orderId: string) {

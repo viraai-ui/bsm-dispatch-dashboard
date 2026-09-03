@@ -29,15 +29,16 @@ test('mobile geometry, sticky controls and safe areas cover target widths', () =
   assert.match(css, /min-width:0/)
 })
 
-test('detail is lazy, accessible and attachment failures are salesman-safe', () => {
+test('detail is lazy, accessible and attachment actions navigate safely', () => {
   assert.match(component, /aria-modal="true"/)
   assert.match(component, /document\.body\.style\.overflow = 'hidden'/)
   assert.match(component, /event\.key === 'Escape'/)
   assert.match(component, /DetailSkeleton/)
-  assert.match(component, /Attachment temporarily unavailable/)
+  assert.match(component, /View Builty \/ LR/)
   assert.match(component, /Refresh record/)
   assert.doesNotMatch(component, /R2|HTTP error|credentials/i)
-  assert.match(component, /fetch\(media\.url\)/)
+  assert.match(component, /href=\{media\.url\}/)
+  assert.doesNotMatch(component, /response\.blob\(\)/)
 })
 
 test('desktop remains table-first and public client stays server-paginated/read-only', () => {

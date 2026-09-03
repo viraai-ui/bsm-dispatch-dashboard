@@ -4,6 +4,7 @@ import { buildOrderStatusMap, type StatusTone } from './status-projection'
 import type { MediaUpload } from './media-proof'
 import { isAllowedGithubUrl } from './public-database-media'
 import { isSafeR2Key } from './r2'
+import { publicDatabaseRevision } from './public-database-freshness'
 import durableSnapshot from '../../data/public-database-snapshot.json'
 
 export type PublicDatabaseRow = { id:string; salesOrderNumber:string; customerName:string; units:number; warrantyDate:string; warrantyEnd:string; mediaLabel:string; mediaTone:StatusTone; lifecycleLabel:string; builtyUploaded:boolean }
@@ -11,12 +12,26 @@ export type PublicMediaRef = { id:string; orderId:string; kind:'packing'|'loadin
 export type PublicDatabaseDetail = { id:string; salesOrderNumber:string; customerName:string; salesperson:string; shippingAddress:string; deliveryDate:string; warrantyDate:string; status:{lifecycleLabel:string;mediaLabel:string}; machines:Array<{id:string;itemName:string;serialNumber:string;vendor:string}>; shipment?:{shipmentType?:string;transporterName?:string;transporterPhone?:string;vehicleNumber?:string;driverPhone?:string;expectedDelivery?:string;notes?:string}; mediaRefIds:string[] }
 export type PublicDatabaseSnapshot = { schema:1; snapshotVersion:string; generatedAt:string; rows:PublicDatabaseRow[]; details:Record<string,PublicDatabaseDetail>; media:Record<string,PublicMediaRef>; haystacks:Record<string,string> }
 
+const MAX_SNAPSHOT_AGE_MS = 5 * 60_000
+let resolved = durableSnapshot as PublicDatabaseSnapshot
+let resolvedRevision = -1
+let retryAfter = 0
 let current: Promise<PublicDatabaseSnapshot>|undefined
-// Public request paths only read this build-time, immutable last-known-good file.
-// Aggregating the mutable operational stores is deliberately confined to the
-// explicit snapshot generation job.
-export function getPublicDatabaseSnapshot(){ return current ||= Promise.resolve(durableSnapshot as PublicDatabaseSnapshot) }
-export function clearPublicDatabaseSnapshot(){ current=undefined }
+
+// Refresh immediately in the process that performed a business write and at
+// most five minutes after a remote write on another instance. Keep serving the
+// durable last-known-good snapshot if an upstream store is temporarily down.
+export function getPublicDatabaseSnapshot(){
+ const revision=publicDatabaseRevision()
+ const fresh=Date.now()-Date.parse(resolved.generatedAt)<MAX_SNAPSHOT_AGE_MS
+ if(fresh&&resolvedRevision===revision)return Promise.resolve(resolved)
+ if(Date.now()<retryAfter)return Promise.resolve(resolved)
+ if(current)return current
+ const buildRevision=revision
+ current=buildPublicDatabaseSnapshot().then(snapshot=>{assertCompleteSnapshot(snapshot,resolved);resolved=snapshot;resolvedRevision=buildRevision;retryAfter=0;return snapshot}).catch(error=>{retryAfter=Date.now()+60_000;console.error('public database refresh failed',error);return resolved}).finally(()=>{current=undefined})
+ return current
+}
+export function clearPublicDatabaseSnapshot(){ resolvedRevision=-1;current=undefined }
 
 export async function buildPublicDatabaseSnapshot():Promise<PublicDatabaseSnapshot>{
  const {databaseOrders,workflows,warrantyDates,shipmentRecords}=await loadDatabaseOrders()
@@ -37,6 +52,11 @@ export async function buildPublicDatabaseSnapshot():Promise<PublicDatabaseSnapsh
  // same immutable version; wall-clock generation time must never split it.
  const version=crypto.createHash('sha256').update(JSON.stringify({rows,details,media})).digest('hex').slice(0,20)
  return {schema:1,snapshotVersion:version,generatedAt,rows,details,media,haystacks}
+}
+function assertCompleteSnapshot(next:PublicDatabaseSnapshot,previous:PublicDatabaseSnapshot){
+ if(next.rows.length<Math.floor(previous.rows.length*.8))throw new Error(`Public database refresh incomplete: ${next.rows.length}/${previous.rows.length} rows`)
+ const previousMedia=Object.keys(previous.media).length,nextMedia=Object.keys(next.media).length
+ if(previousMedia&&nextMedia<Math.floor(previousMedia*.5))throw new Error(`Public database refresh incomplete: ${nextMedia}/${previousMedia} media`)
 }
 function collect(orderId:string,kind:'packing'|'loading',record:any,out:PublicMediaRef[]){for(const unit of Object.values(record?.units||{}) as any[])for(const file of [...(unit.videos||[]),...(unit.photos||[])]){const source=sourceFor(file);if(source)out.push(makeRef(orderId,kind,source,file.name))}}
 function makeRef(orderId:string,kind:PublicMediaRef['kind'],source:{source:PublicMediaRef['source'];value:string},name?:string){return{id:crypto.createHash('sha256').update(`${orderId}\0${kind}\0${source.source}\0${source.value}`).digest('base64url').slice(0,22),orderId,kind,...source,name}}

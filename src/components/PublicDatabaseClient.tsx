@@ -116,8 +116,7 @@ function DetailContent({ detail, retry }: { detail: Detail; retry: () => void })
 }
 
 function AttachmentRow({ media }: { media: Detail['media'][number] }) {
-  const [busy, setBusy] = useState(false); const [failed, setFailed] = useState(false)
-  async function view() { setBusy(true); setFailed(false); try { const response = await fetch(media.url); if (!response.ok) throw new Error(); const blob = await response.blob(); const url = URL.createObjectURL(blob); window.open(url, '_blank', 'noopener,noreferrer'); setTimeout(() => URL.revokeObjectURL(url), 60000) } catch { setFailed(true) } finally { setBusy(false) } }
   const type = media.name?.split('.').pop()?.toUpperCase() || 'FILE'
-  return <div className={`pdb-attachment${failed ? ' failed' : ''}`}><span className="pdb-file-icon"><Icon name="file"/></span><div><small>{media.kind} · {type}</small><strong>{failed ? 'Attachment temporarily unavailable' : media.name || `${media.kind} attachment`}</strong>{failed && <span>Please retry in a moment.</span>}</div><button className="btn light" disabled={busy} onClick={view}>{busy ? 'Opening…' : failed ? 'Retry' : 'View'}</button></div>
+  const label = media.kind === 'builty' ? 'View Builty / LR' : media.kind === 'loading' ? 'View loading video' : 'View packing video'
+  return <div className="pdb-attachment"><span className="pdb-file-icon"><Icon name="file"/></span><div><small>{media.kind} · {type}</small><strong>{media.name || `${media.kind} attachment`}</strong></div><a className="btn light" href={media.url} target="_blank" rel="noopener noreferrer">{label}</a></div>
 }
