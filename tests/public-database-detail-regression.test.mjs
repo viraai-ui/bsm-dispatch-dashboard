@@ -35,6 +35,14 @@ test('premium popup has exact balanced section order and full-width compact mach
   assert.match(awaitCss, /\.pdb-premium-grid>\.pdb-machines-card\{grid-column:1\/-1;grid-row:2\}/)
 })
 
+test('detail popup hides scrollbar chrome while preserving scrolling and bottom breathing room', () => {
+  assert.match(awaitCss, /\.pdb-overlay \.pdb-detail-body\{\s*scrollbar-width:none;\s*-ms-overflow-style:none;/)
+  assert.match(awaitCss, /\.pdb-overlay \.pdb-detail-body::\-webkit-scrollbar\{\s*width:0;\s*height:0;/)
+  assert.match(awaitCss, /\.pdb-detail-body:has\(\.pdb-premium-grid\)\{padding-bottom:28px\}/)
+  assert.match(awaitCss, /padding-bottom:calc\(18px \+ env\(safe-area-inset-bottom\)\)/)
+  assert.match(awaitCss, /\.pdb-detail-body\{[^}]*overflow-y:auto/)
+})
+
 test('shipment parity and hover prefetch are retained', () => {
   for (const field of ['Shipment Type','Transporter Name','Transporter / Contact Number','Vehicle Number','Driver Name','Driver Mobile','Expected Delivery','Shipped At','Notes']) assert.match(client, new RegExp(field))
   assert.match(snapshot, /driverName:shipment\.driverName/)
