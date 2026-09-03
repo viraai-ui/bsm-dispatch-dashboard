@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-d9f1564f-32b4-4a05-abda-fb90fea46d4d",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-c4303bf9-d1a6-4fb0-b387-80a202f36a7f",
+      "salesOrderNumber": "SO-07878",
+      "customerName": "AJAY FOOTWEAR",
+      "paymentAmount": 23625,
+      "createdAt": "2026-09-03T08:44:51.901Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-00b913ac-b370-48b0-a3ef-906bc699b0e4",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-c4303bf9-d1a6-4fb0-b387-80a202f36a7f",
+      "salesOrderNumber": "SO-07878",
+      "customerName": "AJAY FOOTWEAR",
+      "paymentAmount": 23625,
+      "createdAt": "2026-09-03T08:44:51.901Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-d6b96e83-0150-4b6d-b56b-5af9d29f97d2",
       "type": "payment-created",
       "recipientUserId": "u-admin",
