@@ -15698,6 +15698,77 @@
       "machineIds": [
         "1154219000036422001-1154219000036425007-1"
       ]
+    },
+    "1154219000036383018": {
+      "completedAt": "2026-09-03T12:24:44.971Z",
+      "order": {
+        "id": "1154219000036383018",
+        "zohoSalesOrderId": "1154219000036383018",
+        "salesOrderNumber": "SO-07876",
+        "status": "open",
+        "customerName": "Leisure Export Worldwide",
+        "shippingAddress": "S 24-25,, Industrial Area,, Jalandhar, 144004",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036383021",
+            "itemName": "Flatbed Single Walking Foot",
+            "sku": "302",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228181",
+            "rate": 34000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036383022",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1200,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036383018-1154219000036383021-1",
+            "unitNumber": 1,
+            "serialNumber": "26271112",
+            "qrToken": "26271112",
+            "orderId": "1154219000036383018",
+            "lineItemId": "1154219000036383021",
+            "itemName": "Flatbed Single Walking Foot",
+            "sku": "302",
+            "customerName": "Leisure Export Worldwide",
+            "salesOrderNumber": "SO-07876",
+            "deliveryDate": "2026-09-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-03",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-03T13:08:52+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036383018-1154219000036383021-1"
+      ]
     }
   }
 }
