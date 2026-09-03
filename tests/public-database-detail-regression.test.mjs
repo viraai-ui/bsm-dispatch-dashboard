@@ -6,6 +6,7 @@ const client = await readFile('src/components/PublicDatabaseClient.tsx', 'utf8')
 const snapshot = await readFile('src/lib/public-database-snapshot.ts', 'utf8')
 const route = await readFile('src/app/api/public/database/orders/[id]/route.ts', 'utf8')
 const warranty = await readFile('src/lib/warranty.ts', 'utf8')
+const awaitCss = await readFile('src/app/globals.css', 'utf8')
 
 test('detail replaces status summary with explicit 13-month warranty presentation', () => {
   assert.doesNotMatch(client, /Status summary/i)
@@ -17,15 +18,21 @@ test('detail replaces status summary with explicit 13-month warranty presentatio
   assert.match(warranty, /Math\.min\(day/)
 })
 
-test('packing stays machine-scoped and dispatch sections are separate and ordered', () => {
+test('premium popup has exact balanced section order and full-width compact machine rows', () => {
   assert.match(snapshot, /machineId\?:string/)
   assert.match(route, /machineId:r\.machineId/)
   assert.match(client, /media\.machineId === machine\.id/)
-  const packing = client.indexOf('Machines & packing videos')
-  const loading = client.indexOf('title="Loading Video"')
-  const builty = client.indexOf('title="Builty \/ LR"')
+  const order = client.indexOf('pdb-order-card')
   const transport = client.indexOf('Transport Details')
-  assert.ok(packing < loading && loading < builty && builty < transport)
+  const packing = client.indexOf('pdb-machines-card')
+  const warrantyCard = client.indexOf('pdb-warranty-card')
+  const combined = client.indexOf('pdb-dispatch-media-card')
+  assert.ok(order < transport && transport < packing && packing < warrantyCard && warrantyCard < combined)
+  assert.match(client, /pdb-machine pdb-machine-compact/)
+  assert.match(client, /Loading Video &amp; LR Copy/)
+  assert.match(client, />View<\/a>/)
+  assert.doesNotMatch(client, /media\.name|\.split\('\.'\)|View packing video|View loading video|View Builty/)
+  assert.match(awaitCss, /\.pdb-machines-card\{grid-column:1\/-1;grid-row:2\}/)
 })
 
 test('shipment parity and hover prefetch are retained', () => {
