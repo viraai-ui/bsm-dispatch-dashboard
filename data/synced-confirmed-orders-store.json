@@ -1,5 +1,88 @@
 {
   "orders": {
+    "1154219000036466001": {
+      "id": "1154219000036466001",
+      "zohoSalesOrderId": "1154219000036466001",
+      "salesOrderNumber": "SO-07885",
+      "status": "open",
+      "customerName": "NEW CUT FOOTWEAR",
+      "shippingAddress": "KHASRA NO.-25/19/2, M.I.E. Bahadurgarh, MIE BAHADURGARH, Jhajjar, Haryana, 124507",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036466004",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225279",
+          "rate": 58000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036466005",
+          "itemName": "hole punching machine (pneumatic)",
+          "sku": "324",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228106",
+          "rate": 28000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036466001-1154219000036466004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036466001",
+          "lineItemId": "1154219000036466004",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "NEW CUT FOOTWEAR",
+          "salesOrderNumber": "SO-07885",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036466001-1154219000036466005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036466001",
+          "lineItemId": "1154219000036466005",
+          "itemName": "hole punching machine (pneumatic)",
+          "sku": "324",
+          "customerName": "NEW CUT FOOTWEAR",
+          "salesOrderNumber": "SO-07885",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-04T11:23:33+0530"
+    },
     "1154219000036443025": {
       "id": "1154219000036443025",
       "zohoSalesOrderId": "1154219000036443025",
@@ -8754,6 +8837,7 @@
     }
   },
   "orderIds": [
+    "1154219000036466001",
     "1154219000036443025",
     "1154219000036412009",
     "1154219000036433003",
@@ -8809,8 +8893,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-04T05:45:51.323Z",
-  "lastAttemptAt": "2026-09-04T05:54:48.737Z",
+  "lastSuccessfulSyncAt": "2026-09-04T05:54:59.887Z",
+  "lastAttemptAt": "2026-09-04T05:54:59.887Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
