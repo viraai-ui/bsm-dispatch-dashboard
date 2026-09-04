@@ -22323,7 +22323,9 @@
     "1154219000036428004": {
       "salesOrderId": "1154219000036428004",
       "salesOrderNumber": "SO-07880",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-04T05:11:38.432Z",
       "processedOrder": {
         "id": "1154219000036428004",
         "zohoSalesOrderId": "1154219000036428004",
@@ -22353,8 +22355,8 @@
           {
             "id": "1154219000036428004-1154219000036428007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271116",
+            "qrToken": "26271116",
             "orderId": "1154219000036428004",
             "lineItemId": "1154219000036428007",
             "itemName": "Hotmelt Roller Coater (24 Inch) Table Top",
@@ -22362,14 +22364,17 @@
             "customerName": "Samriddhi Industries",
             "salesOrderNumber": "SO-07880",
             "deliveryDate": "2026-09-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "Aardhya",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-03T16:27:55+0530"
@@ -22383,7 +22388,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T05:10:29.330Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T05:10:33.154Z"
+          "zohoBackupQueuedAt": "2026-09-04T05:10:33.154Z",
+          "processedAt": "2026-09-04T05:11:38.432Z",
+          "dispatchNote": "wooden",
+          "vendor": "Aardhya"
         }
       }
     }
