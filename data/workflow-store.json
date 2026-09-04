@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271118,
+  "serialCounter": 26271119,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -22521,6 +22521,70 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000036443025": {
+      "salesOrderId": "1154219000036443025",
+      "salesOrderNumber": "SO-07884",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036443025",
+        "zohoSalesOrderId": "1154219000036443025",
+        "salesOrderNumber": "SO-07884",
+        "status": "open",
+        "customerName": "Durga Filters Pvt.Ltd.",
+        "shippingAddress": "D-48 SECTOR A-2, TRONICA CITY, LONI,, Ghaziabad, Uttar Pradesh, 201103, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036443028",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225787",
+            "rate": 27500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036443025-1154219000036443028-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036443025",
+            "lineItemId": "1154219000036443028",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "Durga Filters Pvt.Ltd.",
+            "salesOrderNumber": "SO-07884",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-04T10:30:02+0530"
+      },
+      "machines": {
+        "1154219000036443025-1154219000036443028-1": {
+          "machineUnitId": "1154219000036443025-1154219000036443028-1",
+          "lineItemId": "1154219000036443028",
+          "serialNumber": "26271119",
+          "qrToken": "26271119",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
