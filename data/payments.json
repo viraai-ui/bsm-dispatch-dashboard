@@ -2,6 +2,31 @@
   "payments": [
     {
       "customerName": "Unique Star International",
+      "paymentAmount": 25000,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/e107b2a1-357e-4fd8-af1f-f68ff79be300/2026-09-04/1788504229190-ee9aa989-8450-41aa-9972-2d3e42b08b27-WhatsApp-Image-2026-09-04-at-12.08.42-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fe107b2a1-357e-4fd8-af1f-f68ff79be300%2F2026-09-04%2F1788504229190-ee9aa989-8450-41aa-9972-2d3e42b08b27-WhatsApp-Image-2026-09-04-at-12.08.42-PM.jpg",
+          "name": "WhatsApp Image 2026-09-04 at 12.08.42 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 135033
+        }
+      ],
+      "screenshotKey": "payments/public/manual/e107b2a1-357e-4fd8-af1f-f68ff79be300/2026-09-04/1788504229190-ee9aa989-8450-41aa-9972-2d3e42b08b27-WhatsApp-Image-2026-09-04-at-12.08.42-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fe107b2a1-357e-4fd8-af1f-f68ff79be300%2F2026-09-04%2F1788504229190-ee9aa989-8450-41aa-9972-2d3e42b08b27-WhatsApp-Image-2026-09-04-at-12.08.42-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-04 at 12.08.42 PM.jpeg",
+      "publicDeleteTokenHash": "27443e9633e29c62e0e0cffa9db8c16e504a2da3132b2f39e4e0b7cea10cf1d2",
+      "id": "payment-755403bd-8833-44e7-96df-7d7ccc9b4521",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "8e14c6041b604ad7be1b791597bdb14e",
+      "createdAt": "2026-09-04T06:43:50.736Z",
+      "updatedAt": "2026-09-04T06:43:50.736Z"
+    },
+    {
+      "customerName": "Unique Star International",
       "paymentAmount": 10400,
       "paymentMode": "UPI",
       "addedBy": "Ram",
