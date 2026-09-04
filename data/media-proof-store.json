@@ -4067,6 +4067,31 @@
           ]
         }
       }
+    },
+    "1154219000036469001": {
+      "orderId": "1154219000036469001",
+      "salesOrderNumber": "SO-07886",
+      "submittedAt": null,
+      "units": {
+        "1154219000036469001-1154219000036469004-2": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036469001-1154219000036469004-2-video-1788511205717-73sj9t",
+              "name": "VID_20260904_140838.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-04%2FSO-07886%2F1154219000036469001-1154219000036469004-2%2FCover-Type-Sole-Press-pneumatic-2026-09-04T08-38-48-037Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-04/SO-07886/1154219000036469001-1154219000036469004-2/Cover-Type-Sole-Press-pneumatic-2026-09-04T08-38-48-037Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-04T08:40:05.717Z",
+              "expiresAt": "2026-10-04T08:40:05.717Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
