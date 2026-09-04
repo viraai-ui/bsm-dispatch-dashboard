@@ -22398,7 +22398,9 @@
     "1154219000036433003": {
       "salesOrderId": "1154219000036433003",
       "salesOrderNumber": "SO-07882",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-04T05:13:42.927Z",
       "processedOrder": {
         "id": "1154219000036433003",
         "zohoSalesOrderId": "1154219000036433003",
@@ -22440,8 +22442,8 @@
           {
             "id": "1154219000036433003-1154219000036433006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271117",
+            "qrToken": "26271117",
             "orderId": "1154219000036433003",
             "lineItemId": "1154219000036433006",
             "itemName": "Seat lasting Machine",
@@ -22449,20 +22451,23 @@
             "customerName": "GARG INDUSTRIES",
             "salesOrderNumber": "SO-07882",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "Allure",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036433003-1154219000036433007-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271118",
+            "qrToken": "26271118",
             "orderId": "1154219000036433003",
             "lineItemId": "1154219000036433007",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -22470,14 +22475,17 @@
             "customerName": "GARG INDUSTRIES",
             "salesOrderNumber": "SO-07882",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "Allure",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
@@ -22491,7 +22499,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T05:12:48.905Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T05:12:52.806Z"
+          "zohoBackupQueuedAt": "2026-09-04T05:12:52.806Z",
+          "processedAt": "2026-09-04T05:13:42.927Z",
+          "dispatchNote": "local",
+          "vendor": "Allure"
         },
         "1154219000036433003-1154219000036433007-1": {
           "machineUnitId": "1154219000036433003-1154219000036433007-1",
@@ -22501,7 +22512,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T05:12:48.905Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T05:12:52.806Z"
+          "zohoBackupQueuedAt": "2026-09-04T05:12:52.806Z",
+          "processedAt": "2026-09-04T05:13:42.927Z",
+          "dispatchNote": "local",
+          "vendor": "Allure"
         }
       }
     }
