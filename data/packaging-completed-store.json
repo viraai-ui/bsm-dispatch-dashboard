@@ -15984,6 +15984,66 @@
       "machineIds": [
         "1154219000036443025-1154219000036443028-1"
       ]
+    },
+    "1154219000036412009": {
+      "completedAt": "2026-09-04T07:26:37.341Z",
+      "order": {
+        "id": "1154219000036412009",
+        "zohoSalesOrderId": "1154219000036412009",
+        "salesOrderNumber": "SO-07883",
+        "status": "open",
+        "customerName": "The Purple Tree",
+        "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi, Delhi, 110092, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036412012",
+            "itemName": "Belt / Conveyer type fusing machine (450mm)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001732210",
+            "rate": 140000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036412009-1154219000036412012-1",
+            "unitNumber": 1,
+            "serialNumber": "26271115",
+            "qrToken": "26271115",
+            "orderId": "1154219000036412009",
+            "lineItemId": "1154219000036412012",
+            "itemName": "Belt / Conveyer type fusing machine (450mm)",
+            "sku": "",
+            "customerName": "The Purple Tree",
+            "salesOrderNumber": "SO-07883",
+            "deliveryDate": "2026-09-03",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-04T10:29:32+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000036412009-1154219000036412012-1"
+      ]
     }
   }
 }
