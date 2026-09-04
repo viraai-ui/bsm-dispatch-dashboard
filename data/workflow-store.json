@@ -22611,7 +22611,9 @@
     "1154219000036466001": {
       "salesOrderId": "1154219000036466001",
       "salesOrderNumber": "SO-07885",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-04T07:04:29.095Z",
       "processedOrder": {
         "id": "1154219000036466001",
         "zohoSalesOrderId": "1154219000036466001",
@@ -22653,8 +22655,8 @@
           {
             "id": "1154219000036466001-1154219000036466004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271120",
+            "qrToken": "26271120",
             "orderId": "1154219000036466001",
             "lineItemId": "1154219000036466004",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -22662,20 +22664,23 @@
             "customerName": "NEW CUT FOOTWEAR",
             "salesOrderNumber": "SO-07885",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036466001-1154219000036466005-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271121",
+            "qrToken": "26271121",
             "orderId": "1154219000036466001",
             "lineItemId": "1154219000036466005",
             "itemName": "hole punching machine (pneumatic)",
@@ -22683,14 +22688,17 @@
             "customerName": "NEW CUT FOOTWEAR",
             "salesOrderNumber": "SO-07885",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-04T11:23:33+0530"
@@ -22704,7 +22712,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T07:01:51.371Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T07:01:52.689Z"
+          "zohoBackupQueuedAt": "2026-09-04T07:01:52.689Z",
+          "processedAt": "2026-09-04T07:04:29.095Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000036466001-1154219000036466005-1": {
           "machineUnitId": "1154219000036466001-1154219000036466005-1",
@@ -22714,7 +22725,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T07:01:51.371Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T07:01:52.689Z"
+          "zohoBackupQueuedAt": "2026-09-04T07:01:52.689Z",
+          "processedAt": "2026-09-04T07:04:29.095Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
