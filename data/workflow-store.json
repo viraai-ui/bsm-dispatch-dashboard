@@ -22388,11 +22388,13 @@
           "qrToken": "26271116",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T05:10:29.330Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-04T05:10:33.154Z",
           "processedAt": "2026-09-04T05:11:38.432Z",
           "dispatchNote": "wooden",
-          "vendor": "Aardhya"
+          "vendor": "Aardhya",
+          "zohoBackupLastAttemptAt": "2026-09-04T05:16:21.718Z",
+          "zohoBackupSyncedAt": "2026-09-04T05:16:21.718Z"
         }
       },
       "dispatchSortOrder": 2
