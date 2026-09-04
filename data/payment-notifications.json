@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-bdf5e14f-836e-4570-904f-46e3d1673419",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-622d92d0-6c19-4c79-b88d-d94cb2c040b2",
+      "salesOrderNumber": "SO-07888",
+      "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
+      "paymentAmount": 770000,
+      "createdAt": "2026-09-04T07:50:59.527Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-33fe70bb-8b98-4cde-b051-0012b671f856",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-622d92d0-6c19-4c79-b88d-d94cb2c040b2",
+      "salesOrderNumber": "SO-07888",
+      "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
+      "paymentAmount": 770000,
+      "createdAt": "2026-09-04T07:50:59.527Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-edb86e98-9163-4745-9c9b-f1f199a79b31",
       "type": "payment-created",
       "recipientUserId": "u-admin",
