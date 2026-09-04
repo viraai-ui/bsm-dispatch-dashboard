@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-edb86e98-9163-4745-9c9b-f1f199a79b31",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-d0c901ff-96a2-46e8-9286-9861fc8ac830",
+      "salesOrderNumber": "SO-07885",
+      "customerName": "NEW CUT FOOTWEAR",
+      "paymentAmount": 101480,
+      "createdAt": "2026-09-04T07:11:25.302Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-9d8f7df4-0c28-452b-b8ad-848061349ac8",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-d0c901ff-96a2-46e8-9286-9861fc8ac830",
+      "salesOrderNumber": "SO-07885",
+      "customerName": "NEW CUT FOOTWEAR",
+      "paymentAmount": 101480,
+      "createdAt": "2026-09-04T07:11:25.302Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-f5dae2dd-c8e4-4979-81b8-c38ba61bdcc7",
       "type": "payment-created",
       "recipientUserId": "u-admin",
