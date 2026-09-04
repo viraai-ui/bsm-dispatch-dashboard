@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-b3d35f35-dfe9-4e6c-88aa-bdb19da5e346",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-755403bd-8833-44e7-96df-7d7ccc9b4521",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Unique Star International",
+      "paymentAmount": 25000,
+      "createdAt": "2026-09-04T06:43:52.563Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ebc1e6a0-3532-4434-a441-6ccedf3cabdc",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-755403bd-8833-44e7-96df-7d7ccc9b4521",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Unique Star International",
+      "paymentAmount": 25000,
+      "createdAt": "2026-09-04T06:43:52.563Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-4330b99d-88d6-4369-bee3-6fcd77792e0e",
       "type": "payment-created",
       "recipientUserId": "u-admin",
