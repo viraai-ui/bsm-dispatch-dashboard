@@ -22247,7 +22247,7 @@
       "salesOrderId": "1154219000036412009",
       "salesOrderNumber": "SO-07883",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-04T05:02:24.491Z",
       "processedOrder": {
         "id": "1154219000036412009",
@@ -22318,13 +22318,14 @@
           "dispatchNote": "local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000036428004": {
       "salesOrderId": "1154219000036428004",
       "salesOrderNumber": "SO-07880",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-04T05:11:38.432Z",
       "processedOrder": {
         "id": "1154219000036428004",
@@ -22393,7 +22394,8 @@
           "dispatchNote": "wooden",
           "vendor": "Aardhya"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000036433003": {
       "salesOrderId": "1154219000036433003",
