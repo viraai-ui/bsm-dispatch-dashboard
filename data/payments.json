@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
+      "salesOrderNumber": "SO-07888",
+      "paymentAmount": 770000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07888/2026-09-04/1788508256039-74ff6781-09cc-4b01-a06d-5cc0e698129f-report-118.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07888%2F2026-09-04%2F1788508256039-74ff6781-09cc-4b01-a06d-5cc0e698129f-report-118.pdf",
+          "name": "report(118).pdf",
+          "contentType": "application/pdf",
+          "size": 40125
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07888/2026-09-04/1788508256039-74ff6781-09cc-4b01-a06d-5cc0e698129f-report-118.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07888%2F2026-09-04%2F1788508256039-74ff6781-09cc-4b01-a06d-5cc0e698129f-report-118.pdf",
+      "screenshotName": "report(118).pdf",
+      "publicDeleteTokenHash": "0b5bed2b47015df83a1b93bf23c484549cb9b6070cf2311e1d74e70683d8188f",
+      "id": "payment-622d92d0-6c19-4c79-b88d-d94cb2c040b2",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "66bf2825faf44eb7950ccce6d82d3767",
+      "createdAt": "2026-09-04T07:50:57.681Z",
+      "updatedAt": "2026-09-04T07:50:57.681Z"
+    },
+    {
       "customerName": "NEW CUT FOOTWEAR",
       "salesOrderNumber": "SO-07885",
       "paymentAmount": 101480,
