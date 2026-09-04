@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271116,
+  "serialCounter": 26271118,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -22392,6 +22392,110 @@
           "processedAt": "2026-09-04T05:11:38.432Z",
           "dispatchNote": "wooden",
           "vendor": "Aardhya"
+        }
+      }
+    },
+    "1154219000036433003": {
+      "salesOrderId": "1154219000036433003",
+      "salesOrderNumber": "SO-07882",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036433003",
+        "zohoSalesOrderId": "1154219000036433003",
+        "salesOrderNumber": "SO-07882",
+        "status": "open",
+        "customerName": "GARG INDUSTRIES",
+        "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036433006",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000278143",
+            "rate": 313000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036433007",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000278034",
+            "rate": 545000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036433003-1154219000036433006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036433003",
+            "lineItemId": "1154219000036433006",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "GARG INDUSTRIES",
+            "salesOrderNumber": "SO-07882",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036433003-1154219000036433007-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036433003",
+            "lineItemId": "1154219000036433007",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "GARG INDUSTRIES",
+            "salesOrderNumber": "SO-07882",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
+      },
+      "machines": {
+        "1154219000036433003-1154219000036433006-1": {
+          "machineUnitId": "1154219000036433003-1154219000036433006-1",
+          "lineItemId": "1154219000036433006",
+          "serialNumber": "26271117",
+          "qrToken": "26271117",
+          "qrStatus": "pending"
+        },
+        "1154219000036433003-1154219000036433007-1": {
+          "machineUnitId": "1154219000036433003-1154219000036433007-1",
+          "lineItemId": "1154219000036433007",
+          "serialNumber": "26271118",
+          "qrToken": "26271118",
+          "qrStatus": "pending"
         }
       }
     }
