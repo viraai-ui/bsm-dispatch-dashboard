@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Unique Star International",
+      "paymentAmount": 10400,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/37deb49e-26cb-4f1f-bcd2-15cf024c82b3/2026-09-04/1788504198109-eecb8950-dec9-42d9-bc2f-a0ccfcedb92c-WhatsApp-Image-2026-09-04-at-12.08.43-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F37deb49e-26cb-4f1f-bcd2-15cf024c82b3%2F2026-09-04%2F1788504198109-eecb8950-dec9-42d9-bc2f-a0ccfcedb92c-WhatsApp-Image-2026-09-04-at-12.08.43-PM.jpg",
+          "name": "WhatsApp Image 2026-09-04 at 12.08.43 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 135131
+        }
+      ],
+      "screenshotKey": "payments/public/manual/37deb49e-26cb-4f1f-bcd2-15cf024c82b3/2026-09-04/1788504198109-eecb8950-dec9-42d9-bc2f-a0ccfcedb92c-WhatsApp-Image-2026-09-04-at-12.08.43-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F37deb49e-26cb-4f1f-bcd2-15cf024c82b3%2F2026-09-04%2F1788504198109-eecb8950-dec9-42d9-bc2f-a0ccfcedb92c-WhatsApp-Image-2026-09-04-at-12.08.43-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-04 at 12.08.43 PM.jpeg",
+      "publicDeleteTokenHash": "ec683984cec0e25d23f5993e79e154e23bc83ed2a309da15c32ea95cbf5dfb44",
+      "id": "payment-40a7c71c-5004-403f-87f1-92097fa4d74c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "7e9e43afcbfd418f8580e569d291a157",
+      "createdAt": "2026-09-04T06:43:20.221Z",
+      "updatedAt": "2026-09-04T06:43:20.221Z"
+    },
+    {
       "customerName": "Assert Footwears",
       "paymentAmount": 24150,
       "paymentMode": "UPI",
