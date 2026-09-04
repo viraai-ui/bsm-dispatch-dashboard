@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-f5dae2dd-c8e4-4979-81b8-c38ba61bdcc7",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-84f5aef4-9e68-4a20-b924-22e4ee943ed7",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Vigneshwara Enterprises",
+      "paymentAmount": 100000,
+      "createdAt": "2026-09-04T06:44:28.121Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-a61e47f5-4946-4238-a6e4-a1679705853a",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-84f5aef4-9e68-4a20-b924-22e4ee943ed7",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Vigneshwara Enterprises",
+      "paymentAmount": 100000,
+      "createdAt": "2026-09-04T06:44:28.121Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-b3d35f35-dfe9-4e6c-88aa-bdb19da5e346",
       "type": "payment-created",
       "recipientUserId": "u-admin",
