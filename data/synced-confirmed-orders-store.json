@@ -1,5 +1,76 @@
 {
   "orders": {
+    "1154219000036469001": {
+      "id": "1154219000036469001",
+      "zohoSalesOrderId": "1154219000036469001",
+      "salesOrderNumber": "SO-07886",
+      "status": "open",
+      "customerName": "Vigneshwara Enterprises",
+      "shippingAddress": "1, 1-91, Ysr Road / Surath Ganghadar Street / 5th Line, Ambapuram, Krishna, Andhra Pradesh, 520015",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036469004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225438",
+          "rate": 45000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036469001-1154219000036469004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036469001",
+          "lineItemId": "1154219000036469004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Vigneshwara Enterprises",
+          "salesOrderNumber": "SO-07886",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036469001-1154219000036469004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036469001",
+          "lineItemId": "1154219000036469004",
+          "itemName": "Cover Type Sole Press (pneumatic)",
+          "sku": "2003",
+          "customerName": "Vigneshwara Enterprises",
+          "salesOrderNumber": "SO-07886",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-04T11:57:33+0530"
+    },
     "1154219000036466001": {
       "id": "1154219000036466001",
       "zohoSalesOrderId": "1154219000036466001",
@@ -8837,6 +8908,7 @@
     }
   },
   "orderIds": [
+    "1154219000036469001",
     "1154219000036466001",
     "1154219000036443025",
     "1154219000036412009",
@@ -8893,8 +8965,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-04T06:20:36.911Z",
-  "lastAttemptAt": "2026-09-04T06:30:40.886Z",
+  "lastSuccessfulSyncAt": "2026-09-04T06:30:55.284Z",
+  "lastAttemptAt": "2026-09-04T06:30:55.284Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
