@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Vrindawan Bihari Rubber",
+      "paymentAmount": 100000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/748703ef-e99a-40a4-88ca-235c0d646b4a/2026-09-04/1788533684266-b176992c-db87-4041-a791-10b8ac32baa9-WhatsApp-Image-2026-09-04-at-8.22.43-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F748703ef-e99a-40a4-88ca-235c0d646b4a%2F2026-09-04%2F1788533684266-b176992c-db87-4041-a791-10b8ac32baa9-WhatsApp-Image-2026-09-04-at-8.22.43-PM.jpg",
+          "name": "WhatsApp Image 2026-09-04 at 8.22.43 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 105585
+        }
+      ],
+      "screenshotKey": "payments/public/manual/748703ef-e99a-40a4-88ca-235c0d646b4a/2026-09-04/1788533684266-b176992c-db87-4041-a791-10b8ac32baa9-WhatsApp-Image-2026-09-04-at-8.22.43-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F748703ef-e99a-40a4-88ca-235c0d646b4a%2F2026-09-04%2F1788533684266-b176992c-db87-4041-a791-10b8ac32baa9-WhatsApp-Image-2026-09-04-at-8.22.43-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-04 at 8.22.43 PM.jpeg",
+      "publicDeleteTokenHash": "1e64d03765d7e95db0d5d6da1930c73c53c431441eb2afecc68f098f6b0e669f",
+      "id": "payment-48c7f7ab-2ed2-4a87-9cfc-e268f3ee054f",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "c4d1aabb7baa4797a90726efb0ba9390",
+      "createdAt": "2026-09-04T14:54:45.623Z",
+      "updatedAt": "2026-09-04T14:54:45.623Z"
+    },
+    {
       "customerName": "Parshvaprem Industries",
       "paymentAmount": 139520,
       "paymentMode": "Bank Transfer",
