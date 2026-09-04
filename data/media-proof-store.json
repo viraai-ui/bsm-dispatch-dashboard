@@ -3924,6 +3924,31 @@
         }
       },
       "videoNotRequired": false
+    },
+    "1154219000036433003": {
+      "orderId": "1154219000036433003",
+      "salesOrderNumber": "SO-07882",
+      "submittedAt": null,
+      "units": {
+        "1154219000036433003-1154219000036433006-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036433003-1154219000036433006-1-video-1788501936686-7xy9pu",
+              "name": "VID_20260904_113457.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-04%2FSO-07882%2F1154219000036433003-1154219000036433006-1%2FSeat-lasting-Machine-2026-09-04T06-05-09-000Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-04/SO-07882/1154219000036433003-1154219000036433006-1/Seat-lasting-Machine-2026-09-04T06-05-09-000Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-04T06:05:36.686Z",
+              "expiresAt": "2026-10-04T06:05:36.686Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
