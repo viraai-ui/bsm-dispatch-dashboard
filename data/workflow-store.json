@@ -22735,7 +22735,9 @@
     "1154219000036469001": {
       "salesOrderId": "1154219000036469001",
       "salesOrderNumber": "SO-07886",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-04T07:06:39.611Z",
       "processedOrder": {
         "id": "1154219000036469001",
         "zohoSalesOrderId": "1154219000036469001",
@@ -22765,8 +22767,8 @@
           {
             "id": "1154219000036469001-1154219000036469004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271122",
+            "qrToken": "26271122",
             "orderId": "1154219000036469001",
             "lineItemId": "1154219000036469004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -22774,20 +22776,23 @@
             "customerName": "Vigneshwara Enterprises",
             "salesOrderNumber": "SO-07886",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036469001-1154219000036469004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271123",
+            "qrToken": "26271123",
             "orderId": "1154219000036469001",
             "lineItemId": "1154219000036469004",
             "itemName": "Cover Type Sole Press (pneumatic)",
@@ -22795,14 +22800,17 @@
             "customerName": "Vigneshwara Enterprises",
             "salesOrderNumber": "SO-07886",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-04T11:57:33+0530"
@@ -22816,7 +22824,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T07:05:23.827Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T07:05:24.747Z"
+          "zohoBackupQueuedAt": "2026-09-04T07:05:24.747Z",
+          "processedAt": "2026-09-04T07:06:39.611Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000036469001-1154219000036469004-2": {
           "machineUnitId": "1154219000036469001-1154219000036469004-2",
@@ -22826,7 +22837,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T07:05:23.827Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T07:05:24.747Z"
+          "zohoBackupQueuedAt": "2026-09-04T07:05:24.747Z",
+          "processedAt": "2026-09-04T07:06:39.611Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
