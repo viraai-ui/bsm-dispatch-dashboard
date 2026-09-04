@@ -22848,7 +22848,9 @@
     "1154219000036475001": {
       "salesOrderId": "1154219000036475001",
       "salesOrderNumber": "SO-07887",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-04T07:08:01.773Z",
       "processedOrder": {
         "id": "1154219000036475001",
         "zohoSalesOrderId": "1154219000036475001",
@@ -22878,8 +22880,8 @@
           {
             "id": "1154219000036475001-1154219000036475004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271124",
+            "qrToken": "26271124",
             "orderId": "1154219000036475001",
             "lineItemId": "1154219000036475004",
             "itemName": "Single needle post bed Drop feed",
@@ -22887,14 +22889,17 @@
             "customerName": "Assert Footwears",
             "salesOrderNumber": "SO-07887",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-04T12:29:04+0530"
@@ -22908,7 +22913,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T07:07:18.917Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-04T07:07:19.864Z"
+          "zohoBackupQueuedAt": "2026-09-04T07:07:19.864Z",
+          "processedAt": "2026-09-04T07:08:01.773Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
