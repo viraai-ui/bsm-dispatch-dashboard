@@ -22502,11 +22502,13 @@
           "qrToken": "26271117",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T05:12:48.905Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-04T05:12:52.806Z",
           "processedAt": "2026-09-04T05:13:42.927Z",
           "dispatchNote": "local",
-          "vendor": "Allure"
+          "vendor": "Allure",
+          "zohoBackupLastAttemptAt": "2026-09-04T05:16:21.718Z",
+          "zohoBackupSyncedAt": "2026-09-04T05:16:21.718Z"
         },
         "1154219000036433003-1154219000036433007-1": {
           "machineUnitId": "1154219000036433003-1154219000036433007-1",
@@ -22515,11 +22517,13 @@
           "qrToken": "26271118",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-04T05:12:48.905Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-04T05:12:52.806Z",
           "processedAt": "2026-09-04T05:13:42.927Z",
           "dispatchNote": "local",
-          "vendor": "Allure"
+          "vendor": "Allure",
+          "zohoBackupLastAttemptAt": "2026-09-04T05:16:21.718Z",
+          "zohoBackupSyncedAt": "2026-09-04T05:16:21.718Z"
         }
       },
       "dispatchSortOrder": 1
