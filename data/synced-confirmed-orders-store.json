@@ -1,5 +1,238 @@
 {
   "orders": {
+    "1154219000036443025": {
+      "id": "1154219000036443025",
+      "zohoSalesOrderId": "1154219000036443025",
+      "salesOrderNumber": "SO-07884",
+      "status": "open",
+      "customerName": "Durga Filters Pvt.Ltd.",
+      "shippingAddress": "D-48 SECTOR A-2, TRONICA CITY, LONI,, Ghaziabad, Uttar Pradesh, 201103, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036443028",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225787",
+          "rate": 27500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036443025-1154219000036443028-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036443025",
+          "lineItemId": "1154219000036443028",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "Durga Filters Pvt.Ltd.",
+          "salesOrderNumber": "SO-07884",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-04T10:29:33+0530"
+    },
+    "1154219000036412009": {
+      "id": "1154219000036412009",
+      "zohoSalesOrderId": "1154219000036412009",
+      "salesOrderNumber": "SO-07883",
+      "status": "open",
+      "customerName": "The Purple Tree",
+      "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi, Delhi, 110092, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036412012",
+          "itemName": "Belt / Conveyer type fusing machine (450mm)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001732210",
+          "rate": 140000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036412009-1154219000036412012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036412009",
+          "lineItemId": "1154219000036412012",
+          "itemName": "Belt / Conveyer type fusing machine (450mm)",
+          "sku": "",
+          "customerName": "The Purple Tree",
+          "salesOrderNumber": "SO-07883",
+          "deliveryDate": "2026-09-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
+    },
+    "1154219000036433003": {
+      "id": "1154219000036433003",
+      "zohoSalesOrderId": "1154219000036433003",
+      "salesOrderNumber": "SO-07882",
+      "status": "open",
+      "customerName": "GARG INDUSTRIES",
+      "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036433006",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000278143",
+          "rate": 313000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036433007",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000278034",
+          "rate": 545000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036433003-1154219000036433006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036433003",
+          "lineItemId": "1154219000036433006",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "customerName": "GARG INDUSTRIES",
+          "salesOrderNumber": "SO-07882",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036433003-1154219000036433007-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036433003",
+          "lineItemId": "1154219000036433007",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "GARG INDUSTRIES",
+          "salesOrderNumber": "SO-07882",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
+    },
+    "1154219000036443007": {
+      "id": "1154219000036443007",
+      "zohoSalesOrderId": "1154219000036443007",
+      "salesOrderNumber": "SO-07881",
+      "status": "open",
+      "customerName": "GARG INDUSTRIES",
+      "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-04",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036443010",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225211",
+          "rate": 48000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036443007-1154219000036443010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036443007",
+          "lineItemId": "1154219000036443010",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "GARG INDUSTRIES",
+          "salesOrderNumber": "SO-07881",
+          "deliveryDate": "2026-09-04",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-04T10:29:33+0530"
+    },
     "1154219000036428004": {
       "id": "1154219000036428004",
       "zohoSalesOrderId": "1154219000036428004",
@@ -8521,6 +8754,10 @@
     }
   },
   "orderIds": [
+    "1154219000036443025",
+    "1154219000036412009",
+    "1154219000036433003",
+    "1154219000036443007",
     "1154219000036428004",
     "1154219000036438003",
     "1154219000036424001",
@@ -8572,8 +8809,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-04T04:40:36.785Z",
-  "lastAttemptAt": "2026-09-04T04:59:48.743Z",
+  "lastSuccessfulSyncAt": "2026-09-04T04:59:59.826Z",
+  "lastAttemptAt": "2026-09-04T04:59:59.826Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
