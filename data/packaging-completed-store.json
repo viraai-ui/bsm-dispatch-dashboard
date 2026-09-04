@@ -15769,6 +15769,102 @@
       "machineIds": [
         "1154219000036383018-1154219000036383021-1"
       ]
+    },
+    "1154219000036433003": {
+      "completedAt": "2026-09-04T06:24:40.657Z",
+      "order": {
+        "id": "1154219000036433003",
+        "zohoSalesOrderId": "1154219000036433003",
+        "salesOrderNumber": "SO-07882",
+        "status": "open",
+        "customerName": "GARG INDUSTRIES",
+        "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036433006",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000278143",
+            "rate": 313000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036433007",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000278034",
+            "rate": 545000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036433003-1154219000036433006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271117",
+            "qrToken": "26271117",
+            "orderId": "1154219000036433003",
+            "lineItemId": "1154219000036433006",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "GARG INDUSTRIES",
+            "salesOrderNumber": "SO-07882",
+            "deliveryDate": "2026-09-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036433003-1154219000036433007-1",
+            "unitNumber": 2,
+            "serialNumber": "26271118",
+            "qrToken": "26271118",
+            "orderId": "1154219000036433003",
+            "lineItemId": "1154219000036433007",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "GARG INDUSTRIES",
+            "salesOrderNumber": "SO-07882",
+            "deliveryDate": "2026-09-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-04T10:29:32+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036433003-1154219000036433006-1",
+        "1154219000036433003-1154219000036433007-1"
+      ]
     }
   }
 }
