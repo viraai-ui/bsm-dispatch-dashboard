@@ -22319,7 +22319,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 3
     },
     "1154219000036428004": {
       "salesOrderId": "1154219000036428004",
@@ -22395,13 +22395,13 @@
           "vendor": "Aardhya"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000036433003": {
       "salesOrderId": "1154219000036433003",
       "salesOrderNumber": "SO-07882",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-04T05:13:42.927Z",
       "processedOrder": {
         "id": "1154219000036433003",
@@ -22519,7 +22519,8 @@
           "dispatchNote": "local",
           "vendor": "Allure"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
