@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-f69c03bc-d994-4d34-8715-3fae0a247b87",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-4992f532-480f-4303-b51b-50e40fc4ec46",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Parshvaprem Industries",
+      "paymentAmount": 139520,
+      "createdAt": "2026-09-04T14:39:20.774Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-add6597a-004d-4e9f-981d-6a72ab678158",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-4992f532-480f-4303-b51b-50e40fc4ec46",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Parshvaprem Industries",
+      "paymentAmount": 139520,
+      "createdAt": "2026-09-04T14:39:20.774Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-bdf5e14f-836e-4570-904f-46e3d1673419",
       "type": "payment-created",
       "recipientUserId": "u-admin",
