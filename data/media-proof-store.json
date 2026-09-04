@@ -3992,6 +3992,31 @@
           ]
         }
       }
+    },
+    "1154219000036443025": {
+      "orderId": "1154219000036443025",
+      "salesOrderNumber": "SO-07884",
+      "submittedAt": null,
+      "units": {
+        "1154219000036443025-1154219000036443028-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036443025-1154219000036443028-1-video-1788505218881-7nsh4z",
+              "name": "VID_20260904_122951.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-04%2FSO-07884%2F1154219000036443025-1154219000036443028-1%2FRound-Blade-Edge-trimming-Machine-2026-09-04T07-00-01-612Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-04/SO-07884/1154219000036443025-1154219000036443028-1/Round-Blade-Edge-trimming-Machine-2026-09-04T07-00-01-612Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-04T07:00:18.881Z",
+              "expiresAt": "2026-10-04T07:00:18.881Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
