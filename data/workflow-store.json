@@ -22246,7 +22246,9 @@
     "1154219000036412009": {
       "salesOrderId": "1154219000036412009",
       "salesOrderNumber": "SO-07883",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-04T05:02:24.491Z",
       "processedOrder": {
         "id": "1154219000036412009",
         "zohoSalesOrderId": "1154219000036412009",
@@ -22276,8 +22278,8 @@
           {
             "id": "1154219000036412009-1154219000036412012-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271115",
+            "qrToken": "26271115",
             "orderId": "1154219000036412009",
             "lineItemId": "1154219000036412012",
             "itemName": "Belt / Conveyer type fusing machine (450mm)",
@@ -22285,14 +22287,17 @@
             "customerName": "The Purple Tree",
             "salesOrderNumber": "SO-07883",
             "deliveryDate": "2026-09-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-04",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
@@ -22308,7 +22313,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-04T05:00:47.799Z",
           "zohoBackupLastAttemptAt": "2026-09-04T05:01:30.455Z",
-          "zohoBackupSyncedAt": "2026-09-04T05:01:30.455Z"
+          "zohoBackupSyncedAt": "2026-09-04T05:01:30.455Z",
+          "processedAt": "2026-09-04T05:02:24.491Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
