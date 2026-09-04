@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "NEW CUT FOOTWEAR",
+      "salesOrderNumber": "SO-07885",
+      "paymentAmount": 101480,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Shivani",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07885/2026-09-04/1788505881863-d2fd919f-bfd3-4e49-a70e-2d8c187d9394-0b849fa2-fb48-43bb-a1be-193576ca7eb1.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07885%2F2026-09-04%2F1788505881863-d2fd919f-bfd3-4e49-a70e-2d8c187d9394-0b849fa2-fb48-43bb-a1be-193576ca7eb1.jpg",
+          "name": "0b849fa2-fb48-43bb-a1be-193576ca7eb1.jpg",
+          "contentType": "image/jpeg",
+          "size": 52184
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07885/2026-09-04/1788505881863-d2fd919f-bfd3-4e49-a70e-2d8c187d9394-0b849fa2-fb48-43bb-a1be-193576ca7eb1.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07885%2F2026-09-04%2F1788505881863-d2fd919f-bfd3-4e49-a70e-2d8c187d9394-0b849fa2-fb48-43bb-a1be-193576ca7eb1.jpg",
+      "screenshotName": "0b849fa2-fb48-43bb-a1be-193576ca7eb1.jpg",
+      "publicDeleteTokenHash": "91ccabff7afeb8a89783351133e8ab3c0d817bfd25a0014b4f0f9bdaef546378",
+      "id": "payment-d0c901ff-96a2-46e8-9286-9861fc8ac830",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "7049819cb1c543fc9ad9f4702faa923c",
+      "createdAt": "2026-09-04T07:11:23.471Z",
+      "updatedAt": "2026-09-04T07:11:23.471Z"
+    },
+    {
       "customerName": "Vigneshwara Enterprises",
       "paymentAmount": 100000,
       "paymentMode": "UPI",
