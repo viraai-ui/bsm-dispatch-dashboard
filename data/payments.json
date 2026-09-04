@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Vigneshwara Enterprises",
+      "paymentAmount": 100000,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/2b3297a7-1b96-4249-8282-71f4343a18fc/2026-09-04/1788504264870-d2f8c5b0-98db-4938-8eac-1f208f8f3fec-WhatsApp-Image-2026-09-04-at-11.24.38-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F2b3297a7-1b96-4249-8282-71f4343a18fc%2F2026-09-04%2F1788504264870-d2f8c5b0-98db-4938-8eac-1f208f8f3fec-WhatsApp-Image-2026-09-04-at-11.24.38-AM.jpg",
+          "name": "WhatsApp Image 2026-09-04 at 11.24.38 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 70386
+        }
+      ],
+      "screenshotKey": "payments/public/manual/2b3297a7-1b96-4249-8282-71f4343a18fc/2026-09-04/1788504264870-d2f8c5b0-98db-4938-8eac-1f208f8f3fec-WhatsApp-Image-2026-09-04-at-11.24.38-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F2b3297a7-1b96-4249-8282-71f4343a18fc%2F2026-09-04%2F1788504264870-d2f8c5b0-98db-4938-8eac-1f208f8f3fec-WhatsApp-Image-2026-09-04-at-11.24.38-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-04 at 11.24.38 AM.jpeg",
+      "publicDeleteTokenHash": "68ed0bb948fa9dce82f83285d17c959ef0aff76417aa1757eb90ff13b1b5aa18",
+      "id": "payment-84f5aef4-9e68-4a20-b924-22e4ee943ed7",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "4bb015e001b54a2f8e1787f2cac330fb",
+      "createdAt": "2026-09-04T06:44:26.303Z",
+      "updatedAt": "2026-09-04T06:44:26.303Z"
+    },
+    {
       "customerName": "Unique Star International",
       "paymentAmount": 25000,
       "paymentMode": "UPI",
