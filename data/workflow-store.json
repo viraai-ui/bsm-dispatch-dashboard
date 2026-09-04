@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271119,
+  "serialCounter": 26271121,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -22605,6 +22605,110 @@
           "processedAt": "2026-09-04T05:23:45.952Z",
           "dispatchNote": "local",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000036466001": {
+      "salesOrderId": "1154219000036466001",
+      "salesOrderNumber": "SO-07885",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036466001",
+        "zohoSalesOrderId": "1154219000036466001",
+        "salesOrderNumber": "SO-07885",
+        "status": "open",
+        "customerName": "NEW CUT FOOTWEAR",
+        "shippingAddress": "KHASRA NO.-25/19/2, M.I.E. Bahadurgarh, MIE BAHADURGARH, Jhajjar, Haryana, 124507",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036466004",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225279",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036466005",
+            "itemName": "hole punching machine (pneumatic)",
+            "sku": "324",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228106",
+            "rate": 28000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036466001-1154219000036466004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036466001",
+            "lineItemId": "1154219000036466004",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "NEW CUT FOOTWEAR",
+            "salesOrderNumber": "SO-07885",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036466001-1154219000036466005-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036466001",
+            "lineItemId": "1154219000036466005",
+            "itemName": "hole punching machine (pneumatic)",
+            "sku": "324",
+            "customerName": "NEW CUT FOOTWEAR",
+            "salesOrderNumber": "SO-07885",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-04T11:23:33+0530"
+      },
+      "machines": {
+        "1154219000036466001-1154219000036466004-1": {
+          "machineUnitId": "1154219000036466001-1154219000036466004-1",
+          "lineItemId": "1154219000036466004",
+          "serialNumber": "26271120",
+          "qrToken": "26271120",
+          "qrStatus": "pending"
+        },
+        "1154219000036466001-1154219000036466005-1": {
+          "machineUnitId": "1154219000036466001-1154219000036466005-1",
+          "lineItemId": "1154219000036466005",
+          "serialNumber": "26271121",
+          "qrToken": "26271121",
+          "qrStatus": "pending"
         }
       }
     }
