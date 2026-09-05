@@ -5540,6 +5540,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036443025": {
+      "id": "ship-1788590545523-b77mz",
+      "itemId": "1154219000036443025",
+      "orderId": "1154219000036443025",
+      "machineId": "1154219000036443025-1154219000036443028-1",
+      "salesOrderNumber": "SO-07884",
+      "customerName": "Durga Filters Pvt.Ltd.",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-04",
+      "notes": "",
+      "shippedAt": "2026-09-05T06:42:25.523Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
