@@ -1,5 +1,100 @@
 {
   "orders": {
+    "1154219000036468012": {
+      "id": "1154219000036468012",
+      "zohoSalesOrderId": "1154219000036468012",
+      "salesOrderNumber": "SO-07894",
+      "status": "open",
+      "customerName": "Press2 Drycleaning And Laundry Pvt Ltd (Delhi)",
+      "shippingAddress": "A-285, Defence Colony, Bhisham Pitamah Marg, Opp, Kotala Mubarakpur, Delhi, 110024",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036468015",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226515",
+          "rate": 23500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036468016",
+          "itemName": "Spare Parts (Sewing Machine)",
+          "sku": "",
+          "description": "Wooden Packing Charges",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001498121",
+          "rate": 1500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036468017",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036468012-1154219000036468015-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036468012",
+          "lineItemId": "1154219000036468015",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "Press2 Drycleaning And Laundry Pvt Ltd (Delhi)",
+          "salesOrderNumber": "SO-07894",
+          "deliveryDate": "2026-09-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036468012-1154219000036468016-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036468012",
+          "lineItemId": "1154219000036468016",
+          "itemName": "Spare Parts (Sewing Machine)",
+          "sku": "",
+          "customerName": "Press2 Drycleaning And Laundry Pvt Ltd (Delhi)",
+          "salesOrderNumber": "SO-07894",
+          "deliveryDate": "2026-09-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Wooden Packing Charges"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-05T16:05:55+0530"
+    },
     "1154219000036482005": {
       "id": "1154219000036482005",
       "zohoSalesOrderId": "1154219000036482005",
@@ -5807,7 +5902,7 @@
           "itemDescription": "blade set 206"
         }
       ],
-      "zohoLastModifiedTime": "2026-08-26T13:16:07+0530"
+      "zohoLastModifiedTime": "2026-09-05T16:05:02+0530"
     },
     "1154219000036013008": {
       "id": "1154219000036013008",
@@ -9110,6 +9205,7 @@
     }
   },
   "orderIds": [
+    "1154219000036468012",
     "1154219000036482005",
     "1154219000036499003",
     "1154219000036479002",
@@ -9162,8 +9258,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-05T10:20:37.580Z",
-  "lastAttemptAt": "2026-09-05T10:40:25.361Z",
+  "lastSuccessfulSyncAt": "2026-09-05T10:40:38.800Z",
+  "lastAttemptAt": "2026-09-05T10:40:38.800Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
