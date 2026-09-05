@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Vrindawan Bihari Rubber",
+      "paymentAmount": 224500,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/d26ea667-3845-41de-8d31-bc032e04441b/2026-09-05/1788614737920-d20a2008-bbc5-412d-b9d7-54b4f240b55b-WhatsApp-Image-2026-09-05-at-6.53.29-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fd26ea667-3845-41de-8d31-bc032e04441b%2F2026-09-05%2F1788614737920-d20a2008-bbc5-412d-b9d7-54b4f240b55b-WhatsApp-Image-2026-09-05-at-6.53.29-PM.jpg",
+          "name": "WhatsApp Image 2026-09-05 at 6.53.29 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 91580
+        }
+      ],
+      "screenshotKey": "payments/public/manual/d26ea667-3845-41de-8d31-bc032e04441b/2026-09-05/1788614737920-d20a2008-bbc5-412d-b9d7-54b4f240b55b-WhatsApp-Image-2026-09-05-at-6.53.29-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fd26ea667-3845-41de-8d31-bc032e04441b%2F2026-09-05%2F1788614737920-d20a2008-bbc5-412d-b9d7-54b4f240b55b-WhatsApp-Image-2026-09-05-at-6.53.29-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-05 at 6.53.29 PM.jpeg",
+      "publicDeleteTokenHash": "5ce22da71ec5d121db54462e88b82546f1ee48ba82a23bd5e3c0b79eda053d61",
+      "id": "payment-520e3c0c-f3c3-4cf5-aeee-53abd9f2a9d0",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "7fa52b9200484e309eb7f8dd992e1818",
+      "createdAt": "2026-09-05T13:25:40.295Z",
+      "updatedAt": "2026-09-05T13:25:40.295Z"
+    },
+    {
       "customerName": "KOUSHAL ENTERPRISES",
       "salesOrderNumber": "SO-07893",
       "paymentAmount": 1100,
