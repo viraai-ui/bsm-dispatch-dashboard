@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271124,
+  "serialCounter": 26271126,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -22931,6 +22931,98 @@
           "zohoBackupLastAttemptAt": "2026-09-04T07:15:34.007Z",
           "zohoBackupSyncedAt": "2026-09-04T07:15:34.007Z",
           "dispatchedAt": "2026-09-05T04:50:55.074Z"
+        }
+      }
+    },
+    "1154219000036483004": {
+      "salesOrderId": "1154219000036483004",
+      "salesOrderNumber": "SO-07889",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036483004",
+        "zohoSalesOrderId": "1154219000036483004",
+        "salesOrderNumber": "SO-07889",
+        "status": "open",
+        "customerName": "Parshvaprem Industries Pvt. Ltd.",
+        "shippingAddress": "Shop No. 9, Janki Presidency,, 90, Feet Road, Bhayandar,, (W), Thane, W, Thane",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036483007",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000277875",
+            "rate": 57000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036483004-1154219000036483007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036483004",
+            "lineItemId": "1154219000036483007",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Parshvaprem Industries Pvt. Ltd.",
+            "salesOrderNumber": "SO-07889",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036483004-1154219000036483007-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036483004",
+            "lineItemId": "1154219000036483007",
+            "itemName": "Hotmelt Roller Coater (16 inch)",
+            "sku": "831-2",
+            "customerName": "Parshvaprem Industries Pvt. Ltd.",
+            "salesOrderNumber": "SO-07889",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-05T10:32:22+0530"
+      },
+      "machines": {
+        "1154219000036483004-1154219000036483007-1": {
+          "machineUnitId": "1154219000036483004-1154219000036483007-1",
+          "lineItemId": "1154219000036483007",
+          "serialNumber": "26271125",
+          "qrToken": "26271125",
+          "qrStatus": "pending"
+        },
+        "1154219000036483004-1154219000036483007-2": {
+          "machineUnitId": "1154219000036483004-1154219000036483007-2",
+          "lineItemId": "1154219000036483007",
+          "serialNumber": "26271126",
+          "qrToken": "26271126",
+          "qrStatus": "pending"
         }
       }
     }
