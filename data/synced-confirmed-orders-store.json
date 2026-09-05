@@ -673,56 +673,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-04T13:29:05+0530"
     },
-    "1154219000036475001": {
-      "id": "1154219000036475001",
-      "zohoSalesOrderId": "1154219000036475001",
-      "salesOrderNumber": "SO-07887",
-      "status": "open",
-      "customerName": "Assert Footwears",
-      "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036475004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226515",
-          "rate": 23000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036475001-1154219000036475004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036475001",
-          "lineItemId": "1154219000036475004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "Assert Footwears",
-          "salesOrderNumber": "SO-07887",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-04T12:29:04+0530"
-    },
     "1154219000036469001": {
       "id": "1154219000036469001",
       "zohoSalesOrderId": "1154219000036469001",
@@ -794,89 +744,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-04T11:57:33+0530"
     },
-    "1154219000036466001": {
-      "id": "1154219000036466001",
-      "zohoSalesOrderId": "1154219000036466001",
-      "salesOrderNumber": "SO-07885",
-      "status": "open",
-      "customerName": "NEW CUT FOOTWEAR",
-      "shippingAddress": "KHASRA NO.-25/19/2, M.I.E. Bahadurgarh, MIE BAHADURGARH, Jhajjar, Haryana, 124507",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036466004",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225279",
-          "rate": 58000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036466005",
-          "itemName": "hole punching machine (pneumatic)",
-          "sku": "324",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228106",
-          "rate": 28000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036466001-1154219000036466004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036466001",
-          "lineItemId": "1154219000036466004",
-          "itemName": "Hotmelt Spray machine (Double station)",
-          "sku": "834-2",
-          "customerName": "NEW CUT FOOTWEAR",
-          "salesOrderNumber": "SO-07885",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036466001-1154219000036466005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036466001",
-          "lineItemId": "1154219000036466005",
-          "itemName": "hole punching machine (pneumatic)",
-          "sku": "324",
-          "customerName": "NEW CUT FOOTWEAR",
-          "salesOrderNumber": "SO-07885",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-04T11:23:33+0530"
-    },
     "1154219000036443025": {
       "id": "1154219000036443025",
       "zohoSalesOrderId": "1154219000036443025",
@@ -927,139 +794,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-04T10:30:02+0530"
     },
-    "1154219000036412009": {
-      "id": "1154219000036412009",
-      "zohoSalesOrderId": "1154219000036412009",
-      "salesOrderNumber": "SO-07883",
-      "status": "open",
-      "customerName": "The Purple Tree",
-      "shippingAddress": "BASEMENT, PLOT NO. 400, PATPARGANJ INDUSTRIAL AREA, NEAR DSIDC COMPLEX, DELHI, East Delhi, Delhi, 110092, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036412012",
-          "itemName": "Belt / Conveyer type fusing machine (450mm)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000001732210",
-          "rate": 140000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036412009-1154219000036412012-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036412009",
-          "lineItemId": "1154219000036412012",
-          "itemName": "Belt / Conveyer type fusing machine (450mm)",
-          "sku": "",
-          "customerName": "The Purple Tree",
-          "salesOrderNumber": "SO-07883",
-          "deliveryDate": "2026-09-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
-    },
-    "1154219000036433003": {
-      "id": "1154219000036433003",
-      "zohoSalesOrderId": "1154219000036433003",
-      "salesOrderNumber": "SO-07882",
-      "status": "open",
-      "customerName": "GARG INDUSTRIES",
-      "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036433006",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278143",
-          "rate": 313000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036433007",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278034",
-          "rate": 545000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036433003-1154219000036433006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036433003",
-          "lineItemId": "1154219000036433006",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "customerName": "GARG INDUSTRIES",
-          "salesOrderNumber": "SO-07882",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036433003-1154219000036433007-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036433003",
-          "lineItemId": "1154219000036433007",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "GARG INDUSTRIES",
-          "salesOrderNumber": "SO-07882",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-04T10:29:32+0530"
-    },
     "1154219000036443007": {
       "id": "1154219000036443007",
       "zohoSalesOrderId": "1154219000036443007",
@@ -1108,135 +842,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-04T10:29:33+0530"
-    },
-    "1154219000036428004": {
-      "id": "1154219000036428004",
-      "zohoSalesOrderId": "1154219000036428004",
-      "salesOrderNumber": "SO-07880",
-      "status": "open",
-      "customerName": "Samriddhi Industries",
-      "shippingAddress": "A-27, RIICO Housing Colony, Near Laxmi Roadlines,, Road No. 14 Badharna, VKI, Jaipur, Rajasthan, 302013",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036428007",
-          "itemName": "Hotmelt Roller Coater (24 Inch) Table Top",
-          "sku": "831-4",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004168252",
-          "rate": 120000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036428004-1154219000036428007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036428004",
-          "lineItemId": "1154219000036428007",
-          "itemName": "Hotmelt Roller Coater (24 Inch) Table Top",
-          "sku": "831-4",
-          "customerName": "Samriddhi Industries",
-          "salesOrderNumber": "SO-07880",
-          "deliveryDate": "2026-09-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-03T16:27:55+0530"
-    },
-    "1154219000036438003": {
-      "id": "1154219000036438003",
-      "zohoSalesOrderId": "1154219000036438003",
-      "salesOrderNumber": "SO-07879",
-      "status": "open",
-      "customerName": "KOUSHAL ENTERPRISES",
-      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036438006",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 50,
-          "pendingQuantity": 50,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 300,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-03T16:35:55+0530"
-    },
-    "1154219000036424001": {
-      "id": "1154219000036424001",
-      "zohoSalesOrderId": "1154219000036424001",
-      "salesOrderNumber": "SO-07878",
-      "status": "open",
-      "customerName": "AJAY FOOTWEAR",
-      "shippingAddress": "PLOT NO. 2207, M.I.E., PART-B, BAHADURGARH, HARYANA-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036424004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226515",
-          "rate": 22500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036424001-1154219000036424004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036424001",
-          "lineItemId": "1154219000036424004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "AJAY FOOTWEAR",
-          "salesOrderNumber": "SO-07878",
-          "deliveryDate": "2026-09-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-03T14:18:53+0530"
+      "zohoLastModifiedTime": "2026-09-05T11:18:58+0530"
     },
     "1154219000036422001": {
       "id": "1154219000036422001",
@@ -1349,84 +955,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-03T13:08:52+0530"
-    },
-    "1154219000036409087": {
-      "id": "1154219000036409087",
-      "zohoSalesOrderId": "1154219000036409087",
-      "salesOrderNumber": "SO-07875",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036409090",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 150,
-          "pendingQuantity": 150,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 300,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-03T12:38:22+0530"
-    },
-    "1154219000036382009": {
-      "id": "1154219000036382009",
-      "zohoSalesOrderId": "1154219000036382009",
-      "salesOrderNumber": "SO-07873",
-      "status": "open",
-      "customerName": "ASIAN FOOTWEARS PVT. LTD. (295)",
-      "shippingAddress": "Plot No.295 SECTOR-17, HSIIDC Industrial Area, Sector 17 Footwear Park,, BAHADURGARH, Haryana,, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036382012",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000006379136",
-          "rate": 42000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036382009-1154219000036382012-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036382009",
-          "lineItemId": "1154219000036382012",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "customerName": "ASIAN FOOTWEARS PVT. LTD. (295)",
-          "salesOrderNumber": "SO-07873",
-          "deliveryDate": "2026-09-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-03T11:26:51+0530"
     },
     "1154219000036370004": {
       "id": "1154219000036370004",
@@ -9635,20 +9163,11 @@
     "1154219000036479002",
     "1154219000036483004",
     "1154219000036466015",
-    "1154219000036475001",
     "1154219000036469001",
-    "1154219000036466001",
     "1154219000036443025",
-    "1154219000036412009",
-    "1154219000036433003",
     "1154219000036443007",
-    "1154219000036428004",
-    "1154219000036438003",
-    "1154219000036424001",
     "1154219000036422001",
     "1154219000036383018",
-    "1154219000036409087",
-    "1154219000036382009",
     "1154219000036370004",
     "1154219000036386001",
     "1154219000036259722",
@@ -9693,8 +9212,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-05T05:40:37.865Z",
-  "lastAttemptAt": "2026-09-05T06:00:25.262Z",
+  "lastSuccessfulSyncAt": "2026-09-05T06:00:37.490Z",
+  "lastAttemptAt": "2026-09-05T06:00:37.490Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
