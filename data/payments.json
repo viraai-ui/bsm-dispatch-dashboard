@@ -1,6 +1,21 @@
 {
   "payments": [
     {
+      "customerName": "KOUSHAL ENTERPRISES",
+      "salesOrderNumber": "SO-07893",
+      "paymentAmount": 1100,
+      "paymentMode": "Cash",
+      "addedBy": "Deepak",
+      "remarks": "give mam",
+      "publicDeleteTokenHash": "665b56a32397176423b09985f3b1b0cd3089fb3c4773896141289701c0943cfe",
+      "id": "payment-560eb119-ba3b-45ba-b563-7968eb57f350",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "cd3a5019f4624aba99ad56ff7a5dcbdd",
+      "createdAt": "2026-09-05T13:16:12.844Z",
+      "updatedAt": "2026-09-05T13:16:12.844Z"
+    },
+    {
       "customerName": "Print Well Graphics",
       "salesOrderNumber": "SO-07895",
       "paymentAmount": 26181,
