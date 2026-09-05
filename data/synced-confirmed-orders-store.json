@@ -1,5 +1,33 @@
 {
   "orders": {
+    "1154219000036474014": {
+      "id": "1154219000036474014",
+      "zohoSalesOrderId": "1154219000036474014",
+      "salesOrderNumber": "SO-07895",
+      "status": "open",
+      "customerName": "Print Well Graphics",
+      "shippingAddress": "H-87C, Garhwali mohalla, Laxmi Nagar, Delhi, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-07",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036474017",
+          "itemName": "Hotmelt Adhesive KL 25",
+          "sku": "KL 25",
+          "description": "",
+          "quantity": 62.5,
+          "pendingQuantity": 62.5,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000008088544",
+          "rate": 355,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-05T16:34:25+0530"
+    },
     "1154219000036468012": {
       "id": "1154219000036468012",
       "zohoSalesOrderId": "1154219000036468012",
@@ -9205,6 +9233,7 @@
     }
   },
   "orderIds": [
+    "1154219000036474014",
     "1154219000036468012",
     "1154219000036482005",
     "1154219000036499003",
@@ -9258,8 +9287,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-05T11:00:37.785Z",
-  "lastAttemptAt": "2026-09-05T11:20:25.226Z",
+  "lastSuccessfulSyncAt": "2026-09-05T11:20:36.587Z",
+  "lastAttemptAt": "2026-09-05T11:20:36.587Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
