@@ -5664,6 +5664,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036424001": {
+      "id": "ship-1788590868084-owtap",
+      "itemId": "1154219000036424001",
+      "orderId": "1154219000036424001",
+      "machineId": "1154219000036424001-1154219000036424004-1",
+      "salesOrderNumber": "SO-07878",
+      "customerName": "AJAY FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-05",
+      "notes": "",
+      "shippedAt": "2026-09-05T06:47:48.084Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
