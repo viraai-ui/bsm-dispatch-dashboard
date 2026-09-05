@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-6fe907cb-b0cd-4966-a99e-47ee56109cfc",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-c19719ed-d34f-4671-b4a8-9fa95aa038ed",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Techni Plast",
+      "paymentAmount": 2360,
+      "createdAt": "2026-09-05T06:31:59.371Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-2b7b0028-d981-4d79-b622-9a5b39df1183",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-c19719ed-d34f-4671-b4a8-9fa95aa038ed",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Techni Plast",
+      "paymentAmount": 2360,
+      "createdAt": "2026-09-05T06:31:59.371Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-49f644b8-54eb-4866-bf20-c3ccac978ba6",
       "type": "payment-created",
       "recipientUserId": "u-admin",
