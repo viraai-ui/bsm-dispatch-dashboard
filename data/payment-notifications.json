@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-73cb8ba5-7775-4b93-967b-3989b57c15fb",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-520e3c0c-f3c3-4cf5-aeee-53abd9f2a9d0",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Vrindawan Bihari Rubber",
+      "paymentAmount": 224500,
+      "createdAt": "2026-09-05T13:25:42.284Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-891ba36a-a236-4020-b8ba-105539c39faf",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-520e3c0c-f3c3-4cf5-aeee-53abd9f2a9d0",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Vrindawan Bihari Rubber",
+      "paymentAmount": 224500,
+      "createdAt": "2026-09-05T13:25:42.284Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-cbf83d28-135d-41e7-8bb7-a606477c4d80",
       "type": "payment-created",
       "recipientUserId": "u-admin",
