@@ -23035,7 +23035,9 @@
     "1154219000036479002": {
       "salesOrderId": "1154219000036479002",
       "salesOrderNumber": "SO-07890",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-05T06:14:59.154Z",
       "processedOrder": {
         "id": "1154219000036479002",
         "zohoSalesOrderId": "1154219000036479002",
@@ -23065,8 +23067,8 @@
           {
             "id": "1154219000036479002-1154219000036479005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271127",
+            "qrToken": "26271127",
             "orderId": "1154219000036479002",
             "lineItemId": "1154219000036479005",
             "itemName": "Moccasin Stitching",
@@ -23074,14 +23076,17 @@
             "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
             "salesOrderNumber": "SO-07890",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-05",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-05T10:32:21+0530"
@@ -23095,7 +23100,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-05T06:13:58.191Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-05T06:13:59.376Z"
+          "zohoBackupQueuedAt": "2026-09-05T06:13:59.376Z",
+          "processedAt": "2026-09-05T06:14:59.154Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
