@@ -1,6 +1,39 @@
 {
   "payments": [
     {
+      "customerName": "Techni Plast",
+      "paymentAmount": 2360,
+      "paymentMode": "UPI",
+      "addedBy": "Anuj",
+      "remarks": "2000 + 360",
+      "attachments": [
+        {
+          "key": "payments/public/manual/fb5c6ee2-4845-4881-8a34-3c4d4dc91a35/2026-09-05/1788589965453-15318a39-b046-4535-b4e3-763edbf1ab14-c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Ffb5c6ee2-4845-4881-8a34-3c4d4dc91a35%2F2026-09-05%2F1788589965453-15318a39-b046-4535-b4e3-763edbf1ab14-c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
+          "name": "c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
+          "contentType": "image/jpeg",
+          "size": 83588
+        },
+        {
+          "key": "payments/public/manual/fb5c6ee2-4845-4881-8a34-3c4d4dc91a35/2026-09-05/1788589967661-bd54ff97-9ea4-488d-a1de-99cca514c54f-b7bd4e74-2164-4e59-ab9e-61eb4acfcaa0.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Ffb5c6ee2-4845-4881-8a34-3c4d4dc91a35%2F2026-09-05%2F1788589967661-bd54ff97-9ea4-488d-a1de-99cca514c54f-b7bd4e74-2164-4e59-ab9e-61eb4acfcaa0.jpg",
+          "name": "b7bd4e74-2164-4e59-ab9e-61eb4acfcaa0.jpg",
+          "contentType": "image/jpeg",
+          "size": 82619
+        }
+      ],
+      "screenshotKey": "payments/public/manual/fb5c6ee2-4845-4881-8a34-3c4d4dc91a35/2026-09-05/1788589965453-15318a39-b046-4535-b4e3-763edbf1ab14-c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Ffb5c6ee2-4845-4881-8a34-3c4d4dc91a35%2F2026-09-05%2F1788589965453-15318a39-b046-4535-b4e3-763edbf1ab14-c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
+      "screenshotName": "c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
+      "publicDeleteTokenHash": "069a11a03e39b2a4fdf1948453638e23cc4b4465cce71ffd5f9b40733a2afa1a",
+      "id": "payment-789c7af3-a0e1-43c6-bac1-631d33743221",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "cc7b3c5daa1d411ea8e7ef44fd069c25",
+      "createdAt": "2026-09-05T06:32:50.133Z",
+      "updatedAt": "2026-09-05T06:32:50.133Z"
+    },
+    {
       "customerName": "Vrindawan Bihari Rubber",
       "paymentAmount": 100000,
       "paymentMode": "Bank Transfer",
