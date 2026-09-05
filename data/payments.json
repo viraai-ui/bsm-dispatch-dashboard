@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Vigneshwara Enterprises",
+      "paymentAmount": 19200,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/ef9c2e02-e958-400f-9e05-a1a9a6170460/2026-09-05/1788590855442-d0a3a29e-8b36-4dfb-b170-fd5195b0a4a9-WhatsApp-Image-2026-09-05-at-12.15.52-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fef9c2e02-e958-400f-9e05-a1a9a6170460%2F2026-09-05%2F1788590855442-d0a3a29e-8b36-4dfb-b170-fd5195b0a4a9-WhatsApp-Image-2026-09-05-at-12.15.52-PM.jpg",
+          "name": "WhatsApp Image 2026-09-05 at 12.15.52 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 69824
+        }
+      ],
+      "screenshotKey": "payments/public/manual/ef9c2e02-e958-400f-9e05-a1a9a6170460/2026-09-05/1788590855442-d0a3a29e-8b36-4dfb-b170-fd5195b0a4a9-WhatsApp-Image-2026-09-05-at-12.15.52-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fef9c2e02-e958-400f-9e05-a1a9a6170460%2F2026-09-05%2F1788590855442-d0a3a29e-8b36-4dfb-b170-fd5195b0a4a9-WhatsApp-Image-2026-09-05-at-12.15.52-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-05 at 12.15.52 PM.jpeg",
+      "publicDeleteTokenHash": "eeaffc878e439a24cf4e211c974fdfacc14529f1728f7db59b7c5cd8ceb221ff",
+      "id": "payment-bc5fe697-3490-43cc-97ee-3b03bfb2b365",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "3bca90d3748741a1964412c2405f72da",
+      "createdAt": "2026-09-05T06:47:37.308Z",
+      "updatedAt": "2026-09-05T06:47:37.308Z"
+    },
+    {
       "customerName": "Techni Plast",
       "paymentAmount": 2360,
       "paymentMode": "UPI",
