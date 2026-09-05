@@ -1,6 +1,19 @@
 {
   "payments": [
     {
+      "customerName": "Techni Plast",
+      "paymentAmount": 2360,
+      "paymentMode": "UPI",
+      "addedBy": "Anuj",
+      "publicDeleteTokenHash": "d98c45fb27f6c3d93789c67ec7e0ce9a0e0b1fef9a3aff1e9fa6bdc1785c3c32",
+      "id": "payment-c19719ed-d34f-4671-b4a8-9fa95aa038ed",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "d2f0df5948914fbe9483140903dae7fc",
+      "createdAt": "2026-09-05T06:31:57.493Z",
+      "updatedAt": "2026-09-05T06:31:57.493Z"
+    },
+    {
       "customerName": "Vrindawan Bihari Rubber",
       "paymentAmount": 100000,
       "paymentMode": "Bank Transfer",
