@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-b632d150-de57-4b53-9509-f05f59868c3e",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-795f29dc-0f6d-45cc-b470-4359cccf88a4",
+      "salesOrderNumber": "SO-07895",
+      "customerName": "Print Well Graphics",
+      "paymentAmount": 26181,
+      "createdAt": "2026-09-05T10:52:08.799Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-7d3de9af-6016-4c61-a25a-9aead0af23f0",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-795f29dc-0f6d-45cc-b470-4359cccf88a4",
+      "salesOrderNumber": "SO-07895",
+      "customerName": "Print Well Graphics",
+      "paymentAmount": 26181,
+      "createdAt": "2026-09-05T10:52:08.799Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-3ddd50d5-c930-4057-a49d-f216b8ac7349",
       "type": "payment-created",
       "recipientUserId": "u-admin",
