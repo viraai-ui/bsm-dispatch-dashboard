@@ -5726,6 +5726,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036383018": {
+      "id": "ship-1788613187993-zzh8g",
+      "itemId": "1154219000036383018",
+      "orderId": "1154219000036383018",
+      "machineId": "1154219000036383018-1154219000036383021-1",
+      "salesOrderNumber": "SO-07876",
+      "customerName": "Leisure Export Worldwide",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Punjab Goods Transport",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-05",
+      "notes": "",
+      "shippedAt": "2026-09-05T12:59:47.993Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
