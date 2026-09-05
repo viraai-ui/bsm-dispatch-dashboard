@@ -5509,6 +5509,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036412009": {
+      "id": "ship-1788590488466-xlaok",
+      "itemId": "1154219000036412009",
+      "orderId": "1154219000036412009",
+      "machineId": "1154219000036412009-1154219000036412012-1",
+      "salesOrderNumber": "SO-07883",
+      "customerName": "The Purple Tree",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-04",
+      "notes": "",
+      "shippedAt": "2026-09-05T06:41:28.466Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
