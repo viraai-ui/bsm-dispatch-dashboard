@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "Print Well Graphics",
+      "salesOrderNumber": "SO-07895",
+      "paymentAmount": 26181,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07895/2026-09-05/1788605524688-aa835a81-9990-4036-baaf-9b9377e514fa-be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07895%2F2026-09-05%2F1788605524688-aa835a81-9990-4036-baaf-9b9377e514fa-be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
+          "name": "be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
+          "contentType": "image/jpeg",
+          "size": 182231
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07895/2026-09-05/1788605524688-aa835a81-9990-4036-baaf-9b9377e514fa-be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07895%2F2026-09-05%2F1788605524688-aa835a81-9990-4036-baaf-9b9377e514fa-be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
+      "screenshotName": "be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
+      "publicDeleteTokenHash": "7c78ebe8945b4cbef14253969d66e4b0bdf28f90e936628d5d0eff648cf7e99a",
+      "id": "payment-795f29dc-0f6d-45cc-b470-4359cccf88a4",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "f1cbfd4a07504e3c8eeacb5fe34142ab",
+      "createdAt": "2026-09-05T10:52:06.870Z",
+      "updatedAt": "2026-09-05T10:52:06.870Z"
+    },
+    {
       "customerName": "Vigneshwara Enterprises",
       "paymentAmount": 19200,
       "paymentMode": "UPI",
