@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271126,
+  "serialCounter": 26271127,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -23029,6 +23029,70 @@
           "qrGeneratedAt": "2026-09-05T06:10:04.329Z",
           "zohoBackupStatus": "pending",
           "zohoBackupQueuedAt": "2026-09-05T06:10:05.248Z"
+        }
+      }
+    },
+    "1154219000036479002": {
+      "salesOrderId": "1154219000036479002",
+      "salesOrderNumber": "SO-07890",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036479002",
+        "zohoSalesOrderId": "1154219000036479002",
+        "salesOrderNumber": "SO-07890",
+        "status": "open",
+        "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+        "shippingAddress": "46/157, Halsey Road,, Kanpur,, Uttar Pradesh, 208001",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036479005",
+            "itemName": "Moccasin Stitching",
+            "sku": "81",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000001557211",
+            "rate": 285000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036479002-1154219000036479005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036479002",
+            "lineItemId": "1154219000036479005",
+            "itemName": "Moccasin Stitching",
+            "sku": "81",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-07890",
+            "deliveryDate": "2026-09-04",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-05T10:32:21+0530"
+      },
+      "machines": {
+        "1154219000036479002-1154219000036479005-1": {
+          "machineUnitId": "1154219000036479002-1154219000036479005-1",
+          "lineItemId": "1154219000036479005",
+          "serialNumber": "26271127",
+          "qrToken": "26271127",
+          "qrStatus": "pending"
         }
       }
     }
