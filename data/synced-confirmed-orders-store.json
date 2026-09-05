@@ -1284,8 +1284,8 @@
           "itemName": "Hydraulic Sole Attaching machine",
           "sku": "917",
           "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
+          "quantity": 1,
+          "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000000278034",
           "rate": 545000,
@@ -1314,18 +1314,6 @@
           "zohoItemId": "1154219000000278217",
           "rate": 68000,
           "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036259728",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278143",
-          "rate": 312000,
-          "dispatchCategory": "machine"
         }
       ],
       "machines": [
@@ -1351,29 +1339,8 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000036259722-1154219000036259725-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036259722",
-          "lineItemId": "1154219000036259725",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07864",
-          "deliveryDate": "2026-09-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
           "id": "1154219000036259722-1154219000036259726-1",
-          "unitNumber": 3,
+          "unitNumber": 2,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036259722",
@@ -1394,7 +1361,7 @@
         },
         {
           "id": "1154219000036259722-1154219000036259727-1",
-          "unitNumber": 4,
+          "unitNumber": 3,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036259722",
@@ -1412,30 +1379,9 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
-        },
-        {
-          "id": "1154219000036259722-1154219000036259728-1",
-          "unitNumber": 5,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036259722",
-          "lineItemId": "1154219000036259728",
-          "itemName": "Seat lasting Machine",
-          "sku": "727",
-          "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07864",
-          "deliveryDate": "2026-09-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-01T17:06:52+0530"
+      "zohoLastModifiedTime": "2026-09-05T13:46:52+0530"
     },
     "1154219000036315004": {
       "id": "1154219000036315004",
@@ -9081,8 +9027,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-05T08:10:47.199Z",
-  "lastAttemptAt": "2026-09-05T08:20:24.999Z",
+  "lastSuccessfulSyncAt": "2026-09-05T08:20:35.940Z",
+  "lastAttemptAt": "2026-09-05T08:20:35.940Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
