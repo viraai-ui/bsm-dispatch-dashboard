@@ -23116,7 +23116,9 @@
     "1154219000036468012": {
       "salesOrderId": "1154219000036468012",
       "salesOrderNumber": "SO-07894",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-05T12:24:32.635Z",
       "processedOrder": {
         "id": "1154219000036468012",
         "zohoSalesOrderId": "1154219000036468012",
@@ -23170,8 +23172,8 @@
           {
             "id": "1154219000036468012-1154219000036468015-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271128",
+            "qrToken": "26271128",
             "orderId": "1154219000036468012",
             "lineItemId": "1154219000036468015",
             "itemName": "Single needle post bed Drop feed",
@@ -23179,14 +23181,17 @@
             "customerName": "Press2 Drycleaning And Laundry Pvt Ltd (Delhi)",
             "salesOrderNumber": "SO-07894",
             "deliveryDate": "2026-09-05",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-05",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000036468012-1154219000036468016-1",
@@ -23207,7 +23212,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Wooden Packing Charges"
+            "itemDescription": "Wooden Packing Charges",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-05T16:10:48+0530"
@@ -23221,7 +23228,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-05T12:20:00.694Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-05T12:20:02.128Z"
+          "zohoBackupQueuedAt": "2026-09-05T12:20:02.128Z",
+          "processedAt": "2026-09-05T12:24:32.635Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
