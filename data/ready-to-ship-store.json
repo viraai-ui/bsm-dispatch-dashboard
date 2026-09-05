@@ -5571,6 +5571,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036428004": {
+      "id": "ship-1788590672321-i144r",
+      "itemId": "1154219000036428004",
+      "orderId": "1154219000036428004",
+      "machineId": "1154219000036428004-1154219000036428007-1",
+      "salesOrderNumber": "SO-07880",
+      "customerName": "Samriddhi Industries",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-05",
+      "notes": "",
+      "shippedAt": "2026-09-05T06:44:32.321Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
