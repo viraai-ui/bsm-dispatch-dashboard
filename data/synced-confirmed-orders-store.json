@@ -1084,68 +1084,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-05T11:18:58+0530"
     },
-    "1154219000036383018": {
-      "id": "1154219000036383018",
-      "zohoSalesOrderId": "1154219000036383018",
-      "salesOrderNumber": "SO-07876",
-      "status": "open",
-      "customerName": "Leisure Export Worldwide",
-      "shippingAddress": "S 24-25,, Industrial Area,, Jalandhar, 144004",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-03",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036383021",
-          "itemName": "Flatbed Single Walking Foot",
-          "sku": "302",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228181",
-          "rate": 34000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036383022",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 1200,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036383018-1154219000036383021-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036383018",
-          "lineItemId": "1154219000036383021",
-          "itemName": "Flatbed Single Walking Foot",
-          "sku": "302",
-          "customerName": "Leisure Export Worldwide",
-          "salesOrderNumber": "SO-07876",
-          "deliveryDate": "2026-09-03",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-05T18:30:08+0530"
-    },
     "1154219000036370004": {
       "id": "1154219000036370004",
       "zohoSalesOrderId": "1154219000036370004",
@@ -9305,7 +9243,6 @@
     "1154219000036466015",
     "1154219000036469001",
     "1154219000036443007",
-    "1154219000036383018",
     "1154219000036370004",
     "1154219000036386001",
     "1154219000036259722",
@@ -9350,8 +9287,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-05T13:00:37.502Z",
-  "lastAttemptAt": "2026-09-05T13:13:36.038Z",
+  "lastSuccessfulSyncAt": "2026-09-05T13:13:47.681Z",
+  "lastAttemptAt": "2026-09-05T13:13:47.681Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
