@@ -1,5 +1,138 @@
 {
   "orders": {
+    "1154219000036482005": {
+      "id": "1154219000036482005",
+      "zohoSalesOrderId": "1154219000036482005",
+      "salesOrderNumber": "SO-07893",
+      "status": "open",
+      "customerName": "KOUSHAL ENTERPRISES",
+      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036482008",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000277875",
+          "rate": 65000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036482005-1154219000036482008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036482005",
+          "lineItemId": "1154219000036482008",
+          "itemName": "Hotmelt Roller Coater (16 inch)",
+          "sku": "831-2",
+          "customerName": "KOUSHAL ENTERPRISES",
+          "salesOrderNumber": "SO-07893",
+          "deliveryDate": "2026-09-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-05T14:26:24+0530"
+    },
+    "1154219000036499003": {
+      "id": "1154219000036499003",
+      "zohoSalesOrderId": "1154219000036499003",
+      "salesOrderNumber": "SO-07892",
+      "status": "open",
+      "customerName": "KARAM SAFETY PRIVATE LIMITED",
+      "shippingAddress": "C-35A B DEF, PHASE-III, ELDECO SIDCUL INDUSTRIAL PARK, Sidcul, Uttarakhand, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036499006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "CONVEYOR BELT FOR BELT TYPE FUSING MACHINE(600MM),MACHINE MAKE-BENGAL SHOE MACHINERY",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 18500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036499007",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Courier",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 600,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036499003-1154219000036499006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036499003",
+          "lineItemId": "1154219000036499006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "KARAM SAFETY PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07892",
+          "deliveryDate": "2026-09-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "CONVEYOR BELT FOR BELT TYPE FUSING MACHINE(600MM),MACHINE MAKE-BENGAL SHOE MACHINERY"
+        },
+        {
+          "id": "1154219000036499003-1154219000036499006-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036499003",
+          "lineItemId": "1154219000036499006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "KARAM SAFETY PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07892",
+          "deliveryDate": "2026-09-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "CONVEYOR BELT FOR BELT TYPE FUSING MACHINE(600MM),MACHINE MAKE-BENGAL SHOE MACHINERY"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-05T14:25:54+0530"
+    },
     "1154219000036479002": {
       "id": "1154219000036479002",
       "zohoSalesOrderId": "1154219000036479002",
@@ -8977,6 +9110,8 @@
     }
   },
   "orderIds": [
+    "1154219000036482005",
+    "1154219000036499003",
     "1154219000036479002",
     "1154219000036483004",
     "1154219000036466015",
@@ -9027,8 +9162,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-05T08:55:46.248Z",
-  "lastAttemptAt": "2026-09-05T09:00:25.255Z",
+  "lastSuccessfulSyncAt": "2026-09-05T09:00:37.527Z",
+  "lastAttemptAt": "2026-09-05T09:00:37.527Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
