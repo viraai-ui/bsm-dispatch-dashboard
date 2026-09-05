@@ -5478,6 +5478,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036466001": {
+      "id": "ship-1788590469438-bwjqx",
+      "itemId": "1154219000036466001",
+      "orderId": "1154219000036466001",
+      "machineId": "1154219000036466001-1154219000036466004-1",
+      "salesOrderNumber": "SO-07885",
+      "customerName": "NEW CUT FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-04",
+      "notes": "",
+      "shippedAt": "2026-09-05T06:41:09.439Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
