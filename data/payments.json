@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "SUMER CHAND & SONS",
+      "salesOrderNumber": "SO-07902",
+      "paymentAmount": 228500,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07902/2026-09-07/1788776132520-f7186176-d8df-47a5-8fbd-d61f8570fd6d-9755c73c-3c6c-489c-9541-51c3b2b97e29.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07902%2F2026-09-07%2F1788776132520-f7186176-d8df-47a5-8fbd-d61f8570fd6d-9755c73c-3c6c-489c-9541-51c3b2b97e29.jpg",
+          "name": "9755c73c-3c6c-489c-9541-51c3b2b97e29.jpg",
+          "contentType": "image/jpeg",
+          "size": 73992
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07902/2026-09-07/1788776132520-f7186176-d8df-47a5-8fbd-d61f8570fd6d-9755c73c-3c6c-489c-9541-51c3b2b97e29.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07902%2F2026-09-07%2F1788776132520-f7186176-d8df-47a5-8fbd-d61f8570fd6d-9755c73c-3c6c-489c-9541-51c3b2b97e29.jpg",
+      "screenshotName": "9755c73c-3c6c-489c-9541-51c3b2b97e29.jpg",
+      "publicDeleteTokenHash": "1e8a0930e514eec4aca6ca7f320c99f94be8f365f23bd495a2e426081b7a329d",
+      "id": "payment-e392dbeb-782b-44cc-9dba-27ac0815fb1a",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "a115bf12754d451c82d7c48eb6e7ed9b",
+      "createdAt": "2026-09-07T10:15:37.678Z",
+      "updatedAt": "2026-09-07T10:15:37.678Z"
+    },
+    {
       "customerName": "Paramita Stitching Centre",
       "salesOrderNumber": "SO-07903",
       "paymentAmount": 20650,
