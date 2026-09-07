@@ -194,84 +194,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-07T13:53:35+0530"
     },
-    "1154219000036565001": {
-      "id": "1154219000036565001",
-      "zohoSalesOrderId": "1154219000036565001",
-      "salesOrderNumber": "SO-07900",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-07",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036565004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 100,
-          "pendingQuantity": 100,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 300,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-07T13:47:57+0530"
-    },
-    "1154219000036554002": {
-      "id": "1154219000036554002",
-      "zohoSalesOrderId": "1154219000036554002",
-      "salesOrderNumber": "SO-07898",
-      "status": "open",
-      "customerName": "Deepak Enterprises",
-      "shippingAddress": "Babu Labh Singh Nagar, Main Market, Kahsra No. 1764, Near Barito Pizza, Jalandhar, Jalandhar, Punjab, 144008",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036554005",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226914",
-          "rate": 48500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036554002-1154219000036554005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036554002",
-          "lineItemId": "1154219000036554005",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "customerName": "Deepak Enterprises",
-          "salesOrderNumber": "SO-07898",
-          "deliveryDate": "2026-09-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-07T11:33:26+0530"
-    },
     "1154219000036472143": {
       "id": "1154219000036472143",
       "zohoSalesOrderId": "1154219000036472143",
@@ -1301,77 +1223,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-04T13:29:05+0530"
     },
-    "1154219000036469001": {
-      "id": "1154219000036469001",
-      "zohoSalesOrderId": "1154219000036469001",
-      "salesOrderNumber": "SO-07886",
-      "status": "open",
-      "customerName": "Vigneshwara Enterprises",
-      "shippingAddress": "1, 1-91, Ysr Road / Surath Ganghadar Street / 5th Line, Ambapuram, Krishna, Andhra Pradesh, 520015",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-04",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036469004",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225438",
-          "rate": 45000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036469001-1154219000036469004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036469001",
-          "lineItemId": "1154219000036469004",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "customerName": "Vigneshwara Enterprises",
-          "salesOrderNumber": "SO-07886",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036469001-1154219000036469004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036469001",
-          "lineItemId": "1154219000036469004",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "customerName": "Vigneshwara Enterprises",
-          "salesOrderNumber": "SO-07886",
-          "deliveryDate": "2026-09-04",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-07T11:35:19+0530"
-    },
     "1154219000036443007": {
       "id": "1154219000036443007",
       "zohoSalesOrderId": "1154219000036443007",
@@ -1467,7 +1318,7 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000000278143",
-          "rate": 310000,
+          "rate": 311000,
           "dispatchCategory": "machine"
         },
         {
@@ -1491,7 +1342,7 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000002187978",
-          "rate": 35500,
+          "rate": 36000,
           "dispatchCategory": "machine"
         },
         {
@@ -1503,7 +1354,7 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
           "zohoItemId": "1154219000000225413",
-          "rate": 46000,
+          "rate": 47000,
           "dispatchCategory": "machine"
         },
         {
@@ -1515,7 +1366,7 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
           "zohoItemId": "1154219000000225211",
-          "rate": 47000,
+          "rate": 48000,
           "dispatchCategory": "machine"
         },
         {
@@ -1543,15 +1394,15 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000036370016",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
+          "id": "1154219000036547066",
+          "itemName": "Skiving Machine @5%",
+          "sku": "801 @5%",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225896",
-          "rate": 36500,
+          "zohoItemId": "1154219000001940131",
+          "rate": 37000,
           "dispatchCategory": "machine"
         }
       ],
@@ -1746,14 +1597,14 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000036370004-1154219000036370016-1",
+          "id": "1154219000036370004-1154219000036547066-1",
           "unitNumber": 10,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036370004",
-          "lineItemId": "1154219000036370016",
-          "itemName": "Skiving Machine For Leather",
-          "sku": "801",
+          "lineItemId": "1154219000036547066",
+          "itemName": "Skiving Machine @5%",
+          "sku": "801 @5%",
           "customerName": "JOY SKINWEAR",
           "salesOrderNumber": "SO-07872",
           "deliveryDate": "2026-09-02",
@@ -1767,7 +1618,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-07T15:47:23+0530"
+      "zohoLastModifiedTime": "2026-09-07T15:57:47+0530"
     },
     "1154219000036386001": {
       "id": "1154219000036386001",
@@ -9628,8 +9479,6 @@
     "1154219000036548004",
     "1154219000036567001",
     "1154219000036558002",
-    "1154219000036565001",
-    "1154219000036554002",
     "1154219000036472143",
     "1154219000036474014",
     "1154219000036468012",
@@ -9638,7 +9487,6 @@
     "1154219000036479002",
     "1154219000036483004",
     "1154219000036466015",
-    "1154219000036469001",
     "1154219000036443007",
     "1154219000036370004",
     "1154219000036386001",
@@ -9684,8 +9532,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-07T10:20:41.826Z",
-  "lastAttemptAt": "2026-09-07T10:35:53.108Z",
+  "lastSuccessfulSyncAt": "2026-09-07T10:36:10.309Z",
+  "lastAttemptAt": "2026-09-07T10:36:10.309Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
