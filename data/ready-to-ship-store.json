@@ -5728,7 +5728,7 @@
       }
     },
     "1154219000036383018": {
-      "id": "ship-1788613187993-zzh8g",
+      "id": "ship-1788764905122-9i95t",
       "itemId": "1154219000036383018",
       "orderId": "1154219000036383018",
       "machineId": "1154219000036383018-1154219000036383021-1",
@@ -5740,13 +5740,19 @@
       "transporterName": "Punjab Goods Transport",
       "transporterPhone": "",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-07 at 12.37.18 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-07%2FSO-07876%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-07T07-08-20-693Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-07/SO-07876/shipment-lr-builty/Shipment-LR-Builty-2026-09-07T07-08-20-693Z.jpeg",
+        "expiresAt": null
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-09-05",
       "notes": "",
-      "shippedAt": "2026-09-05T12:59:47.993Z",
+      "shippedAt": "2026-09-07T07:08:25.122Z",
       "messages": {
         "customer": {
           "status": "skipped",
