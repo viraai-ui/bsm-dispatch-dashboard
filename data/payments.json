@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "Paramita Stitching Centre",
+      "salesOrderNumber": "SO-07903",
+      "paymentAmount": 20650,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07903/2026-09-07/1788773688826-9eb7d5fa-1b14-48b6-9ade-75569a569dfd-WhatsApp-Image-2026-09-07-at-8.09.44-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07903%2F2026-09-07%2F1788773688826-9eb7d5fa-1b14-48b6-9ade-75569a569dfd-WhatsApp-Image-2026-09-07-at-8.09.44-AM.jpg",
+          "name": "WhatsApp Image 2026-09-07 at 8.09.44 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 83192
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07903/2026-09-07/1788773688826-9eb7d5fa-1b14-48b6-9ade-75569a569dfd-WhatsApp-Image-2026-09-07-at-8.09.44-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07903%2F2026-09-07%2F1788773688826-9eb7d5fa-1b14-48b6-9ade-75569a569dfd-WhatsApp-Image-2026-09-07-at-8.09.44-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-07 at 8.09.44 AM.jpeg",
+      "publicDeleteTokenHash": "ca69d89e3cace0428335954f1e2f8064e66fa9cafe4f007a5bbc651c02a60f5d",
+      "id": "payment-dd4ab6a5-397c-4cf8-b2ee-7c26f234e71d",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "2a1dfb5094df496aa561b80da97897ad",
+      "createdAt": "2026-09-07T09:34:50.367Z",
+      "updatedAt": "2026-09-07T09:34:50.367Z"
+    },
+    {
       "customerName": "Inaya Enterprises",
       "salesOrderNumber": "SO-07901",
       "paymentAmount": 20000,
