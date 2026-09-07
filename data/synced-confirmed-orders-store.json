@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036554002": {
+      "id": "1154219000036554002",
+      "zohoSalesOrderId": "1154219000036554002",
+      "salesOrderNumber": "SO-07898",
+      "status": "open",
+      "customerName": "Deepak Enterprises",
+      "shippingAddress": "Babu Labh Singh Nagar, Main Market, Kahsra No. 1764, Near Barito Pizza, Jalandhar, Jalandhar, Punjab, 144008",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036554005",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226914",
+          "rate": 48500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036554002-1154219000036554005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036554002",
+          "lineItemId": "1154219000036554005",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "Deepak Enterprises",
+          "salesOrderNumber": "SO-07898",
+          "deliveryDate": "2026-09-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-07T11:33:26+0530"
+    },
     "1154219000036460009": {
       "id": "1154219000036460009",
       "zohoSalesOrderId": "1154219000036460009",
@@ -9261,6 +9311,7 @@
     }
   },
   "orderIds": [
+    "1154219000036554002",
     "1154219000036460009",
     "1154219000036472143",
     "1154219000036474014",
@@ -9316,8 +9367,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-07T06:00:43.357Z",
-  "lastAttemptAt": "2026-09-07T06:03:41.027Z",
+  "lastSuccessfulSyncAt": "2026-09-07T06:03:56.696Z",
+  "lastAttemptAt": "2026-09-07T06:03:56.696Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
