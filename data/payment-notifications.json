@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-362a7a38-fe96-4e46-8088-882046903e50",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-dd4ab6a5-397c-4cf8-b2ee-7c26f234e71d",
+      "salesOrderNumber": "SO-07903",
+      "customerName": "Paramita Stitching Centre",
+      "paymentAmount": 20650,
+      "createdAt": "2026-09-07T09:34:52.750Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-04725070-1c04-4db9-97ca-72cb5ed08622",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-dd4ab6a5-397c-4cf8-b2ee-7c26f234e71d",
+      "salesOrderNumber": "SO-07903",
+      "customerName": "Paramita Stitching Centre",
+      "paymentAmount": 20650,
+      "createdAt": "2026-09-07T09:34:52.750Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-ca296d9c-35a3-4fa8-8561-746db14b3635",
       "type": "payment-created",
       "recipientUserId": "u-admin",
