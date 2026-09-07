@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "SHAKTI ENTERPRISES",
+      "salesOrderNumber": "SO-07897",
+      "paymentAmount": 27878,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07897/2026-09-07/1788757193075-51e360ff-6a13-4067-a91b-cfc720b3a650-23ceeb5d-40df-4aa8-b885-b16a4e6c00fd.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07897%2F2026-09-07%2F1788757193075-51e360ff-6a13-4067-a91b-cfc720b3a650-23ceeb5d-40df-4aa8-b885-b16a4e6c00fd.jpg",
+          "name": "23ceeb5d-40df-4aa8-b885-b16a4e6c00fd.jpg",
+          "contentType": "image/jpeg",
+          "size": 206276
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07897/2026-09-07/1788757193075-51e360ff-6a13-4067-a91b-cfc720b3a650-23ceeb5d-40df-4aa8-b885-b16a4e6c00fd.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07897%2F2026-09-07%2F1788757193075-51e360ff-6a13-4067-a91b-cfc720b3a650-23ceeb5d-40df-4aa8-b885-b16a4e6c00fd.jpg",
+      "screenshotName": "23ceeb5d-40df-4aa8-b885-b16a4e6c00fd.jpg",
+      "publicDeleteTokenHash": "ce4ea6177ba480aef6e1fdd106c6350a295d22d122f1c2d305c4878b4458100b",
+      "id": "payment-c1f4cf35-10be-4a37-89ab-e2868dd1f071",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "2293fec910664143b7135bc6fc1457c4",
+      "createdAt": "2026-09-07T04:59:56.121Z",
+      "updatedAt": "2026-09-07T04:59:56.121Z"
+    },
+    {
       "customerName": "Vrindawan Bihari Rubber",
       "paymentAmount": 224500,
       "paymentMode": "Bank Transfer",
