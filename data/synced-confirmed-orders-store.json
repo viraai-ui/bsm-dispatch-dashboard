@@ -1,5 +1,33 @@
 {
   "orders": {
+    "1154219000036460009": {
+      "id": "1154219000036460009",
+      "zohoSalesOrderId": "1154219000036460009",
+      "salesOrderNumber": "SO-07897",
+      "status": "open",
+      "customerName": "SHAKTI ENTERPRISES",
+      "shippingAddress": "GROUND FLOOR, KHEWAT NO-510,, Unnamed Road, NEAR- RADHA SWATI SATSANG, Surya Nagar, Sankhol,, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-06",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036460012",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 75,
+          "pendingQuantity": 75,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 315,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-07T10:42:25+0530"
+    },
     "1154219000036472143": {
       "id": "1154219000036472143",
       "zohoSalesOrderId": "1154219000036472143",
@@ -9233,6 +9261,7 @@
     }
   },
   "orderIds": [
+    "1154219000036460009",
     "1154219000036472143",
     "1154219000036474014",
     "1154219000036468012",
@@ -9287,8 +9316,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-07T05:00:42.444Z",
-  "lastAttemptAt": "2026-09-07T05:20:24.987Z",
+  "lastSuccessfulSyncAt": "2026-09-07T05:20:39.338Z",
+  "lastAttemptAt": "2026-09-07T05:20:39.338Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
