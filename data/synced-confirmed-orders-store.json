@@ -1,5 +1,88 @@
 {
   "orders": {
+    "1154219000036558002": {
+      "id": "1154219000036558002",
+      "zohoSalesOrderId": "1154219000036558002",
+      "salesOrderNumber": "SO-07901",
+      "status": "open",
+      "customerName": "Inaya Enterprises",
+      "shippingAddress": "Ho. No. E-3/73, Type-C, Sector-E-3, Tajnagari Yojna Phase-II, Tajganj Ward, Agra, Uttar Pradesh, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036558005",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "Heavy Duty",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000277612",
+          "rate": 260000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036558006",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000335059",
+          "rate": 22000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036558002-1154219000036558005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036558002",
+          "lineItemId": "1154219000036558005",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "Inaya Enterprises",
+          "salesOrderNumber": "SO-07901",
+          "deliveryDate": "2026-09-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heavy Duty"
+        },
+        {
+          "id": "1154219000036558002-1154219000036558006-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036558002",
+          "lineItemId": "1154219000036558006",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "Inaya Enterprises",
+          "salesOrderNumber": "SO-07901",
+          "deliveryDate": "2026-09-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-07T13:53:35+0530"
+    },
     "1154219000036565001": {
       "id": "1154219000036565001",
       "zohoSalesOrderId": "1154219000036565001",
@@ -9377,6 +9460,7 @@
     }
   },
   "orderIds": [
+    "1154219000036558002",
     "1154219000036565001",
     "1154219000036554002",
     "1154219000036472143",
@@ -9433,8 +9517,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-07T08:20:38.017Z",
-  "lastAttemptAt": "2026-09-07T08:40:26.456Z",
+  "lastSuccessfulSyncAt": "2026-09-07T08:40:38.738Z",
+  "lastAttemptAt": "2026-09-07T08:40:38.738Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
