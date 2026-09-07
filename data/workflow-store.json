@@ -23241,7 +23241,9 @@
     "1154219000036554002": {
       "salesOrderId": "1154219000036554002",
       "salesOrderNumber": "SO-07898",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-07T06:10:32.120Z",
       "processedOrder": {
         "id": "1154219000036554002",
         "zohoSalesOrderId": "1154219000036554002",
@@ -23271,8 +23273,8 @@
           {
             "id": "1154219000036554002-1154219000036554005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271129",
+            "qrToken": "26271129",
             "orderId": "1154219000036554002",
             "lineItemId": "1154219000036554005",
             "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
@@ -23280,14 +23282,17 @@
             "customerName": "Deepak Enterprises",
             "salesOrderNumber": "SO-07898",
             "deliveryDate": "2026-09-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-07T11:33:26+0530"
@@ -23301,7 +23306,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-07T06:04:42.495Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-07T06:04:43.210Z"
+          "zohoBackupQueuedAt": "2026-09-07T06:04:43.210Z",
+          "processedAt": "2026-09-07T06:10:32.120Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
