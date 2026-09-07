@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-81cfa1e5-9cd9-4885-9fcd-0a97cce5318e",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-c1f4cf35-10be-4a37-89ab-e2868dd1f071",
+      "salesOrderNumber": "SO-07897",
+      "customerName": "SHAKTI ENTERPRISES",
+      "paymentAmount": 27878,
+      "createdAt": "2026-09-07T04:59:58.292Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-6ffbb2fb-902c-4eac-a959-3903b257d03d",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-c1f4cf35-10be-4a37-89ab-e2868dd1f071",
+      "salesOrderNumber": "SO-07897",
+      "customerName": "SHAKTI ENTERPRISES",
+      "paymentAmount": 27878,
+      "createdAt": "2026-09-07T04:59:58.292Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-73cb8ba5-7775-4b93-967b-3989b57c15fb",
       "type": "payment-created",
       "recipientUserId": "u-admin",
