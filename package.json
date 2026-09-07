@@ -6,22 +6,24 @@
     "dev": "next dev",
     "prebuild": "node scripts/assert-media-read-config.cjs",
     "build": "next build",
+    "audit:release": "node scripts/audit-release.cjs",
     "start": "next start",
     "smoke": "node tests/smoke.cjs",
     "verify:serials": "node tests/live-serial-coverage.cjs",
     "verify:serial-sheet": "node scripts/audit-serial-sheet-coverage.cjs",
     "verify:database": "node tests/database-integrity.cjs",
     "test:serials": "node --experimental-strip-types tests/serial-ledger.test.mjs",
-    "test:serials:legacy": "node --experimental-strip-types tests/serial-allocation.test.mjs",
+    "test:serials:legacy": "tsx tests/serial-allocation.test.mjs",
     "test:zoho-backup": "node tests/zoho-backup-queue.test.mjs",
     "test:qr-performance": "node tests/qr-download-performance.test.mjs",
     "test:storage": "node --experimental-strip-types tests/local-storage-quota.test.mjs",
     "test:database-ui": "node tests/database-filter-ui.test.cjs",
-    "test:core-hardening": "node tests/core-hardening.test.mjs",
+    "test:core-hardening": "tsx tests/core-hardening.test.mjs",
+    "test:audit-preflight": "node tests/audit-preflight.test.cjs",
     "test:r2-mobile-upload": "node --test tests/r2-mobile-upload.test.mjs",
     "test:lifecycle": "node --experimental-strip-types --test tests/operational-lifecycle.test.mjs",
-    "typecheck": "tsc --noEmit"
-    ,"snapshot:public": "npx --yes tsx scripts/generate-public-database-snapshot.ts"
+    "typecheck": "tsc --noEmit",
+    "snapshot:public": "npx --yes tsx scripts/generate-public-database-snapshot.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
@@ -48,6 +50,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "prisma": "^6.19.0",
+    "tsx": "^4.23.13",
     "typescript": "^5.9.3"
   }
 }
