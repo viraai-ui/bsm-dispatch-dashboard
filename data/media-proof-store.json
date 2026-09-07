@@ -3773,6 +3773,31 @@
           ]
         }
       }
+    },
+    "1154219000036554002": {
+      "orderId": "1154219000036554002",
+      "salesOrderNumber": "SO-07898",
+      "submittedAt": null,
+      "units": {
+        "1154219000036554002-1154219000036554005-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036554002-1154219000036554005-1-video-1788764358742-p72xzj",
+              "name": "VID_20260907_122851.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-07%2FSO-07898%2F1154219000036554002-1154219000036554005-1%2FBinding-single-needle-Auto-lubrication-heavy-duty-Cylinder-bed-2026-09-07T06-59-01-564Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-07/SO-07898/1154219000036554002-1154219000036554005-1/Binding-single-needle-Auto-lubrication-heavy-duty-Cylinder-bed-2026-09-07T06-59-01-564Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-07T06:59:18.742Z",
+              "expiresAt": "2026-10-07T06:59:18.742Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
