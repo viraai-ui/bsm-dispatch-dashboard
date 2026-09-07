@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-ca296d9c-35a3-4fa8-8561-746db14b3635",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-49a156dc-4d3c-4bb8-a73c-334e26194ea9",
+      "salesOrderNumber": "SO-07901",
+      "customerName": "Inaya Enterprises",
+      "paymentAmount": 20000,
+      "createdAt": "2026-09-07T08:25:59.857Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-7ca93abe-574a-4899-8e4a-cdf8b622c76c",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-49a156dc-4d3c-4bb8-a73c-334e26194ea9",
+      "salesOrderNumber": "SO-07901",
+      "customerName": "Inaya Enterprises",
+      "paymentAmount": 20000,
+      "createdAt": "2026-09-07T08:25:59.857Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-81cfa1e5-9cd9-4885-9fcd-0a97cce5318e",
       "type": "payment-created",
       "recipientUserId": "u-admin",
