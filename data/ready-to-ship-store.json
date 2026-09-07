@@ -5825,6 +5825,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036468012": {
+      "id": "ship-1788783519229-mwbq1",
+      "itemId": "1154219000036468012",
+      "orderId": "1154219000036468012",
+      "machineId": "1154219000036468012-1154219000036468015-1",
+      "salesOrderNumber": "SO-07894",
+      "customerName": "Press2 Drycleaning And Laundry Pvt Ltd (Delhi)",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP0691",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-07",
+      "notes": "",
+      "shippedAt": "2026-09-07T12:18:39.229Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
