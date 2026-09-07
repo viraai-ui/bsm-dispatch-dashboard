@@ -1,5 +1,116 @@
 {
   "orders": {
+    "1154219000036548004": {
+      "id": "1154219000036548004",
+      "zohoSalesOrderId": "1154219000036548004",
+      "salesOrderNumber": "SO-07903",
+      "status": "open",
+      "customerName": "Paramita Stitching Centre",
+      "shippingAddress": "Ukilchak, PO Nachinda Bazar, PS Marishda Purba, Medinipur, 721444, West Bengal, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-07",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036548007",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 340,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-07T15:07:28+0530"
+    },
+    "1154219000036567001": {
+      "id": "1154219000036567001",
+      "zohoSalesOrderId": "1154219000036567001",
+      "salesOrderNumber": "SO-07902",
+      "status": "open",
+      "customerName": "SUMER CHAND & SONS",
+      "shippingAddress": "G-2, SECTOR-4,, DSIDC INDUSTRIAL AREA, BAWANA, Delhi, 110039, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036567004",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226864",
+          "rate": 35000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036569003",
+          "itemName": "Eyelet punching double channel [400 & 600 Number]",
+          "sku": "989",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000227395",
+          "rate": 162500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036567001-1154219000036567004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036567001",
+          "lineItemId": "1154219000036567004",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "customerName": "SUMER CHAND & SONS",
+          "salesOrderNumber": "SO-07902",
+          "deliveryDate": "2026-09-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036567001-1154219000036569003-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036567001",
+          "lineItemId": "1154219000036569003",
+          "itemName": "Eyelet punching double channel [400 & 600 Number]",
+          "sku": "989",
+          "customerName": "SUMER CHAND & SONS",
+          "salesOrderNumber": "SO-07902",
+          "deliveryDate": "2026-09-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-07T15:06:58+0530"
+    },
     "1154219000036558002": {
       "id": "1154219000036558002",
       "zohoSalesOrderId": "1154219000036558002",
@@ -1767,8 +1878,8 @@
           "itemName": "Hydraulic Sole Attaching machine",
           "sku": "917",
           "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
+          "quantity": 2,
+          "pendingQuantity": 2,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000000278034",
           "rate": 545000,
@@ -1797,6 +1908,18 @@
           "zohoItemId": "1154219000000278217",
           "rate": 68000,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036557172",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000278143",
+          "rate": 312000,
+          "dispatchCategory": "machine"
         }
       ],
       "machines": [
@@ -1822,8 +1945,29 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000036259722-1154219000036259726-1",
+          "id": "1154219000036259722-1154219000036259725-2",
           "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036259722",
+          "lineItemId": "1154219000036259725",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07864",
+          "deliveryDate": "2026-09-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036259722-1154219000036259726-1",
+          "unitNumber": 3,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036259722",
@@ -1844,7 +1988,7 @@
         },
         {
           "id": "1154219000036259722-1154219000036259727-1",
-          "unitNumber": 3,
+          "unitNumber": 4,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036259722",
@@ -1862,9 +2006,30 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000036259722-1154219000036557172-1",
+          "unitNumber": 5,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036259722",
+          "lineItemId": "1154219000036557172",
+          "itemName": "Seat lasting Machine",
+          "sku": "727",
+          "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07864",
+          "deliveryDate": "2026-09-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-05T13:46:52+0530"
+      "zohoLastModifiedTime": "2026-09-07T15:06:45+0530"
     },
     "1154219000036315004": {
       "id": "1154219000036315004",
@@ -9460,6 +9625,8 @@
     }
   },
   "orderIds": [
+    "1154219000036548004",
+    "1154219000036567001",
     "1154219000036558002",
     "1154219000036565001",
     "1154219000036554002",
@@ -9517,8 +9684,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-07T09:20:39.556Z",
-  "lastAttemptAt": "2026-09-07T09:40:25.786Z",
+  "lastSuccessfulSyncAt": "2026-09-07T09:40:41.134Z",
+  "lastAttemptAt": "2026-09-07T09:40:41.134Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
