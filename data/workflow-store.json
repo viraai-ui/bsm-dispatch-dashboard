@@ -23423,7 +23423,9 @@
     "1154219000036567001": {
       "salesOrderId": "1154219000036567001",
       "salesOrderNumber": "SO-07902",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-07T10:39:04.325Z",
       "processedOrder": {
         "id": "1154219000036567001",
         "zohoSalesOrderId": "1154219000036567001",
@@ -23465,8 +23467,8 @@
           {
             "id": "1154219000036567001-1154219000036567004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271132",
+            "qrToken": "26271132",
             "orderId": "1154219000036567001",
             "lineItemId": "1154219000036567004",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -23474,20 +23476,23 @@
             "customerName": "SUMER CHAND & SONS",
             "salesOrderNumber": "SO-07902",
             "deliveryDate": "2026-09-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036567001-1154219000036569003-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271133",
+            "qrToken": "26271133",
             "orderId": "1154219000036567001",
             "lineItemId": "1154219000036569003",
             "itemName": "Eyelet punching double channel [400 & 600 Number]",
@@ -23495,14 +23500,17 @@
             "customerName": "SUMER CHAND & SONS",
             "salesOrderNumber": "SO-07902",
             "deliveryDate": "2026-09-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-07T15:06:58+0530"
@@ -23516,7 +23524,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-07T10:36:24.273Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-07T10:36:26.253Z"
+          "zohoBackupQueuedAt": "2026-09-07T10:36:26.253Z",
+          "processedAt": "2026-09-07T10:39:04.325Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000036567001-1154219000036569003-1": {
           "machineUnitId": "1154219000036567001-1154219000036569003-1",
@@ -23526,7 +23537,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-07T10:36:24.273Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-07T10:36:26.253Z"
+          "zohoBackupQueuedAt": "2026-09-07T10:36:26.253Z",
+          "processedAt": "2026-09-07T10:39:04.325Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
