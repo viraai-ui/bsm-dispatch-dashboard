@@ -5763,6 +5763,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036554002": {
+      "id": "ship-1788776636277-fx46c",
+      "itemId": "1154219000036554002",
+      "orderId": "1154219000036554002",
+      "machineId": "1154219000036554002-1154219000036554005-1",
+      "salesOrderNumber": "SO-07898",
+      "customerName": "Deepak Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAR2321",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-07",
+      "notes": "",
+      "shippedAt": "2026-09-07T10:23:56.277Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
