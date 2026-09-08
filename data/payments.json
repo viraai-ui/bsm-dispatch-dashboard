@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "VAQRO SOLTRAC LLP",
+      "salesOrderNumber": "SO-07106",
+      "paymentAmount": 487500,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07106/2026-09-08/1788848222344-5fb7b656-9e53-4d9c-a205-ed775432b11f-77d05aad-de9b-4225-bb66-cff351beec97.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07106%2F2026-09-08%2F1788848222344-5fb7b656-9e53-4d9c-a205-ed775432b11f-77d05aad-de9b-4225-bb66-cff351beec97.jpg",
+          "name": "77d05aad-de9b-4225-bb66-cff351beec97.jpg",
+          "contentType": "image/jpeg",
+          "size": 28154
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07106/2026-09-08/1788848222344-5fb7b656-9e53-4d9c-a205-ed775432b11f-77d05aad-de9b-4225-bb66-cff351beec97.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07106%2F2026-09-08%2F1788848222344-5fb7b656-9e53-4d9c-a205-ed775432b11f-77d05aad-de9b-4225-bb66-cff351beec97.jpg",
+      "screenshotName": "77d05aad-de9b-4225-bb66-cff351beec97.jpg",
+      "publicDeleteTokenHash": "0abe32f708f317465ae84d12c627a6d9cc7f7cfb3caf011fd09a9f0445343e26",
+      "id": "payment-481b9b4a-2aac-4f77-8000-e5c2a5e00b5c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "e5643055e31542389c7c679b6e9aaa64",
+      "createdAt": "2026-09-08T06:17:04.160Z",
+      "updatedAt": "2026-09-08T06:17:04.160Z"
+    },
+    {
       "customerName": "T.A. Enterprise",
       "salesOrderNumber": "SO-07905",
       "paymentAmount": 84370,
