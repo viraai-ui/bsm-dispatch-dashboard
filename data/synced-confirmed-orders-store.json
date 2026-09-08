@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036665008": {
+      "id": "1154219000036665008",
+      "zohoSalesOrderId": "1154219000036665008",
+      "salesOrderNumber": "SO-07909",
+      "status": "open",
+      "customerName": "Doershappy",
+      "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036665011",
+          "itemName": "Hole Punching Machine with Heat",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000036551101",
+          "rate": 58500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036665008-1154219000036665011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036665008",
+          "lineItemId": "1154219000036665011",
+          "itemName": "Hole Punching Machine with Heat",
+          "sku": "",
+          "customerName": "Doershappy",
+          "salesOrderNumber": "SO-07909",
+          "deliveryDate": "2026-09-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-08T16:59:48+0530"
+    },
     "1154219000036666008": {
       "id": "1154219000036666008",
       "zohoSalesOrderId": "1154219000036666008",
@@ -9853,6 +9903,7 @@
     }
   },
   "orderIds": [
+    "1154219000036665008",
     "1154219000036666008",
     "1154219000036669001",
     "1154219000036656001",
@@ -9907,8 +9958,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-08T11:29:38.185Z",
-  "lastAttemptAt": "2026-09-08T11:40:24.788Z",
+  "lastSuccessfulSyncAt": "2026-09-08T11:40:31.298Z",
+  "lastAttemptAt": "2026-09-08T11:40:31.298Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
