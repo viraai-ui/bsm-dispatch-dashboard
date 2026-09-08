@@ -5924,6 +5924,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036666008": {
+      "id": "ship-1788871902606-zuw2n",
+      "itemId": "1154219000036666008",
+      "orderId": "1154219000036666008",
+      "machineId": "1154219000036666008-1154219000036666011-1",
+      "salesOrderNumber": "SO-07908",
+      "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK9925",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-08",
+      "notes": "",
+      "shippedAt": "2026-09-08T12:51:42.606Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
