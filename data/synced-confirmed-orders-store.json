@@ -1,5 +1,33 @@
 {
   "orders": {
+    "1154219000036564012": {
+      "id": "1154219000036564012",
+      "zohoSalesOrderId": "1154219000036564012",
+      "salesOrderNumber": "SO-07904",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-08",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036564015",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 100,
+          "pendingQuantity": 100,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-08T10:18:43+0530"
+    },
     "1154219000036548004": {
       "id": "1154219000036548004",
       "zohoSalesOrderId": "1154219000036548004",
@@ -193,68 +221,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-07T13:53:35+0530"
-    },
-    "1154219000036472143": {
-      "id": "1154219000036472143",
-      "zohoSalesOrderId": "1154219000036472143",
-      "salesOrderNumber": "SO-07896",
-      "status": "open",
-      "customerName": "ROLLING LUGGAGE BAGS PRIVATE LIMITED",
-      "shippingAddress": "GROUND FLOOR, A-WING 18, Lokseva Cooperative Housing Society Wing A, 90 Feet Road, KK KRISHNAN MENAN MARG, Dharavi, Mumbai, Maharashtra, 400017, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-09-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036472146",
-          "itemName": "Tape folding machine (heavy duty)",
-          "sku": "12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278847",
-          "rate": 38000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036472147",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 1000,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036472143-1154219000036472146-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036472143",
-          "lineItemId": "1154219000036472146",
-          "itemName": "Tape folding machine (heavy duty)",
-          "sku": "12",
-          "customerName": "ROLLING LUGGAGE BAGS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07896",
-          "deliveryDate": "2026-09-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-05T17:32:56+0530"
     },
     "1154219000036474014": {
       "id": "1154219000036474014",
@@ -9675,10 +9641,10 @@
     }
   },
   "orderIds": [
+    "1154219000036564012",
     "1154219000036548004",
     "1154219000036567001",
     "1154219000036558002",
-    "1154219000036472143",
     "1154219000036474014",
     "1154219000036482005",
     "1154219000036499003",
@@ -9730,8 +9696,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-08T04:40:29.306Z",
-  "lastAttemptAt": "2026-09-08T05:00:25.018Z",
+  "lastSuccessfulSyncAt": "2026-09-08T05:00:31.494Z",
+  "lastAttemptAt": "2026-09-08T05:00:31.494Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
