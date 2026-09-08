@@ -50,56 +50,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-08T16:59:48+0530"
     },
-    "1154219000036666008": {
-      "id": "1154219000036666008",
-      "zohoSalesOrderId": "1154219000036666008",
-      "salesOrderNumber": "SO-07908",
-      "status": "open",
-      "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
-      "shippingAddress": "PLOT NO. 222, SECTOR-17, HSIIDC, Bahadurgarh, Jhajjar,, Haryana,, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-08",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036666011",
-          "itemName": "Sole Hammering Machine",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000280139",
-          "rate": 135000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036666008-1154219000036666011-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036666008",
-          "lineItemId": "1154219000036666011",
-          "itemName": "Sole Hammering Machine",
-          "sku": "",
-          "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07908",
-          "deliveryDate": "2026-09-08",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-08T16:34:17+0530"
-    },
     "1154219000036669001": {
       "id": "1154219000036669001",
       "zohoSalesOrderId": "1154219000036669001",
@@ -9904,7 +9854,6 @@
   },
   "orderIds": [
     "1154219000036665008",
-    "1154219000036666008",
     "1154219000036669001",
     "1154219000036656001",
     "1154219000036548004",
@@ -9958,8 +9907,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-08T12:40:31.901Z",
-  "lastAttemptAt": "2026-09-08T13:00:25.354Z",
+  "lastSuccessfulSyncAt": "2026-09-08T13:00:32.595Z",
+  "lastAttemptAt": "2026-09-08T13:00:32.595Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
