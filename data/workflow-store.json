@@ -24218,7 +24218,9 @@
     "1154219000036669001": {
       "salesOrderId": "1154219000036669001",
       "salesOrderNumber": "SO-07907",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-08T08:40:47.482Z",
       "processedOrder": {
         "id": "1154219000036669001",
         "zohoSalesOrderId": "1154219000036669001",
@@ -24296,8 +24298,8 @@
           {
             "id": "1154219000036669001-1154219000036669004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271146",
+            "qrToken": "26271146",
             "orderId": "1154219000036669001",
             "lineItemId": "1154219000036669004",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -24305,14 +24307,17 @@
             "customerName": "Tactix Defence Systems LLP",
             "salesOrderNumber": "SO-07907",
             "deliveryDate": "2026-09-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Able",
+            "dispatchNote": "Wooden"
           },
           {
             "id": "1154219000036669001-1154219000036669006-1",
@@ -24333,7 +24338,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Bobbin Case for BS-9910RTC"
+            "itemDescription": "Bobbin Case for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669006-2",
@@ -24354,7 +24361,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Bobbin Case for BS-9910RTC"
+            "itemDescription": "Bobbin Case for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669006-3",
@@ -24375,7 +24384,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Bobbin Case for BS-9910RTC"
+            "itemDescription": "Bobbin Case for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669007-1",
@@ -24396,7 +24407,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Body Big for BS-9910RTC"
+            "itemDescription": "Needle Plate Body Big for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669007-2",
@@ -24417,7 +24430,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Body Big for BS-9910RTC"
+            "itemDescription": "Needle Plate Body Big for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669007-3",
@@ -24438,7 +24453,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Body Big for BS-9910RTC"
+            "itemDescription": "Needle Plate Body Big for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-1",
@@ -24459,7 +24476,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-2",
@@ -24480,7 +24499,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-3",
@@ -24501,7 +24522,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-4",
@@ -24522,7 +24545,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-5",
@@ -24543,7 +24568,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-6",
@@ -24564,7 +24591,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-7",
@@ -24585,7 +24614,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-8",
@@ -24606,7 +24637,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-9",
@@ -24627,7 +24660,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036669001-1154219000036669008-10",
@@ -24648,7 +24683,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Needle Plate Small for BS-9910RTC"
+            "itemDescription": "Needle Plate Small for BS-9910RTC",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-08T13:03:15+0530"
@@ -24662,7 +24699,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-08T08:38:58.723Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-08T08:38:59.821Z"
+          "zohoBackupQueuedAt": "2026-09-08T08:38:59.821Z",
+          "processedAt": "2026-09-08T08:40:47.482Z",
+          "dispatchNote": "Wooden",
+          "vendor": "Able"
         }
       }
     }
