@@ -16554,6 +16554,101 @@
         "1154219000036479002-1154219000036561005-1",
         "1154219000036479002-1154219000036561005-2"
       ]
+    },
+    "1154219000036667001": {
+      "completedAt": "2026-09-08T10:32:47.825Z",
+      "order": {
+        "id": "1154219000036667001",
+        "zohoSalesOrderId": "1154219000036667001",
+        "salesOrderNumber": "SO-07906",
+        "status": "open",
+        "customerName": "International Trade Organization",
+        "shippingAddress": "85, Udyog Vihar, Phase-4,, Gurugram, Haryana, 122016, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036667004",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000278462",
+            "rate": 75000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036667005",
+            "itemName": "Edge Coloring Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226354",
+            "rate": 38000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036667001-1154219000036667004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271144",
+            "qrToken": "26271144",
+            "orderId": "1154219000036667001",
+            "lineItemId": "1154219000036667004",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "customerName": "International Trade Organization",
+            "salesOrderNumber": "SO-07906",
+            "deliveryDate": "2026-09-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036667001-1154219000036667005-1",
+            "unitNumber": 2,
+            "serialNumber": "26271145",
+            "qrToken": "26271145",
+            "orderId": "1154219000036667001",
+            "lineItemId": "1154219000036667005",
+            "itemName": "Edge Coloring Machine",
+            "sku": "",
+            "customerName": "International Trade Organization",
+            "salesOrderNumber": "SO-07906",
+            "deliveryDate": "2026-09-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-08T12:53:45+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036667001-1154219000036667004-1",
+        "1154219000036667001-1154219000036667005-1"
+      ]
     }
   }
 }
