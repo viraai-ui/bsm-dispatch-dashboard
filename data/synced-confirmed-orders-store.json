@@ -13,14 +13,14 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036656004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
+          "id": "1154219000036659014",
+          "itemName": "Hotmelt Adhesive KL 25",
+          "sku": "KL 25",
           "description": "",
           "quantity": 200,
           "pendingQuantity": 200,
           "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
+          "zohoItemId": "1154219000008088544",
           "rate": 330,
           "dispatchCategory": "adhesive"
         },
@@ -60,7 +60,7 @@
           "itemDescription": "Heater for Tape Cutting"
         }
       ],
-      "zohoLastModifiedTime": "2026-09-08T10:34:43+0530"
+      "zohoLastModifiedTime": "2026-09-08T11:24:27+0530"
     },
     "1154219000036548004": {
       "id": "1154219000036548004",
@@ -9730,8 +9730,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-08T05:51:55.846Z",
-  "lastAttemptAt": "2026-09-08T06:00:25.364Z",
+  "lastSuccessfulSyncAt": "2026-09-08T06:00:49.994Z",
+  "lastAttemptAt": "2026-09-08T06:00:49.994Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
