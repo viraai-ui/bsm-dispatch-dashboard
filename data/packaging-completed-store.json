@@ -16756,6 +16756,65 @@
       "machineIds": [
         "1154219000036669001-1154219000036669004-1"
       ]
+    },
+    "1154219000036666008": {
+      "completedAt": "2026-09-08T12:37:09.635Z",
+      "order": {
+        "id": "1154219000036666008",
+        "zohoSalesOrderId": "1154219000036666008",
+        "salesOrderNumber": "SO-07908",
+        "status": "open",
+        "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. 222, SECTOR-17, HSIIDC, Bahadurgarh, Jhajjar,, Haryana,, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036666011",
+            "itemName": "Sole Hammering Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280139",
+            "rate": 135000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036666008-1154219000036666011-1",
+            "unitNumber": 1,
+            "serialNumber": "26271147",
+            "qrToken": "26271147",
+            "orderId": "1154219000036666008",
+            "lineItemId": "1154219000036666011",
+            "itemName": "Sole Hammering Machine",
+            "sku": "",
+            "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07908",
+            "deliveryDate": "2026-09-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-08T16:34:17+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036666008-1154219000036666011-1"
+      ]
     }
   }
 }
