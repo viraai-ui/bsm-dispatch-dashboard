@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271148,
+  "serialCounter": 26271149,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -24894,6 +24894,102 @@
           "processedAt": "2026-09-08T12:08:42.301Z",
           "dispatchNote": "Good wrapping",
           "vendor": "Siphon"
+        }
+      }
+    },
+    "1154219000035854013": {
+      "salesOrderId": "1154219000035854013",
+      "salesOrderNumber": "SO-07759",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035854013",
+        "zohoSalesOrderId": "1154219000035854013",
+        "salesOrderNumber": "SO-07759",
+        "status": "open",
+        "customerName": "D Zone",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035854016",
+            "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000032096401",
+            "rate": 262500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035854017",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Drive single phase",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 22500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035854013-1154219000035854016-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035854013",
+            "lineItemId": "1154219000035854016",
+            "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+            "sku": "",
+            "customerName": "D Zone",
+            "salesOrderNumber": "SO-07759",
+            "deliveryDate": "2026-08-30",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035854013-1154219000035854017-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035854013",
+            "lineItemId": "1154219000035854017",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "customerName": "D Zone",
+            "salesOrderNumber": "SO-07759",
+            "deliveryDate": "2026-08-30",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Drive single phase"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-19T11:02:36+0530"
+      },
+      "machines": {
+        "1154219000035854013-1154219000035854016-1": {
+          "machineUnitId": "1154219000035854013-1154219000035854016-1",
+          "lineItemId": "1154219000035854016",
+          "serialNumber": "26271149",
+          "qrToken": "26271149",
+          "qrStatus": "pending"
         }
       }
     }
