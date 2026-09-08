@@ -23554,7 +23554,9 @@
     "1154219000036370004": {
       "salesOrderId": "1154219000036370004",
       "salesOrderNumber": "SO-07872",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-08T05:32:48.204Z",
       "processedOrder": {
         "id": "1154219000036370004",
         "zohoSalesOrderId": "1154219000036370004",
@@ -23692,8 +23694,8 @@
           {
             "id": "1154219000036370004-1154219000036370007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271134",
+            "qrToken": "26271134",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370007",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -23701,20 +23703,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Allure",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370008-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271135",
+            "qrToken": "26271135",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370008",
             "itemName": "Counter Molding Machine [Hot & Cold]",
@@ -23722,20 +23727,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370009-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271136",
+            "qrToken": "26271136",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370009",
             "itemName": "Seat lasting Machine",
@@ -23743,20 +23751,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Allure",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370010-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271137",
+            "qrToken": "26271137",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370010",
             "itemName": "Toe Molding Machine",
@@ -23764,20 +23775,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370011-1",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271138",
+            "qrToken": "26271138",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370011",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -23785,20 +23799,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370012-1",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271139",
+            "qrToken": "26271139",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370012",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -23806,20 +23823,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370013-1",
             "unitNumber": 7,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271140",
+            "qrToken": "26271140",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370013",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -23827,20 +23847,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Old",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370014-1",
             "unitNumber": 8,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271141",
+            "qrToken": "26271141",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370014",
             "itemName": "Mixture/ Stirrer (pneumatic)",
@@ -23848,20 +23871,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Tech Point",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036370015-1",
             "unitNumber": 9,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271142",
+            "qrToken": "26271142",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036370015",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -23869,20 +23895,23 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Shree Sai",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036370004-1154219000036547066-1",
             "unitNumber": 10,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271143",
+            "qrToken": "26271143",
             "orderId": "1154219000036370004",
             "lineItemId": "1154219000036547066",
             "itemName": "Skiving Machine @5%",
@@ -23890,14 +23919,17 @@
             "customerName": "JOY SKINWEAR (Ghaziabad)",
             "salesOrderNumber": "SO-07872",
             "deliveryDate": "2026-09-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-07T16:17:48+0530"
@@ -23913,7 +23945,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Allure"
         },
         "1154219000036370004-1154219000036370008-1": {
           "machineUnitId": "1154219000036370004-1154219000036370008-1",
@@ -23925,7 +23960,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000036370004-1154219000036370009-1": {
           "machineUnitId": "1154219000036370004-1154219000036370009-1",
@@ -23937,7 +23975,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Allure"
         },
         "1154219000036370004-1154219000036370010-1": {
           "machineUnitId": "1154219000036370004-1154219000036370010-1",
@@ -23949,7 +23990,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036370004-1154219000036370011-1": {
           "machineUnitId": "1154219000036370004-1154219000036370011-1",
@@ -23961,7 +24005,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         },
         "1154219000036370004-1154219000036370012-1": {
           "machineUnitId": "1154219000036370004-1154219000036370012-1",
@@ -23973,7 +24020,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000036370004-1154219000036370013-1": {
           "machineUnitId": "1154219000036370004-1154219000036370013-1",
@@ -23985,7 +24035,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Old"
         },
         "1154219000036370004-1154219000036370014-1": {
           "machineUnitId": "1154219000036370004-1154219000036370014-1",
@@ -23997,7 +24050,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Tech Point"
         },
         "1154219000036370004-1154219000036370015-1": {
           "machineUnitId": "1154219000036370004-1154219000036370015-1",
@@ -24009,7 +24065,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "Shree Sai"
         },
         "1154219000036370004-1154219000036547066-1": {
           "machineUnitId": "1154219000036370004-1154219000036547066-1",
@@ -24021,7 +24080,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-08T05:24:44.355Z",
           "zohoBackupLastAttemptAt": "2026-09-08T05:30:32.901Z",
-          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z"
+          "zohoBackupSyncedAt": "2026-09-08T05:30:32.901Z",
+          "processedAt": "2026-09-08T05:32:48.204Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
