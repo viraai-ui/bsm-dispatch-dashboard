@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-c3aecc9c-fb76-4c47-a9e6-7ed39467dcaa",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-903d8091-c42a-4391-a21f-7ee098d35e21",
+      "salesOrderNumber": "SO-07906",
+      "customerName": "International Trade Organization",
+      "paymentAmount": 133340,
+      "createdAt": "2026-09-08T08:00:14.711Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-f2919e97-c2ce-44ec-b060-d536c390a7a1",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-903d8091-c42a-4391-a21f-7ee098d35e21",
+      "salesOrderNumber": "SO-07906",
+      "customerName": "International Trade Organization",
+      "paymentAmount": 133340,
+      "createdAt": "2026-09-08T08:00:14.711Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-d5f2456a-2f34-40a6-97af-4a3a867e9ab4",
       "type": "payment-created",
       "recipientUserId": "u-admin",
