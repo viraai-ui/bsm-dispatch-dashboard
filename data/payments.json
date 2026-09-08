@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "T.A. Enterprise",
+      "salesOrderNumber": "SO-07905",
+      "paymentAmount": 84370,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07905/2026-09-08/1788842911045-874581b0-f121-4242-9b95-3861f0684c03-WhatsApp-Image-2026-09-07-at-9.40.05-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07905%2F2026-09-08%2F1788842911045-874581b0-f121-4242-9b95-3861f0684c03-WhatsApp-Image-2026-09-07-at-9.40.05-PM.jpg",
+          "name": "WhatsApp Image 2026-09-07 at 9.40.05 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 258246
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07905/2026-09-08/1788842911045-874581b0-f121-4242-9b95-3861f0684c03-WhatsApp-Image-2026-09-07-at-9.40.05-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07905%2F2026-09-08%2F1788842911045-874581b0-f121-4242-9b95-3861f0684c03-WhatsApp-Image-2026-09-07-at-9.40.05-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-07 at 9.40.05 PM.jpeg",
+      "publicDeleteTokenHash": "b671aa6d53ec0846546db1eee7b4de1c14714d8acba40c4ec21f446bbcd211da",
+      "id": "payment-da38045e-c34f-45ce-86ca-262428f34b5d",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "411cad6ede4c4d2ca1e30303d2df0348",
+      "createdAt": "2026-09-08T04:48:32.533Z",
+      "updatedAt": "2026-09-08T04:48:32.533Z"
+    },
+    {
       "customerName": "SUMER CHAND & SONS",
       "salesOrderNumber": "SO-07902",
       "paymentAmount": 228500,
