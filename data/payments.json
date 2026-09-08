@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "International Trade Organization",
+      "salesOrderNumber": "SO-07906",
+      "paymentAmount": 133340,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07906/2026-09-08/1788854407578-a047a78a-3e72-4665-aee2-73ae8238a28a-Z483080926000002---Build-Scale-Manufacture-Pvt-Ltd.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07906%2F2026-09-08%2F1788854407578-a047a78a-3e72-4665-aee2-73ae8238a28a-Z483080926000002---Build-Scale-Manufacture-Pvt-Ltd.pdf",
+          "name": "Z483080926000002 - Build Scale Manufacture Pvt Ltd.pdf",
+          "contentType": "application/pdf",
+          "size": 38731
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07906/2026-09-08/1788854407578-a047a78a-3e72-4665-aee2-73ae8238a28a-Z483080926000002---Build-Scale-Manufacture-Pvt-Ltd.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07906%2F2026-09-08%2F1788854407578-a047a78a-3e72-4665-aee2-73ae8238a28a-Z483080926000002---Build-Scale-Manufacture-Pvt-Ltd.pdf",
+      "screenshotName": "Z483080926000002 - Build Scale Manufacture Pvt Ltd.pdf",
+      "publicDeleteTokenHash": "2668b962130bd1decd6aab99121d68fd93ad906f0ecf4e0ca3674423637daf60",
+      "id": "payment-903d8091-c42a-4391-a21f-7ee098d35e21",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "59d4941e6cac49788de56d2b6198d2b2",
+      "createdAt": "2026-09-08T08:00:12.810Z",
+      "updatedAt": "2026-09-08T08:00:12.810Z"
+    },
+    {
       "customerName": "Tactix",
       "paymentAmount": 83873,
       "paymentMode": "UPI",
