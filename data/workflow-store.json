@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271146,
+  "serialCounter": 26271147,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -24707,6 +24707,70 @@
           "vendor": "Able",
           "zohoBackupLastAttemptAt": "2026-09-08T08:45:33.047Z",
           "zohoBackupSyncedAt": "2026-09-08T08:45:33.047Z"
+        }
+      }
+    },
+    "1154219000036666008": {
+      "salesOrderId": "1154219000036666008",
+      "salesOrderNumber": "SO-07908",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036666008",
+        "zohoSalesOrderId": "1154219000036666008",
+        "salesOrderNumber": "SO-07908",
+        "status": "open",
+        "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. 222, SECTOR-17, HSIIDC, Bahadurgarh, Jhajjar,, Haryana,, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036666011",
+            "itemName": "Sole Hammering Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280139",
+            "rate": 135000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036666008-1154219000036666011-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036666008",
+            "lineItemId": "1154219000036666011",
+            "itemName": "Sole Hammering Machine",
+            "sku": "",
+            "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07908",
+            "deliveryDate": "2026-09-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-08T16:34:17+0530"
+      },
+      "machines": {
+        "1154219000036666008-1154219000036666011-1": {
+          "machineUnitId": "1154219000036666008-1154219000036666011-1",
+          "lineItemId": "1154219000036666011",
+          "serialNumber": "26271147",
+          "qrToken": "26271147",
+          "qrStatus": "pending"
         }
       }
     }
