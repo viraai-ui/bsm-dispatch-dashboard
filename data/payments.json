@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Tactix",
+      "paymentAmount": 83873,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/49f8515f-9f33-4ca6-b98e-76ebea618e9b/2026-09-08/1788850386905-9c794f87-cb60-459e-a343-376d97953089-WhatsApp-Image-2026-09-08-at-12.19.12-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F49f8515f-9f33-4ca6-b98e-76ebea618e9b%2F2026-09-08%2F1788850386905-9c794f87-cb60-459e-a343-376d97953089-WhatsApp-Image-2026-09-08-at-12.19.12-PM.jpg",
+          "name": "WhatsApp Image 2026-09-08 at 12.19.12 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 55292
+        }
+      ],
+      "screenshotKey": "payments/public/manual/49f8515f-9f33-4ca6-b98e-76ebea618e9b/2026-09-08/1788850386905-9c794f87-cb60-459e-a343-376d97953089-WhatsApp-Image-2026-09-08-at-12.19.12-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F49f8515f-9f33-4ca6-b98e-76ebea618e9b%2F2026-09-08%2F1788850386905-9c794f87-cb60-459e-a343-376d97953089-WhatsApp-Image-2026-09-08-at-12.19.12-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-08 at 12.19.12 PM.jpeg",
+      "publicDeleteTokenHash": "3e40e5cd680491b9eb90d07835355bb5a0bb4d77404350f4f4aabf4b70337755",
+      "id": "payment-5a9839f4-6efc-4ba8-b153-3902bc5eb0e7",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "9f4ee941cf50403d836b397225526772",
+      "createdAt": "2026-09-08T06:53:08.277Z",
+      "updatedAt": "2026-09-08T06:53:08.277Z"
+    },
+    {
       "customerName": "VAQRO SOLTRAC LLP",
       "salesOrderNumber": "SO-07106",
       "paymentAmount": 487500,
