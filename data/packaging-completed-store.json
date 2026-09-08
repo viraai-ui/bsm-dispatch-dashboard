@@ -16424,6 +16424,136 @@
         "1154219000036469001-1154219000036469004-1",
         "1154219000036469001-1154219000036469004-2"
       ]
+    },
+    "1154219000036479002": {
+      "completedAt": "2026-09-08T04:51:43.508Z",
+      "order": {
+        "id": "1154219000036479002",
+        "zohoSalesOrderId": "1154219000036479002",
+        "salesOrderNumber": "SO-07890",
+        "status": "open",
+        "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+        "shippingAddress": "46/157, Halsey Road,, Kanpur,, Uttar Pradesh, 208001",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-04",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036479005",
+            "itemName": "Moccasin Stitching",
+            "sku": "81",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000001557211",
+            "rate": 275000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036561005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280682",
+            "rate": 25000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036561006",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight Cost from BSM to Mehta Transport Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 2000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036479002-1154219000036479005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271127",
+            "qrToken": "26271127",
+            "orderId": "1154219000036479002",
+            "lineItemId": "1154219000036479005",
+            "itemName": "Moccasin Stitching",
+            "sku": "81",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-07890",
+            "deliveryDate": "2026-09-04",
+            "status": "Processed",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000036479002-1154219000036561005-1",
+            "unitNumber": 2,
+            "serialNumber": "26271130",
+            "qrToken": "26271130",
+            "orderId": "1154219000036479002",
+            "lineItemId": "1154219000036561005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-07890",
+            "deliveryDate": "2026-09-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000036479002-1154219000036561005-2",
+            "unitNumber": 3,
+            "serialNumber": "26271131",
+            "qrToken": "26271131",
+            "orderId": "1154219000036479002",
+            "lineItemId": "1154219000036561005",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-07890",
+            "deliveryDate": "2026-09-04",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-07T11:36:58+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036479002-1154219000036479005-1",
+        "1154219000036479002-1154219000036561005-1",
+        "1154219000036479002-1154219000036561005-2"
+      ]
     }
   }
 }
