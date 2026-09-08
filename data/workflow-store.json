@@ -24713,7 +24713,9 @@
     "1154219000036666008": {
       "salesOrderId": "1154219000036666008",
       "salesOrderNumber": "SO-07908",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-08T11:24:23.575Z",
       "processedOrder": {
         "id": "1154219000036666008",
         "zohoSalesOrderId": "1154219000036666008",
@@ -24743,8 +24745,8 @@
           {
             "id": "1154219000036666008-1154219000036666011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271147",
+            "qrToken": "26271147",
             "orderId": "1154219000036666008",
             "lineItemId": "1154219000036666011",
             "itemName": "Sole Hammering Machine",
@@ -24752,14 +24754,17 @@
             "customerName": "OSCAR POLYMERS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07908",
             "deliveryDate": "2026-09-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-08T16:34:17+0530"
@@ -24773,7 +24778,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-08T11:18:01.403Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-08T11:18:02.673Z"
+          "zohoBackupQueuedAt": "2026-09-08T11:18:02.673Z",
+          "processedAt": "2026-09-08T11:24:23.575Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
