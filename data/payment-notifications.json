@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-d5f2456a-2f34-40a6-97af-4a3a867e9ab4",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-5a9839f4-6efc-4ba8-b153-3902bc5eb0e7",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Tactix",
+      "paymentAmount": 83873,
+      "createdAt": "2026-09-08T06:53:10.476Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-1f9b96ed-977c-49fb-a836-2100a57760f9",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-5a9839f4-6efc-4ba8-b153-3902bc5eb0e7",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Tactix",
+      "paymentAmount": 83873,
+      "createdAt": "2026-09-08T06:53:10.476Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-e7856732-23ba-4f71-ad08-4089e2d60c77",
       "type": "payment-created",
       "recipientUserId": "u-admin",
