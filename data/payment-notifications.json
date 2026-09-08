@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-e7856732-23ba-4f71-ad08-4089e2d60c77",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-481b9b4a-2aac-4f77-8000-e5c2a5e00b5c",
+      "salesOrderNumber": "SO-07106",
+      "customerName": "VAQRO SOLTRAC LLP",
+      "paymentAmount": 487500,
+      "createdAt": "2026-09-08T06:17:06.298Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-0e2599e0-54c2-4210-93c8-ee07d9ec0a86",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-481b9b4a-2aac-4f77-8000-e5c2a5e00b5c",
+      "salesOrderNumber": "SO-07106",
+      "customerName": "VAQRO SOLTRAC LLP",
+      "paymentAmount": 487500,
+      "createdAt": "2026-09-08T06:17:06.298Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-39bc6505-cf16-4e85-af4f-716feb90e6e7",
       "type": "payment-created",
       "recipientUserId": "u-admin",
