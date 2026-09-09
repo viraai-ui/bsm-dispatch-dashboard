@@ -16886,6 +16886,76 @@
       "machineIds": [
         "1154219000036271001-1154219000036271004-1"
       ]
+    },
+    "1154219000035854013": {
+      "completedAt": "2026-09-09T09:16:32.908Z",
+      "order": {
+        "id": "1154219000035854013",
+        "zohoSalesOrderId": "1154219000035854013",
+        "salesOrderNumber": "SO-07759",
+        "status": "open",
+        "customerName": "D Zone",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-08-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035854016",
+            "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000032096401",
+            "rate": 262500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035854017",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Drive single phase",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 22500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035854013-1154219000035854016-1",
+            "unitNumber": 1,
+            "serialNumber": "26271149",
+            "qrToken": "26271149",
+            "orderId": "1154219000035854013",
+            "lineItemId": "1154219000035854016",
+            "itemName": "Travel Head Cutting Press (25 ton) [Single Phase]",
+            "sku": "",
+            "customerName": "D Zone",
+            "salesOrderNumber": "SO-07759",
+            "deliveryDate": "2026-08-30",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-08",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-19T11:02:36+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035854013-1154219000035854016-1"
+      ]
     }
   }
 }
