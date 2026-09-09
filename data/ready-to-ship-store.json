@@ -6048,6 +6048,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036703077": {
+      "id": "ship-1788959055430-pnpcy",
+      "itemId": "1154219000036703077",
+      "orderId": "1154219000036703077",
+      "machineId": "1154219000036703077-1154219000036703080-1",
+      "salesOrderNumber": "SO-07918",
+      "customerName": "Rajdhani Laminates",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS3676",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-09",
+      "notes": "",
+      "shippedAt": "2026-09-09T13:04:15.430Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
