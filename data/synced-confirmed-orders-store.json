@@ -515,15 +515,15 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036567004",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
-          "sku": "335",
+          "id": "1154219000036703056",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226864",
-          "rate": 35000,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000009427388",
+          "rate": 60000,
           "dispatchCategory": "machine"
         },
         {
@@ -541,20 +541,20 @@
       ],
       "machines": [
         {
-          "id": "1154219000036567001-1154219000036567004-1",
+          "id": "1154219000036567001-1154219000036703056-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036567001",
-          "lineItemId": "1154219000036567004",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
-          "sku": "335",
+          "lineItemId": "1154219000036703056",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
           "customerName": "SUMER CHAND & SONS",
           "salesOrderNumber": "SO-07902",
           "deliveryDate": "2026-09-07",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -583,7 +583,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-07T15:06:58+0530"
+      "zohoLastModifiedTime": "2026-09-09T13:24:50+0530"
     },
     "1154219000036558002": {
       "id": "1154219000036558002",
@@ -9724,8 +9724,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-09T07:40:38.038Z",
-  "lastAttemptAt": "2026-09-09T08:00:25.360Z",
+  "lastSuccessfulSyncAt": "2026-09-09T08:00:32.248Z",
+  "lastAttemptAt": "2026-09-09T08:00:32.248Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
