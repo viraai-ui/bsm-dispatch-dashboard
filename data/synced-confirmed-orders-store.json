@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036707002": {
+      "id": "1154219000036707002",
+      "zohoSalesOrderId": "1154219000036707002",
+      "salesOrderNumber": "SO-07914",
+      "status": "open",
+      "customerName": "Aqdus Enterprises",
+      "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-09",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036707005",
+          "itemName": "Overlock (5 Thread)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000280481",
+          "rate": 60000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036707002-1154219000036707005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036707002",
+          "lineItemId": "1154219000036707005",
+          "itemName": "Overlock (5 Thread)",
+          "sku": "",
+          "customerName": "Aqdus Enterprises",
+          "salesOrderNumber": "SO-07914",
+          "deliveryDate": "2026-09-09",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-09T14:09:05+0530"
+    },
     "1154219000036720001": {
       "id": "1154219000036720001",
       "zohoSalesOrderId": "1154219000036720001",
@@ -9642,6 +9692,7 @@
     }
   },
   "orderIds": [
+    "1154219000036707002",
     "1154219000036720001",
     "1154219000036717001",
     "1154219000036663006",
@@ -9695,8 +9746,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-09T08:20:30.871Z",
-  "lastAttemptAt": "2026-09-09T08:39:19.516Z",
+  "lastSuccessfulSyncAt": "2026-09-09T08:39:31.598Z",
+  "lastAttemptAt": "2026-09-09T08:39:31.598Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
