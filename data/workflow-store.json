@@ -25943,13 +25943,13 @@
           "vendor": "Able"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000036724001": {
       "salesOrderId": "1154219000036724001",
       "salesOrderNumber": "SO-07915",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-09T10:14:12.997Z",
       "processedOrder": {
         "id": "1154219000036724001",
@@ -25991,7 +25991,8 @@
         "machines": [],
         "zohoLastModifiedTime": "2026-09-09T15:34:36+0530"
       },
-      "machines": {}
+      "machines": {},
+      "dispatchSortOrder": 1
     }
   }
 }
