@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-a7a4b1f9-b4b9-4b9f-b675-abf84861c93f",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-866d2ddd-0e12-49bd-ad77-15a527daddbc",
+      "salesOrderNumber": "SO-07912",
+      "customerName": "LEPERA INDUSTRIES PRIVATE LIMITED",
+      "paymentAmount": 15623,
+      "createdAt": "2026-09-09T05:11:08.946Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-f0a8b171-9df4-40bf-95bf-35fe2bd3c02a",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-866d2ddd-0e12-49bd-ad77-15a527daddbc",
+      "salesOrderNumber": "SO-07912",
+      "customerName": "LEPERA INDUSTRIES PRIVATE LIMITED",
+      "paymentAmount": 15623,
+      "createdAt": "2026-09-09T05:11:08.946Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-033fc0f8-1421-4c70-a68e-0187807012cb",
       "type": "payment-created",
       "recipientUserId": "u-admin",
