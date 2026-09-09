@@ -25999,7 +25999,9 @@
     "1154219000036714004": {
       "salesOrderId": "1154219000036714004",
       "salesOrderNumber": "SO-07917",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-09T11:18:08.626Z",
       "processedOrder": {
         "id": "1154219000036714004",
         "zohoSalesOrderId": "1154219000036714004",
@@ -26029,8 +26031,8 @@
           {
             "id": "1154219000036714004-1154219000036714007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271166",
+            "qrToken": "26271166",
             "orderId": "1154219000036714004",
             "lineItemId": "1154219000036714007",
             "itemName": "Foil Stamping machine",
@@ -26038,14 +26040,17 @@
             "customerName": "Nice Industrial Parts",
             "salesOrderNumber": "SO-07917",
             "deliveryDate": "2026-09-09",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-09T16:21:07+0530"
@@ -26061,7 +26066,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-09T10:52:10.012Z",
           "zohoBackupLastAttemptAt": "2026-09-09T11:00:33.167Z",
-          "zohoBackupSyncedAt": "2026-09-09T11:00:33.167Z"
+          "zohoBackupSyncedAt": "2026-09-09T11:00:33.167Z",
+          "processedAt": "2026-09-09T11:18:08.626Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
