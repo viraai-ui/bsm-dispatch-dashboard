@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036714004": {
+      "id": "1154219000036714004",
+      "zohoSalesOrderId": "1154219000036714004",
+      "salesOrderNumber": "SO-07917",
+      "status": "open",
+      "customerName": "Nice Industrial Parts",
+      "shippingAddress": "Ground Floor, Plot No-153, Pkt-L, Sec-5 DSIDC Landmark, Bawana, Delhi, 110039",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-09",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036714007",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226295",
+          "rate": 36440,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036714004-1154219000036714007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036714004",
+          "lineItemId": "1154219000036714007",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "Nice Industrial Parts",
+          "salesOrderNumber": "SO-07917",
+          "deliveryDate": "2026-09-09",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-09T16:21:07+0530"
+    },
     "1154219000036721008": {
       "id": "1154219000036721008",
       "zohoSalesOrderId": "1154219000036721008",
@@ -48,7 +98,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-09T15:41:23+0530"
+      "zohoLastModifiedTime": "2026-09-09T16:15:47+0530"
     },
     "1154219000036724001": {
       "id": "1154219000036724001",
@@ -9732,6 +9782,7 @@
     }
   },
   "orderIds": [
+    "1154219000036714004",
     "1154219000036721008",
     "1154219000036724001",
     "1154219000036720001",
@@ -9787,8 +9838,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-09T10:44:57.162Z",
-  "lastAttemptAt": "2026-09-09T10:51:10.934Z",
+  "lastSuccessfulSyncAt": "2026-09-09T10:51:27.027Z",
+  "lastAttemptAt": "2026-09-09T10:51:27.027Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
