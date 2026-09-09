@@ -1,5 +1,33 @@
 {
   "orders": {
+    "1154219000036717014": {
+      "id": "1154219000036717014",
+      "zohoSalesOrderId": "1154219000036717014",
+      "salesOrderNumber": "SO-07913",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-09",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036717017",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 100,
+          "pendingQuantity": 100,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-09T11:30:33+0530"
+    },
     "1154219000036720001": {
       "id": "1154219000036720001",
       "zohoSalesOrderId": "1154219000036720001",
@@ -2637,34 +2665,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-01T11:25:48+0530"
     },
-    "1154219000036281017": {
-      "id": "1154219000036281017",
-      "zohoSalesOrderId": "1154219000036281017",
-      "salesOrderNumber": "SO-07855",
-      "status": "open",
-      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
-      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-02",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036281020",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 1000,
-          "pendingQuantity": 1000,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 300,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-08-31T16:59:05+0530"
-    },
     "1154219000036296003": {
       "id": "1154219000036296003",
       "zohoSalesOrderId": "1154219000036296003",
@@ -2714,89 +2714,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-08-31T16:33:35+0530"
-    },
-    "1154219000036271001": {
-      "id": "1154219000036271001",
-      "zohoSalesOrderId": "1154219000036271001",
-      "salesOrderNumber": "SO-07845",
-      "status": "open",
-      "customerName": "SHREENATHJI RUBBER INDUSTRIES",
-      "shippingAddress": "PLOT 9A/7,, SHREENATHJI RUBBER INDUSTRIES, ROAD B-4, PHASE-1, G.I.D.C, VITTHAL UDYOGNAGAR, Anand, Gujarat, 388121, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-08-30",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036271004",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000277612",
-          "rate": 280000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036271005",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000335059",
-          "rate": 16000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036271001-1154219000036271004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036271001",
-          "lineItemId": "1154219000036271004",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "customerName": "SHREENATHJI RUBBER INDUSTRIES",
-          "salesOrderNumber": "SO-07845",
-          "deliveryDate": "2026-08-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036271001-1154219000036271005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036271001",
-          "lineItemId": "1154219000036271005",
-          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
-          "sku": "PP Board 60*20*3",
-          "customerName": "SHREENATHJI RUBBER INDUSTRIES",
-          "salesOrderNumber": "SO-07845",
-          "deliveryDate": "2026-08-30",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-08-31T10:58:59+0530"
     },
     "1154219000036185001": {
       "id": "1154219000036185001",
@@ -9753,6 +9670,7 @@
     }
   },
   "orderIds": [
+    "1154219000036717014",
     "1154219000036720001",
     "1154219000036717001",
     "1154219000036663006",
@@ -9772,9 +9690,7 @@
     "1154219000036335004",
     "1154219000036269021",
     "1154219000036295003",
-    "1154219000036281017",
     "1154219000036296003",
-    "1154219000036271001",
     "1154219000036185001",
     "1154219000036137001",
     "1154219000036057006",
@@ -9808,8 +9724,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-09T06:00:33.265Z",
-  "lastAttemptAt": "2026-09-09T06:20:25.174Z",
+  "lastSuccessfulSyncAt": "2026-09-09T06:20:33.305Z",
+  "lastAttemptAt": "2026-09-09T06:20:33.305Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
