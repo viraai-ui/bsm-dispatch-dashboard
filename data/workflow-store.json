@@ -25872,7 +25872,9 @@
     "1154219000036721008": {
       "salesOrderId": "1154219000036721008",
       "salesOrderNumber": "SO-07916",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-09T10:12:16.553Z",
       "processedOrder": {
         "id": "1154219000036721008",
         "zohoSalesOrderId": "1154219000036721008",
@@ -25902,8 +25904,8 @@
           {
             "id": "1154219000036721008-1154219000036721011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271165",
+            "qrToken": "26271165",
             "orderId": "1154219000036721008",
             "lineItemId": "1154219000036721011",
             "itemName": "TPU fusing machine [Hot And Cold]",
@@ -25911,14 +25913,17 @@
             "customerName": "HAMPTON SHOES LLP",
             "salesOrderNumber": "SO-07916",
             "deliveryDate": "2026-09-09",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-09T15:36:36+0530"
@@ -25932,7 +25937,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T10:09:12.360Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T10:09:13.691Z"
+          "zohoBackupQueuedAt": "2026-09-09T10:09:13.691Z",
+          "processedAt": "2026-09-09T10:12:16.553Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
