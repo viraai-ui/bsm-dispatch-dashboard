@@ -26399,7 +26399,9 @@
     "1154219000036013008": {
       "salesOrderId": "1154219000036013008",
       "salesOrderNumber": "SO-07804",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-09T12:45:17.530Z",
       "processedOrder": {
         "id": "1154219000036013008",
         "zohoSalesOrderId": "1154219000036013008",
@@ -26489,8 +26491,8 @@
           {
             "id": "1154219000036013008-1154219000036013011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271173",
+            "qrToken": "26271173",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013011",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -26498,20 +26500,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "Balaji Engennering",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013012-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271174",
+            "qrToken": "26271174",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013012",
             "itemName": "Single needle post bed Drop feed",
@@ -26519,20 +26524,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013012-2",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271175",
+            "qrToken": "26271175",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013012",
             "itemName": "Single needle post bed Drop feed",
@@ -26540,20 +26548,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013012-3",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271176",
+            "qrToken": "26271176",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013012",
             "itemName": "Single needle post bed Drop feed",
@@ -26561,20 +26572,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good  wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013012-4",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271177",
+            "qrToken": "26271177",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013012",
             "itemName": "Single needle post bed Drop feed",
@@ -26582,20 +26596,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013012-5",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271178",
+            "qrToken": "26271178",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013012",
             "itemName": "Single needle post bed Drop feed",
@@ -26603,20 +26620,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013013-1",
             "unitNumber": 7,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271179",
+            "qrToken": "26271179",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013013",
             "itemName": "Double Needle Post Bed Drop Feed",
@@ -26624,20 +26644,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013014-1",
             "unitNumber": 8,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271180",
+            "qrToken": "26271180",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013014",
             "itemName": "Zigzag Flatbed",
@@ -26645,20 +26668,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013015-1",
             "unitNumber": 9,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271181",
+            "qrToken": "26271181",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013015",
             "itemName": "Round Blade Edge trimming Machine",
@@ -26666,20 +26692,23 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036013008-1154219000036013016-1",
             "unitNumber": 10,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271182",
+            "qrToken": "26271182",
             "orderId": "1154219000036013008",
             "lineItemId": "1154219000036013016",
             "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
@@ -26687,14 +26716,17 @@
             "customerName": "JEET INDUSTRIES",
             "salesOrderNumber": "SO-07804",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "vendor": "K S",
+            "dispatchNote": "Good rapping"
           }
         ],
         "zohoLastModifiedTime": "2026-08-25T10:29:47+0530"
@@ -26708,7 +26740,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Balaji Engennering"
         },
         "1154219000036013008-1154219000036013012-1": {
           "machineUnitId": "1154219000036013008-1154219000036013012-1",
@@ -26718,7 +26753,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013012-2": {
           "machineUnitId": "1154219000036013008-1154219000036013012-2",
@@ -26728,7 +26766,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013012-3": {
           "machineUnitId": "1154219000036013008-1154219000036013012-3",
@@ -26738,7 +26779,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good  wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013012-4": {
           "machineUnitId": "1154219000036013008-1154219000036013012-4",
@@ -26748,7 +26792,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013012-5": {
           "machineUnitId": "1154219000036013008-1154219000036013012-5",
@@ -26758,7 +26805,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013013-1": {
           "machineUnitId": "1154219000036013008-1154219000036013013-1",
@@ -26768,7 +26818,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013014-1": {
           "machineUnitId": "1154219000036013008-1154219000036013014-1",
@@ -26778,7 +26831,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013015-1": {
           "machineUnitId": "1154219000036013008-1154219000036013015-1",
@@ -26788,7 +26844,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         },
         "1154219000036013008-1154219000036013016-1": {
           "machineUnitId": "1154219000036013008-1154219000036013016-1",
@@ -26798,7 +26857,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z",
+          "processedAt": "2026-09-09T12:45:17.530Z",
+          "dispatchNote": "Good rapping",
+          "vendor": "K S"
         }
       }
     }
