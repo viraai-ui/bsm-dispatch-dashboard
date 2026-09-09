@@ -26399,7 +26399,7 @@
     "1154219000036013008": {
       "salesOrderId": "1154219000036013008",
       "salesOrderNumber": "SO-07804",
-      "status": "open",
+      "status": "qr_generated",
       "processedOrder": {
         "id": "1154219000036013008",
         "zohoSalesOrderId": "1154219000036013008",
@@ -26705,70 +26705,100 @@
           "lineItemId": "1154219000036013011",
           "serialNumber": "26271173",
           "qrToken": "26271173",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013012-1": {
           "machineUnitId": "1154219000036013008-1154219000036013012-1",
           "lineItemId": "1154219000036013012",
           "serialNumber": "26271174",
           "qrToken": "26271174",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013012-2": {
           "machineUnitId": "1154219000036013008-1154219000036013012-2",
           "lineItemId": "1154219000036013012",
           "serialNumber": "26271175",
           "qrToken": "26271175",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013012-3": {
           "machineUnitId": "1154219000036013008-1154219000036013012-3",
           "lineItemId": "1154219000036013012",
           "serialNumber": "26271176",
           "qrToken": "26271176",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013012-4": {
           "machineUnitId": "1154219000036013008-1154219000036013012-4",
           "lineItemId": "1154219000036013012",
           "serialNumber": "26271177",
           "qrToken": "26271177",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013012-5": {
           "machineUnitId": "1154219000036013008-1154219000036013012-5",
           "lineItemId": "1154219000036013012",
           "serialNumber": "26271178",
           "qrToken": "26271178",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013013-1": {
           "machineUnitId": "1154219000036013008-1154219000036013013-1",
           "lineItemId": "1154219000036013013",
           "serialNumber": "26271179",
           "qrToken": "26271179",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013014-1": {
           "machineUnitId": "1154219000036013008-1154219000036013014-1",
           "lineItemId": "1154219000036013014",
           "serialNumber": "26271180",
           "qrToken": "26271180",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013015-1": {
           "machineUnitId": "1154219000036013008-1154219000036013015-1",
           "lineItemId": "1154219000036013015",
           "serialNumber": "26271181",
           "qrToken": "26271181",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         },
         "1154219000036013008-1154219000036013016-1": {
           "machineUnitId": "1154219000036013008-1154219000036013016-1",
           "lineItemId": "1154219000036013016",
           "serialNumber": "26271182",
           "qrToken": "26271182",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-09T12:36:27.989Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-09T12:36:29.542Z"
         }
       }
     }
