@@ -5955,6 +5955,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036271001": {
+      "id": "ship-1788934215351-qy3jf",
+      "itemId": "1154219000036271001",
+      "orderId": "1154219000036271001",
+      "machineId": "1154219000036271001-1154219000036271004-1",
+      "salesOrderNumber": "SO-07845",
+      "customerName": "SHREENATHJI RUBBER INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAL6072",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-09",
+      "notes": "",
+      "shippedAt": "2026-09-09T06:10:15.351Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
