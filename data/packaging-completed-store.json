@@ -16956,6 +16956,65 @@
       "machineIds": [
         "1154219000035854013-1154219000035854016-1"
       ]
+    },
+    "1154219000036707002": {
+      "completedAt": "2026-09-09T09:16:41.828Z",
+      "order": {
+        "id": "1154219000036707002",
+        "zohoSalesOrderId": "1154219000036707002",
+        "salesOrderNumber": "SO-07914",
+        "status": "open",
+        "customerName": "Aqdus Enterprises",
+        "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-09",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036707005",
+            "itemName": "Overlock (5 Thread)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280481",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036707002-1154219000036707005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271164",
+            "qrToken": "26271164",
+            "orderId": "1154219000036707002",
+            "lineItemId": "1154219000036707005",
+            "itemName": "Overlock (5 Thread)",
+            "sku": "",
+            "customerName": "Aqdus Enterprises",
+            "salesOrderNumber": "SO-07914",
+            "deliveryDate": "2026-09-09",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-09T14:09:05+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036707002-1154219000036707005-1"
+      ]
     }
   }
 }
