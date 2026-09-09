@@ -1,5 +1,95 @@
 {
   "orders": {
+    "1154219000036721008": {
+      "id": "1154219000036721008",
+      "zohoSalesOrderId": "1154219000036721008",
+      "salesOrderNumber": "SO-07916",
+      "status": "open",
+      "customerName": "HAMPTON SHOES LLP",
+      "shippingAddress": "15/58-1, FRIENDS ENCLAVE, CIVIL LINES, KANPUR, Kanpur Nagar, Uttar Pradesh, 208001",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-09",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036721011",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000279428",
+          "rate": 470000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036721008-1154219000036721011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036721008",
+          "lineItemId": "1154219000036721011",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "customerName": "HAMPTON SHOES LLP",
+          "salesOrderNumber": "SO-07916",
+          "deliveryDate": "2026-09-09",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-09T15:36:36+0530"
+    },
+    "1154219000036724001": {
+      "id": "1154219000036724001",
+      "zohoSalesOrderId": "1154219000036724001",
+      "salesOrderNumber": "SO-07915",
+      "status": "open",
+      "customerName": "Ravar Creative",
+      "shippingAddress": "11-2-93, Mylargadda,, Secunderabad, Telangana, 500061",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-09",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036724004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 330,
+          "dispatchCategory": "adhesive"
+        },
+        {
+          "id": "1154219000036724005",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost Extra from BSM to VRL Logistics Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-09T15:34:36+0530"
+    },
     "1154219000036707002": {
       "id": "1154219000036707002",
       "zohoSalesOrderId": "1154219000036707002",
@@ -9692,6 +9782,8 @@
     }
   },
   "orderIds": [
+    "1154219000036721008",
+    "1154219000036724001",
     "1154219000036707002",
     "1154219000036720001",
     "1154219000036717001",
@@ -9746,8 +9838,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-09T10:00:33.093Z",
-  "lastAttemptAt": "2026-09-09T10:07:39.960Z",
+  "lastSuccessfulSyncAt": "2026-09-09T10:07:45.627Z",
+  "lastAttemptAt": "2026-09-09T10:07:45.627Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
