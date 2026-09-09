@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271163,
+  "serialCounter": 26271164,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -25787,6 +25787,70 @@
           "zohoBackupQueuedAt": "2026-09-09T06:36:03.513Z",
           "zohoBackupLastAttemptAt": "2026-09-09T06:45:33.300Z",
           "zohoBackupSyncedAt": "2026-09-09T06:45:33.300Z"
+        }
+      }
+    },
+    "1154219000036707002": {
+      "salesOrderId": "1154219000036707002",
+      "salesOrderNumber": "SO-07914",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036707002",
+        "zohoSalesOrderId": "1154219000036707002",
+        "salesOrderNumber": "SO-07914",
+        "status": "open",
+        "customerName": "Aqdus Enterprises",
+        "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-09",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036707005",
+            "itemName": "Overlock (5 Thread)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280481",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036707002-1154219000036707005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036707002",
+            "lineItemId": "1154219000036707005",
+            "itemName": "Overlock (5 Thread)",
+            "sku": "",
+            "customerName": "Aqdus Enterprises",
+            "salesOrderNumber": "SO-07914",
+            "deliveryDate": "2026-09-09",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-09T14:09:05+0530"
+      },
+      "machines": {
+        "1154219000036707002-1154219000036707005-1": {
+          "machineUnitId": "1154219000036707002-1154219000036707005-1",
+          "lineItemId": "1154219000036707005",
+          "serialNumber": "26271164",
+          "qrToken": "26271164",
+          "qrStatus": "pending"
         }
       }
     }
