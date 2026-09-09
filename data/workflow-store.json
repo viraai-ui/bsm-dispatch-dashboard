@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271171,
+  "serialCounter": 26271172,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -26316,6 +26316,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-09T11:30:33.136Z",
           "zohoBackupSyncedAt": "2026-09-09T11:30:33.136Z"
+        }
+      }
+    },
+    "1154219000036734002": {
+      "salesOrderId": "1154219000036734002",
+      "salesOrderNumber": "SO-07919",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036734002",
+        "zohoSalesOrderId": "1154219000036734002",
+        "salesOrderNumber": "SO-07919",
+        "status": "open",
+        "customerName": "SHIVA DIGITRADE",
+        "shippingAddress": "R-235, SHIVA DIGITRADE, WARD-12, Panipat, Haryana, 132103, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-09",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036734005",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226914",
+            "rate": 55000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036734002-1154219000036734005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036734002",
+            "lineItemId": "1154219000036734005",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "customerName": "SHIVA DIGITRADE",
+            "salesOrderNumber": "SO-07919",
+            "deliveryDate": "2026-09-09",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-09T17:58:38+0530"
+      },
+      "machines": {
+        "1154219000036734002-1154219000036734005-1": {
+          "machineUnitId": "1154219000036734002-1154219000036734005-1",
+          "lineItemId": "1154219000036734005",
+          "serialNumber": "26271172",
+          "qrToken": "26271172",
+          "qrStatus": "pending"
         }
       }
     }
