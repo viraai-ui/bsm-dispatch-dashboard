@@ -25873,7 +25873,7 @@
       "salesOrderId": "1154219000036721008",
       "salesOrderNumber": "SO-07916",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-09T10:12:16.553Z",
       "processedOrder": {
         "id": "1154219000036721008",
@@ -25942,7 +25942,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Able"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
