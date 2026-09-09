@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "LEPERA INDUSTRIES PRIVATE LIMITED",
+      "salesOrderNumber": "SO-07912",
+      "paymentAmount": 15623,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07912/2026-09-09/1788930665430-eaf6622b-46be-491b-a40a-4b8fdabe1311-WhatsApp-Image-2026-09-09-at-9.17.44-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07912%2F2026-09-09%2F1788930665430-eaf6622b-46be-491b-a40a-4b8fdabe1311-WhatsApp-Image-2026-09-09-at-9.17.44-AM.jpg",
+          "name": "WhatsApp Image 2026-09-09 at 9.17.44 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 47689
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07912/2026-09-09/1788930665430-eaf6622b-46be-491b-a40a-4b8fdabe1311-WhatsApp-Image-2026-09-09-at-9.17.44-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07912%2F2026-09-09%2F1788930665430-eaf6622b-46be-491b-a40a-4b8fdabe1311-WhatsApp-Image-2026-09-09-at-9.17.44-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-09 at 9.17.44 AM.jpeg",
+      "publicDeleteTokenHash": "faba74e443371f6e63d0a11a9f02957135960fe9106f585dce0de2465143aec9",
+      "id": "payment-866d2ddd-0e12-49bd-ad77-15a527daddbc",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "00b46ed1810246fcb76c4396853694a1",
+      "createdAt": "2026-09-09T05:11:07.183Z",
+      "updatedAt": "2026-09-09T05:11:07.183Z"
+    },
+    {
       "customerName": "Doershappy",
       "salesOrderNumber": "SO-07909",
       "paymentAmount": 69030,
