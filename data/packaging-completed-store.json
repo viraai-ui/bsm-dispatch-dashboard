@@ -17015,6 +17015,65 @@
       "machineIds": [
         "1154219000036707002-1154219000036707005-1"
       ]
+    },
+    "1154219000036714004": {
+      "completedAt": "2026-09-09T11:59:23.625Z",
+      "order": {
+        "id": "1154219000036714004",
+        "zohoSalesOrderId": "1154219000036714004",
+        "salesOrderNumber": "SO-07917",
+        "status": "open",
+        "customerName": "Nice Industrial Parts",
+        "shippingAddress": "Ground Floor, Plot No-153, Pkt-L, Sec-5 DSIDC Landmark, Bawana, Delhi, 110039",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-09",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036714007",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226295",
+            "rate": 36440,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036714004-1154219000036714007-1",
+            "unitNumber": 1,
+            "serialNumber": "26271166",
+            "qrToken": "26271166",
+            "orderId": "1154219000036714004",
+            "lineItemId": "1154219000036714007",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "Nice Industrial Parts",
+            "salesOrderNumber": "SO-07917",
+            "deliveryDate": "2026-09-09",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-09T16:21:07+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036714004-1154219000036714007-1"
+      ]
     }
   }
 }
