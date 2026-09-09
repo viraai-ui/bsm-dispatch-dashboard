@@ -6017,6 +6017,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036714004": {
+      "id": "ship-1788955222095-nv11w",
+      "itemId": "1154219000036714004",
+      "orderId": "1154219000036714004",
+      "machineId": "1154219000036714004-1154219000036714007-1",
+      "salesOrderNumber": "SO-07917",
+      "customerName": "Nice Industrial Parts",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-09",
+      "notes": "",
+      "shippedAt": "2026-09-09T12:00:22.095Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
