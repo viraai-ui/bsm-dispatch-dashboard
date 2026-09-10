@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "JEET INDUSTRIES",
+      "salesOrderNumber": "SO-07804",
+      "paymentAmount": 250000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07804/2026-09-10/1789015761178-910e0ce3-235b-42aa-8ac2-dae0a5380409-6dac4051-4b9b-4b81-a221-a7789354cd1c.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07804%2F2026-09-10%2F1789015761178-910e0ce3-235b-42aa-8ac2-dae0a5380409-6dac4051-4b9b-4b81-a221-a7789354cd1c.jpg",
+          "name": "6dac4051-4b9b-4b81-a221-a7789354cd1c.jpg",
+          "contentType": "image/jpeg",
+          "size": 70338
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07804/2026-09-10/1789015761178-910e0ce3-235b-42aa-8ac2-dae0a5380409-6dac4051-4b9b-4b81-a221-a7789354cd1c.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07804%2F2026-09-10%2F1789015761178-910e0ce3-235b-42aa-8ac2-dae0a5380409-6dac4051-4b9b-4b81-a221-a7789354cd1c.jpg",
+      "screenshotName": "6dac4051-4b9b-4b81-a221-a7789354cd1c.jpg",
+      "publicDeleteTokenHash": "6944ccfb624c1f7505521596b00b8b2c63b74f6aa2520fad13040ec621c9e79d",
+      "id": "payment-3c2daa10-b487-4e3b-b4bc-060b2b207038",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "1aec57ec538b4f4199c6b2a60e896f5e",
+      "createdAt": "2026-09-10T04:49:22.638Z",
+      "updatedAt": "2026-09-10T04:49:22.638Z"
+    },
+    {
       "customerName": "D Zone",
       "salesOrderNumber": "SO-07759",
       "paymentAmount": 142250,
