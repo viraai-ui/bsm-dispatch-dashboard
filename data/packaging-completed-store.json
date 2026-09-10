@@ -17575,6 +17575,66 @@
       "machineIds": [
         "1154219000036714019-1154219000036714022-1"
       ]
+    },
+    "1154219000036721021": {
+      "completedAt": "2026-09-10T10:37:07.185Z",
+      "order": {
+        "id": "1154219000036721021",
+        "zohoSalesOrderId": "1154219000036721021",
+        "salesOrderNumber": "SO-07921",
+        "status": "open",
+        "customerName": "Welcome Shoes",
+        "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036721024",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227284",
+            "rate": 18000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036721021-1154219000036721024-1",
+            "unitNumber": 1,
+            "serialNumber": "26271184",
+            "qrToken": "26271184",
+            "orderId": "1154219000036721021",
+            "lineItemId": "1154219000036721024",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "Welcome Shoes",
+            "salesOrderNumber": "SO-07921",
+            "deliveryDate": "2026-09-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T12:16:50+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000036721021-1154219000036721024-1"
+      ]
     }
   }
 }
