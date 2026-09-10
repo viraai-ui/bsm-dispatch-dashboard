@@ -50,34 +50,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-10T16:10:06+0530"
     },
-    "1154219000036721035": {
-      "id": "1154219000036721035",
-      "zohoSalesOrderId": "1154219000036721035",
-      "salesOrderNumber": "SO-07926",
-      "status": "open",
-      "customerName": "RAJYAREKHA TRADE PVT. LTD.",
-      "shippingAddress": "Plot No. 1021, MIE-A, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036721038",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 62.5,
-          "pendingQuantity": 62.5,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 320,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-10T15:52:53+0530"
-    },
     "1154219000036723009": {
       "id": "1154219000036723009",
       "zohoSalesOrderId": "1154219000036723009",
@@ -105,56 +77,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-10T15:10:23+0530"
-    },
-    "1154219000036714019": {
-      "id": "1154219000036714019",
-      "zohoSalesOrderId": "1154219000036714019",
-      "salesOrderNumber": "SO-07924",
-      "status": "open",
-      "customerName": "V.K.D FOOTWEARS",
-      "shippingAddress": "BLOCK F-2/232, V.K.D FOOTWEARS, SUNDER NAGRI, SUNDER NAGRI, Shahdara, Delhi, 110093",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036714022",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225413",
-          "rate": 45000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036714019-1154219000036714022-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036714019",
-          "lineItemId": "1154219000036714022",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "V.K.D FOOTWEARS",
-          "salesOrderNumber": "SO-07924",
-          "deliveryDate": "2026-09-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-10T15:25:15+0530"
     },
     "1154219000036696007": {
       "id": "1154219000036696007",
@@ -9934,9 +9856,7 @@
   },
   "orderIds": [
     "1154219000036713599",
-    "1154219000036721035",
     "1154219000036723009",
-    "1154219000036714019",
     "1154219000036696007",
     "1154219000036708018",
     "1154219000036721021",
@@ -9994,8 +9914,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T12:00:39.489Z",
-  "lastAttemptAt": "2026-09-10T12:16:52.557Z",
+  "lastSuccessfulSyncAt": "2026-09-10T12:16:57.600Z",
+  "lastAttemptAt": "2026-09-10T12:16:57.600Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
