@@ -27038,11 +27038,13 @@
           "qrToken": "26271184",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-10T07:01:09.520Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-10T07:01:11.036Z",
           "processedAt": "2026-09-10T07:02:03.447Z",
           "dispatchNote": "local",
-          "vendor": "Shree Sai"
+          "vendor": "Shree Sai",
+          "zohoBackupLastAttemptAt": "2026-09-10T07:15:33.607Z",
+          "zohoBackupSyncedAt": "2026-09-10T07:15:33.607Z"
         }
       },
       "dispatchSortOrder": 1
