@@ -6141,6 +6141,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036567001": {
+      "id": "ship-1789024741493-nwtdr",
+      "itemId": "1154219000036567001",
+      "orderId": "1154219000036567001",
+      "machineId": "1154219000036567001-1154219000036567004-1",
+      "salesOrderNumber": "SO-07902",
+      "customerName": "SUMER CHAND & SONS",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LT6027",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-10",
+      "notes": "",
+      "shippedAt": "2026-09-10T07:19:01.493Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
