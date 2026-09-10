@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036708018": {
+      "id": "1154219000036708018",
+      "zohoSalesOrderId": "1154219000036708018",
+      "salesOrderNumber": "SO-07922",
+      "status": "open",
+      "customerName": "FORTUNE ELASTOMERS PVT LTD",
+      "shippingAddress": "10/360 M PLOT NO 34 KSIDC KINALOOR, CALICUT, KERALA, 673612",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036708021",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225787",
+          "rate": 27500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036708018-1154219000036708021-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036708018",
+          "lineItemId": "1154219000036708021",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "FORTUNE ELASTOMERS PVT LTD",
+          "salesOrderNumber": "SO-07922",
+          "deliveryDate": "2026-09-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-10T12:50:21+0530"
+    },
     "1154219000036721021": {
       "id": "1154219000036721021",
       "zohoSalesOrderId": "1154219000036721021",
@@ -613,89 +663,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-07T15:07:28+0530"
-    },
-    "1154219000036567001": {
-      "id": "1154219000036567001",
-      "zohoSalesOrderId": "1154219000036567001",
-      "salesOrderNumber": "SO-07902",
-      "status": "open",
-      "customerName": "SUMER CHAND & SONS",
-      "shippingAddress": "G-2, SECTOR-4,, DSIDC INDUSTRIAL AREA, BAWANA, Delhi, 110039, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-07",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036703056",
-          "itemName": "Shoe repairing machine (5%)",
-          "sku": "2971 (5%)",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000009427388",
-          "rate": 60000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036569003",
-          "itemName": "Eyelet punching double channel [400 & 600 Number]",
-          "sku": "989",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000227395",
-          "rate": 162500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036567001-1154219000036703056-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036567001",
-          "lineItemId": "1154219000036703056",
-          "itemName": "Shoe repairing machine (5%)",
-          "sku": "2971 (5%)",
-          "customerName": "SUMER CHAND & SONS",
-          "salesOrderNumber": "SO-07902",
-          "deliveryDate": "2026-09-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036567001-1154219000036569003-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036567001",
-          "lineItemId": "1154219000036569003",
-          "itemName": "Eyelet punching double channel [400 & 600 Number]",
-          "sku": "989",
-          "customerName": "SUMER CHAND & SONS",
-          "salesOrderNumber": "SO-07902",
-          "deliveryDate": "2026-09-07",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-09T13:24:50+0530"
     },
     "1154219000036558002": {
       "id": "1154219000036558002",
@@ -9782,6 +9749,7 @@
     }
   },
   "orderIds": [
+    "1154219000036708018",
     "1154219000036721021",
     "1154219000036724026",
     "1154219000036724001",
@@ -9790,7 +9758,6 @@
     "1154219000036663006",
     "1154219000036665008",
     "1154219000036548004",
-    "1154219000036567001",
     "1154219000036558002",
     "1154219000036474014",
     "1154219000036482005",
@@ -9838,8 +9805,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T07:00:34.225Z",
-  "lastAttemptAt": "2026-09-10T07:20:18.590Z",
+  "lastSuccessfulSyncAt": "2026-09-10T07:20:37.153Z",
+  "lastAttemptAt": "2026-09-10T07:20:37.153Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
