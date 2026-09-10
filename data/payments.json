@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Assert Footwears",
+      "paymentAmount": 24150,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/744b3089-1bdd-499d-b58e-511f82790d1f/2026-09-10/1789021606757-7dab729f-ef54-4ccf-908a-c00c5b4e9399-WhatsApp-Image-2026-09-10-at-11.55.56-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F744b3089-1bdd-499d-b58e-511f82790d1f%2F2026-09-10%2F1789021606757-7dab729f-ef54-4ccf-908a-c00c5b4e9399-WhatsApp-Image-2026-09-10-at-11.55.56-AM.jpg",
+          "name": "WhatsApp Image 2026-09-10 at 11.55.56 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 66211
+        }
+      ],
+      "screenshotKey": "payments/public/manual/744b3089-1bdd-499d-b58e-511f82790d1f/2026-09-10/1789021606757-7dab729f-ef54-4ccf-908a-c00c5b4e9399-WhatsApp-Image-2026-09-10-at-11.55.56-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F744b3089-1bdd-499d-b58e-511f82790d1f%2F2026-09-10%2F1789021606757-7dab729f-ef54-4ccf-908a-c00c5b4e9399-WhatsApp-Image-2026-09-10-at-11.55.56-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-10 at 11.55.56 AM.jpeg",
+      "publicDeleteTokenHash": "3bbc3bfbbde1bba26818b019c2dc0e3cbe6fb6c5359989479f8bdfef042dfd9a",
+      "id": "payment-8669f2d5-823b-45ee-a73e-39db734bfff7",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "a0e7d5bb94274fc38c6f5222b538f87a",
+      "createdAt": "2026-09-10T06:26:49.847Z",
+      "updatedAt": "2026-09-10T06:26:49.847Z"
+    },
+    {
       "customerName": "SUMER CHAND & SONS",
       "salesOrderNumber": "SO-07902",
       "paymentAmount": 26250,
