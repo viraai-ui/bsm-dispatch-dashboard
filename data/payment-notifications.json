@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-fbe86ff3-184f-43d0-9fd6-1549a4750c3a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-dce918a3-2a73-4df2-a520-a4a4c5c136e0",
+      "salesOrderNumber": "SO-07922",
+      "customerName": "FORTUNE ELASTOMERS PVT LTD",
+      "paymentAmount": 34830,
+      "createdAt": "2026-09-10T07:10:17.294Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-145fd123-b2e7-49d2-a3fd-b658690fe2e4",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-dce918a3-2a73-4df2-a520-a4a4c5c136e0",
+      "salesOrderNumber": "SO-07922",
+      "customerName": "FORTUNE ELASTOMERS PVT LTD",
+      "paymentAmount": 34830,
+      "createdAt": "2026-09-10T07:10:17.294Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-bad4dae5-95ec-4d33-9319-5007041b05ef",
       "type": "payment-created",
       "recipientUserId": "u-admin",
