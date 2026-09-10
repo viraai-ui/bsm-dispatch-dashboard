@@ -6172,6 +6172,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036714019": {
+      "id": "ship-1789041752329-hzpzb",
+      "itemId": "1154219000036714019",
+      "orderId": "1154219000036714019",
+      "machineId": "1154219000036714019-1154219000036714022-1",
+      "salesOrderNumber": "SO-07924",
+      "customerName": "V.K.D FOOTWEARS",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS0419",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-10",
+      "notes": "",
+      "shippedAt": "2026-09-10T12:02:32.329Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
