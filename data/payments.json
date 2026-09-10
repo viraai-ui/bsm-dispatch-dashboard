@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+      "salesOrderNumber": "SO-07774",
+      "paymentAmount": 384000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07774/2026-09-10/1789030762921-7235d658-f010-4ea6-8b47-37d1b73bf16c-WhatsApp-Image-2026-09-10-at-2.25.56-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07774%2F2026-09-10%2F1789030762921-7235d658-f010-4ea6-8b47-37d1b73bf16c-WhatsApp-Image-2026-09-10-at-2.25.56-PM.jpg",
+          "name": "WhatsApp Image 2026-09-10 at 2.25.56 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 156056
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07774/2026-09-10/1789030762921-7235d658-f010-4ea6-8b47-37d1b73bf16c-WhatsApp-Image-2026-09-10-at-2.25.56-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07774%2F2026-09-10%2F1789030762921-7235d658-f010-4ea6-8b47-37d1b73bf16c-WhatsApp-Image-2026-09-10-at-2.25.56-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-10 at 2.25.56 PM.jpeg",
+      "publicDeleteTokenHash": "e05ffb93869ddf1119753bf2ea82fb3d3115d47761eb70d9747dab31bb4975bb",
+      "id": "payment-294881ee-189f-46c2-85f3-09357dff2602",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "cbfa2181634f47349db7a7fee7b13a1c",
+      "createdAt": "2026-09-10T08:59:25.200Z",
+      "updatedAt": "2026-09-10T08:59:25.200Z"
+    },
+    {
       "customerName": "Rajyog Enterprises",
       "salesOrderNumber": "SO-07749",
       "paymentAmount": 442800,
