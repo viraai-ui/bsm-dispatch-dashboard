@@ -1,5 +1,33 @@
 {
   "orders": {
+    "1154219000036723009": {
+      "id": "1154219000036723009",
+      "zohoSalesOrderId": "1154219000036723009",
+      "salesOrderNumber": "SO-07925",
+      "status": "open",
+      "customerName": "STAR GLOBAL",
+      "shippingAddress": "PHASE 6, PLOT NO 117, UDYOG VIHAR, SECTOR\n37, GURGAON, HARYANA-122004",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-10",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036723012",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 340,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-10T15:10:23+0530"
+    },
     "1154219000036714019": {
       "id": "1154219000036714019",
       "zohoSalesOrderId": "1154219000036714019",
@@ -6974,8 +7002,8 @@
       "zohoSalesOrderId": "1154219000035890003",
       "salesOrderNumber": "SO-07774",
       "status": "open",
-      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
-      "shippingAddress": "Khasra No. 508, Plot No. 9, Industrial Area, Basai Encalave-1, Gurugram, Haryana, India",
+      "customerName": "Auto Foam Industries (Alwar)",
+      "shippingAddress": "F-11 E88 Khushkera, RIICO Industrial Area, Khushkhera, Alwar, Rajasthan, 301707, India",
       "salesperson": "Anuj Kumar",
       "deliveryDate": "2026-09-22",
       "dashboardStatus": "Not Generated",
@@ -7004,7 +7032,7 @@
           "lineItemId": "1154219000035890006",
           "itemName": "Beam Cutting Press (40 ton)",
           "sku": "",
-          "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+          "customerName": "Auto Foam Industries (Alwar)",
           "salesOrderNumber": "SO-07774",
           "deliveryDate": "2026-09-22",
           "status": "Not Generated",
@@ -7017,7 +7045,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-08-20T13:36:57+0530"
+      "zohoLastModifiedTime": "2026-09-10T14:58:12+0530"
     },
     "1154219000035891004": {
       "id": "1154219000035891004",
@@ -9860,6 +9888,7 @@
     }
   },
   "orderIds": [
+    "1154219000036723009",
     "1154219000036714019",
     "1154219000036696007",
     "1154219000036708018",
@@ -9918,8 +9947,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T09:20:31.707Z",
-  "lastAttemptAt": "2026-09-10T09:40:25.042Z",
+  "lastSuccessfulSyncAt": "2026-09-10T09:40:33.575Z",
+  "lastAttemptAt": "2026-09-10T09:40:33.575Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
