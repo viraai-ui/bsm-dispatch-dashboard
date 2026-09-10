@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-c54aa1f1-f148-49ad-9fbe-8a9a51c6a4b8",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-ac464bc5-0e41-488c-8569-85c32c5a4ee1",
+      "salesOrderNumber": "SO-07902",
+      "customerName": "SUMER CHAND & SONS",
+      "paymentAmount": 26250,
+      "createdAt": "2026-09-10T06:19:32.604Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-41759c59-56e3-40ae-844c-ed4815215b92",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-ac464bc5-0e41-488c-8569-85c32c5a4ee1",
+      "salesOrderNumber": "SO-07902",
+      "customerName": "SUMER CHAND & SONS",
+      "paymentAmount": 26250,
+      "createdAt": "2026-09-10T06:19:32.604Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-d5776b2d-d24d-42be-8b9d-d4573b331583",
       "type": "payment-created",
       "recipientUserId": "u-admin",
