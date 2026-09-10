@@ -27052,7 +27052,9 @@
     "1154219000036708018": {
       "salesOrderId": "1154219000036708018",
       "salesOrderNumber": "SO-07922",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-10T07:22:19.587Z",
       "processedOrder": {
         "id": "1154219000036708018",
         "zohoSalesOrderId": "1154219000036708018",
@@ -27082,8 +27084,8 @@
           {
             "id": "1154219000036708018-1154219000036708021-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271185",
+            "qrToken": "26271185",
             "orderId": "1154219000036708018",
             "lineItemId": "1154219000036708021",
             "itemName": "Round Blade Edge trimming Machine",
@@ -27091,14 +27093,17 @@
             "customerName": "FORTUNE ELASTOMERS PVT LTD",
             "salesOrderNumber": "SO-07922",
             "deliveryDate": "2026-09-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-10T12:50:21+0530"
@@ -27112,7 +27117,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-10T07:21:17.787Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-10T07:21:18.742Z"
+          "zohoBackupQueuedAt": "2026-09-10T07:21:18.742Z",
+          "processedAt": "2026-09-10T07:22:19.587Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
