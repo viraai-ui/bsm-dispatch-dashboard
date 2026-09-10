@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-7cbd146f-1d22-4103-b759-38e2d889f1ed",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-364f782d-f283-4705-93dc-2b49b0673534",
+      "salesOrderNumber": "SO-07749",
+      "customerName": "Rajyog Enterprises",
+      "paymentAmount": 442800,
+      "createdAt": "2026-09-10T08:41:57.331Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-a4c5c915-477a-4c9c-bd02-6f474280bbc6",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-364f782d-f283-4705-93dc-2b49b0673534",
+      "salesOrderNumber": "SO-07749",
+      "customerName": "Rajyog Enterprises",
+      "paymentAmount": 442800,
+      "createdAt": "2026-09-10T08:41:57.331Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-59fac846-dd04-44f9-8acf-1778e461cf3a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
