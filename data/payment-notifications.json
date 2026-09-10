@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-d5776b2d-d24d-42be-8b9d-d4573b331583",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-3c2daa10-b487-4e3b-b4bc-060b2b207038",
+      "salesOrderNumber": "SO-07804",
+      "customerName": "JEET INDUSTRIES",
+      "paymentAmount": 250000,
+      "createdAt": "2026-09-10T04:49:25.185Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-cdadf11a-8fea-4fb1-a9cf-aea0e8877f23",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-3c2daa10-b487-4e3b-b4bc-060b2b207038",
+      "salesOrderNumber": "SO-07804",
+      "customerName": "JEET INDUSTRIES",
+      "paymentAmount": 250000,
+      "createdAt": "2026-09-10T04:49:25.185Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-a4e55ea7-a42d-4207-8d34-a6a4837b1173",
       "type": "payment-created",
       "recipientUserId": "u-admin",
