@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271183,
+  "serialCounter": 26271184,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -26965,6 +26965,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-10T07:00:34.410Z",
           "zohoBackupSyncedAt": "2026-09-10T07:00:34.410Z"
+        }
+      }
+    },
+    "1154219000036721021": {
+      "salesOrderId": "1154219000036721021",
+      "salesOrderNumber": "SO-07921",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036721021",
+        "zohoSalesOrderId": "1154219000036721021",
+        "salesOrderNumber": "SO-07921",
+        "status": "open",
+        "customerName": "Welcome Shoes",
+        "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036721024",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227284",
+            "rate": 18000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036721021-1154219000036721024-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036721021",
+            "lineItemId": "1154219000036721024",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "Welcome Shoes",
+            "salesOrderNumber": "SO-07921",
+            "deliveryDate": "2026-09-10",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T12:16:50+0530"
+      },
+      "machines": {
+        "1154219000036721021-1154219000036721024-1": {
+          "machineUnitId": "1154219000036721021-1154219000036721024-1",
+          "lineItemId": "1154219000036721024",
+          "serialNumber": "26271184",
+          "qrToken": "26271184",
+          "qrStatus": "pending"
         }
       }
     }
