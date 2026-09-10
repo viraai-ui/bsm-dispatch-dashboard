@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+      "salesOrderNumber": "SO-07923",
+      "paymentAmount": 113280,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07923/2026-09-10/1789028578986-b076cc10-ad5b-4bc7-9ebf-69571ad6e3b7-WhatsApp-Image-2026-09-09-at-5.14.51-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07923%2F2026-09-10%2F1789028578986-b076cc10-ad5b-4bc7-9ebf-69571ad6e3b7-WhatsApp-Image-2026-09-09-at-5.14.51-PM.jpg",
+          "name": "WhatsApp Image 2026-09-09 at 5.14.51 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 48991
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07923/2026-09-10/1789028578986-b076cc10-ad5b-4bc7-9ebf-69571ad6e3b7-WhatsApp-Image-2026-09-09-at-5.14.51-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07923%2F2026-09-10%2F1789028578986-b076cc10-ad5b-4bc7-9ebf-69571ad6e3b7-WhatsApp-Image-2026-09-09-at-5.14.51-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-09 at 5.14.51 PM.jpeg",
+      "publicDeleteTokenHash": "f73e7ec906d30a43966b6831819d3f1f7e4b485c178f895ad5af02427845897c",
+      "id": "payment-ec3168a1-20fa-48cf-8e3c-846a0de1caf7",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "114c649b97a24f928552ae3ab612c07d",
+      "createdAt": "2026-09-10T08:23:00.308Z",
+      "updatedAt": "2026-09-10T08:23:00.308Z"
+    },
+    {
       "customerName": "FORTUNE ELASTOMERS PVT LTD",
       "salesOrderNumber": "SO-07922",
       "paymentAmount": 34830,
