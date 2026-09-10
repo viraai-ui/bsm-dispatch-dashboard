@@ -17635,6 +17635,65 @@
       "machineIds": [
         "1154219000036721021-1154219000036721024-1"
       ]
+    },
+    "1154219000036713599": {
+      "completedAt": "2026-09-10T12:29:14.463Z",
+      "order": {
+        "id": "1154219000036713599",
+        "zohoSalesOrderId": "1154219000036713599",
+        "salesOrderNumber": "SO-07927",
+        "status": "open",
+        "customerName": "narmada polymers",
+        "shippingAddress": "Plot No. 105, Sector -53, Phase -1, HSIIDC Kundli , Sub Tehsil - Rai , District - Sonipat , Haryana -131028, Sonipat, Haryana, 131028, India",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036713604",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000279556",
+            "rate": 460000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036713599-1154219000036713604-1",
+            "unitNumber": 1,
+            "serialNumber": "26271187",
+            "qrToken": "26271187",
+            "orderId": "1154219000036713599",
+            "lineItemId": "1154219000036713604",
+            "itemName": "UV Curing machine",
+            "sku": "",
+            "customerName": "narmada polymers",
+            "salesOrderNumber": "SO-07927",
+            "deliveryDate": "2026-09-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T16:10:06+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036713599-1154219000036713604-1"
+      ]
     }
   }
 }
