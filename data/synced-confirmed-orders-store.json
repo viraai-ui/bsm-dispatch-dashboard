@@ -2346,6 +2346,18 @@
           "zohoItemId": "1154219000000277612",
           "rate": 260000,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036703134",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "description": "60*20*4 Inch",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000335059",
+          "rate": 22000,
+          "dispatchCategory": "machine"
         }
       ],
       "machines": [
@@ -2369,9 +2381,30 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000036269021-1154219000036703134-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036269021",
+          "lineItemId": "1154219000036703134",
+          "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+          "sku": "PP Board 60*20*3",
+          "customerName": "LANDMARK ENTERPRISES",
+          "salesOrderNumber": "SO-07860",
+          "deliveryDate": "2026-09-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "60*20*4 Inch"
         }
       ],
-      "zohoLastModifiedTime": "2026-09-01T13:35:02+0530"
+      "zohoLastModifiedTime": "2026-09-10T13:48:11+0530"
     },
     "1154219000036295003": {
       "id": "1154219000036295003",
@@ -9805,8 +9838,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T08:04:44.463Z",
-  "lastAttemptAt": "2026-09-10T08:19:41.619Z",
+  "lastSuccessfulSyncAt": "2026-09-10T08:19:47.276Z",
+  "lastAttemptAt": "2026-09-10T08:19:47.276Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
