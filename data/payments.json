@@ -1,6 +1,33 @@
 {
   "payments": [
     {
+      "customerName": "SUMER CHAND & SONS",
+      "salesOrderNumber": "SO-07902",
+      "paymentAmount": 26250,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "remarks": "Pending Difference Amount",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07902/2026-09-10/1789021167342-6ce610b8-4fdc-4e86-83ff-b9a1557c522a-f28ab382-a795-45e2-84e6-53f38ba3359a.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07902%2F2026-09-10%2F1789021167342-6ce610b8-4fdc-4e86-83ff-b9a1557c522a-f28ab382-a795-45e2-84e6-53f38ba3359a.jpg",
+          "name": "f28ab382-a795-45e2-84e6-53f38ba3359a.jpg",
+          "contentType": "image/jpeg",
+          "size": 67652
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07902/2026-09-10/1789021167342-6ce610b8-4fdc-4e86-83ff-b9a1557c522a-f28ab382-a795-45e2-84e6-53f38ba3359a.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07902%2F2026-09-10%2F1789021167342-6ce610b8-4fdc-4e86-83ff-b9a1557c522a-f28ab382-a795-45e2-84e6-53f38ba3359a.jpg",
+      "screenshotName": "f28ab382-a795-45e2-84e6-53f38ba3359a.jpg",
+      "publicDeleteTokenHash": "53a1b270ac8957f6af37e9e6e7e5dff211fea194f2db31292992fae16d26a5a1",
+      "id": "payment-ac464bc5-0e41-488c-8569-85c32c5a4ee1",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "a9264bc2bfe649acb2eaf1272d4a3158",
+      "createdAt": "2026-09-10T06:19:30.492Z",
+      "updatedAt": "2026-09-10T06:19:30.492Z"
+    },
+    {
       "customerName": "JEET INDUSTRIES",
       "salesOrderNumber": "SO-07804",
       "paymentAmount": 250000,
