@@ -26969,13 +26969,13 @@
           "zohoBackupSyncedAt": "2026-09-10T07:00:34.410Z"
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 3
     },
     "1154219000036721021": {
       "salesOrderId": "1154219000036721021",
       "salesOrderNumber": "SO-07921",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-10T07:02:03.447Z",
       "processedOrder": {
         "id": "1154219000036721021",
@@ -27044,7 +27044,8 @@
           "dispatchNote": "local",
           "vendor": "Shree Sai"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
