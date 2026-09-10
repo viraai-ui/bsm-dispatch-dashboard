@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271182,
+  "serialCounter": 26271183,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -26888,6 +26888,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-09T12:45:32.722Z",
           "zohoBackupSyncedAt": "2026-09-09T12:45:32.722Z"
+        }
+      }
+    },
+    "1154219000036724026": {
+      "salesOrderId": "1154219000036724026",
+      "salesOrderNumber": "SO-07920",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036724026",
+        "zohoSalesOrderId": "1154219000036724026",
+        "salesOrderNumber": "SO-07920",
+        "status": "open",
+        "customerName": "Assert Footwears",
+        "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036724029",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 23000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036724026-1154219000036724029-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036724026",
+            "lineItemId": "1154219000036724029",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Assert Footwears",
+            "salesOrderNumber": "SO-07920",
+            "deliveryDate": "2026-09-10",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T12:16:20+0530"
+      },
+      "machines": {
+        "1154219000036724026-1154219000036724029-1": {
+          "machineUnitId": "1154219000036724026-1154219000036724029-1",
+          "lineItemId": "1154219000036724029",
+          "serialNumber": "26271183",
+          "qrToken": "26271183",
+          "qrStatus": "pending"
         }
       }
     }
