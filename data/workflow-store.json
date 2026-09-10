@@ -27129,7 +27129,9 @@
     "1154219000036714019": {
       "salesOrderId": "1154219000036714019",
       "salesOrderNumber": "SO-07924",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-10T08:30:22.079Z",
       "processedOrder": {
         "id": "1154219000036714019",
         "zohoSalesOrderId": "1154219000036714019",
@@ -27159,8 +27161,8 @@
           {
             "id": "1154219000036714019-1154219000036714022-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271186",
+            "qrToken": "26271186",
             "orderId": "1154219000036714019",
             "lineItemId": "1154219000036714022",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -27168,14 +27170,17 @@
             "customerName": "V.K.D FOOTWEARS",
             "salesOrderNumber": "SO-07924",
             "deliveryDate": "2026-09-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-10T13:56:53+0530"
@@ -27189,7 +27194,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-10T08:27:48.576Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-10T08:27:49.736Z"
+          "zohoBackupQueuedAt": "2026-09-10T08:27:49.736Z",
+          "processedAt": "2026-09-10T08:30:22.079Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
