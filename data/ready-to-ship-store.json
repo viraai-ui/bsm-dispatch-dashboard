@@ -6079,6 +6079,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036734002": {
+      "id": "ship-1789017081424-0r3b9",
+      "itemId": "1154219000036734002",
+      "orderId": "1154219000036734002",
+      "machineId": "1154219000036734002-1154219000036734005-1",
+      "salesOrderNumber": "SO-07919",
+      "customerName": "SHIVA DIGITRADE",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-09",
+      "notes": "",
+      "shippedAt": "2026-09-10T05:11:21.424Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
