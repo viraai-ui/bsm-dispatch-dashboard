@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-59fac846-dd04-44f9-8acf-1778e461cf3a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-ec3168a1-20fa-48cf-8e3c-846a0de1caf7",
+      "salesOrderNumber": "SO-07923",
+      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+      "paymentAmount": 113280,
+      "createdAt": "2026-09-10T08:23:02.502Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-186c4c1c-fd0e-4e38-83fe-06aa1f38c31e",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-ec3168a1-20fa-48cf-8e3c-846a0de1caf7",
+      "salesOrderNumber": "SO-07923",
+      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+      "paymentAmount": 113280,
+      "createdAt": "2026-09-10T08:23:02.502Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-fbe86ff3-184f-43d0-9fd6-1549a4750c3a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
