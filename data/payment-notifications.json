@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-bad4dae5-95ec-4d33-9319-5007041b05ef",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-8669f2d5-823b-45ee-a73e-39db734bfff7",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Assert Footwears",
+      "paymentAmount": 24150,
+      "createdAt": "2026-09-10T06:26:52.363Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-9eb058fb-a32b-497a-86c6-d83492fa6215",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-8669f2d5-823b-45ee-a73e-39db734bfff7",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Assert Footwears",
+      "paymentAmount": 24150,
+      "createdAt": "2026-09-10T06:26:52.363Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-c54aa1f1-f148-49ad-9fbe-8a9a51c6a4b8",
       "type": "payment-created",
       "recipientUserId": "u-admin",
