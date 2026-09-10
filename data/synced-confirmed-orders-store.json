@@ -1,105 +1,5 @@
 {
   "orders": {
-    "1154219000036734002": {
-      "id": "1154219000036734002",
-      "zohoSalesOrderId": "1154219000036734002",
-      "salesOrderNumber": "SO-07919",
-      "status": "open",
-      "customerName": "SHIVA DIGITRADE",
-      "shippingAddress": "R-235, SHIVA DIGITRADE, WARD-12, Panipat, Haryana, 132103, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-09",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036734005",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226914",
-          "rate": 54500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036734002-1154219000036734005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036734002",
-          "lineItemId": "1154219000036734005",
-          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
-          "sku": "2628",
-          "customerName": "SHIVA DIGITRADE",
-          "salesOrderNumber": "SO-07919",
-          "deliveryDate": "2026-09-09",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-09T18:33:43+0530"
-    },
-    "1154219000036721008": {
-      "id": "1154219000036721008",
-      "zohoSalesOrderId": "1154219000036721008",
-      "salesOrderNumber": "SO-07916",
-      "status": "open",
-      "customerName": "HAMPTON SHOES LLP",
-      "shippingAddress": "15/58-1, FRIENDS ENCLAVE, CIVIL LINES, KANPUR, Kanpur Nagar, Uttar Pradesh, 208001",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-09",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036721011",
-          "itemName": "TPU fusing machine [Hot And Cold]",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000279428",
-          "rate": 470000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036721008-1154219000036721011-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036721008",
-          "lineItemId": "1154219000036721011",
-          "itemName": "TPU fusing machine [Hot And Cold]",
-          "sku": "",
-          "customerName": "HAMPTON SHOES LLP",
-          "salesOrderNumber": "SO-07916",
-          "deliveryDate": "2026-09-09",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-09T16:15:47+0530"
-    },
     "1154219000036724001": {
       "id": "1154219000036724001",
       "zohoSalesOrderId": "1154219000036724001",
@@ -9782,8 +9682,6 @@
     }
   },
   "orderIds": [
-    "1154219000036734002",
-    "1154219000036721008",
     "1154219000036724001",
     "1154219000036720001",
     "1154219000036717001",
@@ -9838,8 +9736,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T05:02:48.378Z",
-  "lastAttemptAt": "2026-09-10T05:17:41.464Z",
+  "lastSuccessfulSyncAt": "2026-09-10T05:17:47.213Z",
+  "lastAttemptAt": "2026-09-10T05:17:47.213Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
