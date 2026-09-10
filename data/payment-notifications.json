@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-c54f5de8-2877-4d8c-b605-61e28e042ddf",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-294881ee-189f-46c2-85f3-09357dff2602",
+      "salesOrderNumber": "SO-07774",
+      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+      "paymentAmount": 384000,
+      "createdAt": "2026-09-10T08:59:27.400Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-dee1f64d-51cd-4ce9-97e4-24668812b19e",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-294881ee-189f-46c2-85f3-09357dff2602",
+      "salesOrderNumber": "SO-07774",
+      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+      "paymentAmount": 384000,
+      "createdAt": "2026-09-10T08:59:27.400Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-7cbd146f-1d22-4103-b759-38e2d889f1ed",
       "type": "payment-created",
       "recipientUserId": "u-admin",
