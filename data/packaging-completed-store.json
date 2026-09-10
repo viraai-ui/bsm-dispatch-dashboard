@@ -17455,6 +17455,66 @@
         "1154219000036567001-1154219000036567004-1",
         "1154219000036567001-1154219000036569003-1"
       ]
+    },
+    "1154219000036724026": {
+      "completedAt": "2026-09-10T08:31:10.415Z",
+      "order": {
+        "id": "1154219000036724026",
+        "zohoSalesOrderId": "1154219000036724026",
+        "salesOrderNumber": "SO-07920",
+        "status": "open",
+        "customerName": "Assert Footwears",
+        "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036724029",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 23000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036724026-1154219000036724029-1",
+            "unitNumber": 1,
+            "serialNumber": "26271183",
+            "qrToken": "26271183",
+            "orderId": "1154219000036724026",
+            "lineItemId": "1154219000036724029",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Assert Footwears",
+            "salesOrderNumber": "SO-07920",
+            "deliveryDate": "2026-09-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T12:16:20+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 3
+      },
+      "machineIds": [
+        "1154219000036724026-1154219000036724029-1"
+      ]
     }
   }
 }
