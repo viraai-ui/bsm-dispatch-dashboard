@@ -27210,7 +27210,9 @@
     "1154219000036713599": {
       "salesOrderId": "1154219000036713599",
       "salesOrderNumber": "SO-07927",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-10T10:42:02.179Z",
       "processedOrder": {
         "id": "1154219000036713599",
         "zohoSalesOrderId": "1154219000036713599",
@@ -27240,8 +27242,8 @@
           {
             "id": "1154219000036713599-1154219000036713604-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271187",
+            "qrToken": "26271187",
             "orderId": "1154219000036713599",
             "lineItemId": "1154219000036713604",
             "itemName": "UV Curing machine",
@@ -27249,14 +27251,17 @@
             "customerName": "narmada polymers",
             "salesOrderNumber": "SO-07927",
             "deliveryDate": "2026-09-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-10T16:10:06+0530"
@@ -27270,7 +27275,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-10T10:41:09.587Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-10T10:41:10.992Z"
+          "zohoBackupQueuedAt": "2026-09-10T10:41:10.992Z",
+          "processedAt": "2026-09-10T10:42:02.179Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
