@@ -17360,6 +17360,101 @@
       "machineIds": [
         "1154219000036721008-1154219000036721011-1"
       ]
+    },
+    "1154219000036567001": {
+      "completedAt": "2026-09-10T07:03:30.118Z",
+      "order": {
+        "id": "1154219000036567001",
+        "zohoSalesOrderId": "1154219000036567001",
+        "salesOrderNumber": "SO-07902",
+        "status": "open",
+        "customerName": "SUMER CHAND & SONS",
+        "shippingAddress": "G-2, SECTOR-4,, DSIDC INDUSTRIAL AREA, BAWANA, Delhi, 110039, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036567004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 35000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036569003",
+            "itemName": "Eyelet punching double channel [400 & 600 Number]",
+            "sku": "989",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227395",
+            "rate": 162500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036567001-1154219000036567004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271132",
+            "qrToken": "26271132",
+            "orderId": "1154219000036567001",
+            "lineItemId": "1154219000036567004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "SUMER CHAND & SONS",
+            "salesOrderNumber": "SO-07902",
+            "deliveryDate": "2026-09-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036567001-1154219000036569003-1",
+            "unitNumber": 2,
+            "serialNumber": "26271133",
+            "qrToken": "26271133",
+            "orderId": "1154219000036567001",
+            "lineItemId": "1154219000036569003",
+            "itemName": "Eyelet punching double channel [400 & 600 Number]",
+            "sku": "989",
+            "customerName": "SUMER CHAND & SONS",
+            "salesOrderNumber": "SO-07902",
+            "deliveryDate": "2026-09-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-07",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-07T15:06:58+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036567001-1154219000036567004-1",
+        "1154219000036567001-1154219000036569003-1"
+      ]
     }
   }
 }
