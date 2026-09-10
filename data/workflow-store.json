@@ -26971,7 +26971,9 @@
     "1154219000036721021": {
       "salesOrderId": "1154219000036721021",
       "salesOrderNumber": "SO-07921",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-10T07:02:03.447Z",
       "processedOrder": {
         "id": "1154219000036721021",
         "zohoSalesOrderId": "1154219000036721021",
@@ -27001,8 +27003,8 @@
           {
             "id": "1154219000036721021-1154219000036721024-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271184",
+            "qrToken": "26271184",
             "orderId": "1154219000036721021",
             "lineItemId": "1154219000036721024",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -27010,14 +27012,17 @@
             "customerName": "Welcome Shoes",
             "salesOrderNumber": "SO-07921",
             "deliveryDate": "2026-09-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "vendor": "Shree Sai",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-10T12:16:50+0530"
@@ -27031,7 +27036,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-10T07:01:09.520Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-10T07:01:11.036Z"
+          "zohoBackupQueuedAt": "2026-09-10T07:01:11.036Z",
+          "processedAt": "2026-09-10T07:02:03.447Z",
+          "dispatchNote": "local",
+          "vendor": "Shree Sai"
         }
       }
     }
