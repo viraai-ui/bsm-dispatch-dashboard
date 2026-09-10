@@ -17300,6 +17300,66 @@
       "machineIds": [
         "1154219000036734002-1154219000036734005-1"
       ]
+    },
+    "1154219000036721008": {
+      "completedAt": "2026-09-10T05:05:37.229Z",
+      "order": {
+        "id": "1154219000036721008",
+        "zohoSalesOrderId": "1154219000036721008",
+        "salesOrderNumber": "SO-07916",
+        "status": "open",
+        "customerName": "HAMPTON SHOES LLP",
+        "shippingAddress": "15/58-1, FRIENDS ENCLAVE, CIVIL LINES, KANPUR, Kanpur Nagar, Uttar Pradesh, 208001",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-09",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036721011",
+            "itemName": "TPU fusing machine [Hot And Cold]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000279428",
+            "rate": 470000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036721008-1154219000036721011-1",
+            "unitNumber": 1,
+            "serialNumber": "26271165",
+            "qrToken": "26271165",
+            "orderId": "1154219000036721008",
+            "lineItemId": "1154219000036721011",
+            "itemName": "TPU fusing machine [Hot And Cold]",
+            "sku": "",
+            "customerName": "HAMPTON SHOES LLP",
+            "salesOrderNumber": "SO-07916",
+            "deliveryDate": "2026-09-09",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-09",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-09T15:36:36+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000036721008-1154219000036721011-1"
+      ]
     }
   }
 }
