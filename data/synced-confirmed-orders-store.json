@@ -1,5 +1,105 @@
 {
   "orders": {
+    "1154219000036721021": {
+      "id": "1154219000036721021",
+      "zohoSalesOrderId": "1154219000036721021",
+      "salesOrderNumber": "SO-07921",
+      "status": "open",
+      "customerName": "Welcome Shoes",
+      "shippingAddress": "Plot No. 306, Footwear Park,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036721024",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000227284",
+          "rate": 18000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036721021-1154219000036721024-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036721021",
+          "lineItemId": "1154219000036721024",
+          "itemName": "Thread Burner (Indian Heavy Duty)",
+          "sku": "",
+          "customerName": "Welcome Shoes",
+          "salesOrderNumber": "SO-07921",
+          "deliveryDate": "2026-09-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-10T12:16:50+0530"
+    },
+    "1154219000036724026": {
+      "id": "1154219000036724026",
+      "zohoSalesOrderId": "1154219000036724026",
+      "salesOrderNumber": "SO-07920",
+      "status": "open",
+      "customerName": "Assert Footwears",
+      "shippingAddress": "First Floor, H-1250, Narela Industrial Area,, DSIDC Industrial Area Narela, Delhi, 110040",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036724029",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226515",
+          "rate": 23000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036724026-1154219000036724029-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036724026",
+          "lineItemId": "1154219000036724029",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "Assert Footwears",
+          "salesOrderNumber": "SO-07920",
+          "deliveryDate": "2026-09-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-10T12:16:20+0530"
+    },
     "1154219000036724001": {
       "id": "1154219000036724001",
       "zohoSalesOrderId": "1154219000036724001",
@@ -9682,6 +9782,8 @@
     }
   },
   "orderIds": [
+    "1154219000036721021",
+    "1154219000036724026",
     "1154219000036724001",
     "1154219000036720001",
     "1154219000036717001",
@@ -9736,8 +9838,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T06:40:32.339Z",
-  "lastAttemptAt": "2026-09-10T06:47:41.461Z",
+  "lastSuccessfulSyncAt": "2026-09-10T06:47:48.702Z",
+  "lastAttemptAt": "2026-09-10T06:47:48.702Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
