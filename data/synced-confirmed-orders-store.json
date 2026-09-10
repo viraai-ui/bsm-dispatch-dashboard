@@ -1,24 +1,24 @@
 {
   "orders": {
-    "1154219000036712009": {
-      "id": "1154219000036712009",
-      "zohoSalesOrderId": "1154219000036712009",
-      "salesOrderNumber": "SO-07928",
+    "1154219000036722010": {
+      "id": "1154219000036722010",
+      "zohoSalesOrderId": "1154219000036722010",
+      "salesOrderNumber": "SO-07929",
       "status": "open",
-      "customerName": "KOUSHAL ENTERPRISES",
-      "shippingAddress": "KEWAT NO 851 KHASRA NO 6/18/1/16/2, Raj Sons Jewellers, SAI BABA CHOWK, Raj Sons Jewellers, Sai Baba Chowk,, Panipat, Haryana, 132103, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-10",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Gujrat",
+      "shippingAddress": "PLOT NO 2911 & 2912, J TYPE, PHASE 1, GIDC, VAPI, Gujarat, 396195, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-11",
       "dashboardStatus": "Review Required",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036712012",
+          "id": "1154219000036722013",
           "itemName": "Hotmelt Adhesive - 7100",
           "sku": "7100",
           "description": "",
-          "quantity": 50,
-          "pendingQuantity": 50,
+          "quantity": 300,
+          "pendingQuantity": 300,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000000228524",
           "rate": 300,
@@ -26,7 +26,7 @@
         }
       ],
       "machines": [],
-      "zohoLastModifiedTime": "2026-09-10T17:49:54+0530"
+      "zohoLastModifiedTime": "2026-09-10T18:14:25+0530"
     },
     "1154219000036713599": {
       "id": "1154219000036713599",
@@ -9883,7 +9883,7 @@
     }
   },
   "orderIds": [
-    "1154219000036712009",
+    "1154219000036722010",
     "1154219000036713599",
     "1154219000036723009",
     "1154219000036696007",
@@ -9943,8 +9943,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-10T12:40:31.885Z",
-  "lastAttemptAt": "2026-09-10T12:59:38.538Z",
+  "lastSuccessfulSyncAt": "2026-09-10T12:59:49.876Z",
+  "lastAttemptAt": "2026-09-10T12:59:49.876Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
