@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271187,
+  "serialCounter": 26271188,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -27281,6 +27281,103 @@
           "vendor": "Able",
           "zohoBackupLastAttemptAt": "2026-09-10T10:45:33.364Z",
           "zohoBackupSyncedAt": "2026-09-10T10:45:33.364Z"
+        }
+      }
+    },
+    "1154219000036269021": {
+      "salesOrderId": "1154219000036269021",
+      "salesOrderNumber": "SO-07860",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036269021",
+        "zohoSalesOrderId": "1154219000036269021",
+        "salesOrderNumber": "SO-07860",
+        "status": "open",
+        "customerName": "LANDMARK ENTERPRISES",
+        "shippingAddress": "105/03 A-2, PREM NAGAR, KANPUR, Kanpur Nagar, Uttar Pradesh, 208001",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036269024",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277612",
+            "rate": 260000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036703134",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "description": "60*20*4 Inch",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000335059",
+            "rate": 22000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036269021-1154219000036269024-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036269021",
+            "lineItemId": "1154219000036269024",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "LANDMARK ENTERPRISES",
+            "salesOrderNumber": "SO-07860",
+            "deliveryDate": "2026-09-01",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036269021-1154219000036703134-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036269021",
+            "lineItemId": "1154219000036703134",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "customerName": "LANDMARK ENTERPRISES",
+            "salesOrderNumber": "SO-07860",
+            "deliveryDate": "2026-09-01",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "60*20*4 Inch"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T13:48:11+0530"
+      },
+      "machines": {
+        "1154219000036269021-1154219000036269024-1": {
+          "machineUnitId": "1154219000036269021-1154219000036269024-1",
+          "lineItemId": "1154219000036269024",
+          "serialNumber": "26271188",
+          "qrToken": "26271188",
+          "qrStatus": "pending"
         }
       }
     }
