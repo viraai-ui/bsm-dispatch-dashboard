@@ -27287,7 +27287,9 @@
     "1154219000036269021": {
       "salesOrderId": "1154219000036269021",
       "salesOrderNumber": "SO-07860",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-10T11:45:28.783Z",
       "processedOrder": {
         "id": "1154219000036269021",
         "zohoSalesOrderId": "1154219000036269021",
@@ -27329,8 +27331,8 @@
           {
             "id": "1154219000036269021-1154219000036269024-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271188",
+            "qrToken": "26271188",
             "orderId": "1154219000036269021",
             "lineItemId": "1154219000036269024",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -27338,14 +27340,17 @@
             "customerName": "LANDMARK ENTERPRISES",
             "salesOrderNumber": "SO-07860",
             "deliveryDate": "2026-09-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "vendor": "Balaji Engeneering",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036269021-1154219000036703134-1",
@@ -27366,7 +27371,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "60*20*4 Inch"
+            "itemDescription": "60*20*4 Inch",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-10T13:48:11+0530"
@@ -27380,7 +27387,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-10T11:44:19.332Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-10T11:44:20.878Z"
+          "zohoBackupQueuedAt": "2026-09-10T11:44:20.878Z",
+          "processedAt": "2026-09-10T11:45:28.783Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Balaji Engeneering"
         }
       }
     }
