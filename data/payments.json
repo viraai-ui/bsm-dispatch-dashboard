@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "KOUSHAL ENTERPRISES",
+      "salesOrderNumber": "SO-07928",
+      "paymentAmount": 17700,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07928/2026-09-10/1789042650629-a8022d37-5b8e-4236-987f-ccb6e1224b06-a60c62fe-cf92-481a-89d9-0858a8c123a8.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07928%2F2026-09-10%2F1789042650629-a8022d37-5b8e-4236-987f-ccb6e1224b06-a60c62fe-cf92-481a-89d9-0858a8c123a8.jpg",
+          "name": "a60c62fe-cf92-481a-89d9-0858a8c123a8.jpg",
+          "contentType": "image/jpeg",
+          "size": 85299
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07928/2026-09-10/1789042650629-a8022d37-5b8e-4236-987f-ccb6e1224b06-a60c62fe-cf92-481a-89d9-0858a8c123a8.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07928%2F2026-09-10%2F1789042650629-a8022d37-5b8e-4236-987f-ccb6e1224b06-a60c62fe-cf92-481a-89d9-0858a8c123a8.jpg",
+      "screenshotName": "a60c62fe-cf92-481a-89d9-0858a8c123a8.jpg",
+      "publicDeleteTokenHash": "b6c0156f8658ffd67ee70e92ef63232548723de2422e60516e7afa17fa1d5d57",
+      "id": "payment-30342f53-f69f-4e5f-8147-7f2ff5d20f7a",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "92b3579e4eff49a3b1031e0237386efd",
+      "createdAt": "2026-09-10T12:17:31.934Z",
+      "updatedAt": "2026-09-10T12:17:31.934Z"
+    },
+    {
       "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
       "salesOrderNumber": "SO-07774",
       "paymentAmount": 384000,
