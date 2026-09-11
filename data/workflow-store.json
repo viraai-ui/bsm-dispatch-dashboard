@@ -27567,7 +27567,9 @@
     "1154219000036712023": {
       "salesOrderId": "1154219000036712023",
       "salesOrderNumber": "SO-07930",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T06:02:59.463Z",
       "processedOrder": {
         "id": "1154219000036712023",
         "zohoSalesOrderId": "1154219000036712023",
@@ -27597,8 +27599,8 @@
           {
             "id": "1154219000036712023-1154219000036712026-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271191",
+            "qrToken": "26271191",
             "orderId": "1154219000036712023",
             "lineItemId": "1154219000036712026",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -27606,14 +27608,17 @@
             "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
             "salesOrderNumber": "SO-07930",
             "deliveryDate": "2026-09-11",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Rawal Ji",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-11T11:17:37+0530"
@@ -27627,7 +27632,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T06:01:59.212Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T06:02:00.148Z"
+          "zohoBackupQueuedAt": "2026-09-11T06:02:00.148Z",
+          "processedAt": "2026-09-11T06:02:59.463Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal Ji"
         }
       }
     }
