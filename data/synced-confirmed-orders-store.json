@@ -2424,89 +2424,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-01T15:57:31+0530"
     },
-    "1154219000036269021": {
-      "id": "1154219000036269021",
-      "zohoSalesOrderId": "1154219000036269021",
-      "salesOrderNumber": "SO-07860",
-      "status": "open",
-      "customerName": "LANDMARK ENTERPRISES",
-      "shippingAddress": "105/03 A-2, PREM NAGAR, KANPUR, Kanpur Nagar, Uttar Pradesh, 208001",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-01",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036269024",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000277612",
-          "rate": 260000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036703697",
-          "itemName": "PP Board (60*20*4 Inch)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000005466058",
-          "rate": 22000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036269021-1154219000036269024-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036269021",
-          "lineItemId": "1154219000036269024",
-          "itemName": "Travel Head Cutting Press (25 ton)",
-          "sku": "",
-          "customerName": "LANDMARK ENTERPRISES",
-          "salesOrderNumber": "SO-07860",
-          "deliveryDate": "2026-09-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036269021-1154219000036703697-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036269021",
-          "lineItemId": "1154219000036703697",
-          "itemName": "PP Board (60*20*4 Inch)",
-          "sku": "",
-          "customerName": "LANDMARK ENTERPRISES",
-          "salesOrderNumber": "SO-07860",
-          "deliveryDate": "2026-09-01",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-11T12:53:01+0530"
-    },
     "1154219000036295003": {
       "id": "1154219000036295003",
       "zohoSalesOrderId": "1154219000036295003",
@@ -9907,7 +9824,6 @@
     "1154219000036386001",
     "1154219000036259722",
     "1154219000036335004",
-    "1154219000036269021",
     "1154219000036295003",
     "1154219000036296003",
     "1154219000036185001",
@@ -9943,8 +9859,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-11T07:33:04.511Z",
-  "lastAttemptAt": "2026-09-11T07:40:24.931Z",
+  "lastSuccessfulSyncAt": "2026-09-11T07:40:32.504Z",
+  "lastAttemptAt": "2026-09-11T07:40:32.504Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
