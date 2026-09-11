@@ -18267,6 +18267,101 @@
         "1154219000036370004-1154219000036370015-1",
         "1154219000036370004-1154219000036547066-1"
       ]
+    },
+    "1154219000036705011": {
+      "completedAt": "2026-09-11T12:46:19.592Z",
+      "order": {
+        "id": "1154219000036705011",
+        "zohoSalesOrderId": "1154219000036705011",
+        "salesOrderNumber": "SO-07933",
+        "status": "open",
+        "customerName": "Ram & Sons Footcare Private Limited",
+        "shippingAddress": "715, 716, 754, 755, Mie Part-I,, Bahadurgarh,, Haryana, 124507",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036705014",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225488",
+            "rate": 63000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036705015",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000581406",
+            "rate": 18000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036705011-1154219000036705014-1",
+            "unitNumber": 1,
+            "serialNumber": "26271195",
+            "qrToken": "26271195",
+            "orderId": "1154219000036705011",
+            "lineItemId": "1154219000036705014",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "customerName": "Ram & Sons Footcare Private Limited",
+            "salesOrderNumber": "SO-07933",
+            "deliveryDate": "2026-09-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036705011-1154219000036705015-1",
+            "unitNumber": 2,
+            "serialNumber": "26271196",
+            "qrToken": "26271196",
+            "orderId": "1154219000036705011",
+            "lineItemId": "1154219000036705015",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "customerName": "Ram & Sons Footcare Private Limited",
+            "salesOrderNumber": "SO-07933",
+            "deliveryDate": "2026-09-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-11T16:04:41+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036705011-1154219000036705014-1",
+        "1154219000036705011-1154219000036705015-1"
+      ]
     }
   }
 }
