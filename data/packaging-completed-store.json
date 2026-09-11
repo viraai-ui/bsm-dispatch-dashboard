@@ -17766,6 +17766,65 @@
       "machineIds": [
         "1154219000036269021-1154219000036269024-1"
       ]
+    },
+    "1154219000036712023": {
+      "completedAt": "2026-09-11T07:46:52.464Z",
+      "order": {
+        "id": "1154219000036712023",
+        "zohoSalesOrderId": "1154219000036712023",
+        "salesOrderNumber": "SO-07930",
+        "status": "open",
+        "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+        "shippingAddress": "T-1/103-104, Phase-1, Mangol Puri Industrial Area, Delhi, 110083, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036712026",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225413",
+            "rate": 48000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036712023-1154219000036712026-1",
+            "unitNumber": 1,
+            "serialNumber": "26271191",
+            "qrToken": "26271191",
+            "orderId": "1154219000036712023",
+            "lineItemId": "1154219000036712026",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+            "salesOrderNumber": "SO-07930",
+            "deliveryDate": "2026-09-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-11T11:17:37+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036712023-1154219000036712026-1"
+      ]
     }
   }
 }
