@@ -18420,6 +18420,65 @@
       "machineIds": [
         "1154219000036711026-1154219000036711029-1"
       ]
+    },
+    "1154219000036703335": {
+      "completedAt": "2026-09-11T13:13:11.313Z",
+      "order": {
+        "id": "1154219000036703335",
+        "zohoSalesOrderId": "1154219000036703335",
+        "salesOrderNumber": "SO-07931",
+        "status": "open",
+        "customerName": "RAVI R D",
+        "shippingAddress": "S/O, DHAKSHMRTY, 45/1 , NEW PILLAYAR , KOVIL STRET , MANNURPETTAI, CHENNAI , PADI , TRIVALLUR TAMIL NADU-600050, Tamil Nadu, 600053, India",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-09-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036703340",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 460000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036703335-1154219000036703340-1",
+            "unitNumber": 1,
+            "serialNumber": "26271193",
+            "qrToken": "26271193",
+            "orderId": "1154219000036703335",
+            "lineItemId": "1154219000036703340",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "RAVI R D",
+            "salesOrderNumber": "SO-07931",
+            "deliveryDate": "2026-09-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-11T12:22:19+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036703335-1154219000036703340-1"
+      ]
     }
   }
 }
