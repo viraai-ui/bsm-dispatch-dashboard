@@ -128,56 +128,6 @@
       "machines": [],
       "zohoLastModifiedTime": "2026-09-10T18:14:25+0530"
     },
-    "1154219000036713599": {
-      "id": "1154219000036713599",
-      "zohoSalesOrderId": "1154219000036713599",
-      "salesOrderNumber": "SO-07927",
-      "status": "open",
-      "customerName": "narmada polymers",
-      "shippingAddress": "Plot No. 105, Sector -53, Phase -1, HSIIDC Kundli , Sub Tehsil - Rai , District - Sonipat , Haryana -131028, Sonipat, Haryana, 131028, India",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036713604",
-          "itemName": "UV Curing machine",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000279556",
-          "rate": 460000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036713599-1154219000036713604-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036713599",
-          "lineItemId": "1154219000036713604",
-          "itemName": "UV Curing machine",
-          "sku": "",
-          "customerName": "narmada polymers",
-          "salesOrderNumber": "SO-07927",
-          "deliveryDate": "2026-09-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-10T16:10:06+0530"
-    },
     "1154219000036723009": {
       "id": "1154219000036723009",
       "zohoSalesOrderId": "1154219000036723009",
@@ -6935,7 +6885,7 @@
       "zohoSalesOrderId": "1154219000035947002",
       "salesOrderNumber": "SO-07790",
       "status": "open",
-      "customerName": "Star Impact Pvt. Ltd.",
+      "customerName": "Star Impact Pvt. Ltd. (Malerkotla)",
       "shippingAddress": "Rehman Nagar, Ludhiana Road, Opp. Power Grid, Melerkotla, Punjab, 148023, India",
       "salesperson": "Anuj Kumar",
       "deliveryDate": "2026-08-25",
@@ -6965,7 +6915,7 @@
           "lineItemId": "1154219000035947005",
           "itemName": "Toe puff Fusing/ Attaching machine",
           "sku": "299",
-          "customerName": "Star Impact Pvt. Ltd.",
+          "customerName": "Star Impact Pvt. Ltd. (Malerkotla)",
           "salesOrderNumber": "SO-07790",
           "deliveryDate": "2026-08-25",
           "status": "Not Generated",
@@ -9986,7 +9936,6 @@
     "1154219000036703335",
     "1154219000036712023",
     "1154219000036722010",
-    "1154219000036713599",
     "1154219000036723009",
     "1154219000036696007",
     "1154219000036708018",
@@ -10045,8 +9994,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-11T06:27:43.014Z",
-  "lastAttemptAt": "2026-09-11T06:40:24.994Z",
+  "lastSuccessfulSyncAt": "2026-09-11T06:40:31.989Z",
+  "lastAttemptAt": "2026-09-11T06:40:31.989Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
