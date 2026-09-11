@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-6570fe63-72e2-481d-98d2-042ab61a4fd3",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-74956a22-b82c-48f5-8251-8084245e8a73",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Ram & Sons",
+      "paymentAmount": 47030,
+      "createdAt": "2026-09-11T10:55:59.298Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-f9917450-65bf-43c7-adfe-c236d0c4b04c",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-74956a22-b82c-48f5-8251-8084245e8a73",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Ram & Sons",
+      "paymentAmount": 47030,
+      "createdAt": "2026-09-11T10:55:59.298Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-4a5568f7-3b8d-4922-91d3-cc087042e4a9",
       "type": "payment-created",
       "recipientUserId": "u-admin",
