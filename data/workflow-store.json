@@ -27644,7 +27644,9 @@
     "1154219000034276003": {
       "salesOrderId": "1154219000034276003",
       "salesOrderNumber": "SO-07491",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T06:49:37.740Z",
       "processedOrder": {
         "id": "1154219000034276003",
         "zohoSalesOrderId": "1154219000034276003",
@@ -27674,8 +27676,8 @@
           {
             "id": "1154219000034276003-1154219000034276006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271192",
+            "qrToken": "26271192",
             "orderId": "1154219000034276003",
             "lineItemId": "1154219000034276006",
             "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
@@ -27683,14 +27685,17 @@
             "customerName": "Aqdus Enterprises",
             "salesOrderNumber": "SO-07491",
             "deliveryDate": "2026-08-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-07-16T10:19:43+0530"
@@ -27704,7 +27709,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T06:48:46.949Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T06:48:47.845Z"
+          "zohoBackupQueuedAt": "2026-09-11T06:48:47.845Z",
+          "processedAt": "2026-09-11T06:49:37.740Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
