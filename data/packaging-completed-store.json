@@ -18362,6 +18362,64 @@
         "1154219000036705011-1154219000036705014-1",
         "1154219000036705011-1154219000036705015-1"
       ]
+    },
+    "1154219000036711026": {
+      "completedAt": "2026-09-11T12:46:23.113Z",
+      "order": {
+        "id": "1154219000036711026",
+        "zohoSalesOrderId": "1154219000036711026",
+        "salesOrderNumber": "SO-07934",
+        "status": "open",
+        "customerName": "Yogesh Subhashchander",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036711029",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225787",
+            "rate": 25500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036711026-1154219000036711029-1",
+            "unitNumber": 1,
+            "serialNumber": "26271197",
+            "qrToken": "26271197",
+            "orderId": "1154219000036711026",
+            "lineItemId": "1154219000036711029",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "Yogesh Subhashchander",
+            "salesOrderNumber": "SO-07934",
+            "deliveryDate": "2026-09-11",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-11T16:49:57+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036711026-1154219000036711029-1"
+      ]
     }
   }
 }
