@@ -6234,6 +6234,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036370004": {
+      "id": "ship-1789126896129-306dz",
+      "itemId": "1154219000036370004",
+      "orderId": "1154219000036370004",
+      "machineId": "1154219000036370004-1154219000036370007-1",
+      "salesOrderNumber": "SO-07872",
+      "customerName": "JOY SKINWEAR (Ghaziabad)",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAE6419",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-11",
+      "notes": "",
+      "shippedAt": "2026-09-11T11:41:36.129Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
