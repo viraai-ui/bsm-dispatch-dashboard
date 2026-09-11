@@ -17825,6 +17825,65 @@
       "machineIds": [
         "1154219000036712023-1154219000036712026-1"
       ]
+    },
+    "1154219000035795016": {
+      "completedAt": "2026-09-11T08:48:35.706Z",
+      "order": {
+        "id": "1154219000035795016",
+        "zohoSalesOrderId": "1154219000035795016",
+        "salesOrderNumber": "SO-07749",
+        "status": "open",
+        "customerName": "Rajyog Enterprises",
+        "shippingAddress": "X-11, Supa Mica, A/P Supa, Tal-Parner, Ahmednagar, Maharashtra, 414302, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035795019",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277664",
+            "rate": 460000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035795016-1154219000035795019-1",
+            "unitNumber": 1,
+            "serialNumber": "26271190",
+            "qrToken": "26271190",
+            "orderId": "1154219000035795016",
+            "lineItemId": "1154219000035795019",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "customerName": "Rajyog Enterprises",
+            "salesOrderNumber": "SO-07749",
+            "deliveryDate": "2026-08-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-17T16:09:35+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000035795016-1154219000035795019-1"
+      ]
     }
   }
 }
