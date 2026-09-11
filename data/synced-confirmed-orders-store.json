@@ -1,53 +1,32 @@
 {
   "orders": {
-    "1154219000036711026": {
-      "id": "1154219000036711026",
-      "zohoSalesOrderId": "1154219000036711026",
-      "salesOrderNumber": "SO-07934",
+    "1154219000036842001": {
+      "id": "1154219000036842001",
+      "zohoSalesOrderId": "1154219000036842001",
+      "salesOrderNumber": "SO-07935",
       "status": "open",
-      "customerName": "Yogesh Subhashchander",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
       "salesperson": "Anuj Kumar",
       "deliveryDate": "2026-09-11",
-      "dashboardStatus": "Not Generated",
+      "dashboardStatus": "Review Required",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036711029",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
+          "id": "1154219000036842004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
           "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225787",
-          "rate": 25500,
-          "dispatchCategory": "machine"
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
         }
       ],
-      "machines": [
-        {
-          "id": "1154219000036711026-1154219000036711029-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036711026",
-          "lineItemId": "1154219000036711029",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "Yogesh Subhashchander",
-          "salesOrderNumber": "SO-07934",
-          "deliveryDate": "2026-09-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-11T16:54:20+0530"
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-11T18:16:12+0530"
     },
     "1154219000036705011": {
       "id": "1154219000036705011",
@@ -153,8 +132,20 @@
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
           "zohoItemId": "1154219000000226515",
-          "rate": 460000,
+          "rate": 22000,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036825698",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 134,
+          "dispatchCategory": "freight"
         }
       ],
       "machines": [
@@ -180,7 +171,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-11T12:22:19+0530"
+      "zohoLastModifiedTime": "2026-09-11T18:28:05+0530"
     },
     "1154219000036712023": {
       "id": "1154219000036712023",
@@ -9568,7 +9559,7 @@
     }
   },
   "orderIds": [
-    "1154219000036711026",
+    "1154219000036842001",
     "1154219000036705011",
     "1154219000036703335",
     "1154219000036712023",
@@ -9627,8 +9618,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-11T12:40:29.624Z",
-  "lastAttemptAt": "2026-09-11T13:00:25.811Z",
+  "lastSuccessfulSyncAt": "2026-09-11T13:00:40.409Z",
+  "lastAttemptAt": "2026-09-11T13:00:40.409Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
