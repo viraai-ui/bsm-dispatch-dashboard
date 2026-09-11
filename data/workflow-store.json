@@ -27924,7 +27924,9 @@
     "1154219000036705011": {
       "salesOrderId": "1154219000036705011",
       "salesOrderNumber": "SO-07933",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T10:38:10.769Z",
       "processedOrder": {
         "id": "1154219000036705011",
         "zohoSalesOrderId": "1154219000036705011",
@@ -27966,8 +27968,8 @@
           {
             "id": "1154219000036705011-1154219000036705014-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271195",
+            "qrToken": "26271195",
             "orderId": "1154219000036705011",
             "lineItemId": "1154219000036705014",
             "itemName": "Side Pressing Machine (pneumatic)",
@@ -27975,20 +27977,23 @@
             "customerName": "Ram & Sons Footcare Private Limited",
             "salesOrderNumber": "SO-07933",
             "deliveryDate": "2026-09-11",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Tech Point Sol.",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036705011-1154219000036705015-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271196",
+            "qrToken": "26271196",
             "orderId": "1154219000036705011",
             "lineItemId": "1154219000036705015",
             "itemName": "Heating oven [2 Feet]",
@@ -27996,14 +28001,17 @@
             "customerName": "Ram & Sons Footcare Private Limited",
             "salesOrderNumber": "SO-07933",
             "deliveryDate": "2026-09-11",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Siphon",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-11T16:04:41+0530"
@@ -28017,7 +28025,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T10:36:44.089Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T10:36:10.532Z"
+          "zohoBackupQueuedAt": "2026-09-11T10:36:10.532Z",
+          "processedAt": "2026-09-11T10:38:10.769Z",
+          "dispatchNote": "local",
+          "vendor": "Tech Point Sol."
         },
         "1154219000036705011-1154219000036705015-1": {
           "machineUnitId": "1154219000036705011-1154219000036705015-1",
@@ -28027,7 +28038,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T10:36:44.089Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T10:36:10.532Z"
+          "zohoBackupQueuedAt": "2026-09-11T10:36:10.532Z",
+          "processedAt": "2026-09-11T10:38:10.769Z",
+          "dispatchNote": "local",
+          "vendor": "Siphon"
         }
       }
     }
