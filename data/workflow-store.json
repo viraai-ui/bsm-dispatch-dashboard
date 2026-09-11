@@ -28052,7 +28052,9 @@
     "1154219000036711026": {
       "salesOrderId": "1154219000036711026",
       "salesOrderNumber": "SO-07934",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T11:22:23.789Z",
       "processedOrder": {
         "id": "1154219000036711026",
         "zohoSalesOrderId": "1154219000036711026",
@@ -28081,8 +28083,8 @@
           {
             "id": "1154219000036711026-1154219000036711029-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271197",
+            "qrToken": "26271197",
             "orderId": "1154219000036711026",
             "lineItemId": "1154219000036711029",
             "itemName": "Round Blade Edge trimming Machine",
@@ -28090,14 +28092,17 @@
             "customerName": "Yogesh Subhashchander",
             "salesOrderNumber": "SO-07934",
             "deliveryDate": "2026-09-11",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-11T16:49:57+0530"
@@ -28111,7 +28116,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T11:21:00.029Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T11:21:01.447Z"
+          "zohoBackupQueuedAt": "2026-09-11T11:21:01.447Z",
+          "processedAt": "2026-09-11T11:22:23.789Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
