@@ -27911,11 +27911,13 @@
           "qrToken": "26271194",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T09:26:43.196Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-11T09:26:44.418Z",
           "processedAt": "2026-09-11T09:28:02.103Z",
           "dispatchNote": "local",
-          "vendor": "Bsm"
+          "vendor": "Bsm",
+          "zohoBackupLastAttemptAt": "2026-09-11T09:30:34.404Z",
+          "zohoBackupSyncedAt": "2026-09-11T09:30:34.404Z"
         }
       }
     }
