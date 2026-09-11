@@ -1,6 +1,40 @@
 {
   "payments": [
     {
+      "customerName": "D Zone",
+      "salesOrderNumber": "SO-07759",
+      "paymentAmount": 161425,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "remarks": "Balance Payment",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07759/2026-09-11/1789117203499-30b02f86-4bb5-4283-878a-6c9265d763e3-8bb224ad-a0e7-4922-a2d1-392f681accd4.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07759%2F2026-09-11%2F1789117203499-30b02f86-4bb5-4283-878a-6c9265d763e3-8bb224ad-a0e7-4922-a2d1-392f681accd4.jpg",
+          "name": "8bb224ad-a0e7-4922-a2d1-392f681accd4.jpg",
+          "contentType": "image/jpeg",
+          "size": 104738
+        },
+        {
+          "key": "payments/public/SO-07759/2026-09-11/1789117204580-c382ef48-9eda-4bc0-b572-b00bacf73374-188e9b8a-9e03-407a-b4e8-177ea59f8d70.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07759%2F2026-09-11%2F1789117204580-c382ef48-9eda-4bc0-b572-b00bacf73374-188e9b8a-9e03-407a-b4e8-177ea59f8d70.jpg",
+          "name": "188e9b8a-9e03-407a-b4e8-177ea59f8d70.jpg",
+          "contentType": "image/jpeg",
+          "size": 147701
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07759/2026-09-11/1789117203499-30b02f86-4bb5-4283-878a-6c9265d763e3-8bb224ad-a0e7-4922-a2d1-392f681accd4.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07759%2F2026-09-11%2F1789117203499-30b02f86-4bb5-4283-878a-6c9265d763e3-8bb224ad-a0e7-4922-a2d1-392f681accd4.jpg",
+      "screenshotName": "8bb224ad-a0e7-4922-a2d1-392f681accd4.jpg",
+      "publicDeleteTokenHash": "2cdbb266fe2b9acff1a062590d048985d45232a73102bba5784bb53daf97c4b9",
+      "id": "payment-1a5a1d8e-8a21-4791-b2ee-796769b339a6",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "97dd631dc3f44f4bb09b542a471ece92",
+      "createdAt": "2026-09-11T09:00:07.342Z",
+      "updatedAt": "2026-09-11T09:00:07.342Z"
+    },
+    {
       "customerName": "KOUSHAL ENTERPRISES",
       "salesOrderNumber": "SO-07928",
       "paymentAmount": 17700,
