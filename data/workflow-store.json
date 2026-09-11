@@ -27401,7 +27401,9 @@
     "1154219000034744001": {
       "salesOrderId": "1154219000034744001",
       "salesOrderNumber": "SO-07573",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T05:41:56.854Z",
       "processedOrder": {
         "id": "1154219000034744001",
         "zohoSalesOrderId": "1154219000034744001",
@@ -27443,8 +27445,8 @@
           {
             "id": "1154219000034744001-1154219000034744004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271189",
+            "qrToken": "26271189",
             "orderId": "1154219000034744001",
             "lineItemId": "1154219000034744004",
             "itemName": "Swing Arm Clicker (25 Ton) New",
@@ -27452,14 +27454,17 @@
             "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
             "salesOrderNumber": "SO-07573",
             "deliveryDate": "2026-07-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Size : Arm size : 500 mm Bed Size : 1000*500 mm"
+            "itemDescription": "Size : Arm size : 500 mm Bed Size : 1000*500 mm",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-08-26T15:22:05+0530"
@@ -27473,7 +27478,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T05:40:51.782Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T05:40:53.016Z"
+          "zohoBackupQueuedAt": "2026-09-11T05:40:53.016Z",
+          "processedAt": "2026-09-11T05:41:56.854Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
