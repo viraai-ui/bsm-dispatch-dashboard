@@ -6265,6 +6265,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035795016": {
+      "id": "ship-1789126962275-2m4os",
+      "itemId": "1154219000035795016",
+      "orderId": "1154219000035795016",
+      "machineId": "1154219000035795016-1154219000035795019-1",
+      "salesOrderNumber": "SO-07749",
+      "customerName": "Rajyog Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-11",
+      "notes": "",
+      "shippedAt": "2026-09-11T11:42:42.275Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
