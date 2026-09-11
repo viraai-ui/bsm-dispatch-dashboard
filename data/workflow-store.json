@@ -27488,7 +27488,9 @@
     "1154219000035795016": {
       "salesOrderId": "1154219000035795016",
       "salesOrderNumber": "SO-07749",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T05:44:23.778Z",
       "processedOrder": {
         "id": "1154219000035795016",
         "zohoSalesOrderId": "1154219000035795016",
@@ -27518,8 +27520,8 @@
           {
             "id": "1154219000035795016-1154219000035795019-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271190",
+            "qrToken": "26271190",
             "orderId": "1154219000035795016",
             "lineItemId": "1154219000035795019",
             "itemName": "Beam Cutting Press (40 ton)",
@@ -27527,14 +27529,17 @@
             "customerName": "Rajyog Enterprises",
             "salesOrderNumber": "SO-07749",
             "deliveryDate": "2026-08-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-08-17T16:09:35+0530"
@@ -27548,7 +27553,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T05:43:31.582Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T05:43:32.406Z"
+          "zohoBackupQueuedAt": "2026-09-11T05:43:32.406Z",
+          "processedAt": "2026-09-11T05:44:23.778Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
