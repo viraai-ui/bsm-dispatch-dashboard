@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036734017": {
+      "id": "1154219000036734017",
+      "zohoSalesOrderId": "1154219000036734017",
+      "salesOrderNumber": "SO-07932",
+      "status": "open",
+      "customerName": "SOLEWORK FOOTWEARS PRIVATE LIMITED",
+      "shippingAddress": "KHASRA NO 37/18/2, VILLAGE MUNDKA, New Delhi, West Delhi, Delhi,, 110041",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-11",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036734020",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000227234",
+          "rate": 2500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036734017-1154219000036734020-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036734017",
+          "lineItemId": "1154219000036734020",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "customerName": "SOLEWORK FOOTWEARS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07932",
+          "deliveryDate": "2026-09-11",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-11T13:27:39+0530"
+    },
     "1154219000036703335": {
       "id": "1154219000036703335",
       "zohoSalesOrderId": "1154219000036703335",
@@ -9800,6 +9850,7 @@
     }
   },
   "orderIds": [
+    "1154219000036734017",
     "1154219000036703335",
     "1154219000036712023",
     "1154219000036722010",
@@ -9859,8 +9910,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-11T07:48:11.352Z",
-  "lastAttemptAt": "2026-09-11T08:00:24.969Z",
+  "lastSuccessfulSyncAt": "2026-09-11T08:00:39.441Z",
+  "lastAttemptAt": "2026-09-11T08:00:39.441Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
