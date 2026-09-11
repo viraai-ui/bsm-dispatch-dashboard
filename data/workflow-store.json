@@ -27719,7 +27719,37 @@
     "1154219000036696007": {
       "salesOrderId": "1154219000036696007",
       "salesOrderNumber": "SO-07923",
-      "status": "qr_not_required",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T06:56:47.734Z",
+      "processedOrder": {
+        "id": "1154219000036696007",
+        "zohoSalesOrderId": "1154219000036696007",
+        "salesOrderNumber": "SO-07923",
+        "status": "open",
+        "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
+        "shippingAddress": "10, Chowbagha Road, Kolkata, West Bengal, 700039, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Review Required",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036696010",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 300,
+            "pendingQuantity": 300,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228524",
+            "rate": 320,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [],
+        "zohoLastModifiedTime": "2026-09-10T13:55:22+0530"
+      },
       "machines": {}
     }
   }
