@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271194,
+  "serialCounter": 26271196,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -27918,6 +27918,110 @@
           "vendor": "Bsm",
           "zohoBackupLastAttemptAt": "2026-09-11T09:30:34.404Z",
           "zohoBackupSyncedAt": "2026-09-11T09:30:34.404Z"
+        }
+      }
+    },
+    "1154219000036705011": {
+      "salesOrderId": "1154219000036705011",
+      "salesOrderNumber": "SO-07933",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036705011",
+        "zohoSalesOrderId": "1154219000036705011",
+        "salesOrderNumber": "SO-07933",
+        "status": "open",
+        "customerName": "Ram & Sons Footcare Private Limited",
+        "shippingAddress": "715, 716, 754, 755, Mie Part-I,, Bahadurgarh,, Haryana, 124507",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-11",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036705014",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225488",
+            "rate": 63000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036705015",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000581406",
+            "rate": 18000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036705011-1154219000036705014-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036705011",
+            "lineItemId": "1154219000036705014",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "customerName": "Ram & Sons Footcare Private Limited",
+            "salesOrderNumber": "SO-07933",
+            "deliveryDate": "2026-09-11",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036705011-1154219000036705015-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036705011",
+            "lineItemId": "1154219000036705015",
+            "itemName": "Heating oven [2 Feet]",
+            "sku": "",
+            "customerName": "Ram & Sons Footcare Private Limited",
+            "salesOrderNumber": "SO-07933",
+            "deliveryDate": "2026-09-11",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-11T16:04:41+0530"
+      },
+      "machines": {
+        "1154219000036705011-1154219000036705014-1": {
+          "machineUnitId": "1154219000036705011-1154219000036705014-1",
+          "lineItemId": "1154219000036705014",
+          "serialNumber": "26271195",
+          "qrToken": "26271195",
+          "qrStatus": "pending"
+        },
+        "1154219000036705011-1154219000036705015-1": {
+          "machineUnitId": "1154219000036705011-1154219000036705015-1",
+          "lineItemId": "1154219000036705015",
+          "serialNumber": "26271196",
+          "qrToken": "26271196",
+          "qrStatus": "pending"
         }
       }
     }
