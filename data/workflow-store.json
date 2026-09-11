@@ -27847,7 +27847,9 @@
     "1154219000036443007": {
       "salesOrderId": "1154219000036443007",
       "salesOrderNumber": "SO-07881",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-11T09:28:02.103Z",
       "processedOrder": {
         "id": "1154219000036443007",
         "zohoSalesOrderId": "1154219000036443007",
@@ -27877,8 +27879,8 @@
           {
             "id": "1154219000036443007-1154219000036443010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271194",
+            "qrToken": "26271194",
             "orderId": "1154219000036443007",
             "lineItemId": "1154219000036443010",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -27886,14 +27888,17 @@
             "customerName": "GARG INDUSTRIES",
             "salesOrderNumber": "SO-07881",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "vendor": "Bsm",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-05T11:18:58+0530"
@@ -27907,7 +27912,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-11T09:26:43.196Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-11T09:26:44.418Z"
+          "zohoBackupQueuedAt": "2026-09-11T09:26:44.418Z",
+          "processedAt": "2026-09-11T09:28:02.103Z",
+          "dispatchNote": "local",
+          "vendor": "Bsm"
         }
       }
     }
