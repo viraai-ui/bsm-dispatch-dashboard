@@ -8015,14 +8015,14 @@
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000034744004",
-          "itemName": "Swing Arm Clicker (25 Ton) New",
+          "id": "1154219000036703253",
+          "itemName": "Atom Swing Arm Clicker (25 Ton)",
           "sku": "",
           "description": "Size : Arm size : 500 mm Bed Size : 1000*500 mm",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
-          "zohoItemId": "1154219000005225242",
+          "zohoItemId": "1154219000035455313",
           "rate": 435000,
           "dispatchCategory": "machine"
         },
@@ -8041,13 +8041,13 @@
       ],
       "machines": [
         {
-          "id": "1154219000034744001-1154219000034744004-1",
+          "id": "1154219000034744001-1154219000036703253-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000034744001",
-          "lineItemId": "1154219000034744004",
-          "itemName": "Swing Arm Clicker (25 Ton) New",
+          "lineItemId": "1154219000036703253",
+          "itemName": "Atom Swing Arm Clicker (25 Ton)",
           "sku": "",
           "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
           "salesOrderNumber": "SO-07573",
@@ -8062,7 +8062,7 @@
           "itemDescription": "Size : Arm size : 500 mm Bed Size : 1000*500 mm"
         }
       ],
-      "zohoLastModifiedTime": "2026-08-26T15:22:05+0530"
+      "zohoLastModifiedTime": "2026-09-11T11:09:46+0530"
     },
     "1154219000034633005": {
       "id": "1154219000034633005",
@@ -9943,8 +9943,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-11T05:27:51.543Z",
-  "lastAttemptAt": "2026-09-11T05:40:25.206Z",
+  "lastSuccessfulSyncAt": "2026-09-11T05:40:33.019Z",
+  "lastAttemptAt": "2026-09-11T05:40:33.019Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
