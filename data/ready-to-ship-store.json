@@ -6296,6 +6296,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036711026": {
+      "id": "ship-1789130807035-ywil1",
+      "itemId": "1154219000036711026",
+      "orderId": "1154219000036711026",
+      "machineId": "1154219000036711026-1154219000036711029-1",
+      "salesOrderNumber": "SO-07934",
+      "customerName": "Yogesh Subhashchander",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-11",
+      "notes": "",
+      "shippedAt": "2026-09-11T12:46:47.035Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
