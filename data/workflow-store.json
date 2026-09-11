@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271188,
+  "serialCounter": 26271189,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -27397,6 +27397,82 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000034744001": {
+      "salesOrderId": "1154219000034744001",
+      "salesOrderNumber": "SO-07573",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000034744001",
+        "zohoSalesOrderId": "1154219000034744001",
+        "salesOrderNumber": "SO-07573",
+        "status": "open",
+        "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
+        "shippingAddress": "Plot No D-2 / 11/ B / 1, GIDC Phase - II, Dahej, Vagra, Bharuch, Gujarat - 392130, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-07-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034744004",
+            "itemName": "Swing Arm Clicker (25 Ton) New",
+            "sku": "",
+            "description": "Size : Arm size : 500 mm Bed Size : 1000*500 mm",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000005225242",
+            "rate": 435000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000034744005",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Part Loading Freight Charge from BSM to Gujarat",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 29000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034744001-1154219000034744004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000034744001",
+            "lineItemId": "1154219000034744004",
+            "itemName": "Swing Arm Clicker (25 Ton) New",
+            "sku": "",
+            "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
+            "salesOrderNumber": "SO-07573",
+            "deliveryDate": "2026-07-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Size : Arm size : 500 mm Bed Size : 1000*500 mm"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-26T15:22:05+0530"
+      },
+      "machines": {
+        "1154219000034744001-1154219000034744004-1": {
+          "machineUnitId": "1154219000034744001-1154219000034744004-1",
+          "lineItemId": "1154219000034744004",
+          "serialNumber": "26271189",
+          "qrToken": "26271189",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
