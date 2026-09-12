@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "V R SEWING MACHINE",
+      "salesOrderNumber": "SO-07937",
+      "paymentAmount": 42480,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07937/2026-09-12/1789195217649-06ed5538-4b26-4cd0-9ba8-39c1f383e40e-58cca104-cc72-4511-bf7d-1f156c7d2251.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07937%2F2026-09-12%2F1789195217649-06ed5538-4b26-4cd0-9ba8-39c1f383e40e-58cca104-cc72-4511-bf7d-1f156c7d2251.jpg",
+          "name": "58cca104-cc72-4511-bf7d-1f156c7d2251.jpg",
+          "contentType": "image/jpeg",
+          "size": 107161
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07937/2026-09-12/1789195217649-06ed5538-4b26-4cd0-9ba8-39c1f383e40e-58cca104-cc72-4511-bf7d-1f156c7d2251.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07937%2F2026-09-12%2F1789195217649-06ed5538-4b26-4cd0-9ba8-39c1f383e40e-58cca104-cc72-4511-bf7d-1f156c7d2251.jpg",
+      "screenshotName": "58cca104-cc72-4511-bf7d-1f156c7d2251.jpg",
+      "publicDeleteTokenHash": "303982a8559a46d1c05c0254f8d909aedefacdf0036492eb32177c2af1cb8b9a",
+      "id": "payment-eeb2b79c-403b-4ff5-b4fb-7542b6cecd15",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "dc555ef18a1a4ed089016443354c1e95",
+      "createdAt": "2026-09-12T06:40:18.934Z",
+      "updatedAt": "2026-09-12T06:40:18.934Z"
+    },
+    {
       "customerName": "Ram & Sons",
       "paymentAmount": 47030,
       "paymentMode": "Bank Transfer",
