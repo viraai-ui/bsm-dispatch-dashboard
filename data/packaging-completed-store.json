@@ -18633,6 +18633,65 @@
         "1154219000036863001-1154219000036863005-1",
         "1154219000036863001-1154219000036863004-1"
       ]
+    },
+    "1154219000036882003": {
+      "completedAt": "2026-09-12T11:54:33.479Z",
+      "order": {
+        "id": "1154219000036882003",
+        "zohoSalesOrderId": "1154219000036882003",
+        "salesOrderNumber": "SO-07938",
+        "status": "open",
+        "customerName": "GARG INDUSTRIES",
+        "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036882006",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000002187978",
+            "rate": 38000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036882003-1154219000036882006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271200",
+            "qrToken": "26271200",
+            "orderId": "1154219000036882003",
+            "lineItemId": "1154219000036882006",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "GARG INDUSTRIES",
+            "salesOrderNumber": "SO-07938",
+            "deliveryDate": "2026-09-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "dispatchNote": "Interstate"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-12T15:53:27+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036882003-1154219000036882006-1"
+      ]
     }
   }
 }
