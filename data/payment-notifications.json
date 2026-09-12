@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-8091e3b5-c2af-460c-9d5c-8bde7d084c3a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-67670fed-8e0a-418e-b680-1e1e6421a2c5",
+      "salesOrderNumber": "SO-07930",
+      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+      "paymentAmount": 56640,
+      "createdAt": "2026-09-12T10:52:20.225Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-a448ec48-4fc3-4df7-92f4-5fb4f85f1e15",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-67670fed-8e0a-418e-b680-1e1e6421a2c5",
+      "salesOrderNumber": "SO-07930",
+      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+      "paymentAmount": 56640,
+      "createdAt": "2026-09-12T10:52:20.225Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-4ffcf2cc-0e74-4b2a-bae5-62cbf9d89b55",
       "type": "payment-created",
       "recipientUserId": "u-admin",
