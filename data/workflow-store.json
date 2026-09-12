@@ -28133,7 +28133,9 @@
     "1154219000036863001": {
       "salesOrderId": "1154219000036863001",
       "salesOrderNumber": "SO-07937",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-12T06:51:40.960Z",
       "processedOrder": {
         "id": "1154219000036863001",
         "zohoSalesOrderId": "1154219000036863001",
@@ -28175,8 +28177,8 @@
           {
             "id": "1154219000036863001-1154219000036863005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271198",
+            "qrToken": "26271198",
             "orderId": "1154219000036863001",
             "lineItemId": "1154219000036863005",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -28184,20 +28186,23 @@
             "customerName": "V R SEWING MACHINE",
             "salesOrderNumber": "SO-07937",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "vendor": "",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036863001-1154219000036863004-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271199",
+            "qrToken": "26271199",
             "orderId": "1154219000036863001",
             "lineItemId": "1154219000036863004",
             "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -28205,14 +28210,17 @@
             "customerName": "V R SEWING MACHINE",
             "salesOrderNumber": "SO-07937",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "vendor": "Satnam",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-12T12:16:25+0530"
@@ -28226,7 +28234,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-12T06:48:14.924Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-12T06:48:18.164Z"
+          "zohoBackupQueuedAt": "2026-09-12T06:48:18.164Z",
+          "processedAt": "2026-09-12T06:51:40.960Z",
+          "dispatchNote": "Local",
+          "vendor": ""
         },
         "1154219000036863001-1154219000036863004-1": {
           "machineUnitId": "1154219000036863001-1154219000036863004-1",
@@ -28236,7 +28247,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-12T06:48:14.924Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-12T06:48:18.164Z"
+          "zohoBackupQueuedAt": "2026-09-12T06:48:18.164Z",
+          "processedAt": "2026-09-12T06:51:40.960Z",
+          "dispatchNote": "Local",
+          "vendor": "Satnam"
         }
       }
     }
