@@ -28263,7 +28263,9 @@
     "1154219000036882003": {
       "salesOrderId": "1154219000036882003",
       "salesOrderNumber": "SO-07938",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-12T10:27:53.646Z",
       "processedOrder": {
         "id": "1154219000036882003",
         "zohoSalesOrderId": "1154219000036882003",
@@ -28293,8 +28295,8 @@
           {
             "id": "1154219000036882003-1154219000036882006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271200",
+            "qrToken": "26271200",
             "orderId": "1154219000036882003",
             "lineItemId": "1154219000036882006",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -28302,14 +28304,17 @@
             "customerName": "GARG INDUSTRIES",
             "salesOrderNumber": "SO-07938",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "vendor": "Able",
+            "dispatchNote": "Interstate"
           }
         ],
         "zohoLastModifiedTime": "2026-09-12T15:53:27+0530"
@@ -28323,7 +28328,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-12T10:26:38.137Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-12T10:26:39.240Z"
+          "zohoBackupQueuedAt": "2026-09-12T10:26:39.240Z",
+          "processedAt": "2026-09-12T10:27:53.646Z",
+          "dispatchNote": "Interstate",
+          "vendor": "Able"
         }
       }
     }
