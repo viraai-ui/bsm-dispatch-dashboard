@@ -18538,6 +18538,101 @@
       "machineIds": [
         "1154219000036443007-1154219000036443010-1"
       ]
+    },
+    "1154219000036863001": {
+      "completedAt": "2026-09-12T08:42:15.449Z",
+      "order": {
+        "id": "1154219000036863001",
+        "zohoSalesOrderId": "1154219000036863001",
+        "salesOrderNumber": "SO-07937",
+        "status": "open",
+        "customerName": "V R SEWING MACHINE",
+        "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036863005",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 10000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036863004",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225102",
+            "rate": 26000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036863001-1154219000036863005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271198",
+            "qrToken": "26271198",
+            "orderId": "1154219000036863001",
+            "lineItemId": "1154219000036863005",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "V R SEWING MACHINE",
+            "salesOrderNumber": "SO-07937",
+            "deliveryDate": "2026-09-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000036863001-1154219000036863004-1",
+            "unitNumber": 2,
+            "serialNumber": "26271199",
+            "qrToken": "26271199",
+            "orderId": "1154219000036863001",
+            "lineItemId": "1154219000036863004",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "customerName": "V R SEWING MACHINE",
+            "salesOrderNumber": "SO-07937",
+            "deliveryDate": "2026-09-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-12T12:16:25+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036863001-1154219000036863005-1",
+        "1154219000036863001-1154219000036863004-1"
+      ]
     }
   }
 }
