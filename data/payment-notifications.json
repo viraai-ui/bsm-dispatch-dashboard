@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-4ffcf2cc-0e74-4b2a-bae5-62cbf9d89b55",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-a7c5d388-e6a4-49b7-81c1-6c83e6d1bb8c",
+      "salesOrderNumber": "SO-07938",
+      "customerName": "GARG INDUSTRIES",
+      "paymentAmount": 44840,
+      "createdAt": "2026-09-12T10:18:10.256Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-4e2448e7-5290-42c8-960c-55395a675054",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-a7c5d388-e6a4-49b7-81c1-6c83e6d1bb8c",
+      "salesOrderNumber": "SO-07938",
+      "customerName": "GARG INDUSTRIES",
+      "paymentAmount": 44840,
+      "createdAt": "2026-09-12T10:18:10.256Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-85849a66-27d8-4c60-9f92-8201a41a6b30",
       "type": "payment-created",
       "recipientUserId": "u-admin",
