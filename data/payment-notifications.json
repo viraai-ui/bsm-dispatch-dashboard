@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-85849a66-27d8-4c60-9f92-8201a41a6b30",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-eeb2b79c-403b-4ff5-b4fb-7542b6cecd15",
+      "salesOrderNumber": "SO-07937",
+      "customerName": "V R SEWING MACHINE",
+      "paymentAmount": 42480,
+      "createdAt": "2026-09-12T06:40:20.896Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-54fe17d6-162f-461e-b33a-731ee00ffdeb",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-eeb2b79c-403b-4ff5-b4fb-7542b6cecd15",
+      "salesOrderNumber": "SO-07937",
+      "customerName": "V R SEWING MACHINE",
+      "paymentAmount": 42480,
+      "createdAt": "2026-09-12T06:40:20.896Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-6570fe63-72e2-481d-98d2-042ab61a4fd3",
       "type": "payment-created",
       "recipientUserId": "u-admin",
