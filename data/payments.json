@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Guruji Footwear",
+      "paymentAmount": 55000,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/761e8d9b-0480-428d-89ea-8050cd93ba44/2026-09-12/1789215319774-cdab5f22-b434-4404-9924-ee14835f7c7c-WhatsApp-Image-2026-09-12-at-5.44.23-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F761e8d9b-0480-428d-89ea-8050cd93ba44%2F2026-09-12%2F1789215319774-cdab5f22-b434-4404-9924-ee14835f7c7c-WhatsApp-Image-2026-09-12-at-5.44.23-PM.jpg",
+          "name": "WhatsApp Image 2026-09-12 at 5.44.23 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 68566
+        }
+      ],
+      "screenshotKey": "payments/public/manual/761e8d9b-0480-428d-89ea-8050cd93ba44/2026-09-12/1789215319774-cdab5f22-b434-4404-9924-ee14835f7c7c-WhatsApp-Image-2026-09-12-at-5.44.23-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F761e8d9b-0480-428d-89ea-8050cd93ba44%2F2026-09-12%2F1789215319774-cdab5f22-b434-4404-9924-ee14835f7c7c-WhatsApp-Image-2026-09-12-at-5.44.23-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-12 at 5.44.23 PM.jpeg",
+      "publicDeleteTokenHash": "e234a7b80d1a43304b0f1187fc469a61c364bab5dcc7a1d17406f24fcdbb45e8",
+      "id": "payment-5182546d-ca81-4e3d-a1c9-b47d9f5404e5",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "cd92c9b889294b6b9b8176c70219b9bb",
+      "createdAt": "2026-09-12T12:15:22.250Z",
+      "updatedAt": "2026-09-12T12:15:22.250Z"
+    },
+    {
       "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
       "salesOrderNumber": "SO-07930",
       "paymentAmount": 56640,
