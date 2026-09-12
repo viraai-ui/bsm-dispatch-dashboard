@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+      "salesOrderNumber": "SO-07930",
+      "paymentAmount": 56640,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07930/2026-09-12/1789210335463-8c119f27-6694-4517-b6ce-7c8cb2b986da-WhatsApp-Image-2026-09-12-at-4.13.12-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07930%2F2026-09-12%2F1789210335463-8c119f27-6694-4517-b6ce-7c8cb2b986da-WhatsApp-Image-2026-09-12-at-4.13.12-PM.jpg",
+          "name": "WhatsApp Image 2026-09-12 at 4.13.12 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 129081
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07930/2026-09-12/1789210335463-8c119f27-6694-4517-b6ce-7c8cb2b986da-WhatsApp-Image-2026-09-12-at-4.13.12-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07930%2F2026-09-12%2F1789210335463-8c119f27-6694-4517-b6ce-7c8cb2b986da-WhatsApp-Image-2026-09-12-at-4.13.12-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-12 at 4.13.12 PM.jpeg",
+      "publicDeleteTokenHash": "367d1aa44f9f1fff7e4dc76378d352fdb1e7e829c6a83b3f9a3349d2a1f1b156",
+      "id": "payment-67670fed-8e0a-418e-b680-1e1e6421a2c5",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "61f7ac3ee61b441c899ab80329d6c769",
+      "createdAt": "2026-09-12T10:52:18.037Z",
+      "updatedAt": "2026-09-12T10:52:18.037Z"
+    },
+    {
       "customerName": "GARG INDUSTRIES",
       "salesOrderNumber": "SO-07938",
       "paymentAmount": 44840,
