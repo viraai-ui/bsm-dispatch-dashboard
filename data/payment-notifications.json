@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-4060d968-18c6-45ab-8177-4404607eb41a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-5182546d-ca81-4e3d-a1c9-b47d9f5404e5",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Guruji Footwear",
+      "paymentAmount": 55000,
+      "createdAt": "2026-09-12T12:15:24.393Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-053dbae9-891f-4786-91cb-f07d60ee51fe",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-5182546d-ca81-4e3d-a1c9-b47d9f5404e5",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Guruji Footwear",
+      "paymentAmount": 55000,
+      "createdAt": "2026-09-12T12:15:24.393Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-8091e3b5-c2af-460c-9d5c-8bde7d084c3a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
