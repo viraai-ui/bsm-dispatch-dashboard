@@ -28341,7 +28341,9 @@
     "1154219000036823056": {
       "salesOrderId": "1154219000036823056",
       "salesOrderNumber": "SO-07936",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-12T12:13:45.026Z",
       "processedOrder": {
         "id": "1154219000036823056",
         "zohoSalesOrderId": "1154219000036823056",
@@ -28371,8 +28373,8 @@
           {
             "id": "1154219000036823056-1154219000036823059-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271201",
+            "qrToken": "26271201",
             "orderId": "1154219000036823056",
             "lineItemId": "1154219000036823059",
             "itemName": "Round Blade Edge trimming Machine",
@@ -28380,20 +28382,23 @@
             "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07936",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "vendor": "Satnam",
+            "dispatchNote": "haryana"
           },
           {
             "id": "1154219000036823056-1154219000036823059-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271202",
+            "qrToken": "26271202",
             "orderId": "1154219000036823056",
             "lineItemId": "1154219000036823059",
             "itemName": "Round Blade Edge trimming Machine",
@@ -28401,14 +28406,17 @@
             "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07936",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-12",
+            "vendor": "Satnam",
+            "dispatchNote": "haryana"
           }
         ],
         "zohoLastModifiedTime": "2026-09-12T13:00:55+0530"
@@ -28422,7 +28430,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-12T12:13:02.600Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-12T12:13:03.803Z"
+          "zohoBackupQueuedAt": "2026-09-12T12:13:03.803Z",
+          "processedAt": "2026-09-12T12:13:45.026Z",
+          "dispatchNote": "haryana",
+          "vendor": "Satnam"
         },
         "1154219000036823056-1154219000036823059-2": {
           "machineUnitId": "1154219000036823056-1154219000036823059-2",
@@ -28432,7 +28443,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-12T12:13:02.600Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-12T12:13:03.803Z"
+          "zohoBackupQueuedAt": "2026-09-12T12:13:03.803Z",
+          "processedAt": "2026-09-12T12:13:45.026Z",
+          "dispatchNote": "haryana",
+          "vendor": "Satnam"
         }
       }
     }
