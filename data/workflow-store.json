@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271200,
+  "serialCounter": 26271202,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -28335,6 +28335,98 @@
           "zohoBackupLastAttemptAt": "2026-09-12T10:30:33.070Z",
           "zohoBackupSyncedAt": "2026-09-12T10:30:33.070Z",
           "dispatchedAt": "2026-09-12T11:54:33.479Z"
+        }
+      }
+    },
+    "1154219000036823056": {
+      "salesOrderId": "1154219000036823056",
+      "salesOrderNumber": "SO-07936",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036823056",
+        "zohoSalesOrderId": "1154219000036823056",
+        "salesOrderNumber": "SO-07936",
+        "status": "open",
+        "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. 3, SECTOR 4B, HSIIDC INDUSTRIAL AREA, BAHADURGARH,HARYANA-124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036823059",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225787",
+            "rate": 25000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036823056-1154219000036823059-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036823056",
+            "lineItemId": "1154219000036823059",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07936",
+            "deliveryDate": "2026-09-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036823056-1154219000036823059-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036823056",
+            "lineItemId": "1154219000036823059",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07936",
+            "deliveryDate": "2026-09-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-12T13:00:55+0530"
+      },
+      "machines": {
+        "1154219000036823056-1154219000036823059-1": {
+          "machineUnitId": "1154219000036823056-1154219000036823059-1",
+          "lineItemId": "1154219000036823059",
+          "serialNumber": "26271201",
+          "qrToken": "26271201",
+          "qrStatus": "pending"
+        },
+        "1154219000036823056-1154219000036823059-2": {
+          "machineUnitId": "1154219000036823056-1154219000036823059-2",
+          "lineItemId": "1154219000036823059",
+          "serialNumber": "26271202",
+          "qrToken": "26271202",
+          "qrStatus": "pending"
         }
       }
     }
