@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "GARG INDUSTRIES",
+      "salesOrderNumber": "SO-07938",
+      "paymentAmount": 44840,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07938/2026-09-12/1789208286608-134011ae-5900-4109-bc72-eaa9294d0ff7-efc39efb-74c6-4f80-a206-65df4d920660.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07938%2F2026-09-12%2F1789208286608-134011ae-5900-4109-bc72-eaa9294d0ff7-efc39efb-74c6-4f80-a206-65df4d920660.jpg",
+          "name": "efc39efb-74c6-4f80-a206-65df4d920660.jpg",
+          "contentType": "image/jpeg",
+          "size": 87813
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07938/2026-09-12/1789208286608-134011ae-5900-4109-bc72-eaa9294d0ff7-efc39efb-74c6-4f80-a206-65df4d920660.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07938%2F2026-09-12%2F1789208286608-134011ae-5900-4109-bc72-eaa9294d0ff7-efc39efb-74c6-4f80-a206-65df4d920660.jpg",
+      "screenshotName": "efc39efb-74c6-4f80-a206-65df4d920660.jpg",
+      "publicDeleteTokenHash": "62131f2f40ee28199e04cad3caff453646cf2dccc4e2810a6705fa3cf1bfaba9",
+      "id": "payment-a7c5d388-e6a4-49b7-81c1-6c83e6d1bb8c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "2aaf2221c42c45fda56131a718a7f01a",
+      "createdAt": "2026-09-12T10:18:08.124Z",
+      "updatedAt": "2026-09-12T10:18:08.124Z"
+    },
+    {
       "customerName": "V R SEWING MACHINE",
       "salesOrderNumber": "SO-07937",
       "paymentAmount": 42480,
