@@ -28695,7 +28695,9 @@
     "1154219000036917006": {
       "salesOrderId": "1154219000036917006",
       "salesOrderNumber": "SO-07943",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-14T08:32:12.365Z",
       "processedOrder": {
         "id": "1154219000036917006",
         "zohoSalesOrderId": "1154219000036917006",
@@ -28725,8 +28727,8 @@
           {
             "id": "1154219000036917006-1154219000036917009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271206",
+            "qrToken": "26271206",
             "orderId": "1154219000036917006",
             "lineItemId": "1154219000036917009",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -28734,14 +28736,17 @@
             "customerName": "Neeraj Yadav (URP)",
             "salesOrderNumber": "SO-07943",
             "deliveryDate": "2026-09-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Ss Enterprises",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T13:57:58+0530"
@@ -28757,7 +28762,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-14T08:29:18.603Z",
           "zohoBackupLastAttemptAt": "2026-09-14T08:30:33.367Z",
-          "zohoBackupSyncedAt": "2026-09-14T08:30:33.367Z"
+          "zohoBackupSyncedAt": "2026-09-14T08:30:33.367Z",
+          "processedAt": "2026-09-14T08:32:12.365Z",
+          "dispatchNote": "local",
+          "vendor": "Ss Enterprises"
         }
       }
     }
