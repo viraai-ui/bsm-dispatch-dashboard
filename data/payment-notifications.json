@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-3969abfd-f5da-4a31-92af-da50639f50ed",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-0509306a-432a-4d9e-a87b-cec3765638db",
+      "salesOrderNumber": "SO-01976",
+      "customerName": "LAMBA POLY SOLUTIONS",
+      "paymentAmount": 31880,
+      "createdAt": "2026-09-14T12:13:18.501Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-e7024427-de9f-44ac-a001-811364c0ddbb",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-0509306a-432a-4d9e-a87b-cec3765638db",
+      "salesOrderNumber": "SO-01976",
+      "customerName": "LAMBA POLY SOLUTIONS",
+      "paymentAmount": 31880,
+      "createdAt": "2026-09-14T12:13:18.501Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-95d45d13-2bc2-435e-bc9b-a0f19efd1ce2",
       "type": "payment-created",
       "recipientUserId": "u-admin",
