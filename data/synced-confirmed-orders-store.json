@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036909011": {
+      "id": "1154219000036909011",
+      "zohoSalesOrderId": "1154219000036909011",
+      "salesOrderNumber": "SO-07946",
+      "status": "open",
+      "customerName": "LAMBA POLY SOLUTIONS",
+      "shippingAddress": "E-48, SITE-C SINKANDRA, Runkata,, Agra, Uttar Pradesh, 282007, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036909014",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225787",
+          "rate": 26000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036909011-1154219000036909014-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036909011",
+          "lineItemId": "1154219000036909014",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "LAMBA POLY SOLUTIONS",
+          "salesOrderNumber": "SO-07946",
+          "deliveryDate": "2026-09-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-14T17:41:01+0530"
+    },
     "1154219000036914152": {
       "id": "1154219000036914152",
       "zohoSalesOrderId": "1154219000036914152",
@@ -579,89 +629,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-14T10:42:56+0530"
-    },
-    "1154219000036863001": {
-      "id": "1154219000036863001",
-      "zohoSalesOrderId": "1154219000036863001",
-      "salesOrderNumber": "SO-07937",
-      "status": "open",
-      "customerName": "V R SEWING MACHINE",
-      "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036863005",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226034",
-          "rate": 10000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036863004",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225102",
-          "rate": 26000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036863001-1154219000036863005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036863001",
-          "lineItemId": "1154219000036863005",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "V R SEWING MACHINE",
-          "salesOrderNumber": "SO-07937",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036863001-1154219000036863004-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036863001",
-          "lineItemId": "1154219000036863004",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "customerName": "V R SEWING MACHINE",
-          "salesOrderNumber": "SO-07937",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-12T12:16:25+0530"
     },
     "1154219000036842001": {
       "id": "1154219000036842001",
@@ -10538,12 +10505,12 @@
     }
   },
   "orderIds": [
+    "1154219000036909011",
     "1154219000036914152",
     "1154219000036907014",
     "1154219000036923017",
     "1154219000036908001",
     "1154219000036876003",
-    "1154219000036863001",
     "1154219000036842001",
     "1154219000036722010",
     "1154219000036723009",
@@ -10591,8 +10558,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T12:00:28.987Z",
-  "lastAttemptAt": "2026-09-14T12:14:40.250Z",
+  "lastSuccessfulSyncAt": "2026-09-14T12:14:45.942Z",
+  "lastAttemptAt": "2026-09-14T12:14:45.942Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
