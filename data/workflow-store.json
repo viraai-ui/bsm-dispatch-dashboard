@@ -1511,19 +1511,19 @@
     "1154219000032974004": {
       "salesOrderId": "1154219000032974004",
       "salesOrderNumber": "SO-07312",
-      "status": "qr_generated",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-07-27T06:58:58.258Z",
+      "processedAt": "2026-09-14T10:57:52.897Z",
       "processedOrder": {
         "id": "1154219000032974004",
         "zohoSalesOrderId": "1154219000032974004",
         "salesOrderNumber": "SO-07312",
         "status": "open",
-        "customerName": "BAGZ0NE LIFESTYLES PVT.LTD.",
+        "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
         "shippingAddress": "C/O Tainwala Holding Pvt. Ltd. Gat No. 413 & 420, Gonde, Village Vadivarahe, Taluka Igatpur, Mumbai Agra Highway, Nashik, Maharashtra, 422403, India",
         "salesperson": "Anuj Kumar",
         "deliveryDate": "2026-06-19",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "Processed",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -1532,8 +1532,10 @@
             "sku": "831-3",
             "description": "",
             "quantity": 4,
-            "pendingQuantity": 4,
+            "pendingQuantity": 2,
             "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004385212",
+            "rate": 85000,
             "dispatchCategory": "machine"
           }
         ],
@@ -1547,10 +1549,10 @@
             "lineItemId": "1154219000032974007",
             "itemName": "Hotmelt Roller Coater (20 Inch)",
             "sku": "831-3",
-            "customerName": "BAGZ0NE LIFESTYLES PVT.LTD.",
+            "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
             "salesOrderNumber": "SO-07312",
             "deliveryDate": "2026-06-19",
-            "status": "QR Generated",
+            "status": "Dispatched",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -1559,7 +1561,8 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "warrantyStart": "2026-07-27",
-            "dispatchNote": ""
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000032974004-1154219000032974007-2",
@@ -1570,7 +1573,31 @@
             "lineItemId": "1154219000032974007",
             "itemName": "Hotmelt Roller Coater (20 Inch)",
             "sku": "831-3",
-            "customerName": "BAGZ0NE LIFESTYLES PVT.LTD.",
+            "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
+            "salesOrderNumber": "SO-07312",
+            "deliveryDate": "2026-06-19",
+            "status": "Dispatched",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-07-27",
+            "dispatchNote": "",
+            "vendor": ""
+          },
+          {
+            "id": "1154219000032974004-1154219000032974007-3",
+            "unitNumber": 3,
+            "serialNumber": "26271207",
+            "qrToken": "26271207",
+            "orderId": "1154219000032974004",
+            "lineItemId": "1154219000032974007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
             "salesOrderNumber": "SO-07312",
             "deliveryDate": "2026-06-19",
             "status": "QR Generated",
@@ -1581,44 +1608,23 @@
             "mediaPhotos": 0,
             "mediaVideos": 0,
             "itemDescription": "",
-            "warrantyStart": "2026-07-27",
-            "dispatchNote": ""
-          },
-          {
-            "id": "1154219000032974004-1154219000032974007-3",
-            "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
-            "orderId": "1154219000032974004",
-            "lineItemId": "1154219000032974007",
-            "itemName": "Hotmelt Roller Coater (20 Inch)",
-            "sku": "831-3",
-            "customerName": "BAGZ0NE LIFESTYLES PVT.LTD.",
-            "salesOrderNumber": "SO-07312",
-            "deliveryDate": "2026-06-19",
-            "status": "Not Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Not Required",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": "",
-            "dispatchNote": ""
+            "dispatchNote": "wooden",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Able"
           },
           {
             "id": "1154219000032974004-1154219000032974007-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271208",
+            "qrToken": "26271208",
             "orderId": "1154219000032974004",
             "lineItemId": "1154219000032974007",
             "itemName": "Hotmelt Roller Coater (20 Inch)",
             "sku": "831-3",
-            "customerName": "BAGZ0NE LIFESTYLES PVT.LTD.",
+            "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
             "salesOrderNumber": "SO-07312",
             "deliveryDate": "2026-06-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -1626,9 +1632,12 @@
             "mediaPhotos": 0,
             "mediaVideos": 0,
             "itemDescription": "",
-            "dispatchNote": ""
+            "dispatchNote": "wooden",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Able"
           }
-        ]
+        ],
+        "zohoLastModifiedTime": "2026-07-28T13:21:08+0530"
       },
       "machines": {
         "1154219000032974004-1154219000032974007-1": {
@@ -1669,7 +1678,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T10:55:44.937Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T10:55:46.239Z"
+          "zohoBackupQueuedAt": "2026-09-14T10:55:46.239Z",
+          "processedAt": "2026-09-14T10:57:52.897Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000032974004-1154219000032974007-4": {
           "machineUnitId": "1154219000032974004-1154219000032974007-4",
@@ -1679,7 +1691,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T10:55:44.937Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T10:55:46.239Z"
+          "zohoBackupQueuedAt": "2026-09-14T10:55:46.239Z",
+          "processedAt": "2026-09-14T10:57:52.897Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     },
