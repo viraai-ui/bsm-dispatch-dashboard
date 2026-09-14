@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271204,
+  "serialCounter": 26271205,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -28610,6 +28610,70 @@
           "processedAt": "2026-09-14T08:08:59.319Z",
           "dispatchNote": "Local",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000036903001": {
+      "salesOrderId": "1154219000036903001",
+      "salesOrderNumber": "SO-07940",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036903001",
+        "zohoSalesOrderId": "1154219000036903001",
+        "salesOrderNumber": "SO-07940",
+        "status": "open",
+        "customerName": "GURUJI FOOTWEAR",
+        "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036903004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 47000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036903001-1154219000036903004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036903001",
+            "lineItemId": "1154219000036903004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "GURUJI FOOTWEAR",
+            "salesOrderNumber": "SO-07940",
+            "deliveryDate": "2026-09-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T10:43:26+0530"
+      },
+      "machines": {
+        "1154219000036903001-1154219000036903004-1": {
+          "machineUnitId": "1154219000036903001-1154219000036903004-1",
+          "lineItemId": "1154219000036903004",
+          "serialNumber": "26271205",
+          "qrToken": "26271205",
+          "qrStatus": "pending"
         }
       }
     }
