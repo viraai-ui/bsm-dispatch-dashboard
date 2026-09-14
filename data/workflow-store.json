@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271210,
+  "serialCounter": 26271212,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -28963,6 +28963,110 @@
           "processedAt": "2026-09-14T12:52:27.128Z",
           "dispatchNote": "wooden",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000036914152": {
+      "salesOrderId": "1154219000036914152",
+      "salesOrderNumber": "SO-07945",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036914152",
+        "zohoSalesOrderId": "1154219000036914152",
+        "salesOrderNumber": "SO-07945",
+        "status": "open",
+        "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+        "shippingAddress": "Plot No.32, Ladli Complex Opposite Totla petrol Pump, Bhokardan Naka, Aurangabad Road, JALNA, MAHARASHTRA, 431203, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036914155",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226574",
+            "rate": 42000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036914156",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036914152-1154219000036914155-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036914152",
+            "lineItemId": "1154219000036914155",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+            "salesOrderNumber": "SO-07945",
+            "deliveryDate": "2026-09-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036914152-1154219000036914155-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036914152",
+            "lineItemId": "1154219000036914155",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+            "salesOrderNumber": "SO-07945",
+            "deliveryDate": "2026-09-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T17:00:00+0530"
+      },
+      "machines": {
+        "1154219000036914152-1154219000036914155-1": {
+          "machineUnitId": "1154219000036914152-1154219000036914155-1",
+          "lineItemId": "1154219000036914155",
+          "serialNumber": "26271211",
+          "qrToken": "26271211",
+          "qrStatus": "pending"
+        },
+        "1154219000036914152-1154219000036914155-2": {
+          "machineUnitId": "1154219000036914152-1154219000036914155-2",
+          "lineItemId": "1154219000036914155",
+          "serialNumber": "26271212",
+          "qrToken": "26271212",
+          "qrStatus": "pending"
         }
       }
     }
