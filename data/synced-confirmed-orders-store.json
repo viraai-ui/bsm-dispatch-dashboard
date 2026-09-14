@@ -864,46 +864,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-10T12:16:20+0530"
     },
-    "1154219000036724001": {
-      "id": "1154219000036724001",
-      "zohoSalesOrderId": "1154219000036724001",
-      "salesOrderNumber": "SO-07915",
-      "status": "open",
-      "customerName": "Ravar Creative",
-      "shippingAddress": "11-2-93, Mylargadda,, Secunderabad, Telangana, 500061",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-09",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036724004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 50,
-          "pendingQuantity": 50,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 330,
-          "dispatchCategory": "adhesive"
-        },
-        {
-          "id": "1154219000036724005",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Freight Cost Extra from BSM to VRL Logistics Delhi Godown for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 1000,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-09T15:34:36+0530"
-    },
     "1154219000036720001": {
       "id": "1154219000036720001",
       "zohoSalesOrderId": "1154219000036720001",
@@ -9978,7 +9938,6 @@
     "1154219000036708018",
     "1154219000036721021",
     "1154219000036724026",
-    "1154219000036724001",
     "1154219000036720001",
     "1154219000036717001",
     "1154219000036663006",
@@ -10027,8 +9986,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T05:32:50.304Z",
-  "lastAttemptAt": "2026-09-14T05:40:24.773Z",
+  "lastSuccessfulSyncAt": "2026-09-14T05:40:29.647Z",
+  "lastAttemptAt": "2026-09-14T05:40:29.647Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
