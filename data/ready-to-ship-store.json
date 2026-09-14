@@ -6674,6 +6674,43 @@
           "phone": ""
         }
       }
+    },
+    "1154219000034744001": {
+      "id": "ship-1789390006444-m7g92",
+      "itemId": "1154219000034744001",
+      "orderId": "1154219000034744001",
+      "machineId": "1154219000034744001-1154219000034744004-1",
+      "salesOrderNumber": "SO-07573",
+      "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "M D Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-14 at 6.16.09 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-14%2FSO-07573%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-14T12-46-42-200Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-14/SO-07573/shipment-lr-builty/Shipment-LR-Builty-2026-09-14T12-46-42-200Z.jpeg",
+        "expiresAt": null
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-14T12:46:46.444Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
