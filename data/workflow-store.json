@@ -28618,7 +28618,9 @@
     "1154219000036903001": {
       "salesOrderId": "1154219000036903001",
       "salesOrderNumber": "SO-07940",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-14T08:16:12.263Z",
       "processedOrder": {
         "id": "1154219000036903001",
         "zohoSalesOrderId": "1154219000036903001",
@@ -28648,8 +28650,8 @@
           {
             "id": "1154219000036903001-1154219000036903004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271205",
+            "qrToken": "26271205",
             "orderId": "1154219000036903001",
             "lineItemId": "1154219000036903004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -28657,14 +28659,17 @@
             "customerName": "GURUJI FOOTWEAR",
             "salesOrderNumber": "SO-07940",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T10:43:26+0530"
@@ -28680,7 +28685,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-14T08:13:51.045Z",
           "zohoBackupLastAttemptAt": "2026-09-14T08:15:33.346Z",
-          "zohoBackupSyncedAt": "2026-09-14T08:15:33.346Z"
+          "zohoBackupSyncedAt": "2026-09-14T08:15:33.346Z",
+          "processedAt": "2026-09-14T08:16:12.263Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
