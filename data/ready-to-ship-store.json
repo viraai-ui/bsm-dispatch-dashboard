@@ -6358,6 +6358,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036705011": {
+      "id": "ship-1789363572464-vkw9s",
+      "itemId": "1154219000036705011",
+      "orderId": "1154219000036705011",
+      "machineId": "1154219000036705011-1154219000036705014-1",
+      "salesOrderNumber": "SO-07933",
+      "customerName": "Ram & Sons Footcare Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-11",
+      "notes": "",
+      "shippedAt": "2026-09-14T05:26:12.464Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
