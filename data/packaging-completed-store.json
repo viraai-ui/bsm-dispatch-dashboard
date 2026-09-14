@@ -18846,6 +18846,66 @@
       "machineIds": [
         "1154219000036903001-1154219000036903004-1"
       ]
+    },
+    "1154219000035890003": {
+      "completedAt": "2026-09-14T10:47:58.775Z",
+      "order": {
+        "id": "1154219000035890003",
+        "zohoSalesOrderId": "1154219000035890003",
+        "salesOrderNumber": "SO-07774",
+        "status": "open",
+        "customerName": "Auto Foam Industries (Alwar)",
+        "shippingAddress": "F-11 E88 Khushkera, RIICO Industrial Area, Khushkhera, Alwar, Rajasthan, 301707, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035890006",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277664",
+            "rate": 495000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035890003-1154219000035890006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271203",
+            "qrToken": "26271203",
+            "orderId": "1154219000035890003",
+            "lineItemId": "1154219000035890006",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "customerName": "Auto Foam Industries (Alwar)",
+            "salesOrderNumber": "SO-07774",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T14:58:12+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035890003-1154219000035890006-1"
+      ]
     }
   }
 }
