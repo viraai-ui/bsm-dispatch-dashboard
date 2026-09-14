@@ -447,56 +447,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-14T10:42:56+0530"
     },
-    "1154219000036882003": {
-      "id": "1154219000036882003",
-      "zohoSalesOrderId": "1154219000036882003",
-      "salesOrderNumber": "SO-07938",
-      "status": "open",
-      "customerName": "GARG INDUSTRIES",
-      "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036882006",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000002187978",
-          "rate": 38000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036882003-1154219000036882006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036882003",
-          "lineItemId": "1154219000036882006",
-          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
-          "sku": "",
-          "customerName": "GARG INDUSTRIES",
-          "salesOrderNumber": "SO-07938",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-12T15:53:27+0530"
-    },
     "1154219000036863001": {
       "id": "1154219000036863001",
       "zohoSalesOrderId": "1154219000036863001",
@@ -9929,7 +9879,6 @@
     "1154219000036908001",
     "1154219000036903001",
     "1154219000036876003",
-    "1154219000036882003",
     "1154219000036863001",
     "1154219000036842001",
     "1154219000036712023",
@@ -9986,8 +9935,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T06:40:29.959Z",
-  "lastAttemptAt": "2026-09-14T07:00:24.974Z",
+  "lastSuccessfulSyncAt": "2026-09-14T07:00:30.389Z",
+  "lastAttemptAt": "2026-09-14T07:00:30.389Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
