@@ -28817,7 +28817,9 @@
     "1154219000036934006": {
       "salesOrderId": "1154219000036934006",
       "salesOrderNumber": "SO-07947",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-14T12:41:20.380Z",
       "processedOrder": {
         "id": "1154219000036934006",
         "zohoSalesOrderId": "1154219000036934006",
@@ -28847,8 +28849,8 @@
           {
             "id": "1154219000036934006-1154219000036934009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271209",
+            "qrToken": "26271209",
             "orderId": "1154219000036934006",
             "lineItemId": "1154219000036934009",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -28856,14 +28858,17 @@
             "customerName": "GNA CONSTRUCTION PRIVATE LIMITED",
             "salesOrderNumber": "SO-07947",
             "deliveryDate": "2026-09-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Ss Enterprises",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T18:07:38+0530"
@@ -28877,7 +28882,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T12:39:08.875Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T12:39:10.305Z"
+          "zohoBackupQueuedAt": "2026-09-14T12:39:10.305Z",
+          "processedAt": "2026-09-14T12:41:20.380Z",
+          "dispatchNote": "local",
+          "vendor": "Ss Enterprises"
         }
       }
     }
