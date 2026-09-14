@@ -6612,56 +6612,6 @@
       ],
       "zohoLastModifiedTime": "2026-08-21T17:26:56+0530"
     },
-    "1154219000035890003": {
-      "id": "1154219000035890003",
-      "zohoSalesOrderId": "1154219000035890003",
-      "salesOrderNumber": "SO-07774",
-      "status": "open",
-      "customerName": "Auto Foam Industries (Alwar)",
-      "shippingAddress": "F-11 E88 Khushkera, RIICO Industrial Area, Khushkhera, Alwar, Rajasthan, 301707, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035890006",
-          "itemName": "Beam Cutting Press (40 ton)",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000277664",
-          "rate": 495000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035890003-1154219000035890006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035890003",
-          "lineItemId": "1154219000035890006",
-          "itemName": "Beam Cutting Press (40 ton)",
-          "sku": "",
-          "customerName": "Auto Foam Industries (Alwar)",
-          "salesOrderNumber": "SO-07774",
-          "deliveryDate": "2026-09-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-10T14:58:12+0530"
-    },
     "1154219000035891004": {
       "id": "1154219000035891004",
       "zohoSalesOrderId": "1154219000035891004",
@@ -10537,7 +10487,6 @@
     "1154219000035947002",
     "1154219000035933004",
     "1154219000035884008",
-    "1154219000035890003",
     "1154219000035891004",
     "1154219000035794018",
     "1154219000035711007",
@@ -10558,8 +10507,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T10:40:31.255Z",
-  "lastAttemptAt": "2026-09-14T11:00:26.129Z",
+  "lastSuccessfulSyncAt": "2026-09-14T11:00:38.887Z",
+  "lastAttemptAt": "2026-09-14T11:00:38.887Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
