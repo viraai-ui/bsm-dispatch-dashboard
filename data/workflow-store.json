@@ -28894,7 +28894,9 @@
     "1154219000036909011": {
       "salesOrderId": "1154219000036909011",
       "salesOrderNumber": "SO-07946",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-14T12:52:27.128Z",
       "processedOrder": {
         "id": "1154219000036909011",
         "zohoSalesOrderId": "1154219000036909011",
@@ -28924,8 +28926,8 @@
           {
             "id": "1154219000036909011-1154219000036909014-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271210",
+            "qrToken": "26271210",
             "orderId": "1154219000036909011",
             "lineItemId": "1154219000036909014",
             "itemName": "Round Blade Edge trimming Machine",
@@ -28933,14 +28935,17 @@
             "customerName": "LAMBA POLY SOLUTIONS",
             "salesOrderNumber": "SO-07946",
             "deliveryDate": "2026-09-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T17:41:01+0530"
@@ -28954,7 +28959,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T12:51:37.007Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T12:51:38.409Z"
+          "zohoBackupQueuedAt": "2026-09-14T12:51:38.409Z",
+          "processedAt": "2026-09-14T12:52:27.128Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
