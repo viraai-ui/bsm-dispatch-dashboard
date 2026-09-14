@@ -28969,7 +28969,9 @@
     "1154219000036914152": {
       "salesOrderId": "1154219000036914152",
       "salesOrderNumber": "SO-07945",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-14T12:55:52.744Z",
       "processedOrder": {
         "id": "1154219000036914152",
         "zohoSalesOrderId": "1154219000036914152",
@@ -29011,8 +29013,8 @@
           {
             "id": "1154219000036914152-1154219000036914155-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271211",
+            "qrToken": "26271211",
             "orderId": "1154219000036914152",
             "lineItemId": "1154219000036914155",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -29020,20 +29022,23 @@
             "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
             "salesOrderNumber": "SO-07945",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Balaji Sewing",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036914152-1154219000036914155-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271212",
+            "qrToken": "26271212",
             "orderId": "1154219000036914152",
             "lineItemId": "1154219000036914155",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -29041,14 +29046,17 @@
             "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
             "salesOrderNumber": "SO-07945",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "Balaji Sewing",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T17:00:00+0530"
@@ -29062,7 +29070,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T12:53:06.813Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T12:53:08.181Z"
+          "zohoBackupQueuedAt": "2026-09-14T12:53:08.181Z",
+          "processedAt": "2026-09-14T12:55:52.744Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Balaji Sewing"
         },
         "1154219000036914152-1154219000036914155-2": {
           "machineUnitId": "1154219000036914152-1154219000036914155-2",
@@ -29072,7 +29083,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T12:53:06.813Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T12:53:08.181Z"
+          "zohoBackupQueuedAt": "2026-09-14T12:53:08.181Z",
+          "processedAt": "2026-09-14T12:55:52.744Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Balaji Sewing"
         }
       }
     }
