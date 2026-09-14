@@ -18867,6 +18867,65 @@
       "machineIds": [
         "1154219000036917006-1154219000036917009-1"
       ]
+    },
+    "1154219000036903001": {
+      "completedAt": "2026-09-14T09:49:16.756Z",
+      "order": {
+        "id": "1154219000036903001",
+        "zohoSalesOrderId": "1154219000036903001",
+        "salesOrderNumber": "SO-07940",
+        "status": "open",
+        "customerName": "GURUJI FOOTWEAR",
+        "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036903004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 47000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036903001-1154219000036903004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271205",
+            "qrToken": "26271205",
+            "orderId": "1154219000036903001",
+            "lineItemId": "1154219000036903004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "GURUJI FOOTWEAR",
+            "salesOrderNumber": "SO-07940",
+            "deliveryDate": "2026-09-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T10:43:26+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036903001-1154219000036903004-1"
+      ]
     }
   }
 }
