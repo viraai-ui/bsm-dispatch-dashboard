@@ -1,55 +1,5 @@
 {
   "orders": {
-    "1154219000036917006": {
-      "id": "1154219000036917006",
-      "zohoSalesOrderId": "1154219000036917006",
-      "salesOrderNumber": "SO-07943",
-      "status": "open",
-      "customerName": "Neeraj Yadav (URP)",
-      "shippingAddress": "E-3/201, Shiv Ram Park, Nangloi, PO Nangloi Delhi, Delhi, 110041",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036917009",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000278601",
-          "rate": 22500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036917006-1154219000036917009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036917006",
-          "lineItemId": "1154219000036917009",
-          "itemName": "Manual Fusing Machine (16*24 inches)",
-          "sku": "38-2",
-          "customerName": "Neeraj Yadav (URP)",
-          "salesOrderNumber": "SO-07943",
-          "deliveryDate": "2026-09-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T13:58:28+0530"
-    },
     "1154219000036923017": {
       "id": "1154219000036923017",
       "zohoSalesOrderId": "1154219000036923017",
@@ -9926,7 +9876,6 @@
     }
   },
   "orderIds": [
-    "1154219000036917006",
     "1154219000036923017",
     "1154219000036908001",
     "1154219000036903001",
@@ -9986,8 +9935,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T09:21:42.090Z",
-  "lastAttemptAt": "2026-09-14T09:40:25.499Z",
+  "lastSuccessfulSyncAt": "2026-09-14T09:40:37.952Z",
+  "lastAttemptAt": "2026-09-14T09:40:37.952Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
