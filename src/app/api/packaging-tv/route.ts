@@ -5,6 +5,7 @@ import { readSyncedOrdersStore } from '@/lib/synced-orders'
 import { isMachineLineItem } from '@/lib/item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 import { loadOperationalProjection } from '@/lib/operational-orders'
+import { completionCoversMachineIds } from '@/lib/machine-unit-slots'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 type PriorityStore = { priorities: Record<string, { priority: 'urgent' | 'regular'; sortOrder?: number; updatedAt: string }> }
@@ -32,7 +33,7 @@ export async function GET(request: Request) {
         dispatchSortOrder: savedPriority?.sortOrder ?? item.dispatchSortOrder,
       })
     })
-    .filter((order) => !completed.completed[order.id])
+    .filter((order) => !completed.completed[order.id] || !completionCoversMachineIds(order.machines.map((machine) => machine.id), completed.completed[order.id]?.machineIds))
     .filter((order) => order.machines.length > 0 || hasDispatchLineItems(order))
   const debug = new URL(request.url).searchParams.get('debug') === '1'
   return apiOk({ orders, completedCount: Object.keys(completed.completed).length, ...(debug ? { debug: { processedCount: processed.length, processed: processed.map((item) => ({ id: item.salesOrderId, so: item.salesOrderNumber, hasProcessedOrder: Boolean(item.processedOrder), machineCount: Object.keys(item.machines || {}).length, pendingMachineCount: Object.values(item.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).length, completed: Boolean(completed.completed[item.salesOrderId]) })) } } : {}) })

@@ -1,6 +1,7 @@
 import type { Order } from '@/types/domain'
 import { githubReadJson, githubWriteJson, type OrderWorkflow } from './workflow-store'
 import { readMediaProofStore } from './media-proof'
+import { ensureOrderedMachineSlots } from './machine-unit-slots'
 
 export type OrderStage = 'open' | 'processed' | 'packed' | 'packing_video' | 'loading_video' | 'closed'
 export type DispatchStore = { dispatched: Record<string, { dispatchedAt: string; order: Order }> }
@@ -27,7 +28,10 @@ export async function buildStageMap(workflows: Record<string, OrderWorkflow> = {
   const stages: Record<string, OrderStage> = {}
   for (const id of ids) {
     const workflow = workflows[id]
-    if (loading.records[id]?.submittedAt) stages[id] = 'closed'
+    const snapshot = workflow?.processedOrder
+    const incomplete = Boolean(snapshot && ensureOrderedMachineSlots(snapshot, workflow).machines.some((machine) => !workflow?.machines?.[machine.id]?.dispatchedAt))
+    if (incomplete && !Object.values(workflow?.machines || {}).some((machine) => machine.processedAt && !machine.dispatchedAt)) stages[id] = 'open'
+    else if (loading.records[id]?.submittedAt) stages[id] = 'closed'
     else if (packing.records[id]?.submittedAt) stages[id] = 'loading_video'
     else if (completed.completed[id]) stages[id] = 'packing_video'
     else if (workflow?.status === 'processed' || Object.values(workflow?.machines || {}).some((machine) => machine.processedAt)) stages[id] = 'processed'

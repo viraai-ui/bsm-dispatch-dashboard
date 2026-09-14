@@ -4,6 +4,7 @@ import { fetchZohoConfirmedOrders, fetchZohoOrderDetail } from './zoho'
 import { reconcileOrder, type OrderSyncDiff } from './order-reconcile'
 import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
 import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
+import { ensureOrderedMachineSlots, hasIncompleteMachineSlots } from './machine-unit-slots'
 
 export type SyncedOrdersStore = {
   orders: Record<string, Order>
@@ -67,7 +68,7 @@ function normalizeOrder(order: Order): Order {
     return withCategory
   })
   const machineLineIds = new Set(lineItems.filter(isMachineLineItem).map((item) => item.id))
-  return { ...order, lineItems, machines: (order.machines || []).filter((machine) => machineLineIds.has(machine.lineItemId)) }
+  return ensureOrderedMachineSlots({ ...order, lineItems, machines: (order.machines || []).filter((machine) => machineLineIds.has(machine.lineItemId)) })
 }
 
 export async function writeSyncedOrdersStore(store: SyncedOrdersStore, message = 'Update confirmed sales order sync store', expectedSha?: string) {
@@ -79,7 +80,7 @@ export async function listOrdersModuleOrders() {
   return store.orderIds
     .map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null)
     .filter((order): order is Order => order !== null)
-    .filter(isOperationalZohoOrder)
+    .filter((order) => isOperationalZohoOrder(order) || hasIncompleteMachineSlots(order, workflows[order.id]))
     .filter((order) => !isOrderTombstoned(order, baseline.data.tombstones))
 }
 
@@ -181,6 +182,7 @@ async function performSync() {
 }
 
 function applyWorkflow(order: Order, workflow?: OrderWorkflow): Order {
+  order = ensureOrderedMachineSlots(order, workflow)
   if (!workflow) return order
   const workflowLineItems = new Map((workflow.processedOrder?.lineItems || []).map((item) => [item.id, item]))
   const workflowMachines = new Map((workflow.processedOrder?.machines || []).map((machine) => [machine.id, machine]))

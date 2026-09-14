@@ -22,7 +22,7 @@ export function reconcileOrder(local: Order, remote: Order, workflowIds = new Se
     if (!old) diff.added.push(line.id); else if (JSON.stringify(old) !== JSON.stringify(line)) diff.updated.push(line.id)
     const delta = line.pendingQuantity - (old?.pendingQuantity || 0); if (delta) diff.quantityDeltas[line.id] = delta
     const existing = old ? local.machines.filter((m) => m.lineItemId === old.id).sort((a, b) => ordinal(a) - ordinal(b)) : []
-    const target = Math.max(0, line.pendingQuantity)
+    const target = Math.max(0, line.quantity)
     // Remove highest unprocessed ordinals first. Processed excess is retired history.
     const active = [...existing]
     while (active.length > target) {

@@ -133,7 +133,8 @@ function buildUnits(order: any, lineItems: OrderLineItem[]): MachineUnit[] {
   const units: MachineUnit[] = []
   for (const item of lineItems) {
     if (!isMachineLineItem(item)) continue
-    for (let i = 1; i <= item.pendingQuantity; i += 1) {
+    // Pending is an unshipped balance, never the unit identity cardinality.
+    for (let i = 1; i <= item.quantity; i += 1) {
       units.push({
         id: `${order.salesorder_id}-${item.id}-${i}`,
         unitNumber: units.length + 1,

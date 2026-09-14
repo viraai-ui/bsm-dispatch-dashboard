@@ -3,6 +3,7 @@ import { readSyncedOrdersStore } from './synced-orders'
 import { listReadyToShipItems } from './ready-to-ship'
 import { isMachineLineItem } from './item-classification'
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
+import { completionCoversMachineIds } from './machine-unit-slots'
 
 type CompletedStore = { completed: Record<string, { completedAt: string; order: Order; machineIds?: string[] }> }
 type PriorityStore = { priorities: Record<string, { priority: 'urgent' | 'regular'; sortOrder?: number; updatedAt: string }> }
@@ -67,7 +68,10 @@ export async function getSalesmanViewData() {
         machineLabels: compactMachineLabels(machines, order.lineItems),
       }
     })
-    .filter((order) => !completed[order.id])
+    .filter((order) => !completed[order.id] || !completionCoversMachineIds(
+      Object.values(processed.find((item) => item.salesOrderId === order.id)?.machines || {}).filter((machine) => machine.processedAt && !machine.dispatchedAt).map((machine) => machine.machineUnitId),
+      completed[order.id]?.machineIds,
+    ))
     .filter((order) => order.machineCount > 0)
     .sort((a, b) => priorityWeight(a.priority) - priorityWeight(b.priority) || (Date.parse(a.deliveryDate || '') || 0) - (Date.parse(b.deliveryDate || '') || 0))
 
