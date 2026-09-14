@@ -764,56 +764,6 @@
       "machines": [],
       "zohoLastModifiedTime": "2026-09-10T15:10:23+0530"
     },
-    "1154219000036708018": {
-      "id": "1154219000036708018",
-      "zohoSalesOrderId": "1154219000036708018",
-      "salesOrderNumber": "SO-07922",
-      "status": "open",
-      "customerName": "FORTUNE ELASTOMERS PVT LTD",
-      "shippingAddress": "10/360 M PLOT NO 34 KSIDC KINALOOR, CALICUT, KERALA, 673612",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036708021",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225787",
-          "rate": 27500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036708018-1154219000036708021-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036708018",
-          "lineItemId": "1154219000036708021",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "FORTUNE ELASTOMERS PVT LTD",
-          "salesOrderNumber": "SO-07922",
-          "deliveryDate": "2026-09-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-10T12:50:21+0530"
-    },
     "1154219000036721021": {
       "id": "1154219000036721021",
       "zohoSalesOrderId": "1154219000036721021",
@@ -7540,68 +7490,6 @@
       ],
       "zohoLastModifiedTime": "2026-07-25T15:09:19+0530"
     },
-    "1154219000034744001": {
-      "id": "1154219000034744001",
-      "zohoSalesOrderId": "1154219000034744001",
-      "salesOrderNumber": "SO-07573",
-      "status": "open",
-      "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
-      "shippingAddress": "Plot No D-2 / 11/ B / 1, GIDC Phase - II, Dahej, Vagra, Bharuch, Gujarat - 392130, India",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-07-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036703253",
-          "itemName": "Atom Swing Arm Clicker (25 Ton)",
-          "sku": "",
-          "description": "Size : Arm size : 500 mm Bed Size : 1000*500 mm",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000035455313",
-          "rate": 435000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000034744005",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Part Loading Freight Charge from BSM to Gujarat",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 29000,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034744001-1154219000036703253-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034744001",
-          "lineItemId": "1154219000036703253",
-          "itemName": "Atom Swing Arm Clicker (25 Ton)",
-          "sku": "",
-          "customerName": "Lubrizol Advanced Materials India Pvt Ltd",
-          "salesOrderNumber": "SO-07573",
-          "deliveryDate": "2026-07-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "Size : Arm size : 500 mm Bed Size : 1000*500 mm"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-11T11:09:46+0530"
-    },
     "1154219000034633005": {
       "id": "1154219000034633005",
       "zohoSalesOrderId": "1154219000034633005",
@@ -10565,7 +10453,6 @@
     "1154219000036842001",
     "1154219000036722010",
     "1154219000036723009",
-    "1154219000036708018",
     "1154219000036721021",
     "1154219000036717001",
     "1154219000036663006",
@@ -10598,7 +10485,6 @@
     "1154219000035500001",
     "1154219000035356001",
     "1154219000034750001",
-    "1154219000034744001",
     "1154219000034633005",
     "1154219000034263026",
     "1154219000034276003",
@@ -10609,8 +10495,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T12:40:30.662Z",
-  "lastAttemptAt": "2026-09-14T13:00:25.737Z",
+  "lastSuccessfulSyncAt": "2026-09-14T13:00:38.222Z",
+  "lastAttemptAt": "2026-09-14T13:00:38.222Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
