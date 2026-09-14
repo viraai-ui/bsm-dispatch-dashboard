@@ -6426,6 +6426,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036443007": {
+      "id": "ship-1789369003188-bhm3f",
+      "itemId": "1154219000036443007",
+      "orderId": "1154219000036443007",
+      "machineId": "1154219000036443007-1154219000036443010-1",
+      "salesOrderNumber": "SO-07881",
+      "customerName": "GARG INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-12",
+      "notes": "",
+      "shippedAt": "2026-09-14T06:56:43.188Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
