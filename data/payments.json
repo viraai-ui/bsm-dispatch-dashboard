@@ -1,6 +1,40 @@
 {
   "payments": [
     {
+      "customerName": "D Zone",
+      "salesOrderNumber": "SO-07759",
+      "paymentAmount": 99998,
+      "paymentMode": "UPI",
+      "addedBy": "Deepak",
+      "remarks": "49999+49999",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07759/2026-09-14/1789364244986-98d38afa-32ee-4daa-b262-6ac8b1a6206e-f70bbacd-acd5-44ac-abad-433a3466fcf3.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07759%2F2026-09-14%2F1789364244986-98d38afa-32ee-4daa-b262-6ac8b1a6206e-f70bbacd-acd5-44ac-abad-433a3466fcf3.jpg",
+          "name": "f70bbacd-acd5-44ac-abad-433a3466fcf3.jpg",
+          "contentType": "image/jpeg",
+          "size": 47919
+        },
+        {
+          "key": "payments/public/SO-07759/2026-09-14/1789364246727-48ff02cb-9528-4f2e-803b-27710e70e1c1-c1682acc-4e01-483e-afbe-b6b3638cedd2.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07759%2F2026-09-14%2F1789364246727-48ff02cb-9528-4f2e-803b-27710e70e1c1-c1682acc-4e01-483e-afbe-b6b3638cedd2.jpg",
+          "name": "c1682acc-4e01-483e-afbe-b6b3638cedd2.jpg",
+          "contentType": "image/jpeg",
+          "size": 48428
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07759/2026-09-14/1789364244986-98d38afa-32ee-4daa-b262-6ac8b1a6206e-f70bbacd-acd5-44ac-abad-433a3466fcf3.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07759%2F2026-09-14%2F1789364244986-98d38afa-32ee-4daa-b262-6ac8b1a6206e-f70bbacd-acd5-44ac-abad-433a3466fcf3.jpg",
+      "screenshotName": "f70bbacd-acd5-44ac-abad-433a3466fcf3.jpg",
+      "publicDeleteTokenHash": "3782b78a6b71440158b21d6f77b577768bd927984355d4a6868bcd018669e40f",
+      "id": "payment-ffb4cc90-b042-4fc9-8426-54d3b52f6848",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "c492d3abc9ba4309948f0163e806daa9",
+      "createdAt": "2026-09-14T05:37:29.762Z",
+      "updatedAt": "2026-09-14T05:37:29.762Z"
+    },
+    {
       "customerName": "Guruji Footwear",
       "paymentAmount": 55000,
       "paymentMode": "UPI",
