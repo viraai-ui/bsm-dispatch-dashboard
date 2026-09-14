@@ -6711,6 +6711,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036708018": {
+      "id": "ship-1789390058163-8jcg5",
+      "itemId": "1154219000036708018",
+      "orderId": "1154219000036708018",
+      "machineId": "1154219000036708018-1154219000036708021-1",
+      "salesOrderNumber": "SO-07922",
+      "customerName": "FORTUNE ELASTOMERS PVT LTD",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Bullet Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-14T12:47:38.163Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
