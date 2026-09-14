@@ -6327,6 +6327,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036823056": {
+      "id": "ship-1789363078477-21psx",
+      "itemId": "1154219000036823056",
+      "orderId": "1154219000036823056",
+      "machineId": "1154219000036823056-1154219000036823059-1",
+      "salesOrderNumber": "SO-07936",
+      "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-12",
+      "notes": "",
+      "shippedAt": "2026-09-14T05:17:58.477Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
