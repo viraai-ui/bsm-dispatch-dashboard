@@ -26901,7 +26901,8 @@
           "zohoBackupLastAttemptAt": "2026-09-09T12:45:32.722Z",
           "zohoBackupSyncedAt": "2026-09-09T12:45:32.722Z"
         }
-      }
+      },
+      "dispatchSortOrder": 3
     },
     "1154219000036724026": {
       "salesOrderId": "1154219000036724026",
@@ -27136,7 +27137,8 @@
           "zohoBackupLastAttemptAt": "2026-09-10T07:30:32.565Z",
           "zohoBackupSyncedAt": "2026-09-10T07:30:32.565Z"
         }
-      }
+      },
+      "dispatchSortOrder": 4
     },
     "1154219000036714019": {
       "salesOrderId": "1154219000036714019",
@@ -27413,7 +27415,7 @@
       "salesOrderId": "1154219000034744001",
       "salesOrderNumber": "SO-07573",
       "status": "processed",
-      "dispatchPriority": "urgent",
+      "dispatchPriority": "regular",
       "processedAt": "2026-09-11T05:41:56.854Z",
       "processedOrder": {
         "id": "1154219000034744001",
@@ -27497,7 +27499,7 @@
           "zohoBackupSyncedAt": "2026-09-11T05:45:32.806Z"
         }
       },
-      "dispatchSortOrder": 2
+      "dispatchSortOrder": 1
     },
     "1154219000035795016": {
       "salesOrderId": "1154219000035795016",
@@ -27730,7 +27732,8 @@
           "zohoBackupLastAttemptAt": "2026-09-11T07:00:32.896Z",
           "zohoBackupSyncedAt": "2026-09-11T07:00:32.896Z"
         }
-      }
+      },
+      "dispatchSortOrder": 2
     },
     "1154219000036696007": {
       "salesOrderId": "1154219000036696007",
