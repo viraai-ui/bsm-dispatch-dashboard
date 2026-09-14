@@ -20,6 +20,7 @@
     "test:database-ui": "node tests/database-filter-ui.test.cjs",
     "test:core-hardening": "tsx tests/core-hardening.test.mjs",
     "test:audit-preflight": "node tests/audit-preflight.test.cjs",
+    "test:serial-sheet-audit": "node tests/serial-sheet-audit-config.test.cjs",
     "test:r2-mobile-upload": "node --test tests/r2-mobile-upload.test.mjs",
     "test:lifecycle": "node --experimental-strip-types --test tests/operational-lifecycle.test.mjs",
     "typecheck": "tsc --noEmit",

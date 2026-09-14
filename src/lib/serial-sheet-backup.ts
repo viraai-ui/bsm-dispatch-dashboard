@@ -3,7 +3,8 @@ import { githubReadJson, listWorkflows, upsertOrderWorkflow } from './workflow-s
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
-const DEFAULT_DATABASE_WORKSHEETS = ['Sr.No.26-27', 'Sr. No.25-26', 'Sr.No.25-26']
+// Worksheet names are exact Zoho aliases. The legacy tab includes a space.
+const DEFAULT_DATABASE_WORKSHEETS = ['Sr.No.26-27', 'Sr. No.25-26']
 
 type SerialSheetRecord = {
   'S.No.': string

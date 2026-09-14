@@ -26,3 +26,6 @@ dist-ssr
 *.sw?
 .vercel
 .env*.local
+
+# Local operational backups may contain customer/business data.
+backups/

@@ -5,7 +5,8 @@ const https = require('node:https')
 const repo = process.env.GITHUB_REPO_FULL || 'viraai-ui/bsm-dispatch-dashboard'
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
-const DEFAULT_DATABASE_WORKSHEETS = ['Sr.No.26-27', 'Sr. No.25-26', 'Sr.No.25-26']
+// Worksheet names are exact Zoho aliases. The legacy tab includes a space.
+const DEFAULT_DATABASE_WORKSHEETS = ['Sr.No.26-27', 'Sr. No.25-26']
 
 function ghApi(path) {
   return JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8', maxBuffer: 80 * 1024 * 1024 }))
@@ -155,13 +156,18 @@ async function run() {
   const sheetSerials = new Set(allSheetRows.map((row) => String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()).filter(Boolean))
   const missing = workflowMachines.filter((machine) => !sheetSerials.has(machine.serial))
   const duplicates = []
+  const nonSerialRepeatedValues = []
   const counts = new Map()
   for (const row of allSheetRows) {
     const serial = String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()
     if (!serial) continue
     counts.set(serial, (counts.get(serial) || 0) + 1)
   }
-  for (const [serial, count] of counts) if (count > 1) duplicates.push({ serial, count })
+  for (const [serial, count] of counts) {
+    if (count <= 1) continue
+    if (/^\d{8}$/.test(serial)) duplicates.push({ serial, count })
+    else nonSerialRepeatedValues.push({ value: serial, count })
+  }
   const primaryRows = allSheetRows.filter((row) => row.__worksheetName === primaryWorksheet())
   const primaryCounts = new Map()
   for (const row of primaryRows) {
@@ -193,6 +199,11 @@ async function run() {
     dashboardRangeDuplicateCount: dashboardRangeDuplicates.length,
     dashboardRangeDuplicates,
     duplicateSheetSerialCount: duplicates.length,
+    // Historical duplicates are evidence to reconcile, not active-dashboard failures.
+    legacyDuplicateSheetSerialCount: duplicates.filter(({ serial }) => serial.startsWith('2526')).length,
+    activeYearDuplicateSheetSerialCount: duplicates.filter(({ serial }) => serial.startsWith('2627')).length,
+    nonSerialRepeatedValueCount: nonSerialRepeatedValues.length,
+    nonSerialRepeatedValues,
     sheetErrors,
     missing,
     duplicateSheetSerials: duplicates.slice(0, 50),
