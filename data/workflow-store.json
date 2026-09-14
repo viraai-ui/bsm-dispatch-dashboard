@@ -28958,11 +28958,13 @@
           "qrToken": "26271210",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T12:51:37.007Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-14T12:51:38.409Z",
           "processedAt": "2026-09-14T12:52:27.128Z",
           "dispatchNote": "wooden",
-          "vendor": "K S"
+          "vendor": "K S",
+          "zohoBackupLastAttemptAt": "2026-09-14T13:00:33.514Z",
+          "zohoBackupSyncedAt": "2026-09-14T13:00:33.514Z"
         }
       }
     },
