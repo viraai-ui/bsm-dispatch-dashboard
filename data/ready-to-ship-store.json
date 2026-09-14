@@ -6581,6 +6581,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035890003": {
+      "id": "ship-1789383209579-gyl6q",
+      "itemId": "1154219000035890003",
+      "orderId": "1154219000035890003",
+      "machineId": "1154219000035890003-1154219000035890006-1",
+      "salesOrderNumber": "SO-07774",
+      "customerName": "Auto Foam Industries (Alwar)",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAR3504",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-14T10:53:29.579Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
