@@ -18749,6 +18749,65 @@
         "1154219000036823056-1154219000036823059-1",
         "1154219000036823056-1154219000036823059-2"
       ]
+    },
+    "1154219000036923017": {
+      "completedAt": "2026-09-14T09:35:43.436Z",
+      "order": {
+        "id": "1154219000036923017",
+        "zohoSalesOrderId": "1154219000036923017",
+        "salesOrderNumber": "SO-07942",
+        "status": "open",
+        "customerName": "Shree Balaji Polymers",
+        "shippingAddress": "2020, 2021, 2022, MIE-B, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036923020",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 35000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036923017-1154219000036923020-1",
+            "unitNumber": 1,
+            "serialNumber": "26271204",
+            "qrToken": "26271204",
+            "orderId": "1154219000036923017",
+            "lineItemId": "1154219000036923020",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "Shree Balaji Polymers",
+            "salesOrderNumber": "SO-07942",
+            "deliveryDate": "2026-09-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T13:36:28+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036923017-1154219000036923020-1"
+      ]
     }
   }
 }
