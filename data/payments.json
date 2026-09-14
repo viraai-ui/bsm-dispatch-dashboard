@@ -1,6 +1,31 @@
 {
   "payments": [
     {
+      "customerName": "Neeraj yadav",
+      "paymentAmount": 26550,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "attachments": [
+        {
+          "key": "payments/public/manual/0b33f705-6149-438b-8153-42a95c89d4ba/2026-09-14/1789374440532-4d98a9da-f8d9-4d30-8102-b4c2f2b4fda2-WhatsApp-Image-2026-09-14-at-1.56.02-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F0b33f705-6149-438b-8153-42a95c89d4ba%2F2026-09-14%2F1789374440532-4d98a9da-f8d9-4d30-8102-b4c2f2b4fda2-WhatsApp-Image-2026-09-14-at-1.56.02-PM.jpg",
+          "name": "WhatsApp Image 2026-09-14 at 1.56.02 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 159033
+        }
+      ],
+      "screenshotKey": "payments/public/manual/0b33f705-6149-438b-8153-42a95c89d4ba/2026-09-14/1789374440532-4d98a9da-f8d9-4d30-8102-b4c2f2b4fda2-WhatsApp-Image-2026-09-14-at-1.56.02-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F0b33f705-6149-438b-8153-42a95c89d4ba%2F2026-09-14%2F1789374440532-4d98a9da-f8d9-4d30-8102-b4c2f2b4fda2-WhatsApp-Image-2026-09-14-at-1.56.02-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-14 at 1.56.02 PM.jpeg",
+      "publicDeleteTokenHash": "f258b4cd0b8cc65fdaa44831ad2ffdf1388a37d47d4d3c7c9c12a9968e45fdda",
+      "id": "payment-ff3e93d4-552d-4cde-9568-3c07c08e405c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "e7675f2c19864536bac3ad989915049f",
+      "createdAt": "2026-09-14T08:27:23.030Z",
+      "updatedAt": "2026-09-14T08:27:23.030Z"
+    },
+    {
       "customerName": "D Zone",
       "salesOrderNumber": "SO-07759",
       "paymentAmount": 99998,
