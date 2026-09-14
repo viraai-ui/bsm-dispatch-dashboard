@@ -580,77 +580,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-12T12:16:25+0530"
     },
-    "1154219000036823056": {
-      "id": "1154219000036823056",
-      "zohoSalesOrderId": "1154219000036823056",
-      "salesOrderNumber": "SO-07936",
-      "status": "open",
-      "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
-      "shippingAddress": "PLOT NO. 3, SECTOR 4B, HSIIDC INDUSTRIAL AREA, BAHADURGARH,HARYANA-124507",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036823059",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225787",
-          "rate": 25000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036823056-1154219000036823059-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036823056",
-          "lineItemId": "1154219000036823059",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07936",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036823056-1154219000036823059-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036823056",
-          "lineItemId": "1154219000036823059",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07936",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T10:48:46+0530"
-    },
     "1154219000036842001": {
       "id": "1154219000036842001",
       "zohoSalesOrderId": "1154219000036842001",
@@ -678,151 +607,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-11T18:43:25+0530"
-    },
-    "1154219000036705011": {
-      "id": "1154219000036705011",
-      "zohoSalesOrderId": "1154219000036705011",
-      "salesOrderNumber": "SO-07933",
-      "status": "open",
-      "customerName": "Ram & Sons Footcare Private Limited",
-      "shippingAddress": "715, 716, 754, 755, Mie Part-I,, Bahadurgarh,, Haryana, 124507",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-11",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036705014",
-          "itemName": "Side Pressing Machine (pneumatic)",
-          "sku": "364",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000225488",
-          "rate": 63000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036705015",
-          "itemName": "Heating oven [2 Feet]",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000581406",
-          "rate": 18000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036705011-1154219000036705014-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036705011",
-          "lineItemId": "1154219000036705014",
-          "itemName": "Side Pressing Machine (pneumatic)",
-          "sku": "364",
-          "customerName": "Ram & Sons Footcare Private Limited",
-          "salesOrderNumber": "SO-07933",
-          "deliveryDate": "2026-09-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036705011-1154219000036705015-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036705011",
-          "lineItemId": "1154219000036705015",
-          "itemName": "Heating oven [2 Feet]",
-          "sku": "",
-          "customerName": "Ram & Sons Footcare Private Limited",
-          "salesOrderNumber": "SO-07933",
-          "deliveryDate": "2026-09-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-11T16:26:38+0530"
-    },
-    "1154219000036703335": {
-      "id": "1154219000036703335",
-      "zohoSalesOrderId": "1154219000036703335",
-      "salesOrderNumber": "SO-07931",
-      "status": "open",
-      "customerName": "RAVI R D",
-      "shippingAddress": "S/O, DHAKSHMRTY, 45/1 , NEW PILLAYAR , KOVIL STRET , MANNURPETTAI, CHENNAI , PADI , TRIVALLUR TAMIL NADU-600050, Tamil Nadu, 600053, India",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-09-11",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036703340",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226515",
-          "rate": 22000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036825698",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 134,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036703335-1154219000036703340-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036703335",
-          "lineItemId": "1154219000036703340",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "RAVI R D",
-          "salesOrderNumber": "SO-07931",
-          "deliveryDate": "2026-09-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-11T18:28:05+0530"
     },
     "1154219000036712023": {
       "id": "1154219000036712023",
@@ -929,34 +713,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-10T15:10:23+0530"
-    },
-    "1154219000036696007": {
-      "id": "1154219000036696007",
-      "zohoSalesOrderId": "1154219000036696007",
-      "salesOrderNumber": "SO-07923",
-      "status": "open",
-      "customerName": "Ashoka Hawai & Shoes Pvt. Ltd.",
-      "shippingAddress": "10, Chowbagha Road, Kolkata, West Bengal, 700039, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036696010",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 300,
-          "pendingQuantity": 300,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 320,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-10T13:55:22+0530"
     },
     "1154219000036708018": {
       "id": "1154219000036708018",
@@ -10215,14 +9971,10 @@
     "1154219000036876003",
     "1154219000036882003",
     "1154219000036863001",
-    "1154219000036823056",
     "1154219000036842001",
-    "1154219000036705011",
-    "1154219000036703335",
     "1154219000036712023",
     "1154219000036722010",
     "1154219000036723009",
-    "1154219000036696007",
     "1154219000036708018",
     "1154219000036721021",
     "1154219000036724026",
@@ -10275,8 +10027,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T05:20:29.861Z",
-  "lastAttemptAt": "2026-09-14T05:32:44.824Z",
+  "lastSuccessfulSyncAt": "2026-09-14T05:32:50.304Z",
+  "lastAttemptAt": "2026-09-14T05:32:50.304Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
