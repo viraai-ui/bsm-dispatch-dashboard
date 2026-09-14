@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-95d45d13-2bc2-435e-bc9b-a0f19efd1ce2",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-ff3e93d4-552d-4cde-9568-3c07c08e405c",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Neeraj yadav",
+      "paymentAmount": 26550,
+      "createdAt": "2026-09-14T08:27:25.259Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-4d476e03-64e3-4ddc-a311-a35934a7fc2a",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-ff3e93d4-552d-4cde-9568-3c07c08e405c",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Neeraj yadav",
+      "paymentAmount": 26550,
+      "createdAt": "2026-09-14T08:27:25.259Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-1916fbd8-673e-493e-a24a-45af7545168e",
       "type": "payment-created",
       "recipientUserId": "u-admin",
