@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036923017": {
+      "id": "1154219000036923017",
+      "zohoSalesOrderId": "1154219000036923017",
+      "salesOrderNumber": "SO-07942",
+      "status": "open",
+      "customerName": "Shree Balaji Polymers",
+      "shippingAddress": "2020, 2021, 2022, MIE-B, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036923020",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226864",
+          "rate": 35000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036923017-1154219000036923020-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036923017",
+          "lineItemId": "1154219000036923020",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "customerName": "Shree Balaji Polymers",
+          "salesOrderNumber": "SO-07942",
+          "deliveryDate": "2026-09-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-14T13:36:28+0530"
+    },
     "1154219000036908001": {
       "id": "1154219000036908001",
       "zohoSalesOrderId": "1154219000036908001",
@@ -557,56 +607,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-11T18:43:25+0530"
-    },
-    "1154219000036712023": {
-      "id": "1154219000036712023",
-      "zohoSalesOrderId": "1154219000036712023",
-      "salesOrderNumber": "SO-07930",
-      "status": "open",
-      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
-      "shippingAddress": "T-1/103-104, Phase-1, Mangol Puri Industrial Area, Delhi, 110083, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-11",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036712026",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225413",
-          "rate": 48000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036712023-1154219000036712026-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036712023",
-          "lineItemId": "1154219000036712026",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
-          "salesOrderNumber": "SO-07930",
-          "deliveryDate": "2026-09-11",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-11T11:17:37+0530"
     },
     "1154219000036722010": {
       "id": "1154219000036722010",
@@ -9876,12 +9876,12 @@
     }
   },
   "orderIds": [
+    "1154219000036923017",
     "1154219000036908001",
     "1154219000036903001",
     "1154219000036876003",
     "1154219000036863001",
     "1154219000036842001",
-    "1154219000036712023",
     "1154219000036722010",
     "1154219000036723009",
     "1154219000036708018",
@@ -9935,8 +9935,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T08:00:38.139Z",
-  "lastAttemptAt": "2026-09-14T08:06:41.143Z",
+  "lastSuccessfulSyncAt": "2026-09-14T08:06:52.844Z",
+  "lastAttemptAt": "2026-09-14T08:06:52.844Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
