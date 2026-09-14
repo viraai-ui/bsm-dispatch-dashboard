@@ -6581,6 +6581,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036386001": {
+      "id": "ship-1789382471747-pg2yb",
+      "itemId": "1154219000036386001",
+      "orderId": "1154219000036386001",
+      "machineId": "1154219000036386001-1154219000036386004-1",
+      "salesOrderNumber": "SO-07868",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD (Kinaloor)",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Bullet Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-14T10:41:11.747Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
