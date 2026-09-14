@@ -6550,6 +6550,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035854013": {
+      "id": "ship-1789381246845-u116o",
+      "itemId": "1154219000035854013",
+      "orderId": "1154219000035854013",
+      "machineId": "1154219000035854013-1154219000035854016-1",
+      "salesOrderNumber": "SO-07759",
+      "customerName": "D Zone",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "HR69G2694",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-14T10:20:46.845Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
