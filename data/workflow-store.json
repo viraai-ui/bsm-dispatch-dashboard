@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271203,
+  "serialCounter": 26271204,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -28537,6 +28537,70 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000036923017": {
+      "salesOrderId": "1154219000036923017",
+      "salesOrderNumber": "SO-07942",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036923017",
+        "zohoSalesOrderId": "1154219000036923017",
+        "salesOrderNumber": "SO-07942",
+        "status": "open",
+        "customerName": "Shree Balaji Polymers",
+        "shippingAddress": "2020, 2021, 2022, MIE-B, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036923020",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 35000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036923017-1154219000036923020-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036923017",
+            "lineItemId": "1154219000036923020",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "Shree Balaji Polymers",
+            "salesOrderNumber": "SO-07942",
+            "deliveryDate": "2026-09-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T13:36:28+0530"
+      },
+      "machines": {
+        "1154219000036923017-1154219000036923020-1": {
+          "machineUnitId": "1154219000036923017-1154219000036923020-1",
+          "lineItemId": "1154219000036923020",
+          "serialNumber": "26271204",
+          "qrToken": "26271204",
+          "qrStatus": "pending"
+        }
+      }
     }
   }
 }
