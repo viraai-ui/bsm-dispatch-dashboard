@@ -27413,7 +27413,7 @@
       "salesOrderId": "1154219000034744001",
       "salesOrderNumber": "SO-07573",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-11T05:41:56.854Z",
       "processedOrder": {
         "id": "1154219000034744001",
@@ -27496,7 +27496,8 @@
           "zohoBackupLastAttemptAt": "2026-09-11T05:45:32.806Z",
           "zohoBackupSyncedAt": "2026-09-11T05:45:32.806Z"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     },
     "1154219000035795016": {
       "salesOrderId": "1154219000035795016",
