@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271206,
+  "serialCounter": 26271208,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -1660,6 +1660,20 @@
           "zohoBackupStatus": "synced",
           "zohoBackupLastAttemptAt": "2026-08-17T11:00:33.076Z",
           "zohoBackupSyncedAt": "2026-08-17T11:00:33.076Z"
+        },
+        "1154219000032974004-1154219000032974007-3": {
+          "machineUnitId": "1154219000032974004-1154219000032974007-3",
+          "lineItemId": "1154219000032974007",
+          "serialNumber": "26271207",
+          "qrToken": "26271207",
+          "qrStatus": "pending"
+        },
+        "1154219000032974004-1154219000032974007-4": {
+          "machineUnitId": "1154219000032974004-1154219000032974007-4",
+          "lineItemId": "1154219000032974007",
+          "serialNumber": "26271208",
+          "qrToken": "26271208",
+          "qrStatus": "pending"
         }
       }
     },
