@@ -28541,7 +28541,9 @@
     "1154219000036923017": {
       "salesOrderId": "1154219000036923017",
       "salesOrderNumber": "SO-07942",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-14T08:08:59.319Z",
       "processedOrder": {
         "id": "1154219000036923017",
         "zohoSalesOrderId": "1154219000036923017",
@@ -28571,8 +28573,8 @@
           {
             "id": "1154219000036923017-1154219000036923020-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271204",
+            "qrToken": "26271204",
             "orderId": "1154219000036923017",
             "lineItemId": "1154219000036923020",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -28580,14 +28582,17 @@
             "customerName": "Shree Balaji Polymers",
             "salesOrderNumber": "SO-07942",
             "deliveryDate": "2026-09-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T13:36:28+0530"
@@ -28601,7 +28606,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T08:07:32.101Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T08:07:33.082Z"
+          "zohoBackupQueuedAt": "2026-09-14T08:07:33.082Z",
+          "processedAt": "2026-09-14T08:08:59.319Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
