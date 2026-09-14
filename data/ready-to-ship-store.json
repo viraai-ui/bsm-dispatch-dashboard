@@ -6457,6 +6457,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036712023": {
+      "id": "ship-1789373129765-wcaeh",
+      "itemId": "1154219000036712023",
+      "orderId": "1154219000036712023",
+      "machineId": "1154219000036712023-1154219000036712026-1",
+      "salesOrderNumber": "SO-07930",
+      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51EV4932",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-14T08:05:29.765Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
