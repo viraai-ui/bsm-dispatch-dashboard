@@ -28677,8 +28677,10 @@
           "qrToken": "26271205",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-14T08:13:49.984Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-14T08:13:51.045Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-09-14T08:13:51.045Z",
+          "zohoBackupLastAttemptAt": "2026-09-14T08:15:33.346Z",
+          "zohoBackupSyncedAt": "2026-09-14T08:15:33.346Z"
         }
       }
     }
