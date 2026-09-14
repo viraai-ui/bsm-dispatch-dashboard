@@ -6519,6 +6519,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036724026": {
+      "id": "ship-1789379441289-pdo4v",
+      "itemId": "1154219000036724026",
+      "orderId": "1154219000036724026",
+      "machineId": "1154219000036724026-1154219000036724029-1",
+      "salesOrderNumber": "SO-07920",
+      "customerName": "Assert Footwears",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-12",
+      "notes": "",
+      "shippedAt": "2026-09-14T09:50:41.289Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
