@@ -497,56 +497,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-14T10:43:26+0530"
     },
-    "1154219000036903001": {
-      "id": "1154219000036903001",
-      "zohoSalesOrderId": "1154219000036903001",
-      "salesOrderNumber": "SO-07940",
-      "status": "open",
-      "customerName": "GURUJI FOOTWEAR",
-      "shippingAddress": "PLOT NO 117, GURUJI FOOTWEAR, SECTOR 17, HSIIDC, Jhajjar,, Bahadurgarh, Haryana,, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036903004",
-          "itemName": "Hotmelt Roller Coater (12 inch)",
-          "sku": "831",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225211",
-          "rate": 47000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036903001-1154219000036903004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036903001",
-          "lineItemId": "1154219000036903004",
-          "itemName": "Hotmelt Roller Coater (12 inch)",
-          "sku": "831",
-          "customerName": "GURUJI FOOTWEAR",
-          "salesOrderNumber": "SO-07940",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T10:43:26+0530"
-    },
     "1154219000036876003": {
       "id": "1154219000036876003",
       "zohoSalesOrderId": "1154219000036876003",
@@ -10592,7 +10542,6 @@
     "1154219000036907014",
     "1154219000036923017",
     "1154219000036908001",
-    "1154219000036903001",
     "1154219000036876003",
     "1154219000036863001",
     "1154219000036842001",
@@ -10642,8 +10591,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T11:44:45.931Z",
-  "lastAttemptAt": "2026-09-14T11:59:40.639Z",
+  "lastSuccessfulSyncAt": "2026-09-14T11:59:46.192Z",
+  "lastAttemptAt": "2026-09-14T11:59:46.192Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
