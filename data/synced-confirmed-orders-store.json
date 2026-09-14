@@ -1,5 +1,138 @@
 {
   "orders": {
+    "1154219000036914152": {
+      "id": "1154219000036914152",
+      "zohoSalesOrderId": "1154219000036914152",
+      "salesOrderNumber": "SO-07945",
+      "status": "open",
+      "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+      "shippingAddress": "Plot No.32, Ladli Complex Opposite Totla petrol Pump, Bhokardan Naka, Aurangabad Road, JALNA, MAHARASHTRA, 431203, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-09-15",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036914155",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226574",
+          "rate": 42000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036914156",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036914152-1154219000036914155-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036914152",
+          "lineItemId": "1154219000036914155",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+          "salesOrderNumber": "SO-07945",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036914152-1154219000036914155-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036914152",
+          "lineItemId": "1154219000036914155",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+          "salesOrderNumber": "SO-07945",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-14T16:59:39+0530"
+    },
+    "1154219000036907014": {
+      "id": "1154219000036907014",
+      "zohoSalesOrderId": "1154219000036907014",
+      "salesOrderNumber": "SO-07944",
+      "status": "open",
+      "customerName": "CBT FOOTWEAR",
+      "shippingAddress": "Plot No. 289, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036907017",
+          "itemName": "Side Pressing Machine (pneumatic)",
+          "sku": "364",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000225488",
+          "rate": 68000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036907014-1154219000036907017-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036907014",
+          "lineItemId": "1154219000036907017",
+          "itemName": "Side Pressing Machine (pneumatic)",
+          "sku": "364",
+          "customerName": "CBT FOOTWEAR",
+          "salesOrderNumber": "SO-07944",
+          "deliveryDate": "2026-09-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-14T16:57:00+0530"
+    },
     "1154219000036923017": {
       "id": "1154219000036923017",
       "zohoSalesOrderId": "1154219000036923017",
@@ -10455,6 +10588,8 @@
     }
   },
   "orderIds": [
+    "1154219000036914152",
+    "1154219000036907014",
     "1154219000036923017",
     "1154219000036908001",
     "1154219000036903001",
@@ -10507,8 +10642,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-14T11:20:29.306Z",
-  "lastAttemptAt": "2026-09-14T11:29:40.961Z",
+  "lastSuccessfulSyncAt": "2026-09-14T11:29:46.594Z",
+  "lastAttemptAt": "2026-09-14T11:29:46.595Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
