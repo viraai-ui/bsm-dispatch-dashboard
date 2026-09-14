@@ -18906,6 +18906,66 @@
       "machineIds": [
         "1154219000035890003-1154219000035890006-1"
       ]
+    },
+    "1154219000036708018": {
+      "completedAt": "2026-09-14T10:49:57.744Z",
+      "order": {
+        "id": "1154219000036708018",
+        "zohoSalesOrderId": "1154219000036708018",
+        "salesOrderNumber": "SO-07922",
+        "status": "open",
+        "customerName": "FORTUNE ELASTOMERS PVT LTD",
+        "shippingAddress": "10/360 M PLOT NO 34 KSIDC KINALOOR, CALICUT, KERALA, 673612",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036708021",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225787",
+            "rate": 27500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036708018-1154219000036708021-1",
+            "unitNumber": 1,
+            "serialNumber": "26271185",
+            "qrToken": "26271185",
+            "orderId": "1154219000036708018",
+            "lineItemId": "1154219000036708021",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "FORTUNE ELASTOMERS PVT LTD",
+            "salesOrderNumber": "SO-07922",
+            "deliveryDate": "2026-09-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-10",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-10T12:50:21+0530",
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 4
+      },
+      "machineIds": [
+        "1154219000036708018-1154219000036708021-1"
+      ]
     }
   }
 }
