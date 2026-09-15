@@ -29742,7 +29742,7 @@
       "salesOrderId": "1154219000036907014",
       "salesOrderNumber": "SO-07944",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-15T06:37:15.147Z",
       "processedOrder": {
         "id": "1154219000036907014",
@@ -29811,7 +29811,8 @@
           "dispatchNote": "local",
           "vendor": "Tech Point Solution"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
