@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271228,
+  "serialCounter": 26271229,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -30169,6 +30169,70 @@
           "vendor": "Ss Enterprises",
           "zohoBackupLastAttemptAt": "2026-09-15T09:00:33.114Z",
           "zohoBackupSyncedAt": "2026-09-15T09:00:33.114Z"
+        }
+      }
+    },
+    "1154219000036935005": {
+      "salesOrderId": "1154219000036935005",
+      "salesOrderNumber": "SO-07955",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036935005",
+        "zohoSalesOrderId": "1154219000036935005",
+        "salesOrderNumber": "SO-07955",
+        "status": "open",
+        "customerName": "Ridhaan Ventures Private Limited",
+        "shippingAddress": "A-9/70 C, Kalka Ji Extn. Saty Si Baba School, Delhi, 110019, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036935008",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225413",
+            "rate": 50000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036935005-1154219000036935008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036935005",
+            "lineItemId": "1154219000036935008",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "Ridhaan Ventures Private Limited",
+            "salesOrderNumber": "SO-07955",
+            "deliveryDate": "2026-09-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-15T14:51:16+0530"
+      },
+      "machines": {
+        "1154219000036935005-1154219000036935008-1": {
+          "machineUnitId": "1154219000036935005-1154219000036935008-1",
+          "lineItemId": "1154219000036935008",
+          "serialNumber": "26271229",
+          "qrToken": "26271229",
+          "qrStatus": "pending"
         }
       }
     }
