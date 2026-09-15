@@ -26046,7 +26046,7 @@
         "zohoLastModifiedTime": "2026-09-09T15:34:36+0530"
       },
       "machines": {},
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 2
     },
     "1154219000036714004": {
       "salesOrderId": "1154219000036714004",
@@ -29100,7 +29100,7 @@
       "salesOrderId": "1154219000035947002",
       "salesOrderNumber": "SO-07790",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-09-15T04:53:38.879Z",
       "processedOrder": {
         "id": "1154219000035947002",
@@ -29169,7 +29169,8 @@
           "dispatchNote": "Good wrapping",
           "vendor": "Shree Sai"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   }
 }
