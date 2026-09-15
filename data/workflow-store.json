@@ -29663,7 +29663,9 @@
     "1154219000036913087": {
       "salesOrderId": "1154219000036913087",
       "salesOrderNumber": "SO-07948",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T05:33:30.810Z",
       "processedOrder": {
         "id": "1154219000036913087",
         "zohoSalesOrderId": "1154219000036913087",
@@ -29693,8 +29695,8 @@
           {
             "id": "1154219000036913087-1154219000036913090-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271223",
+            "qrToken": "26271223",
             "orderId": "1154219000036913087",
             "lineItemId": "1154219000036913090",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -29702,14 +29704,17 @@
             "customerName": "SAFINA ENTERPRISES",
             "salesOrderNumber": "SO-07948",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-15T10:19:42+0530"
@@ -29723,7 +29728,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:32:42.102Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:32:42.941Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:32:42.941Z",
+          "processedAt": "2026-09-15T05:33:30.810Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
