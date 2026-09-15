@@ -1,5 +1,100 @@
 {
   "orders": {
+    "1154219000036930024": {
+      "id": "1154219000036930024",
+      "zohoSalesOrderId": "1154219000036930024",
+      "salesOrderNumber": "SO-07951",
+      "status": "open",
+      "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+      "shippingAddress": "46/157, Halsey Road,, Kanpur,, Uttar Pradesh, 208001",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-15",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036930027",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000227370",
+          "rate": 55000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036930028",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Blade for BS-817",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 4500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036930029",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost from BSM to Mehta Transport Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1200,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036930024-1154219000036930027-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036930024",
+          "lineItemId": "1154219000036930027",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+          "salesOrderNumber": "SO-07951",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000036930024-1154219000036930028-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036930024",
+          "lineItemId": "1154219000036930028",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+          "salesOrderNumber": "SO-07951",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Blade for BS-817"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T12:13:14+0530"
+    },
     "1154219000036922008": {
       "id": "1154219000036922008",
       "zohoSalesOrderId": "1154219000036922008",
@@ -10543,6 +10638,7 @@
     }
   },
   "orderIds": [
+    "1154219000036930024",
     "1154219000036922008",
     "1154219000036916004",
     "1154219000036913087",
@@ -10597,8 +10693,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-15T06:40:41.100Z",
-  "lastAttemptAt": "2026-09-15T06:43:59.700Z",
+  "lastSuccessfulSyncAt": "2026-09-15T06:44:15.001Z",
+  "lastAttemptAt": "2026-09-15T06:44:15.001Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
