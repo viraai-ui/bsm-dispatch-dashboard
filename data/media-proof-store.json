@@ -3688,6 +3688,31 @@
         }
       },
       "videoNotRequired": false
+    },
+    "1154219000036926011": {
+      "orderId": "1154219000036926011",
+      "salesOrderNumber": "SO-07954",
+      "submittedAt": null,
+      "units": {
+        "1154219000036926011-1154219000036926014-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036926011-1154219000036926014-1-video-1789463628596-rqejk7",
+              "name": "VID_20260915_144317.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-15%2FSO-07954%2F1154219000036926011-1154219000036926014-1%2FManual-Fusing-Machine-15-15-inches-2026-09-15T09-13-37-804Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-15/SO-07954/1154219000036926011-1154219000036926014-1/Manual-Fusing-Machine-15-15-inches-2026-09-15T09-13-37-804Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-15T09:13:48.596Z",
+              "expiresAt": "2026-10-15T09:13:48.596Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
