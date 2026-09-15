@@ -30175,7 +30175,9 @@
     "1154219000036935005": {
       "salesOrderId": "1154219000036935005",
       "salesOrderNumber": "SO-07955",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T09:23:42.382Z",
       "processedOrder": {
         "id": "1154219000036935005",
         "zohoSalesOrderId": "1154219000036935005",
@@ -30205,8 +30207,8 @@
           {
             "id": "1154219000036935005-1154219000036935008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271229",
+            "qrToken": "26271229",
             "orderId": "1154219000036935005",
             "lineItemId": "1154219000036935008",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -30214,14 +30216,17 @@
             "customerName": "Ridhaan Ventures Private Limited",
             "salesOrderNumber": "SO-07955",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Rawal Ji",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-15T14:51:16+0530"
@@ -30235,7 +30240,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T09:22:43.894Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T09:22:44.993Z"
+          "zohoBackupQueuedAt": "2026-09-15T09:22:44.993Z",
+          "processedAt": "2026-09-15T09:23:42.382Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal Ji"
         }
       }
     }
