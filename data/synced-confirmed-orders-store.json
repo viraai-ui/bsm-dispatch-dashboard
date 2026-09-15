@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000036924009": {
+      "id": "1154219000036924009",
+      "zohoSalesOrderId": "1154219000036924009",
+      "salesOrderNumber": "SO-07957",
+      "status": "open",
+      "customerName": "DHATRI SALES (Noida)",
+      "shippingAddress": "C-149, SECTOR 63, NOIDA, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-15",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036924012",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225871",
+          "rate": 30000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036924009-1154219000036924012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036924009",
+          "lineItemId": "1154219000036924012",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "DHATRI SALES (Noida)",
+          "salesOrderNumber": "SO-07957",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T18:51:49+0530"
+    },
     "1154219000036935021": {
       "id": "1154219000036935021",
       "zohoSalesOrderId": "1154219000036935021",
@@ -10609,6 +10659,7 @@
     }
   },
   "orderIds": [
+    "1154219000036924009",
     "1154219000036935021",
     "1154219000036904013",
     "1154219000036902008",
@@ -10663,8 +10714,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-15T13:20:31.317Z",
-  "lastAttemptAt": "2026-09-15T13:25:45.517Z",
+  "lastSuccessfulSyncAt": "2026-09-15T13:25:57.297Z",
+  "lastAttemptAt": "2026-09-15T13:25:57.298Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
