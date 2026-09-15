@@ -1,5 +1,105 @@
 {
   "orders": {
+    "1154219000036926011": {
+      "id": "1154219000036926011",
+      "zohoSalesOrderId": "1154219000036926011",
+      "salesOrderNumber": "SO-07954",
+      "status": "open",
+      "customerName": "NAZ ENTERPRISES",
+      "shippingAddress": "GROUND FLOOR, P NO.9/5 KH NO. 52/2/2, SHIV BAKSH PARK,, NANGLOI, Delhi, 110041, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-15",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036926014",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226034",
+          "rate": 14500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036926011-1154219000036926014-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036926011",
+          "lineItemId": "1154219000036926014",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "NAZ ENTERPRISES",
+          "salesOrderNumber": "SO-07954",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T14:09:46+0530"
+    },
+    "1154219000036904013": {
+      "id": "1154219000036904013",
+      "zohoSalesOrderId": "1154219000036904013",
+      "salesOrderNumber": "SO-07953",
+      "status": "open",
+      "customerName": "ENSAC World",
+      "shippingAddress": "PHASE-1, T-1/100, MANGOLPURI INDUSTRIAL AREA, Delhi, 110083, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-16",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036904016",
+          "itemName": "Edge Coloring Machine (compact model)",
+          "sku": "36C",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000006982054",
+          "rate": 9500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036904013-1154219000036904016-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036904013",
+          "lineItemId": "1154219000036904016",
+          "itemName": "Edge Coloring Machine (compact model)",
+          "sku": "36C",
+          "customerName": "ENSAC World",
+          "salesOrderNumber": "SO-07953",
+          "deliveryDate": "2026-09-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T13:53:16+0530"
+    },
     "1154219000036902008": {
       "id": "1154219000036902008",
       "zohoSalesOrderId": "1154219000036902008",
@@ -427,106 +527,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-14T17:00:00+0530"
-    },
-    "1154219000036907014": {
-      "id": "1154219000036907014",
-      "zohoSalesOrderId": "1154219000036907014",
-      "salesOrderNumber": "SO-07944",
-      "status": "open",
-      "customerName": "CBT FOOTWEAR",
-      "shippingAddress": "Plot No. 289, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036907017",
-          "itemName": "Side Pressing Machine (pneumatic)",
-          "sku": "364",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000225488",
-          "rate": 68000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036907014-1154219000036907017-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036907014",
-          "lineItemId": "1154219000036907017",
-          "itemName": "Side Pressing Machine (pneumatic)",
-          "sku": "364",
-          "customerName": "CBT FOOTWEAR",
-          "salesOrderNumber": "SO-07944",
-          "deliveryDate": "2026-09-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T16:57:00+0530"
-    },
-    "1154219000036923017": {
-      "id": "1154219000036923017",
-      "zohoSalesOrderId": "1154219000036923017",
-      "salesOrderNumber": "SO-07942",
-      "status": "open",
-      "customerName": "Shree Balaji Polymers",
-      "shippingAddress": "2020, 2021, 2022, MIE-B, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036914054",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed) (Large Hook)",
-          "sku": "335L",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000004468371",
-          "rate": 40000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036923017-1154219000036914054-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036923017",
-          "lineItemId": "1154219000036914054",
-          "itemName": "Tape Binding, Single Needle (Cylinder Bed) (Large Hook)",
-          "sku": "335L",
-          "customerName": "Shree Balaji Polymers",
-          "salesOrderNumber": "SO-07942",
-          "deliveryDate": "2026-09-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T15:19:40+0530"
     },
     "1154219000036908001": {
       "id": "1154219000036908001",
@@ -6745,56 +6745,6 @@
       ],
       "zohoLastModifiedTime": "2026-08-29T18:26:11+0530"
     },
-    "1154219000035947002": {
-      "id": "1154219000035947002",
-      "zohoSalesOrderId": "1154219000035947002",
-      "salesOrderNumber": "SO-07790",
-      "status": "open",
-      "customerName": "Star Impact Pvt. Ltd. (Agra)",
-      "shippingAddress": "E-35, Site-C, Industrial Area, Sikdandra, Agra, Uttar Pradesh, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035947005",
-          "itemName": "Toe puff Fusing/ Attaching machine",
-          "sku": "299",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226118",
-          "rate": 51000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035947002-1154219000035947005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035947002",
-          "lineItemId": "1154219000035947005",
-          "itemName": "Toe puff Fusing/ Attaching machine",
-          "sku": "299",
-          "customerName": "Star Impact Pvt. Ltd. (Agra)",
-          "salesOrderNumber": "SO-07790",
-          "deliveryDate": "2026-08-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-15T12:27:03+0530"
-    },
     "1154219000035933004": {
       "id": "1154219000035933004",
       "zohoSalesOrderId": "1154219000035933004",
@@ -10688,6 +10638,8 @@
     }
   },
   "orderIds": [
+    "1154219000036926011",
+    "1154219000036904013",
     "1154219000036902008",
     "1154219000036930024",
     "1154219000036922008",
@@ -10695,8 +10647,6 @@
     "1154219000036913087",
     "1154219000036909011",
     "1154219000036914152",
-    "1154219000036907014",
-    "1154219000036923017",
     "1154219000036908001",
     "1154219000036876003",
     "1154219000036842001",
@@ -10722,7 +10672,6 @@
     "1154219000036013008",
     "1154219000035994029",
     "1154219000035939003",
-    "1154219000035947002",
     "1154219000035933004",
     "1154219000035884008",
     "1154219000035891004",
@@ -10744,8 +10693,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-15T08:22:34.074Z",
-  "lastAttemptAt": "2026-09-15T08:39:53.665Z",
+  "lastSuccessfulSyncAt": "2026-09-15T08:39:59.350Z",
+  "lastAttemptAt": "2026-09-15T08:39:59.350Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
