@@ -363,6 +363,21 @@
       "cutoverVersion": "cancel-rts-reconciliation-v1",
       "cutoverDate": "2026-09-01",
       "sourceRevision": "2a4befb3c59896aed341ea7ee7e1dff3805e4ae4"
+    },
+    "1154219000035933004": {
+      "orderId": "1154219000035933004",
+      "salesOrderNumber": "SO-07789",
+      "reason": "cancelled_from_dashboard",
+      "stageAtCutover": "open",
+      "tombstonedAt": "2026-09-15T08:28:54.706Z",
+      "cutoverVersion": "admin-cancel-v1",
+      "cutoverDate": "2026-09-15",
+      "actor": {
+        "id": "u-ops",
+        "name": "Operations",
+        "email": "operations@bsmindia.com"
+      },
+      "sourceRevision": "a14c6c89913832f1b602281fa9da6fd7d760c9bf"
     }
   }
 }
