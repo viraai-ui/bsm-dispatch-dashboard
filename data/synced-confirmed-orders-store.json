@@ -1,5 +1,76 @@
 {
   "orders": {
+    "1154219000036935021": {
+      "id": "1154219000036935021",
+      "zohoSalesOrderId": "1154219000036935021",
+      "salesOrderNumber": "SO-07956",
+      "status": "open",
+      "customerName": "LEGACY FOOTCRAFT PRIVATE LIMITED",
+      "shippingAddress": "1st Floor, Plot No 185, Khasra No 50/12, Swarn Park, Industrial Area, Mundka, New Delhi, North West, Delhi, 110041, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-15",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036935024",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "description": "Heavy Duty",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000277612",
+          "rate": 260000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036935021-1154219000036935024-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036935021",
+          "lineItemId": "1154219000036935024",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "LEGACY FOOTCRAFT PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07956",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heavy Duty"
+        },
+        {
+          "id": "1154219000036935021-1154219000036935024-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036935021",
+          "lineItemId": "1154219000036935024",
+          "itemName": "Travel Head Cutting Press (25 ton)",
+          "sku": "",
+          "customerName": "LEGACY FOOTCRAFT PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07956",
+          "deliveryDate": "2026-09-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Heavy Duty"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T18:03:49+0530"
+    },
     "1154219000036904013": {
       "id": "1154219000036904013",
       "zohoSalesOrderId": "1154219000036904013",
@@ -10538,6 +10609,7 @@
     }
   },
   "orderIds": [
+    "1154219000036935021",
     "1154219000036904013",
     "1154219000036902008",
     "1154219000036930024",
@@ -10591,8 +10663,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-15T12:20:37.574Z",
-  "lastAttemptAt": "2026-09-15T12:40:24.795Z",
+  "lastSuccessfulSyncAt": "2026-09-15T12:40:32.065Z",
+  "lastAttemptAt": "2026-09-15T12:40:32.065Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
