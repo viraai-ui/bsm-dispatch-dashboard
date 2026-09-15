@@ -19038,6 +19038,65 @@
       "machineIds": [
         "1154219000034744001-1154219000034744004-1"
       ]
+    },
+    "1154219000036934006": {
+      "completedAt": "2026-09-15T04:55:49.958Z",
+      "order": {
+        "id": "1154219000036934006",
+        "zohoSalesOrderId": "1154219000036934006",
+        "salesOrderNumber": "SO-07947",
+        "status": "open",
+        "customerName": "GNA CONSTRUCTION PRIVATE LIMITED",
+        "shippingAddress": "128-B, BLOCK AD, Shalimar Bagh Poorvi, New Delhi, North West Delhi, Delhi,, 110088, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036934009",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 13500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036934006-1154219000036934009-1",
+            "unitNumber": 1,
+            "serialNumber": "26271209",
+            "qrToken": "26271209",
+            "orderId": "1154219000036934006",
+            "lineItemId": "1154219000036934009",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "GNA CONSTRUCTION PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07947",
+            "deliveryDate": "2026-09-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T18:07:38+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036934006-1154219000036934009-1"
+      ]
     }
   }
 }
