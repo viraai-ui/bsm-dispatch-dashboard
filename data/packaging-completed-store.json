@@ -19097,6 +19097,66 @@
       "machineIds": [
         "1154219000036934006-1154219000036934009-1"
       ]
+    },
+    "1154219000035947002": {
+      "completedAt": "2026-09-15T06:13:35.966Z",
+      "order": {
+        "id": "1154219000035947002",
+        "zohoSalesOrderId": "1154219000035947002",
+        "salesOrderNumber": "SO-07790",
+        "status": "open",
+        "customerName": "Star Impact Pvt. Ltd. (Malerkotla)",
+        "shippingAddress": "Rehman Nagar, Ludhiana Road, Opp. Power Grid, Melerkotla, Punjab, 148023, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035947005",
+            "itemName": "Toe puff Fusing/ Attaching machine",
+            "sku": "299",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226118",
+            "rate": 51000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035947002-1154219000035947005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271213",
+            "qrToken": "26271213",
+            "orderId": "1154219000035947002",
+            "lineItemId": "1154219000035947005",
+            "itemName": "Toe puff Fusing/ Attaching machine",
+            "sku": "299",
+            "customerName": "Star Impact Pvt. Ltd. (Malerkotla)",
+            "salesOrderNumber": "SO-07790",
+            "deliveryDate": "2026-08-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-21T16:53:09+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000035947002-1154219000035947005-1"
+      ]
     }
   }
 }
