@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271223,
+  "serialCounter": 26271224,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -29735,6 +29735,70 @@
           "vendor": "",
           "zohoBackupLastAttemptAt": "2026-09-15T05:45:33.665Z",
           "zohoBackupSyncedAt": "2026-09-15T05:45:33.665Z"
+        }
+      }
+    },
+    "1154219000036907014": {
+      "salesOrderId": "1154219000036907014",
+      "salesOrderNumber": "SO-07944",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036907014",
+        "zohoSalesOrderId": "1154219000036907014",
+        "salesOrderNumber": "SO-07944",
+        "status": "open",
+        "customerName": "CBT FOOTWEAR",
+        "shippingAddress": "Plot No. 289, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036907017",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225488",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036907014-1154219000036907017-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036907014",
+            "lineItemId": "1154219000036907017",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "customerName": "CBT FOOTWEAR",
+            "salesOrderNumber": "SO-07944",
+            "deliveryDate": "2026-09-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T16:57:00+0530"
+      },
+      "machines": {
+        "1154219000036907014-1154219000036907017-1": {
+          "machineUnitId": "1154219000036907014-1154219000036907017-1",
+          "lineItemId": "1154219000036907017",
+          "serialNumber": "26271224",
+          "qrToken": "26271224",
+          "qrStatus": "pending"
         }
       }
     }
