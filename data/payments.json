@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "NAZ ENTERPRISES",
+      "salesOrderNumber": "SO-07954",
+      "paymentAmount": 17110,
+      "paymentMode": "UPI",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07954/2026-09-15/1789461917424-78854388-a138-4313-99ae-8183f4790daa-WhatsApp-Image-2026-09-15-at-2.12.32-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07954%2F2026-09-15%2F1789461917424-78854388-a138-4313-99ae-8183f4790daa-WhatsApp-Image-2026-09-15-at-2.12.32-PM.jpg",
+          "name": "WhatsApp Image 2026-09-15 at 2.12.32 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 183522
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07954/2026-09-15/1789461917424-78854388-a138-4313-99ae-8183f4790daa-WhatsApp-Image-2026-09-15-at-2.12.32-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07954%2F2026-09-15%2F1789461917424-78854388-a138-4313-99ae-8183f4790daa-WhatsApp-Image-2026-09-15-at-2.12.32-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-15 at 2.12.32 PM.jpeg",
+      "publicDeleteTokenHash": "e41ea7421c6a8636a768e3e5daaf17901978f7e7613f0cf01730aa308bd2c39c",
+      "id": "payment-75d2c69c-e8f6-490f-bf78-38926a79570a",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "abdef3f7a8ce40aa9441aa431f85f238",
+      "createdAt": "2026-09-15T08:45:18.931Z",
+      "updatedAt": "2026-09-15T08:45:18.931Z"
+    },
+    {
       "customerName": "KIDS LEGACY",
       "salesOrderNumber": "SO-07950",
       "paymentAmount": 46640,
