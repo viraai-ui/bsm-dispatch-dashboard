@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271225,
+  "serialCounter": 26271226,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -29938,6 +29938,70 @@
           "processedAt": "2026-09-15T06:46:26.240Z",
           "dispatchNote": "wooden",
           "vendor": "Gurudev"
+        }
+      }
+    },
+    "1154219000036902008": {
+      "salesOrderId": "1154219000036902008",
+      "salesOrderNumber": "SO-07952",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036902008",
+        "zohoSalesOrderId": "1154219000036902008",
+        "salesOrderNumber": "SO-07952",
+        "status": "open",
+        "customerName": "Leather Linkers Footwear Private Limited",
+        "shippingAddress": "D-30 and D-31, Upsidc Site-C, Sikandra, Industrial Area, Agra, Uttar Pradesh, 282007",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036902011",
+            "itemName": "Pattern sewing machine (600x400 mm)",
+            "sku": "6040",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280535",
+            "rate": 395000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036902008-1154219000036902011-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036902008",
+            "lineItemId": "1154219000036902011",
+            "itemName": "Pattern sewing machine (600x400 mm)",
+            "sku": "6040",
+            "customerName": "Leather Linkers Footwear Private Limited",
+            "salesOrderNumber": "SO-07952",
+            "deliveryDate": "2026-09-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-15T13:18:15+0530"
+      },
+      "machines": {
+        "1154219000036902008-1154219000036902011-1": {
+          "machineUnitId": "1154219000036902008-1154219000036902011-1",
+          "lineItemId": "1154219000036902011",
+          "serialNumber": "26271226",
+          "qrToken": "26271226",
+          "qrStatus": "pending"
         }
       }
     }
