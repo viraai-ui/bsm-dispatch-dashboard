@@ -30239,11 +30239,13 @@
           "qrToken": "26271229",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T09:22:43.894Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-15T09:22:44.993Z",
           "processedAt": "2026-09-15T09:23:42.382Z",
           "dispatchNote": "local",
-          "vendor": "Rawal Ji"
+          "vendor": "Rawal Ji",
+          "zohoBackupLastAttemptAt": "2026-09-15T09:30:33.621Z",
+          "zohoBackupSyncedAt": "2026-09-15T09:30:33.621Z"
         }
       }
     }
