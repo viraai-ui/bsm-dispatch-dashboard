@@ -29099,7 +29099,9 @@
     "1154219000035947002": {
       "salesOrderId": "1154219000035947002",
       "salesOrderNumber": "SO-07790",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T04:53:38.879Z",
       "processedOrder": {
         "id": "1154219000035947002",
         "zohoSalesOrderId": "1154219000035947002",
@@ -29129,8 +29131,8 @@
           {
             "id": "1154219000035947002-1154219000035947005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271213",
+            "qrToken": "26271213",
             "orderId": "1154219000035947002",
             "lineItemId": "1154219000035947005",
             "itemName": "Toe puff Fusing/ Attaching machine",
@@ -29138,14 +29140,17 @@
             "customerName": "Star Impact Pvt. Ltd. (Malerkotla)",
             "salesOrderNumber": "SO-07790",
             "deliveryDate": "2026-08-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Shree Sai",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-08-21T16:53:09+0530"
@@ -29159,7 +29164,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T04:51:03.531Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T04:51:06.637Z"
+          "zohoBackupQueuedAt": "2026-09-15T04:51:06.637Z",
+          "processedAt": "2026-09-15T04:53:38.879Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Shree Sai"
         }
       }
     }
