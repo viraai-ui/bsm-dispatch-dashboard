@@ -3544,6 +3544,24 @@
               "expiresAt": "2026-10-15T06:32:50.465Z"
             }
           ]
+        },
+        "1154219000036908001-1154219000036908011-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036908001-1154219000036908011-1-video-1789455936083-gwbn5g",
+              "name": "VID_20260915_123513.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-15%2FSO-07941%2F1154219000036908001-1154219000036908011-1%2Fhole-punching-machine-pneumatic-2026-09-15T07-05-23-440Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-15/SO-07941/1154219000036908001-1154219000036908011-1/hole-punching-machine-pneumatic-2026-09-15T07-05-23-440Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-15T07:05:36.083Z",
+              "expiresAt": "2026-10-15T07:05:36.083Z"
+            }
+          ]
         }
       }
     }
