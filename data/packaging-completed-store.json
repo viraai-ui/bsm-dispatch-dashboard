@@ -19157,6 +19157,66 @@
       "machineIds": [
         "1154219000035947002-1154219000035947005-1"
       ]
+    },
+    "1154219000036907014": {
+      "completedAt": "2026-09-15T07:42:24.437Z",
+      "order": {
+        "id": "1154219000036907014",
+        "zohoSalesOrderId": "1154219000036907014",
+        "salesOrderNumber": "SO-07944",
+        "status": "open",
+        "customerName": "CBT FOOTWEAR",
+        "shippingAddress": "Plot No. 289, Sector -17, Footwear Park, Footwear park , Bahadurgarh-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036907017",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225488",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036907014-1154219000036907017-1",
+            "unitNumber": 1,
+            "serialNumber": "26271224",
+            "qrToken": "26271224",
+            "orderId": "1154219000036907014",
+            "lineItemId": "1154219000036907017",
+            "itemName": "Side Pressing Machine (pneumatic)",
+            "sku": "364",
+            "customerName": "CBT FOOTWEAR",
+            "salesOrderNumber": "SO-07944",
+            "deliveryDate": "2026-09-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T16:57:00+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000036907014-1154219000036907017-1"
+      ]
     }
   }
 }
