@@ -6878,6 +6878,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036935005": {
+      "id": "ship-1789468057821-6zijs",
+      "itemId": "1154219000036935005",
+      "orderId": "1154219000036935005",
+      "machineId": "1154219000036935005-1154219000036935008-1",
+      "salesOrderNumber": "SO-07955",
+      "customerName": "Ridhaan Ventures Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP7624",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-15",
+      "notes": "",
+      "shippedAt": "2026-09-15T10:27:37.821Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
