@@ -30267,7 +30267,9 @@
     "1154219000036924009": {
       "salesOrderId": "1154219000036924009",
       "salesOrderNumber": "SO-07957",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T13:32:58.738Z",
       "processedOrder": {
         "id": "1154219000036924009",
         "zohoSalesOrderId": "1154219000036924009",
@@ -30297,8 +30299,8 @@
           {
             "id": "1154219000036924009-1154219000036924012-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271230",
+            "qrToken": "26271230",
             "orderId": "1154219000036924009",
             "lineItemId": "1154219000036924012",
             "itemName": "Tape Cutting machine [Electronic]",
@@ -30306,14 +30308,17 @@
             "customerName": "DHATRI SALES (Noida)",
             "salesOrderNumber": "SO-07957",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "",
+            "dispatchNote": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-15T18:51:49+0530"
@@ -30327,7 +30332,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T13:32:07.655Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T13:32:08.459Z"
+          "zohoBackupQueuedAt": "2026-09-15T13:32:08.459Z",
+          "processedAt": "2026-09-15T13:32:58.738Z",
+          "dispatchNote": "",
+          "vendor": ""
         }
       }
     }
