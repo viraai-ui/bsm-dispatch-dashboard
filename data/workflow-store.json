@@ -29741,7 +29741,9 @@
     "1154219000036907014": {
       "salesOrderId": "1154219000036907014",
       "salesOrderNumber": "SO-07944",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T06:37:15.147Z",
       "processedOrder": {
         "id": "1154219000036907014",
         "zohoSalesOrderId": "1154219000036907014",
@@ -29771,8 +29773,8 @@
           {
             "id": "1154219000036907014-1154219000036907017-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271224",
+            "qrToken": "26271224",
             "orderId": "1154219000036907014",
             "lineItemId": "1154219000036907017",
             "itemName": "Side Pressing Machine (pneumatic)",
@@ -29780,14 +29782,17 @@
             "customerName": "CBT FOOTWEAR",
             "salesOrderNumber": "SO-07944",
             "deliveryDate": "2026-09-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Tech Point Solution",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T16:57:00+0530"
@@ -29801,7 +29806,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T06:36:18.696Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T06:36:19.569Z"
+          "zohoBackupQueuedAt": "2026-09-15T06:36:19.569Z",
+          "processedAt": "2026-09-15T06:37:15.147Z",
+          "dispatchNote": "local",
+          "vendor": "Tech Point Solution"
         }
       }
     }
