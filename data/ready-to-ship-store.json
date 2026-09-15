@@ -6835,6 +6835,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036923017": {
+      "id": "ship-1789461131112-nm5zz",
+      "itemId": "1154219000036923017",
+      "orderId": "1154219000036923017",
+      "machineId": "1154219000036923017-1154219000036923020-1",
+      "salesOrderNumber": "SO-07942",
+      "customerName": "Shree Balaji Polymers",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAP3897",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-15",
+      "notes": "",
+      "shippedAt": "2026-09-15T08:32:11.112Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
