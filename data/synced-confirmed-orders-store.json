@@ -1,5 +1,105 @@
 {
   "orders": {
+    "1154219000036922008": {
+      "id": "1154219000036922008",
+      "zohoSalesOrderId": "1154219000036922008",
+      "salesOrderNumber": "SO-07950",
+      "status": "open",
+      "customerName": "KIDS LEGACY",
+      "shippingAddress": "H.NO.2B GALA NO.E/08, S.NO.92, A.K.COMPOUND, SHIL M APE RD NR NEW, Vadavali Kh Bus Stop, Narivali NV,, Thane, Maharashtra, 421204, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-16",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036922011",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225102",
+          "rate": 38000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036922008-1154219000036922011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036922008",
+          "lineItemId": "1154219000036922011",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "customerName": "KIDS LEGACY",
+          "salesOrderNumber": "SO-07950",
+          "deliveryDate": "2026-09-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T10:47:43+0530"
+    },
+    "1154219000036916004": {
+      "id": "1154219000036916004",
+      "zohoSalesOrderId": "1154219000036916004",
+      "salesOrderNumber": "SO-07949",
+      "status": "open",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036916007",
+          "itemName": "Toe lasting Machine with Cement [9 Pincer]",
+          "sku": "737 C",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000400413",
+          "rate": 1125000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036916004-1154219000036916007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036916004",
+          "lineItemId": "1154219000036916007",
+          "itemName": "Toe lasting Machine with Cement [9 Pincer]",
+          "sku": "737 C",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-07949",
+          "deliveryDate": "2026-10-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-15T10:47:13+0530"
+    },
     "1154219000036913087": {
       "id": "1154219000036913087",
       "zohoSalesOrderId": "1154219000036913087",
@@ -10493,6 +10593,8 @@
     }
   },
   "orderIds": [
+    "1154219000036922008",
+    "1154219000036916004",
     "1154219000036913087",
     "1154219000036934006",
     "1154219000036909011",
@@ -10546,8 +10648,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-15T05:00:32.478Z",
-  "lastAttemptAt": "2026-09-15T05:20:25.787Z",
+  "lastSuccessfulSyncAt": "2026-09-15T05:20:39.024Z",
+  "lastAttemptAt": "2026-09-15T05:20:39.024Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
