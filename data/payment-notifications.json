@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-0bea4286-5968-43a4-967e-94b6953781e3",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-48dbae0d-8876-4605-9d52-4b6312b650dd",
+      "salesOrderNumber": "SO-07950",
+      "customerName": "KIDS LEGACY",
+      "paymentAmount": 46640,
+      "createdAt": "2026-09-15T05:04:49.303Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-dacb9ea6-0dd1-4771-9faa-45951b605044",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-48dbae0d-8876-4605-9d52-4b6312b650dd",
+      "salesOrderNumber": "SO-07950",
+      "customerName": "KIDS LEGACY",
+      "paymentAmount": 46640,
+      "createdAt": "2026-09-15T05:04:49.303Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-3969abfd-f5da-4a31-92af-da50639f50ed",
       "type": "payment-created",
       "recipientUserId": "u-admin",
