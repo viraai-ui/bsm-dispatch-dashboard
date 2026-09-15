@@ -1,105 +1,5 @@
 {
   "orders": {
-    "1154219000036935005": {
-      "id": "1154219000036935005",
-      "zohoSalesOrderId": "1154219000036935005",
-      "salesOrderNumber": "SO-07955",
-      "status": "open",
-      "customerName": "Ridhaan Ventures Private Limited",
-      "shippingAddress": "A-9/70 C, Kalka Ji Extn. Saty Si Baba School, Delhi, 110019, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036935008",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225413",
-          "rate": 50000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036935005-1154219000036935008-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036935005",
-          "lineItemId": "1154219000036935008",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "Ridhaan Ventures Private Limited",
-          "salesOrderNumber": "SO-07955",
-          "deliveryDate": "2026-09-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-15T14:51:16+0530"
-    },
-    "1154219000036926011": {
-      "id": "1154219000036926011",
-      "zohoSalesOrderId": "1154219000036926011",
-      "salesOrderNumber": "SO-07954",
-      "status": "open",
-      "customerName": "NAZ ENTERPRISES",
-      "shippingAddress": "GROUND FLOOR, P NO.9/5 KH NO. 52/2/2, SHIV BAKSH PARK,, NANGLOI, Delhi, 110041, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036926014",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226034",
-          "rate": 14500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036926011-1154219000036926014-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036926011",
-          "lineItemId": "1154219000036926014",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "NAZ ENTERPRISES",
-          "salesOrderNumber": "SO-07954",
-          "deliveryDate": "2026-09-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-15T14:09:46+0530"
-    },
     "1154219000036904013": {
       "id": "1154219000036904013",
       "zohoSalesOrderId": "1154219000036904013",
@@ -394,56 +294,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-15T10:47:13+0530"
-    },
-    "1154219000036913087": {
-      "id": "1154219000036913087",
-      "zohoSalesOrderId": "1154219000036913087",
-      "salesOrderNumber": "SO-07948",
-      "status": "open",
-      "customerName": "SAFINA ENTERPRISES",
-      "shippingAddress": "PLOT NO K-8, SECTOR D-1 P-3, TDS CITY, Loni, Ghaziabad, Uttar PradesH, 201102",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036913090",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000280682",
-          "rate": 29000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036913087-1154219000036913090-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036913087",
-          "lineItemId": "1154219000036913090",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "SAFINA ENTERPRISES",
-          "salesOrderNumber": "SO-07948",
-          "deliveryDate": "2026-09-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-15T10:19:42+0530"
     },
     "1154219000036909011": {
       "id": "1154219000036909011",
@@ -10688,14 +10538,11 @@
     }
   },
   "orderIds": [
-    "1154219000036935005",
-    "1154219000036926011",
     "1154219000036904013",
     "1154219000036902008",
     "1154219000036930024",
     "1154219000036922008",
     "1154219000036916004",
-    "1154219000036913087",
     "1154219000036909011",
     "1154219000036914152",
     "1154219000036908001",
@@ -10744,8 +10591,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-15T10:20:31.337Z",
-  "lastAttemptAt": "2026-09-15T10:40:25.094Z",
+  "lastSuccessfulSyncAt": "2026-09-15T10:40:39.679Z",
+  "lastAttemptAt": "2026-09-15T10:40:39.679Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
