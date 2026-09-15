@@ -6773,6 +6773,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036907014": {
+      "id": "ship-1789460975784-9qlni",
+      "itemId": "1154219000036907014",
+      "orderId": "1154219000036907014",
+      "machineId": "1154219000036907014-1154219000036907017-1",
+      "salesOrderNumber": "SO-07944",
+      "customerName": "CBT FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51GD9630",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-15",
+      "notes": "",
+      "shippedAt": "2026-09-15T08:29:35.784Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
