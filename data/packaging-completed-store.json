@@ -19789,6 +19789,66 @@
         "1154219000036013008-1154219000036013015-1",
         "1154219000036013008-1154219000036013016-1"
       ]
+    },
+    "1154219000034276003": {
+      "completedAt": "2026-09-15T13:29:52.558Z",
+      "order": {
+        "id": "1154219000034276003",
+        "zohoSalesOrderId": "1154219000034276003",
+        "salesOrderNumber": "SO-07491",
+        "status": "open",
+        "customerName": "Aqdus Enterprises",
+        "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034276006",
+            "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
+            "sku": "917 [HH]",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000420019",
+            "rate": 478000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034276003-1154219000034276006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271192",
+            "qrToken": "26271192",
+            "orderId": "1154219000034276003",
+            "lineItemId": "1154219000034276006",
+            "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
+            "sku": "917 [HH]",
+            "customerName": "Aqdus Enterprises",
+            "salesOrderNumber": "SO-07491",
+            "deliveryDate": "2026-08-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-11",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-07-16T10:19:43+0530",
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000034276003-1154219000034276006-1"
+      ]
     }
   }
 }
