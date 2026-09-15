@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-2637c0ca-4c25-4469-b7cf-ed43cfc00b29",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-5896ae03-6679-4805-89e3-66c84679567a",
+      "salesOrderNumber": "SO-07945",
+      "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+      "paymentAmount": 89380,
+      "createdAt": "2026-09-15T10:28:51.738Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-a1c9fcba-2688-4316-9323-71f68c39b90b",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-5896ae03-6679-4805-89e3-66c84679567a",
+      "salesOrderNumber": "SO-07945",
+      "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+      "paymentAmount": 89380,
+      "createdAt": "2026-09-15T10:28:51.738Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-d7edb6f2-e083-494a-95fd-e26acc19c6de",
       "type": "payment-created",
       "recipientUserId": "u-admin",
