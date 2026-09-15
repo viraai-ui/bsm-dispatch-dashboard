@@ -6909,6 +6909,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036926011": {
+      "id": "ship-1789468211550-5wcdd",
+      "itemId": "1154219000036926011",
+      "orderId": "1154219000036926011",
+      "machineId": "1154219000036926011-1154219000036926014-1",
+      "salesOrderNumber": "SO-07954",
+      "customerName": "NAZ ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1RV7722",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-15",
+      "notes": "",
+      "shippedAt": "2026-09-15T10:30:11.551Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
