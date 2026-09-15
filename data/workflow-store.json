@@ -29178,7 +29178,9 @@
     "1154219000036908001": {
       "salesOrderId": "1154219000036908001",
       "salesOrderNumber": "SO-07941",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T05:24:30.028Z",
       "processedOrder": {
         "id": "1154219000036908001",
         "zohoSalesOrderId": "1154219000036908001",
@@ -29304,8 +29306,8 @@
           {
             "id": "1154219000036908001-1154219000036908004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271214",
+            "qrToken": "26271214",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908004",
             "itemName": "Single needle post bed Drop feed",
@@ -29313,20 +29315,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908005-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271215",
+            "qrToken": "26271215",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908005",
             "itemName": "Double Needle Post Bed Drop Feed",
@@ -29334,20 +29339,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908006-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271216",
+            "qrToken": "26271216",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908006",
             "itemName": "Tape Cutting machine [Electronic]",
@@ -29355,20 +29363,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908007-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271217",
+            "qrToken": "26271217",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908007",
             "itemName": "UV Curing machine",
@@ -29376,20 +29387,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Sunrise",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908008-1",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271218",
+            "qrToken": "26271218",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908008",
             "itemName": "Chiller (Conveyor type) (5 Ton)",
@@ -29397,20 +29411,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Siphon",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908009-1",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271219",
+            "qrToken": "26271219",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908009",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -29418,20 +29435,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Allure",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908010-1",
             "unitNumber": 7,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271220",
+            "qrToken": "26271220",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908010",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -29439,20 +29459,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Rawal",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908011-1",
             "unitNumber": 8,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271221",
+            "qrToken": "26271221",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908011",
             "itemName": "hole punching machine (pneumatic)",
@@ -29460,20 +29483,23 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "New Model"
+            "itemDescription": "New Model",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036908001-1154219000036908012-1",
             "unitNumber": 9,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271222",
+            "qrToken": "26271222",
             "orderId": "1154219000036908001",
             "lineItemId": "1154219000036908012",
             "itemName": "Zigzag Flatbed",
@@ -29481,14 +29507,17 @@
             "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07941",
             "deliveryDate": "2026-09-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-14T18:33:43+0530"
@@ -29502,7 +29531,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000036908001-1154219000036908005-1": {
           "machineUnitId": "1154219000036908001-1154219000036908005-1",
@@ -29512,7 +29544,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000036908001-1154219000036908006-1": {
           "machineUnitId": "1154219000036908001-1154219000036908006-1",
@@ -29522,7 +29557,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036908001-1154219000036908007-1": {
           "machineUnitId": "1154219000036908001-1154219000036908007-1",
@@ -29532,7 +29570,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "Sunrise"
         },
         "1154219000036908001-1154219000036908008-1": {
           "machineUnitId": "1154219000036908001-1154219000036908008-1",
@@ -29542,7 +29583,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "Siphon"
         },
         "1154219000036908001-1154219000036908009-1": {
           "machineUnitId": "1154219000036908001-1154219000036908009-1",
@@ -29552,7 +29596,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "Allure"
         },
         "1154219000036908001-1154219000036908010-1": {
           "machineUnitId": "1154219000036908001-1154219000036908010-1",
@@ -29562,7 +29609,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal"
         },
         "1154219000036908001-1154219000036908011-1": {
           "machineUnitId": "1154219000036908001-1154219000036908011-1",
@@ -29572,7 +29622,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036908001-1154219000036908012-1": {
           "machineUnitId": "1154219000036908001-1154219000036908012-1",
@@ -29582,7 +29635,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T05:19:17.424Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z"
+          "zohoBackupQueuedAt": "2026-09-15T05:19:18.210Z",
+          "processedAt": "2026-09-15T05:24:30.028Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
