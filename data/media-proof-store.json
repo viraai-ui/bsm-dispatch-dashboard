@@ -3594,7 +3594,26 @@
       "orderId": "1154219000036913087",
       "salesOrderNumber": "SO-07948",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000036913087-1154219000036913090-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036913087-1154219000036913090-1-video-1789456531633-qi1u0w",
+              "name": "VID_20260915_124504.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-15%2FSO-07948%2F1154219000036913087-1154219000036913090-1%2FLatex-Glue-Applicator-roller-type-16-inch-2026-09-15T07-15-14-505Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-15/SO-07948/1154219000036913087-1154219000036913090-1/Latex-Glue-Applicator-roller-type-16-inch-2026-09-15T07-15-14-505Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-15T07:15:31.633Z",
+              "expiresAt": "2026-10-15T07:15:31.633Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     }
   }
