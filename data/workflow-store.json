@@ -29944,7 +29944,9 @@
     "1154219000036902008": {
       "salesOrderId": "1154219000036902008",
       "salesOrderNumber": "SO-07952",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-15T08:21:46.326Z",
       "processedOrder": {
         "id": "1154219000036902008",
         "zohoSalesOrderId": "1154219000036902008",
@@ -29974,8 +29976,8 @@
           {
             "id": "1154219000036902008-1154219000036902011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271226",
+            "qrToken": "26271226",
             "orderId": "1154219000036902008",
             "lineItemId": "1154219000036902011",
             "itemName": "Pattern sewing machine (600x400 mm)",
@@ -29983,14 +29985,17 @@
             "customerName": "Leather Linkers Footwear Private Limited",
             "salesOrderNumber": "SO-07952",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-15T13:18:15+0530"
@@ -30006,7 +30011,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-15T08:00:14.481Z",
           "zohoBackupLastAttemptAt": "2026-09-15T08:00:33.283Z",
-          "zohoBackupSyncedAt": "2026-09-15T08:00:33.283Z"
+          "zohoBackupSyncedAt": "2026-09-15T08:00:33.283Z",
+          "processedAt": "2026-09-15T08:21:46.326Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
