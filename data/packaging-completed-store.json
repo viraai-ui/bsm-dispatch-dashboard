@@ -19276,6 +19276,65 @@
       "machineIds": [
         "1154219000036922008-1154219000036922011-1"
       ]
+    },
+    "1154219000036926011": {
+      "completedAt": "2026-09-15T09:51:29.066Z",
+      "order": {
+        "id": "1154219000036926011",
+        "zohoSalesOrderId": "1154219000036926011",
+        "salesOrderNumber": "SO-07954",
+        "status": "open",
+        "customerName": "NAZ ENTERPRISES",
+        "shippingAddress": "GROUND FLOOR, P NO.9/5 KH NO. 52/2/2, SHIV BAKSH PARK,, NANGLOI, Delhi, 110041, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036926014",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 14500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036926011-1154219000036926014-1",
+            "unitNumber": 1,
+            "serialNumber": "26271228",
+            "qrToken": "26271228",
+            "orderId": "1154219000036926011",
+            "lineItemId": "1154219000036926014",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "NAZ ENTERPRISES",
+            "salesOrderNumber": "SO-07954",
+            "deliveryDate": "2026-09-15",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-15T14:09:46+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036926011-1154219000036926014-1"
+      ]
     }
   }
 }
