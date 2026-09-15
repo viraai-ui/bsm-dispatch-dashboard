@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-d7edb6f2-e083-494a-95fd-e26acc19c6de",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-d0884add-26c5-450e-b300-a1c90489360c",
+      "salesOrderNumber": "SO-07955",
+      "customerName": "Ridhaan Ventures Private Limited",
+      "paymentAmount": 59000,
+      "createdAt": "2026-09-15T09:20:43.189Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-d03980bc-d412-471c-b90b-37aa076dc41c",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-d0884add-26c5-450e-b300-a1c90489360c",
+      "salesOrderNumber": "SO-07955",
+      "customerName": "Ridhaan Ventures Private Limited",
+      "paymentAmount": 59000,
+      "createdAt": "2026-09-15T09:20:43.189Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-2472438b-7dc5-4da3-addf-e92e7b8f3946",
       "type": "payment-created",
       "recipientUserId": "u-admin",
