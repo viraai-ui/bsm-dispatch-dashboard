@@ -29805,11 +29805,13 @@
           "qrToken": "26271224",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-15T06:36:18.696Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-15T06:36:19.569Z",
           "processedAt": "2026-09-15T06:37:15.147Z",
           "dispatchNote": "local",
-          "vendor": "Tech Point Solution"
+          "vendor": "Tech Point Solution",
+          "zohoBackupLastAttemptAt": "2026-09-15T06:45:32.544Z",
+          "zohoBackupSyncedAt": "2026-09-15T06:45:32.544Z"
         }
       },
       "dispatchSortOrder": 1
