@@ -6742,6 +6742,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036934006": {
+      "id": "ship-1789452434857-d6hms",
+      "itemId": "1154219000036934006",
+      "orderId": "1154219000036934006",
+      "machineId": "1154219000036934006-1154219000036934009-1",
+      "salesOrderNumber": "SO-07947",
+      "customerName": "GNA CONSTRUCTION PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-14",
+      "notes": "",
+      "shippedAt": "2026-09-15T06:07:14.857Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
