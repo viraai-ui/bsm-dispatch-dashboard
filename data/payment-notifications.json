@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-2472438b-7dc5-4da3-addf-e92e7b8f3946",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-75d2c69c-e8f6-490f-bf78-38926a79570a",
+      "salesOrderNumber": "SO-07954",
+      "customerName": "NAZ ENTERPRISES",
+      "paymentAmount": 17110,
+      "createdAt": "2026-09-15T08:45:21.452Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-c4eb3797-e19c-4180-940c-bd0e0dd1de71",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-75d2c69c-e8f6-490f-bf78-38926a79570a",
+      "salesOrderNumber": "SO-07954",
+      "customerName": "NAZ ENTERPRISES",
+      "paymentAmount": 17110,
+      "createdAt": "2026-09-15T08:45:21.452Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-0bea4286-5968-43a4-967e-94b6953781e3",
       "type": "payment-created",
       "recipientUserId": "u-admin",
