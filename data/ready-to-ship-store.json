@@ -6940,6 +6940,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036913087": {
+      "id": "ship-1789468483254-tgpv3",
+      "itemId": "1154219000036913087",
+      "orderId": "1154219000036913087",
+      "machineId": "1154219000036913087-1154219000036913090-1",
+      "salesOrderNumber": "SO-07948",
+      "customerName": "SAFINA ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51EV0372",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-15",
+      "notes": "",
+      "shippedAt": "2026-09-15T10:34:43.254Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
