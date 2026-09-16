@@ -344,56 +344,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-15T13:53:16+0530"
     },
-    "1154219000036902008": {
-      "id": "1154219000036902008",
-      "zohoSalesOrderId": "1154219000036902008",
-      "salesOrderNumber": "SO-07952",
-      "status": "open",
-      "customerName": "Leather Linkers Footwear Private Limited",
-      "shippingAddress": "D-30 and D-31, Upsidc Site-C, Sikandra, Industrial Area, Agra, Uttar Pradesh, 282007",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036902011",
-          "itemName": "Pattern sewing machine (600x400 mm)",
-          "sku": "6040",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000280535",
-          "rate": 395000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036902008-1154219000036902011-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036902008",
-          "lineItemId": "1154219000036902011",
-          "itemName": "Pattern sewing machine (600x400 mm)",
-          "sku": "6040",
-          "customerName": "Leather Linkers Footwear Private Limited",
-          "salesOrderNumber": "SO-07952",
-          "deliveryDate": "2026-09-15",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-15T13:18:15+0530"
-    },
     "1154219000036930024": {
       "id": "1154219000036930024",
       "zohoSalesOrderId": "1154219000036930024",
@@ -10838,7 +10788,6 @@
     "1154219000036924009",
     "1154219000036935021",
     "1154219000036904013",
-    "1154219000036902008",
     "1154219000036930024",
     "1154219000036922008",
     "1154219000036916004",
@@ -10890,8 +10839,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-16T08:20:31.314Z",
-  "lastAttemptAt": "2026-09-16T08:40:25.725Z",
+  "lastSuccessfulSyncAt": "2026-09-16T08:40:31.478Z",
+  "lastAttemptAt": "2026-09-16T08:40:31.478Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
