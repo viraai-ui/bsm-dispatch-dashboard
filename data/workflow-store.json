@@ -30584,7 +30584,9 @@
     "1154219000037017001": {
       "salesOrderId": "1154219000037017001",
       "salesOrderNumber": "SO-07964",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-16T13:17:30.724Z",
       "processedOrder": {
         "id": "1154219000037017001",
         "zohoSalesOrderId": "1154219000037017001",
@@ -30614,8 +30616,8 @@
           {
             "id": "1154219000037017001-1154219000037017004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271234",
+            "qrToken": "26271234",
             "orderId": "1154219000037017001",
             "lineItemId": "1154219000037017004",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -30623,14 +30625,17 @@
             "customerName": "V R SEWING MACHINE",
             "salesOrderNumber": "SO-07964",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-16",
+            "vendor": "Ss Enterprises",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-16T18:43:36+0530"
@@ -30644,7 +30649,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-16T13:16:26.837Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-16T13:16:28.785Z"
+          "zohoBackupQueuedAt": "2026-09-16T13:16:28.785Z",
+          "processedAt": "2026-09-16T13:17:30.724Z",
+          "dispatchNote": "Local",
+          "vendor": "Ss Enterprises"
         }
       }
     }
