@@ -3825,6 +3825,31 @@
           ]
         }
       }
+    },
+    "1154219000036902008": {
+      "orderId": "1154219000036902008",
+      "salesOrderNumber": "SO-07952",
+      "submittedAt": null,
+      "units": {
+        "1154219000036902008-1154219000036902011-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000036902008-1154219000036902011-1-video-1789535242549-z380xq",
+              "name": "VID_20260916_103649.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-16%2FSO-07952%2F1154219000036902008-1154219000036902011-1%2FPattern-sewing-machine-600x400-mm-2026-09-16T05-07-00-428Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-16/SO-07952/1154219000036902008-1154219000036902011-1/Pattern-sewing-machine-600x400-mm-2026-09-16T05-07-00-428Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-16T05:07:22.549Z",
+              "expiresAt": "2026-10-16T05:07:22.549Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
