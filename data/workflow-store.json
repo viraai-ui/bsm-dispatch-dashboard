@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271231,
+  "serialCounter": 26271233,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -30432,6 +30432,110 @@
           "processedAt": "2026-09-16T07:17:30.887Z",
           "dispatchNote": "local",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000036958001": {
+      "salesOrderId": "1154219000036958001",
+      "salesOrderNumber": "SO-07960",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036958001",
+        "zohoSalesOrderId": "1154219000036958001",
+        "salesOrderNumber": "SO-07960",
+        "status": "open",
+        "customerName": "Yogesh Upper",
+        "shippingAddress": "Chotu Ram Nagar Line Par, Pyau Ke Pass, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036958004",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280352",
+            "rate": 435000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036958005",
+            "itemName": "Double Head Slider Fusing Machine [Double Station] (pneumatic)",
+            "sku": "40-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000035709011",
+            "rate": 95000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036958001-1154219000036958004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036958001",
+            "lineItemId": "1154219000036958004",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "Yogesh Upper",
+            "salesOrderNumber": "SO-07960",
+            "deliveryDate": "2026-09-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000036958001-1154219000036958005-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036958001",
+            "lineItemId": "1154219000036958005",
+            "itemName": "Double Head Slider Fusing Machine [Double Station] (pneumatic)",
+            "sku": "40-2",
+            "customerName": "Yogesh Upper",
+            "salesOrderNumber": "SO-07960",
+            "deliveryDate": "2026-09-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-16T12:55:32+0530"
+      },
+      "machines": {
+        "1154219000036958001-1154219000036958004-1": {
+          "machineUnitId": "1154219000036958001-1154219000036958004-1",
+          "lineItemId": "1154219000036958004",
+          "serialNumber": "26271232",
+          "qrToken": "26271232",
+          "qrStatus": "pending"
+        },
+        "1154219000036958001-1154219000036958005-1": {
+          "machineUnitId": "1154219000036958001-1154219000036958005-1",
+          "lineItemId": "1154219000036958005",
+          "serialNumber": "26271233",
+          "qrToken": "26271233",
+          "qrStatus": "pending"
         }
       }
     }
