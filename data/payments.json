@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "3NG",
+      "salesOrderNumber": "SO-07962",
+      "paymentAmount": 9318,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07962/2026-09-16/1789560566344-785e71d8-9a91-496e-966b-38d02a51d929-ed1f5c69-82f4-43bb-9545-7cb7d951b7f3.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07962%2F2026-09-16%2F1789560566344-785e71d8-9a91-496e-966b-38d02a51d929-ed1f5c69-82f4-43bb-9545-7cb7d951b7f3.jpg",
+          "name": "ed1f5c69-82f4-43bb-9545-7cb7d951b7f3.jpg",
+          "contentType": "image/jpeg",
+          "size": 73814,
+          "uploadedAt": "2026-09-16T12:09:33.731Z",
+          "expiresAt": "2026-10-16T12:09:33.731Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07962/2026-09-16/1789560566344-785e71d8-9a91-496e-966b-38d02a51d929-ed1f5c69-82f4-43bb-9545-7cb7d951b7f3.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07962%2F2026-09-16%2F1789560566344-785e71d8-9a91-496e-966b-38d02a51d929-ed1f5c69-82f4-43bb-9545-7cb7d951b7f3.jpg",
+      "screenshotName": "ed1f5c69-82f4-43bb-9545-7cb7d951b7f3.jpg",
+      "publicDeleteTokenHash": "f02570ff15e700244d912ef9fcfed795dc4bc0cd0ffc3b303f440a15489878c9",
+      "id": "payment-024dc393-dc2a-449f-baa4-8b5bb1b210ea",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "382439f4db0a45d2b3c12817fbcb1d92",
+      "createdAt": "2026-09-16T12:09:34.358Z",
+      "updatedAt": "2026-09-16T12:09:34.358Z"
+    },
+    {
       "customerName": "Yogesh Upper",
       "salesOrderNumber": "SO-07960",
       "paymentAmount": 500000,
