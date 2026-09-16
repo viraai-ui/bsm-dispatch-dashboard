@@ -30438,7 +30438,9 @@
     "1154219000036958001": {
       "salesOrderId": "1154219000036958001",
       "salesOrderNumber": "SO-07960",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-16T08:38:36.943Z",
       "processedOrder": {
         "id": "1154219000036958001",
         "zohoSalesOrderId": "1154219000036958001",
@@ -30480,8 +30482,8 @@
           {
             "id": "1154219000036958001-1154219000036958004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271232",
+            "qrToken": "26271232",
             "orderId": "1154219000036958001",
             "lineItemId": "1154219000036958004",
             "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
@@ -30489,20 +30491,23 @@
             "customerName": "Yogesh Upper",
             "salesOrderNumber": "SO-07960",
             "deliveryDate": "2026-09-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-16",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000036958001-1154219000036958005-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271233",
+            "qrToken": "26271233",
             "orderId": "1154219000036958001",
             "lineItemId": "1154219000036958005",
             "itemName": "Double Head Slider Fusing Machine [Double Station] (pneumatic)",
@@ -30510,14 +30515,17 @@
             "customerName": "Yogesh Upper",
             "salesOrderNumber": "SO-07960",
             "deliveryDate": "2026-09-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-16",
+            "vendor": "Bsm",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-16T12:55:32+0530"
@@ -30533,7 +30541,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-16T08:27:54.445Z",
           "zohoBackupLastAttemptAt": "2026-09-16T08:30:32.377Z",
-          "zohoBackupSyncedAt": "2026-09-16T08:30:32.377Z"
+          "zohoBackupSyncedAt": "2026-09-16T08:30:32.377Z",
+          "processedAt": "2026-09-16T08:38:36.943Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000036958001-1154219000036958005-1": {
           "machineUnitId": "1154219000036958001-1154219000036958005-1",
@@ -30545,7 +30556,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-16T08:27:54.445Z",
           "zohoBackupLastAttemptAt": "2026-09-16T08:30:32.377Z",
-          "zohoBackupSyncedAt": "2026-09-16T08:30:32.377Z"
+          "zohoBackupSyncedAt": "2026-09-16T08:30:32.377Z",
+          "processedAt": "2026-09-16T08:38:36.943Z",
+          "dispatchNote": "local",
+          "vendor": "Bsm"
         }
       }
     }
