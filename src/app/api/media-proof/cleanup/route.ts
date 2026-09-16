@@ -8,6 +8,7 @@ import { deleteR2Object } from '@/lib/r2'
 import { cleanMediaStore, cleanPayments, cleanShipmentStore, ONE_TIME_VIDEO_PURGE_DAYS, type DeleteMemo } from '@/lib/attachment-retention'
 import { readShipmentStore, writeShipmentStore } from '@/lib/ready-to-ship'
 import { listPayments, updatePaymentStore } from '@/lib/payments'
+import { reconcileR2Retention } from '@/lib/r2-reconciliation'
 
 export const runtime = 'nodejs'
 export const maxDuration = 300
@@ -25,6 +26,18 @@ export async function GET(request: NextRequest) {
     const [packingSource, loadingSource, shipmentSource, paymentSource] = await Promise.all([
       readMediaProofStore('packing'), readMediaProofStore('loading'), readShipmentStore(), listPayments(),
     ])
+    const registered = new Set<string>()
+    const collect = (value: unknown) => {
+      if (!value || typeof value !== 'object') return
+      const record = value as Record<string, unknown>
+      if (typeof record.r2Key === 'string') registered.add(record.r2Key)
+      if (typeof record.key === 'string' && (record.key.startsWith('payments/') || record.key.startsWith('media-proof/'))) registered.add(record.key)
+      Object.values(record).forEach(collect)
+    }
+    ;[packingSource, loadingSource, shipmentSource, paymentSource].forEach(collect)
+    const execute = request.nextUrl.searchParams.get('execute') === 'true'
+    const reconciliation = await reconcileR2Retention(registered, { execute })
+    if (!execute) return apiOk({ mode: 'inventory', ...reconciliation })
     const packing = await cleanMediaStore(packingSource, remove, { days: requestedVideoDays, memo })
     const loading = await cleanMediaStore(loadingSource, remove, { days: requestedVideoDays, memo })
     const shipments = await cleanShipmentStore(shipmentSource, remove, { memo })
@@ -35,7 +48,8 @@ export async function GET(request: NextRequest) {
       writeShipmentStore(shipments.store, 'Apply LR/builty retention'),
       updatePaymentStore(() => payments.payments),
     ])
-    return apiOk({ policy: { videoDays: requestedVideoDays, documentDays: 30 }, packing: packing.result, loading: loading.result, shipments: shipments.result, payments: payments.result, uniqueKeysProcessed: memo.size })
+    const after = await reconcileR2Retention(registered)
+    return apiOk({ policy: { videoDays: requestedVideoDays, documentDays: 30 }, before: reconciliation, after, packing: packing.result, loading: loading.result, shipments: shipments.result, payments: payments.result, uniqueKeysProcessed: memo.size })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Media cleanup failed', 500)
   }

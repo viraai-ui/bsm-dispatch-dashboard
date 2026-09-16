@@ -36,8 +36,8 @@ export async function cleanMediaStore(store: MediaProofStore, remove: DeleteObje
       for (const file of unit[field] || []) {
         result.scanned++
         file.expiresAt = expiresAt(file.uploadedAt, ATTACHMENT_RETENTION_DAYS)
-        const retentionDays = file.kind === 'video' ? days : ATTACHMENT_RETENTION_DAYS
-        if (!due(file.uploadedAt, now, retentionDays)) { kept.push(file); continue }
+        // Photos are business evidence and are not covered by the video policy.
+        if (file.kind !== 'video' || !due(file.uploadedAt, now, days)) { kept.push(file); continue }
         if (!file.r2Key) { kept.push(file); continue } // cleanup route only owns registered R2 objects
         const deleted = await deletion(file.r2Key, remove, memo)
         if (deleted.ok) result.removed++

@@ -17,6 +17,7 @@ let corsReadyUntil = 0
 export const R2_VIDEO_MAX_BYTES = 250 * 1024 * 1024
 export const R2_DOCUMENT_MAX_BYTES = 15 * 1024 * 1024
 export type R2ObjectMetadata = { exists: boolean; contentType: string; contentLength: number; etag: string | null }
+export type R2InventoryObject = { key: string; size: number; lastModified: string; etag: string | null }
 const ALLOWED_PREFIXES = ['media-proof/', 'payments/'] as const
 
 /** Allows persisted legacy spaces while rejecting traversal and unsafe bytes. */
@@ -263,7 +264,46 @@ export async function deleteR2Object(key: string | null | undefined) {
   })
   if (response.status === 404) return false
   if (!response.ok) throw new Error(`Cloudflare R2 delete failed: HTTP ${response.status}`)
+  const verification = await headR2Object(key)
+  if (verification.exists) throw new Error('Cloudflare R2 delete did not remove object (HEAD still succeeds)')
   return true
+}
+
+/** Authoritative, paginated S3 ListObjectsV2 inventory (not dashboard metrics). */
+export async function listR2Objects(prefix = ''): Promise<R2InventoryObject[]> {
+  const objects: R2InventoryObject[] = []
+  let continuation = ''
+  do {
+    const page = await listR2Page(prefix, continuation)
+    objects.push(...page.objects)
+    continuation = page.next
+  } while (continuation)
+  return objects
+}
+
+async function listR2Page(prefix: string, continuation: string) {
+  const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
+  const now = new Date(), amzDate = toAmzDate(now), dateStamp = amzDate.slice(0, 8)
+  const host = new URL(endpoint).host, canonicalUri = `/${bucket}`
+  const query: Record<string, string> = { 'list-type': '2', 'max-keys': '1000' }
+  if (prefix) query.prefix = prefix
+  if (continuation) query['continuation-token'] = continuation
+  const canonicalQuery = canonicalQueryString(query), scope = `${dateStamp}/${REGION}/${SERVICE}/aws4_request`
+  const headers = `host:${host}\nx-amz-content-sha256:UNSIGNED-PAYLOAD\nx-amz-date:${amzDate}\n`
+  const request = ['GET', canonicalUri, canonicalQuery, headers, 'host;x-amz-content-sha256;x-amz-date', 'UNSIGNED-PAYLOAD'].join('\n')
+  const signature = hmacHex(signingKey(secretAccessKey, dateStamp), ['AWS4-HMAC-SHA256', amzDate, scope, sha256Hex(request)].join('\n'))
+  const response = await fetch(`${endpoint}${canonicalUri}?${canonicalQuery}`, { headers: {
+    Authorization: `AWS4-HMAC-SHA256 Credential=${accessKeyId}/${scope}, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=${signature}`,
+    'x-amz-content-sha256': 'UNSIGNED-PAYLOAD', 'x-amz-date': amzDate,
+  }, cache: 'no-store', signal: AbortSignal.timeout(R2_REQUEST_TIMEOUT_MS) })
+  if (!response.ok) throw new Error(`Cloudflare R2 inventory failed: HTTP ${response.status}`)
+  const xml = await response.text()
+  const decode = (value: string) => value.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, '&')
+  const objects = [...xml.matchAll(/<Contents>([\s\S]*?)<\/Contents>/g)].map((match) => {
+    const value = (tag: string) => decode(match[1].match(new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`))?.[1] || '')
+    return { key: value('Key'), size: Number(value('Size')), lastModified: value('LastModified'), etag: value('ETag') || null }
+  })
+  return { objects, next: decode(xml.match(/<NextContinuationToken>([\s\S]*?)<\/NextContinuationToken>/)?.[1] || '') }
 }
 
 function mediaExpiresAt(now: Date, days = 30) { return new Date(now.getTime() + days * 24 * 60 * 60 * 1000).toISOString() }
