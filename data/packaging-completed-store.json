@@ -19932,6 +19932,101 @@
         "1154219000032974004-1154219000032974007-3",
         "1154219000032974004-1154219000032974007-4"
       ]
+    },
+    "1154219000036914152": {
+      "completedAt": "2026-09-16T07:23:09.709Z",
+      "order": {
+        "id": "1154219000036914152",
+        "zohoSalesOrderId": "1154219000036914152",
+        "salesOrderNumber": "SO-07945",
+        "status": "open",
+        "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+        "shippingAddress": "Plot No.32, Ladli Complex Opposite Totla petrol Pump, Bhokardan Naka, Aurangabad Road, JALNA, MAHARASHTRA, 431203, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036914155",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226574",
+            "rate": 42000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036914156",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036914152-1154219000036914155-1",
+            "unitNumber": 1,
+            "serialNumber": "26271211",
+            "qrToken": "26271211",
+            "orderId": "1154219000036914152",
+            "lineItemId": "1154219000036914155",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+            "salesOrderNumber": "SO-07945",
+            "deliveryDate": "2026-09-15",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "dispatchNote": "Good wrapping"
+          },
+          {
+            "id": "1154219000036914152-1154219000036914155-2",
+            "unitNumber": 2,
+            "serialNumber": "26271212",
+            "qrToken": "26271212",
+            "orderId": "1154219000036914152",
+            "lineItemId": "1154219000036914155",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+            "salesOrderNumber": "SO-07945",
+            "deliveryDate": "2026-09-15",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-14",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-14T17:00:00+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036914152-1154219000036914155-1",
+        "1154219000036914152-1154219000036914155-2"
+      ]
     }
   }
 }
