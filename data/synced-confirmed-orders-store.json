@@ -1,32 +1,66 @@
 {
   "orders": {
-    "1154219000037014001": {
-      "id": "1154219000037014001",
-      "zohoSalesOrderId": "1154219000037014001",
-      "salesOrderNumber": "SO-07962",
+    "1154219000036975215": {
+      "id": "1154219000036975215",
+      "zohoSalesOrderId": "1154219000036975215",
+      "salesOrderNumber": "SO-07963",
       "status": "open",
-      "customerName": "3NG",
-      "shippingAddress": "149, GALI NO.-2, Moonga Nagar,, Karawal Nagar, Delhi, 110094, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-16",
-      "dashboardStatus": "Review Required",
+      "customerName": "REDTAPE LIMITED",
+      "shippingAddress": "GROUND FLOOR, PLOT NO-08, SECTOR-90, JANPATH ROAD, Gaubtamuddha Nagar, Noida, Uttar Pradesh, 201301, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-09-17",
+      "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000037014004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
+          "id": "1154219000036975218",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
           "description": "",
-          "quantity": 25,
-          "pendingQuantity": 25,
+          "quantity": 1,
+          "pendingQuantity": 1,
           "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 318,
-          "dispatchCategory": "adhesive"
+          "zohoItemId": "1154219000000226814",
+          "rate": 82000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036975219",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Build Scale Manufacture Pvt. Ltd. to RedTape Limited, Unnao.",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 2800,
+          "dispatchCategory": "freight"
         }
       ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-16T17:40:05+0530"
+      "machines": [
+        {
+          "id": "1154219000036975215-1154219000036975218-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036975215",
+          "lineItemId": "1154219000036975218",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "customerName": "REDTAPE LIMITED",
+          "salesOrderNumber": "SO-07963",
+          "deliveryDate": "2026-09-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-16T18:07:12+0530"
     },
     "1154219000037011001": {
       "id": "1154219000037011001",
@@ -10355,7 +10389,7 @@
     }
   },
   "orderIds": [
-    "1154219000037014001",
+    "1154219000036975215",
     "1154219000037011001",
     "1154219000036935021",
     "1154219000036904013",
@@ -10408,8 +10442,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-16T12:20:39.093Z",
-  "lastAttemptAt": "2026-09-16T12:40:24.918Z",
+  "lastSuccessfulSyncAt": "2026-09-16T12:40:35.851Z",
+  "lastAttemptAt": "2026-09-16T12:40:35.851Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
