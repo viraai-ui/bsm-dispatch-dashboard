@@ -1,5 +1,67 @@
 {
   "orders": {
+    "1154219000036910019": {
+      "id": "1154219000036910019",
+      "zohoSalesOrderId": "1154219000036910019",
+      "salesOrderNumber": "SO-07959",
+      "status": "open",
+      "customerName": "Shanti Impex India",
+      "shippingAddress": "Sector-53, Plot No 179,, Ph-V, HSIIDC, Industrial Estate, Kundli, Sonipat, Haryana, 131028",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-16",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000036910022",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "description": "(One Year Service) (Spare Parts Chargeable) ( Only head )",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225837",
+          "rate": 38000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000036910023",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 650,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000036910019-1154219000036910022-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036910019",
+          "lineItemId": "1154219000036910022",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "customerName": "Shanti Impex India",
+          "salesOrderNumber": "SO-07959",
+          "deliveryDate": "2026-09-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-16T12:43:02+0530"
+    },
     "1154219000036925004": {
       "id": "1154219000036925004",
       "zohoSalesOrderId": "1154219000036925004",
@@ -10687,6 +10749,7 @@
     }
   },
   "orderIds": [
+    "1154219000036910019",
     "1154219000036925004",
     "1154219000036924009",
     "1154219000036935021",
@@ -10743,8 +10806,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-16T07:00:44.219Z",
-  "lastAttemptAt": "2026-09-16T07:13:34.428Z",
+  "lastSuccessfulSyncAt": "2026-09-16T07:13:49.258Z",
+  "lastAttemptAt": "2026-09-16T07:13:49.258Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
