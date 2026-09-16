@@ -7049,6 +7049,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036958001": {
+      "id": "ship-1789560402479-p9pnc",
+      "itemId": "1154219000036958001",
+      "orderId": "1154219000036958001",
+      "machineId": "1154219000036958001-1154219000036958004-1",
+      "salesOrderNumber": "SO-07960",
+      "customerName": "Yogesh Upper",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-16",
+      "notes": "",
+      "shippedAt": "2026-09-16T12:06:42.479Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
