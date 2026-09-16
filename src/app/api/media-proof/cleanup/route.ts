@@ -5,7 +5,7 @@ import { isAuthorizedCron } from '@/lib/cron-auth'
 import { readMediaProofStore } from '@/lib/media-proof'
 import { githubWriteJson } from '@/lib/workflow-store'
 import { deleteR2Object } from '@/lib/r2'
-import { cleanMediaStore, cleanPayments, cleanShipmentStore, ONE_TIME_VIDEO_PURGE_DAYS, type DeleteMemo } from '@/lib/attachment-retention'
+import { cleanMediaStore, cleanPayments, cleanShipmentStore, VIDEO_RETENTION_DAYS, type DeleteMemo } from '@/lib/attachment-retention'
 import { readShipmentStore, writeShipmentStore } from '@/lib/ready-to-ship'
 import { listPayments, updatePaymentStore } from '@/lib/payments'
 import { reconcileR2Retention } from '@/lib/r2-reconciliation'
@@ -14,13 +14,14 @@ export const runtime = 'nodejs'
 export const maxDuration = 300
 
 export async function GET(request: NextRequest) {
-  if (!isAuthorizedCron(request)) {
+  const cron = isAuthorizedCron(request)
+  if (!cron) {
     const auth = await requireUser(['Admin'])
     if (!auth.ok) return auth.response
   }
   try {
-    const requestedVideoDays = Number(request.nextUrl.searchParams.get('videoDays') || 30)
-    if (![30, ONE_TIME_VIDEO_PURGE_DAYS].includes(requestedVideoDays)) return apiError('videoDays must be 21 or 30', 400)
+    const requestedVideoDays = Number(request.nextUrl.searchParams.get('videoDays') || VIDEO_RETENTION_DAYS)
+    if (requestedVideoDays !== VIDEO_RETENTION_DAYS) return apiError('Packing/loading video retention is permanently fixed at 21 days', 400)
     const memo: DeleteMemo = new Map()
     const remove = (key: string) => deleteR2Object(key)
     const [packingSource, loadingSource, shipmentSource, paymentSource] = await Promise.all([
@@ -35,7 +36,8 @@ export async function GET(request: NextRequest) {
       Object.values(record).forEach(collect)
     }
     ;[packingSource, loadingSource, shipmentSource, paymentSource].forEach(collect)
-    const execute = request.nextUrl.searchParams.get('execute') === 'true'
+    // Vercel cron URLs are static: authorized cron executes; Admin GET stays dry-run by default.
+    const execute = cron || request.nextUrl.searchParams.get('execute') === 'true'
     const reconciliation = await reconcileR2Retention(registered, { execute })
     if (!execute) return apiOk({ mode: 'inventory', ...reconciliation })
     const packing = await cleanMediaStore(packingSource, remove, { days: requestedVideoDays, memo })
@@ -44,8 +46,8 @@ export async function GET(request: NextRequest) {
     const payments = await cleanPayments(paymentSource, remove, { memo })
     // Serialize GitHub-backed writes: concurrent commits race the branch ref and
     // can report failure after the R2 objects were already removed.
-    if (packing.result.removed) await githubWriteJson('data/media-proof-store.json', packing.store, 'Apply packing media retention')
-    if (loading.result.removed) await githubWriteJson('data/loading-video-store.json', loading.store, 'Apply loading media retention')
+    if (packing.result.removed || packing.result.metadataUpdated) await githubWriteJson('data/media-proof-store.json', packing.store, 'Apply 21-day packing video retention')
+    if (loading.result.removed || loading.result.metadataUpdated) await githubWriteJson('data/loading-video-store.json', loading.store, 'Apply 21-day loading video retention')
     if (shipments.result.removed) await writeShipmentStore(shipments.store, 'Apply LR/builty retention')
     if (payments.result.removed) await updatePaymentStore(() => payments.payments)
     const after = await reconcileR2Retention(registered)

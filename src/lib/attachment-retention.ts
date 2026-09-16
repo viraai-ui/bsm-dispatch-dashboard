@@ -3,10 +3,10 @@ import type { Payment, PaymentAttachment } from './payments'
 import type { ShipmentStore } from './ready-to-ship'
 
 export const ATTACHMENT_RETENTION_DAYS = 30
-export const ONE_TIME_VIDEO_PURGE_DAYS = 21
+export const VIDEO_RETENTION_DAYS = 21
 const DAY_MS = 86_400_000
 export type RetentionCategory = 'packing' | 'loading' | 'shipments' | 'payments'
-export type CategoryResult = { scanned: number; removed: number; errors: string[] }
+export type CategoryResult = { scanned: number; removed: number; metadataUpdated: number; errors: string[] }
 export type DeleteObject = (key: string) => Promise<unknown>
 
 export type DeleteMemo = Map<string, Promise<{ ok: boolean; error?: string }>>
@@ -28,14 +28,18 @@ function due(timestamp: string | undefined | null, now: number, days = ATTACHMEN
 }
 
 export async function cleanMediaStore(store: MediaProofStore, remove: DeleteObject, options: { now?: number; days?: number; memo?: DeleteMemo } = {}) {
-  const now = options.now ?? Date.now(), days = options.days ?? ATTACHMENT_RETENTION_DAYS, memo = options.memo ?? new Map()
-  const result: CategoryResult = { scanned: 0, removed: 0, errors: [] }, next: MediaProofStore = structuredClone(store)
+  const now = options.now ?? Date.now(), days = options.days ?? VIDEO_RETENTION_DAYS, memo = options.memo ?? new Map()
+  const result: CategoryResult = { scanned: 0, removed: 0, metadataUpdated: 0, errors: [] }, next: MediaProofStore = structuredClone(store)
   for (const [orderId, record] of Object.entries(next.records || {})) for (const [machineId, unit] of Object.entries(record.units || {})) {
     for (const field of ['photos', 'videos'] as const) {
       const kept: MediaUpload[] = []
       for (const file of unit[field] || []) {
         result.scanned++
-        file.expiresAt = expiresAt(file.uploadedAt, ATTACHMENT_RETENTION_DAYS)
+        if (file.kind === 'video') {
+          const expected = expiresAt(file.uploadedAt, VIDEO_RETENTION_DAYS)
+          if (file.expiresAt !== expected) result.metadataUpdated++
+          file.expiresAt = expected
+        }
         // Photos are business evidence and are not covered by the video policy.
         if (file.kind !== 'video' || !due(file.uploadedAt, now, days)) { kept.push(file); continue }
         if (!file.r2Key) { kept.push(file); continue } // cleanup route only owns registered R2 objects
@@ -51,7 +55,7 @@ export async function cleanMediaStore(store: MediaProofStore, remove: DeleteObje
 }
 
 export async function cleanShipmentStore(store: ShipmentStore, remove: DeleteObject, options: { now?: number; memo?: DeleteMemo } = {}) {
-  const now = options.now ?? Date.now(), memo = options.memo ?? new Map(), result: CategoryResult = { scanned: 0, removed: 0, errors: [] }
+  const now = options.now ?? Date.now(), memo = options.memo ?? new Map(), result: CategoryResult = { scanned: 0, removed: 0, metadataUpdated: 0, errors: [] }
   const next: ShipmentStore = structuredClone(store)
   for (const shipment of Object.values(next.shipments || {})) {
     const doc = shipment.lrCopy
@@ -69,7 +73,7 @@ export async function cleanShipmentStore(store: ShipmentStore, remove: DeleteObj
 }
 
 export async function cleanPayments(payments: Payment[], remove: DeleteObject, options: { now?: number; memo?: DeleteMemo } = {}) {
-  const now = options.now ?? Date.now(), memo = options.memo ?? new Map(), result: CategoryResult = { scanned: 0, removed: 0, errors: [] }
+  const now = options.now ?? Date.now(), memo = options.memo ?? new Map(), result: CategoryResult = { scanned: 0, removed: 0, metadataUpdated: 0, errors: [] }
   const next: Payment[] = structuredClone(payments)
   for (const payment of next) {
     const source = payment.attachments?.length ? payment.attachments : (payment.screenshotKey || payment.screenshotUrl ? [{ key: payment.screenshotKey || '', url: payment.screenshotUrl || '', name: payment.screenshotName || 'Payment proof', contentType: '', size: 0 }] : [])

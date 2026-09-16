@@ -76,7 +76,7 @@ export function buildR2Key(parts: { salesOrderNumber: string; machineName: strin
   return ['media-proof', parts.stage || 'packing', date, safeSegment(parts.salesOrderNumber), safeSegment(parts.machineId), `${safeSegment(parts.machineName)}-${stamp}${extension ? `.${safeSegment(extension)}` : ''}`].join('/')
 }
 
-export function createR2UploadTarget(key: string, contentType: string, expiresInSeconds = 900, retentionDays = 30): R2UploadTarget {
+export function createR2UploadTarget(key: string, contentType: string, expiresInSeconds = 900, retentionDays = 21): R2UploadTarget {
   const { accessKeyId, secretAccessKey, bucket, endpoint } = r2Config()
   const now = new Date()
   const amzDate = toAmzDate(now)

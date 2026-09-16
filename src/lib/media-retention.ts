@@ -3,7 +3,8 @@ import { deleteGithubMediaFile } from './github-media'
 import { deleteR2Object } from './r2'
 import { deleteWorkDriveFile } from './workdrive'
 
-export const MEDIA_RETENTION_DAYS = 30
+/** Packing/loading videos are hard-deleted no later than 21 days after upload. */
+export const MEDIA_RETENTION_DAYS = 21
 const RETENTION_MS = MEDIA_RETENTION_DAYS * 24 * 60 * 60 * 1000
 
 export type MediaRetentionCleanupResult = {
@@ -19,11 +20,12 @@ export function mediaExpiresAt(uploadedAt: string) {
 }
 
 export function normalizeMediaUploadRetention(file: MediaUpload): MediaUpload {
-  return { ...file, expiresAt: file.expiresAt || mediaExpiresAt(file.uploadedAt) }
+  return file.kind === 'video' ? { ...file, expiresAt: mediaExpiresAt(file.uploadedAt) } : file
 }
 
 export function isMediaExpired(file: MediaUpload, now = Date.now()) {
-  const expiresAt = file.expiresAt || mediaExpiresAt(file.uploadedAt)
+  if (file.kind !== 'video') return false
+  const expiresAt = mediaExpiresAt(file.uploadedAt)
   return new Date(expiresAt).getTime() <= now
 }
 
@@ -41,7 +43,7 @@ export async function cleanupExpiredMediaProofStore(store: MediaProofStore, now 
       for (const file of [...(unit.photos || []), ...(unit.videos || [])]) {
         const normalized = normalizeMediaUploadRetention(file)
         const expired = isMediaExpired(normalized, now)
-        if (!file.expiresAt) changed = true
+        if (normalized.expiresAt !== file.expiresAt) changed = true
         if (expired) {
           const deletionError = await deleteStoredMedia(normalized)
           if (!deletionError) {
