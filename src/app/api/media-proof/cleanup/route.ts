@@ -42,12 +42,12 @@ export async function GET(request: NextRequest) {
     const loading = await cleanMediaStore(loadingSource, remove, { days: requestedVideoDays, memo })
     const shipments = await cleanShipmentStore(shipmentSource, remove, { memo })
     const payments = await cleanPayments(paymentSource, remove, { memo })
-    await Promise.all([
-      githubWriteJson('data/media-proof-store.json', packing.store, 'Apply packing media retention'),
-      githubWriteJson('data/loading-video-store.json', loading.store, 'Apply loading media retention'),
-      writeShipmentStore(shipments.store, 'Apply LR/builty retention'),
-      updatePaymentStore(() => payments.payments),
-    ])
+    // Serialize GitHub-backed writes: concurrent commits race the branch ref and
+    // can report failure after the R2 objects were already removed.
+    if (packing.result.removed) await githubWriteJson('data/media-proof-store.json', packing.store, 'Apply packing media retention')
+    if (loading.result.removed) await githubWriteJson('data/loading-video-store.json', loading.store, 'Apply loading media retention')
+    if (shipments.result.removed) await writeShipmentStore(shipments.store, 'Apply LR/builty retention')
+    if (payments.result.removed) await updatePaymentStore(() => payments.payments)
     const after = await reconcileR2Retention(registered)
     return apiOk({ policy: { videoDays: requestedVideoDays, documentDays: 30 }, before: reconciliation, after, packing: packing.result, loading: loading.result, shipments: shipments.result, payments: payments.result, uniqueKeysProcessed: memo.size })
   } catch (error) {
