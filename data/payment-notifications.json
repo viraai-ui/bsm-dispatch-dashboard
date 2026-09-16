@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-fd048295-efd5-4e14-9193-8a9a128cb187",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-330938e8-37d8-4c5e-98e7-d6e567423673",
+      "salesOrderNumber": "SO-07960",
+      "customerName": "Yogesh Upper",
+      "paymentAmount": 500000,
+      "createdAt": "2026-09-16T08:15:23.094Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-9a8fe6b3-94e8-442d-b4de-cc14c0321e78",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-330938e8-37d8-4c5e-98e7-d6e567423673",
+      "salesOrderNumber": "SO-07960",
+      "customerName": "Yogesh Upper",
+      "paymentAmount": 500000,
+      "createdAt": "2026-09-16T08:15:23.094Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-64630812-1916-4825-8d3e-30dbdf713983",
       "type": "payment-created",
       "recipientUserId": "u-admin",
