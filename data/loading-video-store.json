@@ -536,26 +536,7 @@
       "orderId": "1154219000034263026",
       "salesOrderNumber": "SO-07514",
       "submittedAt": "2026-08-26T11:08:38.016Z",
-      "units": {
-        "loading-order": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "loading-order-video-1787742510216-ihhbub",
-              "name": "video_20260826_163752.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2F2026-08-26%2FSO-07514%2FLoading%20Video-loading-order-2026-08-26T11-08-20-146Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/2026-08-26/SO-07514/Loading Video-loading-order-2026-08-26T11-08-20-146Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-08-26T11:08:30.216Z",
-              "expiresAt": "2026-09-25T11:08:30.216Z"
-            }
-          ]
-        }
-      }
+      "units": {}
     },
     "1154219000035985020": {
       "orderId": "1154219000035985020",
@@ -576,7 +557,7 @@
               "r2Key": "media-proof/loading/2026-08-27/SO-07813/loading-order/Loading-Video-2026-08-27T07-18-07-973Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-27T07:18:11.194Z",
-              "expiresAt": "2026-09-26T07:18:11.194Z"
+              "expiresAt": "2026-09-17T07:18:11.194Z"
             }
           ]
         }
@@ -601,7 +582,7 @@
               "r2Key": "media-proof/loading/2026-08-27/SO-07823/loading-order/Loading-Video-2026-08-27T07-40-37-584Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-27T07:40:40.650Z",
-              "expiresAt": "2026-09-26T07:40:40.650Z"
+              "expiresAt": "2026-09-17T07:40:40.650Z"
             }
           ]
         }
@@ -626,7 +607,7 @@
               "r2Key": "media-proof/loading/2026-08-27/SO-07818/loading-order/Loading-Video-2026-08-27T08-01-30-441Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-27T08:01:34.405Z",
-              "expiresAt": "2026-09-26T08:01:34.405Z"
+              "expiresAt": "2026-09-17T08:01:34.405Z"
             }
           ]
         }
@@ -651,7 +632,7 @@
               "r2Key": "media-proof/loading/2026-08-27/SO-07824/loading-order/Loading-Video-2026-08-27T08-27-03-153Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-27T08:27:06.710Z",
-              "expiresAt": "2026-09-26T08:27:06.710Z"
+              "expiresAt": "2026-09-17T08:27:06.710Z"
             }
           ]
         }
@@ -676,7 +657,7 @@
               "r2Key": "media-proof/loading/2026-08-27/SO-07827/loading-order/Loading-Video-2026-08-27T09-27-36-800Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-27T09:27:40.209Z",
-              "expiresAt": "2026-09-26T09:27:40.209Z"
+              "expiresAt": "2026-09-17T09:27:40.209Z"
             }
           ]
         }
@@ -701,7 +682,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07834/loading-order/Loading-Video-2026-08-29T07-15-11-671Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T07:15:17.540Z",
-              "expiresAt": "2026-09-28T07:15:17.540Z"
+              "expiresAt": "2026-09-19T07:15:17.540Z"
             }
           ]
         }
@@ -726,7 +707,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07822/loading-order/Loading-Video-2026-08-29T07-16-12-173Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T07:16:19.137Z",
-              "expiresAt": "2026-09-28T07:16:19.137Z"
+              "expiresAt": "2026-09-19T07:16:19.137Z"
             }
           ]
         }
@@ -751,7 +732,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07801/loading-order/Loading-Video-2026-08-29T08-20-28-652Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T08:20:47.994Z",
-              "expiresAt": "2026-09-28T08:20:47.994Z"
+              "expiresAt": "2026-09-19T08:20:47.994Z"
             }
           ]
         }
@@ -776,7 +757,7 @@
               "r2Key": null,
               "storageProvider": "github",
               "uploadedAt": "2026-08-29T11:00:18.531Z",
-              "expiresAt": "2026-09-28T11:00:18.531Z"
+              "expiresAt": "2026-09-19T11:00:18.531Z"
             }
           ]
         }
@@ -801,7 +782,7 @@
               "r2Key": null,
               "storageProvider": "github",
               "uploadedAt": "2026-08-29T11:25:25.149Z",
-              "expiresAt": "2026-09-28T11:25:25.149Z"
+              "expiresAt": "2026-09-19T11:25:25.149Z"
             }
           ]
         }
@@ -826,7 +807,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07841/loading-order/Loading-Video-2026-08-29T12-12-30-041Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T12:12:39.276Z",
-              "expiresAt": "2026-09-28T12:12:39.276Z"
+              "expiresAt": "2026-09-19T12:12:39.276Z"
             }
           ]
         }
@@ -851,7 +832,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07843/loading-order/Loading-Video-2026-08-29T12-14-47-511Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T12:14:54.882Z",
-              "expiresAt": "2026-09-28T12:14:54.882Z"
+              "expiresAt": "2026-09-19T12:14:54.882Z"
             }
           ]
         }
@@ -876,7 +857,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07832/loading-order/Loading-Video-2026-08-29T13-05-07-032Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T13:05:47.701Z",
-              "expiresAt": "2026-09-28T13:05:47.701Z"
+              "expiresAt": "2026-09-19T13:05:47.701Z"
             }
           ]
         }
@@ -901,7 +882,7 @@
               "r2Key": "media-proof/loading/2026-08-29/SO-07826/loading-order/Loading-Video-2026-08-29T13-06-23-489Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-29T13:06:34.732Z",
-              "expiresAt": "2026-09-28T13:06:34.732Z"
+              "expiresAt": "2026-09-19T13:06:34.732Z"
             }
           ]
         }
@@ -926,7 +907,7 @@
               "r2Key": "media-proof/loading/2026-08-31/SO-07847/loading-order/Loading-Video-2026-08-31T07-14-16-890Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-31T07:14:32.493Z",
-              "expiresAt": "2026-09-30T07:14:32.493Z"
+              "expiresAt": "2026-09-21T07:14:32.493Z"
             }
           ]
         }
@@ -951,7 +932,7 @@
               "r2Key": "media-proof/loading/2026-08-31/SO-07850/loading-order/Loading-Video-2026-08-31T08-14-56-920Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-31T08:15:09.783Z",
-              "expiresAt": "2026-09-30T08:15:09.783Z"
+              "expiresAt": "2026-09-21T08:15:09.783Z"
             }
           ]
         }
@@ -976,7 +957,7 @@
               "r2Key": "media-proof/loading/2026-08-31/SO-07846/loading-order/Loading-Video-2026-08-31T08-46-56-644Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-31T08:47:01.912Z",
-              "expiresAt": "2026-09-30T08:47:01.912Z"
+              "expiresAt": "2026-09-21T08:47:01.912Z"
             }
           ]
         }
@@ -1001,7 +982,7 @@
               "r2Key": "media-proof/loading/2026-08-31/SO-07797/loading-order/Loading-Video-2026-08-31T09-09-27-562Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-08-31T09:09:39.133Z",
-              "expiresAt": "2026-09-30T09:09:39.133Z"
+              "expiresAt": "2026-09-21T09:09:39.133Z"
             }
           ]
         }
@@ -1026,7 +1007,7 @@
               "r2Key": "media-proof/loading/2026-09-01/SO-07808/loading-order/Loading-Video-2026-09-01T07-28-04-162Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-01T07:28:12.337Z",
-              "expiresAt": "2026-10-01T07:28:12.337Z"
+              "expiresAt": "2026-09-22T07:28:12.337Z"
             }
           ]
         }
@@ -1051,7 +1032,7 @@
               "r2Key": "media-proof/loading/2026-09-01/SO-07857/loading-order/Loading-Video-2026-09-01T07-46-44-889Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-01T07:46:58.100Z",
-              "expiresAt": "2026-10-01T07:46:58.100Z"
+              "expiresAt": "2026-09-22T07:46:58.100Z"
             }
           ]
         }
@@ -1076,7 +1057,7 @@
               "r2Key": "media-proof/loading/2026-09-01/SO-07856/loading-order/Loading-Video-2026-09-01T10-07-16-626Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-01T10:07:33.711Z",
-              "expiresAt": "2026-10-01T10:07:33.711Z"
+              "expiresAt": "2026-09-22T10:07:33.711Z"
             }
           ]
         }
@@ -1101,7 +1082,7 @@
               "r2Key": "media-proof/loading/2026-09-02/SO-07870/loading-order/Loading-Video-2026-09-02T11-27-04-431Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-02T11:27:21.657Z",
-              "expiresAt": "2026-10-02T11:27:21.657Z"
+              "expiresAt": "2026-09-23T11:27:21.657Z"
             }
           ]
         }
@@ -1126,7 +1107,7 @@
               "r2Key": "media-proof/loading/2026-09-02/SO-07779/loading-order/Loading-Video-2026-09-02T11-54-07-991Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-02T11:54:21.296Z",
-              "expiresAt": "2026-10-02T11:54:21.296Z"
+              "expiresAt": "2026-09-23T11:54:21.296Z"
             }
           ]
         }
@@ -1151,7 +1132,7 @@
               "r2Key": "media-proof/loading/2026-09-03/SO-07828/loading-order/Loading-Video-2026-09-03T05-39-13-985Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-03T05:39:21.590Z",
-              "expiresAt": "2026-10-03T05:39:21.590Z"
+              "expiresAt": "2026-09-24T05:39:21.590Z"
             }
           ]
         }
@@ -1176,7 +1157,7 @@
               "r2Key": "media-proof/loading/2026-09-03/SO-07874/loading-order/Loading-Video-2026-09-03T07-33-21-475Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-03T07:33:29.990Z",
-              "expiresAt": "2026-10-03T07:33:29.990Z"
+              "expiresAt": "2026-09-24T07:33:29.990Z"
             }
           ]
         }
@@ -1201,7 +1182,7 @@
               "r2Key": "media-proof/loading/2026-09-04/SO-07882/loading-order/Loading-Video-2026-09-04T07-34-08-876Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-04T07:34:20.009Z",
-              "expiresAt": "2026-10-04T07:34:20.009Z"
+              "expiresAt": "2026-09-25T07:34:20.009Z"
             }
           ]
         }
@@ -1226,7 +1207,7 @@
               "r2Key": "media-proof/loading/2026-09-04/SO-07883/loading-order/Loading-Video-2026-09-04T07-56-32-104Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-04T07:56:44.809Z",
-              "expiresAt": "2026-10-04T07:56:44.809Z"
+              "expiresAt": "2026-09-25T07:56:44.809Z"
             }
           ]
         }
@@ -1251,7 +1232,7 @@
               "r2Key": "media-proof/loading/2026-09-04/SO-07885/loading-order/Loading-Video-2026-09-04T08-17-35-942Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-04T08:17:45.986Z",
-              "expiresAt": "2026-10-04T08:17:45.986Z"
+              "expiresAt": "2026-09-25T08:17:45.986Z"
             }
           ]
         }
@@ -1276,7 +1257,7 @@
               "r2Key": "media-proof/loading/2026-09-08/SO-07890/loading-order/Loading-Video-2026-09-08T10-26-08-064Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-08T10:26:14.348Z",
-              "expiresAt": "2026-10-08T10:26:14.348Z"
+              "expiresAt": "2026-09-29T10:26:14.348Z"
             }
           ]
         }
@@ -1301,7 +1282,7 @@
               "r2Key": "media-proof/loading/2026-09-08/SO-07908/loading-order/Loading-Video-2026-09-08T12-46-22-769Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-08T12:46:32.258Z",
-              "expiresAt": "2026-10-08T12:46:32.258Z"
+              "expiresAt": "2026-09-29T12:46:32.258Z"
             }
           ]
         }
@@ -1326,7 +1307,7 @@
               "r2Key": "media-proof/loading/2026-09-09/SO-07845/loading-order/Loading-Video-2026-09-09T06-06-00-463Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-09T06:06:08.432Z",
-              "expiresAt": "2026-10-09T06:06:08.432Z"
+              "expiresAt": "2026-09-30T06:06:08.432Z"
             }
           ]
         }
@@ -1358,7 +1339,7 @@
               "r2Key": "media-proof/loading/2026-09-09/SO-07918/loading-order/Loading-Video-2026-09-09T13-01-41-999Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-09T13:02:14.239Z",
-              "expiresAt": "2026-10-09T13:02:14.239Z"
+              "expiresAt": "2026-09-30T13:02:14.239Z"
             }
           ]
         }
@@ -1383,7 +1364,7 @@
               "r2Key": "media-proof/loading/2026-09-10/SO-07902/loading-order/Loading-Video-2026-09-10T07-05-48-531Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-10T07:05:54.656Z",
-              "expiresAt": "2026-10-10T07:05:54.656Z"
+              "expiresAt": "2026-10-01T07:05:54.656Z"
             }
           ]
         }
@@ -1408,7 +1389,7 @@
               "r2Key": "media-proof/loading/2026-09-10/SO-07920/loading-order/Loading-Video-2026-09-10T08-41-29-903Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-10T08:41:37.965Z",
-              "expiresAt": "2026-10-10T08:41:37.965Z"
+              "expiresAt": "2026-10-01T08:41:37.965Z"
             }
           ]
         }
@@ -1433,7 +1414,7 @@
               "r2Key": "media-proof/loading/2026-09-10/SO-07924/loading-order/Loading-Video-2026-09-10T11-17-35-027Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-10T11:17:43.673Z",
-              "expiresAt": "2026-10-10T11:17:43.673Z"
+              "expiresAt": "2026-10-01T11:17:43.673Z"
             }
           ]
         }
@@ -1458,7 +1439,7 @@
               "r2Key": "media-proof/loading/2026-09-10/SO-07927/loading-order/Loading-Video-2026-09-10T12-33-52-583Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-10T12:34:03.133Z",
-              "expiresAt": "2026-10-10T12:34:03.133Z"
+              "expiresAt": "2026-10-01T12:34:03.133Z"
             }
           ]
         }
@@ -1490,7 +1471,7 @@
               "r2Key": "media-proof/loading/2026-09-11/SO-07872/loading-order/Loading-Video-2026-09-11T11-00-11-639Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-11T11:00:22.461Z",
-              "expiresAt": "2026-10-11T11:00:22.461Z"
+              "expiresAt": "2026-10-02T11:00:22.461Z"
             }
           ]
         }
@@ -1515,7 +1496,7 @@
               "r2Key": "media-proof/loading/2026-09-11/SO-07749/loading-order/Loading-Video-2026-09-11T12-24-58-119Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-11T12:25:07.276Z",
-              "expiresAt": "2026-10-11T12:25:07.276Z"
+              "expiresAt": "2026-10-02T12:25:07.276Z"
             }
           ]
         }
@@ -1540,7 +1521,7 @@
               "r2Key": "media-proof/loading/2026-09-14/SO-07930/loading-order/Loading-Video-2026-09-14T07-55-02-313Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-14T07:55:48.857Z",
-              "expiresAt": "2026-10-14T07:55:48.857Z"
+              "expiresAt": "2026-10-05T07:55:48.857Z"
             }
           ]
         }
@@ -1565,7 +1546,7 @@
               "r2Key": "media-proof/loading/2026-09-14/SO-07759/loading-order/Loading-Video-2026-09-14T10-13-46-636Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-14T10:14:05.343Z",
-              "expiresAt": "2026-10-14T10:14:05.343Z"
+              "expiresAt": "2026-10-05T10:14:05.343Z"
             }
           ]
         }
@@ -1590,7 +1571,7 @@
               "r2Key": "media-proof/loading/2026-09-14/SO-07774/loading-order/Loading-Video-2026-09-14T10-51-10-026Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-14T10:51:17.993Z",
-              "expiresAt": "2026-10-14T10:51:17.993Z"
+              "expiresAt": "2026-10-05T10:51:17.993Z"
             }
           ]
         }
@@ -1615,7 +1596,7 @@
               "r2Key": "media-proof/loading/2026-09-14/SO-07940/loading-order/Loading-Video-2026-09-14T11-10-27-351Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-14T11:10:39.190Z",
-              "expiresAt": "2026-10-14T11:10:39.190Z"
+              "expiresAt": "2026-10-05T11:10:39.190Z"
             }
           ]
         }
@@ -1640,7 +1621,7 @@
               "r2Key": "media-proof/loading/2026-09-14/SO-07573/loading-order/Loading-Video-2026-09-14T12-07-25-280Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-14T12:07:33.703Z",
-              "expiresAt": "2026-10-14T12:07:33.703Z"
+              "expiresAt": "2026-10-05T12:07:33.703Z"
             }
           ]
         }
@@ -1665,7 +1646,7 @@
               "r2Key": "media-proof/loading/2026-09-14/SO-07922/loading-order/Loading-Video-2026-09-14T12-25-30-969Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-14T12:25:40.818Z",
-              "expiresAt": "2026-10-14T12:25:40.818Z"
+              "expiresAt": "2026-10-05T12:25:40.818Z"
             }
           ]
         }
@@ -1690,7 +1671,7 @@
               "r2Key": "media-proof/loading/2026-09-15/SO-07942/loading-order/Loading-Video-2026-09-15T07-08-58-495Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-15T07:09:10.359Z",
-              "expiresAt": "2026-10-15T07:09:10.359Z"
+              "expiresAt": "2026-10-06T07:09:10.359Z"
             }
           ]
         }
@@ -1715,7 +1696,7 @@
               "r2Key": "media-proof/loading/2026-09-15/SO-07790/loading-order/Loading-Video-2026-09-15T07-38-36-910Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-15T07:38:49.826Z",
-              "expiresAt": "2026-10-15T07:38:49.826Z"
+              "expiresAt": "2026-10-06T07:38:49.826Z"
             }
           ]
         }
@@ -1740,7 +1721,7 @@
               "r2Key": "media-proof/loading/2026-09-15/SO-07944/loading-order/Loading-Video-2026-09-15T07-46-16-960Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-15T07:47:06.741Z",
-              "expiresAt": "2026-10-15T07:47:06.741Z"
+              "expiresAt": "2026-10-06T07:47:06.741Z"
             }
           ]
         }
@@ -1765,7 +1746,7 @@
               "r2Key": "media-proof/loading/2026-09-15/SO-07954/loading-order/Loading-Video-2026-09-15T10-19-31-398Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-15T10:19:37.506Z",
-              "expiresAt": "2026-10-15T10:19:37.506Z"
+              "expiresAt": "2026-10-06T10:19:37.506Z"
             }
           ]
         }
@@ -1790,7 +1771,7 @@
               "r2Key": "media-proof/loading/2026-09-15/SO-07955/loading-order/Loading-Video-2026-09-15T10-23-22-375Z.mp4",
               "storageProvider": "r2",
               "uploadedAt": "2026-09-15T10:23:52.012Z",
-              "expiresAt": "2026-10-15T10:23:52.012Z"
+              "expiresAt": "2026-10-06T10:23:52.012Z"
             }
           ]
         }
