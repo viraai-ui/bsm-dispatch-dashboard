@@ -6971,6 +6971,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036902008": {
+      "id": "ship-1789547950080-ddja3",
+      "itemId": "1154219000036902008",
+      "orderId": "1154219000036902008",
+      "machineId": "1154219000036902008-1154219000036902011-1",
+      "salesOrderNumber": "SO-07952",
+      "customerName": "Leather Linkers Footwear Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-16",
+      "notes": "",
+      "shippedAt": "2026-09-16T08:39:10.080Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
