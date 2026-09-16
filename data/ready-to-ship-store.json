@@ -7111,6 +7111,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036914152": {
+      "id": "ship-1789563924976-vj8ba",
+      "itemId": "1154219000036914152",
+      "orderId": "1154219000036914152",
+      "machineId": "1154219000036914152-1154219000036914155-1",
+      "salesOrderNumber": "SO-07945",
+      "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "VRL logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-16",
+      "notes": "",
+      "shippedAt": "2026-09-16T13:05:24.976Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
