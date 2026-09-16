@@ -1,126 +1,116 @@
 {
   "orders": {
-    "1154219000036958001": {
-      "id": "1154219000036958001",
-      "zohoSalesOrderId": "1154219000036958001",
-      "salesOrderNumber": "SO-07960",
+    "1154219000037014001": {
+      "id": "1154219000037014001",
+      "zohoSalesOrderId": "1154219000037014001",
+      "salesOrderNumber": "SO-07962",
       "status": "open",
-      "customerName": "Yogesh Upper",
-      "shippingAddress": "Chotu Ram Nagar Line Par, Pyau Ke Pass, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Anuj Kumar",
+      "customerName": "3NG",
+      "shippingAddress": "149, GALI NO.-2, Moonga Nagar,, Karawal Nagar, Delhi, 110094, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-16",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037014004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 318,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-16T17:40:05+0530"
+    },
+    "1154219000037011001": {
+      "id": "1154219000037011001",
+      "zohoSalesOrderId": "1154219000037011001",
+      "salesOrderNumber": "SO-07961",
+      "status": "open",
+      "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+      "shippingAddress": "No.74/1A2,75/1A2, KVT Garden,, Pullilyne Village Redhills, Chennai, -600052",
+      "salesperson": "Shivani Kumari",
       "deliveryDate": "2026-09-16",
       "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000036958004",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000280352",
-          "rate": 435000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036958005",
-          "itemName": "Double Head Slider Fusing Machine [Double Station] (pneumatic)",
-          "sku": "40-2",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000035709011",
-          "rate": 95000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036958001-1154219000036958004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036958001",
-          "lineItemId": "1154219000036958004",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "customerName": "Yogesh Upper",
-          "salesOrderNumber": "SO-07960",
-          "deliveryDate": "2026-09-16",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000036958001-1154219000036958005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036958001",
-          "lineItemId": "1154219000036958005",
-          "itemName": "Double Head Slider Fusing Machine [Double Station] (pneumatic)",
-          "sku": "40-2",
-          "customerName": "Yogesh Upper",
-          "salesOrderNumber": "SO-07960",
-          "deliveryDate": "2026-09-16",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-16T12:55:32+0530"
-    },
-    "1154219000036924009": {
-      "id": "1154219000036924009",
-      "zohoSalesOrderId": "1154219000036924009",
-      "salesOrderNumber": "SO-07957",
-      "status": "open",
-      "customerName": "DHATRI SALES (Noida)",
-      "shippingAddress": "C-149, SECTOR 63, NOIDA, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-15",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036924012",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
+          "id": "1154219000037011004",
+          "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
+          "sku": "831T",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225871",
-          "rate": 30000,
+          "zohoItemId": "1154219000003332051",
+          "rate": 49000,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037011005",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226295",
+          "rate": 32000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037011006",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charge Up to 5 Km",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 500,
+          "dispatchCategory": "freight"
         }
       ],
       "machines": [
         {
-          "id": "1154219000036924009-1154219000036924012-1",
+          "id": "1154219000037011001-1154219000037011004-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
-          "orderId": "1154219000036924009",
-          "lineItemId": "1154219000036924012",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "DHATRI SALES (Noida)",
-          "salesOrderNumber": "SO-07957",
-          "deliveryDate": "2026-09-15",
+          "orderId": "1154219000037011001",
+          "lineItemId": "1154219000037011004",
+          "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
+          "sku": "831T",
+          "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07961",
+          "deliveryDate": "2026-09-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037011001-1154219000037011005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037011001",
+          "lineItemId": "1154219000037011005",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07961",
+          "deliveryDate": "2026-09-16",
           "status": "Not Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
@@ -131,7 +121,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-15T18:51:49+0530"
+      "zohoLastModifiedTime": "2026-09-16T17:33:35+0530"
     },
     "1154219000036935021": {
       "id": "1154219000036935021",
@@ -10365,8 +10355,8 @@
     }
   },
   "orderIds": [
-    "1154219000036958001",
-    "1154219000036924009",
+    "1154219000037014001",
+    "1154219000037011001",
     "1154219000036935021",
     "1154219000036904013",
     "1154219000036930024",
@@ -10418,8 +10408,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-16T12:00:30.273Z",
-  "lastAttemptAt": "2026-09-16T12:20:25.667Z",
+  "lastSuccessfulSyncAt": "2026-09-16T12:20:39.093Z",
+  "lastAttemptAt": "2026-09-16T12:20:39.093Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
