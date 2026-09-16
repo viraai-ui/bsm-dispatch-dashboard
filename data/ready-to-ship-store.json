@@ -7080,6 +7080,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036908001": {
+      "id": "ship-1789563873940-s9otp",
+      "itemId": "1154219000036908001",
+      "orderId": "1154219000036908001",
+      "machineId": "1154219000036908001-1154219000036908004-1",
+      "salesOrderNumber": "SO-07941",
+      "customerName": "FLOXX INTERNATIONAL PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-16",
+      "notes": "",
+      "shippedAt": "2026-09-16T13:04:33.940Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
