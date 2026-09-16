@@ -20193,6 +20193,65 @@
         "1154219000036958001-1154219000036958004-1",
         "1154219000036958001-1154219000036958005-1"
       ]
+    },
+    "1154219000036924009": {
+      "completedAt": "2026-09-16T12:04:36.026Z",
+      "order": {
+        "id": "1154219000036924009",
+        "zohoSalesOrderId": "1154219000036924009",
+        "salesOrderNumber": "SO-07957",
+        "status": "open",
+        "customerName": "DHATRI SALES (Noida)",
+        "shippingAddress": "C-149, SECTOR 63, NOIDA, Noida, Gautambuddha Nagar, Uttar Pradesh, 201301, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036924012",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225871",
+            "rate": 30000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036924009-1154219000036924012-1",
+            "unitNumber": 1,
+            "serialNumber": "26271230",
+            "qrToken": "26271230",
+            "orderId": "1154219000036924009",
+            "lineItemId": "1154219000036924012",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "DHATRI SALES (Noida)",
+            "salesOrderNumber": "SO-07957",
+            "deliveryDate": "2026-09-15",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "dispatchNote": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-15T18:51:49+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036924009-1154219000036924012-1"
+      ]
     }
   }
 }
