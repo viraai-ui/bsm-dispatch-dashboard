@@ -7064,6 +7064,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036315004": {
+      "id": "ship-1789548275999-cne2k",
+      "itemId": "1154219000036315004",
+      "orderId": "1154219000036315004",
+      "machineId": "1154219000036315004-1154219000036315007-1",
+      "salesOrderNumber": "SO-07863",
+      "customerName": "Everest Footwear Industries",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-16",
+      "notes": "",
+      "shippedAt": "2026-09-16T08:44:35.999Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
