@@ -20252,6 +20252,89 @@
       "machineIds": [
         "1154219000036924009-1154219000036924012-1"
       ]
+    },
+    "1154219000036930024": {
+      "completedAt": "2026-09-16T12:04:54.407Z",
+      "order": {
+        "id": "1154219000036930024",
+        "zohoSalesOrderId": "1154219000036930024",
+        "salesOrderNumber": "SO-07951",
+        "status": "open",
+        "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+        "shippingAddress": "46/157, Halsey Road,, Kanpur,, Uttar Pradesh, 208001",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036930027",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227370",
+            "rate": 55000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036930028",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Blade for BS-817",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 4500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036930029",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight Cost from BSM to Mehta Transport Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1200,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036930024-1154219000036930027-1",
+            "unitNumber": 1,
+            "serialNumber": "26271225",
+            "qrToken": "26271225",
+            "orderId": "1154219000036930024",
+            "lineItemId": "1154219000036930027",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-07951",
+            "deliveryDate": "2026-09-15",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-15",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-15T12:13:14+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036930024-1154219000036930027-1"
+      ]
     }
   }
 }
