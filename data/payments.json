@@ -1,6 +1,32 @@
 {
   "payments": [
     {
+      "customerName": "Yogesh Upper",
+      "salesOrderNumber": "SO-07960",
+      "paymentAmount": 500000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07960/2026-09-16/1789546519158-9fc164ba-a586-4eb9-96ad-6bf31f98d1f2-a72b8a8a-3406-4b78-aa1d-dc035e26f6d1.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07960%2F2026-09-16%2F1789546519158-9fc164ba-a586-4eb9-96ad-6bf31f98d1f2-a72b8a8a-3406-4b78-aa1d-dc035e26f6d1.jpg",
+          "name": "a72b8a8a-3406-4b78-aa1d-dc035e26f6d1.jpg",
+          "contentType": "image/jpeg",
+          "size": 106782
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07960/2026-09-16/1789546519158-9fc164ba-a586-4eb9-96ad-6bf31f98d1f2-a72b8a8a-3406-4b78-aa1d-dc035e26f6d1.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07960%2F2026-09-16%2F1789546519158-9fc164ba-a586-4eb9-96ad-6bf31f98d1f2-a72b8a8a-3406-4b78-aa1d-dc035e26f6d1.jpg",
+      "screenshotName": "a72b8a8a-3406-4b78-aa1d-dc035e26f6d1.jpg",
+      "publicDeleteTokenHash": "ee109580466274c668ff1f172305280f6a0bf2ab62016a515b116a0a768aa52a",
+      "id": "payment-330938e8-37d8-4c5e-98e7-d6e567423673",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "11bdf9cca8b749dbb36adba05dff43aa",
+      "createdAt": "2026-09-16T08:15:20.998Z",
+      "updatedAt": "2026-09-16T08:15:20.998Z"
+    },
+    {
       "customerName": "XO FOOTWEAR PVT LTD (34B)",
       "salesOrderNumber": "SO-07949",
       "paymentAmount": 11250000,
