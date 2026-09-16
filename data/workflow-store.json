@@ -30344,7 +30344,9 @@
     "1154219000036910019": {
       "salesOrderId": "1154219000036910019",
       "salesOrderNumber": "SO-07959",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-16T07:17:30.887Z",
       "processedOrder": {
         "id": "1154219000036910019",
         "zohoSalesOrderId": "1154219000036910019",
@@ -30386,8 +30388,8 @@
           {
             "id": "1154219000036910019-1154219000036910022-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271231",
+            "qrToken": "26271231",
             "orderId": "1154219000036910019",
             "lineItemId": "1154219000036910022",
             "itemName": "Flesh trimming Machine",
@@ -30395,14 +30397,17 @@
             "customerName": "Shanti Impex India",
             "salesOrderNumber": "SO-07959",
             "deliveryDate": "2026-09-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )"
+            "itemDescription": "(One Year Service) (Spare Parts Chargeable) ( Only head )",
+            "warrantyStart": "2026-09-16",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-16T12:43:02+0530"
@@ -30418,7 +30423,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-16T07:14:41.032Z",
           "zohoBackupLastAttemptAt": "2026-09-16T07:15:33.463Z",
-          "zohoBackupSyncedAt": "2026-09-16T07:15:33.463Z"
+          "zohoBackupSyncedAt": "2026-09-16T07:15:33.463Z",
+          "processedAt": "2026-09-16T07:17:30.887Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
