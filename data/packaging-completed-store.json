@@ -19849,6 +19849,89 @@
       "machineIds": [
         "1154219000034276003-1154219000034276006-1"
       ]
+    },
+    "1154219000032974004": {
+      "completedAt": "2026-09-16T07:22:55.945Z",
+      "order": {
+        "id": "1154219000032974004",
+        "zohoSalesOrderId": "1154219000032974004",
+        "salesOrderNumber": "SO-07312",
+        "status": "open",
+        "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
+        "shippingAddress": "C/O Tainwala Holding Pvt. Ltd. Gat No. 413 & 420, Gonde, Village Vadivarahe, Taluka Igatpur, Mumbai Agra Highway, Nashik, Maharashtra, 422403, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-06-19",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000032974007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "description": "",
+            "quantity": 4,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004385212",
+            "rate": 85000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000032974004-1154219000032974007-3",
+            "unitNumber": 3,
+            "serialNumber": "26271207",
+            "qrToken": "26271207",
+            "orderId": "1154219000032974004",
+            "lineItemId": "1154219000032974007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
+            "salesOrderNumber": "SO-07312",
+            "deliveryDate": "2026-06-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "dispatchNote": "wooden",
+            "warrantyStart": "2026-09-14"
+          },
+          {
+            "id": "1154219000032974004-1154219000032974007-4",
+            "unitNumber": 4,
+            "serialNumber": "26271208",
+            "qrToken": "26271208",
+            "orderId": "1154219000032974004",
+            "lineItemId": "1154219000032974007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "BAGZONE LIFESTYLES PVT.LTD.",
+            "salesOrderNumber": "SO-07312",
+            "deliveryDate": "2026-06-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "dispatchNote": "wooden",
+            "warrantyStart": "2026-09-14"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-07-28T13:21:08+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000032974004-1154219000032974007-3",
+        "1154219000032974004-1154219000032974007-4"
+      ]
     }
   }
 }
