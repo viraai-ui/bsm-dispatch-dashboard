@@ -377,7 +377,15 @@
         "name": "Operations",
         "email": "operations@bsmindia.com"
       },
-      "sourceRevision": "a14c6c89913832f1b602281fa9da6fd7d760c9bf"
+      "sourceRevision": "a14c6c89913832f1b602281fa9da6fd7d760c9bf",
+      "serialTransfer": {
+        "serialNumber": "26271031",
+        "destinationOrderId": "1154219000036922008",
+        "destinationSalesOrderNumber": "SO-07950",
+        "destinationMachineId": "1154219000036922008-1154219000036922011-1",
+        "transferredAt": "2026-09-16T10:44:27Z",
+        "actor": "authorized-production-recovery"
+      }
     }
   }
 }

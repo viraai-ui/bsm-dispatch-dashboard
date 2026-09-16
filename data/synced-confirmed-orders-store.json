@@ -378,8 +378,8 @@
         {
           "id": "1154219000036922008-1154219000036922011-1",
           "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
+          "serialNumber": "26271031",
+          "qrToken": "26271031",
           "orderId": "1154219000036922008",
           "lineItemId": "1154219000036922011",
           "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -387,14 +387,17 @@
           "customerName": "KIDS LEGACY",
           "salesOrderNumber": "SO-07950",
           "deliveryDate": "2026-09-16",
-          "status": "Not Generated",
+          "status": "QR Generated",
           "selectedForBatch": false,
           "woodenPacking": "Pending",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": ""
+          "itemDescription": "",
+          "warrantyStart": "2026-08-21",
+          "vendor": "K S",
+          "dispatchNote": "wooden"
         }
       ],
       "zohoLastModifiedTime": "2026-09-15T10:47:43+0530"

@@ -11270,8 +11270,8 @@
           {
             "id": "1154219000035933004-1154219000035933007-1",
             "unitNumber": 1,
-            "serialNumber": "26271031",
-            "qrToken": "26271031",
+            "serialNumber": "",
+            "qrToken": "",
             "orderId": "1154219000035933004",
             "lineItemId": "1154219000035933007",
             "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -11279,7 +11279,7 @@
             "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
             "salesOrderNumber": "SO-07789",
             "deliveryDate": "2026-08-21",
-            "status": "QR Generated",
+            "status": "Not Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -19216,65 +19216,6 @@
       },
       "machineIds": [
         "1154219000036907014-1154219000036907017-1"
-      ]
-    },
-    "1154219000036922008": {
-      "completedAt": "2026-09-15T09:51:10.047Z",
-      "order": {
-        "id": "1154219000036922008",
-        "zohoSalesOrderId": "1154219000036922008",
-        "salesOrderNumber": "SO-07950",
-        "status": "open",
-        "customerName": "KIDS LEGACY",
-        "shippingAddress": "H.NO.2B GALA NO.E/08, S.NO.92, A.K.COMPOUND, SHIL M APE RD NR NEW, Vadavali Kh Bus Stop, Narivali NV,, Thane, Maharashtra, 421204, India",
-        "salesperson": "Deepak Kumar",
-        "deliveryDate": "2026-09-16",
-        "dashboardStatus": "Not Generated",
-        "reviewRequired": false,
-        "lineItems": [
-          {
-            "id": "1154219000036922011",
-            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-            "sku": "108 B",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": true,
-            "zohoItemId": "1154219000000225102",
-            "rate": 38000,
-            "dispatchCategory": "machine"
-          }
-        ],
-        "machines": [
-          {
-            "id": "1154219000036922008-1154219000036922011-1",
-            "unitNumber": 1,
-            "serialNumber": "26271227",
-            "qrToken": "26271227",
-            "orderId": "1154219000036922008",
-            "lineItemId": "1154219000036922011",
-            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-            "sku": "108 B",
-            "customerName": "KIDS LEGACY",
-            "salesOrderNumber": "SO-07950",
-            "deliveryDate": "2026-09-16",
-            "status": "QR Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Pending",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": "",
-            "warrantyStart": "2026-09-15",
-            "dispatchNote": "wooden"
-          }
-        ],
-        "zohoLastModifiedTime": "2026-09-15T10:47:43+0530",
-        "dispatchPriority": "regular"
-      },
-      "machineIds": [
-        "1154219000036922008-1154219000036922011-1"
       ]
     },
     "1154219000036926011": {

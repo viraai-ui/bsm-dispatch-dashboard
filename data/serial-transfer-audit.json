@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "transfers": [
+    {
+      "serialNumber": "26271031",
+      "sourceOrderId": "1154219000035933004",
+      "sourceSalesOrderNumber": "SO-07789",
+      "sourceMachineId": "1154219000035933004-1154219000035933007-1",
+      "destinationOrderId": "1154219000036922008",
+      "destinationSalesOrderNumber": "SO-07950",
+      "destinationMachineId": "1154219000036922008-1154219000036922011-1",
+      "machineSku": "108 B",
+      "machineName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+      "displacedDestinationSerial": "26271227",
+      "transferredAt": "2026-09-16T10:44:27Z",
+      "actor": "authorized-production-recovery",
+      "reason": "Physical machine reassigned after source cancellation"
+    }
+  ]
+}
