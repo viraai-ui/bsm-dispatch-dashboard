@@ -7002,6 +7002,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036013008": {
+      "id": "ship-1789548059029-tjjkp",
+      "itemId": "1154219000036013008",
+      "orderId": "1154219000036013008",
+      "machineId": "1154219000036013008-1154219000036013011-1",
+      "salesOrderNumber": "SO-07804",
+      "customerName": "JEET INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-16",
+      "notes": "",
+      "shippedAt": "2026-09-16T08:40:59.030Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
