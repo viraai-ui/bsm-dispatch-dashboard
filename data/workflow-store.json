@@ -30648,11 +30648,13 @@
           "qrToken": "26271234",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-16T13:16:26.837Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-16T13:16:28.785Z",
           "processedAt": "2026-09-16T13:17:30.724Z",
           "dispatchNote": "Local",
-          "vendor": "Ss Enterprises"
+          "vendor": "Ss Enterprises",
+          "zohoBackupLastAttemptAt": "2026-09-16T13:30:32.657Z",
+          "zohoBackupSyncedAt": "2026-09-16T13:30:32.657Z"
         }
       }
     }
