@@ -2,7 +2,12 @@ import { NextRequest } from 'next/server'
 import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { isAuthorizedCron } from '@/lib/cron-auth'
-import { cleanupExpiredMediaProofs } from '@/lib/media-proof'
+import { readMediaProofStore } from '@/lib/media-proof'
+import { githubWriteJson } from '@/lib/workflow-store'
+import { deleteR2Object } from '@/lib/r2'
+import { cleanMediaStore, cleanPayments, cleanShipmentStore, ONE_TIME_VIDEO_PURGE_DAYS, type DeleteMemo } from '@/lib/attachment-retention'
+import { readShipmentStore, writeShipmentStore } from '@/lib/ready-to-ship'
+import { listPayments, updatePaymentStore } from '@/lib/payments'
 
 export const runtime = 'nodejs'
 export const maxDuration = 300
@@ -13,9 +18,24 @@ export async function GET(request: NextRequest) {
     if (!auth.ok) return auth.response
   }
   try {
-    const packing = await cleanupExpiredMediaProofs('packing')
-    const loading = await cleanupExpiredMediaProofs('loading')
-    return apiOk({ packing, loading })
+    const requestedVideoDays = Number(request.nextUrl.searchParams.get('videoDays') || 30)
+    if (![30, ONE_TIME_VIDEO_PURGE_DAYS].includes(requestedVideoDays)) return apiError('videoDays must be 21 or 30', 400)
+    const memo: DeleteMemo = new Map()
+    const remove = (key: string) => deleteR2Object(key)
+    const [packingSource, loadingSource, shipmentSource, paymentSource] = await Promise.all([
+      readMediaProofStore('packing'), readMediaProofStore('loading'), readShipmentStore(), listPayments(),
+    ])
+    const packing = await cleanMediaStore(packingSource, remove, { days: requestedVideoDays, memo })
+    const loading = await cleanMediaStore(loadingSource, remove, { days: requestedVideoDays, memo })
+    const shipments = await cleanShipmentStore(shipmentSource, remove, { memo })
+    const payments = await cleanPayments(paymentSource, remove, { memo })
+    await Promise.all([
+      githubWriteJson('data/media-proof-store.json', packing.store, 'Apply packing media retention'),
+      githubWriteJson('data/loading-video-store.json', loading.store, 'Apply loading media retention'),
+      writeShipmentStore(shipments.store, 'Apply LR/builty retention'),
+      updatePaymentStore(() => payments.payments),
+    ])
+    return apiOk({ policy: { videoDays: requestedVideoDays, documentDays: 30 }, packing: packing.result, loading: loading.result, shipments: shipments.result, payments: payments.result, uniqueKeysProcessed: memo.size })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Media cleanup failed', 500)
   }

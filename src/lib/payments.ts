@@ -7,7 +7,7 @@ export type PaymentAddedBy = typeof PAYMENT_ADDED_BY_USERS[number]
 export function isPaymentAddedBy(value: unknown): value is PaymentAddedBy {
   return typeof value === 'string' && PAYMENT_ADDED_BY_USERS.includes(value as PaymentAddedBy)
 }
-export type PaymentAttachment = { key: string; url: string; name: string; contentType: string; size: number }
+export type PaymentAttachment = { key: string; url: string; name: string; contentType: string; size: number; uploadedAt?: string; expiresAt?: string }
 export type Payment = {
   id: string
   customerName: string
@@ -56,7 +56,7 @@ export async function listPayments() {
   return sortPayments(data.payments || [])
 }
 
-async function updateStore(updater: (payments: Payment[]) => Payment[]) {
+export async function updatePaymentStore(updater: (payments: Payment[]) => Payment[]) {
   let lastError: unknown
   for (let attempt = 0; attempt < 3; attempt += 1) {
     const current = await githubReadJson<PaymentStore>(STORE_PATH, { payments: [] })
@@ -81,7 +81,7 @@ async function updateStore(updater: (payments: Payment[]) => Payment[]) {
 export async function createPayment(input: Omit<Payment, 'id' | 'status' | 'createdAt' | 'updatedAt'>) {
   const now = new Date().toISOString()
   const payment: Payment = { ...input, id: `payment-${crypto.randomUUID()}`, status: 'Pending', createdAt: now, updatedAt: now }
-  await updateStore((payments) => [payment, ...payments])
+  await updatePaymentStore((payments) => [payment, ...payments])
   return payment
 }
 
@@ -89,7 +89,7 @@ export async function createPayment(input: Omit<Payment, 'id' | 'status' | 'crea
 export async function createPublicPayment(input: Omit<Payment, 'id' | 'status' | 'createdAt' | 'updatedAt' | 'createdBy' | 'idempotencyKey'>, idempotencyKey: string) {
   let result: Payment | undefined
   let duplicate = false
-  await updateStore((payments) => {
+  await updatePaymentStore((payments) => {
     const existing = payments.find((payment) => payment.idempotencyKey === idempotencyKey)
     if (existing) { result = existing; duplicate = true; return payments }
     const now = new Date().toISOString()
@@ -103,7 +103,7 @@ export async function createPublicPayment(input: Omit<Payment, 'id' | 'status' |
 export async function deletePendingPublicPayment(id: string) {
   let deleted: Payment | null = null
   let outcome: 'deleted' | 'not-found' | 'received' = 'not-found'
-  await updateStore((payments) => {
+  await updatePaymentStore((payments) => {
     const payment = payments.find((item) => item.id === id)
     if (!payment) return payments
     if (payment.status !== 'Pending') { outcome = 'received'; return payments }
@@ -115,7 +115,7 @@ export async function deletePendingPublicPayment(id: string) {
 
 export async function updatePaymentStatus(id: string, status: PaymentStatus) {
   let updated: Payment | null = null
-  await updateStore((payments) => payments.map((payment) => {
+  await updatePaymentStore((payments) => payments.map((payment) => {
     if (payment.id !== id) return payment
     updated = { ...payment, status, updatedAt: new Date().toISOString() }
     return updated

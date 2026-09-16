@@ -51,7 +51,7 @@ export type ShipmentRecord = {
   transporterName: string
   transporterPhone?: string
   shipmentType?: 'direct' | 'transporter'
-  lrCopy?: { name: string; type: string; url: string; r2Key?: string; expiresAt?: string | null } | null
+  lrCopy?: { name: string; type: string; url: string; r2Key?: string; uploadedAt?: string; expiresAt?: string | null } | null
   vehicleNumber: string
   driverName: string
   driverPhone: string
@@ -130,6 +130,10 @@ export async function readShipmentStore() {
   return { shipments: data.shipments || {} }
 }
 
+export async function writeShipmentStore(store: ShipmentStore, message = 'Update shipment attachments') {
+  await githubWriteJson(SHIPMENTS_PATH, store, message)
+}
+
 export async function addTransporter(input: { name: string; phone: string; notes?: string }) {
   const name = input.name.trim()
   const phone = input.phone.trim()
@@ -187,7 +191,7 @@ export async function processShipment(input: {
   salespersonPhone?: string
   sendWhatsapp?: boolean
   shipmentType?: 'direct' | 'transporter'
-  lrCopy?: { name: string; type: string; url: string; r2Key?: string; expiresAt?: string | null } | null
+  lrCopy?: { name: string; type: string; url: string; r2Key?: string; uploadedAt?: string; expiresAt?: string | null } | null
 }) {
   const item = (await listReadyToShipItems()).find((entry) => entry.id === input.itemId)
   if (!item) throw new Error('Ready to Ship machine not found')
@@ -211,7 +215,7 @@ export async function processShipment(input: {
     transporterName,
     transporterPhone: input.transporterPhone?.trim() || '',
     shipmentType,
-    lrCopy: input.lrCopy || null,
+    lrCopy: input.lrCopy ? { ...input.lrCopy, uploadedAt: input.lrCopy.uploadedAt || new Date().toISOString() } : null,
     vehicleNumber: vehicleNumber || '—',
     driverName: driverName || '—',
     driverPhone: driverPhone || '—',

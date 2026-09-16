@@ -7,6 +7,7 @@ import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, PAYMENT_PROOF_MIME_TYPES } from '@/lib/payment-screenshot'
 import { validatePaymentOrder } from '@/lib/payment-order-search'
 import { cleanPaymentCustomerName, verifyPaymentUploadScope } from '@/lib/payment-manual'
+import { expiresAt as attachmentExpiresAt } from '@/lib/attachment-retention'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -39,13 +40,14 @@ export async function POST(request: Request) {
   if (requested.length < 1 || requested.length > 10) return apiError('Between 1 and 10 payment proofs are required', 400)
   const attachments: PaymentAttachment[] = []
   try {
+    const uploadedAt = new Date().toISOString()
     const authoritativeOrder = linked ? await validatePaymentOrder(salesOrderId, salesOrderNumber, customerName) : null
     if (linked && !authoritativeOrder) return apiError('Sales order details do not match Zoho. Please select it again.', 400)
     const seen = new Set<string>()
     for (const item of requested) {
       const key = text(item?.key); if (!key || seen.has(key)) return apiError('Invalid or duplicate payment proof', 400); seen.add(key)
       const metadata = await verifyR2Object(key, { prefixes: ['payments/'], expectedTypes: PAYMENT_PROOF_MIME_TYPES, maxBytes: INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, order: linked ? salesOrderNumber : `manual/${manualScope}` })
-      attachments.push({ key, url: `/api/r2/view?key=${encodeURIComponent(key)}`, name: text(item?.name).slice(0, 180) || 'Payment proof', contentType: metadata.contentType, size: metadata.contentLength })
+      attachments.push({ key, url: `/api/r2/view?key=${encodeURIComponent(key)}`, name: text(item?.name).slice(0, 180) || 'Payment proof', contentType: metadata.contentType, size: metadata.contentLength, uploadedAt, expiresAt: attachmentExpiresAt(uploadedAt) })
     }
     const first = attachments[0]
     const payment = await createPayment({ customerName: linked ? authoritativeOrder!.customerName : customerName, ...(linked ? { salesOrderNumber: authoritativeOrder!.salesOrderNumber } : {}), paymentAmount, paymentMode, addedBy, remarks: remarks || undefined, attachments, screenshotUrl: first?.url, screenshotKey: first?.key, screenshotName: first?.name, createdBy: auth.user.id })

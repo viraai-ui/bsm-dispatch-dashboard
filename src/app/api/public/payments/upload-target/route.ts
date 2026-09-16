@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     const issued = suppliedScope ? { scope: suppliedScope, token: String(body.uploadScope) } : issuePaymentUploadScope()
     const binding = rawOrder ? safe(rawOrder) : `manual/${issued.scope}`
     const key = `payments/public/${binding}/${new Date().toISOString().slice(0, 10)}/${Date.now()}-${crypto.randomUUID()}-${safe(name.replace(/\.[^.]+$/, ''))}.${image.extension}`
-    const target = createR2UploadTarget(key, image.mimeType, 300, 3650)
+    const target = createR2UploadTarget(key, image.mimeType, 300, 30)
     const cors = await ensureR2BrowserCors(target.uploadUrl)
     if (!cors.corsReady) return publicApiHeaders(apiError(cors.corsError, 503))
     return publicApiHeaders(apiOk({ ...target, uploadContentType: image.mimeType, uploadScope: issued.token }))
