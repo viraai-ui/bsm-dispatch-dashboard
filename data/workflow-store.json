@@ -30999,7 +30999,9 @@
     "1154219000037053001": {
       "salesOrderId": "1154219000037053001",
       "salesOrderNumber": "SO-07966",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T06:34:03.820Z",
       "processedOrder": {
         "id": "1154219000037053001",
         "zohoSalesOrderId": "1154219000037053001",
@@ -31029,8 +31031,8 @@
           {
             "id": "1154219000037053001-1154219000037053004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271239",
+            "qrToken": "26271239",
             "orderId": "1154219000037053001",
             "lineItemId": "1154219000037053004",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -31038,20 +31040,23 @@
             "customerName": "Asian Footwear Pvt.Ltd. (303)",
             "salesOrderNumber": "SO-07966",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037053001-1154219000037053004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271240",
+            "qrToken": "26271240",
             "orderId": "1154219000037053001",
             "lineItemId": "1154219000037053004",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -31059,14 +31064,17 @@
             "customerName": "Asian Footwear Pvt.Ltd. (303)",
             "salesOrderNumber": "SO-07966",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-17T11:57:48+0530"
@@ -31080,7 +31088,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:33:17.384Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T06:33:18.315Z"
+          "zohoBackupQueuedAt": "2026-09-17T06:33:18.315Z",
+          "processedAt": "2026-09-17T06:34:03.820Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037053001-1154219000037053004-2": {
           "machineUnitId": "1154219000037053001-1154219000037053004-2",
@@ -31090,7 +31101,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:33:17.384Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T06:33:18.315Z"
+          "zohoBackupQueuedAt": "2026-09-17T06:33:18.315Z",
+          "processedAt": "2026-09-17T06:34:03.820Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
