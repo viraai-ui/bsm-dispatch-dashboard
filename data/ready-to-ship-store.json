@@ -7173,6 +7173,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036930024": {
+      "id": "ship-1789634215022-3tned",
+      "itemId": "1154219000036930024",
+      "orderId": "1154219000036930024",
+      "machineId": "1154219000036930024-1154219000036930027-1",
+      "salesOrderNumber": "SO-07951",
+      "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Mehta Transport",
+      "transporterPhone": "9212982319",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-17",
+      "notes": "",
+      "shippedAt": "2026-09-17T08:36:55.022Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
