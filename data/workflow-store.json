@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271235,
+  "serialCounter": 26271236,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -30766,6 +30766,82 @@
           "processedAt": "2026-09-17T06:27:19.268Z",
           "dispatchNote": "Good wrapping",
           "vendor": "Siphon"
+        }
+      }
+    },
+    "1154219000036975215": {
+      "salesOrderId": "1154219000036975215",
+      "salesOrderNumber": "SO-07963",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036975215",
+        "zohoSalesOrderId": "1154219000036975215",
+        "salesOrderNumber": "SO-07963",
+        "status": "open",
+        "customerName": "REDTAPE LIMITED",
+        "shippingAddress": "GROUND FLOOR , UNIT- 5 , SITE - 02, UPSIDC INDL AREA,, BY PASS ROAD, UNNAO, UP, 209801, ., Uttar Pradesh, 209801, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036975218",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226814",
+            "rate": 82000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036975219",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Build Scale Manufacture Pvt. Ltd. to RedTape Limited, Unnao.",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 2800,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036975215-1154219000036975218-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036975215",
+            "lineItemId": "1154219000036975218",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "REDTAPE LIMITED",
+            "salesOrderNumber": "SO-07963",
+            "deliveryDate": "2026-09-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-16T18:14:49+0530"
+      },
+      "machines": {
+        "1154219000036975215-1154219000036975218-1": {
+          "machineUnitId": "1154219000036975215-1154219000036975218-1",
+          "lineItemId": "1154219000036975218",
+          "serialNumber": "26271236",
+          "qrToken": "26271236",
+          "qrStatus": "pending"
         }
       }
     }
