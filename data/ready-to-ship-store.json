@@ -7204,6 +7204,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036558002": {
+      "id": "ship-1789649333412-x4sh0",
+      "itemId": "1154219000036558002",
+      "orderId": "1154219000036558002",
+      "machineId": "1154219000036558002-1154219000036558005-1",
+      "salesOrderNumber": "SO-07901",
+      "customerName": "Inaya Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAB2619",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-17",
+      "notes": "",
+      "shippedAt": "2026-09-17T12:48:53.412Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
