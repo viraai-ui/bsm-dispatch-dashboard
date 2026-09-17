@@ -133,56 +133,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-17T11:38:18+0530"
     },
-    "1154219000037017001": {
-      "id": "1154219000037017001",
-      "zohoSalesOrderId": "1154219000037017001",
-      "salesOrderNumber": "SO-07964",
-      "status": "open",
-      "customerName": "V R SEWING MACHINE",
-      "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037017004",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226034",
-          "rate": 10000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037017001-1154219000037017004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037017001",
-          "lineItemId": "1154219000037017004",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "V R SEWING MACHINE",
-          "salesOrderNumber": "SO-07964",
-          "deliveryDate": "2026-09-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-16T18:43:36+0530"
-    },
     "1154219000036975215": {
       "id": "1154219000036975215",
       "zohoSalesOrderId": "1154219000036975215",
@@ -766,34 +716,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-11T14:26:49+0530"
-    },
-    "1154219000036723009": {
-      "id": "1154219000036723009",
-      "zohoSalesOrderId": "1154219000036723009",
-      "salesOrderNumber": "SO-07925",
-      "status": "open",
-      "customerName": "STAR GLOBAL",
-      "shippingAddress": "PHASE 6, PLOT NO 117, UDYOG VIHAR, SECTOR\n37, GURGAON, HARYANA-122004",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-10",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036723012",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 12.5,
-          "pendingQuantity": 12.5,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 340,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-17T11:34:40+0530"
     },
     "1154219000036721021": {
       "id": "1154219000036721021",
@@ -10094,7 +10016,6 @@
   "orderIds": [
     "1154219000037053001",
     "1154219000037039001",
-    "1154219000037017001",
     "1154219000036975215",
     "1154219000037011001",
     "1154219000036935021",
@@ -10104,7 +10025,6 @@
     "1154219000036909011",
     "1154219000036876003",
     "1154219000036722010",
-    "1154219000036723009",
     "1154219000036721021",
     "1154219000036717001",
     "1154219000036663006",
@@ -10145,8 +10065,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-17T06:40:31.236Z",
-  "lastAttemptAt": "2026-09-17T07:00:25.195Z",
+  "lastSuccessfulSyncAt": "2026-09-17T07:00:40.665Z",
+  "lastAttemptAt": "2026-09-17T07:00:40.665Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
