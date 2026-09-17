@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-3df0eabd-7fda-4bb7-82bf-f113bacb2e85",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-84b1d6fc-ea34-405a-8e8f-db7aaee867e0",
+      "salesOrderNumber": "SO-07957",
+      "customerName": "DHATRI SALES (Noida)",
+      "paymentAmount": 35400,
+      "createdAt": "2026-09-17T11:17:36.720Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-8eae4151-5696-4000-8526-7c9e33d1111c",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-84b1d6fc-ea34-405a-8e8f-db7aaee867e0",
+      "salesOrderNumber": "SO-07957",
+      "customerName": "DHATRI SALES (Noida)",
+      "paymentAmount": 35400,
+      "createdAt": "2026-09-17T11:17:36.720Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-468064fa-9526-4471-8e7b-397ff44373b9",
       "type": "payment-created",
       "recipientUserId": "u-admin",
