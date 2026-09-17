@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-a824cfda-ca45-4bae-94c9-752689ecec27",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-15e5316f-26a2-4b59-bab8-423787f9f956",
+      "salesOrderNumber": "SO-07972",
+      "customerName": "PAYAL FOOTWEAR",
+      "paymentAmount": 30000,
+      "createdAt": "2026-09-17T12:22:39.852Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-4c86abef-34ba-4fe6-bacc-8f6cd5b7fc58",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-15e5316f-26a2-4b59-bab8-423787f9f956",
+      "salesOrderNumber": "SO-07972",
+      "customerName": "PAYAL FOOTWEAR",
+      "paymentAmount": 30000,
+      "createdAt": "2026-09-17T12:22:39.852Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-3df0eabd-7fda-4bb7-82bf-f113bacb2e85",
       "type": "payment-created",
       "recipientUserId": "u-admin",
