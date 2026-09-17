@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271238,
+  "serialCounter": 26271240,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -30993,6 +30993,98 @@
           "processedAt": "2026-09-17T06:31:50.987Z",
           "dispatchNote": "wooden",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000037053001": {
+      "salesOrderId": "1154219000037053001",
+      "salesOrderNumber": "SO-07966",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037053001",
+        "zohoSalesOrderId": "1154219000037053001",
+        "salesOrderNumber": "SO-07966",
+        "status": "open",
+        "customerName": "Asian Footwear Pvt.Ltd. (303)",
+        "shippingAddress": "Plot No. 303, Sect-17, HSIIDC, Indl.Estate, Bahadurgarh (Hr.), Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037053004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006379136",
+            "rate": 41000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037053001-1154219000037053004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037053001",
+            "lineItemId": "1154219000037053004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "Asian Footwear Pvt.Ltd. (303)",
+            "salesOrderNumber": "SO-07966",
+            "deliveryDate": "2026-09-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037053001-1154219000037053004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037053001",
+            "lineItemId": "1154219000037053004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "Asian Footwear Pvt.Ltd. (303)",
+            "salesOrderNumber": "SO-07966",
+            "deliveryDate": "2026-09-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-17T11:57:48+0530"
+      },
+      "machines": {
+        "1154219000037053001-1154219000037053004-1": {
+          "machineUnitId": "1154219000037053001-1154219000037053004-1",
+          "lineItemId": "1154219000037053004",
+          "serialNumber": "26271239",
+          "qrToken": "26271239",
+          "qrStatus": "pending"
+        },
+        "1154219000037053001-1154219000037053004-2": {
+          "machineUnitId": "1154219000037053001-1154219000037053004-2",
+          "lineItemId": "1154219000037053004",
+          "serialNumber": "26271240",
+          "qrToken": "26271240",
+          "qrStatus": "pending"
         }
       }
     }
