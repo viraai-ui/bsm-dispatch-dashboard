@@ -31119,7 +31119,9 @@
     "1154219000037039001": {
       "salesOrderId": "1154219000037039001",
       "salesOrderNumber": "SO-07965",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T07:49:17.623Z",
       "processedOrder": {
         "id": "1154219000037039001",
         "zohoSalesOrderId": "1154219000037039001",
@@ -31161,8 +31163,8 @@
           {
             "id": "1154219000037039001-1154219000037039004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271241",
+            "qrToken": "26271241",
             "orderId": "1154219000037039001",
             "lineItemId": "1154219000037039004",
             "itemName": "Strap Cutting machine",
@@ -31170,14 +31172,17 @@
             "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
             "salesOrderNumber": "SO-07965",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "With 800W Power Saving Motor"
+            "itemDescription": "With 800W Power Saving Motor",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-17T11:38:18+0530"
@@ -31191,7 +31196,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T07:47:52.416Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T07:47:53.388Z"
+          "zohoBackupQueuedAt": "2026-09-17T07:47:53.388Z",
+          "processedAt": "2026-09-17T07:49:17.623Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
