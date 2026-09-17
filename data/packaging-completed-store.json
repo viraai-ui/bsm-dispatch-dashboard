@@ -20787,6 +20787,65 @@
         "1154219000036908001-1154219000036908011-1",
         "1154219000036908001-1154219000036908012-1"
       ]
+    },
+    "1154219000037017001": {
+      "completedAt": "2026-09-17T05:38:02.838Z",
+      "order": {
+        "id": "1154219000037017001",
+        "zohoSalesOrderId": "1154219000037017001",
+        "salesOrderNumber": "SO-07964",
+        "status": "open",
+        "customerName": "V R SEWING MACHINE",
+        "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037017004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 10000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037017001-1154219000037017004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271234",
+            "qrToken": "26271234",
+            "orderId": "1154219000037017001",
+            "lineItemId": "1154219000037017004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "V R SEWING MACHINE",
+            "salesOrderNumber": "SO-07964",
+            "deliveryDate": "2026-09-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-16",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-16T18:43:36+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037017001-1154219000037017004-1"
+      ]
     }
   }
 }
