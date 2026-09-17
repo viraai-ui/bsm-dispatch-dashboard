@@ -31285,7 +31285,9 @@
     "1154219000037062001": {
       "salesOrderId": "1154219000037062001",
       "salesOrderNumber": "SO-07969",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T09:01:59.931Z",
       "processedOrder": {
         "id": "1154219000037062001",
         "zohoSalesOrderId": "1154219000037062001",
@@ -31339,8 +31341,8 @@
           {
             "id": "1154219000037062001-1154219000037062004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271243",
+            "qrToken": "26271243",
             "orderId": "1154219000037062001",
             "lineItemId": "1154219000037062004",
             "itemName": "Strap Cutting machine",
@@ -31348,14 +31350,17 @@
             "customerName": "INDIA BRUSH INDUSTRIES",
             "salesOrderNumber": "SO-07969",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037062001-1154219000037062005-1",
@@ -31376,7 +31381,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-2",
@@ -31397,7 +31404,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-3",
@@ -31418,7 +31427,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-4",
@@ -31439,7 +31450,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-5",
@@ -31460,7 +31473,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-6",
@@ -31481,7 +31496,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-7",
@@ -31502,7 +31519,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-8",
@@ -31523,7 +31542,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-9",
@@ -31544,7 +31565,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-10",
@@ -31565,7 +31588,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-11",
@@ -31586,7 +31611,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-12",
@@ -31607,7 +31634,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-13",
@@ -31628,7 +31657,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-14",
@@ -31649,7 +31680,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-15",
@@ -31670,7 +31703,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-16",
@@ -31691,7 +31726,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-17",
@@ -31712,7 +31749,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-18",
@@ -31733,7 +31772,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-19",
@@ -31754,7 +31795,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-20",
@@ -31775,7 +31818,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-21",
@@ -31796,7 +31841,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-22",
@@ -31817,7 +31864,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-23",
@@ -31838,7 +31887,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-24",
@@ -31859,7 +31910,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-25",
@@ -31880,7 +31933,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-26",
@@ -31901,7 +31956,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-27",
@@ -31922,7 +31979,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-28",
@@ -31943,7 +32002,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-29",
@@ -31964,7 +32025,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062005-30",
@@ -31985,7 +32048,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade Strap cutting"
+            "itemDescription": "Blade Strap cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-1",
@@ -32006,7 +32071,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-2",
@@ -32027,7 +32094,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-3",
@@ -32048,7 +32117,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-4",
@@ -32069,7 +32140,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-5",
@@ -32090,7 +32163,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-6",
@@ -32111,7 +32186,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-7",
@@ -32132,7 +32209,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-8",
@@ -32153,7 +32232,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-9",
@@ -32174,7 +32255,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037062001-1154219000037062006-10",
@@ -32195,7 +32278,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Guide Strap Cutting"
+            "itemDescription": "Guide Strap Cutting",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-17T14:22:52+0530"
@@ -32209,7 +32294,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T09:00:35.466Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T09:00:36.672Z"
+          "zohoBackupQueuedAt": "2026-09-17T09:00:36.672Z",
+          "processedAt": "2026-09-17T09:01:59.931Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
