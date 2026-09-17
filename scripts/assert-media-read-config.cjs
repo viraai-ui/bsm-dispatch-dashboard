@@ -1,4 +1,8 @@
-const snapshot = require('../data/public-database-snapshot.json')
+const { resolve } = require('node:path')
+const snapshotPath = process.env.PUBLIC_DATABASE_SNAPSHOT_PATH
+  ? resolve(process.cwd(), process.env.PUBLIC_DATABASE_SNAPSHOT_PATH)
+  : resolve(__dirname, '../data/public-database-snapshot.json')
+const snapshot = require(snapshotPath)
 
 const requiresR2 = Object.values(snapshot.media || {}).some((ref) => ref.source === 'r2')
 const credentials = ['R2_ACCOUNT_ID', 'R2_ACCESS_KEY_ID', 'R2_SECRET_ACCESS_KEY', 'R2_BUCKET'].every((name) => Boolean((process.env[name] || '').trim()))

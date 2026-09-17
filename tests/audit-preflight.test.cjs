@@ -1,6 +1,7 @@
 const assert = require('node:assert/strict')
 const { spawnSync } = require('node:child_process')
-const { readFileSync, existsSync } = require('node:fs')
+const { readFileSync, existsSync, mkdtempSync, writeFileSync, rmSync } = require('node:fs')
+const { tmpdir } = require('node:os')
 const { resolve } = require('node:path')
 
 const root = resolve(__dirname, '..')
@@ -12,13 +13,20 @@ function check(env) {
 }
 
 async function run() {
-  const productionWithoutReadConfig = check({ VERCEL_ENV: 'production' })
-  assert.notEqual(productionWithoutReadConfig.status, 0, 'production guard must remain fail-closed when the snapshot needs R2 reads')
-  assert.match(productionWithoutReadConfig.stderr, /DEPLOYMENT BLOCKED/)
+  const fixtureDir = mkdtempSync(resolve(tmpdir(), 'bsm-media-guard-'))
+  const fixturePath = resolve(fixtureDir, 'snapshot.json')
+  writeFileSync(fixturePath, JSON.stringify({ media: { proof: { source: 'r2' } } }))
+  try {
+    const productionWithoutReadConfig = check({ VERCEL_ENV: 'production', PUBLIC_DATABASE_SNAPSHOT_PATH: fixturePath })
+    assert.notEqual(productionWithoutReadConfig.status, 0, 'production guard must remain fail-closed when the snapshot needs R2 reads')
+    assert.match(productionWithoutReadConfig.stderr, /DEPLOYMENT BLOCKED/)
 
-  const productionWithPublicOrigin = check({ VERCEL_ENV: 'production', R2_PUBLIC_BASE_URL: 'https://media.example.test' })
-  assert.equal(productionWithPublicOrigin.status, 0, productionWithPublicOrigin.stderr)
-  assert.match(productionWithPublicOrigin.stdout, /public-origin reads/)
+    const productionWithPublicOrigin = check({ VERCEL_ENV: 'production', PUBLIC_DATABASE_SNAPSHOT_PATH: fixturePath, R2_PUBLIC_BASE_URL: 'https://media.example.test' })
+    assert.equal(productionWithPublicOrigin.status, 0, productionWithPublicOrigin.stderr)
+    assert.match(productionWithPublicOrigin.stdout, /public-origin reads/)
+  } finally {
+    rmSync(fixtureDir, { recursive: true, force: true })
+  }
 
   const pkg = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'))
   assert.equal(pkg.scripts['audit:release'], 'node scripts/audit-release.cjs')
