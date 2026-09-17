@@ -7297,6 +7297,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037062001": {
+      "id": "ship-1789649747733-a8ywm",
+      "itemId": "1154219000037062001",
+      "orderId": "1154219000037062001",
+      "machineId": "1154219000037062001-1154219000037062004-1",
+      "salesOrderNumber": "SO-07969",
+      "customerName": "INDIA BRUSH INDUSTRIES",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-17",
+      "notes": "",
+      "shippedAt": "2026-09-17T12:55:47.733Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
