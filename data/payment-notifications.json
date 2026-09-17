@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-0f70b8c2-695f-4624-90b2-9313239c6d4e",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-39162143-44fe-48b8-9ced-624f4395d1fe",
+      "salesOrderNumber": "SO-07949",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "paymentAmount": 100000,
+      "createdAt": "2026-09-17T05:53:22.607Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-0da7543e-f9a2-4eb5-aa55-98bae3c88d0d",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-39162143-44fe-48b8-9ced-624f4395d1fe",
+      "salesOrderNumber": "SO-07949",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "paymentAmount": 100000,
+      "createdAt": "2026-09-17T05:53:22.607Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-4747c278-4ae9-4fc0-bfdf-06d4f4a3db78",
       "type": "payment-created",
       "recipientUserId": "u-admin",
