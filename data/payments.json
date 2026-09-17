@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "salesOrderNumber": "SO-07949",
+      "paymentAmount": 100000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07949/2026-09-17/1789624399486-bb49b9e9-3a88-48bd-9485-5c055e25d87b-Machine-Advance-1.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07949%2F2026-09-17%2F1789624399486-bb49b9e9-3a88-48bd-9485-5c055e25d87b-Machine-Advance-1.pdf",
+          "name": "Machine Advance (1).pdf",
+          "contentType": "application/pdf",
+          "size": 1947,
+          "uploadedAt": "2026-09-17T05:53:20.282Z",
+          "expiresAt": "2026-10-17T05:53:20.282Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07949/2026-09-17/1789624399486-bb49b9e9-3a88-48bd-9485-5c055e25d87b-Machine-Advance-1.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07949%2F2026-09-17%2F1789624399486-bb49b9e9-3a88-48bd-9485-5c055e25d87b-Machine-Advance-1.pdf",
+      "screenshotName": "Machine Advance (1).pdf",
+      "publicDeleteTokenHash": "3f206aced45713391cd31ffe73be108414f044bf4a0694498346ece942fef4b0",
+      "id": "payment-39162143-44fe-48b8-9ced-624f4395d1fe",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "fe05c1419b594fcfb221e08c11ceccc4",
+      "createdAt": "2026-09-17T05:53:20.790Z",
+      "updatedAt": "2026-09-17T05:53:20.790Z"
+    },
+    {
       "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
       "salesOrderNumber": "SO-07965",
       "paymentAmount": 105000,
