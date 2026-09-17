@@ -32348,7 +32348,9 @@
     "1154219000037083002": {
       "salesOrderId": "1154219000037083002",
       "salesOrderNumber": "SO-07971",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T11:20:39.863Z",
       "processedOrder": {
         "id": "1154219000037083002",
         "zohoSalesOrderId": "1154219000037083002",
@@ -32378,8 +32380,8 @@
           {
             "id": "1154219000037083002-1154219000037083005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271245",
+            "qrToken": "26271245",
             "orderId": "1154219000037083002",
             "lineItemId": "1154219000037083005",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -32387,14 +32389,17 @@
             "customerName": "Indus Fine Arts Pvt Ltd",
             "salesOrderNumber": "SO-07971",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-17T15:49:23+0530"
@@ -32408,7 +32413,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T11:19:31.714Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T11:19:33.053Z"
+          "zohoBackupQueuedAt": "2026-09-17T11:19:33.053Z",
+          "processedAt": "2026-09-17T11:20:39.863Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
