@@ -31208,9 +31208,9 @@
     "1154219000036904013": {
       "salesOrderId": "1154219000036904013",
       "salesOrderNumber": "SO-07953",
-      "status": "qr_generated",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-09-17T08:34:01.764Z",
+      "processedAt": "2026-09-17T10:44:57.465Z",
       "processedOrder": {
         "id": "1154219000036904013",
         "zohoSalesOrderId": "1154219000036904013",
@@ -31220,7 +31220,7 @@
         "shippingAddress": "PHASE-1, T-1/100, MANGOLPURI INDUSTRIAL AREA, Delhi, 110083, India",
         "salesperson": "Anuj Kumar",
         "deliveryDate": "2026-09-16",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "Processed",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -31228,8 +31228,8 @@
             "itemName": "Edge Coloring Machine (compact model)",
             "sku": "36C",
             "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
+            "quantity": 2,
+            "pendingQuantity": 2,
             "woodenPackingRequired": false,
             "zohoItemId": "1154219000006982054",
             "rate": 9500,
@@ -31242,6 +31242,30 @@
             "unitNumber": 1,
             "serialNumber": "26271242",
             "qrToken": "26271242",
+            "orderId": "1154219000036904013",
+            "lineItemId": "1154219000036904016",
+            "itemName": "Edge Coloring Machine (compact model)",
+            "sku": "36C",
+            "customerName": "ENSAC World",
+            "salesOrderNumber": "SO-07953",
+            "deliveryDate": "2026-09-16",
+            "status": "Processed",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Able",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036904013-1154219000036904016-2",
+            "unitNumber": 2,
+            "serialNumber": "26271244",
+            "qrToken": "26271244",
             "orderId": "1154219000036904013",
             "lineItemId": "1154219000036904016",
             "itemName": "Edge Coloring Machine (compact model)",
@@ -31262,7 +31286,7 @@
             "dispatchNote": "local"
           }
         ],
-        "zohoLastModifiedTime": "2026-09-15T13:53:16+0530"
+        "zohoLastModifiedTime": "2026-09-17T14:35:31+0530"
       },
       "machines": {
         "1154219000036904013-1154219000036904016-1": {
@@ -31290,7 +31314,10 @@
           "zohoBackupStatus": "error",
           "zohoBackupQueuedAt": "2026-09-17T09:07:18.368Z",
           "zohoBackupLastAttemptAt": "2026-09-17T10:30:33.295Z",
-          "zohoBackupError": "Zoho append did not verify; queued for retry"
+          "zohoBackupError": "Zoho append did not verify; queued for retry",
+          "processedAt": "2026-09-17T10:44:57.465Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     },
