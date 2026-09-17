@@ -31208,7 +31208,9 @@
     "1154219000036904013": {
       "salesOrderId": "1154219000036904013",
       "salesOrderNumber": "SO-07953",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T08:34:01.764Z",
       "processedOrder": {
         "id": "1154219000036904013",
         "zohoSalesOrderId": "1154219000036904013",
@@ -31238,8 +31240,8 @@
           {
             "id": "1154219000036904013-1154219000036904016-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271242",
+            "qrToken": "26271242",
             "orderId": "1154219000036904013",
             "lineItemId": "1154219000036904016",
             "itemName": "Edge Coloring Machine (compact model)",
@@ -31247,14 +31249,17 @@
             "customerName": "ENSAC World",
             "salesOrderNumber": "SO-07953",
             "deliveryDate": "2026-09-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-15T13:53:16+0530"
@@ -31268,7 +31273,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T08:33:11.486Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T08:33:12.677Z"
+          "zohoBackupQueuedAt": "2026-09-17T08:33:12.677Z",
+          "processedAt": "2026-09-17T08:34:01.764Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
