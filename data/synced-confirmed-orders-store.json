@@ -1413,8 +1413,8 @@
           "itemName": "Edge Coloring Machine (compact model)",
           "sku": "36C",
           "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
+          "quantity": 2,
+          "pendingQuantity": 2,
           "woodenPackingRequired": false,
           "zohoItemId": "1154219000006982054",
           "rate": 9500,
@@ -1442,9 +1442,30 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000036904013-1154219000036904016-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000036904013",
+          "lineItemId": "1154219000036904016",
+          "itemName": "Edge Coloring Machine (compact model)",
+          "sku": "36C",
+          "customerName": "ENSAC World",
+          "salesOrderNumber": "SO-07953",
+          "deliveryDate": "2026-09-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-15T13:53:16+0530"
+      "zohoLastModifiedTime": "2026-09-17T14:35:31+0530"
     },
     "1154219000036916004": {
       "id": "1154219000036916004",
@@ -10836,8 +10857,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-17T09:00:38.488Z",
-  "lastAttemptAt": "2026-09-17T09:05:48.416Z",
+  "lastSuccessfulSyncAt": "2026-09-17T09:05:53.704Z",
+  "lastAttemptAt": "2026-09-17T09:05:53.704Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
