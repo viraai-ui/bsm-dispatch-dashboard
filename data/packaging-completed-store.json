@@ -21012,6 +21012,65 @@
       "machineIds": [
         "1154219000037062001-1154219000037062004-1"
       ]
+    },
+    "1154219000037083002": {
+      "completedAt": "2026-09-17T12:07:53.414Z",
+      "order": {
+        "id": "1154219000037083002",
+        "zohoSalesOrderId": "1154219000037083002",
+        "salesOrderNumber": "SO-07971",
+        "status": "open",
+        "customerName": "Indus Fine Arts Pvt Ltd",
+        "shippingAddress": "B-115, RIICO IND AREA, KHAIRTHAL, DISTT. ALWAR RAJASTHAN-301404, Rajasthan",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037083005",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225279",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037083002-1154219000037083005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271245",
+            "qrToken": "26271245",
+            "orderId": "1154219000037083002",
+            "lineItemId": "1154219000037083005",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "Indus Fine Arts Pvt Ltd",
+            "salesOrderNumber": "SO-07971",
+            "deliveryDate": "2026-09-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-17T15:49:23+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037083002-1154219000037083005-1"
+      ]
     }
   }
 }
