@@ -30772,7 +30772,9 @@
     "1154219000036975215": {
       "salesOrderId": "1154219000036975215",
       "salesOrderNumber": "SO-07963",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T06:29:22.305Z",
       "processedOrder": {
         "id": "1154219000036975215",
         "zohoSalesOrderId": "1154219000036975215",
@@ -30814,8 +30816,8 @@
           {
             "id": "1154219000036975215-1154219000036975218-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271236",
+            "qrToken": "26271236",
             "orderId": "1154219000036975215",
             "lineItemId": "1154219000036975218",
             "itemName": "zigzag binding (Cylinder bed)",
@@ -30823,14 +30825,17 @@
             "customerName": "REDTAPE LIMITED",
             "salesOrderNumber": "SO-07963",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-16T18:14:49+0530"
@@ -30844,7 +30849,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:28:29.957Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T06:28:30.839Z"
+          "zohoBackupQueuedAt": "2026-09-17T06:28:30.839Z",
+          "processedAt": "2026-09-17T06:29:22.305Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
