@@ -21071,6 +21071,89 @@
       "machineIds": [
         "1154219000037083002-1154219000037083005-1"
       ]
+    },
+    "1154219000036904013": {
+      "completedAt": "2026-09-17T12:08:04.382Z",
+      "order": {
+        "id": "1154219000036904013",
+        "zohoSalesOrderId": "1154219000036904013",
+        "salesOrderNumber": "SO-07953",
+        "status": "open",
+        "customerName": "ENSAC World",
+        "shippingAddress": "PHASE-1, T-1/100, MANGOLPURI INDUSTRIAL AREA, Delhi, 110083, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-16",
+        "dashboardStatus": "Processed",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036904016",
+            "itemName": "Edge Coloring Machine (compact model)",
+            "sku": "36C",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000006982054",
+            "rate": 9500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036904013-1154219000036904016-1",
+            "unitNumber": 1,
+            "serialNumber": "26271242",
+            "qrToken": "26271242",
+            "orderId": "1154219000036904013",
+            "lineItemId": "1154219000036904016",
+            "itemName": "Edge Coloring Machine (compact model)",
+            "sku": "36C",
+            "customerName": "ENSAC World",
+            "salesOrderNumber": "SO-07953",
+            "deliveryDate": "2026-09-16",
+            "status": "Processed",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000036904013-1154219000036904016-2",
+            "unitNumber": 2,
+            "serialNumber": "26271244",
+            "qrToken": "26271244",
+            "orderId": "1154219000036904013",
+            "lineItemId": "1154219000036904016",
+            "itemName": "Edge Coloring Machine (compact model)",
+            "sku": "36C",
+            "customerName": "ENSAC World",
+            "salesOrderNumber": "SO-07953",
+            "deliveryDate": "2026-09-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-17T14:35:31+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036904013-1154219000036904016-1",
+        "1154219000036904013-1154219000036904016-2"
+      ]
     }
   }
 }
