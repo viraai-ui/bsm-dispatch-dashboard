@@ -1,6 +1,21 @@
 {
   "payments": [
     {
+      "customerName": "PAYAL FOOTWEAR",
+      "salesOrderNumber": "SO-07972",
+      "paymentAmount": 30000,
+      "paymentMode": "Cash",
+      "addedBy": "Deepak",
+      "remarks": "30000 Cash Give mam",
+      "publicDeleteTokenHash": "2c355f567b1a0fafa52337f763f97f0e17c4c5ed1cff0df998819bfbbbaca3ce",
+      "id": "payment-15e5316f-26a2-4b59-bab8-423787f9f956",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "d954eeecb680463fb6971fccbd7cd7de",
+      "createdAt": "2026-09-17T12:22:37.857Z",
+      "updatedAt": "2026-09-17T12:22:37.857Z"
+    },
+    {
       "customerName": "DHATRI SALES (Noida)",
       "salesOrderNumber": "SO-07957",
       "paymentAmount": 35400,
