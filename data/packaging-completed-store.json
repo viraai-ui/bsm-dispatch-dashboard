@@ -20929,6 +20929,89 @@
         "1154219000037053001-1154219000037053004-1",
         "1154219000037053001-1154219000037053004-2"
       ]
+    },
+    "1154219000037062001": {
+      "completedAt": "2026-09-17T11:13:13.713Z",
+      "order": {
+        "id": "1154219000037062001",
+        "zohoSalesOrderId": "1154219000037062001",
+        "salesOrderNumber": "SO-07969",
+        "status": "open",
+        "customerName": "INDIA BRUSH INDUSTRIES",
+        "shippingAddress": "930/251, RAMLEELA TILLA, MUZAFFARNAGAR, Muzaffarnagar, Uttar Pradesh, 251002, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037062004",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000278462",
+            "rate": 80000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037062005",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Blade Strap cutting",
+            "quantity": 30,
+            "pendingQuantity": 30,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 260,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037062006",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Guide Strap Cutting",
+            "quantity": 10,
+            "pendingQuantity": 10,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 260,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037062001-1154219000037062004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271243",
+            "qrToken": "26271243",
+            "orderId": "1154219000037062001",
+            "lineItemId": "1154219000037062004",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "customerName": "INDIA BRUSH INDUSTRIES",
+            "salesOrderNumber": "SO-07969",
+            "deliveryDate": "2026-09-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-17T14:22:52+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037062001-1154219000037062004-1"
+      ]
     }
   }
 }
