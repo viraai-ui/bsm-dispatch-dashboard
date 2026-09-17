@@ -92,32 +92,6 @@
       "updatedAt": "2026-09-16T08:15:20.998Z"
     },
     {
-      "customerName": "XO FOOTWEAR PVT LTD (34B)",
-      "salesOrderNumber": "SO-07949",
-      "paymentAmount": 11250000,
-      "paymentMode": "Bank Transfer",
-      "addedBy": "Karan",
-      "remarks": "advance payment",
-      "attachments": [
-        {
-          "key": "payments/public/SO-07949/2026-09-15/1789477101008-aa46d78f-e8a2-4716-9746-13318a7ea00d-Machine-Advance.pdf",
-          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07949%2F2026-09-15%2F1789477101008-aa46d78f-e8a2-4716-9746-13318a7ea00d-Machine-Advance.pdf",
-          "name": "Machine Advance.pdf",
-          "contentType": "application/pdf",
-          "size": 1947,
-          "uploadedAt": "2026-09-15T12:58:22.246Z",
-          "expiresAt": "2026-10-15T12:58:22.246Z"
-        }
-      ],
-      "publicDeleteTokenHash": "8f8675f7e4d402c95ec84b2417f24e65403bed64db85cbb9184762e7873524d0",
-      "id": "payment-d5f48729-869b-4d5a-87a1-8bfe7ed12116",
-      "status": "Pending",
-      "createdBy": "public-salesman",
-      "idempotencyKey": "f66d6cccb2ef4c4b9888770eebcc7e8e",
-      "createdAt": "2026-09-15T12:58:22.246Z",
-      "updatedAt": "2026-09-15T12:58:22.246Z"
-    },
-    {
       "customerName": "EMPOWER PRAGATI LEARNING SOLUTIONS LIMITED",
       "salesOrderNumber": "SO-07945",
       "paymentAmount": 89380,
