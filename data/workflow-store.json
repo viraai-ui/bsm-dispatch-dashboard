@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271241,
+  "serialCounter": 26271242,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -31202,6 +31202,70 @@
           "vendor": "Able",
           "zohoBackupLastAttemptAt": "2026-09-17T08:00:32.250Z",
           "zohoBackupSyncedAt": "2026-09-17T08:00:32.250Z"
+        }
+      }
+    },
+    "1154219000036904013": {
+      "salesOrderId": "1154219000036904013",
+      "salesOrderNumber": "SO-07953",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036904013",
+        "zohoSalesOrderId": "1154219000036904013",
+        "salesOrderNumber": "SO-07953",
+        "status": "open",
+        "customerName": "ENSAC World",
+        "shippingAddress": "PHASE-1, T-1/100, MANGOLPURI INDUSTRIAL AREA, Delhi, 110083, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036904016",
+            "itemName": "Edge Coloring Machine (compact model)",
+            "sku": "36C",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000006982054",
+            "rate": 9500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036904013-1154219000036904016-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036904013",
+            "lineItemId": "1154219000036904016",
+            "itemName": "Edge Coloring Machine (compact model)",
+            "sku": "36C",
+            "customerName": "ENSAC World",
+            "salesOrderNumber": "SO-07953",
+            "deliveryDate": "2026-09-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-15T13:53:16+0530"
+      },
+      "machines": {
+        "1154219000036904013-1154219000036904016-1": {
+          "machineUnitId": "1154219000036904013-1154219000036904016-1",
+          "lineItemId": "1154219000036904016",
+          "serialNumber": "26271242",
+          "qrToken": "26271242",
+          "qrStatus": "pending"
         }
       }
     }
