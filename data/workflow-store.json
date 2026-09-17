@@ -30662,7 +30662,9 @@
     "1154219000036558002": {
       "salesOrderId": "1154219000036558002",
       "salesOrderNumber": "SO-07901",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T06:27:19.268Z",
       "processedOrder": {
         "id": "1154219000036558002",
         "zohoSalesOrderId": "1154219000036558002",
@@ -30704,8 +30706,8 @@
           {
             "id": "1154219000036558002-1154219000036558005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271235",
+            "qrToken": "26271235",
             "orderId": "1154219000036558002",
             "lineItemId": "1154219000036558005",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -30713,14 +30715,17 @@
             "customerName": "Inaya Enterprises",
             "salesOrderNumber": "SO-07901",
             "deliveryDate": "2026-09-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Heavy Duty"
+            "itemDescription": "Heavy Duty",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Siphon",
+            "dispatchNote": "Good wrapping"
           },
           {
             "id": "1154219000036558002-1154219000036558006-1",
@@ -30741,7 +30746,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-17T11:50:21+0530"
@@ -30755,7 +30762,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:22:30.266Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T06:22:31.103Z"
+          "zohoBackupQueuedAt": "2026-09-17T06:22:31.103Z",
+          "processedAt": "2026-09-17T06:27:19.268Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Siphon"
         }
       }
     }
