@@ -7235,6 +7235,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036904013": {
+      "id": "ship-1789649508151-xwy2u",
+      "itemId": "1154219000036904013",
+      "orderId": "1154219000036904013",
+      "machineId": "1154219000036904013-1154219000036904016-1",
+      "salesOrderNumber": "SO-07953",
+      "customerName": "ENSAC World",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-17",
+      "notes": "",
+      "shippedAt": "2026-09-17T12:51:48.151Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
