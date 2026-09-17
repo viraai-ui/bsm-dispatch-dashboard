@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Inaya Enterprises",
+      "salesOrderNumber": "SO-07901",
+      "paymentAmount": 286800,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07901/2026-09-17/1789626101074-d0fac7ad-b5a7-40a6-89dd-496277badae7-WhatsApp-Image-2026-09-17-at-11.45.00-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07901%2F2026-09-17%2F1789626101074-d0fac7ad-b5a7-40a6-89dd-496277badae7-WhatsApp-Image-2026-09-17-at-11.45.00-AM.jpg",
+          "name": "WhatsApp Image 2026-09-17 at 11.45.00 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 63185,
+          "uploadedAt": "2026-09-17T06:21:41.745Z",
+          "expiresAt": "2026-10-17T06:21:41.745Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07901/2026-09-17/1789626101074-d0fac7ad-b5a7-40a6-89dd-496277badae7-WhatsApp-Image-2026-09-17-at-11.45.00-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07901%2F2026-09-17%2F1789626101074-d0fac7ad-b5a7-40a6-89dd-496277badae7-WhatsApp-Image-2026-09-17-at-11.45.00-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-17 at 11.45.00 AM.jpeg",
+      "publicDeleteTokenHash": "b49f082148e6b3f27061d7940a166ab01d19eb2315e148e6f7dcf42122c2798a",
+      "id": "payment-4edb6ca2-e5e9-4461-ab2b-f46ff469e8bf",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "652c6dddcbed41bc94b68f401c59c398",
+      "createdAt": "2026-09-17T06:21:43.069Z",
+      "updatedAt": "2026-09-17T06:21:43.069Z"
+    },
+    {
       "customerName": "V R SEWING MACHINE",
       "salesOrderNumber": "SO-07964",
       "paymentAmount": 11800,
