@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-4747c278-4ae9-4fc0-bfdf-06d4f4a3db78",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-be841c79-5539-45bd-9afb-fbde0b4df377",
+      "salesOrderNumber": "SO-07965",
+      "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
+      "paymentAmount": 105000,
+      "createdAt": "2026-09-17T05:38:19.236Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-19ff8625-0da4-40e8-9288-98b704fb90ad",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-be841c79-5539-45bd-9afb-fbde0b4df377",
+      "salesOrderNumber": "SO-07965",
+      "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
+      "paymentAmount": 105000,
+      "createdAt": "2026-09-17T05:38:19.236Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-3d59c631-e14c-4954-8bdc-d69e9febd8ce",
       "type": "payment-created",
       "recipientUserId": "u-admin",
