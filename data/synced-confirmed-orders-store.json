@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037053014": {
+      "id": "1154219000037053014",
+      "zohoSalesOrderId": "1154219000037053014",
+      "salesOrderNumber": "SO-07967",
+      "status": "open",
+      "customerName": "Jim enterprises",
+      "shippingAddress": "1049, Basti Mithu, Jalandhar, Punjab, 144002, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037053017",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000280682",
+          "rate": 28000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037053014-1154219000037053017-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037053014",
+          "lineItemId": "1154219000037053017",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "Jim enterprises",
+          "salesOrderNumber": "SO-07967",
+          "deliveryDate": "2026-09-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-17T13:40:21+0530"
+    },
     "1154219000037053001": {
       "id": "1154219000037053001",
       "zohoSalesOrderId": "1154219000037053001",
@@ -9844,6 +9894,7 @@
     }
   },
   "orderIds": [
+    "1154219000037053014",
     "1154219000037053001",
     "1154219000037039001",
     "1154219000036975215",
@@ -9894,8 +9945,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-17T08:00:29.906Z",
-  "lastAttemptAt": "2026-09-17T08:20:25.886Z",
+  "lastSuccessfulSyncAt": "2026-09-17T08:20:30.975Z",
+  "lastAttemptAt": "2026-09-17T08:20:30.975Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
