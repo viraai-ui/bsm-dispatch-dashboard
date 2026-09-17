@@ -30863,7 +30863,9 @@
     "1154219000037011001": {
       "salesOrderId": "1154219000037011001",
       "salesOrderNumber": "SO-07961",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-17T06:31:50.987Z",
       "processedOrder": {
         "id": "1154219000037011001",
         "zohoSalesOrderId": "1154219000037011001",
@@ -30917,8 +30919,8 @@
           {
             "id": "1154219000037011001-1154219000037011004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271237",
+            "qrToken": "26271237",
             "orderId": "1154219000037011001",
             "lineItemId": "1154219000037011004",
             "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
@@ -30926,20 +30928,23 @@
             "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07961",
             "deliveryDate": "2026-09-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           },
           {
             "id": "1154219000037011001-1154219000037011005-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271238",
+            "qrToken": "26271238",
             "orderId": "1154219000037011001",
             "lineItemId": "1154219000037011005",
             "itemName": "Foil Stamping machine",
@@ -30947,14 +30952,17 @@
             "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-07961",
             "deliveryDate": "2026-09-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-16T17:33:35+0530"
@@ -30968,7 +30976,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:30:50.600Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T06:30:51.464Z"
+          "zohoBackupQueuedAt": "2026-09-17T06:30:51.464Z",
+          "processedAt": "2026-09-17T06:31:50.987Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         },
         "1154219000037011001-1154219000037011005-1": {
           "machineUnitId": "1154219000037011001-1154219000037011005-1",
@@ -30978,7 +30989,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:30:50.600Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-17T06:30:51.464Z"
+          "zohoBackupQueuedAt": "2026-09-17T06:30:51.464Z",
+          "processedAt": "2026-09-17T06:31:50.987Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
