@@ -1,6 +1,44 @@
 {
   "payments": [
     {
+      "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
+      "salesOrderNumber": "SO-07965",
+      "paymentAmount": 105000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "remarks": "50000+55000 = 105000",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07965/2026-09-17/1789623494838-997717ce-ae70-4fea-b771-d5cf5012dba0-WhatsApp-Image-2026-09-16-at-1.22.45-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07965%2F2026-09-17%2F1789623494838-997717ce-ae70-4fea-b771-d5cf5012dba0-WhatsApp-Image-2026-09-16-at-1.22.45-PM.jpg",
+          "name": "WhatsApp Image 2026-09-16 at 1.22.45 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 95840,
+          "uploadedAt": "2026-09-17T05:38:16.200Z",
+          "expiresAt": "2026-10-17T05:38:16.200Z"
+        },
+        {
+          "key": "payments/public/SO-07965/2026-09-17/1789623495467-4ef4ca7f-62f0-49f4-bc94-392136efc176-WhatsApp-Image-2026-09-17-at-9.54.44-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07965%2F2026-09-17%2F1789623495467-4ef4ca7f-62f0-49f4-bc94-392136efc176-WhatsApp-Image-2026-09-17-at-9.54.44-AM.jpg",
+          "name": "WhatsApp Image 2026-09-17 at 9.54.44 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 72855,
+          "uploadedAt": "2026-09-17T05:38:16.200Z",
+          "expiresAt": "2026-10-17T05:38:16.200Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07965/2026-09-17/1789623494838-997717ce-ae70-4fea-b771-d5cf5012dba0-WhatsApp-Image-2026-09-16-at-1.22.45-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07965%2F2026-09-17%2F1789623494838-997717ce-ae70-4fea-b771-d5cf5012dba0-WhatsApp-Image-2026-09-16-at-1.22.45-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-16 at 1.22.45 PM.jpeg",
+      "publicDeleteTokenHash": "017e6568b95bda5708466a52c88d677eaeba6f19fcc2956a548e2966dced57f2",
+      "id": "payment-be841c79-5539-45bd-9afb-fbde0b4df377",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "fdc7856d48804eab9f4b3e49da2ed119",
+      "createdAt": "2026-09-17T05:38:17.197Z",
+      "updatedAt": "2026-09-17T05:38:17.197Z"
+    },
+    {
       "customerName": "3NG",
       "salesOrderNumber": "SO-07962",
       "paymentAmount": 9318,
