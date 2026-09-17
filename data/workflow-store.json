@@ -30761,11 +30761,13 @@
           "qrToken": "26271235",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T06:22:30.266Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-17T06:22:31.103Z",
           "processedAt": "2026-09-17T06:27:19.268Z",
           "dispatchNote": "Good wrapping",
-          "vendor": "Siphon"
+          "vendor": "Siphon",
+          "zohoBackupLastAttemptAt": "2026-09-17T06:30:31.923Z",
+          "zohoBackupSyncedAt": "2026-09-17T06:30:31.923Z"
         }
       }
     },
