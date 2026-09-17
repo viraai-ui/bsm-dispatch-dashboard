@@ -31311,13 +31311,13 @@
           "qrToken": "26271244",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-17T09:07:17.119Z",
-          "zohoBackupStatus": "error",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-17T09:07:18.368Z",
-          "zohoBackupLastAttemptAt": "2026-09-17T10:30:33.295Z",
-          "zohoBackupError": "Zoho append did not verify; queued for retry",
+          "zohoBackupLastAttemptAt": "2026-09-17T10:45:32.526Z",
           "processedAt": "2026-09-17T10:44:57.465Z",
           "dispatchNote": "local",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupSyncedAt": "2026-09-17T10:45:32.526Z"
         }
       }
     },
