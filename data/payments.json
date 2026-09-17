@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "DHATRI SALES (Noida)",
+      "salesOrderNumber": "SO-07957",
+      "paymentAmount": 35400,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07957/2026-09-17/1789643852368-b6509eb7-3090-4d7c-a910-11071663d2db-Payment_receipt_1789481334243947.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07957%2F2026-09-17%2F1789643852368-b6509eb7-3090-4d7c-a910-11071663d2db-Payment_receipt_1789481334243947.pdf",
+          "name": "Payment_receipt_1789481334243947.pdf",
+          "contentType": "application/pdf",
+          "size": 217050,
+          "uploadedAt": "2026-09-17T11:17:33.143Z",
+          "expiresAt": "2026-10-17T11:17:33.143Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07957/2026-09-17/1789643852368-b6509eb7-3090-4d7c-a910-11071663d2db-Payment_receipt_1789481334243947.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07957%2F2026-09-17%2F1789643852368-b6509eb7-3090-4d7c-a910-11071663d2db-Payment_receipt_1789481334243947.pdf",
+      "screenshotName": "Payment_receipt_1789481334243947.pdf",
+      "publicDeleteTokenHash": "30301979b4daf29112f5d15d4bcef047acebc1140e085eac163e001442c45ba5",
+      "id": "payment-84b1d6fc-ea34-405a-8e8f-db7aaee867e0",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "bd47f7ea6ac844c8806685aef902d0f8",
+      "createdAt": "2026-09-17T11:17:34.532Z",
+      "updatedAt": "2026-09-17T11:17:34.532Z"
+    },
+    {
       "customerName": "Jim enterprises",
       "salesOrderNumber": "SO-07967",
       "paymentAmount": 35000,
