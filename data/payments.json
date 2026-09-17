@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Yogesh Upper",
+      "salesOrderNumber": "SO-07960",
+      "paymentAmount": 125400,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07960/2026-09-17/1789649256018-75f380d0-00f6-44eb-9613-55e717188f09-WhatsApp-Image-2026-09-17-at-5.45.15-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07960%2F2026-09-17%2F1789649256018-75f380d0-00f6-44eb-9613-55e717188f09-WhatsApp-Image-2026-09-17-at-5.45.15-PM.jpg",
+          "name": "WhatsApp Image 2026-09-17 at 5.45.15 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 87897,
+          "uploadedAt": "2026-09-17T12:47:36.742Z",
+          "expiresAt": "2026-10-17T12:47:36.742Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07960/2026-09-17/1789649256018-75f380d0-00f6-44eb-9613-55e717188f09-WhatsApp-Image-2026-09-17-at-5.45.15-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07960%2F2026-09-17%2F1789649256018-75f380d0-00f6-44eb-9613-55e717188f09-WhatsApp-Image-2026-09-17-at-5.45.15-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-17 at 5.45.15 PM.jpeg",
+      "publicDeleteTokenHash": "1caf186dee3532c977756cb4e1a0c0f4f482186cccc335b92744ac9879fcd28a",
+      "id": "payment-85327378-0a4a-4d00-a4f0-5a48df45d9e2",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "7b9ce9a06085428aa143310c47280947",
+      "createdAt": "2026-09-17T12:47:37.335Z",
+      "updatedAt": "2026-09-17T12:47:37.335Z"
+    },
+    {
       "customerName": "PAYAL FOOTWEAR",
       "salesOrderNumber": "SO-07972",
       "paymentAmount": 30000,
