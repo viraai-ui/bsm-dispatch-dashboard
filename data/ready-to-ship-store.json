@@ -7359,6 +7359,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036909011": {
+      "id": "ship-1789649862173-gcxe6",
+      "itemId": "1154219000036909011",
+      "orderId": "1154219000036909011",
+      "machineId": "1154219000036909011-1154219000036909014-1",
+      "salesOrderNumber": "SO-07946",
+      "customerName": "LAMBA POLY SOLUTIONS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-17",
+      "notes": "",
+      "shippedAt": "2026-09-17T12:57:42.173Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
