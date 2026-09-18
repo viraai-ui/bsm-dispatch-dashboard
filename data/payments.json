@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "V.S. ENTERPRISES",
+      "salesOrderNumber": "SO-07976",
+      "paymentAmount": 37760,
+      "paymentMode": "UPI",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07976/2026-09-18/1789719206276-ab7305e9-95ea-44c3-a3a5-e32ca0f53e2c-5df491ef-f67c-4527-a537-7740004ad772.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07976%2F2026-09-18%2F1789719206276-ab7305e9-95ea-44c3-a3a5-e32ca0f53e2c-5df491ef-f67c-4527-a537-7740004ad772.jpg",
+          "name": "5df491ef-f67c-4527-a537-7740004ad772.jpg",
+          "contentType": "image/jpeg",
+          "size": 291682,
+          "uploadedAt": "2026-09-18T08:13:27.175Z",
+          "expiresAt": "2026-10-18T08:13:27.175Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07976/2026-09-18/1789719206276-ab7305e9-95ea-44c3-a3a5-e32ca0f53e2c-5df491ef-f67c-4527-a537-7740004ad772.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07976%2F2026-09-18%2F1789719206276-ab7305e9-95ea-44c3-a3a5-e32ca0f53e2c-5df491ef-f67c-4527-a537-7740004ad772.jpg",
+      "screenshotName": "5df491ef-f67c-4527-a537-7740004ad772.jpg",
+      "publicDeleteTokenHash": "2a8bf2e7ea28af4bd6bfb30035c1790d51af20d60505f493bfd19e9f4257eb2d",
+      "id": "payment-427b03b8-1928-487c-bbcf-494f9b13ab1c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "330bc63fbc6d49f3a54b282c6de39cc5",
+      "createdAt": "2026-09-18T08:13:27.665Z",
+      "updatedAt": "2026-09-18T08:13:27.665Z"
+    },
+    {
       "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
       "salesOrderNumber": "SO-07975",
       "paymentAmount": 62540,
