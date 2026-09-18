@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+      "salesOrderNumber": "SO-07979",
+      "paymentAmount": 50000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07979/2026-09-18/1789745351108-4622b064-b20d-45e3-9711-87a75c2aa418-WhatsApp-Image-2026-09-18-at-4.33.46-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07979%2F2026-09-18%2F1789745351108-4622b064-b20d-45e3-9711-87a75c2aa418-WhatsApp-Image-2026-09-18-at-4.33.46-PM.jpg",
+          "name": "WhatsApp Image 2026-09-18 at 4.33.46 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 48734,
+          "uploadedAt": "2026-09-18T15:29:11.878Z",
+          "expiresAt": "2026-10-18T15:29:11.878Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07979/2026-09-18/1789745351108-4622b064-b20d-45e3-9711-87a75c2aa418-WhatsApp-Image-2026-09-18-at-4.33.46-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07979%2F2026-09-18%2F1789745351108-4622b064-b20d-45e3-9711-87a75c2aa418-WhatsApp-Image-2026-09-18-at-4.33.46-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-18 at 4.33.46 PM.jpeg",
+      "publicDeleteTokenHash": "249a825fe171750bea9213a0e13517c3bbcac76e3b254fdfa89abdfb7262470b",
+      "id": "payment-42ac818e-7e4b-41a0-a922-1b95dddc1e70",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "730c66c799a049ca8470ed33d0924764",
+      "createdAt": "2026-09-18T15:29:13.137Z",
+      "updatedAt": "2026-09-18T15:29:13.137Z"
+    },
+    {
       "customerName": "Capital Footwear Pvt. Ltd. - Nepal",
       "salesOrderNumber": "SO-07831",
       "paymentAmount": 219100,
