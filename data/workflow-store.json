@@ -32690,7 +32690,9 @@
     "1154219000037125001": {
       "salesOrderId": "1154219000037125001",
       "salesOrderNumber": "SO-07977",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-18T09:43:35.510Z",
       "processedOrder": {
         "id": "1154219000037125001",
         "zohoSalesOrderId": "1154219000037125001",
@@ -32720,8 +32722,8 @@
           {
             "id": "1154219000037125001-1154219000037125004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271249",
+            "qrToken": "26271249",
             "orderId": "1154219000037125001",
             "lineItemId": "1154219000037125004",
             "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
@@ -32729,14 +32731,17 @@
             "customerName": "LIYAN TRADERS",
             "salesOrderNumber": "SO-07977",
             "deliveryDate": "2026-09-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-18",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-18T15:08:39+0530"
@@ -32750,7 +32755,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-18T09:41:55.280Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-18T09:41:56.565Z"
+          "zohoBackupQueuedAt": "2026-09-18T09:41:56.565Z",
+          "processedAt": "2026-09-18T09:43:35.510Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
