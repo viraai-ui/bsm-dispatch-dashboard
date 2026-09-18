@@ -7435,6 +7435,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037104003": {
+      "id": "ship-1789729570777-pmi3v",
+      "itemId": "1154219000037104003",
+      "orderId": "1154219000037104003",
+      "machineId": "1154219000037104003-1154219000037104006-1",
+      "salesOrderNumber": "SO-07975",
+      "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK9310",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-18",
+      "notes": "",
+      "shippedAt": "2026-09-18T11:06:10.777Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
