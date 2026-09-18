@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-7a8cfc42-1f24-4214-b604-a4b6475f2062",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-192719d3-700f-48c8-94c3-49e163347dae",
+      "salesOrderNumber": "SO-07831",
+      "customerName": "Capital Footwear Pvt. Ltd. - Nepal",
+      "paymentAmount": 219100,
+      "createdAt": "2026-09-18T14:56:40.560Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-3d1d81be-8534-44fb-9ae7-1863e4b64439",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-192719d3-700f-48c8-94c3-49e163347dae",
+      "salesOrderNumber": "SO-07831",
+      "customerName": "Capital Footwear Pvt. Ltd. - Nepal",
+      "paymentAmount": 219100,
+      "createdAt": "2026-09-18T14:56:40.560Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-1d662544-c62a-45dc-80e2-cc88c51e5f45",
       "type": "payment-created",
       "recipientUserId": "u-admin",
