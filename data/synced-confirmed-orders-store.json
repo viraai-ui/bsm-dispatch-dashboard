@@ -50,89 +50,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-18T15:08:39+0530"
     },
-    "1154219000037104003": {
-      "id": "1154219000037104003",
-      "zohoSalesOrderId": "1154219000037104003",
-      "salesOrderNumber": "SO-07975",
-      "status": "open",
-      "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
-      "shippingAddress": "1, A 80, Okhla Industrial Area, Phase II, South Delhi, Delhi,, 110020, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037104006",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225438",
-          "rate": 51000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000037104007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "COVER TYPE BLADDER",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000001709067",
-          "rate": 2000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037104003-1154219000037104006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037104003",
-          "lineItemId": "1154219000037104006",
-          "itemName": "Cover Type Sole Press (pneumatic)",
-          "sku": "2003",
-          "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
-          "salesOrderNumber": "SO-07975",
-          "deliveryDate": "2026-09-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000037104003-1154219000037104007-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037104003",
-          "lineItemId": "1154219000037104007",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
-          "salesOrderNumber": "SO-07975",
-          "deliveryDate": "2026-09-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "COVER TYPE BLADDER"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-18T13:17:38+0530"
-    },
     "1154219000037090252": {
       "id": "1154219000037090252",
       "zohoSalesOrderId": "1154219000037090252",
@@ -9668,7 +9585,6 @@
   },
   "orderIds": [
     "1154219000037125001",
-    "1154219000037104003",
     "1154219000037090252",
     "1154219000037080004",
     "1154219000037039015",
@@ -9715,8 +9631,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-18T11:00:29.717Z",
-  "lastAttemptAt": "2026-09-18T11:20:25.089Z",
+  "lastSuccessfulSyncAt": "2026-09-18T11:20:29.813Z",
+  "lastAttemptAt": "2026-09-18T11:20:29.813Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
