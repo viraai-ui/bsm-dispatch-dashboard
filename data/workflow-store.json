@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271245,
+  "serialCounter": 26271246,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -32425,6 +32425,70 @@
           "zohoBackupLastAttemptAt": "2026-09-17T11:30:32.674Z",
           "zohoBackupSyncedAt": "2026-09-17T11:30:32.674Z",
           "dispatchedAt": "2026-09-17T12:07:53.414Z"
+        }
+      }
+    },
+    "1154219000037090252": {
+      "salesOrderId": "1154219000037090252",
+      "salesOrderNumber": "SO-07974",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037090252",
+        "zohoSalesOrderId": "1154219000037090252",
+        "salesOrderNumber": "SO-07974",
+        "status": "open",
+        "customerName": "Sunrise Enterprises",
+        "shippingAddress": "Plot No. 550, Sector- 23, N.I.T., Faridabad, Haryana",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-09-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037090255",
+            "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
+            "sku": "832",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225329",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037090252-1154219000037090255-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037090252",
+            "lineItemId": "1154219000037090255",
+            "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
+            "sku": "832",
+            "customerName": "Sunrise Enterprises",
+            "salesOrderNumber": "SO-07974",
+            "deliveryDate": "2026-09-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-18T12:42:37+0530"
+      },
+      "machines": {
+        "1154219000037090252-1154219000037090255-1": {
+          "machineUnitId": "1154219000037090252-1154219000037090255-1",
+          "lineItemId": "1154219000037090255",
+          "serialNumber": "26271246",
+          "qrToken": "26271246",
+          "qrStatus": "pending"
         }
       }
     }
