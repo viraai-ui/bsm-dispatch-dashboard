@@ -32768,7 +32768,9 @@
     "1154219000037053014": {
       "salesOrderId": "1154219000037053014",
       "salesOrderNumber": "SO-07967",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-18T12:31:07.233Z",
       "processedOrder": {
         "id": "1154219000037053014",
         "zohoSalesOrderId": "1154219000037053014",
@@ -32798,8 +32800,8 @@
           {
             "id": "1154219000037053014-1154219000037053017-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271250",
+            "qrToken": "26271250",
             "orderId": "1154219000037053014",
             "lineItemId": "1154219000037053017",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -32807,14 +32809,17 @@
             "customerName": "Jim enterprises",
             "salesOrderNumber": "SO-07967",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-18",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-17T13:40:21+0530"
@@ -32830,7 +32835,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-18T12:28:53.422Z",
           "zohoBackupLastAttemptAt": "2026-09-18T12:30:32.388Z",
-          "zohoBackupSyncedAt": "2026-09-18T12:30:32.388Z"
+          "zohoBackupSyncedAt": "2026-09-18T12:30:32.388Z",
+          "processedAt": "2026-09-18T12:31:07.233Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
