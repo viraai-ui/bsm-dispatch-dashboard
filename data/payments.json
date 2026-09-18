@@ -1,6 +1,35 @@
 {
   "payments": [
     {
+      "customerName": "GARWARE FULFLEX I PVT LTD",
+      "salesOrderNumber": "SO-07828",
+      "paymentAmount": 28100,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "remarks": "Transaction Reference: CITIN26731541968    \nPayer/Remitter's Reference No: 0060003976    \nBeneficiary Details: ********** / HDFC0001127    \nPayment method: Electronic Fund Transfer     \nPayment Amount: 28100.00     \nCurrency: INR    \nProcessing Date: 18-Sep-2026    \nPayment Details:",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07828/2026-09-18/1789713944395-8897968e-7b80-4e2b-8338-87fb3cf078f7-ECS9522026091811220039_164.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07828%2F2026-09-18%2F1789713944395-8897968e-7b80-4e2b-8338-87fb3cf078f7-ECS9522026091811220039_164.pdf",
+          "name": "ECS9522026091811220039_164.pdf",
+          "contentType": "application/pdf",
+          "size": 40342,
+          "uploadedAt": "2026-09-18T06:45:45.287Z",
+          "expiresAt": "2026-10-18T06:45:45.287Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07828/2026-09-18/1789713944395-8897968e-7b80-4e2b-8338-87fb3cf078f7-ECS9522026091811220039_164.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07828%2F2026-09-18%2F1789713944395-8897968e-7b80-4e2b-8338-87fb3cf078f7-ECS9522026091811220039_164.pdf",
+      "screenshotName": "ECS9522026091811220039_164.pdf",
+      "publicDeleteTokenHash": "d9c2a15235a1c9daf15d49b97e5310368662efd4150e84ee71bf6cc98aa60593",
+      "id": "payment-02bc4016-d445-4708-a56e-d13f41ca2661",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "83bd899ff11c48c19fd4428d2cca5e9b",
+      "createdAt": "2026-09-18T06:45:45.995Z",
+      "updatedAt": "2026-09-18T06:45:45.995Z"
+    },
+    {
       "customerName": "SHAKTI ENTERPRISES",
       "salesOrderNumber": "SO-07973",
       "paymentAmount": 27878,
