@@ -50,56 +50,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-18T15:08:39+0530"
     },
-    "1154219000037120001": {
-      "id": "1154219000037120001",
-      "zohoSalesOrderId": "1154219000037120001",
-      "salesOrderNumber": "SO-07976",
-      "status": "open",
-      "customerName": "V.S. ENTERPRISES",
-      "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037120004",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000225152",
-          "rate": 45000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037120001-1154219000037120004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037120001",
-          "lineItemId": "1154219000037120004",
-          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-          "sku": "003-1",
-          "customerName": "V.S. ENTERPRISES",
-          "salesOrderNumber": "SO-07976",
-          "deliveryDate": "2026-09-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-18T13:17:38+0530"
-    },
     "1154219000037104003": {
       "id": "1154219000037104003",
       "zohoSalesOrderId": "1154219000037104003",
@@ -9718,7 +9668,6 @@
   },
   "orderIds": [
     "1154219000037125001",
-    "1154219000037120001",
     "1154219000037104003",
     "1154219000037090252",
     "1154219000037080004",
@@ -9766,8 +9715,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-18T09:40:30.865Z",
-  "lastAttemptAt": "2026-09-18T10:00:25.179Z",
+  "lastSuccessfulSyncAt": "2026-09-18T10:00:30.224Z",
+  "lastAttemptAt": "2026-09-18T10:00:30.224Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
