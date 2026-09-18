@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-50f960c2-604c-4b64-816b-12b7ad9f1d2c",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-42ac818e-7e4b-41a0-a922-1b95dddc1e70",
+      "salesOrderNumber": "SO-07979",
+      "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+      "paymentAmount": 50000,
+      "createdAt": "2026-09-18T15:29:15.450Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-91b7b45f-9bcf-4f6d-b4cf-6ef737f0304c",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-42ac818e-7e4b-41a0-a922-1b95dddc1e70",
+      "salesOrderNumber": "SO-07979",
+      "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+      "paymentAmount": 50000,
+      "createdAt": "2026-09-18T15:29:15.450Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-7a8cfc42-1f24-4214-b604-a4b6475f2062",
       "type": "payment-created",
       "recipientUserId": "u-admin",
