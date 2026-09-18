@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "SHAKTI ENTERPRISES",
+      "salesOrderNumber": "SO-07973",
+      "paymentAmount": 27878,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07973/2026-09-18/1789708499129-14c713f7-cfb3-4454-a2c5-e86a41ab92c9-836576d8-ea81-4e30-8b9c-aeda492ba3f7.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07973%2F2026-09-18%2F1789708499129-14c713f7-cfb3-4454-a2c5-e86a41ab92c9-836576d8-ea81-4e30-8b9c-aeda492ba3f7.jpg",
+          "name": "836576d8-ea81-4e30-8b9c-aeda492ba3f7.jpg",
+          "contentType": "image/jpeg",
+          "size": 219384,
+          "uploadedAt": "2026-09-18T05:15:06.530Z",
+          "expiresAt": "2026-10-18T05:15:06.530Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07973/2026-09-18/1789708499129-14c713f7-cfb3-4454-a2c5-e86a41ab92c9-836576d8-ea81-4e30-8b9c-aeda492ba3f7.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07973%2F2026-09-18%2F1789708499129-14c713f7-cfb3-4454-a2c5-e86a41ab92c9-836576d8-ea81-4e30-8b9c-aeda492ba3f7.jpg",
+      "screenshotName": "836576d8-ea81-4e30-8b9c-aeda492ba3f7.jpg",
+      "publicDeleteTokenHash": "36bc2b353358c76c7e2b3a704a3648a73bc59ee66af053149f98e634a4b9f25e",
+      "id": "payment-5cb14f25-fba3-4bb7-bb7e-df4811250343",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "8d3b367ec4c44181a1a7872e439c0823",
+      "createdAt": "2026-09-18T05:15:07.721Z",
+      "updatedAt": "2026-09-18T05:15:07.721Z"
+    },
+    {
       "customerName": "Yogesh Upper",
       "salesOrderNumber": "SO-07960",
       "paymentAmount": 125400,
