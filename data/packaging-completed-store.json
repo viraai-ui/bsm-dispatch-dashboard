@@ -21225,6 +21225,113 @@
       "machineIds": [
         "1154219000036558002-1154219000036558005-1"
       ]
+    },
+    "1154219000037011001": {
+      "completedAt": "2026-09-18T04:52:11.882Z",
+      "order": {
+        "id": "1154219000037011001",
+        "zohoSalesOrderId": "1154219000037011001",
+        "salesOrderNumber": "SO-07961",
+        "status": "open",
+        "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+        "shippingAddress": "No.74/1A2,75/1A2, KVT Garden,, Pullilyne Village Redhills, Chennai, -600052",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037011004",
+            "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
+            "sku": "831T",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000003332051",
+            "rate": 49000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037011005",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226295",
+            "rate": 32000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037011006",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charge Up to 5 Km",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 500,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037011001-1154219000037011004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271237",
+            "qrToken": "26271237",
+            "orderId": "1154219000037011001",
+            "lineItemId": "1154219000037011004",
+            "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
+            "sku": "831T",
+            "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07961",
+            "deliveryDate": "2026-09-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "wooden"
+          },
+          {
+            "id": "1154219000037011001-1154219000037011005-1",
+            "unitNumber": 2,
+            "serialNumber": "26271238",
+            "qrToken": "26271238",
+            "orderId": "1154219000037011001",
+            "lineItemId": "1154219000037011005",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07961",
+            "deliveryDate": "2026-09-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-16T17:33:35+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037011001-1154219000037011004-1",
+        "1154219000037011001-1154219000037011005-1"
+      ]
     }
   }
 }
