@@ -32431,7 +32431,9 @@
     "1154219000037090252": {
       "salesOrderId": "1154219000037090252",
       "salesOrderNumber": "SO-07974",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-18T07:23:17.035Z",
       "processedOrder": {
         "id": "1154219000037090252",
         "zohoSalesOrderId": "1154219000037090252",
@@ -32461,8 +32463,8 @@
           {
             "id": "1154219000037090252-1154219000037090255-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271246",
+            "qrToken": "26271246",
             "orderId": "1154219000037090252",
             "lineItemId": "1154219000037090255",
             "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
@@ -32470,14 +32472,17 @@
             "customerName": "Sunrise Enterprises",
             "salesOrderNumber": "SO-07974",
             "deliveryDate": "2026-09-18",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-18",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-18T12:42:37+0530"
@@ -32491,7 +32496,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-18T07:20:53.964Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-18T07:20:55.032Z"
+          "zohoBackupQueuedAt": "2026-09-18T07:20:55.032Z",
+          "processedAt": "2026-09-18T07:23:17.035Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
