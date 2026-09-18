@@ -7404,6 +7404,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037011001": {
+      "id": "ship-1789720905154-q2qj1",
+      "itemId": "1154219000037011001",
+      "orderId": "1154219000037011001",
+      "machineId": "1154219000037011001-1154219000037011004-1",
+      "salesOrderNumber": "SO-07961",
+      "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "VRL LOGISTICS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-18",
+      "notes": "",
+      "shippedAt": "2026-09-18T08:41:45.154Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
