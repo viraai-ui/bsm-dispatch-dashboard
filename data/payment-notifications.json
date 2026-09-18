@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-1d662544-c62a-45dc-80e2-cc88c51e5f45",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-bf28b55f-aece-4edd-9f4c-87fa422fa969",
+      "salesOrderNumber": "SO-07977",
+      "customerName": "LIYAN TRADERS",
+      "paymentAmount": 44100,
+      "createdAt": "2026-09-18T09:15:39.998Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-c1c60814-f512-43d0-a1ef-2e5e0290c200",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-bf28b55f-aece-4edd-9f4c-87fa422fa969",
+      "salesOrderNumber": "SO-07977",
+      "customerName": "LIYAN TRADERS",
+      "paymentAmount": 44100,
+      "createdAt": "2026-09-18T09:15:39.998Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-37380ad3-4719-4827-980b-0e5b0d04e460",
       "type": "payment-created",
       "recipientUserId": "u-admin",
