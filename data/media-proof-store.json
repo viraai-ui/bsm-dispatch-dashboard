@@ -2853,7 +2853,26 @@
       "orderId": "1154219000037039001",
       "salesOrderNumber": "SO-07965",
       "submittedAt": null,
-      "units": {},
+      "units": {
+        "1154219000037039001-1154219000037039004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000037039001-1154219000037039004-1-video-1789729247816-c19ugx",
+              "name": "VID_20260918_163014.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-18%2FSO-07965%2F1154219000037039001-1154219000037039004-1%2FStrap-Cutting-machine-2026-09-18T11-00-25-111Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-18/SO-07965/1154219000037039001-1154219000037039004-1/Strap-Cutting-machine-2026-09-18T11-00-25-111Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-18T11:00:47.816Z",
+              "expiresAt": "2026-10-09T11:00:47.816Z"
+            }
+          ]
+        }
+      },
       "videoNotRequired": false
     },
     "1154219000036904013": {
