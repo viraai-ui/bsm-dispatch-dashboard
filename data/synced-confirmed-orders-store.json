@@ -478,101 +478,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-16T18:14:49+0530"
     },
-    "1154219000037011001": {
-      "id": "1154219000037011001",
-      "zohoSalesOrderId": "1154219000037011001",
-      "salesOrderNumber": "SO-07961",
-      "status": "open",
-      "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
-      "shippingAddress": "No.74/1A2,75/1A2, KVT Garden,, Pullilyne Village Redhills, Chennai, -600052",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-09-16",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037011004",
-          "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
-          "sku": "831T",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000003332051",
-          "rate": 49000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000037011005",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226295",
-          "rate": 32000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000037011006",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charge Up to 5 Km",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 500,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037011001-1154219000037011004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037011001",
-          "lineItemId": "1154219000037011004",
-          "itemName": "Hotmelt Roller Coater (12 Inch) Table Top Model",
-          "sku": "831T",
-          "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07961",
-          "deliveryDate": "2026-09-16",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000037011001-1154219000037011005-1",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037011001",
-          "lineItemId": "1154219000037011005",
-          "itemName": "Foil Stamping machine",
-          "sku": "90-5",
-          "customerName": "BUTLER LEATHER GOODS FACTORY INDIA PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07961",
-          "deliveryDate": "2026-09-16",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-16T17:33:35+0530"
-    },
     "1154219000036935021": {
       "id": "1154219000036935021",
       "zohoSalesOrderId": "1154219000036935021",
@@ -9770,7 +9675,6 @@
     "1154219000037053014",
     "1154219000037039001",
     "1154219000036975215",
-    "1154219000037011001",
     "1154219000036935021",
     "1154219000036916004",
     "1154219000036876003",
@@ -9811,8 +9715,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-18T08:40:36.069Z",
-  "lastAttemptAt": "2026-09-18T08:56:22.380Z",
+  "lastSuccessfulSyncAt": "2026-09-18T08:56:26.226Z",
+  "lastAttemptAt": "2026-09-18T08:56:26.227Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
