@@ -610,56 +610,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-15T10:47:13+0530"
     },
-    "1154219000036909011": {
-      "id": "1154219000036909011",
-      "zohoSalesOrderId": "1154219000036909011",
-      "salesOrderNumber": "SO-07946",
-      "status": "open",
-      "customerName": "LAMBA POLY SOLUTIONS",
-      "shippingAddress": "E-48, SITE-C SINKANDRA, Runkata,, Agra, Uttar Pradesh, 282007, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036909014",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225787",
-          "rate": 26000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036909011-1154219000036909014-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036909011",
-          "lineItemId": "1154219000036909014",
-          "itemName": "Round Blade Edge trimming Machine",
-          "sku": "902",
-          "customerName": "LAMBA POLY SOLUTIONS",
-          "salesOrderNumber": "SO-07946",
-          "deliveryDate": "2026-09-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T17:41:01+0530"
-    },
     "1154219000036876003": {
       "id": "1154219000036876003",
       "zohoSalesOrderId": "1154219000036876003",
@@ -9858,7 +9808,6 @@
     "1154219000036935021",
     "1154219000036904013",
     "1154219000036916004",
-    "1154219000036909011",
     "1154219000036876003",
     "1154219000036722010",
     "1154219000036721021",
@@ -9899,8 +9848,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-18T05:53:22.441Z",
-  "lastAttemptAt": "2026-09-18T06:00:25.451Z",
+  "lastSuccessfulSyncAt": "2026-09-18T06:00:32.131Z",
+  "lastAttemptAt": "2026-09-18T06:00:32.131Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
