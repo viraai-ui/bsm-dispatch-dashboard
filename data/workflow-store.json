@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271247,
+  "serialCounter": 26271248,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -32612,6 +32612,70 @@
           "processedAt": "2026-09-18T07:50:44.656Z",
           "dispatchNote": "LOCAL",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000037120001": {
+      "salesOrderId": "1154219000037120001",
+      "salesOrderNumber": "SO-07976",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037120001",
+        "zohoSalesOrderId": "1154219000037120001",
+        "salesOrderNumber": "SO-07976",
+        "status": "open",
+        "customerName": "V.S. ENTERPRISES",
+        "shippingAddress": "2ND, KHEWAT NO. 181/20, PARNALA, ROHTAK ROAD, TEHSIL- BAHADURGARH, Jhajjar, Haryana,, 124507",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037120004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225152",
+            "rate": 45000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037120001-1154219000037120004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037120001",
+            "lineItemId": "1154219000037120004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "V.S. ENTERPRISES",
+            "salesOrderNumber": "SO-07976",
+            "deliveryDate": "2026-09-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-18T13:17:38+0530"
+      },
+      "machines": {
+        "1154219000037120001-1154219000037120004-1": {
+          "machineUnitId": "1154219000037120001-1154219000037120004-1",
+          "lineItemId": "1154219000037120004",
+          "serialNumber": "26271248",
+          "qrToken": "26271248",
+          "qrStatus": "pending"
         }
       }
     }
