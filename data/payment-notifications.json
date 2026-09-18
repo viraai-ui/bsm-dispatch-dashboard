@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-6ba4b84a-1506-432a-b371-967eaa2b7152",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-0a79194c-0bb5-44e8-ae16-7055746c47db",
+      "salesOrderNumber": "SO-07975",
+      "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
+      "paymentAmount": 62540,
+      "createdAt": "2026-09-18T07:41:17.166Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ae9535da-62f1-4f2a-b888-5cf264d027ef",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-0a79194c-0bb5-44e8-ae16-7055746c47db",
+      "salesOrderNumber": "SO-07975",
+      "customerName": "SILVER SHEEN ENTERPRISES PVT LTD",
+      "paymentAmount": 62540,
+      "createdAt": "2026-09-18T07:41:17.166Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-33cf150d-4d8b-4e74-aa99-93ca64b0b692",
       "type": "payment-created",
       "recipientUserId": "u-admin",
