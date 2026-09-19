@@ -33238,7 +33238,9 @@
     "1154219000035884008": {
       "salesOrderId": "1154219000035884008",
       "salesOrderNumber": "SO-07778",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T08:17:08.424Z",
       "processedOrder": {
         "id": "1154219000035884008",
         "zohoSalesOrderId": "1154219000035884008",
@@ -33268,8 +33270,8 @@
           {
             "id": "1154219000035884008-1154219000035884011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271255",
+            "qrToken": "26271255",
             "orderId": "1154219000035884008",
             "lineItemId": "1154219000035884011",
             "itemName": "Beam Cutting Press (60Ton)",
@@ -33277,14 +33279,17 @@
             "customerName": "SEET KAMAL PRIVATE LIMITED",
             "salesOrderNumber": "SO-07778",
             "deliveryDate": "2026-08-31",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "1600*810 mm"
+            "itemDescription": "1600*810 mm",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Able",
+            "dispatchNote": "GOOD WRAPPING"
           }
         ],
         "zohoLastModifiedTime": "2026-08-21T17:26:56+0530"
@@ -33298,7 +33303,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T08:16:10.036Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T08:16:11.065Z"
+          "zohoBackupQueuedAt": "2026-09-19T08:16:11.065Z",
+          "processedAt": "2026-09-19T08:17:08.424Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "Able"
         }
       }
     }
