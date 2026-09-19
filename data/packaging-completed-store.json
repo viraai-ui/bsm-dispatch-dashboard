@@ -21651,6 +21651,65 @@
       "machineIds": [
         "1154219000036975215-1154219000036975218-1"
       ]
+    },
+    "1154219000037053014": {
+      "completedAt": "2026-09-19T08:01:56.874Z",
+      "order": {
+        "id": "1154219000037053014",
+        "zohoSalesOrderId": "1154219000037053014",
+        "salesOrderNumber": "SO-07967",
+        "status": "open",
+        "customerName": "Jim enterprises",
+        "shippingAddress": "1049, Basti Mithu, Jalandhar, Punjab, 144002, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037053017",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280682",
+            "rate": 28000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037053014-1154219000037053017-1",
+            "unitNumber": 1,
+            "serialNumber": "26271250",
+            "qrToken": "26271250",
+            "orderId": "1154219000037053014",
+            "lineItemId": "1154219000037053017",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "Jim enterprises",
+            "salesOrderNumber": "SO-07967",
+            "deliveryDate": "2026-09-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-18",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-17T13:40:21+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037053014-1154219000037053017-1"
+      ]
     }
   }
 }
