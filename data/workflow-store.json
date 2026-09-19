@@ -32845,7 +32845,9 @@
     "1154219000037173001": {
       "salesOrderId": "1154219000037173001",
       "salesOrderNumber": "SO-07980",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T05:50:41.256Z",
       "processedOrder": {
         "id": "1154219000037173001",
         "zohoSalesOrderId": "1154219000037173001",
@@ -32875,8 +32877,8 @@
           {
             "id": "1154219000037173001-1154219000037173004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271251",
+            "qrToken": "26271251",
             "orderId": "1154219000037173001",
             "lineItemId": "1154219000037173004",
             "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
@@ -32884,14 +32886,17 @@
             "customerName": "Laklite Aashirwad Footcare Private Limited",
             "salesOrderNumber": "SO-07980",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T11:16:53+0530"
@@ -32905,7 +32910,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T05:47:57.073Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T05:48:00.476Z"
+          "zohoBackupQueuedAt": "2026-09-19T05:48:00.476Z",
+          "processedAt": "2026-09-19T05:50:41.256Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
