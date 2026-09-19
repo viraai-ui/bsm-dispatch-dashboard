@@ -34169,7 +34169,9 @@
     "1154219000037160004": {
       "salesOrderId": "1154219000037160004",
       "salesOrderNumber": "SO-07984",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T10:39:21.945Z",
       "processedOrder": {
         "id": "1154219000037160004",
         "zohoSalesOrderId": "1154219000037160004",
@@ -34235,8 +34237,8 @@
           {
             "id": "1154219000037160004-1154219000037160010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271270",
+            "qrToken": "26271270",
             "orderId": "1154219000037160004",
             "lineItemId": "1154219000037160010",
             "itemName": "zigzag binding (Cylinder bed)",
@@ -34244,20 +34246,23 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037160004-1154219000037160007-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271271",
+            "qrToken": "26271271",
             "orderId": "1154219000037160004",
             "lineItemId": "1154219000037160007",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -34265,20 +34270,23 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037160004-1154219000037160008-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271272",
+            "qrToken": "26271272",
             "orderId": "1154219000037160004",
             "lineItemId": "1154219000037160008",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -34286,20 +34294,23 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037160004-1154219000037160009-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271273",
+            "qrToken": "26271273",
             "orderId": "1154219000037160004",
             "lineItemId": "1154219000037160009",
             "itemName": "Zigzag Flatbed",
@@ -34307,14 +34318,17 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T15:19:56+0530"
@@ -34328,7 +34342,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T10:36:48.729Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z"
+          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z",
+          "processedAt": "2026-09-19T10:39:21.945Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         },
         "1154219000037160004-1154219000037160007-1": {
           "machineUnitId": "1154219000037160004-1154219000037160007-1",
@@ -34338,7 +34355,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T10:36:48.729Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z"
+          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z",
+          "processedAt": "2026-09-19T10:39:21.945Z",
+          "dispatchNote": "LOCAL",
+          "vendor": ""
         },
         "1154219000037160004-1154219000037160008-1": {
           "machineUnitId": "1154219000037160004-1154219000037160008-1",
@@ -34348,7 +34368,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T10:36:48.729Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z"
+          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z",
+          "processedAt": "2026-09-19T10:39:21.945Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         },
         "1154219000037160004-1154219000037160009-1": {
           "machineUnitId": "1154219000037160004-1154219000037160009-1",
@@ -34358,7 +34381,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T10:36:48.729Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z"
+          "zohoBackupQueuedAt": "2026-09-19T10:36:49.945Z",
+          "processedAt": "2026-09-19T10:39:21.945Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         }
       }
     }
