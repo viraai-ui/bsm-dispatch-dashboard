@@ -34582,7 +34582,9 @@
     "1154219000037173014": {
       "salesOrderId": "1154219000037173014",
       "salesOrderNumber": "SO-07986",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T10:49:12.451Z",
       "processedOrder": {
         "id": "1154219000037173014",
         "zohoSalesOrderId": "1154219000037173014",
@@ -34612,8 +34614,8 @@
           {
             "id": "1154219000037173014-1154219000037173017-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271275",
+            "qrToken": "26271275",
             "orderId": "1154219000037173014",
             "lineItemId": "1154219000037173017",
             "itemName": "ROLLER PRESSING MACHINE",
@@ -34621,14 +34623,17 @@
             "customerName": "Footwarrior kreations",
             "salesOrderNumber": "SO-07986",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Bala Engennering",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T16:03:56+0530"
@@ -34642,7 +34647,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T10:47:59.770Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T10:48:01.041Z"
+          "zohoBackupQueuedAt": "2026-09-19T10:48:01.041Z",
+          "processedAt": "2026-09-19T10:49:12.451Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Bala Engennering"
         }
       }
     }
