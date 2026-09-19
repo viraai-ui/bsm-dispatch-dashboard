@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271274,
+  "serialCounter": 26271275,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -34576,6 +34576,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-19T10:45:31.596Z",
           "zohoBackupSyncedAt": "2026-09-19T10:45:31.596Z"
+        }
+      }
+    },
+    "1154219000037173014": {
+      "salesOrderId": "1154219000037173014",
+      "salesOrderNumber": "SO-07986",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037173014",
+        "zohoSalesOrderId": "1154219000037173014",
+        "salesOrderNumber": "SO-07986",
+        "status": "open",
+        "customerName": "Footwarrior kreations",
+        "shippingAddress": "A-306, DSIIDC, DSIDC Industrial Area Narela, New Delhi, North Delhi, Delhi,, Delhi, 110040, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037173017",
+            "itemName": "ROLLER PRESSING MACHINE",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280386",
+            "rate": 40000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037173014-1154219000037173017-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037173014",
+            "lineItemId": "1154219000037173017",
+            "itemName": "ROLLER PRESSING MACHINE",
+            "sku": "",
+            "customerName": "Footwarrior kreations",
+            "salesOrderNumber": "SO-07986",
+            "deliveryDate": "2026-09-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T16:03:56+0530"
+      },
+      "machines": {
+        "1154219000037173014-1154219000037173017-1": {
+          "machineUnitId": "1154219000037173014-1154219000037173017-1",
+          "lineItemId": "1154219000037173017",
+          "serialNumber": "26271275",
+          "qrToken": "26271275",
+          "qrStatus": "pending"
         }
       }
     }
