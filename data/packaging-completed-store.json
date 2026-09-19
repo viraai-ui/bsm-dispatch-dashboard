@@ -21710,6 +21710,113 @@
       "machineIds": [
         "1154219000037053014-1154219000037053017-1"
       ]
+    },
+    "1154219000037162001": {
+      "completedAt": "2026-09-19T08:02:06.352Z",
+      "order": {
+        "id": "1154219000037162001",
+        "zohoSalesOrderId": "1154219000037162001",
+        "salesOrderNumber": "SO-07979",
+        "status": "open",
+        "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+        "shippingAddress": "KH. 345, Sultanpur, MG Road,, New Delhi, Delhi, 110074, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037162004",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "With Stand and Table.",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280585",
+            "rate": 59000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037162005",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Clutch Motor",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 6500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037162006",
+            "itemName": "Spare Parts (Sewing Machine)",
+            "sku": "",
+            "description": "Stitching Guide",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001498121",
+            "rate": 2500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037162001-1154219000037162004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271252",
+            "qrToken": "26271252",
+            "orderId": "1154219000037162001",
+            "lineItemId": "1154219000037162004",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+            "salesOrderNumber": "SO-07979",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "With Stand and Table.",
+            "warrantyStart": "2026-09-19",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000037162001-1154219000037162004-2",
+            "unitNumber": 2,
+            "serialNumber": "26271253",
+            "qrToken": "26271253",
+            "orderId": "1154219000037162001",
+            "lineItemId": "1154219000037162004",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+            "salesOrderNumber": "SO-07979",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "With Stand and Table.",
+            "warrantyStart": "2026-09-19",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T10:22:22+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037162001-1154219000037162004-1",
+        "1154219000037162001-1154219000037162004-2"
+      ]
     }
   }
 }
