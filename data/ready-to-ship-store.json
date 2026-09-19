@@ -7476,6 +7476,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037173001": {
+      "id": "ship-1789804353588-rfjaw",
+      "itemId": "1154219000037173001",
+      "orderId": "1154219000037173001",
+      "machineId": "1154219000037173001-1154219000037173004-1",
+      "salesOrderNumber": "SO-07980",
+      "customerName": "Laklite Aashirwad Footcare Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS1435",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-19",
+      "notes": "",
+      "shippedAt": "2026-09-19T07:52:33.588Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
