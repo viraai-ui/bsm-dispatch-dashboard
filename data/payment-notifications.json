@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-dd2de1a8-d6cb-4cb6-8f2e-012ccbd771c1",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-ebaff437-7a06-4d9f-9a02-d1b6e840829f",
+      "salesOrderNumber": "SO-07984",
+      "customerName": "A - MAX INDIA",
+      "paymentAmount": 229290,
+      "createdAt": "2026-09-19T10:30:44.722Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-9d189274-db3a-4455-b3f4-a7957cf79a8a",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-ebaff437-7a06-4d9f-9a02-d1b6e840829f",
+      "salesOrderNumber": "SO-07984",
+      "customerName": "A - MAX INDIA",
+      "paymentAmount": 229290,
+      "createdAt": "2026-09-19T10:30:44.722Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-fb1c66f0-598e-4cdc-b44b-7f17961eb9d7",
       "type": "payment-created",
       "recipientUserId": "u-admin",
