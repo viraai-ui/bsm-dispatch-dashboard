@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271254,
+  "serialCounter": 26271255,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -33232,6 +33232,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-19T06:30:33.034Z",
           "zohoBackupSyncedAt": "2026-09-19T06:30:33.034Z"
+        }
+      }
+    },
+    "1154219000035884008": {
+      "salesOrderId": "1154219000035884008",
+      "salesOrderNumber": "SO-07778",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035884008",
+        "zohoSalesOrderId": "1154219000035884008",
+        "salesOrderNumber": "SO-07778",
+        "status": "open",
+        "customerName": "SEET KAMAL PRIVATE LIMITED",
+        "shippingAddress": "3A, KAMANI ROAD, JHOTWARA INDUSTRIAL AREA,, Jaipur, Rajasthan, 302012, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035884011",
+            "itemName": "Beam Cutting Press (60Ton)",
+            "sku": "",
+            "description": "1600*810 mm",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000007041096",
+            "rate": 780000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035884008-1154219000035884011-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035884008",
+            "lineItemId": "1154219000035884011",
+            "itemName": "Beam Cutting Press (60Ton)",
+            "sku": "",
+            "customerName": "SEET KAMAL PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07778",
+            "deliveryDate": "2026-08-31",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "1600*810 mm"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-21T17:26:56+0530"
+      },
+      "machines": {
+        "1154219000035884008-1154219000035884011-1": {
+          "machineUnitId": "1154219000035884008-1154219000035884011-1",
+          "lineItemId": "1154219000035884011",
+          "serialNumber": "26271255",
+          "qrToken": "26271255",
+          "qrStatus": "pending"
         }
       }
     }
