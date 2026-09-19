@@ -21580,6 +21580,77 @@
       "machineIds": [
         "1154219000037173001-1154219000037173004-1"
       ]
+    },
+    "1154219000036975215": {
+      "completedAt": "2026-09-19T08:01:46.599Z",
+      "order": {
+        "id": "1154219000036975215",
+        "zohoSalesOrderId": "1154219000036975215",
+        "salesOrderNumber": "SO-07963",
+        "status": "open",
+        "customerName": "REDTAPE LIMITED",
+        "shippingAddress": "GROUND FLOOR , UNIT- 5 , SITE - 02, UPSIDC INDL AREA,, BY PASS ROAD, UNNAO, UP, 209801, ., Uttar Pradesh, 209801, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036975218",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226814",
+            "rate": 82000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036975219",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Build Scale Manufacture Pvt. Ltd. to RedTape Limited, Unnao.",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 2800,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036975215-1154219000036975218-1",
+            "unitNumber": 1,
+            "serialNumber": "26271236",
+            "qrToken": "26271236",
+            "orderId": "1154219000036975215",
+            "lineItemId": "1154219000036975218",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "REDTAPE LIMITED",
+            "salesOrderNumber": "SO-07963",
+            "deliveryDate": "2026-09-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-16T18:14:49+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036975215-1154219000036975218-1"
+      ]
     }
   }
 }
