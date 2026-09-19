@@ -1,6 +1,35 @@
 {
   "payments": [
     {
+      "customerName": "DILVIKA ORFIT",
+      "salesOrderNumber": "SO-07983",
+      "paymentAmount": 100000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Manisha",
+      "remarks": "This is advance payment",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07983/2026-09-19/1789820274918-3e4598cd-b6dd-4cb9-adeb-3af10daf7e32-WhatsApp-Image-2026-09-19-at-13.40.34.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07983%2F2026-09-19%2F1789820274918-3e4598cd-b6dd-4cb9-adeb-3af10daf7e32-WhatsApp-Image-2026-09-19-at-13.40.34.jpg",
+          "name": "WhatsApp Image 2026-09-19 at 13.40.34.jpeg",
+          "contentType": "image/jpeg",
+          "size": 53584,
+          "uploadedAt": "2026-09-19T12:17:55.620Z",
+          "expiresAt": "2026-10-19T12:17:55.620Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07983/2026-09-19/1789820274918-3e4598cd-b6dd-4cb9-adeb-3af10daf7e32-WhatsApp-Image-2026-09-19-at-13.40.34.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07983%2F2026-09-19%2F1789820274918-3e4598cd-b6dd-4cb9-adeb-3af10daf7e32-WhatsApp-Image-2026-09-19-at-13.40.34.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-19 at 13.40.34.jpeg",
+      "publicDeleteTokenHash": "1bf442a8d9724ff6f07ce49a64627adca431b9849f3ca1bb69cfee29946ede56",
+      "id": "payment-fca81a4b-03de-42ff-8acd-5d386c1a2271",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "c56e8526f22c4942903893967fa403cf",
+      "createdAt": "2026-09-19T12:17:56.885Z",
+      "updatedAt": "2026-09-19T12:17:56.885Z"
+    },
+    {
       "customerName": "Footwarrior kreations",
       "salesOrderNumber": "SO-07986",
       "paymentAmount": 47200,
