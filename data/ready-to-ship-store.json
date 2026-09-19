@@ -7507,6 +7507,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036975215": {
+      "id": "ship-1789813023432-qvd5d",
+      "itemId": "1154219000036975215",
+      "orderId": "1154219000036975215",
+      "machineId": "1154219000036975215-1154219000036975218-1",
+      "salesOrderNumber": "SO-07963",
+      "customerName": "REDTAPE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "VRL LOGISTICS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-19 at 12.11.27 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-19%2FSO-07963%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-19T10-16-59-109Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-19/SO-07963/shipment-lr-builty/Shipment-LR-Builty-2026-09-19T10-16-59-109Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-19T10:17:03.432Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-18",
+      "notes": "",
+      "shippedAt": "2026-09-19T10:17:03.432Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
