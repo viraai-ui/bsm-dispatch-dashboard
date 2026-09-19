@@ -21462,6 +21462,65 @@
       "machineIds": [
         "1154219000037125001-1154219000037125004-1"
       ]
+    },
+    "1154219000037090252": {
+      "completedAt": "2026-09-19T06:46:13.494Z",
+      "order": {
+        "id": "1154219000037090252",
+        "zohoSalesOrderId": "1154219000037090252",
+        "salesOrderNumber": "SO-07974",
+        "status": "open",
+        "customerName": "Sunrise Enterprises",
+        "shippingAddress": "Plot No. 550, Sector- 23, N.I.T., Faridabad, Haryana",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-09-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037090255",
+            "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
+            "sku": "832",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225329",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037090252-1154219000037090255-1",
+            "unitNumber": 1,
+            "serialNumber": "26271246",
+            "qrToken": "26271246",
+            "orderId": "1154219000037090252",
+            "lineItemId": "1154219000037090255",
+            "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
+            "sku": "832",
+            "customerName": "Sunrise Enterprises",
+            "salesOrderNumber": "SO-07974",
+            "deliveryDate": "2026-09-18",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-18",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-18T12:42:37+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037090252-1154219000037090255-1"
+      ]
     }
   }
 }
