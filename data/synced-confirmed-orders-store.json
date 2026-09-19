@@ -6041,56 +6041,6 @@
       ],
       "zohoLastModifiedTime": "2026-08-21T16:44:17+0530"
     },
-    "1154219000035884008": {
-      "id": "1154219000035884008",
-      "zohoSalesOrderId": "1154219000035884008",
-      "salesOrderNumber": "SO-07778",
-      "status": "open",
-      "customerName": "SEET KAMAL PRIVATE LIMITED",
-      "shippingAddress": "3A, KAMANI ROAD, JHOTWARA INDUSTRIAL AREA,, Jaipur, Rajasthan, 302012, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-08-31",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035884011",
-          "itemName": "Beam Cutting Press (60Ton)",
-          "sku": "",
-          "description": "1600*810 mm",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000007041096",
-          "rate": 780000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035884008-1154219000035884011-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035884008",
-          "lineItemId": "1154219000035884011",
-          "itemName": "Beam Cutting Press (60Ton)",
-          "sku": "",
-          "customerName": "SEET KAMAL PRIVATE LIMITED",
-          "salesOrderNumber": "SO-07778",
-          "deliveryDate": "2026-08-31",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "1600*810 mm"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-08-21T17:26:56+0530"
-    },
     "1154219000035891004": {
       "id": "1154219000035891004",
       "zohoSalesOrderId": "1154219000035891004",
@@ -7183,56 +7133,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-07-18T17:36:25+0530"
-    },
-    "1154219000034276003": {
-      "id": "1154219000034276003",
-      "zohoSalesOrderId": "1154219000034276003",
-      "salesOrderNumber": "SO-07491",
-      "status": "open",
-      "customerName": "Aqdus Enterprises",
-      "shippingAddress": "P. No. B-2, Nihal Vihar, Rohtak Road, Nangloi-2, Bhanch Post Office, Nangloi, Delhi, 110041, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-08-10",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000034276006",
-          "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
-          "sku": "917 [HH]",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000420019",
-          "rate": 478000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000034276003-1154219000034276006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000034276003",
-          "lineItemId": "1154219000034276006",
-          "itemName": "Hydraulic Sole Attaching Machine (for High Heel)",
-          "sku": "917 [HH]",
-          "customerName": "Aqdus Enterprises",
-          "salesOrderNumber": "SO-07491",
-          "deliveryDate": "2026-08-10",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-07-16T10:19:43+0530"
     },
     "1154219000033890006": {
       "id": "1154219000033890006",
@@ -9868,7 +9768,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-04-21T16:19:34+0530"
+      "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     }
   },
   "orderIds": [
@@ -9899,7 +9799,6 @@
     "1154219000035994029",
     "1154219000035939003",
     "1154219000035933004",
-    "1154219000035884008",
     "1154219000035891004",
     "1154219000035794018",
     "1154219000035711007",
@@ -9911,7 +9810,6 @@
     "1154219000034750001",
     "1154219000034633005",
     "1154219000034263026",
-    "1154219000034276003",
     "1154219000033890006",
     "1154219000032974004",
     "1154219000032135005",
@@ -9919,8 +9817,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-19T12:55:02.603Z",
-  "lastAttemptAt": "2026-09-19T13:00:25.363Z",
+  "lastSuccessfulSyncAt": "2026-09-19T13:00:31.296Z",
+  "lastAttemptAt": "2026-09-19T13:00:31.296Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
