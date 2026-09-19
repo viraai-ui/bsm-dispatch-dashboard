@@ -21817,6 +21817,77 @@
         "1154219000037162001-1154219000037162004-1",
         "1154219000037162001-1154219000037162004-2"
       ]
+    },
+    "1154219000037039001": {
+      "completedAt": "2026-09-19T08:02:25.520Z",
+      "order": {
+        "id": "1154219000037039001",
+        "zohoSalesOrderId": "1154219000037039001",
+        "salesOrderNumber": "SO-07965",
+        "status": "open",
+        "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
+        "shippingAddress": "TAVADIYA CROSS LANE, N.V.COMPLEX, HIGHWAY, SIDHPUR, Patan, Gujarat, 384151, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037039004",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "description": "With 800W Power Saving Motor",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000278462",
+            "rate": 86700,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037039005",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 930,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037039001-1154219000037039004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271241",
+            "qrToken": "26271241",
+            "orderId": "1154219000037039001",
+            "lineItemId": "1154219000037039004",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
+            "salesOrderNumber": "SO-07965",
+            "deliveryDate": "2026-09-17",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "With 800W Power Saving Motor",
+            "warrantyStart": "2026-09-17",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-17T11:38:18+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037039001-1154219000037039004-1"
+      ]
     }
   }
 }
