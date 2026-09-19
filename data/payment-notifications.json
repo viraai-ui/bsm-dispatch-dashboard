@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-cceedd33-fb84-483b-979b-aabb571c5d23",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-fca81a4b-03de-42ff-8acd-5d386c1a2271",
+      "salesOrderNumber": "SO-07983",
+      "customerName": "DILVIKA ORFIT",
+      "paymentAmount": 100000,
+      "createdAt": "2026-09-19T12:17:59.308Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-59e5d825-54ff-43b4-bd73-377c6c9492cc",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-fca81a4b-03de-42ff-8acd-5d386c1a2271",
+      "salesOrderNumber": "SO-07983",
+      "customerName": "DILVIKA ORFIT",
+      "paymentAmount": 100000,
+      "createdAt": "2026-09-19T12:17:59.308Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-abfcbcbb-b005-45b3-80d2-331e16d7c288",
       "type": "payment-created",
       "recipientUserId": "u-admin",
