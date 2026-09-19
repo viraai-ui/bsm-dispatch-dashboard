@@ -7697,6 +7697,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000034276003": {
+      "id": "ship-1789822713463-aplgh",
+      "itemId": "1154219000034276003",
+      "orderId": "1154219000034276003",
+      "machineId": "1154219000034276003-1154219000034276006-1",
+      "salesOrderNumber": "SO-07491",
+      "customerName": "Aqdus Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAB2781",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-19",
+      "notes": "",
+      "shippedAt": "2026-09-19T12:58:33.463Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
