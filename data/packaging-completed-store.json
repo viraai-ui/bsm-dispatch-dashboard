@@ -21521,6 +21521,65 @@
       "machineIds": [
         "1154219000037090252-1154219000037090255-1"
       ]
+    },
+    "1154219000037173001": {
+      "completedAt": "2026-09-19T07:45:12.467Z",
+      "order": {
+        "id": "1154219000037173001",
+        "zohoSalesOrderId": "1154219000037173001",
+        "salesOrderNumber": "SO-07980",
+        "status": "open",
+        "customerName": "Laklite Aashirwad Footcare Private Limited",
+        "shippingAddress": "154, Sector 17, HSIIDC Industrial Estate, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037173004",
+            "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+            "sku": "600D",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000021417349",
+            "rate": 45000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037173001-1154219000037173004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271251",
+            "qrToken": "26271251",
+            "orderId": "1154219000037173001",
+            "lineItemId": "1154219000037173004",
+            "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+            "sku": "600D",
+            "customerName": "Laklite Aashirwad Footcare Private Limited",
+            "salesOrderNumber": "SO-07980",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T11:16:53+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037173001-1154219000037173004-1"
+      ]
     }
   }
 }
