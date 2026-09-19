@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271269,
+  "serialCounter": 26271273,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -34163,6 +34163,190 @@
           "processedAt": "2026-09-19T10:35:52.137Z",
           "dispatchNote": "LOCAL",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000037160004": {
+      "salesOrderId": "1154219000037160004",
+      "salesOrderNumber": "SO-07984",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037160004",
+        "zohoSalesOrderId": "1154219000037160004",
+        "salesOrderNumber": "SO-07984",
+        "status": "open",
+        "customerName": "A - MAX INDIA",
+        "shippingAddress": "KILLA NO 31//13/5 (3-15), 14/2/1 (3-7), KHEWAT NO 1089, KHATA NO 1232, KUNDLI, NARELA PIAU MANIHARY ROAD, Toyota Galaxy Toyota Spare Parts Parking, TEHSIL RAI, Kundli,, Sonipat, Haryana, 131028, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037160010",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226814",
+            "rate": 75000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037160007",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 50000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037160008",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225279",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037160009",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226755",
+            "rate": 22000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037160004-1154219000037160010-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037160004",
+            "lineItemId": "1154219000037160010",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "A - MAX INDIA",
+            "salesOrderNumber": "SO-07984",
+            "deliveryDate": "2026-09-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037160004-1154219000037160007-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037160004",
+            "lineItemId": "1154219000037160007",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "A - MAX INDIA",
+            "salesOrderNumber": "SO-07984",
+            "deliveryDate": "2026-09-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037160004-1154219000037160008-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037160004",
+            "lineItemId": "1154219000037160008",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "A - MAX INDIA",
+            "salesOrderNumber": "SO-07984",
+            "deliveryDate": "2026-09-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037160004-1154219000037160009-1",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037160004",
+            "lineItemId": "1154219000037160009",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "customerName": "A - MAX INDIA",
+            "salesOrderNumber": "SO-07984",
+            "deliveryDate": "2026-09-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T15:19:56+0530"
+      },
+      "machines": {
+        "1154219000037160004-1154219000037160010-1": {
+          "machineUnitId": "1154219000037160004-1154219000037160010-1",
+          "lineItemId": "1154219000037160010",
+          "serialNumber": "26271270",
+          "qrToken": "26271270",
+          "qrStatus": "pending"
+        },
+        "1154219000037160004-1154219000037160007-1": {
+          "machineUnitId": "1154219000037160004-1154219000037160007-1",
+          "lineItemId": "1154219000037160007",
+          "serialNumber": "26271271",
+          "qrToken": "26271271",
+          "qrStatus": "pending"
+        },
+        "1154219000037160004-1154219000037160008-1": {
+          "machineUnitId": "1154219000037160004-1154219000037160008-1",
+          "lineItemId": "1154219000037160008",
+          "serialNumber": "26271272",
+          "qrToken": "26271272",
+          "qrStatus": "pending"
+        },
+        "1154219000037160004-1154219000037160009-1": {
+          "machineUnitId": "1154219000037160004-1154219000037160009-1",
+          "lineItemId": "1154219000037160009",
+          "serialNumber": "26271273",
+          "qrToken": "26271273",
+          "qrStatus": "pending"
         }
       }
     }
