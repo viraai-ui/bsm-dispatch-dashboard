@@ -7573,6 +7573,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037125001": {
+      "id": "ship-1789818011399-o5ic1",
+      "itemId": "1154219000037125001",
+      "orderId": "1154219000037125001",
+      "machineId": "1154219000037125001-1154219000037125004-1",
+      "salesOrderNumber": "SO-07977",
+      "customerName": "LIYAN TRADERS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-18",
+      "notes": "",
+      "shippedAt": "2026-09-19T11:40:11.399Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
