@@ -674,56 +674,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-18T17:57:41+0530"
     },
-    "1154219000037125001": {
-      "id": "1154219000037125001",
-      "zohoSalesOrderId": "1154219000037125001",
-      "salesOrderNumber": "SO-07977",
-      "status": "open",
-      "customerName": "LIYAN TRADERS",
-      "shippingAddress": "GROUND FLOOR, PLOT 2, KHEWAT 1772,1736 KHATONI 3084, Cooler Wali Gali, Modesto Tower, Janakpuri, Karnal,, Karnal, Haryana, 132001, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037125004",
-          "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
-          "sku": "600D",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000021417349",
-          "rate": 42000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037125001-1154219000037125004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037125001",
-          "lineItemId": "1154219000037125004",
-          "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
-          "sku": "600D",
-          "customerName": "LIYAN TRADERS",
-          "salesOrderNumber": "SO-07977",
-          "deliveryDate": "2026-09-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-19T17:10:23+0530"
-    },
     "1154219000037080004": {
       "id": "1154219000037080004",
       "zohoSalesOrderId": "1154219000037080004",
@@ -773,180 +723,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-18T18:21:29+0530"
-    },
-    "1154219000037053014": {
-      "id": "1154219000037053014",
-      "zohoSalesOrderId": "1154219000037053014",
-      "salesOrderNumber": "SO-07967",
-      "status": "open",
-      "customerName": "Jim enterprises",
-      "shippingAddress": "1049, Basti Mithu, Jalandhar, Punjab, 144002, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037053017",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000280682",
-          "rate": 28000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037053014-1154219000037053017-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037053014",
-          "lineItemId": "1154219000037053017",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "Jim enterprises",
-          "salesOrderNumber": "SO-07967",
-          "deliveryDate": "2026-09-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-17T13:40:21+0530"
-    },
-    "1154219000037039001": {
-      "id": "1154219000037039001",
-      "zohoSalesOrderId": "1154219000037039001",
-      "salesOrderNumber": "SO-07965",
-      "status": "open",
-      "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
-      "shippingAddress": "TAVADIYA CROSS LANE, N.V.COMPLEX, HIGHWAY, SIDHPUR, Patan, Gujarat, 384151, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037039004",
-          "itemName": "Strap Cutting machine",
-          "sku": "981",
-          "description": "With 800W Power Saving Motor",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000278462",
-          "rate": 86700,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000037039005",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charges up to 10 KM from our Mundka Delhi Office to Transporter for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 930,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037039001-1154219000037039004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037039001",
-          "lineItemId": "1154219000037039004",
-          "itemName": "Strap Cutting machine",
-          "sku": "981",
-          "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
-          "salesOrderNumber": "SO-07965",
-          "deliveryDate": "2026-09-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "With 800W Power Saving Motor"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-17T11:38:18+0530"
-    },
-    "1154219000036975215": {
-      "id": "1154219000036975215",
-      "zohoSalesOrderId": "1154219000036975215",
-      "salesOrderNumber": "SO-07963",
-      "status": "open",
-      "customerName": "REDTAPE LIMITED",
-      "shippingAddress": "GROUND FLOOR , UNIT- 5 , SITE - 02, UPSIDC INDL AREA,, BY PASS ROAD, UNNAO, UP, 209801, ., Uttar Pradesh, 209801, India",
-      "salesperson": "Manisha Gautam",
-      "deliveryDate": "2026-09-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036975218",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226814",
-          "rate": 82000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036975219",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Build Scale Manufacture Pvt. Ltd. to RedTape Limited, Unnao.",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 2800,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036975215-1154219000036975218-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036975215",
-          "lineItemId": "1154219000036975218",
-          "itemName": "zigzag binding (Cylinder bed)",
-          "sku": "2150",
-          "customerName": "REDTAPE LIMITED",
-          "salesOrderNumber": "SO-07963",
-          "deliveryDate": "2026-09-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-16T18:14:49+0530"
     },
     "1154219000036935021": {
       "id": "1154219000036935021",
@@ -1110,89 +886,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-15T10:47:13+0530"
-    },
-    "1154219000036876003": {
-      "id": "1154219000036876003",
-      "zohoSalesOrderId": "1154219000036876003",
-      "salesOrderNumber": "SO-07939",
-      "status": "open",
-      "customerName": "VEEKESY ELASTOMERS PVT. LTD. (Branch, Malappuram)",
-      "shippingAddress": "Branch 1, Small & Medium Enterprises Park, Inkel, Oorakam, Melmury, PO, Malappuram, Kerala, 676519, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-12",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000036876006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "KUKRILI VALVE AND FILTER",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000001709067",
-          "rate": 2250,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000036876007",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Courier Charges",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 350,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000036876003-1154219000036876006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036876003",
-          "lineItemId": "1154219000036876006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "VEEKESY ELASTOMERS PVT. LTD. (Branch, Malappuram)",
-          "salesOrderNumber": "SO-07939",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "KUKRILI VALVE AND FILTER"
-        },
-        {
-          "id": "1154219000036876003-1154219000036876006-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000036876003",
-          "lineItemId": "1154219000036876006",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "VEEKESY ELASTOMERS PVT. LTD. (Branch, Malappuram)",
-          "salesOrderNumber": "SO-07939",
-          "deliveryDate": "2026-09-12",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "KUKRILI VALVE AND FILTER"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-14T10:42:56+0530"
     },
     "1154219000036721021": {
       "id": "1154219000036721021",
@@ -10186,14 +9879,9 @@
     "1154219000037154006",
     "1154219000037162001",
     "1154219000037152003",
-    "1154219000037125001",
     "1154219000037080004",
-    "1154219000037053014",
-    "1154219000037039001",
-    "1154219000036975215",
     "1154219000036935021",
     "1154219000036916004",
-    "1154219000036876003",
     "1154219000036721021",
     "1154219000036717001",
     "1154219000036663006",
@@ -10231,8 +9919,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-19T11:40:29.375Z",
-  "lastAttemptAt": "2026-09-19T11:54:59.317Z",
+  "lastSuccessfulSyncAt": "2026-09-19T11:55:03.387Z",
+  "lastAttemptAt": "2026-09-19T11:55:03.387Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
