@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Footwarrior kreations",
+      "salesOrderNumber": "SO-07986",
+      "paymentAmount": 47200,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07986/2026-09-19/1789813853837-7ac4fd23-176a-4ba5-8a51-36dee4c20f05-InitiateSingleEntryPaymentSummaryUX319-09-2026-1.pdf",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07986%2F2026-09-19%2F1789813853837-7ac4fd23-176a-4ba5-8a51-36dee4c20f05-InitiateSingleEntryPaymentSummaryUX319-09-2026-1.pdf",
+          "name": "InitiateSingleEntryPaymentSummaryUX319-09-2026 (1).pdf",
+          "contentType": "application/pdf",
+          "size": 192205,
+          "uploadedAt": "2026-09-19T10:30:54.629Z",
+          "expiresAt": "2026-10-19T10:30:54.629Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07986/2026-09-19/1789813853837-7ac4fd23-176a-4ba5-8a51-36dee4c20f05-InitiateSingleEntryPaymentSummaryUX319-09-2026-1.pdf",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07986%2F2026-09-19%2F1789813853837-7ac4fd23-176a-4ba5-8a51-36dee4c20f05-InitiateSingleEntryPaymentSummaryUX319-09-2026-1.pdf",
+      "screenshotName": "InitiateSingleEntryPaymentSummaryUX319-09-2026 (1).pdf",
+      "publicDeleteTokenHash": "8eacc51db8df01b2919992fd2b0ca19388185d7a92e84b6e6e6499feabe7bd9f",
+      "id": "payment-4564d12d-d2fa-4987-88ea-872e1a4883d5",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "9aa14afa99f344e694c24391d1538a32",
+      "createdAt": "2026-09-19T10:30:55.185Z",
+      "updatedAt": "2026-09-19T10:30:55.185Z"
+    },
+    {
       "customerName": "A - MAX INDIA",
       "salesOrderNumber": "SO-07984",
       "paymentAmount": 229290,
