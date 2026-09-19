@@ -1,5 +1,105 @@
 {
   "orders": {
+    "1154219000037154006": {
+      "id": "1154219000037154006",
+      "zohoSalesOrderId": "1154219000037154006",
+      "salesOrderNumber": "SO-07981",
+      "status": "open",
+      "customerName": "Shiv Industries",
+      "shippingAddress": "110/A-1, Sector-F, Industries Area, Sanwer Road,, Indore, Madhya Pradesh, 452015, India",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037154009",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226864",
+          "rate": 35500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037154006-1154219000037154009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037154006",
+          "lineItemId": "1154219000037154009",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "customerName": "Shiv Industries",
+          "salesOrderNumber": "SO-07981",
+          "deliveryDate": "2026-09-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-19T11:16:53+0530"
+    },
+    "1154219000037173001": {
+      "id": "1154219000037173001",
+      "zohoSalesOrderId": "1154219000037173001",
+      "salesOrderNumber": "SO-07980",
+      "status": "open",
+      "customerName": "Laklite Aashirwad Footcare Private Limited",
+      "shippingAddress": "154, Sector 17, HSIIDC Industrial Estate, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037173004",
+          "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+          "sku": "600D",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000021417349",
+          "rate": 45000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037173001-1154219000037173004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037173001",
+          "lineItemId": "1154219000037173004",
+          "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+          "sku": "600D",
+          "customerName": "Laklite Aashirwad Footcare Private Limited",
+          "salesOrderNumber": "SO-07980",
+          "deliveryDate": "2026-09-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-19T11:16:53+0530"
+    },
     "1154219000037162001": {
       "id": "1154219000037162001",
       "zohoSalesOrderId": "1154219000037162001",
@@ -9855,6 +9955,8 @@
     }
   },
   "orderIds": [
+    "1154219000037154006",
+    "1154219000037173001",
     "1154219000037162001",
     "1154219000037152003",
     "1154219000037125001",
@@ -9904,8 +10006,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-19T05:40:28.912Z",
-  "lastAttemptAt": "2026-09-19T05:47:10.823Z",
+  "lastSuccessfulSyncAt": "2026-09-19T05:47:23.437Z",
+  "lastAttemptAt": "2026-09-19T05:47:23.437Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
