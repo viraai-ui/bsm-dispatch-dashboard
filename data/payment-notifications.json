@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-fb1c66f0-598e-4cdc-b44b-7f17961eb9d7",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-fdeb6ba2-f64a-4caa-878e-47d438afc87c",
+      "salesOrderNumber": "SO-07985",
+      "customerName": "M & U FOOTWEAR TRADING",
+      "paymentAmount": 44860,
+      "createdAt": "2026-09-19T10:29:59.025Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-67229ae5-8aaf-4d58-ada1-8c3a84527b67",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-fdeb6ba2-f64a-4caa-878e-47d438afc87c",
+      "salesOrderNumber": "SO-07985",
+      "customerName": "M & U FOOTWEAR TRADING",
+      "paymentAmount": 44860,
+      "createdAt": "2026-09-19T10:29:59.025Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-e088c9af-20c0-43c7-af85-467397102774",
       "type": "payment-created",
       "recipientUserId": "u-admin",
