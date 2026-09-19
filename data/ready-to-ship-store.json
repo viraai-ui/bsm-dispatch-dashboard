@@ -5700,7 +5700,7 @@
       }
     },
     "1154219000036479002": {
-      "id": "ship-1788863436303-3c9yx",
+      "id": "ship-1789813457881-28zjl",
       "itemId": "1154219000036479002",
       "orderId": "1154219000036479002",
       "machineId": "1154219000036479002-1154219000036479005-1",
@@ -5712,13 +5712,20 @@
       "transporterName": "Mehta Transport",
       "transporterPhone": "9212982319",
       "shipmentType": "transporter",
-      "lrCopy": null,
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-17 at 2.37.54 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-19%2FSO-07890%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-19T10-24-13-724Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-19/SO-07890/shipment-lr-builty/Shipment-LR-Builty-2026-09-19T10-24-13-724Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-19T10:24:17.881Z"
+      },
       "vehicleNumber": "—",
       "driverName": "—",
       "driverPhone": "—",
       "expectedDelivery": "2026-09-08",
       "notes": "",
-      "shippedAt": "2026-09-08T10:30:36.303Z",
+      "shippedAt": "2026-09-19T10:24:17.881Z",
       "messages": {
         "customer": {
           "status": "skipped",
