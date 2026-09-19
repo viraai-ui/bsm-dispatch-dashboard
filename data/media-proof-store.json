@@ -3140,26 +3140,8 @@
       "orderId": "1154219000037173001",
       "salesOrderNumber": "SO-07980",
       "submittedAt": null,
-      "units": {
-        "1154219000037173001-1154219000037173004-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000037173001-1154219000037173004-1-video-1789801665915-8gptj2",
-              "name": "VID_20260919_123723.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-19%2FSO-07980%2F1154219000037173001-1154219000037173004-1%2FStrobel-Sewing-machine-With-Rechard-Set-High-Speed-2026-09-19T07-07-32-217Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-19/SO-07980/1154219000037173001-1154219000037173004-1/Strobel-Sewing-machine-With-Rechard-Set-High-Speed-2026-09-19T07-07-32-217Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-19T07:07:45.915Z",
-              "expiresAt": "2026-10-10T07:07:45.915Z"
-            }
-          ]
-        }
-      }
+      "units": {},
+      "videoNotRequired": false
     }
   }
 }
