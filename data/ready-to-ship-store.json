@@ -7666,6 +7666,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035884008": {
+      "id": "ship-1789822625556-pjt33",
+      "itemId": "1154219000035884008",
+      "orderId": "1154219000035884008",
+      "machineId": "1154219000035884008-1154219000035884011-1",
+      "salesOrderNumber": "SO-07778",
+      "customerName": "SEET KAMAL PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1MA6588",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-19",
+      "notes": "",
+      "shippedAt": "2026-09-19T12:57:05.556Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
