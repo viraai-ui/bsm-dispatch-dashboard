@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-e088c9af-20c0-43c7-af85-467397102774",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-60f08040-678d-46e1-a1a8-a8c670e9eadd",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Laklite Aashirwad Footcare",
+      "paymentAmount": 47250,
+      "createdAt": "2026-09-19T05:32:54.278Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-b6f9f7ac-6f2a-4f09-8ec0-8ae23fee08c3",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-60f08040-678d-46e1-a1a8-a8c670e9eadd",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Laklite Aashirwad Footcare",
+      "paymentAmount": 47250,
+      "createdAt": "2026-09-19T05:32:54.278Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-50f960c2-604c-4b64-816b-12b7ad9f1d2c",
       "type": "payment-created",
       "recipientUserId": "u-admin",
