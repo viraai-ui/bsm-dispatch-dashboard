@@ -1,5 +1,76 @@
 {
   "orders": {
+    "1154219000037176001": {
+      "id": "1154219000037176001",
+      "zohoSalesOrderId": "1154219000037176001",
+      "salesOrderNumber": "SO-07982",
+      "status": "open",
+      "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
+      "shippingAddress": "Unit-III, A-1130 & 1130 (A), RIICO Industrial Area, hase-III, Bhiwadi, Alwar, Rajasthan, 301019, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037176004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "motor With speed controller (831)",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 15000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037176001-1154219000037176004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037176001",
+          "lineItemId": "1154219000037176004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
+          "salesOrderNumber": "SO-07982",
+          "deliveryDate": "2026-09-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "motor With speed controller (831)"
+        },
+        {
+          "id": "1154219000037176001-1154219000037176004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037176001",
+          "lineItemId": "1154219000037176004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
+          "salesOrderNumber": "SO-07982",
+          "deliveryDate": "2026-09-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "motor With speed controller (831)"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-19T12:15:33+0530"
+    },
     "1154219000037154006": {
       "id": "1154219000037154006",
       "zohoSalesOrderId": "1154219000037154006",
@@ -378,56 +449,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-18T15:08:39+0530"
-    },
-    "1154219000037090252": {
-      "id": "1154219000037090252",
-      "zohoSalesOrderId": "1154219000037090252",
-      "salesOrderNumber": "SO-07974",
-      "status": "open",
-      "customerName": "Sunrise Enterprises",
-      "shippingAddress": "Plot No. 550, Sector- 23, N.I.T., Faridabad, Haryana",
-      "salesperson": "Manoj Sir",
-      "deliveryDate": "2026-09-18",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037090255",
-          "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
-          "sku": "832",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000225329",
-          "rate": 58000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037090252-1154219000037090255-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037090252",
-          "lineItemId": "1154219000037090255",
-          "itemName": "Hotmelt Edge Coating Machine (5 mm coating)",
-          "sku": "832",
-          "customerName": "Sunrise Enterprises",
-          "salesOrderNumber": "SO-07974",
-          "deliveryDate": "2026-09-18",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-19T11:48:30+0530"
     },
     "1154219000037080004": {
       "id": "1154219000037080004",
@@ -9955,12 +9976,12 @@
     }
   },
   "orderIds": [
+    "1154219000037176001",
     "1154219000037154006",
     "1154219000037173001",
     "1154219000037162001",
     "1154219000037152003",
     "1154219000037125001",
-    "1154219000037090252",
     "1154219000037080004",
     "1154219000037039015",
     "1154219000037053014",
@@ -10006,8 +10027,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-19T06:40:30.384Z",
-  "lastAttemptAt": "2026-09-19T07:00:24.938Z",
+  "lastSuccessfulSyncAt": "2026-09-19T07:00:37.783Z",
+  "lastAttemptAt": "2026-09-19T07:00:37.783Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
