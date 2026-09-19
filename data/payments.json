@@ -1,6 +1,19 @@
 {
   "payments": [
     {
+      "customerName": "Laklite Aashirwad Footcare",
+      "paymentAmount": 47250,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "publicDeleteTokenHash": "caae9c52116ca19a38b0482e4b2d06832346c7d864a025952e3877da0f7b1fa0",
+      "id": "payment-60f08040-678d-46e1-a1a8-a8c670e9eadd",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "f431bc78a0b1432fb2b6294299394281",
+      "createdAt": "2026-09-19T05:32:52.005Z",
+      "updatedAt": "2026-09-19T05:32:52.005Z"
+    },
+    {
       "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
       "salesOrderNumber": "SO-07979",
       "paymentAmount": 50000,
