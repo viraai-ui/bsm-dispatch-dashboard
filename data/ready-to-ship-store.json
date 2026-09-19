@@ -7445,6 +7445,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037090252": {
+      "id": "ship-1789800425062-64ogq",
+      "itemId": "1154219000037090252",
+      "orderId": "1154219000037090252",
+      "machineId": "1154219000037090252-1154219000037090255-1",
+      "salesOrderNumber": "SO-07974",
+      "customerName": "Sunrise Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Manoj Sir",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-19",
+      "notes": "",
+      "shippedAt": "2026-09-19T06:47:05.062Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
