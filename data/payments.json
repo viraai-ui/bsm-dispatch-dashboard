@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "M & U FOOTWEAR TRADING",
+      "salesOrderNumber": "SO-07985",
+      "paymentAmount": 44860,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07985/2026-09-19/1789813793821-2ac8b813-7940-45bd-9550-6856d4b19c1b-bd5bb7c0-7ee4-417d-b6b5-154127c537f5.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07985%2F2026-09-19%2F1789813793821-2ac8b813-7940-45bd-9550-6856d4b19c1b-bd5bb7c0-7ee4-417d-b6b5-154127c537f5.jpg",
+          "name": "bd5bb7c0-7ee4-417d-b6b5-154127c537f5.jpg",
+          "contentType": "image/jpeg",
+          "size": 249269,
+          "uploadedAt": "2026-09-19T10:29:54.786Z",
+          "expiresAt": "2026-10-19T10:29:54.786Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07985/2026-09-19/1789813793821-2ac8b813-7940-45bd-9550-6856d4b19c1b-bd5bb7c0-7ee4-417d-b6b5-154127c537f5.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07985%2F2026-09-19%2F1789813793821-2ac8b813-7940-45bd-9550-6856d4b19c1b-bd5bb7c0-7ee4-417d-b6b5-154127c537f5.jpg",
+      "screenshotName": "bd5bb7c0-7ee4-417d-b6b5-154127c537f5.jpg",
+      "publicDeleteTokenHash": "92b17f76cbfdf59aeea420b7b9e23e7bdc17969e7bd5ce749e88b7015e4a336f",
+      "id": "payment-fdeb6ba2-f64a-4caa-878e-47d438afc87c",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "24f10412807a4deba599747f1148f520",
+      "createdAt": "2026-09-19T10:29:56.283Z",
+      "updatedAt": "2026-09-19T10:29:56.283Z"
+    },
+    {
       "customerName": "Laklite Aashirwad Footcare",
       "paymentAmount": 47250,
       "paymentMode": "UPI",
