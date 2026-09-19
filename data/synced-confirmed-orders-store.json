@@ -395,77 +395,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T13:23:54+0530"
     },
-    "1154219000037176001": {
-      "id": "1154219000037176001",
-      "zohoSalesOrderId": "1154219000037176001",
-      "salesOrderNumber": "SO-07982",
-      "status": "open",
-      "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
-      "shippingAddress": "Unit-III, A-1130 & 1130 (A), RIICO Industrial Area, hase-III, Bhiwadi, Alwar, Rajasthan, 301019, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037176004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "motor With speed controller (831)",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000001709067",
-          "rate": 15000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037176001-1154219000037176004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037176001",
-          "lineItemId": "1154219000037176004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
-          "salesOrderNumber": "SO-07982",
-          "deliveryDate": "2026-09-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "motor With speed controller (831)"
-        },
-        {
-          "id": "1154219000037176001-1154219000037176004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037176001",
-          "lineItemId": "1154219000037176004",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
-          "salesOrderNumber": "SO-07982",
-          "deliveryDate": "2026-09-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "motor With speed controller (831)"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-19T12:15:33+0530"
-    },
     "1154219000037154006": {
       "id": "1154219000037154006",
       "zohoSalesOrderId": "1154219000037154006",
@@ -793,7 +722,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-18T15:08:39+0530"
+      "zohoLastModifiedTime": "2026-09-19T17:10:23+0530"
     },
     "1154219000037080004": {
       "id": "1154219000037080004",
@@ -844,77 +773,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-18T18:21:29+0530"
-    },
-    "1154219000037039015": {
-      "id": "1154219000037039015",
-      "zohoSalesOrderId": "1154219000037039015",
-      "salesOrderNumber": "SO-07968",
-      "status": "open",
-      "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
-      "shippingAddress": "Unit-III, A-1130 & 1130 (A), RIICO Industrial Area, hase-III, Bhiwadi, Alwar, Rajasthan, 301019, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-17",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037039018",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "description": "MOTOR WITH CARD GLASS JAR MACHINE",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000001709067",
-          "rate": 11500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037039015-1154219000037039018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037039015",
-          "lineItemId": "1154219000037039018",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
-          "salesOrderNumber": "SO-07968",
-          "deliveryDate": "2026-09-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "MOTOR WITH CARD GLASS JAR MACHINE"
-        },
-        {
-          "id": "1154219000037039015-1154219000037039018-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037039015",
-          "lineItemId": "1154219000037039018",
-          "itemName": "Spare Parts (Shoe Machine)",
-          "sku": "",
-          "customerName": "Relaxo Footwears Limited (Unit-III, Bhiwadi)",
-          "salesOrderNumber": "SO-07968",
-          "deliveryDate": "2026-09-17",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": "MOTOR WITH CARD GLASS JAR MACHINE"
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-17T14:22:52+0530"
     },
     "1154219000037053014": {
       "id": "1154219000037053014",
@@ -10325,13 +10183,11 @@
     "1154219000037155011",
     "1154219000037160004",
     "1154219000037147429",
-    "1154219000037176001",
     "1154219000037154006",
     "1154219000037162001",
     "1154219000037152003",
     "1154219000037125001",
     "1154219000037080004",
-    "1154219000037039015",
     "1154219000037053014",
     "1154219000037039001",
     "1154219000036975215",
@@ -10375,8 +10231,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-19T11:34:05.073Z",
-  "lastAttemptAt": "2026-09-19T11:40:25.147Z",
+  "lastSuccessfulSyncAt": "2026-09-19T11:40:29.375Z",
+  "lastAttemptAt": "2026-09-19T11:40:29.375Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
