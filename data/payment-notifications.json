@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-abfcbcbb-b005-45b3-80d2-331e16d7c288",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-4564d12d-d2fa-4987-88ea-872e1a4883d5",
+      "salesOrderNumber": "SO-07986",
+      "customerName": "Footwarrior kreations",
+      "paymentAmount": 47200,
+      "createdAt": "2026-09-19T10:30:57.462Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-08845712-85e8-42cd-aa5b-2b5c7ce9f0b7",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-4564d12d-d2fa-4987-88ea-872e1a4883d5",
+      "salesOrderNumber": "SO-07986",
+      "customerName": "Footwarrior kreations",
+      "paymentAmount": 47200,
+      "createdAt": "2026-09-19T10:30:57.462Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-dd2de1a8-d6cb-4cb6-8f2e-012ccbd771c1",
       "type": "payment-created",
       "recipientUserId": "u-admin",
