@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "A - MAX INDIA",
+      "salesOrderNumber": "SO-07984",
+      "paymentAmount": 229290,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07984/2026-09-19/1789813841165-9f51e287-ee66-4d2a-930e-cb46897aee55-30862bfa-a8d0-4ccd-b5cc-dc18bb60fa1f.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07984%2F2026-09-19%2F1789813841165-9f51e287-ee66-4d2a-930e-cb46897aee55-30862bfa-a8d0-4ccd-b5cc-dc18bb60fa1f.jpg",
+          "name": "30862bfa-a8d0-4ccd-b5cc-dc18bb60fa1f.jpg",
+          "contentType": "image/jpeg",
+          "size": 155304,
+          "uploadedAt": "2026-09-19T10:30:41.909Z",
+          "expiresAt": "2026-10-19T10:30:41.909Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07984/2026-09-19/1789813841165-9f51e287-ee66-4d2a-930e-cb46897aee55-30862bfa-a8d0-4ccd-b5cc-dc18bb60fa1f.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07984%2F2026-09-19%2F1789813841165-9f51e287-ee66-4d2a-930e-cb46897aee55-30862bfa-a8d0-4ccd-b5cc-dc18bb60fa1f.jpg",
+      "screenshotName": "30862bfa-a8d0-4ccd-b5cc-dc18bb60fa1f.jpg",
+      "publicDeleteTokenHash": "025650bffbbde364792937705a2b3e8ba64a1a8e506db6d26fcc0a69d5c0ff1d",
+      "id": "payment-ebaff437-7a06-4d9f-9a02-d1b6e840829f",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "0b5c85bafed044c9ac073bafefb37ab8",
+      "createdAt": "2026-09-19T10:30:42.421Z",
+      "updatedAt": "2026-09-19T10:30:42.421Z"
+    },
+    {
       "customerName": "M & U FOOTWEAR TRADING",
       "salesOrderNumber": "SO-07985",
       "paymentAmount": 44860,
