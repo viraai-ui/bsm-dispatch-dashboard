@@ -34391,7 +34391,9 @@
     "1154219000037155011": {
       "salesOrderId": "1154219000037155011",
       "salesOrderNumber": "SO-07985",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T10:42:59.641Z",
       "processedOrder": {
         "id": "1154219000037155011",
         "zohoSalesOrderId": "1154219000037155011",
@@ -34433,8 +34435,8 @@
           {
             "id": "1154219000037155011-1154219000037155014-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271274",
+            "qrToken": "26271274",
             "orderId": "1154219000037155011",
             "lineItemId": "1154219000037155014",
             "itemName": "Round Blade Edge trimming Machine",
@@ -34442,14 +34444,17 @@
             "customerName": "M & U FOOTWEAR TRADING",
             "salesOrderNumber": "SO-07985",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "with Imported Motor"
+            "itemDescription": "with Imported Motor",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "WOODEN"
           },
           {
             "id": "1154219000037155011-1154219000037155015-1",
@@ -34470,7 +34475,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "bladder cover type sole press"
+            "itemDescription": "bladder cover type sole press",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037155011-1154219000037155015-2",
@@ -34491,7 +34498,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "bladder cover type sole press"
+            "itemDescription": "bladder cover type sole press",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037155011-1154219000037155015-3",
@@ -34512,7 +34521,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "bladder cover type sole press"
+            "itemDescription": "bladder cover type sole press",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037155011-1154219000037155015-4",
@@ -34533,7 +34544,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "bladder cover type sole press"
+            "itemDescription": "bladder cover type sole press",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T16:03:56+0530"
@@ -34547,7 +34560,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T10:42:00.585Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T10:42:01.825Z"
+          "zohoBackupQueuedAt": "2026-09-19T10:42:01.825Z",
+          "processedAt": "2026-09-19T10:42:59.641Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "K S"
         }
       }
     }
