@@ -32920,7 +32920,9 @@
     "1154219000037162001": {
       "salesOrderId": "1154219000037162001",
       "salesOrderNumber": "SO-07979",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T05:59:09.971Z",
       "processedOrder": {
         "id": "1154219000037162001",
         "zohoSalesOrderId": "1154219000037162001",
@@ -32974,8 +32976,8 @@
           {
             "id": "1154219000037162001-1154219000037162004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271252",
+            "qrToken": "26271252",
             "orderId": "1154219000037162001",
             "lineItemId": "1154219000037162004",
             "itemName": "Single Needle Walking foot (Cylinder Bed)",
@@ -32983,20 +32985,23 @@
             "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
             "salesOrderNumber": "SO-07979",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "With Stand and Table."
+            "itemDescription": "With Stand and Table.",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037162001-1154219000037162004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271253",
+            "qrToken": "26271253",
             "orderId": "1154219000037162001",
             "lineItemId": "1154219000037162004",
             "itemName": "Single Needle Walking foot (Cylinder Bed)",
@@ -33004,14 +33009,17 @@
             "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
             "salesOrderNumber": "SO-07979",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "With Stand and Table."
+            "itemDescription": "With Stand and Table.",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Able",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037162001-1154219000037162005-1",
@@ -33032,7 +33040,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Clutch Motor"
+            "itemDescription": "Clutch Motor",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037162001-1154219000037162005-2",
@@ -33053,7 +33063,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Clutch Motor"
+            "itemDescription": "Clutch Motor",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037162001-1154219000037162006-1",
@@ -33074,7 +33086,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Stitching Guide"
+            "itemDescription": "Stitching Guide",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037162001-1154219000037162006-2",
@@ -33095,7 +33109,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Stitching Guide"
+            "itemDescription": "Stitching Guide",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T10:22:22+0530"
@@ -33109,7 +33125,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T05:58:10.497Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T05:58:13.933Z"
+          "zohoBackupQueuedAt": "2026-09-19T05:58:13.933Z",
+          "processedAt": "2026-09-19T05:59:09.971Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         },
         "1154219000037162001-1154219000037162004-2": {
           "machineUnitId": "1154219000037162001-1154219000037162004-2",
@@ -33119,7 +33138,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T05:58:10.497Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T05:58:13.933Z"
+          "zohoBackupQueuedAt": "2026-09-19T05:58:13.933Z",
+          "processedAt": "2026-09-19T05:59:09.971Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
