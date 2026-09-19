@@ -7604,6 +7604,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037053014": {
+      "id": "ship-1789818089054-4vlz5",
+      "itemId": "1154219000037053014",
+      "orderId": "1154219000037053014",
+      "machineId": "1154219000037053014-1154219000037053017-1",
+      "salesOrderNumber": "SO-07967",
+      "customerName": "Jim enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL LOGISTICS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-19",
+      "notes": "",
+      "shippedAt": "2026-09-19T11:41:29.054Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
