@@ -33154,7 +33154,9 @@
     "1154219000037154006": {
       "salesOrderId": "1154219000037154006",
       "salesOrderNumber": "SO-07981",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T06:20:23.888Z",
       "processedOrder": {
         "id": "1154219000037154006",
         "zohoSalesOrderId": "1154219000037154006",
@@ -33184,8 +33186,8 @@
           {
             "id": "1154219000037154006-1154219000037154009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271254",
+            "qrToken": "26271254",
             "orderId": "1154219000037154006",
             "lineItemId": "1154219000037154009",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -33193,14 +33195,17 @@
             "customerName": "Shiv Industries",
             "salesOrderNumber": "SO-07981",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T11:16:53+0530"
@@ -33214,7 +33219,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-19T06:19:36.173Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-19T06:19:37.097Z"
+          "zohoBackupQueuedAt": "2026-09-19T06:19:37.097Z",
+          "processedAt": "2026-09-19T06:20:23.888Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
