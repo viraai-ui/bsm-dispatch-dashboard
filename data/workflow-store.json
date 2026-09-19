@@ -33315,7 +33315,9 @@
     "1154219000036466015": {
       "salesOrderId": "1154219000036466015",
       "salesOrderNumber": "SO-07888",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-19T08:50:23.625Z",
       "processedOrder": {
         "id": "1154219000036466015",
         "zohoSalesOrderId": "1154219000036466015",
@@ -33441,8 +33443,8 @@
           {
             "id": "1154219000036466015-1154219000036466018-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271256",
+            "qrToken": "26271256",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466018",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -33450,20 +33452,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466018-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271257",
+            "qrToken": "26271257",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466018",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -33471,20 +33476,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466018-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271258",
+            "qrToken": "26271258",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466018",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -33492,20 +33500,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466018-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271259",
+            "qrToken": "26271259",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466018",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -33513,20 +33524,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466018-5",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271260",
+            "qrToken": "26271260",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466018",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -33534,20 +33548,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466019-1",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271261",
+            "qrToken": "26271261",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466019",
             "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
@@ -33555,20 +33572,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466019-2",
             "unitNumber": 7,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271262",
+            "qrToken": "26271262",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466019",
             "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
@@ -33576,20 +33596,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466019-3",
             "unitNumber": 8,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271263",
+            "qrToken": "26271263",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466019",
             "itemName": "Double Needle Post Bed Roller Feed Sewing Machine",
@@ -33597,20 +33620,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466023-1",
             "unitNumber": 9,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271264",
+            "qrToken": "26271264",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466023",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -33618,14 +33644,17 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Siphon",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466024-1",
@@ -33646,13 +33675,15 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036466015-1154219000036466020-1",
             "unitNumber": 11,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271265",
+            "qrToken": "26271265",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466020",
             "itemName": "Strobel Sewing machine (Disc feed)",
@@ -33660,20 +33691,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "String Lasting (Kingsew)"
+            "itemDescription": "String Lasting (Kingsew)",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Able",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466021-1",
             "unitNumber": 12,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271266",
+            "qrToken": "26271266",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466021",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -33681,20 +33715,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Kingsew"
+            "itemDescription": "Kingsew",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466022-1",
             "unitNumber": 13,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271267",
+            "qrToken": "26271267",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466022",
             "itemName": "Zigzag Flatbed",
@@ -33702,20 +33739,23 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "K S",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466025-1",
             "unitNumber": 14,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271268",
+            "qrToken": "26271268",
             "orderId": "1154219000036466015",
             "lineItemId": "1154219000036466025",
             "itemName": "Strap Fitting/ thong inserting [Pneumatic]",
@@ -33723,14 +33763,17 @@
             "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
             "salesOrderNumber": "SO-07888",
             "deliveryDate": "2026-09-04",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "vendor": "Able",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000036466015-1154219000036466026-1",
@@ -33751,7 +33794,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036466015-1154219000036466026-2",
@@ -33772,7 +33817,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036466015-1154219000036466026-3",
@@ -33793,7 +33840,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036466015-1154219000036466026-4",
@@ -33814,7 +33863,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036466015-1154219000036466026-5",
@@ -33835,7 +33886,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-04T13:29:05+0530"
@@ -33851,7 +33904,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466018-2": {
           "machineUnitId": "1154219000036466015-1154219000036466018-2",
@@ -33863,7 +33919,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466018-3": {
           "machineUnitId": "1154219000036466015-1154219000036466018-3",
@@ -33875,7 +33934,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466018-4": {
           "machineUnitId": "1154219000036466015-1154219000036466018-4",
@@ -33887,7 +33949,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466018-5": {
           "machineUnitId": "1154219000036466015-1154219000036466018-5",
@@ -33899,7 +33964,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466019-1": {
           "machineUnitId": "1154219000036466015-1154219000036466019-1",
@@ -33911,7 +33979,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466019-2": {
           "machineUnitId": "1154219000036466015-1154219000036466019-2",
@@ -33923,7 +33994,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466019-3": {
           "machineUnitId": "1154219000036466015-1154219000036466019-3",
@@ -33935,7 +34009,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466023-1": {
           "machineUnitId": "1154219000036466015-1154219000036466023-1",
@@ -33947,7 +34024,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "Siphon"
         },
         "1154219000036466015-1154219000036466020-1": {
           "machineUnitId": "1154219000036466015-1154219000036466020-1",
@@ -33959,7 +34039,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "Able"
         },
         "1154219000036466015-1154219000036466021-1": {
           "machineUnitId": "1154219000036466015-1154219000036466021-1",
@@ -33971,7 +34054,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466022-1": {
           "machineUnitId": "1154219000036466015-1154219000036466022-1",
@@ -33983,7 +34069,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "K S"
         },
         "1154219000036466015-1154219000036466025-1": {
           "machineUnitId": "1154219000036466015-1154219000036466025-1",
@@ -33995,7 +34084,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-19T08:44:49.255Z",
           "zohoBackupLastAttemptAt": "2026-09-19T08:45:32.754Z",
-          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z"
+          "zohoBackupSyncedAt": "2026-09-19T08:45:32.754Z",
+          "processedAt": "2026-09-19T08:50:23.625Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "Able"
         }
       }
     }
