@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037147429": {
+      "id": "1154219000037147429",
+      "zohoSalesOrderId": "1154219000037147429",
+      "salesOrderNumber": "SO-07983",
+      "status": "open",
+      "customerName": "DILVIKA ORFIT",
+      "shippingAddress": "INDUSTRIAL AREA, D 63, SANT COMPLEX, Vidya Path, Latawa Steels, Sector 58, Mohali,, SAS Nagar, Punjab, 160055, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-09-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037147432",
+          "itemName": "Beam Cutting Press (40 ton)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000277664",
+          "rate": 466000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037147429-1154219000037147432-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037147429",
+          "lineItemId": "1154219000037147432",
+          "itemName": "Beam Cutting Press (40 ton)",
+          "sku": "",
+          "customerName": "DILVIKA ORFIT",
+          "salesOrderNumber": "SO-07983",
+          "deliveryDate": "2026-09-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-19T13:23:54+0530"
+    },
     "1154219000037176001": {
       "id": "1154219000037176001",
       "zohoSalesOrderId": "1154219000037176001",
@@ -108,56 +158,6 @@
           "sku": "335",
           "customerName": "Shiv Industries",
           "salesOrderNumber": "SO-07981",
-          "deliveryDate": "2026-09-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-19T11:16:53+0530"
-    },
-    "1154219000037173001": {
-      "id": "1154219000037173001",
-      "zohoSalesOrderId": "1154219000037173001",
-      "salesOrderNumber": "SO-07980",
-      "status": "open",
-      "customerName": "Laklite Aashirwad Footcare Private Limited",
-      "shippingAddress": "154, Sector 17, HSIIDC Industrial Estate, Bahadurgarh, Jhajjar, Haryana, 124507",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037173004",
-          "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
-          "sku": "600D",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000021417349",
-          "rate": 45000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037173001-1154219000037173004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037173001",
-          "lineItemId": "1154219000037173004",
-          "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
-          "sku": "600D",
-          "customerName": "Laklite Aashirwad Footcare Private Limited",
-          "salesOrderNumber": "SO-07980",
           "deliveryDate": "2026-09-19",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -9976,9 +9976,9 @@
     }
   },
   "orderIds": [
+    "1154219000037147429",
     "1154219000037176001",
     "1154219000037154006",
-    "1154219000037173001",
     "1154219000037162001",
     "1154219000037152003",
     "1154219000037125001",
@@ -10027,8 +10027,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-19T07:40:29.929Z",
-  "lastAttemptAt": "2026-09-19T08:00:25.167Z",
+  "lastSuccessfulSyncAt": "2026-09-19T08:00:30.442Z",
+  "lastAttemptAt": "2026-09-19T08:00:30.442Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
