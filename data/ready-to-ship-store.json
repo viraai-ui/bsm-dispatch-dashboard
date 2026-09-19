@@ -7635,6 +7635,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037039001": {
+      "id": "ship-1789818380233-mycu5",
+      "itemId": "1154219000037039001",
+      "orderId": "1154219000037039001",
+      "machineId": "1154219000037039001-1154219000037039004-1",
+      "salesOrderNumber": "SO-07965",
+      "customerName": "MGMT TOOLS AND HARDWARE PVT LTD",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "V TRANS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-19",
+      "notes": "",
+      "shippedAt": "2026-09-19T11:46:20.233Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
