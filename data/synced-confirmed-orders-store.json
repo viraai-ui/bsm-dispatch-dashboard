@@ -473,8 +473,8 @@
           "itemName": "Zigzag Flatbed",
           "sku": "20U",
           "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
+          "quantity": 2,
+          "pendingQuantity": 2,
           "woodenPackingRequired": true,
           "zohoItemId": "1154219000000226755",
           "rate": 22000,
@@ -565,9 +565,30 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000037160004-1154219000037160009-2",
+          "unitNumber": 5,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037160004",
+          "lineItemId": "1154219000037160009",
+          "itemName": "Zigzag Flatbed",
+          "sku": "20U",
+          "customerName": "A - MAX INDIA",
+          "salesOrderNumber": "SO-07984",
+          "deliveryDate": "2026-09-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-19T15:19:56+0530"
+      "zohoLastModifiedTime": "2026-09-21T13:23:27+0530"
     },
     "1154219000037147429": {
       "id": "1154219000037147429",
@@ -10042,8 +10063,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-21T07:43:08.342Z",
-  "lastAttemptAt": "2026-09-21T07:57:56.737Z",
+  "lastSuccessfulSyncAt": "2026-09-21T07:58:09.979Z",
+  "lastAttemptAt": "2026-09-21T07:58:09.979Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
