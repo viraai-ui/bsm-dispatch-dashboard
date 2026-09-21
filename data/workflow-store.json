@@ -34812,57 +34812,7 @@
     "1154219000037152003": {
       "salesOrderId": "1154219000037152003",
       "salesOrderNumber": "SO-07978",
-      "status": "qr_generated",
-      "processedOrder": {
-        "id": "1154219000037152003",
-        "zohoSalesOrderId": "1154219000037152003",
-        "salesOrderNumber": "SO-07978",
-        "status": "open",
-        "customerName": "PAWAN ENTERPRISES",
-        "shippingAddress": "SHOP NO. 3, BANK COLONY, MODEL HOUSE, Jalandhar, Punjab, 144003, India",
-        "salesperson": "Manisha Gautam",
-        "deliveryDate": "2026-09-30",
-        "dashboardStatus": "Not Generated",
-        "reviewRequired": false,
-        "lineItems": [
-          {
-            "id": "1154219000037152006",
-            "itemName": "Pattern sewing machine (600x400 mm)",
-            "sku": "6040",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": true,
-            "zohoItemId": "1154219000000280535",
-            "rate": 370000,
-            "dispatchCategory": "machine"
-          }
-        ],
-        "machines": [
-          {
-            "id": "1154219000037152003-1154219000037152006-1",
-            "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
-            "orderId": "1154219000037152003",
-            "lineItemId": "1154219000037152006",
-            "itemName": "Pattern sewing machine (600x400 mm)",
-            "sku": "6040",
-            "customerName": "PAWAN ENTERPRISES",
-            "salesOrderNumber": "SO-07978",
-            "deliveryDate": "2026-09-30",
-            "status": "Not Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Pending",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": ""
-          }
-        ],
-        "zohoLastModifiedTime": "2026-09-18T17:57:41+0530"
-      },
+      "status": "open",
       "machines": {
         "1154219000037152003-1154219000037152006-1": {
           "machineUnitId": "1154219000037152003-1154219000037152006-1",
