@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271285,
+  "serialCounter": 26271286,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -34396,6 +34396,13 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-19T10:45:31.596Z",
           "zohoBackupSyncedAt": "2026-09-19T10:45:31.596Z"
+        },
+        "1154219000037160004-1154219000037160009-2": {
+          "machineUnitId": "1154219000037160004-1154219000037160009-2",
+          "lineItemId": "1154219000037160009",
+          "serialNumber": "26271286",
+          "qrToken": "26271286",
+          "qrStatus": "pending"
         }
       }
     },
