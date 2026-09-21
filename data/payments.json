@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Competence Export",
+      "paymentAmount": 26225,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "remarks": "Hare Krishna",
+      "attachments": [
+        {
+          "key": "payments/public/manual/4b6c5cf6-b638-45e3-9de6-6610eea415a7/2026-09-21/1789995382734-1c6ee66d-937f-427e-a413-7c32b4e18c62-WhatsApp-Image-2026-09-21-at-2.45.31-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F4b6c5cf6-b638-45e3-9de6-6610eea415a7%2F2026-09-21%2F1789995382734-1c6ee66d-937f-427e-a413-7c32b4e18c62-WhatsApp-Image-2026-09-21-at-2.45.31-PM.jpg",
+          "name": "WhatsApp Image 2026-09-21 at 2.45.31 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 66638,
+          "uploadedAt": "2026-09-21T12:56:24.000Z",
+          "expiresAt": "2026-10-21T12:56:24.000Z"
+        }
+      ],
+      "screenshotKey": "payments/public/manual/4b6c5cf6-b638-45e3-9de6-6610eea415a7/2026-09-21/1789995382734-1c6ee66d-937f-427e-a413-7c32b4e18c62-WhatsApp-Image-2026-09-21-at-2.45.31-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F4b6c5cf6-b638-45e3-9de6-6610eea415a7%2F2026-09-21%2F1789995382734-1c6ee66d-937f-427e-a413-7c32b4e18c62-WhatsApp-Image-2026-09-21-at-2.45.31-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-21 at 2.45.31 PM.jpeg",
+      "publicDeleteTokenHash": "648bfe69900889d3669049c82f63c3ef55e4fecc92e63b3f17bc1d4398236c83",
+      "id": "payment-e80749e8-4090-446c-b03b-4d816dbd3638",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "72007e3e995744d68f2e5447b74ca578",
+      "createdAt": "2026-09-21T12:56:25.001Z",
+      "updatedAt": "2026-09-21T12:56:25.001Z"
+    },
+    {
       "customerName": "Mahakal Enterprises",
       "salesOrderNumber": "SO-07972",
       "paymentAmount": 162500,
