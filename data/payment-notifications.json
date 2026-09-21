@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-4f718f6b-5d60-4393-9adf-e692abe95dcd",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-e80749e8-4090-446c-b03b-4d816dbd3638",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Competence Export",
+      "paymentAmount": 26225,
+      "createdAt": "2026-09-21T12:56:27.491Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-67de4454-84c5-41d8-80b1-a82b194d000b",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-e80749e8-4090-446c-b03b-4d816dbd3638",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Competence Export",
+      "paymentAmount": 26225,
+      "createdAt": "2026-09-21T12:56:27.491Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-64aa639c-2519-44b0-9e4b-177bf2b5b464",
       "type": "payment-created",
       "recipientUserId": "u-admin",
