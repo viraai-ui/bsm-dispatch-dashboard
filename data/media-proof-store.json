@@ -3359,6 +3359,31 @@
           ]
         }
       }
+    },
+    "1154219000037147429": {
+      "orderId": "1154219000037147429",
+      "salesOrderNumber": "SO-07983",
+      "submittedAt": null,
+      "units": {
+        "1154219000037147429-1154219000037147432-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000037147429-1154219000037147432-1-video-1789977764801-b5frq8",
+              "name": "VID_20260921_133115.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-21%2FSO-07983%2F1154219000037147429-1154219000037147432-1%2FBeam-Cutting-Press-40-ton-2026-09-21T08-01-24-994Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-21/SO-07983/1154219000037147429-1154219000037147432-1/Beam-Cutting-Press-40-ton-2026-09-21T08-01-24-994Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-21T08:02:44.801Z",
+              "expiresAt": "2026-10-12T08:02:44.801Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
