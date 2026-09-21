@@ -35190,7 +35190,9 @@
     "1154219000037197042": {
       "salesOrderId": "1154219000037197042",
       "salesOrderNumber": "SO-07991",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-21T11:35:13.094Z",
       "processedOrder": {
         "id": "1154219000037197042",
         "zohoSalesOrderId": "1154219000037197042",
@@ -35220,8 +35222,8 @@
           {
             "id": "1154219000037197042-1154219000037197059-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271287",
+            "qrToken": "26271287",
             "orderId": "1154219000037197042",
             "lineItemId": "1154219000037197059",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -35229,14 +35231,17 @@
             "customerName": "INDUS FINE ARTS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07991",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-21T16:53:30+0530"
@@ -35250,7 +35255,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-21T11:33:57.645Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-21T11:33:59.089Z"
+          "zohoBackupQueuedAt": "2026-09-21T11:33:59.089Z",
+          "processedAt": "2026-09-21T11:35:13.094Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
