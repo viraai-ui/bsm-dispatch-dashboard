@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-e54a6fb5-fa38-4896-a30d-36c3f673577d",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-8a218445-86c2-4b75-b1d4-b17c11793775",
+      "salesOrderNumber": "SO-07992",
+      "customerName": "Anil Upper & Footwear",
+      "paymentAmount": 21240,
+      "createdAt": "2026-09-21T11:57:19.798Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-17eb5cb5-9873-4054-898d-bddbac6b9da5",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-8a218445-86c2-4b75-b1d4-b17c11793775",
+      "salesOrderNumber": "SO-07992",
+      "customerName": "Anil Upper & Footwear",
+      "paymentAmount": 21240,
+      "createdAt": "2026-09-21T11:57:19.798Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-cd798cec-0284-44bb-a2e3-f388268efec2",
       "type": "payment-created",
       "recipientUserId": "u-admin",
