@@ -1,6 +1,44 @@
 {
   "payments": [
     {
+      "customerName": "Easan Fine Arts",
+      "salesOrderNumber": "SO-07989",
+      "paymentAmount": 69246,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "remarks": "UPDATE: INR 69,246.00 debited from HDFC Bank XX2704 on 21-SEP-26. Info: build scale manufacture pvt ltd  A.NO.99 Dr - XXXXXXXXXX9145 - BUILD SCALE MANUFACTURE PRIVATE LIMITED.",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07989/2026-09-21/1789978434162-56921db0-8648-4aff-b266-3da496f31fdb-WhatsApp-Image-2026-09-21-at-12.42.27-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07989%2F2026-09-21%2F1789978434162-56921db0-8648-4aff-b266-3da496f31fdb-WhatsApp-Image-2026-09-21-at-12.42.27-PM.jpg",
+          "name": "WhatsApp Image 2026-09-21 at 12.42.27 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 171928,
+          "uploadedAt": "2026-09-21T08:13:55.319Z",
+          "expiresAt": "2026-10-21T08:13:55.319Z"
+        },
+        {
+          "key": "payments/public/SO-07989/2026-09-21/1789978434769-974377d8-dd34-49aa-96dd-b5ffd09e88a3-WhatsApp-Image-2026-09-21-at-12.49.48-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07989%2F2026-09-21%2F1789978434769-974377d8-dd34-49aa-96dd-b5ffd09e88a3-WhatsApp-Image-2026-09-21-at-12.49.48-PM.jpg",
+          "name": "WhatsApp Image 2026-09-21 at 12.49.48 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 172226,
+          "uploadedAt": "2026-09-21T08:13:55.319Z",
+          "expiresAt": "2026-10-21T08:13:55.319Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07989/2026-09-21/1789978434162-56921db0-8648-4aff-b266-3da496f31fdb-WhatsApp-Image-2026-09-21-at-12.42.27-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07989%2F2026-09-21%2F1789978434162-56921db0-8648-4aff-b266-3da496f31fdb-WhatsApp-Image-2026-09-21-at-12.42.27-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-21 at 12.42.27 PM.jpeg",
+      "publicDeleteTokenHash": "560a245bbea20a1cf738fa3e8686c3d1dff7ebbf12be1e1bd8f6f6fff29cb0e4",
+      "id": "payment-e1b8b6f0-1d3b-4d07-940b-82c1f767b137",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "c32c97645b4d4c1f88e809679320a023",
+      "createdAt": "2026-09-21T08:13:57.127Z",
+      "updatedAt": "2026-09-21T08:13:57.127Z"
+    },
+    {
       "customerName": "Jai Enterprises",
       "salesOrderNumber": "SO-07988",
       "paymentAmount": 85000,
