@@ -22065,6 +22065,65 @@
       "machineIds": [
         "1154219000037224004-1154219000037224007-1"
       ]
+    },
+    "1154219000037080004": {
+      "completedAt": "2026-09-21T09:33:51.281Z",
+      "order": {
+        "id": "1154219000037080004",
+        "zohoSalesOrderId": "1154219000037080004",
+        "salesOrderNumber": "SO-07972",
+        "status": "open",
+        "customerName": "Mahakal Enterprises",
+        "shippingAddress": "GROUND FLOOR, 179-A, KHASRA NO 5,VILLAGE KAMRUDDIN NAGAR, New Delhi, West Delhi, Delhi, 110041, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037080007",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280352",
+            "rate": 432500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037080004-1154219000037080007-1",
+            "unitNumber": 1,
+            "serialNumber": "26271269",
+            "qrToken": "26271269",
+            "orderId": "1154219000037080004",
+            "lineItemId": "1154219000037080007",
+            "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+            "sku": "601 - 12",
+            "customerName": "Mahakal Enterprises",
+            "salesOrderNumber": "SO-07972",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-18T18:21:29+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037080004-1154219000037080007-1"
+      ]
     }
   }
 }
