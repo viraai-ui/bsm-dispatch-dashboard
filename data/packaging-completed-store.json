@@ -22195,6 +22195,65 @@
       "machineIds": [
         "1154219000037155011-1154219000037155014-1"
       ]
+    },
+    "1154219000037154006": {
+      "completedAt": "2026-09-21T11:39:06.680Z",
+      "order": {
+        "id": "1154219000037154006",
+        "zohoSalesOrderId": "1154219000037154006",
+        "salesOrderNumber": "SO-07981",
+        "status": "open",
+        "customerName": "Shiv Industries",
+        "shippingAddress": "110/A-1, Sector-F, Industries Area, Sanwer Road,, Indore, Madhya Pradesh, 452015, India",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037154009",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 35500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037154006-1154219000037154009-1",
+            "unitNumber": 1,
+            "serialNumber": "26271254",
+            "qrToken": "26271254",
+            "orderId": "1154219000037154006",
+            "lineItemId": "1154219000037154009",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "Shiv Industries",
+            "salesOrderNumber": "SO-07981",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T11:16:53+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037154006-1154219000037154009-1"
+      ]
     }
   }
 }
