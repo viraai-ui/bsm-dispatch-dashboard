@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Anil Upper & Footwear",
+      "salesOrderNumber": "SO-07992",
+      "paymentAmount": 21240,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07992/2026-09-21/1789991835594-da33dd1b-dd79-4736-8ff0-a84c752d6892-WhatsApp-Image-2026-09-21-at-5.25.22-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07992%2F2026-09-21%2F1789991835594-da33dd1b-dd79-4736-8ff0-a84c752d6892-WhatsApp-Image-2026-09-21-at-5.25.22-PM.jpg",
+          "name": "WhatsApp Image 2026-09-21 at 5.25.22 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 118085,
+          "uploadedAt": "2026-09-21T11:57:16.479Z",
+          "expiresAt": "2026-10-21T11:57:16.479Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07992/2026-09-21/1789991835594-da33dd1b-dd79-4736-8ff0-a84c752d6892-WhatsApp-Image-2026-09-21-at-5.25.22-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07992%2F2026-09-21%2F1789991835594-da33dd1b-dd79-4736-8ff0-a84c752d6892-WhatsApp-Image-2026-09-21-at-5.25.22-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-21 at 5.25.22 PM.jpeg",
+      "publicDeleteTokenHash": "127c25f2a0770af02c6408540278cb184c5f118863bdadba3c80e06cc844ec78",
+      "id": "payment-8a218445-86c2-4b75-b1d4-b17c11793775",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "05a2a86a75d246dd84ecc11ba3dc78be",
+      "createdAt": "2026-09-21T11:57:17.717Z",
+      "updatedAt": "2026-09-21T11:57:17.717Z"
+    },
+    {
       "customerName": "Easan Fine Arts",
       "salesOrderNumber": "SO-07989",
       "paymentAmount": 69246,
