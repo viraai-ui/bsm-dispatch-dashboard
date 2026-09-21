@@ -22254,6 +22254,65 @@
       "machineIds": [
         "1154219000037154006-1154219000037154009-1"
       ]
+    },
+    "1154219000037147429": {
+      "completedAt": "2026-09-21T11:39:26.950Z",
+      "order": {
+        "id": "1154219000037147429",
+        "zohoSalesOrderId": "1154219000037147429",
+        "salesOrderNumber": "SO-07983",
+        "status": "open",
+        "customerName": "DILVIKA ORFIT",
+        "shippingAddress": "INDUSTRIAL AREA, D 63, SANT COMPLEX, Vidya Path, Latawa Steels, Sector 58, Mohali,, SAS Nagar, Punjab, 160055, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037147432",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277664",
+            "rate": 466000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037147429-1154219000037147432-1",
+            "unitNumber": 1,
+            "serialNumber": "26271277",
+            "qrToken": "26271277",
+            "orderId": "1154219000037147429",
+            "lineItemId": "1154219000037147432",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "customerName": "DILVIKA ORFIT",
+            "salesOrderNumber": "SO-07983",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T13:23:54+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037147429-1154219000037147432-1"
+      ]
     }
   }
 }
