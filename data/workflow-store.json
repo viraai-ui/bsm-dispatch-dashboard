@@ -34172,9 +34172,9 @@
     "1154219000037160004": {
       "salesOrderId": "1154219000037160004",
       "salesOrderNumber": "SO-07984",
-      "status": "qr_generated",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-09-19T10:39:21.945Z",
+      "processedAt": "2026-09-21T08:49:28.217Z",
       "processedOrder": {
         "id": "1154219000037160004",
         "zohoSalesOrderId": "1154219000037160004",
@@ -34184,7 +34184,7 @@
         "shippingAddress": "KILLA NO 31//13/5 (3-15), 14/2/1 (3-7), KHEWAT NO 1089, KHATA NO 1232, KUNDLI, NARELA PIAU MANIHARY ROAD, Toyota Galaxy Toyota Spare Parts Parking, TEHSIL RAI, Kundli,, Sonipat, Haryana, 131028, India",
         "salesperson": "Deepak Kumar",
         "deliveryDate": "2026-09-21",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "Processed",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -34228,8 +34228,8 @@
             "itemName": "Zigzag Flatbed",
             "sku": "20U",
             "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
+            "quantity": 2,
+            "pendingQuantity": 2,
             "woodenPackingRequired": true,
             "zohoItemId": "1154219000000226755",
             "rate": 22000,
@@ -34249,7 +34249,7 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -34273,7 +34273,7 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -34297,7 +34297,7 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -34321,7 +34321,7 @@
             "customerName": "A - MAX INDIA",
             "salesOrderNumber": "SO-07984",
             "deliveryDate": "2026-09-21",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -34332,9 +34332,33 @@
             "warrantyStart": "2026-09-19",
             "vendor": "K S",
             "dispatchNote": "LOCAL"
+          },
+          {
+            "id": "1154219000037160004-1154219000037160009-2",
+            "unitNumber": 5,
+            "serialNumber": "26271286",
+            "qrToken": "26271286",
+            "orderId": "1154219000037160004",
+            "lineItemId": "1154219000037160009",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "customerName": "A - MAX INDIA",
+            "salesOrderNumber": "SO-07984",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
-        "zohoLastModifiedTime": "2026-09-19T15:19:56+0530"
+        "zohoLastModifiedTime": "2026-09-21T13:23:27+0530"
       },
       "machines": {
         "1154219000037160004-1154219000037160010-1": {
@@ -34405,7 +34429,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-21T08:48:27.197Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-21T08:48:28.338Z"
+          "zohoBackupQueuedAt": "2026-09-21T08:48:28.338Z",
+          "processedAt": "2026-09-21T08:49:28.217Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     },
