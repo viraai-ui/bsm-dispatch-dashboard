@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-64aa639c-2519-44b0-9e4b-177bf2b5b464",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-1d02ee01-b0e3-4ec6-842d-61ba2699d287",
+      "salesOrderNumber": "SO-07972",
+      "customerName": "Mahakal Enterprises",
+      "paymentAmount": 162500,
+      "createdAt": "2026-09-21T12:26:22.058Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-eb55d842-fac2-4bbf-b0a0-07a4c29ec06b",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-1d02ee01-b0e3-4ec6-842d-61ba2699d287",
+      "salesOrderNumber": "SO-07972",
+      "customerName": "Mahakal Enterprises",
+      "paymentAmount": 162500,
+      "createdAt": "2026-09-21T12:26:22.058Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-e54a6fb5-fa38-4896-a30d-36c3f673577d",
       "type": "payment-created",
       "recipientUserId": "u-admin",
