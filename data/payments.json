@@ -1,6 +1,21 @@
 {
   "payments": [
     {
+      "customerName": "Mahakal Enterprises",
+      "salesOrderNumber": "SO-07972",
+      "paymentAmount": 162500,
+      "paymentMode": "Cash",
+      "addedBy": "Deepak",
+      "remarks": "Hare krishna\ncash give mam",
+      "publicDeleteTokenHash": "bf203642bd720a025d07287e9e19854e7ea97cbc88de66beb2736036d33c1321",
+      "id": "payment-1d02ee01-b0e3-4ec6-842d-61ba2699d287",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "a9ebb2de6b6f40aeac701d74c13ad44e",
+      "createdAt": "2026-09-21T12:26:19.730Z",
+      "updatedAt": "2026-09-21T12:26:19.730Z"
+    },
+    {
       "customerName": "Anil Upper & Footwear",
       "salesOrderNumber": "SO-07992",
       "paymentAmount": 21240,
