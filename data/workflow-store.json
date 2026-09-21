@@ -34737,7 +34737,9 @@
     "1154219000037147429": {
       "salesOrderId": "1154219000037147429",
       "salesOrderNumber": "SO-07983",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-21T05:48:38.264Z",
       "processedOrder": {
         "id": "1154219000037147429",
         "zohoSalesOrderId": "1154219000037147429",
@@ -34767,8 +34769,8 @@
           {
             "id": "1154219000037147429-1154219000037147432-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271277",
+            "qrToken": "26271277",
             "orderId": "1154219000037147429",
             "lineItemId": "1154219000037147432",
             "itemName": "Beam Cutting Press (40 ton)",
@@ -34776,14 +34778,17 @@
             "customerName": "DILVIKA ORFIT",
             "salesOrderNumber": "SO-07983",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-19T13:23:54+0530"
@@ -34797,7 +34802,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-21T05:47:46.499Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-21T05:47:47.313Z"
+          "zohoBackupQueuedAt": "2026-09-21T05:47:47.313Z",
+          "processedAt": "2026-09-21T05:48:38.264Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
