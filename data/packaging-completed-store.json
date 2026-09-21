@@ -21947,6 +21947,65 @@
       "machineIds": [
         "1154219000035884008-1154219000035884011-1"
       ]
+    },
+    "1154219000037173014": {
+      "completedAt": "2026-09-21T06:53:08.943Z",
+      "order": {
+        "id": "1154219000037173014",
+        "zohoSalesOrderId": "1154219000037173014",
+        "salesOrderNumber": "SO-07986",
+        "status": "open",
+        "customerName": "Footwarrior kreations",
+        "shippingAddress": "A-306, DSIIDC, DSIDC Industrial Area Narela, New Delhi, North Delhi, Delhi,, Delhi, 110040, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-19",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037173017",
+            "itemName": "ROLLER PRESSING MACHINE",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280386",
+            "rate": 40000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037173014-1154219000037173017-1",
+            "unitNumber": 1,
+            "serialNumber": "26271275",
+            "qrToken": "26271275",
+            "orderId": "1154219000037173014",
+            "lineItemId": "1154219000037173017",
+            "itemName": "ROLLER PRESSING MACHINE",
+            "sku": "",
+            "customerName": "Footwarrior kreations",
+            "salesOrderNumber": "SO-07986",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-19",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-19T16:03:56+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037173014-1154219000037173017-1"
+      ]
     }
   }
 }
