@@ -22313,6 +22313,65 @@
       "machineIds": [
         "1154219000037147429-1154219000037147432-1"
       ]
+    },
+    "1154219000037225017": {
+      "completedAt": "2026-09-21T12:31:43.615Z",
+      "order": {
+        "id": "1154219000037225017",
+        "zohoSalesOrderId": "1154219000037225017",
+        "salesOrderNumber": "SO-07992",
+        "status": "open",
+        "customerName": "Anil Upper & Footwear",
+        "shippingAddress": "V-312, Prem Nagar-II, Kirari, Delhi, 110086, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037225020",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000278601",
+            "rate": 18000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037225017-1154219000037225020-1",
+            "unitNumber": 1,
+            "serialNumber": "26271288",
+            "qrToken": "26271288",
+            "orderId": "1154219000037225017",
+            "lineItemId": "1154219000037225020",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "customerName": "Anil Upper & Footwear",
+            "salesOrderNumber": "SO-07992",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-21T17:18:00+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037225017-1154219000037225020-1"
+      ]
     }
   }
 }
