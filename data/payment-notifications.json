@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-1fdab189-196d-43fe-a24d-67d7ff269a0a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-e387c09c-fed1-4cde-b4f7-a77d2822ff0f",
+      "salesOrderNumber": "SO-07988",
+      "customerName": "Jai Enterprises",
+      "paymentAmount": 85000,
+      "createdAt": "2026-09-21T05:53:07.351Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-e1645dec-f75e-464b-934e-026e077123c6",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-e387c09c-fed1-4cde-b4f7-a77d2822ff0f",
+      "salesOrderNumber": "SO-07988",
+      "customerName": "Jai Enterprises",
+      "paymentAmount": 85000,
+      "createdAt": "2026-09-21T05:53:07.351Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-1b6ac56e-33ac-48d9-b225-e00cc96605b1",
       "type": "payment-created",
       "recipientUserId": "u-admin",
