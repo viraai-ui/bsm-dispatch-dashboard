@@ -1,6 +1,35 @@
 {
   "payments": [
     {
+      "customerName": "Mahakal Enterprises",
+      "salesOrderNumber": "SO-07972",
+      "paymentAmount": 283200,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Deepak",
+      "remarks": "Hare Krishna",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07972/2026-09-21/1789967280207-6e6e748e-cdef-4609-8b6b-b48c6fea7c6e-714a5d26-6e3a-41bc-8710-c804f49c6113.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07972%2F2026-09-21%2F1789967280207-6e6e748e-cdef-4609-8b6b-b48c6fea7c6e-714a5d26-6e3a-41bc-8710-c804f49c6113.jpg",
+          "name": "714a5d26-6e3a-41bc-8710-c804f49c6113.jpg",
+          "contentType": "image/jpeg",
+          "size": 32160,
+          "uploadedAt": "2026-09-21T05:08:01.598Z",
+          "expiresAt": "2026-10-21T05:08:01.598Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07972/2026-09-21/1789967280207-6e6e748e-cdef-4609-8b6b-b48c6fea7c6e-714a5d26-6e3a-41bc-8710-c804f49c6113.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07972%2F2026-09-21%2F1789967280207-6e6e748e-cdef-4609-8b6b-b48c6fea7c6e-714a5d26-6e3a-41bc-8710-c804f49c6113.jpg",
+      "screenshotName": "714a5d26-6e3a-41bc-8710-c804f49c6113.jpg",
+      "publicDeleteTokenHash": "911342b639c9d168705bb92e5b76ff2e8fbc95468431f9dad2447b3f9a3cc443",
+      "id": "payment-0c8cec1c-fd5e-4204-99f0-6ed9cec31ddf",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "eb9010b2671f4dc7bdc4debcf7b6d12b",
+      "createdAt": "2026-09-21T05:08:02.139Z",
+      "updatedAt": "2026-09-21T05:08:02.139Z"
+    },
+    {
       "customerName": "Jai Enterprises",
       "salesOrderNumber": "SO-07988",
       "paymentAmount": 100,
