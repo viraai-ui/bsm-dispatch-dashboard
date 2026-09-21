@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Jai Enterprises",
+      "salesOrderNumber": "SO-07988",
+      "paymentAmount": 100,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-07988/2026-09-21/1789967202167-5048cb97-9213-48f9-b74b-3351ae0e781c-WhatsApp-Image-2026-09-21-at-10.28.05-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07988%2F2026-09-21%2F1789967202167-5048cb97-9213-48f9-b74b-3351ae0e781c-WhatsApp-Image-2026-09-21-at-10.28.05-AM.jpg",
+          "name": "WhatsApp Image 2026-09-21 at 10.28.05 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 48362,
+          "uploadedAt": "2026-09-21T05:06:43.540Z",
+          "expiresAt": "2026-10-21T05:06:43.540Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-07988/2026-09-21/1789967202167-5048cb97-9213-48f9-b74b-3351ae0e781c-WhatsApp-Image-2026-09-21-at-10.28.05-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-07988%2F2026-09-21%2F1789967202167-5048cb97-9213-48f9-b74b-3351ae0e781c-WhatsApp-Image-2026-09-21-at-10.28.05-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-21 at 10.28.05 AM.jpeg",
+      "publicDeleteTokenHash": "f06891254046dc835fbd12f32fd1723073364ba44479d723ec3c31bae9ff9356",
+      "id": "payment-10cd6e9a-3ec4-469c-b0ac-fb0907a153f2",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "11b3abd382084654bfade1bf031d0f0f",
+      "createdAt": "2026-09-21T05:06:44.658Z",
+      "updatedAt": "2026-09-21T05:06:44.658Z"
+    },
+    {
       "customerName": "DILVIKA ORFIT",
       "salesOrderNumber": "SO-07983",
       "paymentAmount": 100000,
