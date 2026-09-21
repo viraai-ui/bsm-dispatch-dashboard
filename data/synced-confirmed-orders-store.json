@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037197042": {
+      "id": "1154219000037197042",
+      "zohoSalesOrderId": "1154219000037197042",
+      "salesOrderNumber": "SO-07991",
+      "status": "open",
+      "customerName": "INDUS FINE ARTS PRIVATE LIMITED",
+      "shippingAddress": "B-115, RIICO INDUSTRIAL AREA, KHAIRTHAL, KHAIRTHAL, Alwar, Rajasthan, 301404, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-09-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037197059",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000002187978",
+          "rate": 36500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037197042-1154219000037197059-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037197042",
+          "lineItemId": "1154219000037197059",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "customerName": "INDUS FINE ARTS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-07991",
+          "deliveryDate": "2026-09-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-21T16:53:30+0530"
+    },
     "1154219000037225004": {
       "id": "1154219000037225004",
       "zohoSalesOrderId": "1154219000037225004",
@@ -10095,6 +10145,7 @@
     }
   },
   "orderIds": [
+    "1154219000037197042",
     "1154219000037225004",
     "1154219000037224017",
     "1154219000037224004",
@@ -10143,8 +10194,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-21T11:20:31.081Z",
-  "lastAttemptAt": "2026-09-21T11:27:57.318Z",
+  "lastSuccessfulSyncAt": "2026-09-21T11:28:02.654Z",
+  "lastAttemptAt": "2026-09-21T11:28:02.654Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
