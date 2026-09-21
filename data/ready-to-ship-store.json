@@ -7700,6 +7700,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037173014": {
+      "id": "ship-1789973771439-bk8mf",
+      "itemId": "1154219000037173014",
+      "orderId": "1154219000037173014",
+      "machineId": "1154219000037173014-1154219000037173017-1",
+      "salesOrderNumber": "SO-07986",
+      "customerName": "Footwarrior kreations",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK9408",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-21",
+      "notes": "",
+      "shippedAt": "2026-09-21T06:56:11.439Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
