@@ -35270,7 +35270,9 @@
     "1154219000037225017": {
       "salesOrderId": "1154219000037225017",
       "salesOrderNumber": "SO-07992",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-21T12:08:12.647Z",
       "processedOrder": {
         "id": "1154219000037225017",
         "zohoSalesOrderId": "1154219000037225017",
@@ -35300,8 +35302,8 @@
           {
             "id": "1154219000037225017-1154219000037225020-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271288",
+            "qrToken": "26271288",
             "orderId": "1154219000037225017",
             "lineItemId": "1154219000037225020",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -35309,14 +35311,17 @@
             "customerName": "Anil Upper & Footwear",
             "salesOrderNumber": "SO-07992",
             "deliveryDate": "2026-09-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "vendor": "Ishu",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-21T17:18:00+0530"
@@ -35332,7 +35337,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-21T11:54:06.533Z",
           "zohoBackupLastAttemptAt": "2026-09-21T12:00:34.247Z",
-          "zohoBackupSyncedAt": "2026-09-21T12:00:34.247Z"
+          "zohoBackupSyncedAt": "2026-09-21T12:00:34.247Z",
+          "processedAt": "2026-09-21T12:08:12.647Z",
+          "dispatchNote": "local",
+          "vendor": "Ishu"
         }
       }
     }
