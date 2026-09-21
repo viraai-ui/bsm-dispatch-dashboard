@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271275,
+  "serialCounter": 26271276,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -34654,6 +34654,70 @@
           "vendor": "Bala Engennering",
           "zohoBackupLastAttemptAt": "2026-09-19T11:00:31.713Z",
           "zohoBackupSyncedAt": "2026-09-19T11:00:31.713Z"
+        }
+      }
+    },
+    "1154219000037224004": {
+      "salesOrderId": "1154219000037224004",
+      "salesOrderNumber": "SO-07988",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037224004",
+        "zohoSalesOrderId": "1154219000037224004",
+        "salesOrderNumber": "SO-07988",
+        "status": "open",
+        "customerName": "Jai Enterprises",
+        "shippingAddress": "16/75, Ghatiya Azam Khan, Moti Lal Nehru Road, St Vinslate English Medium Girls School, Civil Lines, Agra, Uttar Pradesh, 282004, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037224007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004385212",
+            "rate": 70000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037224004-1154219000037224007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037224004",
+            "lineItemId": "1154219000037224007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "Jai Enterprises",
+            "salesOrderNumber": "SO-07988",
+            "deliveryDate": "2026-09-21",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-21T10:50:55+0530"
+      },
+      "machines": {
+        "1154219000037224004-1154219000037224007-1": {
+          "machineUnitId": "1154219000037224004-1154219000037224007-1",
+          "lineItemId": "1154219000037224007",
+          "serialNumber": "26271276",
+          "qrToken": "26271276",
+          "qrStatus": "pending"
         }
       }
     }
