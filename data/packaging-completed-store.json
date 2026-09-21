@@ -22006,6 +22006,65 @@
       "machineIds": [
         "1154219000037173014-1154219000037173017-1"
       ]
+    },
+    "1154219000037224004": {
+      "completedAt": "2026-09-21T09:33:25.440Z",
+      "order": {
+        "id": "1154219000037224004",
+        "zohoSalesOrderId": "1154219000037224004",
+        "salesOrderNumber": "SO-07988",
+        "status": "open",
+        "customerName": "Jai Enterprises",
+        "shippingAddress": "16/75, Ghatiya Azam Khan, Moti Lal Nehru Road, St Vinslate English Medium Girls School, Civil Lines, Agra, Uttar Pradesh, 282004, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037224007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004385212",
+            "rate": 70000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037224004-1154219000037224007-1",
+            "unitNumber": 1,
+            "serialNumber": "26271276",
+            "qrToken": "26271276",
+            "orderId": "1154219000037224004",
+            "lineItemId": "1154219000037224007",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "Jai Enterprises",
+            "salesOrderNumber": "SO-07988",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-21T10:50:55+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037224004-1154219000037224007-1"
+      ]
     }
   }
 }
