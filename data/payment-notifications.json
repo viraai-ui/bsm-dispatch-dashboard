@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-cd798cec-0284-44bb-a2e3-f388268efec2",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-e1b8b6f0-1d3b-4d07-940b-82c1f767b137",
+      "salesOrderNumber": "SO-07989",
+      "customerName": "Easan Fine Arts",
+      "paymentAmount": 69246,
+      "createdAt": "2026-09-21T08:13:59.623Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ac6ab732-2bab-4839-ae22-67851d183445",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-e1b8b6f0-1d3b-4d07-940b-82c1f767b137",
+      "salesOrderNumber": "SO-07989",
+      "customerName": "Easan Fine Arts",
+      "paymentAmount": 69246,
+      "createdAt": "2026-09-21T08:13:59.623Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-1fdab189-196d-43fe-a24d-67d7ff269a0a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
