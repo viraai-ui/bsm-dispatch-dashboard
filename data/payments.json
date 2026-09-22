@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Flamingo Design",
+      "paymentAmount": 70328,
+      "paymentMode": "UPI",
+      "addedBy": "Ram",
+      "remarks": "Hare Krishna",
+      "attachments": [
+        {
+          "key": "payments/public/manual/0194dc9c-2067-492f-8022-c6f633c6a6f5/2026-09-22/1790056100667-d5a42f42-d7d8-40b9-8ba0-a7fd21bba29e-WhatsApp-Image-2026-09-22-at-11.17.29-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F0194dc9c-2067-492f-8022-c6f633c6a6f5%2F2026-09-22%2F1790056100667-d5a42f42-d7d8-40b9-8ba0-a7fd21bba29e-WhatsApp-Image-2026-09-22-at-11.17.29-AM.jpg",
+          "name": "WhatsApp Image 2026-09-22 at 11.17.29 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 34054,
+          "uploadedAt": "2026-09-22T05:48:22.854Z",
+          "expiresAt": "2026-10-22T05:48:22.854Z"
+        }
+      ],
+      "screenshotKey": "payments/public/manual/0194dc9c-2067-492f-8022-c6f633c6a6f5/2026-09-22/1790056100667-d5a42f42-d7d8-40b9-8ba0-a7fd21bba29e-WhatsApp-Image-2026-09-22-at-11.17.29-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F0194dc9c-2067-492f-8022-c6f633c6a6f5%2F2026-09-22%2F1790056100667-d5a42f42-d7d8-40b9-8ba0-a7fd21bba29e-WhatsApp-Image-2026-09-22-at-11.17.29-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-22 at 11.17.29 AM.jpeg",
+      "publicDeleteTokenHash": "9b7833e4eb36ef1dcf3ee0a4a924bb50286210727ee43d08e491e4d7329a4968",
+      "id": "payment-df952752-d64a-4e3d-96a9-438ecad9bf34",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "012eb52f14ed468da563cea7a55927a4",
+      "createdAt": "2026-09-22T05:48:23.807Z",
+      "updatedAt": "2026-09-22T05:48:23.807Z"
+    },
+    {
       "customerName": "Competence Export",
       "paymentAmount": 26225,
       "paymentMode": "UPI",
