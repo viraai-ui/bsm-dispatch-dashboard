@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271293,
+  "serialCounter": 26271294,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -36819,6 +36819,70 @@
           "vendor": "Ishu",
           "zohoBackupLastAttemptAt": "2026-09-22T09:45:34.634Z",
           "zohoBackupSyncedAt": "2026-09-22T09:45:34.634Z"
+        }
+      }
+    },
+    "1154219000037285004": {
+      "salesOrderId": "1154219000037285004",
+      "salesOrderNumber": "SO-08005",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037285004",
+        "zohoSalesOrderId": "1154219000037285004",
+        "salesOrderNumber": "SO-08005",
+        "status": "open",
+        "customerName": "RNC IMPEX PRIVATE LIMITED",
+        "shippingAddress": "Khasra No. 995, Camp Road, Central Hope Town, Selaqui,, Dehradun, Uttarakhand, 248011, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037285007",
+            "itemName": "Toe Lasting Machine",
+            "sku": "737",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225597",
+            "rate": 900000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037285004-1154219000037285007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037285004",
+            "lineItemId": "1154219000037285007",
+            "itemName": "Toe Lasting Machine",
+            "sku": "737",
+            "customerName": "RNC IMPEX PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08005",
+            "deliveryDate": "2026-09-28",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T15:26:18+0530"
+      },
+      "machines": {
+        "1154219000037285004-1154219000037285007-1": {
+          "machineUnitId": "1154219000037285004-1154219000037285007-1",
+          "lineItemId": "1154219000037285007",
+          "serialNumber": "26271294",
+          "qrToken": "26271294",
+          "qrStatus": "pending"
         }
       }
     }
