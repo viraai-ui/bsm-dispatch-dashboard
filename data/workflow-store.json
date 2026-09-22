@@ -36632,7 +36632,9 @@
     "1154219000037270001": {
       "salesOrderId": "1154219000037270001",
       "salesOrderNumber": "SO-07998",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-22T08:41:16.295Z",
       "processedOrder": {
         "id": "1154219000037270001",
         "zohoSalesOrderId": "1154219000037270001",
@@ -36662,8 +36664,8 @@
           {
             "id": "1154219000037270001-1154219000037270004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271291",
+            "qrToken": "26271291",
             "orderId": "1154219000037270001",
             "lineItemId": "1154219000037270004",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -36671,20 +36673,23 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
             "salesOrderNumber": "SO-07998",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "Rawal Ji",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037270001-1154219000037270004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271292",
+            "qrToken": "26271292",
             "orderId": "1154219000037270001",
             "lineItemId": "1154219000037270004",
             "itemName": "Drum type Sole Press (pneumatic)",
@@ -36692,14 +36697,17 @@
             "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
             "salesOrderNumber": "SO-07998",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "Rawal Ji",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T13:43:46+0530"
@@ -36715,7 +36723,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-22T08:26:30.049Z",
           "zohoBackupLastAttemptAt": "2026-09-22T08:30:33.507Z",
-          "zohoBackupSyncedAt": "2026-09-22T08:30:33.507Z"
+          "zohoBackupSyncedAt": "2026-09-22T08:30:33.507Z",
+          "processedAt": "2026-09-22T08:41:16.295Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal Ji"
         },
         "1154219000037270001-1154219000037270004-2": {
           "machineUnitId": "1154219000037270001-1154219000037270004-2",
@@ -36727,7 +36738,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-22T08:26:30.049Z",
           "zohoBackupLastAttemptAt": "2026-09-22T08:30:33.507Z",
-          "zohoBackupSyncedAt": "2026-09-22T08:30:33.507Z"
+          "zohoBackupSyncedAt": "2026-09-22T08:30:33.507Z",
+          "processedAt": "2026-09-22T08:41:16.295Z",
+          "dispatchNote": "local",
+          "vendor": "Rawal Ji"
         }
       }
     }
