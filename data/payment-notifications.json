@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-8dc4a9bb-30b2-45f9-babd-7ff371532060",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-8d8579d3-ab74-46aa-aebf-70b1ccf3f9e4",
+      "salesOrderNumber": "SO-08001",
+      "customerName": "Laxmi Enterprises",
+      "paymentAmount": 17700,
+      "createdAt": "2026-09-22T08:50:34.967Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-4945cd1b-bd0e-4ae1-a262-4cc62e3ec583",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-8d8579d3-ab74-46aa-aebf-70b1ccf3f9e4",
+      "salesOrderNumber": "SO-08001",
+      "customerName": "Laxmi Enterprises",
+      "paymentAmount": 17700,
+      "createdAt": "2026-09-22T08:50:34.967Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-7eb0f759-c408-4e82-a652-ec8f3346d658",
       "type": "payment-created",
       "recipientUserId": "u-admin",
