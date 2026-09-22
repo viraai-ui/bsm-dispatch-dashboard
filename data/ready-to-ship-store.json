@@ -7786,6 +7786,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037274001": {
+      "id": "ship-1790077042112-s2rqy",
+      "itemId": "1154219000037274001",
+      "orderId": "1154219000037274001",
+      "machineId": "1154219000037274001-1154219000037274004-1",
+      "salesOrderNumber": "SO-08001",
+      "customerName": "Laxmi Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01RQ2441",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T11:37:22.112Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
