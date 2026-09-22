@@ -7941,6 +7941,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037154006": {
+      "id": "ship-1790081335694-15boj",
+      "itemId": "1154219000037154006",
+      "orderId": "1154219000037154006",
+      "machineId": "1154219000037154006-1154219000037154009-1",
+      "salesOrderNumber": "SO-07981",
+      "customerName": "Shiv Industries",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "SURAJ GOODS TRANSPORT",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-21 at 8.57.15 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-22%2FSO-07981%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-22T12-48-50-638Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-22/SO-07981/shipment-lr-builty/Shipment-LR-Builty-2026-09-22T12-48-50-638Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-22T12:48:55.694Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:48:55.694Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
