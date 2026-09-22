@@ -22776,6 +22776,113 @@
       "machineIds": [
         "1154219000037274001-1154219000037274004-1"
       ]
+    },
+    "1154219000037276011": {
+      "completedAt": "2026-09-22T12:26:10.180Z",
+      "order": {
+        "id": "1154219000037276011",
+        "zohoSalesOrderId": "1154219000037276011",
+        "salesOrderNumber": "SO-08006",
+        "status": "open",
+        "customerName": "RESHMA POLYMERS",
+        "shippingAddress": "BEHIND KUNDAN CINEMA, JHAJJAR ROAD,, BAHADURGARH, HARYANA-124507, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037276014",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "description": "",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226755",
+            "rate": 23500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037276011-1154219000037276014-1",
+            "unitNumber": 1,
+            "serialNumber": "26271295",
+            "qrToken": "26271295",
+            "orderId": "1154219000037276011",
+            "lineItemId": "1154219000037276014",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "customerName": "RESHMA POLYMERS",
+            "salesOrderNumber": "SO-08006",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000037276011-1154219000037276014-2",
+            "unitNumber": 2,
+            "serialNumber": "26271296",
+            "qrToken": "26271296",
+            "orderId": "1154219000037276011",
+            "lineItemId": "1154219000037276014",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "customerName": "RESHMA POLYMERS",
+            "salesOrderNumber": "SO-08006",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000037276011-1154219000037276014-3",
+            "unitNumber": 3,
+            "serialNumber": "26271297",
+            "qrToken": "26271297",
+            "orderId": "1154219000037276011",
+            "lineItemId": "1154219000037276014",
+            "itemName": "Zigzag Flatbed",
+            "sku": "20U",
+            "customerName": "RESHMA POLYMERS",
+            "salesOrderNumber": "SO-08006",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T15:46:51+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037276011-1154219000037276014-1",
+        "1154219000037276011-1154219000037276014-2",
+        "1154219000037276011-1154219000037276014-3"
+      ]
     }
   }
 }
