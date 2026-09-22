@@ -36748,7 +36748,9 @@
     "1154219000037274001": {
       "salesOrderId": "1154219000037274001",
       "salesOrderNumber": "SO-08001",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-22T09:40:23.188Z",
       "processedOrder": {
         "id": "1154219000037274001",
         "zohoSalesOrderId": "1154219000037274001",
@@ -36778,8 +36780,8 @@
           {
             "id": "1154219000037274001-1154219000037274004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271293",
+            "qrToken": "26271293",
             "orderId": "1154219000037274001",
             "lineItemId": "1154219000037274004",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -36787,14 +36789,17 @@
             "customerName": "Laxmi Enterprises",
             "salesOrderNumber": "SO-08001",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "Ishu",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T15:00:17+0530"
@@ -36808,7 +36813,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T09:35:03.365Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T09:35:04.581Z"
+          "zohoBackupQueuedAt": "2026-09-22T09:35:04.581Z",
+          "processedAt": "2026-09-22T09:40:23.188Z",
+          "dispatchNote": "local",
+          "vendor": "Ishu"
         }
       }
     }
