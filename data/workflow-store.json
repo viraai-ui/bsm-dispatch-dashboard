@@ -36825,7 +36825,9 @@
     "1154219000037285004": {
       "salesOrderId": "1154219000037285004",
       "salesOrderNumber": "SO-08005",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-22T10:09:59.033Z",
       "processedOrder": {
         "id": "1154219000037285004",
         "zohoSalesOrderId": "1154219000037285004",
@@ -36855,8 +36857,8 @@
           {
             "id": "1154219000037285004-1154219000037285007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271294",
+            "qrToken": "26271294",
             "orderId": "1154219000037285004",
             "lineItemId": "1154219000037285007",
             "itemName": "Toe Lasting Machine",
@@ -36864,14 +36866,17 @@
             "customerName": "RNC IMPEX PRIVATE LIMITED",
             "salesOrderNumber": "SO-08005",
             "deliveryDate": "2026-09-28",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "Aaradhya",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T15:26:18+0530"
@@ -36885,7 +36890,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T10:07:25.957Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T10:07:27.247Z"
+          "zohoBackupQueuedAt": "2026-09-22T10:07:27.247Z",
+          "processedAt": "2026-09-22T10:09:59.033Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Aaradhya"
         }
       }
     }
