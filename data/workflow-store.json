@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271290,
+  "serialCounter": 26271292,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -36626,6 +36626,98 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-22T06:30:33.193Z",
           "zohoBackupSyncedAt": "2026-09-22T06:30:33.193Z"
+        }
+      }
+    },
+    "1154219000037270001": {
+      "salesOrderId": "1154219000037270001",
+      "salesOrderNumber": "SO-07998",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037270001",
+        "zohoSalesOrderId": "1154219000037270001",
+        "salesOrderNumber": "SO-07998",
+        "status": "open",
+        "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+        "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037270004",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225413",
+            "rate": 48000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037270001-1154219000037270004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037270001",
+            "lineItemId": "1154219000037270004",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+            "salesOrderNumber": "SO-07998",
+            "deliveryDate": "2026-09-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037270001-1154219000037270004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037270001",
+            "lineItemId": "1154219000037270004",
+            "itemName": "Drum type Sole Press (pneumatic)",
+            "sku": "2002",
+            "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+            "salesOrderNumber": "SO-07998",
+            "deliveryDate": "2026-09-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T13:43:46+0530"
+      },
+      "machines": {
+        "1154219000037270001-1154219000037270004-1": {
+          "machineUnitId": "1154219000037270001-1154219000037270004-1",
+          "lineItemId": "1154219000037270004",
+          "serialNumber": "26271291",
+          "qrToken": "26271291",
+          "qrStatus": "pending"
+        },
+        "1154219000037270001-1154219000037270004-2": {
+          "machineUnitId": "1154219000037270001-1154219000037270004-2",
+          "lineItemId": "1154219000037270004",
+          "serialNumber": "26271292",
+          "qrToken": "26271292",
+          "qrStatus": "pending"
         }
       }
     }
