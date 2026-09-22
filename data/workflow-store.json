@@ -35354,7 +35354,9 @@
     "1154219000037264001": {
       "salesOrderId": "1154219000037264001",
       "salesOrderNumber": "SO-07996",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-22T06:29:25.724Z",
       "processedOrder": {
         "id": "1154219000037264001",
         "zohoSalesOrderId": "1154219000037264001",
@@ -35396,8 +35398,8 @@
           {
             "id": "1154219000037264001-1154219000037264004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271289",
+            "qrToken": "26271289",
             "orderId": "1154219000037264001",
             "lineItemId": "1154219000037264004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -35405,20 +35407,23 @@
             "customerName": "Flamingo Designs Pvt Ltd",
             "salesOrderNumber": "SO-07996",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037264001-1154219000037264004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271290",
+            "qrToken": "26271290",
             "orderId": "1154219000037264001",
             "lineItemId": "1154219000037264004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -35426,14 +35431,17 @@
             "customerName": "Flamingo Designs Pvt Ltd",
             "salesOrderNumber": "SO-07996",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037264001-1154219000037264005-1",
@@ -35454,7 +35462,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-2",
@@ -35475,7 +35485,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-3",
@@ -35496,7 +35508,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-4",
@@ -35517,7 +35531,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-5",
@@ -35538,7 +35554,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-6",
@@ -35559,7 +35577,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-7",
@@ -35580,7 +35600,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-8",
@@ -35601,7 +35623,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-9",
@@ -35622,7 +35646,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-10",
@@ -35643,7 +35669,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-11",
@@ -35664,7 +35692,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-12",
@@ -35685,7 +35715,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-13",
@@ -35706,7 +35738,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-14",
@@ -35727,7 +35761,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-15",
@@ -35748,7 +35784,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-16",
@@ -35769,7 +35807,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-17",
@@ -35790,7 +35830,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-18",
@@ -35811,7 +35853,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-19",
@@ -35832,7 +35876,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-20",
@@ -35853,7 +35899,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-21",
@@ -35874,7 +35922,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-22",
@@ -35895,7 +35945,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-23",
@@ -35916,7 +35968,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-24",
@@ -35937,7 +35991,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-25",
@@ -35958,7 +36014,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-26",
@@ -35979,7 +36037,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-27",
@@ -36000,7 +36060,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-28",
@@ -36021,7 +36083,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-29",
@@ -36042,7 +36106,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-30",
@@ -36063,7 +36129,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-31",
@@ -36084,7 +36152,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-32",
@@ -36105,7 +36175,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-33",
@@ -36126,7 +36198,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-34",
@@ -36147,7 +36221,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-35",
@@ -36168,7 +36244,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-36",
@@ -36189,7 +36267,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-37",
@@ -36210,7 +36290,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-38",
@@ -36231,7 +36313,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-39",
@@ -36252,7 +36336,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-40",
@@ -36273,7 +36359,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-41",
@@ -36294,7 +36382,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-42",
@@ -36315,7 +36405,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-43",
@@ -36336,7 +36428,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-44",
@@ -36357,7 +36451,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-45",
@@ -36378,7 +36474,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-46",
@@ -36399,7 +36497,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-47",
@@ -36420,7 +36520,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-48",
@@ -36441,7 +36543,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-49",
@@ -36462,7 +36566,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000037264001-1154219000037264005-50",
@@ -36483,7 +36589,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Blade for Trimming Machine (BS-902)"
+            "itemDescription": "Blade for Trimming Machine (BS-902)",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T11:24:44+0530"
@@ -36497,7 +36605,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T06:26:10.722Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T06:26:11.700Z"
+          "zohoBackupQueuedAt": "2026-09-22T06:26:11.700Z",
+          "processedAt": "2026-09-22T06:29:25.724Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037264001-1154219000037264004-2": {
           "machineUnitId": "1154219000037264001-1154219000037264004-2",
@@ -36507,7 +36618,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T06:26:10.722Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T06:26:11.700Z"
+          "zohoBackupQueuedAt": "2026-09-22T06:26:11.700Z",
+          "processedAt": "2026-09-22T06:29:25.724Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
