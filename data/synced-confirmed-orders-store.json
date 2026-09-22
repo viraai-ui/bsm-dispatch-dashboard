@@ -1,5 +1,45 @@
 {
   "orders": {
+    "1154219000037204025": {
+      "id": "1154219000037204025",
+      "zohoSalesOrderId": "1154219000037204025",
+      "salesOrderNumber": "SO-07994",
+      "status": "open",
+      "customerName": "Competence Exports Pvt Ltd",
+      "shippingAddress": "B 10 EPIP, Industrial Area, Export Zone Hajipur, Bihar, 844101",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-21",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037204028",
+          "itemName": "Hotmelt Polyamide Granules",
+          "sku": "7160",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001151038",
+          "rate": 850,
+          "dispatchCategory": "adhesive"
+        },
+        {
+          "id": "1154219000037204029",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost Extra from BSM to VRL Logistics Delhi Godow for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-22T10:34:12+0530"
+    },
     "1154219000037225017": {
       "id": "1154219000037225017",
       "zohoSalesOrderId": "1154219000037225017",
@@ -10195,6 +10235,7 @@
     }
   },
   "orderIds": [
+    "1154219000037204025",
     "1154219000037225017",
     "1154219000037197042",
     "1154219000037225004",
@@ -10245,8 +10286,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-22T05:00:30.588Z",
-  "lastAttemptAt": "2026-09-22T05:16:26.152Z",
+  "lastSuccessfulSyncAt": "2026-09-22T05:16:31.731Z",
+  "lastAttemptAt": "2026-09-22T05:16:31.731Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
