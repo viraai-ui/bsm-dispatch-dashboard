@@ -7910,6 +7910,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037147429": {
+      "id": "ship-1790081221097-iqrmt",
+      "itemId": "1154219000037147429",
+      "orderId": "1154219000037147429",
+      "machineId": "1154219000037147429-1154219000037147432-1",
+      "salesOrderNumber": "SO-07983",
+      "customerName": "DILVIKA ORFIT",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAF0257",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:47:01.097Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
