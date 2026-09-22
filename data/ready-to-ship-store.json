@@ -8041,6 +8041,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035880001": {
+      "id": "ship-1790081696210-hht6o",
+      "itemId": "1154219000035880001",
+      "orderId": "1154219000035880001",
+      "machineId": "1154219000035880001-1154219000035880004-1",
+      "salesOrderNumber": "SO-07767",
+      "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:54:56.210Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
