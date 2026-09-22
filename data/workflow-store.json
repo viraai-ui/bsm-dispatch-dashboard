@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271292,
+  "serialCounter": 26271293,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -36742,6 +36742,70 @@
           "processedAt": "2026-09-22T08:41:16.295Z",
           "dispatchNote": "local",
           "vendor": "Rawal Ji"
+        }
+      }
+    },
+    "1154219000037274001": {
+      "salesOrderId": "1154219000037274001",
+      "salesOrderNumber": "SO-08001",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037274001",
+        "zohoSalesOrderId": "1154219000037274001",
+        "salesOrderNumber": "SO-08001",
+        "status": "open",
+        "customerName": "Laxmi Enterprises",
+        "shippingAddress": "3RD FLOOR, FLAT NO. 113, BLK-B, PKT-3, JANTA FLATS, SEC B-4, NEAR RAJA HARISH CHANDER RED LIGHT, Narela, New Delhi, North Delhi, Delhi, 110040, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037274004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 15000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037274001-1154219000037274004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037274001",
+            "lineItemId": "1154219000037274004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "Laxmi Enterprises",
+            "salesOrderNumber": "SO-08001",
+            "deliveryDate": "2026-09-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T15:00:17+0530"
+      },
+      "machines": {
+        "1154219000037274001-1154219000037274004-1": {
+          "machineUnitId": "1154219000037274001-1154219000037274004-1",
+          "lineItemId": "1154219000037274004",
+          "serialNumber": "26271293",
+          "qrToken": "26271293",
+          "qrStatus": "pending"
         }
       }
     }
