@@ -7755,6 +7755,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037264001": {
+      "id": "ship-1790074044821-kqmb6",
+      "itemId": "1154219000037264001",
+      "orderId": "1154219000037264001",
+      "machineId": "1154219000037264001-1154219000037264004-1",
+      "salesOrderNumber": "SO-07996",
+      "customerName": "Flamingo Designs Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS0496",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T10:47:24.821Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
