@@ -7817,6 +7817,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037276011": {
+      "id": "ship-1790080836420-z0ugw",
+      "itemId": "1154219000037276011",
+      "orderId": "1154219000037276011",
+      "machineId": "1154219000037276011-1154219000037276014-1",
+      "salesOrderNumber": "SO-08006",
+      "customerName": "RESHMA POLYMERS",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK8226",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:40:36.420Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
