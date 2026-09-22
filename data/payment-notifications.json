@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-31184142-7aca-4a8e-8549-216e5f0aaf7a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-df952752-d64a-4e3d-96a9-438ecad9bf34",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Flamingo Design",
+      "paymentAmount": 70328,
+      "createdAt": "2026-09-22T05:48:25.848Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-413a1652-66ff-4e3b-bd0e-07af32163f0e",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-df952752-d64a-4e3d-96a9-438ecad9bf34",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Flamingo Design",
+      "paymentAmount": 70328,
+      "createdAt": "2026-09-22T05:48:25.848Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-4f718f6b-5d60-4393-9adf-e692abe95dcd",
       "type": "payment-created",
       "recipientUserId": "u-admin",
