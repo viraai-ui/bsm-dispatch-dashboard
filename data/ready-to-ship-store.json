@@ -7724,6 +7724,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037160004": {
+      "id": "ship-1790069519340-j9ser",
+      "itemId": "1154219000037160004",
+      "orderId": "1154219000037160004",
+      "machineId": "1154219000037160004-1154219000037160010-1",
+      "salesOrderNumber": "SO-07984",
+      "customerName": "A - MAX INDIA",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL1LAE8182",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T09:31:59.340Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
