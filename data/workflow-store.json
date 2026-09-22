@@ -37060,7 +37060,9 @@
     "1154219000037274021": {
       "salesOrderId": "1154219000037274021",
       "salesOrderNumber": "SO-08007",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-22T11:21:57.984Z",
       "processedOrder": {
         "id": "1154219000037274021",
         "zohoSalesOrderId": "1154219000037274021",
@@ -37090,8 +37092,8 @@
           {
             "id": "1154219000037274021-1154219000037274024-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271298",
+            "qrToken": "26271298",
             "orderId": "1154219000037274021",
             "lineItemId": "1154219000037274024",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -37099,14 +37101,17 @@
             "customerName": "KHUSHI UPPER",
             "salesOrderNumber": "SO-08007",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T16:48:18+0530"
@@ -37120,7 +37125,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T11:19:53.630Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T11:19:54.995Z"
+          "zohoBackupQueuedAt": "2026-09-22T11:19:54.995Z",
+          "processedAt": "2026-09-22T11:21:57.984Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         }
       }
     }
