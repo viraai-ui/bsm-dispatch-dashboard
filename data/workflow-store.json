@@ -36902,7 +36902,9 @@
     "1154219000037276011": {
       "salesOrderId": "1154219000037276011",
       "salesOrderNumber": "SO-08006",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-22T10:37:03.747Z",
       "processedOrder": {
         "id": "1154219000037276011",
         "zohoSalesOrderId": "1154219000037276011",
@@ -36932,8 +36934,8 @@
           {
             "id": "1154219000037276011-1154219000037276014-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271295",
+            "qrToken": "26271295",
             "orderId": "1154219000037276011",
             "lineItemId": "1154219000037276014",
             "itemName": "Zigzag Flatbed",
@@ -36941,20 +36943,23 @@
             "customerName": "RESHMA POLYMERS",
             "salesOrderNumber": "SO-08006",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037276011-1154219000037276014-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271296",
+            "qrToken": "26271296",
             "orderId": "1154219000037276011",
             "lineItemId": "1154219000037276014",
             "itemName": "Zigzag Flatbed",
@@ -36962,20 +36967,23 @@
             "customerName": "RESHMA POLYMERS",
             "salesOrderNumber": "SO-08006",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037276011-1154219000037276014-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271297",
+            "qrToken": "26271297",
             "orderId": "1154219000037276011",
             "lineItemId": "1154219000037276014",
             "itemName": "Zigzag Flatbed",
@@ -36983,14 +36991,17 @@
             "customerName": "RESHMA POLYMERS",
             "salesOrderNumber": "SO-08006",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T15:46:51+0530"
@@ -37004,7 +37015,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T10:35:01.311Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T10:35:02.753Z"
+          "zohoBackupQueuedAt": "2026-09-22T10:35:02.753Z",
+          "processedAt": "2026-09-22T10:37:03.747Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037276011-1154219000037276014-2": {
           "machineUnitId": "1154219000037276011-1154219000037276014-2",
@@ -37014,7 +37028,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T10:35:01.311Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T10:35:02.753Z"
+          "zohoBackupQueuedAt": "2026-09-22T10:35:02.753Z",
+          "processedAt": "2026-09-22T10:37:03.747Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037276011-1154219000037276014-3": {
           "machineUnitId": "1154219000037276011-1154219000037276014-3",
@@ -37024,7 +37041,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-22T10:35:01.311Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-22T10:35:02.753Z"
+          "zohoBackupQueuedAt": "2026-09-22T10:35:02.753Z",
+          "processedAt": "2026-09-22T10:37:03.747Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
