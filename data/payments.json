@@ -1,6 +1,21 @@
 {
   "payments": [
     {
+      "customerName": "United Products",
+      "salesOrderNumber": "SO-07995",
+      "paymentAmount": 19175,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "remarks": "Ac XX1230 debited Rs.19175.00 on 21-09-2026 19:49:18 for NEFT thru IBS reqid 785471938 from PUNBY26264526189/078547Benga",
+      "publicDeleteTokenHash": "f115565a9d1754703a9db25fce402347dfe97179cef24ce97c51fd683bf4fc32",
+      "id": "payment-2183a38c-98a6-429e-a14d-0c9d64605e9e",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "dbc02452352845ceb9c6500d1d346cdd",
+      "createdAt": "2026-09-22T05:49:43.929Z",
+      "updatedAt": "2026-09-22T05:49:43.929Z"
+    },
+    {
       "customerName": "Flamingo Design",
       "paymentAmount": 70328,
       "paymentMode": "UPI",
