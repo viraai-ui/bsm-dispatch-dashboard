@@ -22883,6 +22883,65 @@
         "1154219000037276011-1154219000037276014-2",
         "1154219000037276011-1154219000037276014-3"
       ]
+    },
+    "1154219000037274021": {
+      "completedAt": "2026-09-22T12:55:47.043Z",
+      "order": {
+        "id": "1154219000037274021",
+        "zohoSalesOrderId": "1154219000037274021",
+        "salesOrderNumber": "SO-08007",
+        "status": "open",
+        "customerName": "KHUSHI UPPER",
+        "shippingAddress": "PLOT NO-83, HANUMAN ENCLAVE,, NANGLOI, Delhi, 110041, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037274024",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280682",
+            "rate": 29000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037274021-1154219000037274024-1",
+            "unitNumber": 1,
+            "serialNumber": "26271298",
+            "qrToken": "26271298",
+            "orderId": "1154219000037274021",
+            "lineItemId": "1154219000037274024",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "KHUSHI UPPER",
+            "salesOrderNumber": "SO-08007",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-22",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T16:48:18+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037274021-1154219000037274024-1"
+      ]
     }
   }
 }
