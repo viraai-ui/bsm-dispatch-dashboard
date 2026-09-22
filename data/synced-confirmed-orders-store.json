@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037261014": {
+      "id": "1154219000037261014",
+      "zohoSalesOrderId": "1154219000037261014",
+      "salesOrderNumber": "SO-08008",
+      "status": "open",
+      "customerName": "JAMA CORPORATION PVT.LTD.",
+      "shippingAddress": "8/2-B, ARYA NAGAR, KANPUR, Kanpur Nagar, Kanpur, Uttar Pradesh, 208002, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037261017",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000018448369",
+          "rate": 24500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037261014-1154219000037261017-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037261014",
+          "lineItemId": "1154219000037261017",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "JAMA CORPORATION PVT.LTD.",
+          "salesOrderNumber": "SO-08008",
+          "deliveryDate": "2026-09-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-22T16:56:18+0530"
+    },
     "1154219000037274021": {
       "id": "1154219000037274021",
       "zohoSalesOrderId": "1154219000037274021",
@@ -331,56 +381,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-22T15:00:47+0530"
-    },
-    "1154219000037274001": {
-      "id": "1154219000037274001",
-      "zohoSalesOrderId": "1154219000037274001",
-      "salesOrderNumber": "SO-08001",
-      "status": "open",
-      "customerName": "Laxmi Enterprises",
-      "shippingAddress": "3RD FLOOR, FLAT NO. 113, BLK-B, PKT-3, JANTA FLATS, SEC B-4, NEAR RAJA HARISH CHANDER RED LIGHT, Narela, New Delhi, North Delhi, Delhi, 110040, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037274004",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226034",
-          "rate": 15000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037274001-1154219000037274004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037274001",
-          "lineItemId": "1154219000037274004",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
-          "customerName": "Laxmi Enterprises",
-          "salesOrderNumber": "SO-08001",
-          "deliveryDate": "2026-09-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-22T15:00:17+0530"
     },
     "1154219000037273001": {
       "id": "1154219000037273001",
@@ -10800,13 +10800,13 @@
     }
   },
   "orderIds": [
+    "1154219000037261014",
     "1154219000037274021",
     "1154219000037276011",
     "1154219000037285004",
     "1154219000037266014",
     "1154219000037243118",
     "1154219000037275001",
-    "1154219000037274001",
     "1154219000037273001",
     "1154219000037260006",
     "1154219000037270001",
@@ -10862,8 +10862,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-22T11:20:31.949Z",
-  "lastAttemptAt": "2026-09-22T11:40:24.887Z",
+  "lastSuccessfulSyncAt": "2026-09-22T11:40:32.482Z",
+  "lastAttemptAt": "2026-09-22T11:40:32.482Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
