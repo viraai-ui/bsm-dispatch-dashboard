@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-7eb0f759-c408-4e82-a652-ec8f3346d658",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-2183a38c-98a6-429e-a14d-0c9d64605e9e",
+      "salesOrderNumber": "SO-07995",
+      "customerName": "United Products",
+      "paymentAmount": 19175,
+      "createdAt": "2026-09-22T05:49:45.708Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-e2082465-0616-4960-923c-c3f3a33aa69f",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-2183a38c-98a6-429e-a14d-0c9d64605e9e",
+      "salesOrderNumber": "SO-07995",
+      "customerName": "United Products",
+      "paymentAmount": 19175,
+      "createdAt": "2026-09-22T05:49:45.708Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-31184142-7aca-4a8e-8549-216e5f0aaf7a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
