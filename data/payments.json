@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Laxmi Enterprises",
+      "salesOrderNumber": "SO-08001",
+      "paymentAmount": 17700,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Anuj",
+      "attachments": [
+        {
+          "key": "payments/public/SO-08001/2026-09-22/1790067029643-83998a93-3689-4282-a67f-1564ce00a345-WhatsApp-Image-2026-09-22-at-2.14.32-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-08001%2F2026-09-22%2F1790067029643-83998a93-3689-4282-a67f-1564ce00a345-WhatsApp-Image-2026-09-22-at-2.14.32-PM.jpg",
+          "name": "WhatsApp Image 2026-09-22 at 2.14.32 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 47974,
+          "uploadedAt": "2026-09-22T08:50:31.798Z",
+          "expiresAt": "2026-10-22T08:50:31.798Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-08001/2026-09-22/1790067029643-83998a93-3689-4282-a67f-1564ce00a345-WhatsApp-Image-2026-09-22-at-2.14.32-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-08001%2F2026-09-22%2F1790067029643-83998a93-3689-4282-a67f-1564ce00a345-WhatsApp-Image-2026-09-22-at-2.14.32-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-22 at 2.14.32 PM.jpeg",
+      "publicDeleteTokenHash": "12c2cef7d314f6826abcf0934b53ee602d806c3b9233467fe0fbcf3ce3614865",
+      "id": "payment-8d8579d3-ab74-46aa-aebf-70b1ccf3f9e4",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "9f3bf86cf87140f2a402a9dff70b910e",
+      "createdAt": "2026-09-22T08:50:32.614Z",
+      "updatedAt": "2026-09-22T08:50:32.614Z"
+    },
+    {
       "customerName": "United Products",
       "salesOrderNumber": "SO-07995",
       "paymentAmount": 19175,
