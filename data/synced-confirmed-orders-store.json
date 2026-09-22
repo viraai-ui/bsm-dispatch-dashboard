@@ -50,56 +50,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-22T16:56:18+0530"
     },
-    "1154219000037274021": {
-      "id": "1154219000037274021",
-      "zohoSalesOrderId": "1154219000037274021",
-      "salesOrderNumber": "SO-08007",
-      "status": "open",
-      "customerName": "KHUSHI UPPER",
-      "shippingAddress": "PLOT NO-83, HANUMAN ENCLAVE,, NANGLOI, Delhi, 110041, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037274024",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000280682",
-          "rate": 29000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037274021-1154219000037274024-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037274021",
-          "lineItemId": "1154219000037274024",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "KHUSHI UPPER",
-          "salesOrderNumber": "SO-08007",
-          "deliveryDate": "2026-09-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-22T16:48:18+0530"
-    },
     "1154219000037285004": {
       "id": "1154219000037285004",
       "zohoSalesOrderId": "1154219000037285004",
@@ -10314,7 +10264,6 @@
   },
   "orderIds": [
     "1154219000037261014",
-    "1154219000037274021",
     "1154219000037285004",
     "1154219000037266014",
     "1154219000037243118",
@@ -10367,8 +10316,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-22T12:52:22.688Z",
-  "lastAttemptAt": "2026-09-22T13:00:25.136Z",
+  "lastSuccessfulSyncAt": "2026-09-22T13:00:32.714Z",
+  "lastAttemptAt": "2026-09-22T13:00:32.714Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
