@@ -22372,6 +22372,65 @@
       "machineIds": [
         "1154219000037225017-1154219000037225020-1"
       ]
+    },
+    "1154219000037197042": {
+      "completedAt": "2026-09-22T06:28:13.238Z",
+      "order": {
+        "id": "1154219000037197042",
+        "zohoSalesOrderId": "1154219000037197042",
+        "salesOrderNumber": "SO-07991",
+        "status": "open",
+        "customerName": "INDUS FINE ARTS PRIVATE LIMITED",
+        "shippingAddress": "B-115, RIICO INDUSTRIAL AREA, KHAIRTHAL, KHAIRTHAL, Alwar, Rajasthan, 301404, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037197059",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000002187978",
+            "rate": 36500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037197042-1154219000037197059-1",
+            "unitNumber": 1,
+            "serialNumber": "26271287",
+            "qrToken": "26271287",
+            "orderId": "1154219000037197042",
+            "lineItemId": "1154219000037197059",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "INDUS FINE ARTS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07991",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-21",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-21T16:53:30+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037197042-1154219000037197059-1"
+      ]
     }
   }
 }
