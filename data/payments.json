@@ -1,6 +1,35 @@
 {
   "payments": [
     {
+      "customerName": "KHUSHI UPPER",
+      "salesOrderNumber": "SO-08007",
+      "paymentAmount": 34220,
+      "paymentMode": "UPI",
+      "addedBy": "Deepak",
+      "remarks": "Hare Krishna",
+      "attachments": [
+        {
+          "key": "payments/public/SO-08007/2026-09-22/1790075454779-f7fdf856-776b-4fc9-93db-59cfb30cd303-9e915a82-1a6e-43a7-aebd-601654962628.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-08007%2F2026-09-22%2F1790075454779-f7fdf856-776b-4fc9-93db-59cfb30cd303-9e915a82-1a6e-43a7-aebd-601654962628.jpg",
+          "name": "9e915a82-1a6e-43a7-aebd-601654962628.jpg",
+          "contentType": "image/jpeg",
+          "size": 162180,
+          "uploadedAt": "2026-09-22T11:10:56.550Z",
+          "expiresAt": "2026-10-22T11:10:56.550Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-08007/2026-09-22/1790075454779-f7fdf856-776b-4fc9-93db-59cfb30cd303-9e915a82-1a6e-43a7-aebd-601654962628.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-08007%2F2026-09-22%2F1790075454779-f7fdf856-776b-4fc9-93db-59cfb30cd303-9e915a82-1a6e-43a7-aebd-601654962628.jpg",
+      "screenshotName": "9e915a82-1a6e-43a7-aebd-601654962628.jpg",
+      "publicDeleteTokenHash": "bb7d2f9dacaee538880ef242397f61a14de364fb9bbf7342e49f6ff4c8bc3261",
+      "id": "payment-78c3516c-79e9-4f2a-8719-5dd1e8572188",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "bf21a1c78b644535bbd7f538c46bd5e4",
+      "createdAt": "2026-09-22T11:10:58.502Z",
+      "updatedAt": "2026-09-22T11:10:58.502Z"
+    },
+    {
       "customerName": "Laxmi Enterprises",
       "salesOrderNumber": "SO-08001",
       "paymentAmount": 17700,
