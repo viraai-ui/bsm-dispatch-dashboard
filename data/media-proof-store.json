@@ -3451,6 +3451,31 @@
           ]
         }
       }
+    },
+    "1154219000037270001": {
+      "orderId": "1154219000037270001",
+      "salesOrderNumber": "SO-07998",
+      "submittedAt": null,
+      "units": {
+        "1154219000037270001-1154219000037270004-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000037270001-1154219000037270004-1-video-1790079724973-zfdswq",
+              "name": "VID_20260922_175136.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-22%2FSO-07998%2F1154219000037270001-1154219000037270004-1%2FDrum-type-Sole-Press-pneumatic-2026-09-22T12-21-46-789Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-09-22/SO-07998/1154219000037270001-1154219000037270004-1/Drum-type-Sole-Press-pneumatic-2026-09-22T12-21-46-789Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-09-22T12:22:04.973Z",
+              "expiresAt": "2026-10-13T12:22:04.973Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
