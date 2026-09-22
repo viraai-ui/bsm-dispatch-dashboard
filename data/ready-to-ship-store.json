@@ -7848,6 +7848,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037197042": {
+      "id": "ship-1790081042061-yldmz",
+      "itemId": "1154219000037197042",
+      "orderId": "1154219000037197042",
+      "machineId": "1154219000037197042-1154219000037197059-1",
+      "salesOrderNumber": "SO-07991",
+      "customerName": "INDUS FINE ARTS PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "RJ02GC7417",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-22",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:44:02.061Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
