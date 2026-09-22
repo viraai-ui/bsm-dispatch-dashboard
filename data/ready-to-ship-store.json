@@ -7979,6 +7979,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037080004": {
+      "id": "ship-1790081406598-782pn",
+      "itemId": "1154219000037080004",
+      "orderId": "1154219000037080004",
+      "machineId": "1154219000037080004-1154219000037080007-1",
+      "salesOrderNumber": "SO-07972",
+      "customerName": "Mahakal Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAM7175",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-21",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:50:06.598Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
