@@ -7879,6 +7879,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037225017": {
+      "id": "ship-1790081145492-qardt",
+      "itemId": "1154219000037225017",
+      "orderId": "1154219000037225017",
+      "machineId": "1154219000037225017-1154219000037225020-1",
+      "salesOrderNumber": "SO-07992",
+      "customerName": "Anil Upper & Footwear",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-21",
+      "notes": "",
+      "shippedAt": "2026-09-22T12:45:45.492Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
