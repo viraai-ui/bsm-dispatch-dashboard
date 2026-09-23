@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-e6ddc1c9-ba24-4af2-9c7c-855db27c8cde",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-4a0ee73b-7b92-4bd8-854f-d30e47448fb7",
+      "salesOrderNumber": "SO-08017",
+      "customerName": "AIRCITY SHOES PRIVATE LIMITED",
+      "paymentAmount": 74025,
+      "createdAt": "2026-09-23T09:06:31.782Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ef600314-0e26-46a2-817b-85cc73d9c2c0",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-4a0ee73b-7b92-4bd8-854f-d30e47448fb7",
+      "salesOrderNumber": "SO-08017",
+      "customerName": "AIRCITY SHOES PRIVATE LIMITED",
+      "paymentAmount": 74025,
+      "createdAt": "2026-09-23T09:06:31.782Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-fdb5a479-3530-4cae-bde8-e3dd11b22d09",
       "type": "payment-created",
       "recipientUserId": "u-admin",
