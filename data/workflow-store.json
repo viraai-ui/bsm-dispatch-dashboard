@@ -37143,7 +37143,9 @@
     "1154219000037279003": {
       "salesOrderId": "1154219000037279003",
       "salesOrderNumber": "SO-08010",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-23T06:50:03.890Z",
       "processedOrder": {
         "id": "1154219000037279003",
         "zohoSalesOrderId": "1154219000037279003",
@@ -37173,8 +37175,8 @@
           {
             "id": "1154219000037279003-1154219000037279006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271299",
+            "qrToken": "26271299",
             "orderId": "1154219000037279003",
             "lineItemId": "1154219000037279006",
             "itemName": "Round Blade Edge trimming Machine",
@@ -37182,20 +37184,23 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037279003-1154219000037279006-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271300",
+            "qrToken": "26271300",
             "orderId": "1154219000037279003",
             "lineItemId": "1154219000037279006",
             "itemName": "Round Blade Edge trimming Machine",
@@ -37203,20 +37208,23 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037279003-1154219000037279006-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271301",
+            "qrToken": "26271301",
             "orderId": "1154219000037279003",
             "lineItemId": "1154219000037279006",
             "itemName": "Round Blade Edge trimming Machine",
@@ -37224,20 +37232,23 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000037279003-1154219000037279006-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271302",
+            "qrToken": "26271302",
             "orderId": "1154219000037279003",
             "lineItemId": "1154219000037279006",
             "itemName": "Round Blade Edge trimming Machine",
@@ -37245,14 +37256,17 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-23T10:33:30+0530"
@@ -37268,7 +37282,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T06:38:02.833Z",
           "zohoBackupLastAttemptAt": "2026-09-23T06:45:31.863Z",
-          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z"
+          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z",
+          "processedAt": "2026-09-23T06:50:03.890Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037279003-1154219000037279006-2": {
           "machineUnitId": "1154219000037279003-1154219000037279006-2",
@@ -37280,7 +37297,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T06:38:02.833Z",
           "zohoBackupLastAttemptAt": "2026-09-23T06:45:31.863Z",
-          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z"
+          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z",
+          "processedAt": "2026-09-23T06:50:03.890Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037279003-1154219000037279006-3": {
           "machineUnitId": "1154219000037279003-1154219000037279006-3",
@@ -37292,7 +37312,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T06:38:02.833Z",
           "zohoBackupLastAttemptAt": "2026-09-23T06:45:31.863Z",
-          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z"
+          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z",
+          "processedAt": "2026-09-23T06:50:03.890Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000037279003-1154219000037279006-4": {
           "machineUnitId": "1154219000037279003-1154219000037279006-4",
@@ -37304,7 +37327,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T06:38:02.833Z",
           "zohoBackupLastAttemptAt": "2026-09-23T06:45:31.863Z",
-          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z"
+          "zohoBackupSyncedAt": "2026-09-23T06:45:31.863Z",
+          "processedAt": "2026-09-23T06:50:03.890Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
