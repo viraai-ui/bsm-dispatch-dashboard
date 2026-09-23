@@ -1,6 +1,21 @@
 {
   "payments": [
     {
+      "customerName": "Rajdhani Laminates",
+      "salesOrderNumber": "SO-08010",
+      "paymentAmount": 129800,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Shivani",
+      "remarks": "UPDATE: INR 1,29,800.00 debited from HDFC Bank XX1232 on 23-SEP-26. Info: FT -  Vendor -  XXXXXXXXXX9145 - Build Scale Manufacture.",
+      "publicDeleteTokenHash": "e76a985b1a14b22fc2b49d17a450e8ad134ad7ce8c567b2e6e99e1b60485d15d",
+      "id": "payment-24f82ecb-3943-4440-b5e6-caf8e45580f1",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "ed8f16954e5841d58cec23dd98cec44d",
+      "createdAt": "2026-09-23T12:12:11.943Z",
+      "updatedAt": "2026-09-23T12:12:11.943Z"
+    },
+    {
       "customerName": "JN International",
       "salesOrderNumber": "SO-08021",
       "paymentAmount": 24300,
