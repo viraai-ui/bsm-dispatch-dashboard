@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Dev Cleaning",
+      "paymentAmount": 63450,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Ram",
+      "remarks": "Hare Krishna",
+      "attachments": [
+        {
+          "key": "payments/public/manual/8b487ebe-d9c2-4d99-b38e-428910b246a4/2026-09-23/1790141042396-dd0ed8b4-286a-4bdd-aef5-31417698a289-WhatsApp-Image-2026-09-23-at-10.53.24-AM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F8b487ebe-d9c2-4d99-b38e-428910b246a4%2F2026-09-23%2F1790141042396-dd0ed8b4-286a-4bdd-aef5-31417698a289-WhatsApp-Image-2026-09-23-at-10.53.24-AM.jpg",
+          "name": "WhatsApp Image 2026-09-23 at 10.53.24 AM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 38678,
+          "uploadedAt": "2026-09-23T05:24:03.221Z",
+          "expiresAt": "2026-10-23T05:24:03.221Z"
+        }
+      ],
+      "screenshotKey": "payments/public/manual/8b487ebe-d9c2-4d99-b38e-428910b246a4/2026-09-23/1790141042396-dd0ed8b4-286a-4bdd-aef5-31417698a289-WhatsApp-Image-2026-09-23-at-10.53.24-AM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F8b487ebe-d9c2-4d99-b38e-428910b246a4%2F2026-09-23%2F1790141042396-dd0ed8b4-286a-4bdd-aef5-31417698a289-WhatsApp-Image-2026-09-23-at-10.53.24-AM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-23 at 10.53.24 AM.jpeg",
+      "publicDeleteTokenHash": "83026a304d3512abc2781e650eb17e727ba1ffab5831ea99bc55ac342db45f54",
+      "id": "payment-9c198a30-53b5-487c-bac0-3769e80a6c93",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "0931782fc44c4cdb9bccfcbcbdfb5309",
+      "createdAt": "2026-09-23T05:24:04.962Z",
+      "updatedAt": "2026-09-23T05:24:04.962Z"
+    },
+    {
       "customerName": "RNC IMPEX PRIVATE LIMITED",
       "salesOrderNumber": "SO-08005",
       "paymentAmount": 10000,
