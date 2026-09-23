@@ -40784,7 +40784,9 @@
     "1154219000037325001": {
       "salesOrderId": "1154219000037325001",
       "salesOrderNumber": "SO-08017",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-23T10:51:13.445Z",
       "processedOrder": {
         "id": "1154219000037325001",
         "zohoSalesOrderId": "1154219000037325001",
@@ -40814,8 +40816,8 @@
           {
             "id": "1154219000037325001-1154219000037325004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271305",
+            "qrToken": "26271305",
             "orderId": "1154219000037325001",
             "lineItemId": "1154219000037325004",
             "itemName": "Single needle post bed Drop feed",
@@ -40823,20 +40825,23 @@
             "customerName": "AIRCITY SHOES PRIVATE LIMITED",
             "salesOrderNumber": "SO-08017",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037325001-1154219000037325004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271306",
+            "qrToken": "26271306",
             "orderId": "1154219000037325001",
             "lineItemId": "1154219000037325004",
             "itemName": "Single needle post bed Drop feed",
@@ -40844,20 +40849,23 @@
             "customerName": "AIRCITY SHOES PRIVATE LIMITED",
             "salesOrderNumber": "SO-08017",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037325001-1154219000037325004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271307",
+            "qrToken": "26271307",
             "orderId": "1154219000037325001",
             "lineItemId": "1154219000037325004",
             "itemName": "Single needle post bed Drop feed",
@@ -40865,14 +40873,17 @@
             "customerName": "AIRCITY SHOES PRIVATE LIMITED",
             "salesOrderNumber": "SO-08017",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-23T14:31:03+0530"
@@ -40888,7 +40899,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T10:43:57.043Z",
           "zohoBackupLastAttemptAt": "2026-09-23T10:45:33.653Z",
-          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z"
+          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z",
+          "processedAt": "2026-09-23T10:51:13.445Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         },
         "1154219000037325001-1154219000037325004-2": {
           "machineUnitId": "1154219000037325001-1154219000037325004-2",
@@ -40900,7 +40914,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T10:43:57.043Z",
           "zohoBackupLastAttemptAt": "2026-09-23T10:45:33.653Z",
-          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z"
+          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z",
+          "processedAt": "2026-09-23T10:51:13.445Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         },
         "1154219000037325001-1154219000037325004-3": {
           "machineUnitId": "1154219000037325001-1154219000037325004-3",
@@ -40912,7 +40929,10 @@
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T10:43:57.043Z",
           "zohoBackupLastAttemptAt": "2026-09-23T10:45:33.653Z",
-          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z"
+          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z",
+          "processedAt": "2026-09-23T10:51:13.445Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         }
       }
     }
