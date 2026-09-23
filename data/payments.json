@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "RNC IMPEX PRIVATE LIMITED",
+      "salesOrderNumber": "SO-08005",
+      "paymentAmount": 10000,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Karan",
+      "attachments": [
+        {
+          "key": "payments/public/SO-08005/2026-09-23/1790139439001-54b41a78-93a5-4cd6-bf72-0580f060abd1-228730ab-4cf6-46d3-9463-2c049f93abc6.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-08005%2F2026-09-23%2F1790139439001-54b41a78-93a5-4cd6-bf72-0580f060abd1-228730ab-4cf6-46d3-9463-2c049f93abc6.jpg",
+          "name": "228730ab-4cf6-46d3-9463-2c049f93abc6.jpg",
+          "contentType": "image/jpeg",
+          "size": 94565,
+          "uploadedAt": "2026-09-23T04:57:19.947Z",
+          "expiresAt": "2026-10-23T04:57:19.947Z"
+        }
+      ],
+      "screenshotKey": "payments/public/SO-08005/2026-09-23/1790139439001-54b41a78-93a5-4cd6-bf72-0580f060abd1-228730ab-4cf6-46d3-9463-2c049f93abc6.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2FSO-08005%2F2026-09-23%2F1790139439001-54b41a78-93a5-4cd6-bf72-0580f060abd1-228730ab-4cf6-46d3-9463-2c049f93abc6.jpg",
+      "screenshotName": "228730ab-4cf6-46d3-9463-2c049f93abc6.jpg",
+      "publicDeleteTokenHash": "2d3358c6067c902657737d35d67b74e8183ab39db8594ccee13f86ab32c6bb2c",
+      "id": "payment-3d954cab-3829-4c48-ae84-3ea3c0fd5afc",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "ba905e86b45f40dc91a37cabfa5210b3",
+      "createdAt": "2026-09-23T04:57:20.445Z",
+      "updatedAt": "2026-09-23T04:57:20.445Z"
+    },
+    {
       "customerName": "KHUSHI UPPER",
       "salesOrderNumber": "SO-08007",
       "paymentAmount": 34220,
