@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-a47cba8f-1b7c-4598-a8ed-541aa63b3ddd",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-26647020-54a0-4255-9870-80c39d0de128",
+      "salesOrderNumber": "SO-08021",
+      "customerName": "JN International",
+      "paymentAmount": 24300,
+      "createdAt": "2026-09-23T11:53:18.955Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-8f3b44ce-1fbe-4a42-a0de-c4275a95caee",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-26647020-54a0-4255-9870-80c39d0de128",
+      "salesOrderNumber": "SO-08021",
+      "customerName": "JN International",
+      "paymentAmount": 24300,
+      "createdAt": "2026-09-23T11:53:18.955Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-a570d3a9-eecb-4b3f-8e9f-9780373766bf",
       "type": "payment-created",
       "recipientUserId": "u-admin",
