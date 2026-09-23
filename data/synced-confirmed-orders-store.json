@@ -721,14 +721,14 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000037272014",
-          "itemName": "Angle Tape Cutting Machine [Double Blade] (Pneumatic)",
-          "sku": "369 AD",
+          "id": "1154219000037317088",
+          "itemName": "Multiple Angle Tape Cutting Machine (Electronic) (Pneumatic) (With Rotoating Head)",
+          "sku": "369 AHD",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000010017645",
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004017451",
           "rate": 95000,
           "dispatchCategory": "machine"
         },
@@ -825,20 +825,20 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000037272011-1154219000037272014-1",
+          "id": "1154219000037272011-1154219000037317088-1",
           "unitNumber": 3,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000037272011",
-          "lineItemId": "1154219000037272014",
-          "itemName": "Angle Tape Cutting Machine [Double Blade] (Pneumatic)",
-          "sku": "369 AD",
+          "lineItemId": "1154219000037317088",
+          "itemName": "Multiple Angle Tape Cutting Machine (Electronic) (Pneumatic) (With Rotoating Head)",
+          "sku": "369 AHD",
           "customerName": "KARAM SAFETY PRIVATE LIMITED",
           "salesOrderNumber": "SO-08012",
           "deliveryDate": "2026-09-22",
           "status": "Not Generated",
           "selectedForBatch": false,
-          "woodenPacking": "Pending",
+          "woodenPacking": "Not Required",
           "qrPasted": false,
           "qcDone": false,
           "mediaPhotos": 0,
@@ -1035,7 +1035,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-23T10:33:31+0530"
+      "zohoLastModifiedTime": "2026-09-23T16:32:27+0530"
     },
     "1154219000037279003": {
       "id": "1154219000037279003",
@@ -11372,8 +11372,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-23T11:00:32.984Z",
-  "lastAttemptAt": "2026-09-23T11:06:04.940Z",
+  "lastSuccessfulSyncAt": "2026-09-23T11:06:10.945Z",
+  "lastAttemptAt": "2026-09-23T11:06:10.945Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
