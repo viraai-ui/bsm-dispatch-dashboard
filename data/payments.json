@@ -1,6 +1,34 @@
 {
   "payments": [
     {
+      "customerName": "Great India",
+      "paymentAmount": 48380,
+      "paymentMode": "Bank Transfer",
+      "addedBy": "Ram",
+      "remarks": "Hare Krishna",
+      "attachments": [
+        {
+          "key": "payments/public/manual/10dacf54-1f05-42e1-9858-ba3859957909/2026-09-23/1790157009508-90c81072-e740-482e-82b0-7ff9e6523642-WhatsApp-Image-2026-09-23-at-3.19.13-PM.jpg",
+          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F10dacf54-1f05-42e1-9858-ba3859957909%2F2026-09-23%2F1790157009508-90c81072-e740-482e-82b0-7ff9e6523642-WhatsApp-Image-2026-09-23-at-3.19.13-PM.jpg",
+          "name": "WhatsApp Image 2026-09-23 at 3.19.13 PM.jpeg",
+          "contentType": "image/jpeg",
+          "size": 63584,
+          "uploadedAt": "2026-09-23T09:50:10.825Z",
+          "expiresAt": "2026-10-23T09:50:10.825Z"
+        }
+      ],
+      "screenshotKey": "payments/public/manual/10dacf54-1f05-42e1-9858-ba3859957909/2026-09-23/1790157009508-90c81072-e740-482e-82b0-7ff9e6523642-WhatsApp-Image-2026-09-23-at-3.19.13-PM.jpg",
+      "screenshotUrl": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2F10dacf54-1f05-42e1-9858-ba3859957909%2F2026-09-23%2F1790157009508-90c81072-e740-482e-82b0-7ff9e6523642-WhatsApp-Image-2026-09-23-at-3.19.13-PM.jpg",
+      "screenshotName": "WhatsApp Image 2026-09-23 at 3.19.13 PM.jpeg",
+      "publicDeleteTokenHash": "bcfed15e7f0cac918f52228965dcff17bf9b67a11aed09ad1d6bcb49519a787b",
+      "id": "payment-ce5bdbec-f3fc-49b8-8dcd-ab348ca052c4",
+      "status": "Pending",
+      "createdBy": "public-salesman",
+      "idempotencyKey": "2fe2476fd3334ddda14c0d3ca25189da",
+      "createdAt": "2026-09-23T09:50:11.586Z",
+      "updatedAt": "2026-09-23T09:50:11.586Z"
+    },
+    {
       "customerName": "AIRCITY SHOES PRIVATE LIMITED",
       "salesOrderNumber": "SO-08017",
       "paymentAmount": 74025,
