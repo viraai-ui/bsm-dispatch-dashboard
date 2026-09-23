@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037309001": {
+      "id": "1154219000037309001",
+      "zohoSalesOrderId": "1154219000037309001",
+      "salesOrderNumber": "SO-08013",
+      "status": "open",
+      "customerName": "Dev Cleaning Services Private Limited",
+      "shippingAddress": "Khasra No 123 & 124, Mahanagar, Rahim Nagar, Lucknow, Uttar Pradesh, 226006",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-23",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037309004",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000009427388",
+          "rate": 59000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037309001-1154219000037309004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037309001",
+          "lineItemId": "1154219000037309004",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
+          "customerName": "Dev Cleaning Services Private Limited",
+          "salesOrderNumber": "SO-08013",
+          "deliveryDate": "2026-09-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-23T11:55:01+0530"
+    },
     "1154219000037272011": {
       "id": "1154219000037272011",
       "zohoSalesOrderId": "1154219000037272011",
@@ -10807,6 +10857,7 @@
     }
   },
   "orderIds": [
+    "1154219000037309001",
     "1154219000037272011",
     "1154219000037256006",
     "1154219000037279003",
@@ -10864,8 +10915,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-23T06:20:33.231Z",
-  "lastAttemptAt": "2026-09-23T06:25:26.255Z",
+  "lastSuccessfulSyncAt": "2026-09-23T06:25:34.399Z",
+  "lastAttemptAt": "2026-09-23T06:25:34.399Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
