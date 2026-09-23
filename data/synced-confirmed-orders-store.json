@@ -1,5 +1,118 @@
 {
   "orders": {
+    "1154219000037302003": {
+      "id": "1154219000037302003",
+      "zohoSalesOrderId": "1154219000037302003",
+      "salesOrderNumber": "SO-08016",
+      "status": "open",
+      "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+      "shippingAddress": "B-116, RIICO Indl. Area,, Khairthal Alwar, Rajasthan, 301404, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037302006",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 4,
+          "pendingQuantity": 4,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226515",
+          "rate": 22700,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037302003-1154219000037302006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037302003",
+          "lineItemId": "1154219000037302006",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-08016",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037302003-1154219000037302006-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037302003",
+          "lineItemId": "1154219000037302006",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-08016",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037302003-1154219000037302006-3",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037302003",
+          "lineItemId": "1154219000037302006",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-08016",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037302003-1154219000037302006-4",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037302003",
+          "lineItemId": "1154219000037302006",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+          "salesOrderNumber": "SO-08016",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-23T14:30:28+0530"
+    },
     "1154219000037320001": {
       "id": "1154219000037320001",
       "zohoSalesOrderId": "1154219000037320001",
@@ -641,34 +754,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-23T10:33:31+0530"
     },
-    "1154219000037256006": {
-      "id": "1154219000037256006",
-      "zohoSalesOrderId": "1154219000037256006",
-      "salesOrderNumber": "SO-08011",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037256009",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 300,
-          "pendingQuantity": 300,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 300,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-23T10:33:30+0530"
-    },
     "1154219000037279003": {
       "id": "1154219000037279003",
       "zohoSalesOrderId": "1154219000037279003",
@@ -691,6 +776,18 @@
           "woodenPackingRequired": true,
           "zohoItemId": "1154219000000225787",
           "rate": 27500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037312234",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226914",
+          "rate": 53000,
           "dispatchCategory": "machine"
         }
       ],
@@ -778,9 +875,30 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000037279003-1154219000037312234-1",
+          "unitNumber": 5,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037279003",
+          "lineItemId": "1154219000037312234",
+          "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+          "sku": "2628",
+          "customerName": "Rajdhani Laminates",
+          "salesOrderNumber": "SO-08010",
+          "deliveryDate": "2026-09-23",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-23T10:33:30+0530"
+      "zohoLastModifiedTime": "2026-09-23T14:16:14+0530"
     },
     "1154219000037249013": {
       "id": "1154219000037249013",
@@ -1297,105 +1415,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-22T15:00:17+0530"
-    },
-    "1154219000037270001": {
-      "id": "1154219000037270001",
-      "zohoSalesOrderId": "1154219000037270001",
-      "salesOrderNumber": "SO-07998",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037270004",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225413",
-          "rate": 48000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037270001-1154219000037270004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037270001",
-          "lineItemId": "1154219000037270004",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-          "salesOrderNumber": "SO-07998",
-          "deliveryDate": "2026-09-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000037270001-1154219000037270004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037270001",
-          "lineItemId": "1154219000037270004",
-          "itemName": "Drum type Sole Press (pneumatic)",
-          "sku": "2002",
-          "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-          "salesOrderNumber": "SO-07998",
-          "deliveryDate": "2026-09-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-22T13:43:46+0530"
-    },
-    "1154219000037266001": {
-      "id": "1154219000037266001",
-      "zohoSalesOrderId": "1154219000037266001",
-      "salesOrderNumber": "SO-07997",
-      "status": "open",
-      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
-      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037266004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 200,
-          "pendingQuantity": 200,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 300,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-22T13:02:46+0530"
     },
     "1154219000037204025": {
       "id": "1154219000037204025",
@@ -11039,11 +11058,11 @@
     }
   },
   "orderIds": [
+    "1154219000037302003",
     "1154219000037320001",
     "1154219000037316001",
     "1154219000037309001",
     "1154219000037272011",
-    "1154219000037256006",
     "1154219000037279003",
     "1154219000037249013",
     "1154219000037261014",
@@ -11053,8 +11072,6 @@
     "1154219000037275001",
     "1154219000037273001",
     "1154219000037260006",
-    "1154219000037270001",
-    "1154219000037266001",
     "1154219000037204025",
     "1154219000037224017",
     "1154219000037205001",
@@ -11097,8 +11114,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-23T08:40:29.190Z",
-  "lastAttemptAt": "2026-09-23T09:00:26.422Z",
+  "lastSuccessfulSyncAt": "2026-09-23T09:00:33.364Z",
+  "lastAttemptAt": "2026-09-23T09:00:33.364Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
