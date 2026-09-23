@@ -1,28 +1,6 @@
 {
   "notifications": [
     {
-      "id": "payment-notification-427a416d-9db1-4d1b-afd1-4ea9c072465e",
-      "type": "payment-created",
-      "recipientUserId": "u-admin",
-      "paymentId": "payment-bbd2e60f-fdeb-46cc-be15-28a97e3ea452",
-      "salesOrderNumber": "SO-08010",
-      "customerName": "Rajdhani Laminates",
-      "paymentAmount": 129800,
-      "createdAt": "2026-09-23T12:11:02.395Z",
-      "readAt": null
-    },
-    {
-      "id": "payment-notification-2c213cae-ecf6-4e4b-92f9-27337d25c168",
-      "type": "payment-created",
-      "recipientUserId": "u-accounts",
-      "paymentId": "payment-bbd2e60f-fdeb-46cc-be15-28a97e3ea452",
-      "salesOrderNumber": "SO-08010",
-      "customerName": "Rajdhani Laminates",
-      "paymentAmount": 129800,
-      "createdAt": "2026-09-23T12:11:02.395Z",
-      "readAt": null
-    },
-    {
       "id": "payment-notification-a47cba8f-1b7c-4598-a8ed-541aa63b3ddd",
       "type": "payment-created",
       "recipientUserId": "u-admin",
