@@ -1,20 +1,6 @@
 {
   "payments": [
     {
-      "customerName": "Rajdhani Laminates",
-      "salesOrderNumber": "SO-08010",
-      "paymentAmount": 129800,
-      "paymentMode": "Bank Transfer",
-      "addedBy": "Shivani",
-      "publicDeleteTokenHash": "3a5d208f7003617d7802aa73695c15c963fac17bef264d66dd37e4bd044a64d3",
-      "id": "payment-bbd2e60f-fdeb-46cc-be15-28a97e3ea452",
-      "status": "Pending",
-      "createdBy": "public-salesman",
-      "idempotencyKey": "053a9373ff0a439c9ca8554c273bbce9",
-      "createdAt": "2026-09-23T12:10:59.391Z",
-      "updatedAt": "2026-09-23T12:10:59.391Z"
-    },
-    {
       "customerName": "JN International",
       "salesOrderNumber": "SO-08021",
       "paymentAmount": 24300,
