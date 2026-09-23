@@ -1249,34 +1249,6 @@
       "machines": [],
       "zohoLastModifiedTime": "2026-09-22T17:40:54+0530"
     },
-    "1154219000037225004": {
-      "id": "1154219000037225004",
-      "zohoSalesOrderId": "1154219000037225004",
-      "salesOrderNumber": "SO-07990",
-      "status": "open",
-      "customerName": "RAJYAREKHA TRADE PVT. LTD.",
-      "shippingAddress": "Plot No. 1021, MIE-A, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-21",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037225007",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 125,
-          "pendingQuantity": 125,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 320,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-21T16:35:00+0530"
-    },
     "1154219000037224017": {
       "id": "1154219000037224017",
       "zohoSalesOrderId": "1154219000037224017",
@@ -10895,7 +10867,6 @@
     "1154219000037270001",
     "1154219000037266001",
     "1154219000037204025",
-    "1154219000037225004",
     "1154219000037224017",
     "1154219000037205001",
     "1154219000037155011",
@@ -10937,8 +10908,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-23T07:20:32.323Z",
-  "lastAttemptAt": "2026-09-23T07:25:55.784Z",
+  "lastSuccessfulSyncAt": "2026-09-23T07:26:12.307Z",
+  "lastAttemptAt": "2026-09-23T07:26:12.307Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
