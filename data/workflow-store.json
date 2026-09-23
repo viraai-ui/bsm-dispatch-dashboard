@@ -40707,7 +40707,9 @@
     "1154219000037307007": {
       "salesOrderId": "1154219000037307007",
       "salesOrderNumber": "SO-08018",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-23T10:42:52.835Z",
       "processedOrder": {
         "id": "1154219000037307007",
         "zohoSalesOrderId": "1154219000037307007",
@@ -40737,8 +40739,8 @@
           {
             "id": "1154219000037307007-1154219000037307010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271304",
+            "qrToken": "26271304",
             "orderId": "1154219000037307007",
             "lineItemId": "1154219000037307010",
             "itemName": "ROLLER PRESSING MACHINE",
@@ -40746,14 +40748,17 @@
             "customerName": "Great Indian Footwear",
             "salesOrderNumber": "SO-08018",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "vendor": "Balaji Engeenering",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-09-23T16:02:04+0530"
@@ -40767,7 +40772,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-23T10:41:37.928Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-23T10:41:39.171Z"
+          "zohoBackupQueuedAt": "2026-09-23T10:41:39.171Z",
+          "processedAt": "2026-09-23T10:42:52.835Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "Balaji Engeenering"
         }
       }
     }
