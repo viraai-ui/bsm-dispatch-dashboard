@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-a570d3a9-eecb-4b3f-8e9f-9780373766bf",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-ce5bdbec-f3fc-49b8-8dcd-ab348ca052c4",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Great India",
+      "paymentAmount": 48380,
+      "createdAt": "2026-09-23T09:50:14.104Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ae9160b7-a8fe-4308-8cfc-6d477a143ff7",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-ce5bdbec-f3fc-49b8-8dcd-ab348ca052c4",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Great India",
+      "paymentAmount": 48380,
+      "createdAt": "2026-09-23T09:50:14.104Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-e6ddc1c9-ba24-4af2-9c7c-855db27c8cde",
       "type": "payment-created",
       "recipientUserId": "u-admin",
