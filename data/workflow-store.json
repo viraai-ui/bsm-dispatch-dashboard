@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271307,
+  "serialCounter": 26271311,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -40933,6 +40933,154 @@
           "processedAt": "2026-09-23T10:51:13.445Z",
           "dispatchNote": "LOCAL",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000037302003": {
+      "salesOrderId": "1154219000037302003",
+      "salesOrderNumber": "SO-08016",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037302003",
+        "zohoSalesOrderId": "1154219000037302003",
+        "salesOrderNumber": "SO-08016",
+        "status": "open",
+        "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+        "shippingAddress": "B-116, RIICO Indl. Area,, Khairthal Alwar, Rajasthan, 301404, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037302006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 4,
+            "pendingQuantity": 4,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 22700,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037302003-1154219000037302006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037302003",
+            "lineItemId": "1154219000037302006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+            "salesOrderNumber": "SO-08016",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037302003-1154219000037302006-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037302003",
+            "lineItemId": "1154219000037302006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+            "salesOrderNumber": "SO-08016",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037302003-1154219000037302006-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037302003",
+            "lineItemId": "1154219000037302006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+            "salesOrderNumber": "SO-08016",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037302003-1154219000037302006-4",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037302003",
+            "lineItemId": "1154219000037302006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+            "salesOrderNumber": "SO-08016",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T14:30:33+0530"
+      },
+      "machines": {
+        "1154219000037302003-1154219000037302006-1": {
+          "machineUnitId": "1154219000037302003-1154219000037302006-1",
+          "lineItemId": "1154219000037302006",
+          "serialNumber": "26271308",
+          "qrToken": "26271308",
+          "qrStatus": "pending"
+        },
+        "1154219000037302003-1154219000037302006-2": {
+          "machineUnitId": "1154219000037302003-1154219000037302006-2",
+          "lineItemId": "1154219000037302006",
+          "serialNumber": "26271309",
+          "qrToken": "26271309",
+          "qrStatus": "pending"
+        },
+        "1154219000037302003-1154219000037302006-3": {
+          "machineUnitId": "1154219000037302003-1154219000037302006-3",
+          "lineItemId": "1154219000037302006",
+          "serialNumber": "26271310",
+          "qrToken": "26271310",
+          "qrStatus": "pending"
+        },
+        "1154219000037302003-1154219000037302006-4": {
+          "machineUnitId": "1154219000037302003-1154219000037302006-4",
+          "lineItemId": "1154219000037302006",
+          "serialNumber": "26271311",
+          "qrToken": "26271311",
+          "qrStatus": "pending"
         }
       }
     }
