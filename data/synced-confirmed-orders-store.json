@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037316001": {
+      "id": "1154219000037316001",
+      "zohoSalesOrderId": "1154219000037316001",
+      "salesOrderNumber": "SO-08014",
+      "status": "open",
+      "customerName": "EARTH DEFENCE SYSTEM",
+      "shippingAddress": "KHEWAT NO. 175 KHATONI NO. 241 KHASRA NO. 28/11/1/1 2-11, EARTH DEFENCE SYSTEM, KHEWAT NO. 183 KHATONI NO. 251 KHASRA NO. 28/11/1/2 1-0, Old Saharanpur Road, NEAR YAMUNA CANAL BRIDGE, VILL. PARWALO, Yamunanagar,, Yamunanagar, Haryana, 135001, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037316004",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "description": "Machine Set 26 no folder",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226864",
+          "rate": 35000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037316001-1154219000037316004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037316001",
+          "lineItemId": "1154219000037316004",
+          "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+          "sku": "335",
+          "customerName": "EARTH DEFENCE SYSTEM",
+          "salesOrderNumber": "SO-08014",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Machine Set 26 no folder"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-23T12:50:13+0530"
+    },
     "1154219000037309001": {
       "id": "1154219000037309001",
       "zohoSalesOrderId": "1154219000037309001",
@@ -1158,34 +1208,6 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-09-22T13:02:46+0530"
-    },
-    "1154219000037261001": {
-      "id": "1154219000037261001",
-      "zohoSalesOrderId": "1154219000037261001",
-      "salesOrderNumber": "SO-07995",
-      "status": "open",
-      "customerName": "United Products",
-      "shippingAddress": "Khasra No. 71/22/1/2,2-12, MIE Part-B, Bahaduragarh, Haryana, 124507, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037261004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 50,
-          "pendingQuantity": 50,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 325,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-22T11:23:44+0530"
     },
     "1154219000037204025": {
       "id": "1154219000037204025",
@@ -10857,6 +10879,7 @@
     }
   },
   "orderIds": [
+    "1154219000037316001",
     "1154219000037309001",
     "1154219000037272011",
     "1154219000037256006",
@@ -10871,7 +10894,6 @@
     "1154219000037260006",
     "1154219000037270001",
     "1154219000037266001",
-    "1154219000037261001",
     "1154219000037204025",
     "1154219000037225004",
     "1154219000037224017",
@@ -10915,8 +10937,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-23T07:11:04.390Z",
-  "lastAttemptAt": "2026-09-23T07:20:25.178Z",
+  "lastSuccessfulSyncAt": "2026-09-23T07:20:32.323Z",
+  "lastAttemptAt": "2026-09-23T07:20:32.323Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
