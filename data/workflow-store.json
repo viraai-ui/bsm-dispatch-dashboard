@@ -40771,11 +40771,13 @@
           "qrToken": "26271304",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-23T10:41:37.928Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-23T10:41:39.171Z",
           "processedAt": "2026-09-23T10:42:52.835Z",
           "dispatchNote": "WOODEN",
-          "vendor": "Balaji Engeenering"
+          "vendor": "Balaji Engeenering",
+          "zohoBackupLastAttemptAt": "2026-09-23T10:45:33.653Z",
+          "zohoBackupSyncedAt": "2026-09-23T10:45:33.653Z"
         }
       }
     },
