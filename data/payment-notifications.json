@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-fdb5a479-3530-4cae-bde8-e3dd11b22d09",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-9c198a30-53b5-487c-bac0-3769e80a6c93",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Dev Cleaning",
+      "paymentAmount": 63450,
+      "createdAt": "2026-09-23T05:24:07.380Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-ca61a68e-ef9c-46c5-a304-42c081a6bcc0",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-9c198a30-53b5-487c-bac0-3769e80a6c93",
+      "salesOrderNumber": "No Sales Order",
+      "customerName": "Dev Cleaning",
+      "paymentAmount": 63450,
+      "createdAt": "2026-09-23T05:24:07.380Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-abc8878e-5335-4118-9582-150b716a802a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
