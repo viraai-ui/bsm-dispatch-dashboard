@@ -1,6 +1,28 @@
 {
   "notifications": [
     {
+      "id": "payment-notification-abc8878e-5335-4118-9582-150b716a802a",
+      "type": "payment-created",
+      "recipientUserId": "u-admin",
+      "paymentId": "payment-3d954cab-3829-4c48-ae84-3ea3c0fd5afc",
+      "salesOrderNumber": "SO-08005",
+      "customerName": "RNC IMPEX PRIVATE LIMITED",
+      "paymentAmount": 10000,
+      "createdAt": "2026-09-23T04:57:22.755Z",
+      "readAt": null
+    },
+    {
+      "id": "payment-notification-5f4d9db9-eedd-4404-8e78-fa9bc1f3bb20",
+      "type": "payment-created",
+      "recipientUserId": "u-accounts",
+      "paymentId": "payment-3d954cab-3829-4c48-ae84-3ea3c0fd5afc",
+      "salesOrderNumber": "SO-08005",
+      "customerName": "RNC IMPEX PRIVATE LIMITED",
+      "paymentAmount": 10000,
+      "createdAt": "2026-09-23T04:57:22.755Z",
+      "readAt": null
+    },
+    {
       "id": "payment-notification-849c2e77-96a8-4774-975d-77de541cbb5a",
       "type": "payment-created",
       "recipientUserId": "u-admin",
