@@ -308,56 +308,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-24T14:31:20+0530"
     },
-    "1154219000037367001": {
-      "id": "1154219000037367001",
-      "zohoSalesOrderId": "1154219000037367001",
-      "salesOrderNumber": "SO-08025",
-      "status": "open",
-      "customerName": "NMCEE WORLDWIDE PVT. LTD",
-      "shippingAddress": "345, Sultanpur MG Road, Delhi, 110074, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037367004",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225871",
-          "rate": 32000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037367001-1154219000037367004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037367001",
-          "lineItemId": "1154219000037367004",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "NMCEE WORLDWIDE PVT. LTD",
-          "salesOrderNumber": "SO-08025",
-          "deliveryDate": "2026-09-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-24T14:30:50+0530"
-    },
     "1154219000037338003": {
       "id": "1154219000037338003",
       "zohoSalesOrderId": "1154219000037338003",
@@ -485,98 +435,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-23T16:02:04+0530"
-    },
-    "1154219000037325001": {
-      "id": "1154219000037325001",
-      "zohoSalesOrderId": "1154219000037325001",
-      "salesOrderNumber": "SO-08017",
-      "status": "open",
-      "customerName": "AIRCITY SHOES PRIVATE LIMITED",
-      "shippingAddress": "PLOT NO 369, MIE PART-A BAHADURGARH, Haryana",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037325004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 3,
-          "pendingQuantity": 3,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226515",
-          "rate": 23500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037325001-1154219000037325004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037325001",
-          "lineItemId": "1154219000037325004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "AIRCITY SHOES PRIVATE LIMITED",
-          "salesOrderNumber": "SO-08017",
-          "deliveryDate": "2026-09-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000037325001-1154219000037325004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037325001",
-          "lineItemId": "1154219000037325004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "AIRCITY SHOES PRIVATE LIMITED",
-          "salesOrderNumber": "SO-08017",
-          "deliveryDate": "2026-09-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000037325001-1154219000037325004-3",
-          "unitNumber": 3,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037325001",
-          "lineItemId": "1154219000037325004",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "AIRCITY SHOES PRIVATE LIMITED",
-          "salesOrderNumber": "SO-08017",
-          "deliveryDate": "2026-09-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-23T14:31:03+0530"
     },
     "1154219000037302003": {
       "id": "1154219000037302003",
@@ -835,7 +693,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-23T13:33:02+0530"
+      "zohoLastModifiedTime": "2026-09-24T18:50:18+0530"
     },
     "1154219000037316001": {
       "id": "1154219000037316001",
@@ -8401,11 +8259,9 @@
     "1154219000037373003",
     "1154219000037367014",
     "1154219000037346057",
-    "1154219000037367001",
     "1154219000037338003",
     "1154219000037320016",
     "1154219000037307007",
-    "1154219000037325001",
     "1154219000037302003",
     "1154219000037320001",
     "1154219000037316001",
@@ -8459,8 +8315,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-24T13:09:56.718Z",
-  "lastAttemptAt": "2026-09-24T13:20:25.418Z",
+  "lastSuccessfulSyncAt": "2026-09-24T13:20:31.367Z",
+  "lastAttemptAt": "2026-09-24T13:20:31.367Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
