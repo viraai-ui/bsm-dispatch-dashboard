@@ -1,55 +1,5 @@
 {
   "orders": {
-    "1154219000037366002": {
-      "id": "1154219000037366002",
-      "zohoSalesOrderId": "1154219000037366002",
-      "salesOrderNumber": "SO-08024",
-      "status": "open",
-      "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
-      "shippingAddress": "KH. 345, Sultanpur, MG Road,, New Delhi, Delhi, 110074, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037366005",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225871",
-          "rate": 32000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037366002-1154219000037366005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037366002",
-          "lineItemId": "1154219000037366005",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
-          "salesOrderNumber": "SO-08024",
-          "deliveryDate": "2026-09-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-24T14:00:49+0530"
-    },
     "1154219000037338003": {
       "id": "1154219000037338003",
       "zohoSalesOrderId": "1154219000037338003",
@@ -11154,7 +11104,6 @@
     }
   },
   "orderIds": [
-    "1154219000037366002",
     "1154219000037338003",
     "1154219000037320016",
     "1154219000037307007",
@@ -11213,8 +11162,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-24T08:31:55.594Z",
-  "lastAttemptAt": "2026-09-24T08:40:25.208Z",
+  "lastSuccessfulSyncAt": "2026-09-24T08:40:38.355Z",
+  "lastAttemptAt": "2026-09-24T08:40:38.355Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
