@@ -41586,7 +41586,9 @@
     "1154219000037338003": {
       "salesOrderId": "1154219000037338003",
       "salesOrderNumber": "SO-08021",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-24T06:41:57.259Z",
       "processedOrder": {
         "id": "1154219000037338003",
         "zohoSalesOrderId": "1154219000037338003",
@@ -41616,8 +41618,8 @@
           {
             "id": "1154219000037338003-1154219000037338006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271320",
+            "qrToken": "26271320",
             "orderId": "1154219000037338003",
             "lineItemId": "1154219000037338006",
             "itemName": "Single needle post bed Drop feed",
@@ -41625,14 +41627,17 @@
             "customerName": "JN International",
             "salesOrderNumber": "SO-08021",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "K S",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-09-23T17:52:06+0530"
@@ -41646,7 +41651,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:41:13.375Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:41:14.285Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:41:14.285Z",
+          "processedAt": "2026-09-24T06:41:57.259Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "K S"
         }
       }
     }
