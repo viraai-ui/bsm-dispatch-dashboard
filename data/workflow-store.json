@@ -35166,10 +35166,11 @@
           "serialNumber": "26271282",
           "qrToken": "26271282",
           "qrStatus": "generated",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-24T19:45:07.658Z",
-          "zohoBackupLastAttemptAt": "2026-09-24T19:00:33.606Z",
-          "zohoBackupReplaceExisting": true
+          "zohoBackupLastAttemptAt": "2026-09-24T19:45:33.531Z",
+          "zohoBackupReplaceExisting": true,
+          "zohoBackupSyncedAt": "2026-09-24T19:45:33.531Z"
         },
         "1154219000037205001-1154219000037205006-2": {
           "machineUnitId": "1154219000037205001-1154219000037205006-2",
