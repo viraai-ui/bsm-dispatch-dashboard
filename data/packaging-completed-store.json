@@ -23623,6 +23623,65 @@
         "1154219000036466015-1154219000036466022-1",
         "1154219000036466015-1154219000036466025-1"
       ]
+    },
+    "1154219000037360014": {
+      "completedAt": "2026-09-24T05:33:45.265Z",
+      "order": {
+        "id": "1154219000037360014",
+        "zohoSalesOrderId": "1154219000037360014",
+        "salesOrderNumber": "SO-08023",
+        "status": "open",
+        "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+        "shippingAddress": "Ground Floor, PLOT NO. 530, M.I.E. PART-A,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037360017",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 15000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037360014-1154219000037360017-1",
+            "unitNumber": 1,
+            "serialNumber": "26271312",
+            "qrToken": "26271312",
+            "orderId": "1154219000037360014",
+            "lineItemId": "1154219000037360017",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+            "salesOrderNumber": "SO-08023",
+            "deliveryDate": "2026-09-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T10:46:17+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037360014-1154219000037360017-1"
+      ]
     }
   }
 }
