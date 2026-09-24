@@ -1,5 +1,117 @@
 {
   "orders": {
+    "1154219000037346057": {
+      "id": "1154219000037346057",
+      "zohoSalesOrderId": "1154219000037346057",
+      "salesOrderNumber": "SO-08026",
+      "status": "open",
+      "customerName": "RISHABH LAMINATION",
+      "shippingAddress": "PLOT NO.E- 402, GROUND FLOOR, BHORGARH INDUSTRIAL PHASE -2, DSIDC BAWANA , SECTOR-E, New Delhi, North Delhi, Delhi, 110040, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-09-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037346060",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225787",
+          "rate": 27000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037346061",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037346057-1154219000037346060-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037346057",
+          "lineItemId": "1154219000037346060",
+          "itemName": "Round Blade Edge trimming Machine",
+          "sku": "902",
+          "customerName": "RISHABH LAMINATION",
+          "salesOrderNumber": "SO-08026",
+          "deliveryDate": "2026-09-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-24T14:31:20+0530"
+    },
+    "1154219000037367001": {
+      "id": "1154219000037367001",
+      "zohoSalesOrderId": "1154219000037367001",
+      "salesOrderNumber": "SO-08025",
+      "status": "open",
+      "customerName": "NMCEE WORLDWIDE PVT. LTD",
+      "shippingAddress": "345, Sultanpur MG Road, Delhi, 110074, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037367004",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225871",
+          "rate": 32000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037367001-1154219000037367004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037367001",
+          "lineItemId": "1154219000037367004",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "NMCEE WORLDWIDE PVT. LTD",
+          "salesOrderNumber": "SO-08025",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-24T14:30:50+0530"
+    },
     "1154219000037338003": {
       "id": "1154219000037338003",
       "zohoSalesOrderId": "1154219000037338003",
@@ -11104,6 +11216,8 @@
     }
   },
   "orderIds": [
+    "1154219000037346057",
+    "1154219000037367001",
     "1154219000037338003",
     "1154219000037320016",
     "1154219000037307007",
@@ -11162,8 +11276,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-24T08:46:38.017Z",
-  "lastAttemptAt": "2026-09-24T09:20:26.065Z",
+  "lastSuccessfulSyncAt": "2026-09-24T09:20:40.699Z",
+  "lastAttemptAt": "2026-09-24T09:20:40.699Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
