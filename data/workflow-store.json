@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271319,
+  "serialCounter": 26271320,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -41580,6 +41580,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-24T06:30:32.437Z",
           "zohoBackupSyncedAt": "2026-09-24T06:30:32.437Z"
+        }
+      }
+    },
+    "1154219000037338003": {
+      "salesOrderId": "1154219000037338003",
+      "salesOrderNumber": "SO-08021",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037338003",
+        "zohoSalesOrderId": "1154219000037338003",
+        "salesOrderNumber": "SO-08021",
+        "status": "open",
+        "customerName": "JN International",
+        "shippingAddress": "123/485 (820 New), Fazal Ganj Kalpi Road Kanpur, Uttar Pradesh, 208012",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037338006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 22000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037338003-1154219000037338006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037338003",
+            "lineItemId": "1154219000037338006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "JN International",
+            "salesOrderNumber": "SO-08021",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T17:52:06+0530"
+      },
+      "machines": {
+        "1154219000037338003-1154219000037338006-1": {
+          "machineUnitId": "1154219000037338003-1154219000037338006-1",
+          "lineItemId": "1154219000037338006",
+          "serialNumber": "26271320",
+          "qrToken": "26271320",
+          "qrStatus": "pending"
         }
       }
     }
