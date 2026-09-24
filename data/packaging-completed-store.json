@@ -23025,6 +23025,161 @@
         "1154219000037270001-1154219000037270004-1",
         "1154219000037270001-1154219000037270004-2"
       ]
+    },
+    "1154219000036137001": {
+      "completedAt": "2026-09-24T04:50:36.940Z",
+      "order": {
+        "id": "1154219000036137001",
+        "zohoSalesOrderId": "1154219000036137001",
+        "salesOrderNumber": "SO-07831",
+        "status": "open",
+        "customerName": "Capital Footwear Pvt. Ltd. - Nepal",
+        "shippingAddress": "Mechinagar-15,, Dhulabari, Jhapa, Nepal",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-31",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036137004",
+            "itemName": "Filler Ink (For Edge Coloring)",
+            "sku": "",
+            "description": "Product: Filler Shade: BC Thin",
+            "quantity": 50,
+            "pendingQuantity": 50,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004695005",
+            "rate": 950,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137005",
+            "itemName": "Ink (for Edge Colouring Machine)",
+            "sku": "",
+            "description": "Product: FB-OPACO Shade: Brown Code: S-2662",
+            "quantity": 30,
+            "pendingQuantity": 30,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004673580",
+            "rate": 1050,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137006",
+            "itemName": "Ink (for Edge Colouring Machine)",
+            "sku": "",
+            "description": "Product: FB-OPACO Shade: Black Code: S-2663",
+            "quantity": 30,
+            "pendingQuantity": 30,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004673580",
+            "rate": 1050,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137007",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "UV Lamp (UV Light)",
+            "quantity": 4,
+            "pendingQuantity": 4,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 1400,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137008",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225547",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137009",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Motor Pully (110 no)",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 750,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137010",
+            "itemName": "Spare Parts (Sewing Machine)",
+            "sku": "",
+            "description": "Reachad Set of Stroble Seiwng Machine",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001498121",
+            "rate": 4500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137011",
+            "itemName": "Spare Parts (Sewing Machine)",
+            "sku": "",
+            "description": "Ghutna Set",
+            "quantity": 10,
+            "pendingQuantity": 10,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001498121",
+            "rate": 650,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000036137012",
+            "itemName": "Spare Parts (Sewing Machine)",
+            "sku": "",
+            "description": "Stoble Guide",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001498121",
+            "rate": 450,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036137001-1154219000036137008-1",
+            "unitNumber": 115,
+            "serialNumber": "26271303",
+            "qrToken": "26271303",
+            "orderId": "1154219000036137001",
+            "lineItemId": "1154219000036137008",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "customerName": "Capital Footwear Pvt. Ltd. - Nepal",
+            "salesOrderNumber": "SO-07831",
+            "deliveryDate": "2026-08-31",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-23",
+            "dispatchNote": "GOOD WRAPPING"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-18T20:22:18+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000036137001-1154219000036137008-1"
+      ]
     }
   }
 }
