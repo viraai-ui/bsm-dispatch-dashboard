@@ -1,63 +1,42 @@
 {
   "orders": {
-    "1154219000037360001": {
-      "id": "1154219000037360001",
-      "zohoSalesOrderId": "1154219000037360001",
-      "salesOrderNumber": "SO-08022",
+    "1154219000037366002": {
+      "id": "1154219000037366002",
+      "zohoSalesOrderId": "1154219000037366002",
+      "salesOrderNumber": "SO-08024",
       "status": "open",
-      "customerName": "IBS Safety India Pvt Ltd",
-      "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
-      "salesperson": "Ram Kumar",
+      "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+      "shippingAddress": "KH. 345, Sultanpur, MG Road,, New Delhi, Delhi, 110074, India",
+      "salesperson": "Anuj Kumar",
       "deliveryDate": "2026-09-24",
       "dashboardStatus": "Not Generated",
       "reviewRequired": false,
       "lineItems": [
         {
-          "id": "1154219000037360004",
-          "itemName": "Pattern sewing machine (300x200 mm)",
-          "sku": "3020",
+          "id": "1154219000037366005",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
           "description": "",
-          "quantity": 2,
-          "pendingQuantity": 2,
+          "quantity": 1,
+          "pendingQuantity": 1,
           "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000227098",
-          "rate": 285000,
+          "zohoItemId": "1154219000000225871",
+          "rate": 32000,
           "dispatchCategory": "machine"
         }
       ],
       "machines": [
         {
-          "id": "1154219000037360001-1154219000037360004-1",
+          "id": "1154219000037366002-1154219000037366005-1",
           "unitNumber": 1,
           "serialNumber": "",
           "qrToken": "",
-          "orderId": "1154219000037360001",
-          "lineItemId": "1154219000037360004",
-          "itemName": "Pattern sewing machine (300x200 mm)",
-          "sku": "3020",
-          "customerName": "IBS Safety India Pvt Ltd",
-          "salesOrderNumber": "SO-08022",
-          "deliveryDate": "2026-09-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        },
-        {
-          "id": "1154219000037360001-1154219000037360004-2",
-          "unitNumber": 2,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037360001",
-          "lineItemId": "1154219000037360004",
-          "itemName": "Pattern sewing machine (300x200 mm)",
-          "sku": "3020",
-          "customerName": "IBS Safety India Pvt Ltd",
-          "salesOrderNumber": "SO-08022",
+          "orderId": "1154219000037366002",
+          "lineItemId": "1154219000037366005",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+          "salesOrderNumber": "SO-08024",
           "deliveryDate": "2026-09-24",
           "status": "Not Generated",
           "selectedForBatch": false,
@@ -69,7 +48,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-24T10:45:47+0530"
+      "zohoLastModifiedTime": "2026-09-24T14:00:49+0530"
     },
     "1154219000037338003": {
       "id": "1154219000037338003",
@@ -11175,7 +11154,7 @@
     }
   },
   "orderIds": [
-    "1154219000037360001",
+    "1154219000037366002",
     "1154219000037338003",
     "1154219000037320016",
     "1154219000037307007",
@@ -11234,8 +11213,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-24T08:20:39.441Z",
-  "lastAttemptAt": "2026-09-24T08:31:43.377Z",
+  "lastSuccessfulSyncAt": "2026-09-24T08:31:55.594Z",
+  "lastAttemptAt": "2026-09-24T08:31:55.594Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
