@@ -41147,7 +41147,9 @@
     "1154219000037360014": {
       "salesOrderId": "1154219000037360014",
       "salesOrderNumber": "SO-08023",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-24T05:19:53.561Z",
       "processedOrder": {
         "id": "1154219000037360014",
         "zohoSalesOrderId": "1154219000037360014",
@@ -41177,8 +41179,8 @@
           {
             "id": "1154219000037360014-1154219000037360017-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271312",
+            "qrToken": "26271312",
             "orderId": "1154219000037360014",
             "lineItemId": "1154219000037360017",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -41186,14 +41188,17 @@
             "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
             "salesOrderNumber": "SO-08023",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Ishu",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-24T10:46:17+0530"
@@ -41207,7 +41212,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T05:17:49.304Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T05:17:50.179Z"
+          "zohoBackupQueuedAt": "2026-09-24T05:17:50.179Z",
+          "processedAt": "2026-09-24T05:19:53.561Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Ishu"
         }
       }
     }
