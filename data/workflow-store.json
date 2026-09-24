@@ -41820,7 +41820,9 @@
     "1154219000037366002": {
       "salesOrderId": "1154219000037366002",
       "salesOrderNumber": "SO-08024",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-24T08:35:57.464Z",
       "processedOrder": {
         "id": "1154219000037366002",
         "zohoSalesOrderId": "1154219000037366002",
@@ -41850,8 +41852,8 @@
           {
             "id": "1154219000037366002-1154219000037366005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271324",
+            "qrToken": "26271324",
             "orderId": "1154219000037366002",
             "lineItemId": "1154219000037366005",
             "itemName": "Tape Cutting machine [Electronic]",
@@ -41859,14 +41861,17 @@
             "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
             "salesOrderNumber": "SO-08024",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Able",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-24T14:00:49+0530"
@@ -41880,7 +41885,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T08:34:36.343Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T08:34:36.735Z"
+          "zohoBackupQueuedAt": "2026-09-24T08:34:36.735Z",
+          "processedAt": "2026-09-24T08:35:57.464Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Able"
         }
       }
     }
