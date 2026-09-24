@@ -8388,15 +8388,15 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000034633009",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
+          "id": "1154219000037358049",
+          "itemName": "Steamer (6 nozzles) (SS body)",
+          "sku": "360",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000226034",
-          "rate": 14000,
+          "zohoItemId": "1154219000000225547",
+          "rate": 60000,
           "dispatchCategory": "machine"
         }
       ],
@@ -8423,14 +8423,14 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000034633005-1154219000034633009-1",
+          "id": "1154219000034633005-1154219000037358049-1",
           "unitNumber": 2,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000034633005",
-          "lineItemId": "1154219000034633009",
-          "itemName": "Manual Fusing Machine (15*15 inches)",
-          "sku": "38",
+          "lineItemId": "1154219000037358049",
+          "itemName": "Steamer (6 nozzles) (SS body)",
+          "sku": "360",
           "customerName": "THREE STAR FOOTWEARS",
           "salesOrderNumber": "SO-07560",
           "deliveryDate": "2026-07-23",
@@ -8444,7 +8444,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-07-24T10:17:57+0530"
+      "zohoLastModifiedTime": "2026-09-24T16:35:31+0530"
     },
     "1154219000034263026": {
       "id": "1154219000034263026",
@@ -11327,8 +11327,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-24T11:00:31.962Z",
-  "lastAttemptAt": "2026-09-24T11:20:25.449Z",
+  "lastSuccessfulSyncAt": "2026-09-24T11:20:41.357Z",
+  "lastAttemptAt": "2026-09-24T11:20:41.357Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
