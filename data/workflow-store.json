@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271314,
+  "serialCounter": 26271319,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -41335,6 +41335,194 @@
           "vendor": "Able",
           "zohoBackupLastAttemptAt": "2026-09-24T06:15:33.044Z",
           "zohoBackupSyncedAt": "2026-09-24T06:15:33.044Z"
+        }
+      }
+    },
+    "1154219000037320001": {
+      "salesOrderId": "1154219000037320001",
+      "salesOrderNumber": "SO-08015",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037320001",
+        "zohoSalesOrderId": "1154219000037320001",
+        "salesOrderNumber": "SO-08015",
+        "status": "open",
+        "customerName": "SELFIEE FOOTWEAR",
+        "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-23",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037320004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 47000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037320005",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006379136",
+            "rate": 44000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037320001-1154219000037320004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037320001",
+            "lineItemId": "1154219000037320004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-08015",
+            "deliveryDate": "2026-09-23",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037320001-1154219000037320004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037320001",
+            "lineItemId": "1154219000037320004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-08015",
+            "deliveryDate": "2026-09-23",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037320001-1154219000037320004-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037320001",
+            "lineItemId": "1154219000037320004",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-08015",
+            "deliveryDate": "2026-09-23",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037320001-1154219000037320005-1",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037320001",
+            "lineItemId": "1154219000037320005",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-08015",
+            "deliveryDate": "2026-09-23",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037320001-1154219000037320005-2",
+            "unitNumber": 5,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037320001",
+            "lineItemId": "1154219000037320005",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-08015",
+            "deliveryDate": "2026-09-23",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T13:33:02+0530"
+      },
+      "machines": {
+        "1154219000037320001-1154219000037320004-1": {
+          "machineUnitId": "1154219000037320001-1154219000037320004-1",
+          "lineItemId": "1154219000037320004",
+          "serialNumber": "26271315",
+          "qrToken": "26271315",
+          "qrStatus": "pending"
+        },
+        "1154219000037320001-1154219000037320004-2": {
+          "machineUnitId": "1154219000037320001-1154219000037320004-2",
+          "lineItemId": "1154219000037320004",
+          "serialNumber": "26271316",
+          "qrToken": "26271316",
+          "qrStatus": "pending"
+        },
+        "1154219000037320001-1154219000037320004-3": {
+          "machineUnitId": "1154219000037320001-1154219000037320004-3",
+          "lineItemId": "1154219000037320004",
+          "serialNumber": "26271317",
+          "qrToken": "26271317",
+          "qrStatus": "pending"
+        },
+        "1154219000037320001-1154219000037320005-1": {
+          "machineUnitId": "1154219000037320001-1154219000037320005-1",
+          "lineItemId": "1154219000037320005",
+          "serialNumber": "26271318",
+          "qrToken": "26271318",
+          "qrStatus": "pending"
+        },
+        "1154219000037320001-1154219000037320005-2": {
+          "machineUnitId": "1154219000037320001-1154219000037320005-2",
+          "lineItemId": "1154219000037320005",
+          "serialNumber": "26271319",
+          "qrToken": "26271319",
+          "qrStatus": "pending"
         }
       }
     }
