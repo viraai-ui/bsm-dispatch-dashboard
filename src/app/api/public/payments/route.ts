@@ -8,6 +8,7 @@ import { deleteR2Object, verifyR2Object } from '@/lib/r2'
 import { PAYMENT_PROOF_MIME_TYPES, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
 import { cleanPaymentCustomerName, verifyPaymentUploadScope } from '@/lib/payment-manual'
 import { expiresAt as attachmentExpiresAt } from '@/lib/attachment-retention'
+import { MAINTENANCE_API_MESSAGE, MAINTENANCE_MODE } from '@/lib/maintenance'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -43,6 +44,7 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  if (MAINTENANCE_MODE) return publicApiHeaders(apiError(MAINTENANCE_API_MESSAGE, 503))
   if (!sameOrigin(request)) return publicApiHeaders(apiError('Invalid request origin', 403))
   const length = Number(request.headers.get('content-length') || 0)
   if (length > MAX_BODY) return publicApiHeaders(apiError('Request is too large', 413))

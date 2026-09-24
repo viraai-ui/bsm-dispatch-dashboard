@@ -3,11 +3,13 @@ import { createR2UploadTarget, ensureR2BrowserCors } from '@/lib/r2'
 import { checkRateLimit, publicApiHeaders, sameOrigin, verifySubmissionToken } from '@/lib/public-payment-security'
 import { paymentScreenshotType, PUBLIC_PAYMENT_SCREENSHOT_MAX_BYTES } from '@/lib/payment-screenshot'
 import { issuePaymentUploadScope, verifyPaymentUploadScope } from '@/lib/payment-manual'
+import { MAINTENANCE_API_MESSAGE, MAINTENANCE_MODE } from '@/lib/maintenance'
 
 export const runtime = 'nodejs'
 function safe(value: string) { return value.replace(/[^a-zA-Z0-9._-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70) || 'payment' }
 
 export async function POST(request: Request) {
+  if (MAINTENANCE_MODE) return publicApiHeaders(apiError(MAINTENANCE_API_MESSAGE, 503))
   if (!sameOrigin(request)) return publicApiHeaders(apiError('Invalid request origin', 403))
   const rate = checkRateLimit(request, 'public-payment-upload', 10)
   if (!rate.allowed) return publicApiHeaders(apiError('Too many upload requests', 429))

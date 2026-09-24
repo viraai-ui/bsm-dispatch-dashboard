@@ -8,6 +8,7 @@ import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, PAYMENT_PROOF_MIME_TYPES } from 
 import { validatePaymentOrder } from '@/lib/payment-order-search'
 import { cleanPaymentCustomerName, verifyPaymentUploadScope } from '@/lib/payment-manual'
 import { expiresAt as attachmentExpiresAt } from '@/lib/attachment-retention'
+import { MAINTENANCE_API_MESSAGE, MAINTENANCE_MODE } from '@/lib/maintenance'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -24,6 +25,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const auth = await requireUser(['Admin']); if (!auth.ok) return auth.response
+  if (MAINTENANCE_MODE) return apiError(MAINTENANCE_API_MESSAGE, 503)
   const body = await request.json().catch(() => ({})); const customerName = cleanPaymentCustomerName(body.customerName); const salesOrderNumber = text(body.salesOrderNumber); const salesOrderId = text(body.salesOrderId)
   const paymentAmount = Number(body.paymentAmount); const paymentMode = text(body.paymentMode) as PaymentMode; const remarks = text(body.remarks)
   const addedBy = body.addedBy
@@ -61,6 +63,7 @@ export async function POST(request: Request) {
 
 export async function PATCH(request: Request) {
   const auth = await requireUser(['Admin', 'Accounts']); if (!auth.ok) return auth.response
+  if (MAINTENANCE_MODE) return apiError(MAINTENANCE_API_MESSAGE, 503)
   const body = await request.json().catch(() => ({})); const id = text(body.id); const status = text(body.status) as PaymentStatus
   if (!id || !(['Pending', 'Payment Received'] as PaymentStatus[]).includes(status)) return apiError('Invalid payment status', 400)
   try { const payment = await updatePaymentStatus(id, status); return payment ? apiOk({ payment }) : apiError('Payment not found', 404) } catch (error) { return apiError(error instanceof Error ? error.message : 'Could not update payment', 500) }

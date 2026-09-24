@@ -3,6 +3,7 @@ import { requireUser } from '@/lib/auth'
 import { createR2UploadTarget, ensureR2BrowserCors } from '@/lib/r2'
 import { INTERNAL_PAYMENT_SCREENSHOT_MAX_BYTES, paymentScreenshotType } from '@/lib/payment-screenshot'
 import { issuePaymentUploadScope, verifyPaymentUploadScope } from '@/lib/payment-manual'
+import { MAINTENANCE_API_MESSAGE, MAINTENANCE_MODE } from '@/lib/maintenance'
 
 export const runtime = 'nodejs'
 
@@ -11,6 +12,7 @@ function safe(value: string) { return value.trim().replace(/[^a-zA-Z0-9._-]+/g, 
 export async function POST(request: Request) {
   const auth = await requireUser(['Admin'])
   if (!auth.ok) return auth.response
+  if (MAINTENANCE_MODE) return apiError(MAINTENANCE_API_MESSAGE, 503)
   try {
     const body = await request.json().catch(() => ({}))
     const name = String(body.name || '')
