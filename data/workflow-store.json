@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271323,
+  "serialCounter": 26271324,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -41814,6 +41814,70 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-24T07:00:35.183Z",
           "zohoBackupSyncedAt": "2026-09-24T07:00:35.183Z"
+        }
+      }
+    },
+    "1154219000037366002": {
+      "salesOrderId": "1154219000037366002",
+      "salesOrderNumber": "SO-08024",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037366002",
+        "zohoSalesOrderId": "1154219000037366002",
+        "salesOrderNumber": "SO-08024",
+        "status": "open",
+        "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+        "shippingAddress": "KH. 345, Sultanpur, MG Road,, New Delhi, Delhi, 110074, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037366005",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225871",
+            "rate": 32000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037366002-1154219000037366005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037366002",
+            "lineItemId": "1154219000037366005",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+            "salesOrderNumber": "SO-08024",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T14:00:49+0530"
+      },
+      "machines": {
+        "1154219000037366002-1154219000037366005-1": {
+          "machineUnitId": "1154219000037366002-1154219000037366005-1",
+          "lineItemId": "1154219000037366005",
+          "serialNumber": "26271324",
+          "qrToken": "26271324",
+          "qrStatus": "pending"
         }
       }
     }
