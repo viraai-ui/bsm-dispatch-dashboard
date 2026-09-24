@@ -8082,6 +8082,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037360001": {
+      "id": "ship-1790238179550-pczf3",
+      "itemId": "1154219000037360001",
+      "orderId": "1154219000037360001",
+      "machineId": "1154219000037360001-1154219000037360004-1",
+      "salesOrderNumber": "SO-08022",
+      "customerName": "IBS Safety India Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAG6894",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-24",
+      "notes": "",
+      "shippedAt": "2026-09-24T08:22:59.550Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
