@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271320,
+  "serialCounter": 26271323,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -41657,6 +41657,126 @@
           "vendor": "K S",
           "zohoBackupLastAttemptAt": "2026-09-24T06:45:33.716Z",
           "zohoBackupSyncedAt": "2026-09-24T06:45:33.716Z"
+        }
+      }
+    },
+    "1154219000037316001": {
+      "salesOrderId": "1154219000037316001",
+      "salesOrderNumber": "SO-08014",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037316001",
+        "zohoSalesOrderId": "1154219000037316001",
+        "salesOrderNumber": "SO-08014",
+        "status": "open",
+        "customerName": "EARTH DEFENCE SYSTEM",
+        "shippingAddress": "KHEWAT NO. 175 KHATONI NO. 241 KHASRA NO. 28/11/1/1 2-11, EARTH DEFENCE SYSTEM, KHEWAT NO. 183 KHATONI NO. 251 KHASRA NO. 28/11/1/2 1-0, Old Saharanpur Road, NEAR YAMUNA CANAL BRIDGE, VILL. PARWALO, Yamunanagar,, Yamunanagar, Haryana, 135001, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "Machine Set 26 no folder",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 34921,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037316001-1154219000037316004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037316001",
+            "lineItemId": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "EARTH DEFENCE SYSTEM",
+            "salesOrderNumber": "SO-08014",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Machine Set 26 no folder"
+          },
+          {
+            "id": "1154219000037316001-1154219000037316004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037316001",
+            "lineItemId": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "EARTH DEFENCE SYSTEM",
+            "salesOrderNumber": "SO-08014",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Machine Set 26 no folder"
+          },
+          {
+            "id": "1154219000037316001-1154219000037316004-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037316001",
+            "lineItemId": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "EARTH DEFENCE SYSTEM",
+            "salesOrderNumber": "SO-08014",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Machine Set 26 no folder"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T13:22:06+0530"
+      },
+      "machines": {
+        "1154219000037316001-1154219000037316004-1": {
+          "machineUnitId": "1154219000037316001-1154219000037316004-1",
+          "lineItemId": "1154219000037316004",
+          "serialNumber": "26271321",
+          "qrToken": "26271321",
+          "qrStatus": "pending"
+        },
+        "1154219000037316001-1154219000037316004-2": {
+          "machineUnitId": "1154219000037316001-1154219000037316004-2",
+          "lineItemId": "1154219000037316004",
+          "serialNumber": "26271322",
+          "qrToken": "26271322",
+          "qrStatus": "pending"
+        },
+        "1154219000037316001-1154219000037316004-3": {
+          "machineUnitId": "1154219000037316001-1154219000037316004-3",
+          "lineItemId": "1154219000037316004",
+          "serialNumber": "26271323",
+          "qrToken": "26271323",
+          "qrStatus": "pending"
         }
       }
     }
