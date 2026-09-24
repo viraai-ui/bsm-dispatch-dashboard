@@ -37156,9 +37156,9 @@
     "1154219000037279003": {
       "salesOrderId": "1154219000037279003",
       "salesOrderNumber": "SO-08010",
-      "status": "qr_generated",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-09-23T06:50:03.890Z",
+      "processedAt": "2026-09-24T10:24:30.524Z",
       "processedOrder": {
         "id": "1154219000037279003",
         "zohoSalesOrderId": "1154219000037279003",
@@ -37168,7 +37168,7 @@
         "shippingAddress": "Plot No. 10, Sector 4B, HSIIDC, Sector 17, Bahadurgarh, Haryana, 124507, India",
         "salesperson": "Shivani Kumari",
         "deliveryDate": "2026-09-23",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "Processed",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -37181,6 +37181,18 @@
             "woodenPackingRequired": true,
             "zohoItemId": "1154219000000225787",
             "rate": 27500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037312234",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226914",
+            "rate": 53000,
             "dispatchCategory": "machine"
           }
         ],
@@ -37197,7 +37209,7 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -37221,7 +37233,7 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -37245,7 +37257,7 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -37269,7 +37281,7 @@
             "customerName": "Rajdhani Laminates",
             "salesOrderNumber": "SO-08010",
             "deliveryDate": "2026-09-23",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -37280,9 +37292,33 @@
             "warrantyStart": "2026-09-23",
             "vendor": "K S",
             "dispatchNote": "local"
+          },
+          {
+            "id": "1154219000037279003-1154219000037312234-1",
+            "unitNumber": 5,
+            "serialNumber": "26271326",
+            "qrToken": "26271326",
+            "orderId": "1154219000037279003",
+            "lineItemId": "1154219000037312234",
+            "itemName": "Binding single needle (Auto lubrication) (heavy duty) (Cylinder bed)",
+            "sku": "2628",
+            "customerName": "Rajdhani Laminates",
+            "salesOrderNumber": "SO-08010",
+            "deliveryDate": "2026-09-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "T Sol",
+            "dispatchNote": "LOCAL"
           }
         ],
-        "zohoLastModifiedTime": "2026-09-23T10:33:30+0530"
+        "zohoLastModifiedTime": "2026-09-23T16:29:53+0530"
       },
       "machines": {
         "1154219000037279003-1154219000037279006-1": {
@@ -37353,7 +37389,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T10:23:49.048Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T10:23:49.785Z"
+          "zohoBackupQueuedAt": "2026-09-24T10:23:49.785Z",
+          "processedAt": "2026-09-24T10:24:30.524Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "T Sol"
         }
       }
     },
