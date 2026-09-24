@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271312,
+  "serialCounter": 26271314,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -41219,6 +41219,98 @@
           "zohoBackupLastAttemptAt": "2026-09-24T05:30:32.200Z",
           "zohoBackupSyncedAt": "2026-09-24T05:30:32.200Z",
           "dispatchedAt": "2026-09-24T05:33:45.265Z"
+        }
+      }
+    },
+    "1154219000037360001": {
+      "salesOrderId": "1154219000037360001",
+      "salesOrderNumber": "SO-08022",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037360001",
+        "zohoSalesOrderId": "1154219000037360001",
+        "salesOrderNumber": "SO-08022",
+        "status": "open",
+        "customerName": "IBS Safety India Pvt Ltd",
+        "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037360004",
+            "itemName": "Pattern sewing machine (300x200 mm)",
+            "sku": "3020",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227098",
+            "rate": 285000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037360001-1154219000037360004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037360001",
+            "lineItemId": "1154219000037360004",
+            "itemName": "Pattern sewing machine (300x200 mm)",
+            "sku": "3020",
+            "customerName": "IBS Safety India Pvt Ltd",
+            "salesOrderNumber": "SO-08022",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037360001-1154219000037360004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037360001",
+            "lineItemId": "1154219000037360004",
+            "itemName": "Pattern sewing machine (300x200 mm)",
+            "sku": "3020",
+            "customerName": "IBS Safety India Pvt Ltd",
+            "salesOrderNumber": "SO-08022",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T10:45:47+0530"
+      },
+      "machines": {
+        "1154219000037360001-1154219000037360004-1": {
+          "machineUnitId": "1154219000037360001-1154219000037360004-1",
+          "lineItemId": "1154219000037360004",
+          "serialNumber": "26271313",
+          "qrToken": "26271313",
+          "qrStatus": "pending"
+        },
+        "1154219000037360001-1154219000037360004-2": {
+          "machineUnitId": "1154219000037360001-1154219000037360004-2",
+          "lineItemId": "1154219000037360004",
+          "serialNumber": "26271314",
+          "qrToken": "26271314",
+          "qrStatus": "pending"
         }
       }
     }
