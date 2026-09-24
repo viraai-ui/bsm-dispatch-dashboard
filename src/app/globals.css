@@ -27,8 +27,8 @@ button, .btn, .nav a { min-height: 44px; }
 button { cursor: pointer; }
 h1, h2, h3, p, td, th, span, strong { overflow-wrap: anywhere; }
 
-body.maintenance-active { overflow: hidden; }
-.maintenance-active .maintenance-content { min-height: 100svh; pointer-events: none; user-select: none; filter: blur(8px) saturate(.68); transform: scale(1.012); }
+.maintenance-scope { min-height: 100svh; overflow: hidden; }
+.maintenance-scope .maintenance-content { min-height: 100svh; pointer-events: none; user-select: none; filter: blur(8px) saturate(.68); transform: scale(1.012); }
 .maintenance-lock { position: fixed; z-index: 2147483647; inset: 0; display: grid; place-items: center; overflow: auto; padding: clamp(18px, 5vw, 48px); isolation: isolate; background: rgba(7, 12, 24, .72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .maintenance-lock::before { content: ''; position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 22%, rgba(200, 16, 46, .22), transparent 32rem), linear-gradient(145deg, rgba(15, 23, 42, .32), rgba(2, 6, 23, .78)); }
 .maintenance-lock__glow { position: fixed; z-index: -1; width: min(70vw, 680px); aspect-ratio: 1; border-radius: 50%; background: rgba(200, 16, 46, .16); filter: blur(90px); pointer-events: none; }

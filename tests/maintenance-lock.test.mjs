@@ -4,13 +4,17 @@ import test from 'node:test'
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8')
 
-test('root layout locks every page behind the maintenance dialog', async () => {
+test('only payment pages are locked behind the maintenance dialog', async () => {
   const layout = await read('src/app/layout.tsx')
+  const payments = await read('src/app/payments/page.tsx')
+  const publicPayments = await read('src/app/submit-payment/page.tsx')
   const maintenance = await read('src/lib/maintenance.ts')
   assert.match(maintenance, /MAINTENANCE_MODE = true/)
-  assert.match(layout, /<div className="maintenance-content" inert=/)
-  assert.match(layout, /aria-hidden=/)
-  assert.match(layout, /<MaintenanceLock \/>/)
+  assert.doesNotMatch(layout, /MaintenanceLock|maintenance-content|MAINTENANCE_MODE/)
+  for (const source of [payments, publicPayments]) {
+    assert.match(source, /<div className="maintenance-content" inert aria-hidden="true">/)
+    assert.match(source, /<MaintenanceLock \/>/)
+  }
 })
 
 test('maintenance notice contains the required payment warning and administration direction', async () => {
@@ -35,7 +39,7 @@ test('authenticated and public payment mutations are rejected during maintenance
 
 test('lock styling prevents interaction and remains mobile responsive', async () => {
   const css = await read('src/app/globals.css')
-  assert.match(css, /\.maintenance-active \.maintenance-content[^}]*pointer-events: none/)
+  assert.match(css, /\.maintenance-scope \.maintenance-content[^}]*pointer-events: none/)
   assert.match(css, /\.maintenance-lock[^}]*position: fixed[^}]*z-index: 2147483647/)
   assert.match(css, /@media \(max-width: 520px\)/)
 })

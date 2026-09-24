@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
-import { MaintenanceLock } from '@/components/MaintenanceLock'
-import { MAINTENANCE_MODE } from '@/lib/maintenance'
 import './globals.css'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'], display: 'swap' })
@@ -34,10 +32,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}${MAINTENANCE_MODE ? ' maintenance-active' : ''}`}>
-        <div className="maintenance-content" inert={MAINTENANCE_MODE ? true : undefined} aria-hidden={MAINTENANCE_MODE || undefined}>{children}</div>
-        {MAINTENANCE_MODE && <MaintenanceLock />}
-      </body>
+      <body className={poppins.className}>{children}</body>
     </html>
   )
 }
