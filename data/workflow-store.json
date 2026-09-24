@@ -42021,7 +42021,9 @@
     "1154219000037275001": {
       "salesOrderId": "1154219000037275001",
       "salesOrderNumber": "SO-08002",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-24T12:12:42.769Z",
       "processedOrder": {
         "id": "1154219000037275001",
         "zohoSalesOrderId": "1154219000037275001",
@@ -42051,8 +42053,8 @@
           {
             "id": "1154219000037275001-1154219000037275004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271327",
+            "qrToken": "26271327",
             "orderId": "1154219000037275001",
             "lineItemId": "1154219000037275004",
             "itemName": "Foil Stamping machine",
@@ -42060,14 +42062,17 @@
             "customerName": "FILTERTEX INDIA PRIVATE LIMITED",
             "salesOrderNumber": "SO-08002",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Able",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T15:00:47+0530"
@@ -42081,7 +42086,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T12:10:26.550Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T12:10:27.292Z"
+          "zohoBackupQueuedAt": "2026-09-24T12:10:27.292Z",
+          "processedAt": "2026-09-24T12:12:42.769Z",
+          "dispatchNote": "wooden",
+          "vendor": "Able"
         }
       }
     }
