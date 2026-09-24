@@ -3,6 +3,8 @@ import { isOrderIdentityTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBasel
 import { markPublicDatabaseDirty } from './public-database-freshness'
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
+const GITHUB_READ_COOLDOWN_MS = 2 * 60 * 1000
+let githubReadUnavailableUntil = 0
 export function isGitHubWriteConflict(error: unknown) {
   const message = error instanceof Error ? error.message : String(error)
   return SHA_CONFLICT_PATTERNS.some((pattern) => pattern.test(message))
@@ -81,7 +83,28 @@ export async function githubRequest(path: string, init: RequestInit = {}) {
   return data
 }
 
+async function readBundledJson<T>(filePath: string, fallback: T): Promise<T> {
+  if (typeof window !== 'undefined') return fallback
+  try {
+    const fsModule = 'node:fs/promises'
+    const pathModule = 'node:path'
+    const { readFile } = await import(fsModule)
+    const nodePath = await import(pathModule)
+    if (!filePath.startsWith('data/') || filePath.includes('..')) return fallback
+    const dataFile = filePath.slice('data/'.length)
+    return JSON.parse(await readFile(nodePath.join(process.cwd(), 'data', dataFile), 'utf8')) as T
+  } catch {
+    return fallback
+  }
+}
+
+function isTransientGitHubReadFailure(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error)
+  return /rate limit|api request limit|too many requests|quota|fetch failed|econnreset|etimedout|network/i.test(message)
+}
+
 export async function githubReadJson<T>(path: string, fallback: T): Promise<{ data: T; sha?: string }> {
+  if (githubReadUnavailableUntil > Date.now()) return { data: await readBundledJson(path, fallback) }
   try {
     const data = await githubRequest(`/contents/${path}`)
     let content = data.content || ''
@@ -99,6 +122,10 @@ export async function githubReadJson<T>(path: string, fallback: T): Promise<{ da
   } catch (error) {
     const message = error instanceof Error ? error.message : ''
     if (message.includes('Not Found') || message.includes('not configured')) return { data: fallback }
+    if (isTransientGitHubReadFailure(error)) {
+      githubReadUnavailableUntil = Date.now() + GITHUB_READ_COOLDOWN_MS
+      return { data: await readBundledJson(path, fallback) }
+    }
     throw error
   }
 }
