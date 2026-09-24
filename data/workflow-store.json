@@ -41341,7 +41341,9 @@
     "1154219000037320001": {
       "salesOrderId": "1154219000037320001",
       "salesOrderNumber": "SO-08015",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-24T06:29:47.693Z",
       "processedOrder": {
         "id": "1154219000037320001",
         "zohoSalesOrderId": "1154219000037320001",
@@ -41383,8 +41385,8 @@
           {
             "id": "1154219000037320001-1154219000037320004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271315",
+            "qrToken": "26271315",
             "orderId": "1154219000037320001",
             "lineItemId": "1154219000037320004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -41392,20 +41394,23 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-08015",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Royal",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037320001-1154219000037320004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271316",
+            "qrToken": "26271316",
             "orderId": "1154219000037320001",
             "lineItemId": "1154219000037320004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -41413,20 +41418,23 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-08015",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Royal",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037320001-1154219000037320004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271317",
+            "qrToken": "26271317",
             "orderId": "1154219000037320001",
             "lineItemId": "1154219000037320004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -41434,20 +41442,23 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-08015",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Royal",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037320001-1154219000037320005-1",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271318",
+            "qrToken": "26271318",
             "orderId": "1154219000037320001",
             "lineItemId": "1154219000037320005",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -41455,20 +41466,23 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-08015",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037320001-1154219000037320005-2",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271319",
+            "qrToken": "26271319",
             "orderId": "1154219000037320001",
             "lineItemId": "1154219000037320005",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -41476,14 +41490,17 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-08015",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-23T13:33:02+0530"
@@ -41497,7 +41514,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:28:18.127Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z",
+          "processedAt": "2026-09-24T06:29:47.693Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Royal"
         },
         "1154219000037320001-1154219000037320004-2": {
           "machineUnitId": "1154219000037320001-1154219000037320004-2",
@@ -41507,7 +41527,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:28:18.127Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z",
+          "processedAt": "2026-09-24T06:29:47.693Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Royal"
         },
         "1154219000037320001-1154219000037320004-3": {
           "machineUnitId": "1154219000037320001-1154219000037320004-3",
@@ -41517,7 +41540,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:28:18.127Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z",
+          "processedAt": "2026-09-24T06:29:47.693Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Royal"
         },
         "1154219000037320001-1154219000037320005-1": {
           "machineUnitId": "1154219000037320001-1154219000037320005-1",
@@ -41527,7 +41553,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:28:18.127Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z",
+          "processedAt": "2026-09-24T06:29:47.693Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         },
         "1154219000037320001-1154219000037320005-2": {
           "machineUnitId": "1154219000037320001-1154219000037320005-2",
@@ -41537,7 +41566,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:28:18.127Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:28:19.100Z",
+          "processedAt": "2026-09-24T06:29:47.693Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         }
       }
     }
