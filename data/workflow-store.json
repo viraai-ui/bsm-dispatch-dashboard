@@ -41225,7 +41225,9 @@
     "1154219000037360001": {
       "salesOrderId": "1154219000037360001",
       "salesOrderNumber": "SO-08022",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-24T06:09:51.693Z",
       "processedOrder": {
         "id": "1154219000037360001",
         "zohoSalesOrderId": "1154219000037360001",
@@ -41255,8 +41257,8 @@
           {
             "id": "1154219000037360001-1154219000037360004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271313",
+            "qrToken": "26271313",
             "orderId": "1154219000037360001",
             "lineItemId": "1154219000037360004",
             "itemName": "Pattern sewing machine (300x200 mm)",
@@ -41264,20 +41266,23 @@
             "customerName": "IBS Safety India Pvt Ltd",
             "salesOrderNumber": "SO-08022",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Able",
+            "dispatchNote": "GOOD WRAPPING"
           },
           {
             "id": "1154219000037360001-1154219000037360004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271314",
+            "qrToken": "26271314",
             "orderId": "1154219000037360001",
             "lineItemId": "1154219000037360004",
             "itemName": "Pattern sewing machine (300x200 mm)",
@@ -41285,14 +41290,17 @@
             "customerName": "IBS Safety India Pvt Ltd",
             "salesOrderNumber": "SO-08022",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "vendor": "Able",
+            "dispatchNote": "GOOD WRAPPING"
           }
         ],
         "zohoLastModifiedTime": "2026-09-24T10:45:47+0530"
@@ -41306,7 +41314,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:07:29.617Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:07:30.516Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:07:30.516Z",
+          "processedAt": "2026-09-24T06:09:51.693Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "Able"
         },
         "1154219000037360001-1154219000037360004-2": {
           "machineUnitId": "1154219000037360001-1154219000037360004-2",
@@ -41316,7 +41327,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T06:07:29.617Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-24T06:07:30.516Z"
+          "zohoBackupQueuedAt": "2026-09-24T06:07:30.516Z",
+          "processedAt": "2026-09-24T06:09:51.693Z",
+          "dispatchNote": "GOOD WRAPPING",
+          "vendor": "Able"
         }
       }
     }
