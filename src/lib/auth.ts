@@ -2,6 +2,7 @@ import bcrypt from 'bcryptjs'
 import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
 import { githubReadJson, githubWriteJson } from './workflow-store'
+import bundledUserStore from '../../data/auth-users-store.json'
 
 export type AppRole = 'Admin' | 'Operations' | 'Dispatch' | 'Media' | 'Database' | 'Accounts'
 export type AppUser = {
@@ -21,7 +22,17 @@ type UserStore = { users: AppUser[] }
 const USERS_PATH = 'data/auth-users-store.json'
 const SESSION_COOKIE = 'bsm_dispatch_session'
 const SESSION_DAYS = 365
+const USER_STORE_CACHE_MS = 5 * 60 * 1000
 const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media', 'Database', 'Accounts']
+let userStoreCache: { store: UserStore; expiresAt: number } | null = null
+
+function copyUserStore(store: UserStore): UserStore {
+  return { users: store.users.map((user) => ({ ...user })) }
+}
+
+function bundledUsers(): UserStore {
+  return copyUserStore(bundledUserStore as UserStore)
+}
 
 function secretKey() {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bsm-dispatch-dashboard-local-secret-change-me'
@@ -51,11 +62,21 @@ export function isFullAccess(role?: AppRole) { return role === 'Admin' || role =
 export function isKnownRole(role: string): role is AppRole { return roles.includes(role as AppRole) }
 
 export async function getUserStore() {
-  const fallback = { users: await seedUsers() }
-  const { data } = await githubReadJson<UserStore>(USERS_PATH, fallback)
+  if (userStoreCache && userStoreCache.expiresAt > Date.now()) return copyUserStore(userStoreCache.store)
+  const fallback = bundledUsers()
+  let data: UserStore
+  try {
+    data = (await githubReadJson<UserStore>(USERS_PATH, fallback)).data
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    if (!/rate limit|api request limit|too many requests|quota/i.test(message)) throw error
+    data = fallback
+  }
   if (!data.users?.length) {
-    await githubWriteJson(USERS_PATH, fallback, 'Initialize dispatch users')
-    return fallback
+    const seeded = { users: await seedUsers() }
+    await githubWriteJson(USERS_PATH, seeded, 'Initialize dispatch users')
+    userStoreCache = { store: copyUserStore(seeded), expiresAt: Date.now() + USER_STORE_CACHE_MS }
+    return seeded
   }
   const store = { users: data.users }
   const now = new Date().toISOString()
@@ -85,11 +106,13 @@ export async function getUserStore() {
     }
   }
   if (changed) await githubWriteJson(USERS_PATH, store, 'Update default dispatch users')
+  userStoreCache = { store: copyUserStore(store), expiresAt: Date.now() + USER_STORE_CACHE_MS }
   return store
 }
 
 export async function saveUserStore(store: UserStore) {
   await githubWriteJson(USERS_PATH, store, 'Update dispatch users')
+  userStoreCache = { store: copyUserStore(store), expiresAt: Date.now() + USER_STORE_CACHE_MS }
 }
 
 export async function findUserByLogin(login: string) {
