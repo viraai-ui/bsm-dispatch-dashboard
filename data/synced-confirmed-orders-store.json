@@ -1,5 +1,126 @@
 {
   "orders": {
+    "1154219000037360014": {
+      "id": "1154219000037360014",
+      "zohoSalesOrderId": "1154219000037360014",
+      "salesOrderNumber": "SO-08023",
+      "status": "open",
+      "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+      "shippingAddress": "Ground Floor, PLOT NO. 530, M.I.E. PART-A,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037360017",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226034",
+          "rate": 15000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037360014-1154219000037360017-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037360014",
+          "lineItemId": "1154219000037360017",
+          "itemName": "Manual Fusing Machine (15*15 inches)",
+          "sku": "38",
+          "customerName": "DUNLUP FOOTWEAR PVT. LTD.",
+          "salesOrderNumber": "SO-08023",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-24T10:46:17+0530"
+    },
+    "1154219000037360001": {
+      "id": "1154219000037360001",
+      "zohoSalesOrderId": "1154219000037360001",
+      "salesOrderNumber": "SO-08022",
+      "status": "open",
+      "customerName": "IBS Safety India Pvt Ltd",
+      "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037360004",
+          "itemName": "Pattern sewing machine (300x200 mm)",
+          "sku": "3020",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000227098",
+          "rate": 285000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037360001-1154219000037360004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037360001",
+          "lineItemId": "1154219000037360004",
+          "itemName": "Pattern sewing machine (300x200 mm)",
+          "sku": "3020",
+          "customerName": "IBS Safety India Pvt Ltd",
+          "salesOrderNumber": "SO-08022",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037360001-1154219000037360004-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037360001",
+          "lineItemId": "1154219000037360004",
+          "itemName": "Pattern sewing machine (300x200 mm)",
+          "sku": "3020",
+          "customerName": "IBS Safety India Pvt Ltd",
+          "salesOrderNumber": "SO-08022",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-24T10:45:47+0530"
+    },
     "1154219000037338003": {
       "id": "1154219000037338003",
       "zohoSalesOrderId": "1154219000037338003",
@@ -11363,6 +11484,8 @@
     }
   },
   "orderIds": [
+    "1154219000037360014",
+    "1154219000037360001",
     "1154219000037338003",
     "1154219000037320016",
     "1154219000037314007",
@@ -11423,8 +11546,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-24T05:00:33.038Z",
-  "lastAttemptAt": "2026-09-24T05:16:35.563Z",
+  "lastSuccessfulSyncAt": "2026-09-24T05:16:52.624Z",
+  "lastAttemptAt": "2026-09-24T05:16:52.624Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
