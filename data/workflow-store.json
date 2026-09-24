@@ -37388,11 +37388,13 @@
           "qrToken": "26271326",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-24T10:23:49.048Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-24T10:23:49.785Z",
           "processedAt": "2026-09-24T10:24:30.524Z",
           "dispatchNote": "LOCAL",
-          "vendor": "T Sol"
+          "vendor": "T Sol",
+          "zohoBackupLastAttemptAt": "2026-09-24T10:30:35.921Z",
+          "zohoBackupSyncedAt": "2026-09-24T10:30:35.921Z"
         }
       }
     },
