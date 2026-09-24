@@ -35189,14 +35189,15 @@
           "qrToken": "26271099",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-24T18:55:54.123Z",
-          "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
+          "zohoBackupLastAttemptAt": "2026-09-24T19:00:33.606Z",
           "reallocatedFromMachineId": "1154219000036259722-1154219000036259725-1",
           "reallocatedAt": "2026-09-24T18:55:54.123Z",
           "replacedSerialNumber": "26271282",
           "replacedSerialQrToken": "26271282",
-          "replacedSerialVoidedAt": "2026-09-24T18:55:54.123Z"
+          "replacedSerialVoidedAt": "2026-09-24T18:55:54.123Z",
+          "zohoBackupSyncedAt": "2026-09-24T19:00:33.606Z"
         },
         "1154219000037205001-1154219000037205006-2": {
           "machineUnitId": "1154219000037205001-1154219000037205006-2",
