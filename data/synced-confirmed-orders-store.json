@@ -8117,9 +8117,159 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
+    },
+    "manual-so-08034": {
+      "id": "manual-so-08034",
+      "zohoSalesOrderId": "manual-so-08034",
+      "salesOrderNumber": "SO-08034",
+      "status": "open",
+      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl. Estate, Bahadurgarh, Haryana 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "manual-so-08034-line-1",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "rate": 450000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "manual-so-08034-manual-so-08034-line-1-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "manual-so-08034",
+          "lineItemId": "manual-so-08034-line-1",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "",
+          "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+          "salesOrderNumber": "SO-08034",
+          "deliveryDate": "2026-09-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-25T13:43:00+05:30"
+    },
+    "manual-so-08036": {
+      "id": "manual-so-08036",
+      "zohoSalesOrderId": "manual-so-08036",
+      "salesOrderNumber": "SO-08036",
+      "status": "open",
+      "customerName": "VISHAL",
+      "shippingAddress": "C/O Rajuram Bora, Room No. 8-A Yashwant Nagar No. 1, Shell Colony, Near Ashok Medical, Chembur, Kurla, Mumbai Suburban, Maharashtra 400071, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "manual-so-08036-line-1",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "rate": 29661,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "manual-so-08036-manual-so-08036-line-1-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "manual-so-08036",
+          "lineItemId": "manual-so-08036-line-1",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "",
+          "customerName": "VISHAL",
+          "salesOrderNumber": "SO-08036",
+          "deliveryDate": "2026-09-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-25T13:43:00+05:30"
+    },
+    "manual-so-08037": {
+      "id": "manual-so-08037",
+      "zohoSalesOrderId": "manual-so-08037",
+      "salesOrderNumber": "SO-08037",
+      "status": "open",
+      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl. Estate, Bahadurgarh, Haryana 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "manual-so-08037-line-1",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "rate": 31000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "manual-so-08037-manual-so-08037-line-1-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "manual-so-08037",
+          "lineItemId": "manual-so-08037-line-1",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "",
+          "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+          "salesOrderNumber": "SO-08037",
+          "deliveryDate": "2026-09-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-25T13:43:00+05:30"
     }
   },
   "orderIds": [
+    "manual-so-08037",
+    "manual-so-08036",
+    "manual-so-08034",
     "1154219000037372003",
     "1154219000037357008",
     "1154219000037378005",
@@ -8180,7 +8330,7 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-25T05:52:56.878Z",
+  "lastSuccessfulSyncAt": "2026-09-25T08:20:22.687582Z",
   "lastAttemptAt": "2026-09-25T08:08:56.595Z",
   "lastError": "The API call for this organization has exceeded the maximum call rate limit of 10,000",
   "syncing": false
