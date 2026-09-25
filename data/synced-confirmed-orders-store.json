@@ -176,7 +176,119 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-25T10:58:46+0530"
+      "zohoLastModifiedTime": "2026-09-25T10:59:04+0530"
+    },
+    "1154219000037378005": {
+      "id": "1154219000037378005",
+      "zohoSalesOrderId": "1154219000037378005",
+      "salesOrderNumber": "SO-08031",
+      "status": "open",
+      "customerName": "Mehak International",
+      "shippingAddress": "Plot No. 37, Sy. No. 257, Ibrahimpatnam Khalsa Revenue Village whitegold Textile Park, Ibrahimpatnam Khalsa, Rangareddy, Telangana, 501506, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037378008",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "description": "With Auto Oil and folder attachment Setting",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000280585",
+          "rate": 68000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037378005-1154219000037378008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037378005",
+          "lineItemId": "1154219000037378008",
+          "itemName": "Single Needle Walking foot (Cylinder Bed)",
+          "sku": "341",
+          "customerName": "Mehak International",
+          "salesOrderNumber": "SO-08031",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "With Auto Oil and folder attachment Setting"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-25T10:59:04+0530"
+    },
+    "1154219000037363007": {
+      "id": "1154219000037363007",
+      "zohoSalesOrderId": "1154219000037363007",
+      "salesOrderNumber": "SO-08030",
+      "status": "open",
+      "customerName": "Lord's Mark Industries Limited",
+      "shippingAddress": "Survey No. 1186, Old Survey No. 277-1-2, Demni Road, Near cannel, Dadra Dungra, Dadra and Nagar Haveli, Daman and Diu, 396193, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037363010",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225211",
+          "rate": 55000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037363011",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 360,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037363007-1154219000037363010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037363007",
+          "lineItemId": "1154219000037363010",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "Lord's Mark Industries Limited",
+          "salesOrderNumber": "SO-08030",
+          "deliveryDate": "2026-09-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-25T10:59:34+0530"
     },
     "1154219000037373003": {
       "id": "1154219000037373003",
@@ -8010,6 +8122,8 @@
   "orderIds": [
     "1154219000037372003",
     "1154219000037357008",
+    "1154219000037378005",
+    "1154219000037363007",
     "1154219000037373003",
     "1154219000037367014",
     "1154219000037346057",
@@ -8066,8 +8180,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-25T05:29:10.546Z",
-  "lastAttemptAt": "2026-09-25T05:37:50.011Z",
+  "lastSuccessfulSyncAt": "2026-09-25T05:37:55.497Z",
+  "lastAttemptAt": "2026-09-25T05:37:55.497Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
