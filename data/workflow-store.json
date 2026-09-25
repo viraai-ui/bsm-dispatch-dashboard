@@ -21377,8 +21377,8 @@
           {
             "id": "1154219000036259722-1154219000036259728-1",
             "unitNumber": 5,
-            "serialNumber": "26271103",
-            "qrToken": "26271103",
+            "serialNumber": "",
+            "qrToken": "",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259728",
             "itemName": "Seat lasting Machine",
@@ -21386,7 +21386,7 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "QR Generated",
+            "status": "Not Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -21395,7 +21395,8 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "vendor": "Able",
-            "dispatchNote": "Local"
+            "dispatchNote": "Local",
+            "sourceRemovedAt": "2026-09-25T07:55:25.997Z"
           }
         ],
         "zohoLastModifiedTime": "2026-09-01T17:06:52+0530"
@@ -21465,10 +21466,7 @@
         "1154219000036259722-1154219000036259728-1": {
           "machineUnitId": "1154219000036259722-1154219000036259728-1",
           "lineItemId": "1154219000036259728",
-          "serialNumber": "26271103",
-          "qrToken": "26271103",
-          "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "qrStatus": "pending",
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
@@ -21476,7 +21474,9 @@
           "processedAt": "2026-09-01T12:19:41.688Z",
           "dispatchNote": "Local",
           "vendor": "Able",
-          "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          "dispatchedAt": "2026-09-02T12:36:53.473Z",
+          "reallocatedToMachineId": "1154219000037205001-1154219000037205007-1",
+          "reallocatedAt": "2026-09-25T07:55:25.997Z"
         }
       }
     },
@@ -35080,8 +35080,8 @@
           {
             "id": "1154219000037205001-1154219000037205007-1",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271103",
+            "qrToken": "26271103",
             "orderId": "1154219000037205001",
             "lineItemId": "1154219000037205007",
             "itemName": "Seat lasting Machine",
@@ -35089,7 +35089,7 @@
             "customerName": "Shree Balaji",
             "salesOrderNumber": "SO-07987",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -35209,6 +35209,28 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "sourceRemovedAt": "2026-09-25T07:55:12.818Z"
+          },
+          {
+            "id": "1154219000037205001-1154219000037205007-1",
+            "unitNumber": 6,
+            "serialNumber": "26271284",
+            "qrToken": "26271284",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205007",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "Shri Balaji Enterprises - Bahadurgarh",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "sourceRemovedAt": "2026-09-25T07:55:25.997Z"
           }
         ]
       },
@@ -35291,14 +35313,19 @@
         "1154219000037205001-1154219000037205007-1": {
           "machineUnitId": "1154219000037205001-1154219000037205007-1",
           "lineItemId": "1154219000037205007",
-          "serialNumber": "26271284",
-          "qrToken": "26271284",
+          "serialNumber": "26271103",
+          "qrToken": "26271103",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-25T07:55:25.997Z",
           "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
-          "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          "zohoBackupReplaceExisting": true,
+          "reallocatedFromMachineId": "1154219000036259722-1154219000036259728-1",
+          "reallocatedAt": "2026-09-25T07:55:25.997Z",
+          "replacedSerialNumber": "26271284",
+          "replacedSerialQrToken": "26271284",
+          "replacedSerialVoidedAt": "2026-09-25T07:55:25.997Z"
         },
         "1154219000037205001-1154219000037205008-1": {
           "machineUnitId": "1154219000037205001-1154219000037205008-1",
@@ -43312,7 +43339,7 @@
         "itemDescription": "",
         "importedAt": "2026-09-25T07:53:34.078Z",
         "importedBy": "admin@bsmindia.com",
-        "status": "available",
+        "status": "relocated",
         "audit": [
           {
             "at": "2026-09-25T07:53:34.078Z",
@@ -43326,8 +43353,106 @@
             "sourceSalesOrderNumber": "SO-07864",
             "sourceMachineId": "1154219000036259722-1154219000036259728-1",
             "serialNumber": "26271103"
+          },
+          {
+            "at": "2026-09-25T07:55:25.997Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "relocated",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259728-1",
+            "serialNumber": "26271103",
+            "targetOrderId": "1154219000037205001",
+            "targetSalesOrderNumber": "SO-07987",
+            "targetMachineId": "1154219000037205001-1154219000037205007-1",
+            "displacedDestinationSerial": "26271284",
+            "displacedDestinationQrToken": "26271284",
+            "displacedDestinationSerialVoidedAt": "2026-09-25T07:55:25.997Z"
           }
-        ]
+        ],
+        "relocatedAt": "2026-09-25T07:55:25.997Z",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205007-1",
+        "relocationSnapshot": {
+          "sourceWorkflow": {
+            "machineUnitId": "1154219000036259722-1154219000036259728-1",
+            "lineItemId": "1154219000036259728",
+            "serialNumber": "26271103",
+            "qrToken": "26271103",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
+            "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
+            "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+            "processedAt": "2026-09-01T12:19:41.688Z",
+            "dispatchNote": "Local",
+            "vendor": "Able",
+            "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          },
+          "targetWorkflow": {
+            "machineUnitId": "1154219000037205001-1154219000037205007-1",
+            "lineItemId": "1154219000037205007",
+            "serialNumber": "26271284",
+            "qrToken": "26271284",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+            "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
+            "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          },
+          "sourceMachine": {
+            "id": "1154219000036259722-1154219000036259728-1",
+            "unitNumber": 5,
+            "serialNumber": "26271103",
+            "qrToken": "26271103",
+            "orderId": "1154219000036259722",
+            "lineItemId": "1154219000036259728",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07864",
+            "deliveryDate": "2026-09-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
+          },
+          "targetMachine": {
+            "id": "1154219000037205001-1154219000037205007-1",
+            "unitNumber": 6,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205007",
+            "itemName": "Seat lasting Machine",
+            "sku": "727",
+            "customerName": "Shree Balaji",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          "targetRetiredCount": 4
+        }
       }
     },
     "importedOrders": {
@@ -43645,6 +43770,25 @@
         "displacedDestinationSerial": "26271285",
         "displacedDestinationQrToken": "26271285",
         "displacedDestinationSerialVoidedAt": "2026-09-25T07:55:12.818Z"
+      },
+      {
+        "at": "2026-09-25T07:55:25.997Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "relocated",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259728-1",
+        "serialNumber": "26271103",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205007-1",
+        "displacedDestinationSerial": "26271284",
+        "displacedDestinationQrToken": "26271284",
+        "displacedDestinationSerialVoidedAt": "2026-09-25T07:55:25.997Z"
       }
     ]
   }
