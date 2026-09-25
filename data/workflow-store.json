@@ -21305,8 +21305,8 @@
           {
             "id": "1154219000036259722-1154219000036259725-2",
             "unitNumber": 2,
-            "serialNumber": "26271100",
-            "qrToken": "26271100",
+            "serialNumber": "",
+            "qrToken": "",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259725",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -21314,7 +21314,7 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "QR Generated",
+            "status": "Not Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -21323,7 +21323,8 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "vendor": "Able",
-            "dispatchNote": "Local"
+            "dispatchNote": "Local",
+            "sourceRemovedAt": "2026-09-25T07:54:27.142Z"
           },
           {
             "id": "1154219000036259722-1154219000036259726-1",
@@ -21417,10 +21418,7 @@
         "1154219000036259722-1154219000036259725-2": {
           "machineUnitId": "1154219000036259722-1154219000036259725-2",
           "lineItemId": "1154219000036259725",
-          "serialNumber": "26271100",
-          "qrToken": "26271100",
-          "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "qrStatus": "pending",
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
@@ -21428,7 +21426,9 @@
           "processedAt": "2026-09-01T12:19:41.688Z",
           "dispatchNote": "Local",
           "vendor": "Able",
-          "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          "dispatchedAt": "2026-09-02T12:36:53.473Z",
+          "reallocatedToMachineId": "1154219000037205001-1154219000037205006-2",
+          "reallocatedAt": "2026-09-25T07:54:27.142Z"
         },
         "1154219000036259722-1154219000036259726-1": {
           "machineUnitId": "1154219000036259722-1154219000036259726-1",
@@ -35059,8 +35059,8 @@
           {
             "id": "1154219000037205001-1154219000037205006-2",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271100",
+            "qrToken": "26271100",
             "orderId": "1154219000037205001",
             "lineItemId": "1154219000037205006",
             "itemName": "Hydraulic Sole Attaching machine",
@@ -35068,7 +35068,7 @@
             "customerName": "Shree Balaji",
             "salesOrderNumber": "SO-07987",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -35143,6 +35143,28 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "sourceRemovedAt": "2026-09-25T07:54:07.338Z"
+          },
+          {
+            "id": "1154219000037205001-1154219000037205006-2",
+            "unitNumber": 5,
+            "serialNumber": "26271283",
+            "qrToken": "26271283",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205006",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "Shri Balaji Enterprises - Bahadurgarh",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "sourceRemovedAt": "2026-09-25T07:54:27.142Z"
           }
         ]
       },
@@ -35203,14 +35225,19 @@
         "1154219000037205001-1154219000037205006-2": {
           "machineUnitId": "1154219000037205001-1154219000037205006-2",
           "lineItemId": "1154219000037205006",
-          "serialNumber": "26271283",
-          "qrToken": "26271283",
+          "serialNumber": "26271100",
+          "qrToken": "26271100",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-25T07:54:27.142Z",
           "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
-          "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          "zohoBackupReplaceExisting": true,
+          "reallocatedFromMachineId": "1154219000036259722-1154219000036259725-2",
+          "reallocatedAt": "2026-09-25T07:54:27.142Z",
+          "replacedSerialNumber": "26271283",
+          "replacedSerialQrToken": "26271283",
+          "replacedSerialVoidedAt": "2026-09-25T07:54:27.142Z"
         },
         "1154219000037205001-1154219000037205007-1": {
           "machineUnitId": "1154219000037205001-1154219000037205007-1",
@@ -42847,7 +42874,7 @@
         "itemDescription": "",
         "importedAt": "2026-09-25T07:53:34.078Z",
         "importedBy": "admin@bsmindia.com",
-        "status": "available",
+        "status": "relocated",
         "audit": [
           {
             "at": "2026-09-25T07:53:34.078Z",
@@ -42861,8 +42888,106 @@
             "sourceSalesOrderNumber": "SO-07864",
             "sourceMachineId": "1154219000036259722-1154219000036259725-2",
             "serialNumber": "26271100"
+          },
+          {
+            "at": "2026-09-25T07:54:27.142Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "relocated",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259725-2",
+            "serialNumber": "26271100",
+            "targetOrderId": "1154219000037205001",
+            "targetSalesOrderNumber": "SO-07987",
+            "targetMachineId": "1154219000037205001-1154219000037205006-2",
+            "displacedDestinationSerial": "26271283",
+            "displacedDestinationQrToken": "26271283",
+            "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:27.142Z"
           }
-        ]
+        ],
+        "relocatedAt": "2026-09-25T07:54:27.142Z",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205006-2",
+        "relocationSnapshot": {
+          "sourceWorkflow": {
+            "machineUnitId": "1154219000036259722-1154219000036259725-2",
+            "lineItemId": "1154219000036259725",
+            "serialNumber": "26271100",
+            "qrToken": "26271100",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
+            "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
+            "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+            "processedAt": "2026-09-01T12:19:41.688Z",
+            "dispatchNote": "Local",
+            "vendor": "Able",
+            "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          },
+          "targetWorkflow": {
+            "machineUnitId": "1154219000037205001-1154219000037205006-2",
+            "lineItemId": "1154219000037205006",
+            "serialNumber": "26271283",
+            "qrToken": "26271283",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+            "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
+            "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          },
+          "sourceMachine": {
+            "id": "1154219000036259722-1154219000036259725-2",
+            "unitNumber": 2,
+            "serialNumber": "26271100",
+            "qrToken": "26271100",
+            "orderId": "1154219000036259722",
+            "lineItemId": "1154219000036259725",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07864",
+            "deliveryDate": "2026-09-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
+          },
+          "targetMachine": {
+            "id": "1154219000037205001-1154219000037205006-2",
+            "unitNumber": 5,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205006",
+            "itemName": "Hydraulic Sole Attaching machine",
+            "sku": "917",
+            "customerName": "Shree Balaji",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          "targetRetiredCount": 1
+        }
       },
       "1154219000036259722:1154219000036259722-1154219000036259726-1": {
         "id": "1154219000036259722:1154219000036259722-1154219000036259726-1",
@@ -43213,6 +43338,25 @@
         "displacedDestinationSerial": "26271282",
         "displacedDestinationQrToken": "26271282",
         "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:07.338Z"
+      },
+      {
+        "at": "2026-09-25T07:54:27.142Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "relocated",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259725-2",
+        "serialNumber": "26271100",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205006-2",
+        "displacedDestinationSerial": "26271283",
+        "displacedDestinationQrToken": "26271283",
+        "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:27.142Z"
       }
     ]
   }
