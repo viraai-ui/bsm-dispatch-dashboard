@@ -18,6 +18,7 @@ const nav: NavItem[] = [
 ]
 
 const utilityNav: NavItem[] = [
+  { label: 'Machine Reallocation', href: '/machine-reallocation' },
   { label: 'Wooden Packing', href: '/wooden-packing' },
   { label: 'Units Generator', href: '/units-generator' },
 ]
@@ -58,7 +59,7 @@ function ShellBody({ children, active }: { children: React.ReactNode; active: st
         {visibleNav.map((item) => <a className={`${item.label === active ? 'active' : ''} ${item.href === '/ready-to-ship' ? 'ready-nav-link' : ''}`} href={item.href} key={item.label}><span>{item.label}</span>{item.href === '/ready-to-ship' && readyCount !== null && <em className="ready-nav-count">{readyCount}</em>}</a>)}
       </nav>
       <div className="side-user">
-        {visibleUtilityNav.map((item) => <a className={`side-utility-link ${item.href === '/wooden-packing' ? 'wooden-utility-link' : ''} ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label}>{item.label}</a>)}
+        {visibleUtilityNav.map((item) => <a className={`side-utility-link ${item.href === '/wooden-packing' ? 'wooden-utility-link' : ''} ${item.href === '/machine-reallocation' ? 'reallocation-utility-link' : ''} ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label}>{item.label}</a>)}
         <div className="side-user-card">
           <div className="side-user-copy"><strong>{user.name || user.role}</strong><span>{user.email}</span></div>
           <button className="side-logout-icon" type="button" aria-label="Logout" title="Logout" onClick={logout}>

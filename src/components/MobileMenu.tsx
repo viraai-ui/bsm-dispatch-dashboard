@@ -45,7 +45,7 @@ export function MobileMenu({ nav, utilityNav = [], active, onLogout, readyCount 
           ))}
         </nav>
         {utilityNav.length > 0 && <nav className="drawer-utility-nav" aria-label="Mobile utility navigation">
-          {utilityNav.map((item) => <a className={`drawer-utility-link ${item.href === '/wooden-packing' ? 'wooden-utility-link' : ''} ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</a>)}
+          {utilityNav.map((item) => <a className={`drawer-utility-link ${item.href === '/wooden-packing' ? 'wooden-utility-link' : ''} ${item.href === '/machine-reallocation' ? 'reallocation-utility-link' : ''} ${item.label === active ? 'active' : ''}`} href={item.href} key={item.label} onClick={() => setOpen(false)}>{item.label}</a>)}
         </nav>}
         <button className="drawer-logout" type="button" onClick={() => { setOpen(false); void onLogout() }}>
           <span className="module-orb drawer-logout-icon" aria-hidden="true">

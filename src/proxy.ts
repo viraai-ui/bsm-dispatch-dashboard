@@ -7,7 +7,7 @@ const mediaOnly = '/media-proof'
 const databaseOnly = '/database'
 const accountsOnly = '/payments'
 const mediaAllowed = ['/media-proof']
-const protectedRoutes = ['/', '/orders', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/salesman-view', '/units-generator', '/payments']
+const protectedRoutes = ['/', '/orders', '/machine-reallocation', '/wooden-packing', '/packaging-tv', '/media-proof', '/ready-to-ship', '/loading-video', '/database', '/machine-lookup', '/settings', '/salesman-view', '/units-generator', '/payments']
 const explicitlyPublicRoutes = ['/submit-payment']
 
 function secretKey() {

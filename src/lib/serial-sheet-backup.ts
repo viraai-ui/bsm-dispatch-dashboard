@@ -369,6 +369,29 @@ async function appendSerialRows(rows: SerialSheetRecord[]) {
   })
 }
 
+async function replaceSerialRows(rows: SerialSheetRecord[]) {
+  if (!rows.length) return
+  const { worksheetName } = sheetConfig()
+  const content = await fetchWorksheetContent(worksheetName)
+  const headers = headerMapFromContent(content)
+  const serialColumn = headers.get(normalizeSheetKey('Serial No.')) || headers.get(normalizeSheetKey('Serial No'))
+  if (!serialColumn) throw new Error('Serial No. column not found in serial sheet')
+  const expected = new Map(rows.map(row => [String(row['Serial No.']).trim(), row]))
+  const replaced = new Set<string>()
+  for (const sheetRow of content) {
+    const rowIndex = Number(sheetRow.row_index); if (rowIndex <= 1) continue
+    const serial = String((sheetRow.row_details || []).find((cell: any) => Number(cell.column_index) === serialColumn)?.content || '').trim()
+    const replacement = expected.get(serial); if (!replacement) continue
+    for (const [header, value] of Object.entries(replacement)) {
+      if (header === 'S.No.') continue
+      const column = headers.get(normalizeSheetKey(header)); if (column) await setCellContent(worksheetName, rowIndex, column, String(value ?? ''))
+    }
+    replaced.add(serial)
+  }
+  const missing = rows.filter(row => !replaced.has(String(row['Serial No.']).trim()))
+  if (missing.length) await appendSerialRows(missing)
+}
+
 function requiredSheetFields(row: Record<string, unknown>) {
   return {
     serial: String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim(),
@@ -443,7 +466,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
   try {
     const workflows = await listWorkflows()
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
-    const entries: { workflowId: string; machineId: string; serial: string; order?: Order; machine?: MachineUnit; generatedAt: string }[] = []
+    const entries: { workflowId: string; machineId: string; serial: string; order?: Order; machine?: MachineUnit; generatedAt: string; replaceExisting: boolean }[] = []
     for (const workflow of Object.values(workflows)) {
       const order = workflow.processedOrder || synced.data.orders?.[workflow.salesOrderId]
       const orderMachinesById = new Map((order?.machines || []).map((machine) => [machine.id, machine]))
@@ -453,7 +476,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
         // stranded older pending/error entries forever after partial incidents.
         if (!serial || machineWorkflow.zohoBackupStatus === 'synced') continue
         const orderMachine = orderMachinesById.get(machineWorkflow.machineUnitId)
-        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, serial: String(machineWorkflow.serialNumber).trim(), order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: orderMachine ? { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } : undefined })
+        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, serial: String(machineWorkflow.serialNumber).trim(), order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: orderMachine ? { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } : undefined, replaceExisting: Boolean(machineWorkflow.zohoBackupReplaceExisting) })
       }
     }
     if (!entries.length) return result
@@ -463,22 +486,24 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
     const existing = new Set(records.map((row: any) => String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()).filter(Boolean))
     const wasExisting = new Set(existing)
     let nextSNo = nextSerialSheetNumber(records)
-    const rows: SerialSheetRecord[] = []
+    const rows: SerialSheetRecord[] = []; const replacements: SerialSheetRecord[] = []
     for (const entry of entries) {
-      if (existing.has(entry.serial)) continue
-      // Existing rows can always be acknowledged. Missing rows need the saved order snapshot
-      // to construct a non-empty, meaningful append; otherwise leave the item queued.
-      if (!entry.order || !entry.machine) continue
+      if (!entry.order || !entry.machine) continue // incomplete snapshots must remain queued
       const built = buildRows(entry.order, [entry.machine], entry.generatedAt, nextSNo)
-      rows.push(...built)
+      if (entry.replaceExisting) replacements.push(...built)
+      else if (!existing.has(entry.serial)) { rows.push(...built); existing.add(entry.serial) }
       nextSNo = String(Number(nextSNo) + built.length)
-      existing.add(entry.serial) // prevent duplicates within this batch
     }
+    if (replacements.length) await replaceSerialRows(replacements)
     if (rows.length) await appendSerialRows(rows)
-    const confirmed = new Set(wasExisting)
-    if (rows.length) {
+    const confirmed = new Set(Array.from(wasExisting).filter(serial => !entries.some(entry => entry.serial === serial && entry.replaceExisting)))
+    if (rows.length || replacements.length) {
       const after = await fetchSerialRecords()
-      for (const row of after) confirmed.add(String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim())
+      const expected = new Map([...rows, ...replacements].map(row => [String(row['Serial No.']).trim(), requiredSheetFields(row)]))
+      for (const row of after as Record<string, unknown>[]) {
+        const actual = requiredSheetFields(row); const wanted = expected.get(actual.serial)
+        if (wanted && actual.customer === wanted.customer && actual.address === wanted.address && actual.model === wanted.model && actual.dop.replace(/^'/, '') === wanted.dop.replace(/^'/, '')) confirmed.add(actual.serial)
+      }
     }
     const now = new Date().toISOString()
     const byWorkflow = new Map<string, typeof entries>()
@@ -491,7 +516,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
           const machine = machines[entry.machineId]
           if (!machine) continue
           const ok = confirmed.has(entry.serial)
-          machines[entry.machineId] = { ...machine, zohoBackupStatus: ok ? 'synced' : 'error', zohoBackupLastAttemptAt: now, zohoBackupSyncedAt: ok ? now : machine.zohoBackupSyncedAt, zohoBackupError: ok ? undefined : 'Zoho append did not verify; queued for retry' }
+          machines[entry.machineId] = { ...machine, zohoBackupStatus: ok ? 'synced' : 'error', zohoBackupLastAttemptAt: now, zohoBackupSyncedAt: ok ? now : machine.zohoBackupSyncedAt, zohoBackupError: ok ? undefined : 'Zoho Sheet update did not verify; queued for retry', zohoBackupReplaceExisting: ok ? false : machine.zohoBackupReplaceExisting }
           if (ok) wasExisting.has(entry.serial) ? result.skipped++ : result.synced++
         }
         return { ...current, machines }

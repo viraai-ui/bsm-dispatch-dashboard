@@ -29,6 +29,14 @@ export type MachineWorkflow = {
   zohoBackupSyncedAt?: string
   zohoBackupLastAttemptAt?: string
   zohoBackupError?: string
+  reallocatedFromMachineId?: string
+  reallocatedToMachineId?: string
+  reallocatedAt?: string
+  replacedSerialNumber?: string
+  replacedSerialQrToken?: string
+  replacedSerialVoidedAt?: string
+  /** Reconcile by replacing the existing Sheet row, not merely acknowledging its presence. */
+  zohoBackupReplaceExisting?: boolean
 }
 
 export type OrderWorkflow = {
