@@ -24209,6 +24209,101 @@
         "1154219000037325001-1154219000037325004-2",
         "1154219000037325001-1154219000037325004-3"
       ]
+    },
+    "1154219000034633005": {
+      "completedAt": "2026-09-25T04:54:37.610Z",
+      "order": {
+        "id": "1154219000034633005",
+        "zohoSalesOrderId": "1154219000034633005",
+        "salesOrderNumber": "SO-07560",
+        "status": "open",
+        "customerName": "THREE STAR FOOTWEARS",
+        "shippingAddress": "C-3 ROOP, COMPOUND SANWER ROAD INDUSTRIAL AREA, Sanwer, Indore, Madhya Pradesh, 453551, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-07-23",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000034633008",
+            "itemName": "Chiller (Conveyor type) (5 Ton)",
+            "sku": "Chiller 5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228340",
+            "rate": 245000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037358049",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225547",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000034633005-1154219000034633008-1",
+            "unitNumber": 1,
+            "serialNumber": "26271328",
+            "qrToken": "26271328",
+            "orderId": "1154219000034633005",
+            "lineItemId": "1154219000034633008",
+            "itemName": "Chiller (Conveyor type) (5 Ton)",
+            "sku": "Chiller 5",
+            "customerName": "THREE STAR FOOTWEARS",
+            "salesOrderNumber": "SO-07560",
+            "deliveryDate": "2026-07-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "GOOD WERAPPING"
+          },
+          {
+            "id": "1154219000034633005-1154219000037358049-1",
+            "unitNumber": 2,
+            "serialNumber": "26271329",
+            "qrToken": "26271329",
+            "orderId": "1154219000034633005",
+            "lineItemId": "1154219000037358049",
+            "itemName": "Steamer (6 nozzles) (SS body)",
+            "sku": "360",
+            "customerName": "THREE STAR FOOTWEARS",
+            "salesOrderNumber": "SO-07560",
+            "deliveryDate": "2026-07-23",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "GOOD WRAPPING"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T16:35:31+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000034633005-1154219000034633008-1",
+        "1154219000034633005-1154219000037358049-1"
+      ]
     }
   }
 }
