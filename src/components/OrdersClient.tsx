@@ -23,7 +23,6 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [active, setActive] = useState<Order | null>(null)
   const [activeStage, setActiveStage] = useState<OrderStage>('open')
   const [activeWorkflow, setActiveWorkflow] = useState<OrderWorkflow | null>(null)
-  const [loadingId, setLoadingId] = useState<string | null>(null)
   const [syncing, setSyncing] = useState(false)
   const syncingRef = useRef(false)
   const [error, setError] = useState('')
@@ -116,25 +115,12 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const orderStage = (order: Order) => stageByOrder[order.id] || (workflowByOrder[order.id]?.status === 'processed' ? 'processed' : 'open')
   const filteredOrders = useMemo(() => openOrders.filter((order) => statusFilter === 'all' || orderStage(order) === statusFilter), [openOrders, statusFilter, stageByOrder, workflowByOrder])
   const pending = (o: Order) => o.lineItems.length ? o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0) : '—'
-  const openOrder = async (order: Order) => {
+  const openOrder = (order: Order) => {
     setError('')
-    setLoadingId(order.id)
-    try {
-      const response = await fetch(`/api/orders/${order.zohoSalesOrderId || order.id}`, { cache: 'no-store' })
-      const json = await response.json()
-      if (!response.ok || !json.ok) throw new Error(json.error || 'Could not open order')
-      const orderData = json.data.order as Order
-      const workflowResponse = await fetch(`/api/workflow/orders/${orderData.id}`, { cache: 'no-store' })
-      const workflowJson = await workflowResponse.json()
-      const workflow = workflowJson.data?.workflow || null
-      setActiveWorkflow(workflow)
-      setActiveStage(json.data?.stage || json.data?.status?.lifecycleStage || stageByOrder[order.id] || stageByOrder[orderData.id] || (workflow?.status === 'processed' ? 'processed' : 'open'))
-      setActive(applyWorkflow(orderData, workflow))
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not open order')
-    } finally {
-      setLoadingId(null)
-    }
+    const workflow = workflowByOrder[order.id] || workflowByOrder[order.zohoSalesOrderId || ''] || null
+    setActiveWorkflow(workflow)
+    setActiveStage(stageByOrder[order.id] || (workflow?.status === 'processed' ? 'processed' : 'open'))
+    setActive(applyWorkflow(order, workflow))
   }
   return <>
     <section className="card orders-list-card">
@@ -148,8 +134,8 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       {syncing && <div className="machine-row compact"><span>Syncing in background</span><Badge>Live</Badge></div>}
       {notice && <div className="form-success">{notice}</div>}
       {error && <div className="form-error">{error}</div>}
-      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Payment</th><th>Action</th></tr></thead><tbody>{filteredOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></td><td><PaymentStatusChip status={paymentStatus(o)} />{!paymentStatus(o) && '—'}</td><td><button className="btn light" disabled={loadingId === o.id} onClick={() => openOrder(o)}>{loadingId === o.id ? 'Opening…' : 'View'}</button></td></tr>)}</tbody></table></div>
-      <div className="mobile-cards">{filteredOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="order-status-strip"><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge><PaymentStatusChip status={paymentStatus(o)} /></div></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" disabled={loadingId === o.id} onClick={(event) => { event.stopPropagation(); openOrder(o) }}>{loadingId === o.id ? 'Opening…' : 'View'}</button></div></article>)}</div>
+      <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Payment</th><th>Action</th></tr></thead><tbody>{filteredOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></td><td><PaymentStatusChip status={paymentStatus(o)} />{!paymentStatus(o) && '—'}</td><td><button className="btn light" onClick={() => openOrder(o)}>View</button></td></tr>)}</tbody></table></div>
+      <div className="mobile-cards">{filteredOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="order-status-strip"><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge><PaymentStatusChip status={paymentStatus(o)} /></div></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); openOrder(o) }}>View</button></div></article>)}</div>
     </section>
     {active && <OrderModal order={active} stage={activeStage} workflow={activeWorkflow} paymentStatus={paymentStatus(active)} canCancel={canCancel} onClose={() => setActive(null)} onSynced={(synced) => { setActive(synced); setRows((items) => { const next = items.map((item) => item.id === synced.id ? synced : item); cacheOrders(next); return next }) }} onCancelled={(cancelled) => { setRows((items) => { const next = items.filter((item) => item.id !== cancelled.id); cacheOrders(next); return next }); setActive(null); setNotice(`${cancelled.salesOrderNumber} removed from dashboard`) }} />}
   </>
