@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271335,
+  "serialCounter": 26271336,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -42807,6 +42807,70 @@
           "vendor": "Guru Dev",
           "zohoBackupLastAttemptAt": "2026-09-25T05:45:32.765Z",
           "zohoBackupSyncedAt": "2026-09-25T05:45:32.765Z"
+        }
+      }
+    },
+    "1154219000037367014": {
+      "salesOrderId": "1154219000037367014",
+      "salesOrderNumber": "SO-08027",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037367014",
+        "zohoSalesOrderId": "1154219000037367014",
+        "salesOrderNumber": "SO-08027",
+        "status": "open",
+        "customerName": "Sai Products And Grafiq Pvt. Ltd",
+        "shippingAddress": "Plot No. 186-187, Ecotech 1 Extension 1, Kasna,, Greater Noida, GB Nagar, Uttar Pradesh, 201310",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037367017",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277664",
+            "rate": 490000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037367014-1154219000037367017-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037367014",
+            "lineItemId": "1154219000037367017",
+            "itemName": "Beam Cutting Press (40 ton)",
+            "sku": "",
+            "customerName": "Sai Products And Grafiq Pvt. Ltd",
+            "salesOrderNumber": "SO-08027",
+            "deliveryDate": "2026-09-24",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T14:59:05+0530"
+      },
+      "machines": {
+        "1154219000037367014-1154219000037367017-1": {
+          "machineUnitId": "1154219000037367014-1154219000037367017-1",
+          "lineItemId": "1154219000037367017",
+          "serialNumber": "26271336",
+          "qrToken": "26271336",
+          "qrStatus": "pending"
         }
       }
     }
