@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271336,
+  "serialCounter": 26271337,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -42824,6 +42824,69 @@
           "qrGeneratedAt": "2026-09-25T08:05:38.226Z",
           "zohoBackupStatus": "pending",
           "zohoBackupQueuedAt": "2026-09-25T08:05:38.773Z"
+        }
+      }
+    },
+    "manual-so-08036": {
+      "salesOrderId": "manual-so-08036",
+      "salesOrderNumber": "SO-08036",
+      "status": "open",
+      "processedOrder": {
+        "id": "manual-so-08036",
+        "zohoSalesOrderId": "manual-so-08036",
+        "salesOrderNumber": "SO-08036",
+        "status": "open",
+        "customerName": "VISHAL",
+        "shippingAddress": "C/O Rajuram Bora, Room No. 8-A Yashwant Nagar No. 1, Shell Colony, Near Ashok Medical, Chembur, Kurla, Mumbai Suburban, Maharashtra 400071, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "manual-so-08036-line-1",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "rate": 29661,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "manual-so-08036-manual-so-08036-line-1-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "manual-so-08036",
+            "lineItemId": "manual-so-08036-line-1",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "",
+            "customerName": "VISHAL",
+            "salesOrderNumber": "SO-08036",
+            "deliveryDate": "2026-09-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T13:43:00+05:30"
+      },
+      "machines": {
+        "manual-so-08036-manual-so-08036-line-1-1": {
+          "machineUnitId": "manual-so-08036-manual-so-08036-line-1-1",
+          "lineItemId": "manual-so-08036-line-1",
+          "serialNumber": "26271337",
+          "qrToken": "26271337",
+          "qrStatus": "pending"
         }
       }
     }
