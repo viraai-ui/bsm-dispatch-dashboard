@@ -24411,6 +24411,65 @@
         "1154219000037316001-1154219000037316004-2",
         "1154219000037316001-1154219000037316004-3"
       ]
+    },
+    "1154219000037366002": {
+      "completedAt": "2026-09-25T04:55:13.498Z",
+      "order": {
+        "id": "1154219000037366002",
+        "zohoSalesOrderId": "1154219000037366002",
+        "salesOrderNumber": "SO-08024",
+        "status": "open",
+        "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+        "shippingAddress": "KH. 345, Sultanpur, MG Road,, New Delhi, Delhi, 110074, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037366005",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225871",
+            "rate": 32000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037366002-1154219000037366005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271324",
+            "qrToken": "26271324",
+            "orderId": "1154219000037366002",
+            "lineItemId": "1154219000037366005",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+            "salesOrderNumber": "SO-08024",
+            "deliveryDate": "2026-09-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T14:00:49+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037366002-1154219000037366005-1"
+      ]
     }
   }
 }
