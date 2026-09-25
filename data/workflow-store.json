@@ -21353,8 +21353,8 @@
           {
             "id": "1154219000036259722-1154219000036259727-1",
             "unitNumber": 4,
-            "serialNumber": "26271102",
-            "qrToken": "26271102",
+            "serialNumber": "",
+            "qrToken": "",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259727",
             "itemName": "De lasting Jack (hydraulic)",
@@ -21362,7 +21362,7 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "QR Generated",
+            "status": "Not Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -21371,7 +21371,8 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "vendor": "Able",
-            "dispatchNote": "Local"
+            "dispatchNote": "Local",
+            "sourceRemovedAt": "2026-09-25T07:55:12.818Z"
           },
           {
             "id": "1154219000036259722-1154219000036259728-1",
@@ -21449,10 +21450,7 @@
         "1154219000036259722-1154219000036259727-1": {
           "machineUnitId": "1154219000036259722-1154219000036259727-1",
           "lineItemId": "1154219000036259727",
-          "serialNumber": "26271102",
-          "qrToken": "26271102",
-          "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "qrStatus": "pending",
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
@@ -21460,7 +21458,9 @@
           "processedAt": "2026-09-01T12:19:41.688Z",
           "dispatchNote": "Local",
           "vendor": "Able",
-          "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          "dispatchedAt": "2026-09-02T12:36:53.473Z",
+          "reallocatedToMachineId": "1154219000037205001-1154219000037205008-1",
+          "reallocatedAt": "2026-09-25T07:55:12.818Z"
         },
         "1154219000036259722-1154219000036259728-1": {
           "machineUnitId": "1154219000036259722-1154219000036259728-1",
@@ -35101,8 +35101,8 @@
           {
             "id": "1154219000037205001-1154219000037205008-1",
             "unitNumber": 7,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271102",
+            "qrToken": "26271102",
             "orderId": "1154219000037205001",
             "lineItemId": "1154219000037205008",
             "itemName": "De lasting Jack (hydraulic)",
@@ -35110,7 +35110,7 @@
             "customerName": "Shree Balaji",
             "salesOrderNumber": "SO-07987",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -35187,6 +35187,28 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "sourceRemovedAt": "2026-09-25T07:54:57.717Z"
+          },
+          {
+            "id": "1154219000037205001-1154219000037205008-1",
+            "unitNumber": 7,
+            "serialNumber": "26271285",
+            "qrToken": "26271285",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205008",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "customerName": "Shri Balaji Enterprises - Bahadurgarh",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "sourceRemovedAt": "2026-09-25T07:55:12.818Z"
           }
         ]
       },
@@ -35281,14 +35303,19 @@
         "1154219000037205001-1154219000037205008-1": {
           "machineUnitId": "1154219000037205001-1154219000037205008-1",
           "lineItemId": "1154219000037205008",
-          "serialNumber": "26271285",
-          "qrToken": "26271285",
+          "serialNumber": "26271102",
+          "qrToken": "26271102",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-25T07:55:12.818Z",
           "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
-          "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          "zohoBackupReplaceExisting": true,
+          "reallocatedFromMachineId": "1154219000036259722-1154219000036259727-1",
+          "reallocatedAt": "2026-09-25T07:55:12.818Z",
+          "replacedSerialNumber": "26271285",
+          "replacedSerialQrToken": "26271285",
+          "replacedSerialVoidedAt": "2026-09-25T07:55:12.818Z"
         }
       }
     },
@@ -43157,7 +43184,7 @@
         "itemDescription": "",
         "importedAt": "2026-09-25T07:53:34.078Z",
         "importedBy": "admin@bsmindia.com",
-        "status": "available",
+        "status": "relocated",
         "audit": [
           {
             "at": "2026-09-25T07:53:34.078Z",
@@ -43171,8 +43198,106 @@
             "sourceSalesOrderNumber": "SO-07864",
             "sourceMachineId": "1154219000036259722-1154219000036259727-1",
             "serialNumber": "26271102"
+          },
+          {
+            "at": "2026-09-25T07:55:12.818Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "relocated",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259727-1",
+            "serialNumber": "26271102",
+            "targetOrderId": "1154219000037205001",
+            "targetSalesOrderNumber": "SO-07987",
+            "targetMachineId": "1154219000037205001-1154219000037205008-1",
+            "displacedDestinationSerial": "26271285",
+            "displacedDestinationQrToken": "26271285",
+            "displacedDestinationSerialVoidedAt": "2026-09-25T07:55:12.818Z"
           }
-        ]
+        ],
+        "relocatedAt": "2026-09-25T07:55:12.818Z",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205008-1",
+        "relocationSnapshot": {
+          "sourceWorkflow": {
+            "machineUnitId": "1154219000036259722-1154219000036259727-1",
+            "lineItemId": "1154219000036259727",
+            "serialNumber": "26271102",
+            "qrToken": "26271102",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
+            "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
+            "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+            "processedAt": "2026-09-01T12:19:41.688Z",
+            "dispatchNote": "Local",
+            "vendor": "Able",
+            "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          },
+          "targetWorkflow": {
+            "machineUnitId": "1154219000037205001-1154219000037205008-1",
+            "lineItemId": "1154219000037205008",
+            "serialNumber": "26271285",
+            "qrToken": "26271285",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+            "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
+            "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          },
+          "sourceMachine": {
+            "id": "1154219000036259722-1154219000036259727-1",
+            "unitNumber": 4,
+            "serialNumber": "26271102",
+            "qrToken": "26271102",
+            "orderId": "1154219000036259722",
+            "lineItemId": "1154219000036259727",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07864",
+            "deliveryDate": "2026-09-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
+          },
+          "targetMachine": {
+            "id": "1154219000037205001-1154219000037205008-1",
+            "unitNumber": 7,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205008",
+            "itemName": "De lasting Jack (hydraulic)",
+            "sku": "500",
+            "customerName": "Shree Balaji",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          "targetRetiredCount": 3
+        }
       },
       "1154219000036259722:1154219000036259722-1154219000036259728-1": {
         "id": "1154219000036259722:1154219000036259722-1154219000036259728-1",
@@ -43501,6 +43626,25 @@
         "displacedDestinationSerial": "26271279",
         "displacedDestinationQrToken": "26271279",
         "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:57.717Z"
+      },
+      {
+        "at": "2026-09-25T07:55:12.818Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "relocated",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259727-1",
+        "serialNumber": "26271102",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205008-1",
+        "displacedDestinationSerial": "26271285",
+        "displacedDestinationQrToken": "26271285",
+        "displacedDestinationSerialVoidedAt": "2026-09-25T07:55:12.818Z"
       }
     ]
   }
