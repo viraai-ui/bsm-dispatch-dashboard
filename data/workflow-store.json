@@ -21329,8 +21329,8 @@
           {
             "id": "1154219000036259722-1154219000036259726-1",
             "unitNumber": 3,
-            "serialNumber": "26271101",
-            "qrToken": "26271101",
+            "serialNumber": "",
+            "qrToken": "",
             "orderId": "1154219000036259722",
             "lineItemId": "1154219000036259726",
             "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
@@ -21338,7 +21338,7 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-07864",
             "deliveryDate": "2026-09-01",
-            "status": "QR Generated",
+            "status": "Not Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -21347,7 +21347,8 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "vendor": "Able",
-            "dispatchNote": "Local"
+            "dispatchNote": "Local",
+            "sourceRemovedAt": "2026-09-25T07:54:57.717Z"
           },
           {
             "id": "1154219000036259722-1154219000036259727-1",
@@ -21433,10 +21434,7 @@
         "1154219000036259722-1154219000036259726-1": {
           "machineUnitId": "1154219000036259722-1154219000036259726-1",
           "lineItemId": "1154219000036259726",
-          "serialNumber": "26271101",
-          "qrToken": "26271101",
-          "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "qrStatus": "pending",
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
           "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
@@ -21444,7 +21442,9 @@
           "processedAt": "2026-09-01T12:19:41.688Z",
           "dispatchNote": "Local",
           "vendor": "Able",
-          "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          "dispatchedAt": "2026-09-02T12:36:53.473Z",
+          "reallocatedToMachineId": "1154219000037205001-1154219000037205004-1",
+          "reallocatedAt": "2026-09-25T07:54:57.717Z"
         },
         "1154219000036259722-1154219000036259727-1": {
           "machineUnitId": "1154219000036259722-1154219000036259727-1",
@@ -34975,8 +34975,8 @@
           {
             "id": "1154219000037205001-1154219000037205004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271101",
+            "qrToken": "26271101",
             "orderId": "1154219000037205001",
             "lineItemId": "1154219000037205004",
             "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
@@ -34984,7 +34984,7 @@
             "customerName": "Shree Balaji",
             "salesOrderNumber": "SO-07987",
             "deliveryDate": "2026-09-19",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -35165,6 +35165,28 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "sourceRemovedAt": "2026-09-25T07:54:27.142Z"
+          },
+          {
+            "id": "1154219000037205001-1154219000037205004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271279",
+            "qrToken": "26271279",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205004",
+            "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+            "sku": "600D",
+            "customerName": "Shri Balaji Enterprises - Bahadurgarh",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "sourceRemovedAt": "2026-09-25T07:54:57.717Z"
           }
         ]
       },
@@ -35172,14 +35194,19 @@
         "1154219000037205001-1154219000037205004-1": {
           "machineUnitId": "1154219000037205001-1154219000037205004-1",
           "lineItemId": "1154219000037205004",
-          "serialNumber": "26271279",
-          "qrToken": "26271279",
+          "serialNumber": "26271101",
+          "qrToken": "26271101",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+          "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-25T07:54:57.717Z",
           "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
-          "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          "zohoBackupReplaceExisting": true,
+          "reallocatedFromMachineId": "1154219000036259722-1154219000036259726-1",
+          "reallocatedAt": "2026-09-25T07:54:57.717Z",
+          "replacedSerialNumber": "26271279",
+          "replacedSerialQrToken": "26271279",
+          "replacedSerialVoidedAt": "2026-09-25T07:54:57.717Z"
         },
         "1154219000037205001-1154219000037205004-2": {
           "machineUnitId": "1154219000037205001-1154219000037205004-2",
@@ -43002,7 +43029,7 @@
         "itemDescription": "",
         "importedAt": "2026-09-25T07:53:34.078Z",
         "importedBy": "admin@bsmindia.com",
-        "status": "available",
+        "status": "relocated",
         "audit": [
           {
             "at": "2026-09-25T07:53:34.078Z",
@@ -43016,8 +43043,106 @@
             "sourceSalesOrderNumber": "SO-07864",
             "sourceMachineId": "1154219000036259722-1154219000036259726-1",
             "serialNumber": "26271101"
+          },
+          {
+            "at": "2026-09-25T07:54:57.717Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "relocated",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259726-1",
+            "serialNumber": "26271101",
+            "targetOrderId": "1154219000037205001",
+            "targetSalesOrderNumber": "SO-07987",
+            "targetMachineId": "1154219000037205001-1154219000037205004-1",
+            "displacedDestinationSerial": "26271279",
+            "displacedDestinationQrToken": "26271279",
+            "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:57.717Z"
           }
-        ]
+        ],
+        "relocatedAt": "2026-09-25T07:54:57.717Z",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205004-1",
+        "relocationSnapshot": {
+          "sourceWorkflow": {
+            "machineUnitId": "1154219000036259722-1154219000036259726-1",
+            "lineItemId": "1154219000036259726",
+            "serialNumber": "26271101",
+            "qrToken": "26271101",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-01T12:08:49.586Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-01T12:08:51.182Z",
+            "zohoBackupLastAttemptAt": "2026-09-01T12:15:32.428Z",
+            "zohoBackupSyncedAt": "2026-09-01T12:15:32.428Z",
+            "processedAt": "2026-09-01T12:19:41.688Z",
+            "dispatchNote": "Local",
+            "vendor": "Able",
+            "dispatchedAt": "2026-09-02T12:36:53.473Z"
+          },
+          "targetWorkflow": {
+            "machineUnitId": "1154219000037205001-1154219000037205004-1",
+            "lineItemId": "1154219000037205004",
+            "serialNumber": "26271279",
+            "qrToken": "26271279",
+            "qrStatus": "generated",
+            "qrGeneratedAt": "2026-09-21T07:34:26.114Z",
+            "zohoBackupStatus": "synced",
+            "zohoBackupQueuedAt": "2026-09-21T07:34:27.109Z",
+            "zohoBackupLastAttemptAt": "2026-09-21T07:45:33.302Z",
+            "zohoBackupSyncedAt": "2026-09-21T07:45:33.302Z"
+          },
+          "sourceMachine": {
+            "id": "1154219000036259722-1154219000036259726-1",
+            "unitNumber": 3,
+            "serialNumber": "26271101",
+            "qrToken": "26271101",
+            "orderId": "1154219000036259722",
+            "lineItemId": "1154219000036259726",
+            "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+            "sku": "600D",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-07864",
+            "deliveryDate": "2026-09-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
+          },
+          "targetMachine": {
+            "id": "1154219000037205001-1154219000037205004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037205001",
+            "lineItemId": "1154219000037205004",
+            "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+            "sku": "600D",
+            "customerName": "Shree Balaji",
+            "salesOrderNumber": "SO-07987",
+            "deliveryDate": "2026-09-19",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          "targetRetiredCount": 2
+        }
       },
       "1154219000036259722:1154219000036259722-1154219000036259727-1": {
         "id": "1154219000036259722:1154219000036259722-1154219000036259727-1",
@@ -43357,6 +43482,25 @@
         "displacedDestinationSerial": "26271283",
         "displacedDestinationQrToken": "26271283",
         "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:27.142Z"
+      },
+      {
+        "at": "2026-09-25T07:54:57.717Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "relocated",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259726-1",
+        "serialNumber": "26271101",
+        "targetOrderId": "1154219000037205001",
+        "targetSalesOrderNumber": "SO-07987",
+        "targetMachineId": "1154219000037205001-1154219000037205004-1",
+        "displacedDestinationSerial": "26271279",
+        "displacedDestinationQrToken": "26271279",
+        "displacedDestinationSerialVoidedAt": "2026-09-25T07:54:57.717Z"
       }
     ]
   }
