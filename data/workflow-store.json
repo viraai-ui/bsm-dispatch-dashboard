@@ -42830,7 +42830,7 @@
     "manual-so-08036": {
       "salesOrderId": "manual-so-08036",
       "salesOrderNumber": "SO-08036",
-      "status": "open",
+      "status": "qr_generated",
       "processedOrder": {
         "id": "manual-so-08036",
         "zohoSalesOrderId": "manual-so-08036",
@@ -42886,7 +42886,10 @@
           "lineItemId": "manual-so-08036-line-1",
           "serialNumber": "26271337",
           "qrToken": "26271337",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-25T12:39:24.928Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-25T12:39:25.658Z"
         }
       }
     }
