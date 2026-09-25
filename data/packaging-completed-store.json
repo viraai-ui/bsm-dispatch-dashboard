@@ -24304,6 +24304,113 @@
         "1154219000034633005-1154219000034633008-1",
         "1154219000034633005-1154219000037358049-1"
       ]
+    },
+    "1154219000037316001": {
+      "completedAt": "2026-09-25T04:54:53.258Z",
+      "order": {
+        "id": "1154219000037316001",
+        "zohoSalesOrderId": "1154219000037316001",
+        "salesOrderNumber": "SO-08014",
+        "status": "open",
+        "customerName": "EARTH DEFENCE SYSTEM",
+        "shippingAddress": "KHEWAT NO. 175 KHATONI NO. 241 KHASRA NO. 28/11/1/1 2-11, EARTH DEFENCE SYSTEM, KHEWAT NO. 183 KHATONI NO. 251 KHASRA NO. 28/11/1/2 1-0, Old Saharanpur Road, NEAR YAMUNA CANAL BRIDGE, VILL. PARWALO, Yamunanagar,, Yamunanagar, Haryana, 135001, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "Machine Set 26 no folder",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 34921,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037316001-1154219000037316004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271321",
+            "qrToken": "26271321",
+            "orderId": "1154219000037316001",
+            "lineItemId": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "EARTH DEFENCE SYSTEM",
+            "salesOrderNumber": "SO-08014",
+            "deliveryDate": "2026-09-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Machine Set 26 no folder",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "GOOD WRAPPING"
+          },
+          {
+            "id": "1154219000037316001-1154219000037316004-2",
+            "unitNumber": 2,
+            "serialNumber": "26271322",
+            "qrToken": "26271322",
+            "orderId": "1154219000037316001",
+            "lineItemId": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "EARTH DEFENCE SYSTEM",
+            "salesOrderNumber": "SO-08014",
+            "deliveryDate": "2026-09-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Machine Set 26 no folder",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "GOOD WRAPPING"
+          },
+          {
+            "id": "1154219000037316001-1154219000037316004-3",
+            "unitNumber": 3,
+            "serialNumber": "26271323",
+            "qrToken": "26271323",
+            "orderId": "1154219000037316001",
+            "lineItemId": "1154219000037316004",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "EARTH DEFENCE SYSTEM",
+            "salesOrderNumber": "SO-08014",
+            "deliveryDate": "2026-09-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Machine Set 26 no folder",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "GOOD WRAPPING"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T13:22:06+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037316001-1154219000037316004-1",
+        "1154219000037316001-1154219000037316004-2",
+        "1154219000037316001-1154219000037316004-3"
+      ]
     }
   }
 }
