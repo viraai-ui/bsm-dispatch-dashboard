@@ -42676,8 +42676,166 @@
     }
   },
   "machineReallocation": {
-    "rows": {},
-    "importedOrders": {},
+    "rows": {
+      "1154219000036259722:1154219000036259722-1154219000036259725-1": {
+        "id": "1154219000036259722:1154219000036259722-1154219000036259725-1",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceCustomerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "sourceMachineId": "1154219000036259722-1154219000036259725-1",
+        "serialNumber": "26271099",
+        "qrToken": "26271099",
+        "itemName": "Hydraulic Sole Attaching machine",
+        "sku": "917",
+        "itemDescription": "",
+        "importedAt": "2026-09-25T07:53:34.078Z",
+        "importedBy": "admin@bsmindia.com",
+        "status": "available",
+        "audit": [
+          {
+            "at": "2026-09-25T07:53:34.078Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "imported",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259725-1",
+            "serialNumber": "26271099"
+          }
+        ]
+      },
+      "1154219000036259722:1154219000036259722-1154219000036259725-2": {
+        "id": "1154219000036259722:1154219000036259722-1154219000036259725-2",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceCustomerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "sourceMachineId": "1154219000036259722-1154219000036259725-2",
+        "serialNumber": "26271100",
+        "qrToken": "26271100",
+        "itemName": "Hydraulic Sole Attaching machine",
+        "sku": "917",
+        "itemDescription": "",
+        "importedAt": "2026-09-25T07:53:34.078Z",
+        "importedBy": "admin@bsmindia.com",
+        "status": "available",
+        "audit": [
+          {
+            "at": "2026-09-25T07:53:34.078Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "imported",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259725-2",
+            "serialNumber": "26271100"
+          }
+        ]
+      },
+      "1154219000036259722:1154219000036259722-1154219000036259726-1": {
+        "id": "1154219000036259722:1154219000036259722-1154219000036259726-1",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceCustomerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "sourceMachineId": "1154219000036259722-1154219000036259726-1",
+        "serialNumber": "26271101",
+        "qrToken": "26271101",
+        "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
+        "sku": "600D",
+        "itemDescription": "",
+        "importedAt": "2026-09-25T07:53:34.078Z",
+        "importedBy": "admin@bsmindia.com",
+        "status": "available",
+        "audit": [
+          {
+            "at": "2026-09-25T07:53:34.078Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "imported",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259726-1",
+            "serialNumber": "26271101"
+          }
+        ]
+      },
+      "1154219000036259722:1154219000036259722-1154219000036259727-1": {
+        "id": "1154219000036259722:1154219000036259722-1154219000036259727-1",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceCustomerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "sourceMachineId": "1154219000036259722-1154219000036259727-1",
+        "serialNumber": "26271102",
+        "qrToken": "26271102",
+        "itemName": "De lasting Jack (hydraulic)",
+        "sku": "500",
+        "itemDescription": "",
+        "importedAt": "2026-09-25T07:53:34.078Z",
+        "importedBy": "admin@bsmindia.com",
+        "status": "available",
+        "audit": [
+          {
+            "at": "2026-09-25T07:53:34.078Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "imported",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259727-1",
+            "serialNumber": "26271102"
+          }
+        ]
+      },
+      "1154219000036259722:1154219000036259722-1154219000036259728-1": {
+        "id": "1154219000036259722:1154219000036259722-1154219000036259728-1",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceCustomerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "sourceMachineId": "1154219000036259722-1154219000036259728-1",
+        "serialNumber": "26271103",
+        "qrToken": "26271103",
+        "itemName": "Seat lasting Machine",
+        "sku": "727",
+        "itemDescription": "",
+        "importedAt": "2026-09-25T07:53:34.078Z",
+        "importedBy": "admin@bsmindia.com",
+        "status": "available",
+        "audit": [
+          {
+            "at": "2026-09-25T07:53:34.078Z",
+            "actor": {
+              "id": "u-admin",
+              "name": "Admin",
+              "email": "admin@bsmindia.com"
+            },
+            "action": "imported",
+            "sourceOrderId": "1154219000036259722",
+            "sourceSalesOrderNumber": "SO-07864",
+            "sourceMachineId": "1154219000036259722-1154219000036259728-1",
+            "serialNumber": "26271103"
+          }
+        ]
+      }
+    },
+    "importedOrders": {
+      "1154219000036259722": {
+        "orderId": "1154219000036259722",
+        "salesOrderNumber": "SO-07864",
+        "importedAt": "2026-09-25T07:53:34.078Z",
+        "importedBy": "admin@bsmindia.com"
+      }
+    },
     "audit": [
       {
         "at": "2026-09-24T17:58:58.153Z",
@@ -42840,6 +42998,71 @@
           "email": "admin@bsmindia.com"
         },
         "action": "cancelled",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259728-1",
+        "serialNumber": "26271103"
+      },
+      {
+        "at": "2026-09-25T07:53:34.078Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "imported",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259725-1",
+        "serialNumber": "26271099"
+      },
+      {
+        "at": "2026-09-25T07:53:34.078Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "imported",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259725-2",
+        "serialNumber": "26271100"
+      },
+      {
+        "at": "2026-09-25T07:53:34.078Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "imported",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259726-1",
+        "serialNumber": "26271101"
+      },
+      {
+        "at": "2026-09-25T07:53:34.078Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "imported",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259727-1",
+        "serialNumber": "26271102"
+      },
+      {
+        "at": "2026-09-25T07:53:34.078Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "imported",
         "sourceOrderId": "1154219000036259722",
         "sourceSalesOrderNumber": "SO-07864",
         "sourceMachineId": "1154219000036259722-1154219000036259728-1",
