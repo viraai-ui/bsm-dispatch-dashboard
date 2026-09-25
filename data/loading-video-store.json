@@ -718,51 +718,13 @@
       "orderId": "1154219000036072023",
       "salesOrderNumber": "SO-07828",
       "submittedAt": "2026-09-03T05:39:37.479Z",
-      "units": {
-        "loading-order": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "loading-order-video-1788413961590-1bohb8",
-              "name": "video_20260903_110856.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Floading%2F2026-09-03%2FSO-07828%2Floading-order%2FLoading-Video-2026-09-03T05-39-13-985Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/loading/2026-09-03/SO-07828/loading-order/Loading-Video-2026-09-03T05-39-13-985Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-03T05:39:21.590Z",
-              "expiresAt": "2026-09-24T05:39:21.590Z"
-            }
-          ]
-        }
-      }
+      "units": {}
     },
     "1154219000036384021": {
       "orderId": "1154219000036384021",
       "salesOrderNumber": "SO-07874",
       "submittedAt": "2026-09-03T07:33:40.514Z",
-      "units": {
-        "loading-order": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "loading-order-video-1788420809990-afhirr",
-              "name": "video_20260903_130255.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Floading%2F2026-09-03%2FSO-07874%2Floading-order%2FLoading-Video-2026-09-03T07-33-21-475Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/loading/2026-09-03/SO-07874/loading-order/Loading-Video-2026-09-03T07-33-21-475Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-03T07:33:29.990Z",
-              "expiresAt": "2026-09-24T07:33:29.990Z"
-            }
-          ]
-        }
-      }
+      "units": {}
     },
     "1154219000036433003": {
       "orderId": "1154219000036433003",
