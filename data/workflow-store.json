@@ -42332,7 +42332,9 @@
     "1154219000037372003": {
       "salesOrderId": "1154219000037372003",
       "salesOrderNumber": "SO-08033",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-25T05:28:20.987Z",
       "processedOrder": {
         "id": "1154219000037372003",
         "zohoSalesOrderId": "1154219000037372003",
@@ -42386,8 +42388,8 @@
           {
             "id": "1154219000037372003-1154219000037372006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271331",
+            "qrToken": "26271331",
             "orderId": "1154219000037372003",
             "lineItemId": "1154219000037372006",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -42395,20 +42397,23 @@
             "customerName": "Mata Bala Sundari Enterprises",
             "salesOrderNumber": "SO-08033",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "vendor": "Able",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037372003-1154219000037372007-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271332",
+            "qrToken": "26271332",
             "orderId": "1154219000037372003",
             "lineItemId": "1154219000037372007",
             "itemName": "Compressor (2 Hp)",
@@ -42416,14 +42421,17 @@
             "customerName": "Mata Bala Sundari Enterprises",
             "salesOrderNumber": "SO-08033",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "vendor": "S P Nanda",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-25T10:47:34+0530"
@@ -42437,7 +42445,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T05:26:01.933Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-25T05:26:01.987Z"
+          "zohoBackupQueuedAt": "2026-09-25T05:26:01.987Z",
+          "processedAt": "2026-09-25T05:28:20.987Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Able"
         },
         "1154219000037372003-1154219000037372007-1": {
           "machineUnitId": "1154219000037372003-1154219000037372007-1",
@@ -42447,7 +42458,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T05:26:01.933Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-25T05:26:01.987Z"
+          "zohoBackupQueuedAt": "2026-09-25T05:26:01.987Z",
+          "processedAt": "2026-09-25T05:28:20.987Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "S P Nanda"
         }
       }
     }
