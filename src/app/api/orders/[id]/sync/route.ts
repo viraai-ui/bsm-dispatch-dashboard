@@ -2,6 +2,9 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { syncSingleOrder } from '@/lib/synced-orders'
 
+export const runtime = 'nodejs'
+export const maxDuration = 120
+
 export async function POST(_request: Request, { params }: { params: Promise<{ id: string }> }) {
   const auth = await requireUser(['Admin', 'Operations'])
   if (!auth.ok) return auth.response

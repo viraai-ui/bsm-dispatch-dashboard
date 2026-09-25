@@ -20,6 +20,21 @@ export async function getZohoAccessToken() {
   return pendingAccessToken
 }
 
+const TOKEN_REFRESH_ATTEMPTS = 4
+const TOKEN_REFRESH_BACKOFF_MS = [2_000, 5_000, 10_000]
+
+function tokenRefreshThrottle(response: Response, data: any) {
+  const detail = `${data?.error || ''} ${data?.error_description || ''}`
+  return response.status === 429 || /too many requests|continuously|rate limit|throttl/i.test(detail)
+}
+
+function tokenRefreshDelay(response: Response, attempt: number) {
+  const retryAfterHeader = response.headers.get('retry-after')
+  const retryAfter = retryAfterHeader === null ? Number.NaN : Number(retryAfterHeader)
+  if (Number.isFinite(retryAfter) && retryAfter >= 0) return Math.min(30_000, retryAfter * 1_000)
+  return TOKEN_REFRESH_BACKOFF_MS[attempt] || TOKEN_REFRESH_BACKOFF_MS.at(-1)!
+}
+
 async function refreshAccessToken() {
   const body = new URLSearchParams({
     refresh_token: process.env.ZOHO_REFRESH_TOKEN!,
@@ -27,11 +42,23 @@ async function refreshAccessToken() {
     client_secret: process.env.ZOHO_CLIENT_SECRET!,
     grant_type: 'refresh_token',
   })
-  const response = await fetch(`${accountsDomain}/oauth/v2/token`, { method: 'POST', body, cache: 'no-store' })
-  const data = await response.json()
-  if (!response.ok || !data.access_token) throw new Error(data.error || 'Unable to refresh Zoho token')
-  cachedAccessToken = { token: data.access_token as string, expiresAt: Date.now() + Number(data.expires_in || 3600) * 1000 }
-  return cachedAccessToken.token
+  let throttled = false
+  for (let attempt = 0; attempt < TOKEN_REFRESH_ATTEMPTS; attempt += 1) {
+    const response = await fetch(`${accountsDomain}/oauth/v2/token`, { method: 'POST', body, cache: 'no-store' })
+    const data = await response.json().catch(() => ({}))
+    if (response.ok && data.access_token) {
+      const expiresIn = Number(data.expires_in)
+      cachedAccessToken = { token: String(data.access_token), expiresAt: Date.now() + (Number.isFinite(expiresIn) && expiresIn > 0 ? expiresIn : 3600) * 1000 }
+      return cachedAccessToken.token
+    }
+    throttled = tokenRefreshThrottle(response, data)
+    if (!throttled || attempt === TOKEN_REFRESH_ATTEMPTS - 1) {
+      if (throttled) throw new Error('Zoho is temporarily rate limiting access. Please retry shortly.')
+      throw new Error(data.error_description || data.error || 'Unable to refresh Zoho token')
+    }
+    await new Promise((resolve) => setTimeout(resolve, tokenRefreshDelay(response, attempt)))
+  }
+  throw new Error('Zoho is temporarily rate limiting access. Please retry shortly.')
 }
 
 async function zohoGet(path: string, token: string) {
@@ -43,12 +70,16 @@ async function zohoGet(path: string, token: string) {
   return data
 }
 
-async function zohoGetWithRetry(path: string, token: string, retries = 3) {
+async function zohoGetWithRetry(path: string, token: string, retries = 4) {
   let lastError: unknown
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try { return await zohoGet(path, token) } catch (error) {
       lastError = error
-      if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, attempt * 800))
+      if (attempt < retries) {
+        const message = error instanceof Error ? error.message : String(error)
+        const rateLimited = /exceeded the maximum number of requests|too many requests|rate limit|blocked for some time/i.test(message)
+        await new Promise((resolve) => setTimeout(resolve, rateLimited ? attempt * 10_000 : attempt * 800))
+      }
     }
   }
   throw lastError instanceof Error ? lastError : new Error(`Zoho request failed: ${path}`)
@@ -294,12 +325,13 @@ export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   return fetchZohoOrderDetailsInBatches(confirmed.map((summary) => String(summary.salesorder_id)), token)
 }
 
-async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 8): Promise<Order[]> {
+async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 2): Promise<Order[]> {
   const detailed: Order[] = []
   for (let index = 0; index < ids.length; index += batchSize) {
     const batch = ids.slice(index, index + batchSize)
     const orders = await Promise.all(batch.map((id) => fetchZohoOrderDetailWithToken(id, token)))
     detailed.push(...orders)
+    if (index + batchSize < ids.length) await new Promise((resolve) => setTimeout(resolve, 2_000))
   }
   return detailed
 }
