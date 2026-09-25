@@ -42472,7 +42472,9 @@
     "1154219000037357008": {
       "salesOrderId": "1154219000037357008",
       "salesOrderNumber": "SO-08032",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-25T05:31:36.781Z",
       "processedOrder": {
         "id": "1154219000037357008",
         "zohoSalesOrderId": "1154219000037357008",
@@ -42514,8 +42516,8 @@
           {
             "id": "1154219000037357008-1154219000037357011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271333",
+            "qrToken": "26271333",
             "orderId": "1154219000037357008",
             "lineItemId": "1154219000037357011",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -42523,20 +42525,23 @@
             "customerName": "AMBEY ENTERPRISES",
             "salesOrderNumber": "SO-08032",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           },
           {
             "id": "1154219000037357008-1154219000037357012-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271334",
+            "qrToken": "26271334",
             "orderId": "1154219000037357008",
             "lineItemId": "1154219000037357012",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -42544,14 +42549,17 @@
             "customerName": "AMBEY ENTERPRISES",
             "salesOrderNumber": "SO-08032",
             "deliveryDate": "2026-09-24",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "vendor": "Ishu",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-25T10:58:46+0530"
@@ -42565,7 +42573,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T05:30:44.610Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-25T05:30:44.674Z"
+          "zohoBackupQueuedAt": "2026-09-25T05:30:44.674Z",
+          "processedAt": "2026-09-25T05:31:36.781Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         },
         "1154219000037357008-1154219000037357012-1": {
           "machineUnitId": "1154219000037357008-1154219000037357012-1",
@@ -42575,7 +42586,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T05:30:44.610Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-25T05:30:44.674Z"
+          "zohoBackupQueuedAt": "2026-09-25T05:30:44.674Z",
+          "processedAt": "2026-09-25T05:31:36.781Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Ishu"
         }
       }
     }
