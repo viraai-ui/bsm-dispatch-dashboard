@@ -42830,7 +42830,9 @@
     "manual-so-08036": {
       "salesOrderId": "manual-so-08036",
       "salesOrderNumber": "SO-08036",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-25T12:40:56.498Z",
       "processedOrder": {
         "id": "manual-so-08036",
         "zohoSalesOrderId": "manual-so-08036",
@@ -42859,8 +42861,8 @@
           {
             "id": "manual-so-08036-manual-so-08036-line-1-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271337",
+            "qrToken": "26271337",
             "orderId": "manual-so-08036",
             "lineItemId": "manual-so-08036-line-1",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -42868,14 +42870,17 @@
             "customerName": "VISHAL",
             "salesOrderNumber": "SO-08036",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-25T13:43:00+05:30"
@@ -42889,7 +42894,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T12:39:24.928Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-25T12:39:25.658Z"
+          "zohoBackupQueuedAt": "2026-09-25T12:39:25.658Z",
+          "processedAt": "2026-09-25T12:40:56.498Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
