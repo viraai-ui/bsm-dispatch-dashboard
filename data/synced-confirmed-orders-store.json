@@ -95,6 +95,89 @@
       ],
       "zohoLastModifiedTime": "2026-09-25T10:47:34+0530"
     },
+    "1154219000037357008": {
+      "id": "1154219000037357008",
+      "zohoSalesOrderId": "1154219000037357008",
+      "salesOrderNumber": "SO-08032",
+      "status": "open",
+      "customerName": "AMBEY ENTERPRISES",
+      "shippingAddress": "FIRST FLOOR, PROPERTY NO. G2, OLD NO.-1, KH. NO.-2/21, NEAR PEER BABA, Adhyapak Nagar, New Delhi, West Delhi, Delhi,, 110041",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-24",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037357011",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000280682",
+          "rate": 28500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037357012",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000278601",
+          "rate": 20000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037357008-1154219000037357011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037357008",
+          "lineItemId": "1154219000037357011",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "AMBEY ENTERPRISES",
+          "salesOrderNumber": "SO-08032",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037357008-1154219000037357012-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037357008",
+          "lineItemId": "1154219000037357012",
+          "itemName": "Manual Fusing Machine (16*24 inches)",
+          "sku": "38-2",
+          "customerName": "AMBEY ENTERPRISES",
+          "salesOrderNumber": "SO-08032",
+          "deliveryDate": "2026-09-24",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-25T10:58:46+0530"
+    },
     "1154219000037373003": {
       "id": "1154219000037373003",
       "zohoSalesOrderId": "1154219000037373003",
@@ -7926,6 +8009,7 @@
   },
   "orderIds": [
     "1154219000037372003",
+    "1154219000037357008",
     "1154219000037373003",
     "1154219000037367014",
     "1154219000037346057",
@@ -7982,8 +8066,8 @@
     "1154219000031446006",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-25T05:22:54.906Z",
-  "lastAttemptAt": "2026-09-25T05:28:54.920Z",
+  "lastSuccessfulSyncAt": "2026-09-25T05:29:10.546Z",
+  "lastAttemptAt": "2026-09-25T05:29:10.546Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
