@@ -42677,36 +42677,6 @@
   },
   "machineReallocation": {
     "rows": {
-      "1154219000036259722:1154219000036259722-1154219000036259726-1": {
-        "id": "1154219000036259722:1154219000036259722-1154219000036259726-1",
-        "sourceOrderId": "1154219000036259722",
-        "sourceSalesOrderNumber": "SO-07864",
-        "sourceCustomerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
-        "sourceMachineId": "1154219000036259722-1154219000036259726-1",
-        "serialNumber": "26271101",
-        "qrToken": "26271101",
-        "itemName": "Strobel Sewing machine (With Rechard Set) [High Speed]",
-        "sku": "600D",
-        "itemDescription": "",
-        "importedAt": "2026-09-24T17:58:58.153Z",
-        "importedBy": "admin@bsmindia.com",
-        "status": "available",
-        "audit": [
-          {
-            "at": "2026-09-24T17:58:58.153Z",
-            "actor": {
-              "id": "u-admin",
-              "name": "Admin",
-              "email": "admin@bsmindia.com"
-            },
-            "action": "imported",
-            "sourceOrderId": "1154219000036259722",
-            "sourceSalesOrderNumber": "SO-07864",
-            "sourceMachineId": "1154219000036259722-1154219000036259726-1",
-            "serialNumber": "26271101"
-          }
-        ]
-      },
       "1154219000036259722:1154219000036259722-1154219000036259727-1": {
         "id": "1154219000036259722:1154219000036259722-1154219000036259727-1",
         "sourceOrderId": "1154219000036259722",
@@ -42903,6 +42873,19 @@
         "sourceSalesOrderNumber": "SO-07864",
         "sourceMachineId": "1154219000036259722-1154219000036259725-2",
         "serialNumber": "26271100"
+      },
+      {
+        "at": "2026-09-25T07:52:40.278Z",
+        "actor": {
+          "id": "u-admin",
+          "name": "Admin",
+          "email": "admin@bsmindia.com"
+        },
+        "action": "cancelled",
+        "sourceOrderId": "1154219000036259722",
+        "sourceSalesOrderNumber": "SO-07864",
+        "sourceMachineId": "1154219000036259722-1154219000036259726-1",
+        "serialNumber": "26271101"
       }
     ]
   }
