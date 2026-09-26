@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271346,
+  "serialCounter": 26271347,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -43460,6 +43460,70 @@
           "processedAt": "2026-09-26T06:43:48.799Z",
           "dispatchNote": "LOCAL",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000037378005": {
+      "salesOrderId": "1154219000037378005",
+      "salesOrderNumber": "SO-08031",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037378005",
+        "zohoSalesOrderId": "1154219000037378005",
+        "salesOrderNumber": "SO-08031",
+        "status": "open",
+        "customerName": "Mehak International",
+        "shippingAddress": "Plot No. 37, Sy. No. 257, Ibrahimpatnam Khalsa Revenue Village whitegold Textile Park, Ibrahimpatnam Khalsa, Rangareddy, Telangana, 501506, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037378008",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "description": "With Auto Oil and folder attachment Setting",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280585",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037378005-1154219000037378008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037378005",
+            "lineItemId": "1154219000037378008",
+            "itemName": "Single Needle Walking foot (Cylinder Bed)",
+            "sku": "341",
+            "customerName": "Mehak International",
+            "salesOrderNumber": "SO-08031",
+            "deliveryDate": "2026-09-28",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "With Auto Oil and folder attachment Setting"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T10:59:04+0530"
+      },
+      "machines": {
+        "1154219000037378005-1154219000037378008-1": {
+          "machineUnitId": "1154219000037378005-1154219000037378008-1",
+          "lineItemId": "1154219000037378008",
+          "serialNumber": "26271347",
+          "qrToken": "26271347",
+          "qrStatus": "pending"
         }
       }
     }
