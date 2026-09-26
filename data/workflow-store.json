@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271347,
+  "serialCounter": 26271348,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -43558,6 +43558,70 @@
           "zohoBackupLastAttemptAt": "2026-09-26T06:45:34.656Z",
           "zohoBackupSyncedAt": "2026-09-26T06:45:34.656Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000036665008": {
+      "salesOrderId": "1154219000036665008",
+      "salesOrderNumber": "SO-07909",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000036665008",
+        "zohoSalesOrderId": "1154219000036665008",
+        "salesOrderNumber": "SO-07909",
+        "status": "open",
+        "customerName": "Doershappy",
+        "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-17",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000036665011",
+            "itemName": "Hole Punching Machine with Heat",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000036551101",
+            "rate": 58500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000036665008-1154219000036665011-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000036665008",
+            "lineItemId": "1154219000036665011",
+            "itemName": "Hole Punching Machine with Heat",
+            "sku": "",
+            "customerName": "Doershappy",
+            "salesOrderNumber": "SO-07909",
+            "deliveryDate": "2026-09-17",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-08T16:59:48+0530"
+      },
+      "machines": {
+        "1154219000036665008-1154219000036665011-1": {
+          "machineUnitId": "1154219000036665008-1154219000036665011-1",
+          "lineItemId": "1154219000036665011",
+          "serialNumber": "26271348",
+          "qrToken": "26271348",
+          "qrStatus": "pending"
         }
       }
     }
