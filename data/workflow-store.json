@@ -44579,11 +44579,14 @@
           "qrToken": "26271357",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T12:11:41.765Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-26T12:11:42.456Z",
           "processedAt": "2026-09-26T12:12:45.258Z",
           "dispatchNote": "WOODEN",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupLastAttemptAt": "2026-09-26T12:15:33.866Z",
+          "zohoBackupSyncedAt": "2026-09-26T12:15:33.866Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
