@@ -2,9 +2,10 @@ import type { MachineUnit, Order } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { fetchZohoConfirmedOrders, fetchZohoOrderDetail } from './zoho'
 import { reconcileOrder, type OrderSyncDiff } from './order-reconcile'
-import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow } from './workflow-store'
+import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow, type Store as WorkflowStore } from './workflow-store'
 import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { ensureOrderedMachineSlots, hasIncompleteMachineSlots } from './machine-unit-slots'
+import { reconcileConfirmedOrderSnapshots, type PackagingCompletedStore } from './synced-order-reconciliation'
 
 export type SyncedOrdersStore = {
   orders: Record<string, Order>
@@ -17,6 +18,8 @@ export type SyncedOrdersStore = {
 }
 
 const SYNCED_ORDERS_PATH = 'data/synced-confirmed-orders-store.json'
+const WORKFLOW_PATH = 'data/workflow-store.json'
+const PACKAGING_COMPLETED_PATH = 'data/packaging-completed-store.json'
 let inMemorySync: Promise<SyncedOrdersStore> | null = null
 const orderSyncs = new Map<string, Promise<unknown>>()
 
@@ -166,11 +169,21 @@ async function performSync() {
     if (!Array.isArray(fetched)) throw new Error('Invalid Zoho response')
     if (!fetched.length) throw new Error('Zoho sync returned zero confirmed sales orders; keeping last saved data')
     if (fetched.some((order) => !order.id || !order.zohoSalesOrderId)) throw new Error('Zoho sync returned invalid sales order IDs')
-    const orders: Record<string, Order> = {}
-    for (const order of fetched) orders[order.id] = order
-    const orderIds = fetched.map((order) => order.id)
-    if (new Set(orderIds).size !== orderIds.length) throw new Error('Zoho sync returned duplicate sales order IDs')
-    const next: SyncedOrdersStore = { orders, orderIds, lastSuccessfulSyncAt: new Date().toISOString(), lastAttemptAt: new Date().toISOString(), lastError: null, syncing: false }
+    const fetchedIds = fetched.map((order) => order.id)
+    if (new Set(fetchedIds).size !== fetchedIds.length) throw new Error('Zoho sync returned duplicate sales order IDs')
+    const [workflowSnapshot, completedSnapshot] = await Promise.all([
+      githubReadJson<WorkflowStore>(WORKFLOW_PATH, { orders: {} }),
+      githubReadJson<PackagingCompletedStore>(PACKAGING_COMPLETED_PATH, { completed: {} }),
+    ])
+    const at = new Date().toISOString()
+    const reconciled = reconcileConfirmedOrderSnapshots({ previous, fetched, workflowStore: workflowSnapshot.data, completedStore: completedSnapshot.data, now: at })
+    // Durable identity stores are moved first. Each write is compare-and-swap guarded;
+    // the synced index is only published after both migrations succeed.
+    if (reconciled.migrated.length) {
+      await githubWriteJson(WORKFLOW_PATH, reconciled.workflowStore, 'Reconcile manual orders with Zoho identities', workflowSnapshot.sha)
+      await githubWriteJson(PACKAGING_COMPLETED_PATH, reconciled.completedStore, 'Reconcile packaging orders with Zoho identities', completedSnapshot.sha)
+    }
+    const next: SyncedOrdersStore = { orders: reconciled.orders, orderIds: reconciled.orderIds, lastSuccessfulSyncAt: at, lastAttemptAt: at, lastError: null, syncing: false }
     await writeSyncedOrdersStore(next, 'Complete confirmed sales order sync')
     return next
   } catch (error) {

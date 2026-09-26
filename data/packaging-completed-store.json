@@ -25217,64 +25217,6 @@
         "1154219000036665008-1154219000036665011-1"
       ]
     },
-    "manual-so-08036": {
-      "completedAt": "2026-09-26T06:56:14.513Z",
-      "order": {
-        "id": "manual-so-08036",
-        "zohoSalesOrderId": "manual-so-08036",
-        "salesOrderNumber": "SO-08036",
-        "status": "open",
-        "customerName": "VISHAL",
-        "shippingAddress": "C/O Rajuram Bora, Room No. 8-A Yashwant Nagar No. 1, Shell Colony, Near Ashok Medical, Chembur, Kurla, Mumbai Suburban, Maharashtra 400071, India",
-        "salesperson": "Anuj Kumar",
-        "deliveryDate": "2026-09-25",
-        "dashboardStatus": "Not Generated",
-        "reviewRequired": false,
-        "lineItems": [
-          {
-            "id": "manual-so-08036-line-1",
-            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-            "sku": "",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": true,
-            "rate": 29661,
-            "dispatchCategory": "machine"
-          }
-        ],
-        "machines": [
-          {
-            "id": "manual-so-08036-manual-so-08036-line-1-1",
-            "unitNumber": 1,
-            "serialNumber": "26271337",
-            "qrToken": "26271337",
-            "orderId": "manual-so-08036",
-            "lineItemId": "manual-so-08036-line-1",
-            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-            "sku": "",
-            "customerName": "VISHAL",
-            "salesOrderNumber": "SO-08036",
-            "deliveryDate": "2026-09-25",
-            "status": "QR Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Pending",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": "",
-            "warrantyStart": "2026-09-25",
-            "dispatchNote": "local"
-          }
-        ],
-        "zohoLastModifiedTime": "2026-09-25T13:43:00+05:30",
-        "dispatchPriority": "regular"
-      },
-      "machineIds": [
-        "manual-so-08036-manual-so-08036-line-1-1"
-      ]
-    },
     "1154219000037285004": {
       "completedAt": "2026-09-26T06:56:53.022Z",
       "order": {
@@ -25440,6 +25382,66 @@
         "1154219000037285004-1154219000037402046-1",
         "1154219000037285004-1154219000037402047-1",
         "1154219000037285004-1154219000037402048-1"
+      ]
+    },
+    "1154219000037420001": {
+      "completedAt": "2026-09-26T06:56:14.513Z",
+      "order": {
+        "id": "1154219000037420001",
+        "zohoSalesOrderId": "1154219000037420001",
+        "salesOrderNumber": "SO-08036",
+        "status": "open",
+        "customerName": "VISHAL",
+        "shippingAddress": "C/O Rajuram Bora, Room No. 8-A Yashwant Nagar No.1, Shell Colony, Near Ashok Medical, Chembut, VTC Mumbai, Chembur, Kurla, Mumai Suburban, Maharashtra, 400071, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037420004",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 0,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280682",
+            "rate": 29661,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037420001-1154219000037420004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271337",
+            "qrToken": "26271337",
+            "orderId": "1154219000037420001",
+            "lineItemId": "1154219000037420004",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "VISHAL",
+            "salesOrderNumber": "SO-08036",
+            "deliveryDate": "2026-09-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T14:04:48+0530",
+        "dispatchPriority": "regular",
+        "retiredMachines": []
+      },
+      "machineIds": [
+        "1154219000037420001-1154219000037420004-1"
       ]
     }
   }
