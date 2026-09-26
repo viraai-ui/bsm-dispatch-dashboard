@@ -43651,7 +43651,9 @@
     "1154219000037427005": {
       "salesOrderId": "1154219000037427005",
       "salesOrderNumber": "SO-08040",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T07:18:43.108Z",
       "processedOrder": {
         "id": "1154219000037427005",
         "zohoSalesOrderId": "1154219000037427005",
@@ -43705,8 +43707,8 @@
           {
             "id": "1154219000037427005-1154219000037427009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271349",
+            "qrToken": "26271349",
             "orderId": "1154219000037427005",
             "lineItemId": "1154219000037427009",
             "itemName": "zigzag binding (Cylinder bed)",
@@ -43714,20 +43716,23 @@
             "customerName": "CLASSIC POLYMERS",
             "salesOrderNumber": "SO-08040",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "K S",
+            "dispatchNote": "WOODEN"
           },
           {
             "id": "1154219000037427005-1154219000037427008-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271350",
+            "qrToken": "26271350",
             "orderId": "1154219000037427005",
             "lineItemId": "1154219000037427008",
             "itemName": "Strap Cutting machine",
@@ -43735,14 +43740,17 @@
             "customerName": "CLASSIC POLYMERS",
             "salesOrderNumber": "SO-08040",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Able",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-09-25T18:02:40+0530"
@@ -43759,7 +43767,10 @@
           "zohoBackupQueuedAt": "2026-09-26T07:12:58.367Z",
           "zohoBackupLastAttemptAt": "2026-09-26T07:15:32.193Z",
           "zohoBackupSyncedAt": "2026-09-26T07:15:32.193Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-09-26T07:18:43.108Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "K S"
         },
         "1154219000037427005-1154219000037427008-1": {
           "machineUnitId": "1154219000037427005-1154219000037427008-1",
@@ -43772,7 +43783,10 @@
           "zohoBackupQueuedAt": "2026-09-26T07:12:58.367Z",
           "zohoBackupLastAttemptAt": "2026-09-26T07:15:32.193Z",
           "zohoBackupSyncedAt": "2026-09-26T07:15:32.193Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-09-26T07:18:43.108Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "Able"
         }
       }
     }
