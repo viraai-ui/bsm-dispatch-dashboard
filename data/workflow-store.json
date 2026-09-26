@@ -43304,7 +43304,9 @@
     "1154219000037346057": {
       "salesOrderId": "1154219000037346057",
       "salesOrderNumber": "SO-08026",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T06:42:10.868Z",
       "processedOrder": {
         "id": "1154219000037346057",
         "zohoSalesOrderId": "1154219000037346057",
@@ -43346,8 +43348,8 @@
           {
             "id": "1154219000037346057-1154219000037346060-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271345",
+            "qrToken": "26271345",
             "orderId": "1154219000037346057",
             "lineItemId": "1154219000037346060",
             "itemName": "Round Blade Edge trimming Machine",
@@ -43355,14 +43357,17 @@
             "customerName": "RISHABH LAMINATION",
             "salesOrderNumber": "SO-08026",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-24T14:31:20+0530"
@@ -43376,7 +43381,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T06:40:49.314Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-26T06:40:49.487Z"
+          "zohoBackupQueuedAt": "2026-09-26T06:40:49.487Z",
+          "processedAt": "2026-09-26T06:42:10.868Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         }
       }
     }
