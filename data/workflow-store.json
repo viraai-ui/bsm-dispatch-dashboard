@@ -43223,7 +43223,9 @@
     "1154219000037415002": {
       "salesOrderId": "1154219000037415002",
       "salesOrderNumber": "SO-08034",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T06:37:51.260Z",
       "processedOrder": {
         "id": "1154219000037415002",
         "zohoSalesOrderId": "1154219000037415002",
@@ -43253,8 +43255,8 @@
           {
             "id": "1154219000037415002-1154219000037415005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271344",
+            "qrToken": "26271344",
             "orderId": "1154219000037415002",
             "lineItemId": "1154219000037415005",
             "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
@@ -43262,14 +43264,17 @@
             "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
             "salesOrderNumber": "SO-08034",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Able",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-25T11:34:04+0530"
@@ -43283,7 +43288,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T06:36:52.704Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-26T06:36:52.877Z"
+          "zohoBackupQueuedAt": "2026-09-26T06:36:52.877Z",
+          "processedAt": "2026-09-26T06:37:51.260Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Able"
         }
       }
     }
