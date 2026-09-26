@@ -24529,6 +24529,65 @@
       "machineIds": [
         "1154219000037360029-1154219000037360032-1"
       ]
+    },
+    "1154219000037224017": {
+      "completedAt": "2026-09-26T06:39:15.814Z",
+      "order": {
+        "id": "1154219000037224017",
+        "zohoSalesOrderId": "1154219000037224017",
+        "salesOrderNumber": "SO-07989",
+        "status": "open",
+        "customerName": "Easan Fine Arts",
+        "shippingAddress": "64, Thiruthangal Main Road, ( Opp. Bell Hotel ) Sivakasi, Virudhunagar, Tamil Nadu, 626123, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-21",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037224020",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227370",
+            "rate": 53500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037224017-1154219000037224020-1",
+            "unitNumber": 1,
+            "serialNumber": "26271335",
+            "qrToken": "26271335",
+            "orderId": "1154219000037224017",
+            "lineItemId": "1154219000037224020",
+            "itemName": "Eyelet Punching Single Channel",
+            "sku": "918",
+            "customerName": "Easan Fine Arts",
+            "salesOrderNumber": "SO-07989",
+            "deliveryDate": "2026-09-21",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "dispatchNote": "WOODEN"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T11:07:55+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037224017-1154219000037224020-1"
+      ]
     }
   }
 }
