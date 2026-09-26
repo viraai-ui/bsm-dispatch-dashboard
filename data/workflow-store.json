@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271344,
+  "serialCounter": 26271345,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -43298,6 +43298,82 @@
           "processedAt": "2026-09-26T06:37:51.260Z",
           "dispatchNote": "LOCAL",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000037346057": {
+      "salesOrderId": "1154219000037346057",
+      "salesOrderNumber": "SO-08026",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037346057",
+        "zohoSalesOrderId": "1154219000037346057",
+        "salesOrderNumber": "SO-08026",
+        "status": "open",
+        "customerName": "RISHABH LAMINATION",
+        "shippingAddress": "PLOT NO.E- 402, GROUND FLOOR, BHORGARH INDUSTRIAL PHASE -2, DSIDC BAWANA , SECTOR-E, New Delhi, North Delhi, Delhi, 110040, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037346060",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225787",
+            "rate": 27000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037346061",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037346057-1154219000037346060-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037346057",
+            "lineItemId": "1154219000037346060",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "RISHABH LAMINATION",
+            "salesOrderNumber": "SO-08026",
+            "deliveryDate": "2026-09-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-24T14:31:20+0530"
+      },
+      "machines": {
+        "1154219000037346057-1154219000037346060-1": {
+          "machineUnitId": "1154219000037346057-1154219000037346060-1",
+          "lineItemId": "1154219000037346060",
+          "serialNumber": "26271345",
+          "qrToken": "26271345",
+          "qrStatus": "pending"
         }
       }
     }
