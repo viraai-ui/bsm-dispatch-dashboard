@@ -43564,7 +43564,9 @@
     "1154219000036665008": {
       "salesOrderId": "1154219000036665008",
       "salesOrderNumber": "SO-07909",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T06:49:56.728Z",
       "processedOrder": {
         "id": "1154219000036665008",
         "zohoSalesOrderId": "1154219000036665008",
@@ -43594,8 +43596,8 @@
           {
             "id": "1154219000036665008-1154219000036665011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271348",
+            "qrToken": "26271348",
             "orderId": "1154219000036665008",
             "lineItemId": "1154219000036665011",
             "itemName": "Hole Punching Machine with Heat",
@@ -43603,14 +43605,17 @@
             "customerName": "Doershappy",
             "salesOrderNumber": "SO-07909",
             "deliveryDate": "2026-09-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Tech Point Sol",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-08T16:59:48+0530"
@@ -43624,7 +43629,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T06:49:17.874Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-26T06:49:18.141Z"
+          "zohoBackupQueuedAt": "2026-09-26T06:49:18.141Z",
+          "processedAt": "2026-09-26T06:49:56.728Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Tech Point Sol"
         }
       }
     }
