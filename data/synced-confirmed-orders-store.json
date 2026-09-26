@@ -469,106 +469,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-24T14:31:20+0530"
     },
-    "1154219000037338003": {
-      "id": "1154219000037338003",
-      "zohoSalesOrderId": "1154219000037338003",
-      "salesOrderNumber": "SO-08021",
-      "status": "open",
-      "customerName": "JN International",
-      "shippingAddress": "123/485 (820 New), Fazal Ganj Kalpi Road Kanpur, Uttar Pradesh, 208012",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-09-24",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037338006",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226515",
-          "rate": 22000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037338003-1154219000037338006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037338003",
-          "lineItemId": "1154219000037338006",
-          "itemName": "Single needle post bed Drop feed",
-          "sku": "2810",
-          "customerName": "JN International",
-          "salesOrderNumber": "SO-08021",
-          "deliveryDate": "2026-09-24",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-23T17:52:06+0530"
-    },
-    "1154219000037307007": {
-      "id": "1154219000037307007",
-      "zohoSalesOrderId": "1154219000037307007",
-      "salesOrderNumber": "SO-08018",
-      "status": "open",
-      "customerName": "Great Indian Footwear",
-      "shippingAddress": "6, Maligai Street, Theradi Bazaar, Tiruchirappalli, Tamil Nadu, 620002",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037307010",
-          "itemName": "ROLLER PRESSING MACHINE",
-          "sku": "",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000280386",
-          "rate": 41000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037307007-1154219000037307010-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037307007",
-          "lineItemId": "1154219000037307010",
-          "itemName": "ROLLER PRESSING MACHINE",
-          "sku": "",
-          "customerName": "Great Indian Footwear",
-          "salesOrderNumber": "SO-08018",
-          "deliveryDate": "2026-09-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-23T16:02:04+0530"
-    },
     "1154219000037302003": {
       "id": "1154219000037302003",
       "zohoSalesOrderId": "1154219000037302003",
@@ -681,56 +581,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-25T15:29:50+0530"
-    },
-    "1154219000037309001": {
-      "id": "1154219000037309001",
-      "zohoSalesOrderId": "1154219000037309001",
-      "salesOrderNumber": "SO-08013",
-      "status": "open",
-      "customerName": "Dev Cleaning Services Private Limited",
-      "shippingAddress": "Khasra No 123 & 124, Mahanagar, Rahim Nagar, Lucknow, Uttar Pradesh, 226006",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-23",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037309004",
-          "itemName": "Shoe repairing machine (5%)",
-          "sku": "2971 (5%)",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000009427388",
-          "rate": 59000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037309001-1154219000037309004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037309001",
-          "lineItemId": "1154219000037309004",
-          "itemName": "Shoe repairing machine (5%)",
-          "sku": "2971 (5%)",
-          "customerName": "Dev Cleaning Services Private Limited",
-          "salesOrderNumber": "SO-08013",
-          "deliveryDate": "2026-09-23",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-23T11:55:01+0530"
     },
     "1154219000037272011": {
       "id": "1154219000037272011",
@@ -6982,10 +6832,7 @@
     "1154219000037378005",
     "1154219000037363007",
     "1154219000037346057",
-    "1154219000037338003",
-    "1154219000037307007",
     "1154219000037302003",
-    "1154219000037309001",
     "1154219000037272011",
     "1154219000037249013",
     "1154219000037261014",
@@ -7027,8 +6874,8 @@
     "1154219000032046008",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-26T05:20:55.844Z",
-  "lastAttemptAt": "2026-09-26T05:34:56.030Z",
+  "lastSuccessfulSyncAt": "2026-09-26T05:35:54.532Z",
+  "lastAttemptAt": "2026-09-26T05:35:54.532Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
