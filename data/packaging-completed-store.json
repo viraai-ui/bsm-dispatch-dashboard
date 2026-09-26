@@ -24589,6 +24589,65 @@
       "machineIds": [
         "1154219000037307007-1154219000037307010-1"
       ]
+    },
+    "1154219000037275001": {
+      "completedAt": "2026-09-26T06:39:26.284Z",
+      "order": {
+        "id": "1154219000037275001",
+        "zohoSalesOrderId": "1154219000037275001",
+        "salesOrderNumber": "SO-08002",
+        "status": "open",
+        "customerName": "FILTERTEX INDIA PRIVATE LIMITED",
+        "shippingAddress": "GROUND FLOOR, 614/0, SAI COMPOUND, Kalyan Road, DEEP SAGAR, Temghar, Bhiwandi, Thane, Maharashtra, 421302",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037275004",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226295",
+            "rate": 33500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037275001-1154219000037275004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271327",
+            "qrToken": "26271327",
+            "orderId": "1154219000037275001",
+            "lineItemId": "1154219000037275004",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "FILTERTEX INDIA PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08002",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T15:00:47+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037275001-1154219000037275004-1"
+      ]
     }
   }
 }
