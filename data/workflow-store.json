@@ -43793,7 +43793,9 @@
     "1154219000037243118": {
       "salesOrderId": "1154219000037243118",
       "salesOrderNumber": "SO-08003",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T07:35:14.766Z",
       "processedOrder": {
         "id": "1154219000037243118",
         "zohoSalesOrderId": "1154219000037243118",
@@ -43835,8 +43837,8 @@
           {
             "id": "1154219000037243118-1154219000037243121-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271351",
+            "qrToken": "26271351",
             "orderId": "1154219000037243118",
             "lineItemId": "1154219000037243121",
             "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
@@ -43844,14 +43846,17 @@
             "customerName": "MIRACLE EYE PRIVATE LIMITED",
             "salesOrderNumber": "SO-08003",
             "deliveryDate": "2026-09-23",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Able",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-09-22T15:34:08+0530"
@@ -43865,7 +43870,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T07:32:41.303Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-26T07:32:41.562Z"
+          "zohoBackupQueuedAt": "2026-09-26T07:32:41.562Z",
+          "processedAt": "2026-09-26T07:35:14.766Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "Able"
         }
       }
     }
