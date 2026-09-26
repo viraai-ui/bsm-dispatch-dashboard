@@ -42827,8 +42827,10 @@
           "qrToken": "26271336",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T08:05:38.226Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-25T08:05:38.773Z"
+          "zohoBackupStatus": "error",
+          "zohoBackupQueuedAt": "2026-09-25T08:05:38.773Z",
+          "zohoBackupLastAttemptAt": "2026-09-26T03:38:30.880Z",
+          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
         }
       }
     },
