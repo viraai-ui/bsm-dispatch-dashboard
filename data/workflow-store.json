@@ -44515,7 +44515,9 @@
     "1154219000037249013": {
       "salesOrderId": "1154219000037249013",
       "salesOrderNumber": "SO-08009",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T12:12:45.258Z",
       "processedOrder": {
         "id": "1154219000037249013",
         "zohoSalesOrderId": "1154219000037249013",
@@ -44545,8 +44547,8 @@
           {
             "id": "1154219000037249013-1154219000037249016-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271357",
+            "qrToken": "26271357",
             "orderId": "1154219000037249013",
             "lineItemId": "1154219000037249016",
             "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
@@ -44554,14 +44556,17 @@
             "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
             "salesOrderNumber": "SO-08009",
             "deliveryDate": "2026-09-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Able",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-09-23T10:33:31+0530"
@@ -44575,7 +44580,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T12:11:41.765Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-26T12:11:42.456Z"
+          "zohoBackupQueuedAt": "2026-09-26T12:11:42.456Z",
+          "processedAt": "2026-09-26T12:12:45.258Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "Able"
         }
       }
     }
