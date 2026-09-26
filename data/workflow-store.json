@@ -43636,12 +43636,15 @@
           "qrToken": "26271348",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T06:49:17.874Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-26T06:49:18.141Z",
           "processedAt": "2026-09-26T06:49:56.728Z",
           "dispatchNote": "LOCAL",
           "vendor": "Tech Point Sol",
-          "dispatchedAt": "2026-09-26T06:55:50.050Z"
+          "dispatchedAt": "2026-09-26T06:55:50.050Z",
+          "zohoBackupLastAttemptAt": "2026-09-26T07:00:33.246Z",
+          "zohoBackupSyncedAt": "2026-09-26T07:00:33.246Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
