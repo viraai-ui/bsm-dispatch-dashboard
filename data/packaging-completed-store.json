@@ -24991,6 +24991,65 @@
         "1154219000037302003-1154219000037302006-3",
         "1154219000037302003-1154219000037302006-4"
       ]
+    },
+    "1154219000037338003": {
+      "completedAt": "2026-09-26T06:46:21.915Z",
+      "order": {
+        "id": "1154219000037338003",
+        "zohoSalesOrderId": "1154219000037338003",
+        "salesOrderNumber": "SO-08021",
+        "status": "open",
+        "customerName": "JN International",
+        "shippingAddress": "123/485 (820 New), Fazal Ganj Kalpi Road Kanpur, Uttar Pradesh, 208012",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-24",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037338006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226515",
+            "rate": 22000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037338003-1154219000037338006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271320",
+            "qrToken": "26271320",
+            "orderId": "1154219000037338003",
+            "lineItemId": "1154219000037338006",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "JN International",
+            "salesOrderNumber": "SO-08021",
+            "deliveryDate": "2026-09-24",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-24",
+            "dispatchNote": "WOODEN"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T17:52:06+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037338003-1154219000037338006-1"
+      ]
     }
   }
 }
