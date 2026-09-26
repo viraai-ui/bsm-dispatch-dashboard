@@ -324,6 +324,20 @@ function headerMapFromContent(rows: any[]) {
 }
 
 async function setCellContent(worksheetName: string, row: number, column: number, content: string) {
+  // Zoho rejects cell.content.set when `content` is empty (it reports the
+  // parameter as missing). Reallocation replacements legitimately need to
+  // clear stale optional fields, so use the range-clear API for that case.
+  if (content === '') {
+    await sheetPostWithRetry({
+      method: 'range.clear',
+      worksheet_name: worksheetName,
+      start_row: String(row),
+      start_column: String(column),
+      end_row: String(row),
+      end_column: String(column),
+    })
+    return
+  }
   await sheetPostWithRetry({ method: 'cell.content.set', worksheet_name: worksheetName, row: String(row), column: String(column), content })
 }
 

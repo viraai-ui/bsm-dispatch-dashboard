@@ -25,6 +25,7 @@ assert.ok(sheet.includes("zohoBackupStatus: ok ? 'synced' : 'error'"), 'eventual
 assert.ok(sheet.includes('replaceSerialRows(replacements)'), 'ownership changes must replace existing serial rows')
 assert.ok(sheet.includes('zohoBackupReplaceExisting: ok ? false'), 'replace intent must remain durable until verified')
 assert.ok(sheet.includes("rows.length || replacements.length"), 'replacement must be read back before acknowledgement')
+assert.ok(sheet.includes("if (content === '')") && sheet.includes("method: 'range.clear'"), 'replacement must clear blank cells without sending an invalid empty cell.content.set request')
 assert.ok(sheet.includes('/api request limit|rate limit|too many requests|quota/'), 'quota failures must not be aggressively retried')
 // Fault model: first append succeeds but readback fails. The item remains queued; on the
 // next tick the initial read sees it and skips append, then marks it synced. Repeated ticks
@@ -43,4 +44,4 @@ tick()
 assert.equal(state, 'synced', 'next tick must recover after temporary failure')
 tick()
 assert.equal(appends, 1, 'successful and repeated retries must not create duplicates')
-console.log('Zoho backup architecture/fault regression tests passed: 22 assertions')
+console.log('Zoho backup architecture/fault regression tests passed: 23 assertions')
