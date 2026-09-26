@@ -43011,10 +43011,11 @@
           "qrToken": "26271336",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-25T08:05:38.226Z",
-          "zohoBackupStatus": "error",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-25T08:05:38.773Z",
-          "zohoBackupLastAttemptAt": "2026-09-26T11:00:31.604Z",
-          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
+          "zohoBackupLastAttemptAt": "2026-09-26T11:15:32.398Z",
+          "zohoBackupSyncedAt": "2026-09-26T11:15:32.398Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     },
