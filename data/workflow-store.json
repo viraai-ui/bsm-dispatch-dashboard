@@ -42978,6 +42978,70 @@
           "zohoBackupReplaceExisting": false
         }
       }
+    },
+    "1154219000037261014": {
+      "salesOrderId": "1154219000037261014",
+      "salesOrderNumber": "SO-08008",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037261014",
+        "zohoSalesOrderId": "1154219000037261014",
+        "salesOrderNumber": "SO-08008",
+        "status": "open",
+        "customerName": "JAMA CORPORATION PVT.LTD.",
+        "shippingAddress": "8/2-B, ARYA NAGAR, KANPUR, Kanpur Nagar, Kanpur, Uttar Pradesh, 208002, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037261017",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000018448369",
+            "rate": 24500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037261014-1154219000037261017-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037261014",
+            "lineItemId": "1154219000037261017",
+            "itemName": "Thread Trimmer (Double Motor)",
+            "sku": "",
+            "customerName": "JAMA CORPORATION PVT.LTD.",
+            "salesOrderNumber": "SO-08008",
+            "deliveryDate": "2026-09-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-22T16:56:18+0530"
+      },
+      "machines": {
+        "1154219000037261014-1154219000037261017-1": {
+          "machineUnitId": "1154219000037261014-1154219000037261017-1",
+          "lineItemId": "1154219000037261017",
+          "serialNumber": "26271338",
+          "qrToken": "26271338",
+          "qrStatus": "pending"
+        }
+      }
     }
   },
   "machineReallocation": {
