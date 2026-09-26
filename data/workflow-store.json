@@ -43073,7 +43073,62 @@
     "1154219000037416006": {
       "salesOrderId": "1154219000037416006",
       "salesOrderNumber": "SO-08037",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T06:36:23.476Z",
+      "processedOrder": {
+        "id": "1154219000037416006",
+        "zohoSalesOrderId": "1154219000037416006",
+        "salesOrderNumber": "SO-08037",
+        "status": "open",
+        "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+        "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037416009",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225871",
+            "rate": 31000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037416006-1154219000037416009-1",
+            "unitNumber": 1,
+            "serialNumber": "26271339",
+            "qrToken": "26271339",
+            "orderId": "1154219000037416006",
+            "lineItemId": "1154219000037416009",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+            "salesOrderNumber": "SO-08037",
+            "deliveryDate": "2026-09-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Able",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T13:38:06+0530"
+      },
       "machines": {
         "1154219000037416006-1154219000037416009-1": {
           "machineUnitId": "1154219000037416006-1154219000037416009-1",
@@ -43083,7 +43138,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T06:34:08.502Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-26T06:06:46.385Z"
+          "zohoBackupQueuedAt": "2026-09-26T06:06:46.385Z",
+          "processedAt": "2026-09-26T06:36:23.476Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     },
