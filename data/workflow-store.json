@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271356,
+  "serialCounter": 26271357,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -44511,6 +44511,70 @@
         "zohoLastModifiedTime": "2026-09-26T15:24:24+0530"
       },
       "machines": {}
+    },
+    "1154219000037249013": {
+      "salesOrderId": "1154219000037249013",
+      "salesOrderNumber": "SO-08009",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037249013",
+        "zohoSalesOrderId": "1154219000037249013",
+        "salesOrderNumber": "SO-08009",
+        "status": "open",
+        "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+        "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037249016",
+            "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+            "sku": "205",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226939",
+            "rate": 195000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037249013-1154219000037249016-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037249013",
+            "lineItemId": "1154219000037249016",
+            "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+            "sku": "205",
+            "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+            "salesOrderNumber": "SO-08009",
+            "deliveryDate": "2026-09-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T10:33:31+0530"
+      },
+      "machines": {
+        "1154219000037249013-1154219000037249016-1": {
+          "machineUnitId": "1154219000037249013-1154219000037249016-1",
+          "lineItemId": "1154219000037249016",
+          "serialNumber": "26271357",
+          "qrToken": "26271357",
+          "qrStatus": "pending"
+        }
+      }
     }
   },
   "machineReallocation": {
