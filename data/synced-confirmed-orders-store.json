@@ -2101,14 +2101,14 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000036466020",
-          "itemName": "Strobel Sewing machine (Disc feed)",
-          "sku": "600",
-          "description": "String Lasting (Kingsew)",
+          "id": "1154219000037467464",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000279010",
+          "zohoItemId": "1154219000006379136",
           "rate": 37000,
           "dispatchCategory": "machine"
         },
@@ -2373,14 +2373,14 @@
           "itemDescription": ""
         },
         {
-          "id": "1154219000036466015-1154219000036466020-1",
+          "id": "1154219000036466015-1154219000037467464-1",
           "unitNumber": 11,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000036466015",
-          "lineItemId": "1154219000036466020",
-          "itemName": "Strobel Sewing machine (Disc feed)",
-          "sku": "600",
+          "lineItemId": "1154219000037467464",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
           "customerName": "ACTION FOOTWEAR INDUSTRIES PVT LTD - NEPAL",
           "salesOrderNumber": "SO-07888",
           "deliveryDate": "2026-09-04",
@@ -2391,7 +2391,7 @@
           "qcDone": false,
           "mediaPhotos": 0,
           "mediaVideos": 0,
-          "itemDescription": "String Lasting (Kingsew)"
+          "itemDescription": ""
         },
         {
           "id": "1154219000036466015-1154219000036466021-1",
@@ -2562,7 +2562,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-04T13:29:05+0530"
+      "zohoLastModifiedTime": "2026-09-26T16:12:47+0530"
     },
     "1154219000036295003": {
       "id": "1154219000036295003",
@@ -6238,8 +6238,8 @@
     "1154219000032046008",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-26T10:41:24.210Z",
-  "lastAttemptAt": "2026-09-26T10:44:44.387Z",
+  "lastSuccessfulSyncAt": "2026-09-26T10:45:49.520Z",
+  "lastAttemptAt": "2026-09-26T10:45:49.520Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
