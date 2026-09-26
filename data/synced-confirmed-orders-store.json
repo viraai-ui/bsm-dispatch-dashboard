@@ -1,5 +1,83 @@
 {
   "orders": {
+    "1154219000037449002": {
+      "id": "1154219000037449002",
+      "zohoSalesOrderId": "1154219000037449002",
+      "salesOrderNumber": "SO-08043",
+      "status": "open",
+      "customerName": "SELFIEE FOOTWEAR",
+      "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-27",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037449005",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "String Lasting",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000006379136",
+          "rate": 44000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037449002-1154219000037449005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037449002",
+          "lineItemId": "1154219000037449005",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "SELFIEE FOOTWEAR",
+          "salesOrderNumber": "SO-08043",
+          "deliveryDate": "2026-09-27",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "String Lasting"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-26T13:05:53+0530"
+    },
+    "1154219000037464001": {
+      "id": "1154219000037464001",
+      "zohoSalesOrderId": "1154219000037464001",
+      "salesOrderNumber": "SO-08042",
+      "status": "open",
+      "customerName": "shaukat",
+      "shippingAddress": "B-1539 Blk-shastri nagar ashok vihar, Delhi, 110052",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-26",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037464004",
+          "itemName": "Hotmelt Polyamide Granules",
+          "sku": "7160",
+          "description": "",
+          "quantity": 20,
+          "pendingQuantity": 20,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001151038",
+          "rate": 950,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-26T13:05:23+0530"
+    },
     "1154219000037433003": {
       "id": "1154219000037433003",
       "zohoSalesOrderId": "1154219000037433003",
@@ -1521,46 +1599,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-22T15:00:17+0530"
-    },
-    "1154219000037204025": {
-      "id": "1154219000037204025",
-      "zohoSalesOrderId": "1154219000037204025",
-      "salesOrderNumber": "SO-07994",
-      "status": "open",
-      "customerName": "Competence Exports Pvt Ltd",
-      "shippingAddress": "B 10 EPIP, Industrial Area, Export Zone Hajipur, Bihar, 844101",
-      "salesperson": "Ram Kumar",
-      "deliveryDate": "2026-09-21",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037204028",
-          "itemName": "Hotmelt Polyamide Granules",
-          "sku": "7160",
-          "description": "",
-          "quantity": 20,
-          "pendingQuantity": 20,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000001151038",
-          "rate": 850,
-          "dispatchCategory": "adhesive"
-        },
-        {
-          "id": "1154219000037204029",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Freight Cost Extra from BSM to VRL Logistics Delhi Godow for Booking",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 1000,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-22T17:40:54+0530"
     },
     "1154219000037224017": {
       "id": "1154219000037224017",
@@ -6824,6 +6862,8 @@
     }
   },
   "orderIds": [
+    "1154219000037449002",
+    "1154219000037464001",
     "1154219000037433003",
     "1154219000037427005",
     "1154219000037416020",
@@ -6841,7 +6881,6 @@
     "1154219000037275001",
     "1154219000037273001",
     "1154219000037260006",
-    "1154219000037204025",
     "1154219000037224017",
     "1154219000037205001",
     "1154219000037152003",
@@ -6874,8 +6913,8 @@
     "1154219000032046008",
     "1154219000030035027"
   ],
-  "lastSuccessfulSyncAt": "2026-09-26T07:23:57.146Z",
-  "lastAttemptAt": "2026-09-26T07:37:43.547Z",
+  "lastSuccessfulSyncAt": "2026-09-26T07:38:55.819Z",
+  "lastAttemptAt": "2026-09-26T07:38:55.819Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
