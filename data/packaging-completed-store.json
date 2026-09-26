@@ -25050,6 +25050,113 @@
       "machineIds": [
         "1154219000037338003-1154219000037338006-1"
       ]
+    },
+    "1154219000037372003": {
+      "completedAt": "2026-09-26T06:46:41.078Z",
+      "order": {
+        "id": "1154219000037372003",
+        "zohoSalesOrderId": "1154219000037372003",
+        "salesOrderNumber": "SO-08033",
+        "status": "open",
+        "customerName": "Mata Bala Sundari Enterprises",
+        "shippingAddress": "3308, Road Number 55, DSIDC Industrial Area Narela, New Delhi, North Delhi, 110040, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037372006",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225279",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037372007",
+            "itemName": "Compressor (2 Hp)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000227672",
+            "rate": 28000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037372008",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228524",
+            "rate": 345,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037372003-1154219000037372006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271331",
+            "qrToken": "26271331",
+            "orderId": "1154219000037372003",
+            "lineItemId": "1154219000037372006",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "Mata Bala Sundari Enterprises",
+            "salesOrderNumber": "SO-08033",
+            "deliveryDate": "2026-09-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "dispatchNote": "LOCAL"
+          },
+          {
+            "id": "1154219000037372003-1154219000037372007-1",
+            "unitNumber": 2,
+            "serialNumber": "26271332",
+            "qrToken": "26271332",
+            "orderId": "1154219000037372003",
+            "lineItemId": "1154219000037372007",
+            "itemName": "Compressor (2 Hp)",
+            "sku": "",
+            "customerName": "Mata Bala Sundari Enterprises",
+            "salesOrderNumber": "SO-08033",
+            "deliveryDate": "2026-09-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-25",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T10:47:34+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037372003-1154219000037372006-1",
+        "1154219000037372003-1154219000037372007-1"
+      ]
     }
   }
 }
