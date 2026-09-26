@@ -43073,7 +43073,7 @@
     "1154219000037416006": {
       "salesOrderId": "1154219000037416006",
       "salesOrderNumber": "SO-08037",
-      "status": "open",
+      "status": "qr_generated",
       "machines": {
         "1154219000037416006-1154219000037416009-1": {
           "machineUnitId": "1154219000037416006-1154219000037416009-1",
@@ -43081,12 +43081,9 @@
           "serialNumber": "26271339",
           "qrToken": "26271339",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-26T06:06:46.257Z",
+          "qrGeneratedAt": "2026-09-26T06:34:08.502Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-26T06:06:46.385Z",
-          "zohoBackupLastAttemptAt": "2026-09-26T06:15:33.636Z",
-          "zohoBackupSyncedAt": "2026-09-26T06:15:33.636Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupQueuedAt": "2026-09-26T06:06:46.385Z"
         }
       }
     },
