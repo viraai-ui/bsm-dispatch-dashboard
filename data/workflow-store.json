@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271348,
+  "serialCounter": 26271350,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -43645,6 +43645,122 @@
           "zohoBackupLastAttemptAt": "2026-09-26T07:00:33.246Z",
           "zohoBackupSyncedAt": "2026-09-26T07:00:33.246Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000037427005": {
+      "salesOrderId": "1154219000037427005",
+      "salesOrderNumber": "SO-08040",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037427005",
+        "zohoSalesOrderId": "1154219000037427005",
+        "salesOrderNumber": "SO-08040",
+        "status": "open",
+        "customerName": "CLASSIC POLYMERS",
+        "shippingAddress": "NR.VIVEKANAND INSTITIUTE OF HOTEL MANAGEMENT, PLOT NO.54 RK INDUSTRIAL ZONE, VILLAGE KUCHIYADAD, AHMADABAD HIGHWAY, KUCHIYADAD,, Rajkot,, Gujarat,, 360002, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037427009",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226814",
+            "rate": 80000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037427008",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000278462",
+            "rate": 85000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037427010",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037427005-1154219000037427009-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037427005",
+            "lineItemId": "1154219000037427009",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "CLASSIC POLYMERS",
+            "salesOrderNumber": "SO-08040",
+            "deliveryDate": "2026-09-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037427005-1154219000037427008-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037427005",
+            "lineItemId": "1154219000037427008",
+            "itemName": "Strap Cutting machine",
+            "sku": "981",
+            "customerName": "CLASSIC POLYMERS",
+            "salesOrderNumber": "SO-08040",
+            "deliveryDate": "2026-09-25",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T18:02:40+0530"
+      },
+      "machines": {
+        "1154219000037427005-1154219000037427009-1": {
+          "machineUnitId": "1154219000037427005-1154219000037427009-1",
+          "lineItemId": "1154219000037427009",
+          "serialNumber": "26271349",
+          "qrToken": "26271349",
+          "qrStatus": "pending"
+        },
+        "1154219000037427005-1154219000037427008-1": {
+          "machineUnitId": "1154219000037427005-1154219000037427008-1",
+          "lineItemId": "1154219000037427008",
+          "serialNumber": "26271350",
+          "qrToken": "26271350",
+          "qrStatus": "pending"
         }
       }
     }
