@@ -43391,7 +43391,9 @@
     "1154219000037433003": {
       "salesOrderId": "1154219000037433003",
       "salesOrderNumber": "SO-08041",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-26T06:43:48.799Z",
       "processedOrder": {
         "id": "1154219000037433003",
         "zohoSalesOrderId": "1154219000037433003",
@@ -43421,8 +43423,8 @@
           {
             "id": "1154219000037433003-1154219000037433006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271346",
+            "qrToken": "26271346",
             "orderId": "1154219000037433003",
             "lineItemId": "1154219000037433006",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -43430,14 +43432,17 @@
             "customerName": "Uni Horn",
             "salesOrderNumber": "SO-08041",
             "deliveryDate": "2026-09-25",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "vendor": "Able",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-09-26T10:21:51+0530"
@@ -43451,7 +43456,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T06:42:55.836Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-26T06:42:56.017Z"
+          "zohoBackupQueuedAt": "2026-09-26T06:42:56.017Z",
+          "processedAt": "2026-09-26T06:43:48.799Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "Able"
         }
       }
     }
