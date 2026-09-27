@@ -482,14 +482,19 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
     const entries: { workflowId: string; machineId: string; serial: string; order?: Order; machine?: MachineUnit; generatedAt: string; replaceExisting: boolean }[] = []
     for (const workflow of Object.values(workflows)) {
-      const order = workflow.processedOrder || synced.data.orders?.[workflow.salesOrderId]
-      const orderMachinesById = new Map((order?.machines || []).map((machine) => [machine.id, machine]))
+      const processedOrder = workflow.processedOrder
+      const syncedOrder = synced.data.orders?.[workflow.salesOrderId]
+      const processedMachinesById = new Map((processedOrder?.machines || []).map((machine) => [machine.id, machine]))
+      const syncedMachinesById = new Map((syncedOrder?.machines || []).map((machine) => [machine.id, machine]))
       for (const machineWorkflow of Object.values(workflow.machines || {})) {
         const serial = Number(machineWorkflow.serialNumber || 0)
         // Queue state, not a historical serial cutoff, determines retry eligibility. A cutoff
         // stranded older pending/error entries forever after partial incidents.
         if (!serial || machineWorkflow.zohoBackupStatus === 'synced') continue
-        const orderMachine = orderMachinesById.get(machineWorkflow.machineUnitId)
+        const processedMachine = processedMachinesById.get(machineWorkflow.machineUnitId)
+        const syncedMachine = syncedMachinesById.get(machineWorkflow.machineUnitId)
+        const orderMachine = processedMachine || syncedMachine
+        const order = processedMachine ? processedOrder : syncedOrder
         entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, serial: String(machineWorkflow.serialNumber).trim(), order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: orderMachine ? { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } : undefined, replaceExisting: Boolean(machineWorkflow.zohoBackupReplaceExisting) })
       }
     }
