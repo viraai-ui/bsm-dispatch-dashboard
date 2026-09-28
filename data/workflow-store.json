@@ -44844,7 +44844,9 @@
     "1154219000037567001": {
       "salesOrderId": "1154219000037567001",
       "salesOrderNumber": "SO-08049",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-28T09:51:48.289Z",
       "processedOrder": {
         "id": "1154219000037567001",
         "zohoSalesOrderId": "1154219000037567001",
@@ -44874,8 +44876,8 @@
           {
             "id": "1154219000037567001-1154219000037567004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271361",
+            "qrToken": "26271361",
             "orderId": "1154219000037567001",
             "lineItemId": "1154219000037567004",
             "itemName": "Compressor (2 Hp)",
@@ -44883,14 +44885,17 @@
             "customerName": "Doershappy",
             "salesOrderNumber": "SO-08049",
             "deliveryDate": "2026-09-28",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-28",
+            "vendor": "S P Nanda",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-28T12:28:29+0530"
@@ -44904,7 +44909,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-28T09:46:47.349Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-28T09:46:47.738Z"
+          "zohoBackupQueuedAt": "2026-09-28T09:51:48.289Z",
+          "processedAt": "2026-09-28T09:51:48.289Z",
+          "dispatchNote": "Local",
+          "vendor": "S P Nanda"
         }
       }
     }
