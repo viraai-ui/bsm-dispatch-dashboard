@@ -8499,6 +8499,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037275001": {
+      "id": "ship-1790584013805-n42zw",
+      "itemId": "1154219000037275001",
+      "orderId": "1154219000037275001",
+      "machineId": "1154219000037275001-1154219000037275004-1",
+      "salesOrderNumber": "SO-08002",
+      "customerName": "FILTERTEX INDIA PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "TCI EXPRESS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-25",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:26:53.805Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
