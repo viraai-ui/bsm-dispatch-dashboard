@@ -43798,15 +43798,16 @@
           "qrToken": "26271351",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-26T07:32:41.303Z",
-          "zohoBackupStatus": "synced",
+          "zohoBackupStatus": "error",
           "zohoBackupQueuedAt": "2026-09-26T07:32:41.562Z",
           "processedAt": "2026-09-26T07:35:14.766Z",
           "dispatchNote": "WOODEN",
           "vendor": "Able",
-          "zohoBackupLastAttemptAt": "2026-09-26T07:45:33.066Z",
+          "zohoBackupLastAttemptAt": "2026-09-28T12:00:40.534Z",
           "zohoBackupSyncedAt": "2026-09-26T07:45:33.066Z",
           "zohoBackupReplaceExisting": false,
-          "dispatchedAt": "2026-09-28T10:15:42.286Z"
+          "dispatchedAt": "2026-09-28T10:15:42.286Z",
+          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
         }
       }
     },
