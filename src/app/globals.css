@@ -815,7 +815,20 @@ button:disabled { opacity: .46; cursor: not-allowed; }
 /* BSM mobile app redesign pass */
 .sync-icon-btn { width: 46px; min-width: 46px; max-width: 46px; height: 46px; min-height: 46px; max-height: 46px; padding: 0; border-radius: 16px; display: inline-grid; place-items: center; aspect-ratio: 1 / 1; font-size: 18px; line-height: 1; color: #1e40af; background: #eff6ff; border-color: #bfdbfe; }
 .orders-list-head { align-items: flex-start; }
-.orders-list-controls { display: flex; align-items: center; gap: 12px; }
+.orders-list-controls { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.orders-search { width: min(360px, 34vw); min-width: 0; min-height: 44px; display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: center; overflow: hidden; border: 1px solid #dbe3ee; border-radius: 16px; background: #fff; box-shadow: 0 8px 24px rgba(15,23,42,.06), inset 0 1px 0 rgba(255,255,255,.9); transition: border-color .18s ease, box-shadow .18s ease; }
+.orders-search:focus-within { border-color: #93c5fd; box-shadow: 0 0 0 3px rgba(59,130,246,.12), 0 8px 24px rgba(15,23,42,.06); }
+.orders-search-icon { display: grid; place-items: center; color: #64748b; font-size: 22px; line-height: 1; transform: rotate(-18deg); }
+.orders-search input { width: 100%; min-width: 0; height: 44px; padding: 0 4px; border: 0; outline: 0; color: #0f172a; background: transparent; font-size: 13px; font-weight: 700; }
+.orders-search input::placeholder { color: #94a3b8; font-weight: 650; }
+.orders-search input::-webkit-search-cancel-button { display: none; }
+.orders-search-clear { width: 44px; min-width: 44px; min-height: 44px; padding: 0; display: grid; place-items: center; border: 0; color: #64748b; background: transparent; font-size: 22px; line-height: 1; }
+.orders-search-clear:hover { color: #0f172a; background: #f1f5f9; }
+.orders-empty-state { min-height: 230px; padding: 36px 18px; display: grid; place-items: center; align-content: center; gap: 7px; text-align: center; color: #64748b; border: 1px dashed #cbd5e1; border-radius: 18px; background: linear-gradient(180deg, #fbfdff, #f8fafc); }
+.orders-empty-state > span { width: 44px; height: 44px; display: grid; place-items: center; color: #2563eb; border-radius: 14px; background: #eff6ff; font-size: 25px; transform: rotate(-18deg); }
+.orders-empty-state strong { color: #0f172a; font-size: 17px; }
+.orders-empty-state p { max-width: 470px; margin: 0; font-size: 13px; line-height: 1.45; }
+.orders-empty-state .btn { margin-top: 8px; }
 .orders-status-filter { display: flex; align-items: center; gap: 8px; min-width: 150px; height: 46px; min-height: 46px; max-height: 46px; padding: 0 14px; border: 1px solid #e2e8f0; border-radius: 16px; background: #f8fafc; box-shadow: inset 0 1px 0 rgba(255,255,255,.82); }
 .orders-status-filter span { color: #64748b; font-size: 11px; font-weight: 950; letter-spacing: .08em; text-transform: uppercase; }
 .orders-status-filter select { flex: 1; width: 100%; min-width: 0; height: 32px; border: 0; outline: 0; background: transparent; color: #0f172a; font-size: 13px; font-weight: 900; cursor: pointer; }
@@ -849,7 +862,10 @@ button:disabled { opacity: .46; cursor: not-allowed; }
   .top, .passport-header { flex-direction: row; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
   .orders-page-title { display: none; }
   .orders-list-card .modal-section-title { margin-bottom: 12px; align-items: flex-start; }
-  .orders-list-controls { gap: 8px; align-items: center; align-self: flex-start; }
+  .orders-list-head { display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; }
+  .orders-list-controls { width: 100%; gap: 8px; align-items: center; align-self: flex-start; flex-wrap: wrap; }
+  .orders-search { order: -1; width: 100%; max-width: none; flex: 1 0 100%; border-radius: 14px; }
+  .orders-search input { font-size: 16px; }
   .orders-status-filter { min-width: 164px; width: 164px; flex: 0 0 164px; height: 46px; min-height: 46px; padding: 0 8px 0 12px; }
   .orders-status-filter select { height: 44px; font-size: 12px; line-height: 1; text-overflow: clip; }
   .orders-list-card .sync-icon-btn { margin: 0 2px 0 0; flex: 0 0 46px; }

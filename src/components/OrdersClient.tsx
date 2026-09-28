@@ -31,6 +31,7 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [workflowByOrder, setWorkflowByOrder] = useState<Record<string, OrderWorkflow>>({})
   const [stageByOrder, setStageByOrder] = useState<Record<string, OrderStage>>({})
   const [statusFilter, setStatusFilter] = useState<OrderStage | 'all'>('all')
+  const [searchQuery, setSearchQuery] = useState('')
   const [paymentBySalesOrder, setPaymentBySalesOrder] = useState<Record<string, ProjectedPaymentStatus>>({})
   const [canCancel, setCanCancel] = useState(false)
 
@@ -127,7 +128,22 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
 
   const openOrders = useMemo(() => sanitizeOrders(rows), [rows])
   const orderStage = (order: Order) => stageByOrder[order.id] || (workflowByOrder[order.id]?.status === 'processed' ? 'processed' : 'open')
-  const filteredOrders = useMemo(() => openOrders.filter((order) => statusFilter === 'all' || orderStage(order) === statusFilter), [openOrders, statusFilter, stageByOrder, workflowByOrder])
+  const filteredOrders = useMemo(() => {
+    const terms = normalizeOrderSearchText(searchQuery).split(' ').filter(Boolean)
+    return openOrders.filter((order) => {
+      if (statusFilter !== 'all' && orderStage(order) !== statusFilter) return false
+      if (!terms.length) return true
+      const searchable = normalizeOrderSearchText([
+        order.salesOrderNumber,
+        order.customerName,
+        order.salesperson,
+        ...order.lineItems.flatMap((item) => [item.itemName, item.sku]),
+        ...order.machines.flatMap((machine) => [machine.itemName, machine.sku, machine.serialNumber]),
+      ].filter(Boolean).join(' '))
+      const compactSearchable = searchable.replaceAll(' ', '')
+      return terms.every((term) => searchable.includes(term) || compactSearchable.includes(term))
+    })
+  }, [openOrders, searchQuery, statusFilter, stageByOrder, workflowByOrder])
   const pending = (o: Order) => o.lineItems.length ? o.lineItems.reduce((a, i) => a + i.pendingQuantity, 0) : '—'
   const openOrder = (order: Order) => {
     setError('')
@@ -141,6 +157,11 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       <div className="modal-section-title orders-list-head">
         <div><h2>Confirmed Sales Orders</h2>{lastSyncAt && <p className="muted">Last sync: {new Date(lastSyncAt).toLocaleString()}</p>}</div>
         <div className="orders-list-controls">
+          <label className="orders-search">
+            <span className="orders-search-icon" aria-hidden="true">⌕</span>
+            <input type="search" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} aria-label="Search orders" placeholder="Search orders, customers, machines…" autoComplete="off" />
+            {searchQuery && <button type="button" className="orders-search-clear" aria-label="Clear order search" title="Clear search" onClick={() => setSearchQuery('')}>×</button>}
+          </label>
           <label className="orders-status-filter" aria-label="Filter orders by status"><select value={statusFilter} onChange={(event) => setStatusFilter(event.target.value as OrderStage | 'all')}><option value="all">All statuses</option>{ORDER_STAGE_OPTIONS.map((stage) => <option value={stage} key={stage}>{stageLabel(stage)}</option>)}</select></label>
           <button className="btn light sync-icon-btn" aria-label="Sync" title="Sync" onClick={() => syncOrders(true)} disabled={syncing}>{syncing ? '↻' : '⟳'}</button>
         </div>
@@ -150,9 +171,14 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
       {error && <div className="form-error">{error}</div>}
       <div className="desktop-table table-wrap"><table className="table"><thead><tr><th>Sales Order</th><th>Customer</th><th>Salesperson</th><th>Delivery</th><th>Status</th><th>Payment</th><th>Action</th></tr></thead><tbody>{filteredOrders.map((o) => <tr key={o.id}><td><strong>{o.salesOrderNumber}</strong></td><td>{o.customerName}</td><td>{o.salesperson || '—'}</td><td>{formatDate(o.deliveryDate)}</td><td><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge></td><td><PaymentStatusChip status={paymentStatus(o)} />{!paymentStatus(o) && '—'}</td><td><button className="btn light" onClick={() => openOrder(o)}>View</button></td></tr>)}</tbody></table></div>
       <div className="mobile-cards">{filteredOrders.map((o) => <article className="card mobile-order-card mobile-order-tap-card compact-operational-card" key={o.id} onClick={() => openOrder(o)}><div className="compact-card-main"><strong>{o.salesOrderNumber}</strong><p className="muted">{o.customerName}</p><div className="order-status-strip"><Badge tone={stageTone(orderStage(o))}>{stageLabel(orderStage(o))}</Badge><PaymentStatusChip status={paymentStatus(o)} /></div></div><div className="compact-card-side"><div><span>Delivery</span><strong>{formatDate(o.deliveryDate)}</strong></div><div><span>Pending</span><strong>{pending(o)}</strong></div><button className="btn light compact-view-btn" onClick={(event) => { event.stopPropagation(); openOrder(o) }}>View</button></div></article>)}</div>
+      {filteredOrders.length === 0 && <div className="orders-empty-state" role="status"><span aria-hidden="true">⌕</span><strong>No orders match</strong><p>Try a Sales Order, customer, salesperson, machine, SKU, or serial number.</p>{searchQuery && <button type="button" className="btn light" onClick={() => setSearchQuery('')}>Clear search</button>}</div>}
     </section>
     {active && <OrderModal order={active} stage={activeStage} workflow={activeWorkflow} paymentStatus={paymentStatus(active)} canCancel={canCancel} onClose={() => setActive(null)} onSynced={(synced) => { setActive(synced); setRows((items) => { const next = items.map((item) => item.id === synced.id ? synced : item); cacheOrders(next); return next }) }} onCancelled={(cancelled) => { setRows((items) => { const next = items.filter((item) => item.id !== cancelled.id); cacheOrders(next); return next }); setActive(null); setNotice(`${cancelled.salesOrderNumber} removed from dashboard`) }} />}
   </>
+}
+
+function normalizeOrderSearchText(value: unknown) {
+  return String(value ?? '').normalize('NFKC').toLocaleLowerCase().trim().replace(/\s+/g, ' ')
 }
 
 function OrderModal({ order, stage, workflow, paymentStatus, canCancel, onClose, onSynced, onCancelled }: { order: Order; stage: OrderStage; workflow: OrderWorkflow | null; paymentStatus?: ProjectedPaymentStatus; canCancel: boolean; onClose: () => void; onSynced: (order: Order) => void; onCancelled: (order: Order) => void }) {
