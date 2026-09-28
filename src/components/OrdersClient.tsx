@@ -34,13 +34,21 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   const [paymentBySalesOrder, setPaymentBySalesOrder] = useState<Record<string, ProjectedPaymentStatus>>({})
   const [canCancel, setCanCancel] = useState(false)
 
+  const paymentProjectionVersion = useRef(0)
+  const paymentProjectionInFlight = useRef(false)
   const refreshPaymentProjection = useCallback(async () => {
+    if (paymentProjectionInFlight.current) return
+    paymentProjectionInFlight.current = true
     try {
       const response = await fetch('/api/payment-status-projection', { cache: 'no-store' })
       if (!response.ok) return
       const json = await response.json()
-      if (json?.bySalesOrder && typeof json.bySalesOrder === 'object') setPaymentBySalesOrder(json.bySalesOrder)
+      if (Number.isSafeInteger(json?.version) && json.version > paymentProjectionVersion.current && json?.bySalesOrder && typeof json.bySalesOrder === 'object') {
+        paymentProjectionVersion.current = json.version
+        setPaymentBySalesOrder(previous => ({ ...previous, ...json.bySalesOrder }))
+      }
     } catch { /* Display-only enrichment: operational behavior must fail open. */ }
+    finally { paymentProjectionInFlight.current = false }
   }, [])
   const paymentStatus = (order: Order) => paymentBySalesOrder[normalizeSalesOrderNumber(order.salesOrderNumber)]
 
@@ -62,9 +70,15 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   }, [live, refreshPaymentProjection])
 
   useEffect(() => {
-    const focus = () => void refreshPaymentProjection()
+    const focus = () => { if (document.visibilityState === 'visible') void refreshPaymentProjection() }
+    const timer = window.setInterval(focus, 15_000)
     window.addEventListener('focus', focus)
-    return () => window.removeEventListener('focus', focus)
+    document.addEventListener('visibilitychange', focus)
+    return () => {
+      window.clearInterval(timer)
+      window.removeEventListener('focus', focus)
+      document.removeEventListener('visibilitychange', focus)
+    }
   }, [refreshPaymentProjection])
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-export type ProjectedPaymentStatus = 'Pending' | 'Received'
+export type ProjectedPaymentStatus = 'Pending' | 'Received' | 'Partial' | 'Void'
 
 export type PaymentStatusProjectionInput = {
   salesOrderNumber?: unknown
