@@ -8568,6 +8568,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037360029": {
+      "id": "ship-1790584140159-4t07q",
+      "itemId": "1154219000037360029",
+      "orderId": "1154219000037360029",
+      "machineId": "1154219000037360029-1154219000037360032-1",
+      "salesOrderNumber": "SO-08029",
+      "customerName": "MANSA UPPER",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-24",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:29:00.159Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
