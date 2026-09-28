@@ -34,6 +34,7 @@ test('real reconciler revisits synced serial, fails closed on lost write, retrie
   let workflow = { salesOrderId: 'order', machines: { machine: { machineUnitId: 'machine', serialNumber: '26271344', vendor: 'Chosen', zohoBackupStatus: 'synced' } } }
   const backup = load('serial-sheet-backup', {
     './serial-sheet-vendors': rules,
+    './serial-sheet-vendor-transport': { ...(await import('../src/lib/serial-sheet-vendor-transport.ts')), reserveSheetCall: async () => {}, coolDownSheet: async () => {} },
     './workflow-store': {
       listWorkflows: async () => ({ order: workflow }),
       githubReadJson: async () => ({ data: { orders: {} } }),
@@ -42,9 +43,9 @@ test('real reconciler revisits synced serial, fails closed on lost write, retrie
   }, { fetch: async (url, options) => {
     if (url.includes('/oauth/')) return { ok: true, json: async () => ({ access_token: 'fixture', expires_in: 3600 }) }
     const method = options.body.get('method')
-    if (method === 'cell.content.set') { writes++; if (!loseWrite) content = [header, row('26271344', options.body.get('content'))] }
-    else assert.equal(method, 'worksheet.content.get', 'existing serial must never append')
-    return { ok: true, text: async () => JSON.stringify({ range_details: content }) }
+    if (method === 'worksheet.csvdata.set') { writes++; if (!loseWrite) content = [header, row('26271344', options.body.get('data').slice(1,-1))] }
+    else assert.ok(['worksheet.content.get','range.content.get'].includes(method), 'existing serial must never append')
+    return { ok: true, text: async () => JSON.stringify({ range_details: method === 'range.content.get' ? content.slice(1) : content }) }
   } })
   await backup.syncMissingGeneratedSerialsToZohoSheet()
   assert.equal(workflow.machines.machine.zohoBackupStatus, 'error')

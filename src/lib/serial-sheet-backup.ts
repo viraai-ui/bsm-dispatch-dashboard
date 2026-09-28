@@ -1,4 +1,5 @@
 import type { MachineUnit, Order } from '@/types/domain'
+import { reserveSheetCall, coolDownSheet, isSheetQuota, reconcileVendorRanges } from './serial-sheet-vendor-transport'
 import { exactAppendRows, exactSheetHeaders, planVendorUpdates, vendorEqual, workflowVendor, type VendorSource } from './serial-sheet-vendors'
 import { githubReadJson, listWorkflows, upsertOrderWorkflow } from './workflow-store'
 
@@ -75,6 +76,7 @@ async function refreshSheetAccessToken() {
 async function sheetPost(params: Record<string, string>) {
   const { resourceId } = sheetConfig()
   const token = await getSheetAccessToken()
+  await reserveSheetCall(resourceId)
   const response = await fetch(`${sheetDomain()}/api/v2/${resourceId}`, {
     method: 'POST',
     headers: { Authorization: `Zoho-oauthtoken ${token}`, 'content-type': 'application/x-www-form-urlencoded' },
@@ -84,7 +86,11 @@ async function sheetPost(params: Record<string, string>) {
   const text = await response.text()
   let data: any = {}
   try { data = JSON.parse(text) } catch { data = { raw: text } }
-  if (!response.ok || data.status === 'failure' || data.error_code) throw new Error(data.error_message || data.message || `Zoho Sheet request failed (${response.status})`)
+  if (!response.ok || data.status === 'failure' || data.error_code) {
+    const error = Object.assign(new Error(data.error_message || data.message || `Zoho Sheet request failed (${response.status})`), { code: data.error_code, status: response.status })
+    if (isSheetQuota(error)) await coolDownSheet(resourceId)
+    throw error
+  }
   return data
 }
 
@@ -95,7 +101,7 @@ async function sheetPostWithRetry(params: Record<string, string>, retries = 3) {
       lastError = error
       const message = error instanceof Error ? error.message.toLowerCase() : ''
       // Retrying a depleted quota immediately only multiplies the outage.
-      if (/api request limit|rate limit|too many requests|quota/.test(message)) break
+      if (isSheetQuota(error) || /rate budget/.test(message)) break
       if (attempt < retries) await new Promise((resolve) => setTimeout(resolve, attempt * 1200))
     }
   }
@@ -347,7 +353,7 @@ export async function updateSerialVendorsInZohoSheet(machines: MachineUnit[]): P
     const reconciliation = await reconcileVendorSources(sources)
     result.synced = reconciliation.updated
     result.skipped = reconciliation.outcomes.filter(item => item.status === 'verified').length - result.synced
-    result.errors = reconciliation.outcomes.filter(item => !['verified', 'unknown'].includes(item.status)).map(item => item.error || `${item.serial}: vendor pending verification`)
+    result.errors = [...reconciliation.errors, ...reconciliation.outcomes.filter(item => !['verified', 'unknown'].includes(item.status)).map(item => item.error || `${item.serial}: vendor pending verification`)]
     result.verified = !result.errors.length
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet vendor update failed')
@@ -358,18 +364,7 @@ export async function updateSerialVendorsInZohoSheet(machines: MachineUnit[]): P
 async function reconcileVendorSources(sources: VendorSource[]) {
   const { worksheetName } = sheetConfig()
   const before = await fetchWorksheetContent(worksheetName)
-  const plan = planVendorUpdates(before, sources)
-  for (const update of plan.updates) {
-    // Recheck physical identity and blankness immediately before a single-cell write.
-    const fresh = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName, range: `A${update.row}:Z${update.row}` })
-    const current = planVendorUpdates([before.find((row: any) => Number(row.row_index) === 1), ...(fresh.range_details || [])], [{ serial: update.serial, vendor: update.vendor }])
-    if (current.updates.length !== 1 || current.updates[0].row !== update.row) continue
-    await setCellContent(worksheetName, update.row, update.column, update.vendor)
-    await new Promise(resolve => setTimeout(resolve, 250))
-  }
-  const after = plan.updates.length ? await fetchWorksheetContent(worksheetName) : before
-  const verified = planVendorUpdates(after, sources)
-  return { outcomes: verified.outcomes, updated: plan.updates.filter(update => verified.outcomes.some(item => item.serial === update.serial && item.status === 'verified')).length }
+  return reconcileVendorRanges(before, sources, worksheetName, sheetPost)
 }
 
 async function appendSerialRows(rows: SerialSheetRecord[]) {
@@ -530,11 +525,11 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
     if (replacements.length) await replaceSerialRows(replacements)
     if (rows.length) await appendSerialRows(rows)
     const vendorSources = entries.map(entry => ({ serial: entry.serial, vendor: entry.vendor }))
-    const vendors = await reconcileVendorSources(vendorSources).catch(error => ({
-      updated: 0,
-      outcomes: vendorSources.map(item => ({ serial: item.serial, status: item.vendor ? 'pending' : 'unknown', error: item.vendor ? `${item.serial}: ${error instanceof Error ? error.message : 'vendor verification failed'}` : undefined })),
-    }))
+    // Initial quota/read failures leave durable workflow statuses untouched. The
+    // next cron scans every serial again; no global error-status rewrite is needed.
+    const vendors = await reconcileVendorSources(vendorSources)
     result.vendorUpdated = vendors.updated
+    result.errors.push(...vendors.errors)
     result.sourceEmptyVendors = vendors.outcomes.filter(item => item.status === 'unknown').map(item => item.serial)
     const vendorBlocked = new Set(vendors.outcomes.filter(item => !['verified', 'unknown'].includes(item.status)).map(item => item.serial))
     result.errors.push(...vendors.outcomes.filter(item => item.error).map(item => item.error!))
