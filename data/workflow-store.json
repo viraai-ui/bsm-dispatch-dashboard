@@ -45004,7 +45004,9 @@
     "1154219000037568006": {
       "salesOrderId": "1154219000037568006",
       "salesOrderNumber": "SO-08051",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-28T11:53:07.624Z",
       "processedOrder": {
         "id": "1154219000037568006",
         "zohoSalesOrderId": "1154219000037568006",
@@ -45034,8 +45036,8 @@
           {
             "id": "1154219000037568006-1154219000037568009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271363",
+            "qrToken": "26271363",
             "orderId": "1154219000037568006",
             "lineItemId": "1154219000037568009",
             "itemName": "hole punching machine (pneumatic)",
@@ -45043,14 +45045,17 @@
             "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
             "salesOrderNumber": "SO-08051",
             "deliveryDate": "2026-09-28",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-28",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-28T16:23:03+0530"
@@ -45064,7 +45069,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-28T11:52:11.991Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-28T11:52:12.581Z"
+          "zohoBackupQueuedAt": "2026-09-28T11:53:07.624Z",
+          "processedAt": "2026-09-28T11:53:07.624Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
