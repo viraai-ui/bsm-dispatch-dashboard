@@ -16893,14 +16893,12 @@
           "serialNumber": "26271031",
           "qrToken": "26271031",
           "qrStatus": "generated",
-          "qrGeneratedAt": "2026-09-28T11:44:07.096Z",
-          "zohoBackupStatus": "error",
+          "qrGeneratedAt": "2026-09-28T11:47:19.469Z",
+          "zohoBackupStatus": "pending",
           "zohoBackupQueuedAt": "2026-08-21T11:20:50.739Z",
           "transferDestinationOrderId": "1154219000036922008",
           "transferDestinationSalesOrderNumber": "SO-07950",
-          "transferredAt": "2026-09-16T10:44:27Z",
-          "zohoBackupLastAttemptAt": "2026-09-28T11:45:36.925Z",
-          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
+          "transferredAt": "2026-09-16T10:44:27Z"
         }
       }
     },
