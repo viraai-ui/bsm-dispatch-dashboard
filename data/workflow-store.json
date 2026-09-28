@@ -44908,11 +44908,14 @@
           "qrToken": "26271361",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-28T09:46:47.349Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-28T09:51:48.289Z",
           "processedAt": "2026-09-28T09:51:48.289Z",
           "dispatchNote": "Local",
-          "vendor": "S P Nanda"
+          "vendor": "S P Nanda",
+          "zohoBackupLastAttemptAt": "2026-09-28T10:00:42.643Z",
+          "zohoBackupSyncedAt": "2026-09-28T10:00:42.643Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
