@@ -8323,6 +8323,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037338003": {
+      "id": "ship-1790580465837-wh78p",
+      "itemId": "1154219000037338003",
+      "orderId": "1154219000037338003",
+      "machineId": "1154219000037338003-1154219000037338006-1",
+      "salesOrderNumber": "SO-08021",
+      "customerName": "JN International",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL LOGISTICS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-26 at 2.01.04 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-28%2FSO-08021%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-28T07-27-40-711Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-28/SO-08021/shipment-lr-builty/Shipment-LR-Builty-2026-09-28T07-27-40-711Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-28T07:27:45.837Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-26",
+      "notes": "",
+      "shippedAt": "2026-09-28T07:27:45.837Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
