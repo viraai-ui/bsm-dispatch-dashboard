@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037568006": {
+      "id": "1154219000037568006",
+      "zohoSalesOrderId": "1154219000037568006",
+      "salesOrderNumber": "SO-08051",
+      "status": "open",
+      "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+      "shippingAddress": "Plot No. 37, Sec-4B, Industrial Estate, Bahadurgarh Haryana-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037568009",
+          "itemName": "hole punching machine (pneumatic)",
+          "sku": "324",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228106",
+          "rate": 34000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037568006-1154219000037568009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037568006",
+          "lineItemId": "1154219000037568009",
+          "itemName": "hole punching machine (pneumatic)",
+          "sku": "324",
+          "customerName": "Relaxo Footwears Ltd. Unit-VIII, Sec-4B",
+          "salesOrderNumber": "SO-08051",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T16:23:03+0530"
+    },
     "1154219000037570001": {
       "id": "1154219000037570001",
       "zohoSalesOrderId": "1154219000037570001",
@@ -5868,6 +5918,7 @@
     }
   },
   "orderIds": [
+    "1154219000037568006",
     "1154219000037570001",
     "1154219000037567001",
     "1154219000037560001",
@@ -5918,8 +5969,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T10:43:57.028Z",
-  "lastAttemptAt": "2026-09-28T11:00:24.966Z",
+  "lastSuccessfulSyncAt": "2026-09-28T11:02:02.633Z",
+  "lastAttemptAt": "2026-09-28T11:02:02.633Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
