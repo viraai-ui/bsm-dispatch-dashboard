@@ -26023,6 +26023,65 @@
         "1154219000037427005-1154219000037427009-1",
         "1154219000037427005-1154219000037427008-1"
       ]
+    },
+    "1154219000037416020": {
+      "completedAt": "2026-09-28T10:12:43.195Z",
+      "order": {
+        "id": "1154219000037416020",
+        "zohoSalesOrderId": "1154219000037416020",
+        "salesOrderNumber": "SO-08038",
+        "status": "open",
+        "customerName": "Samu Sports",
+        "shippingAddress": "8, Rajan Nagar, Leather Complex Road, Basti Pirdad, Jalandhar, Punjab, 144021",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-25",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037416023",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000002187978",
+            "rate": 40000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037416020-1154219000037416023-1",
+            "unitNumber": 1,
+            "serialNumber": "26271356",
+            "qrToken": "26271356",
+            "orderId": "1154219000037416020",
+            "lineItemId": "1154219000037416023",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "Samu Sports",
+            "salesOrderNumber": "SO-08038",
+            "deliveryDate": "2026-09-25",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "dispatchNote": "WOODEN"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T16:53:09+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037416020-1154219000037416023-1"
+      ]
     }
   }
 }
