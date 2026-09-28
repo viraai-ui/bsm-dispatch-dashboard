@@ -8230,6 +8230,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037420001": {
+      "id": "ship-1790580105409-vg1pu",
+      "itemId": "1154219000037420001",
+      "orderId": "1154219000037420001",
+      "machineId": "1154219000037420001-1154219000037420004-1",
+      "salesOrderNumber": "SO-08036",
+      "customerName": "VISHAL",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-25",
+      "notes": "",
+      "shippedAt": "2026-09-28T07:21:45.409Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
