@@ -44929,7 +44929,9 @@
     "1154219000037602001": {
       "salesOrderId": "1154219000037602001",
       "salesOrderNumber": "SO-08052",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-28T11:51:39.404Z",
       "processedOrder": {
         "id": "1154219000037602001",
         "zohoSalesOrderId": "1154219000037602001",
@@ -44959,8 +44961,8 @@
           {
             "id": "1154219000037602001-1154219000037602004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271362",
+            "qrToken": "26271362",
             "orderId": "1154219000037602001",
             "lineItemId": "1154219000037602004",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -44968,14 +44970,17 @@
             "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
             "salesOrderNumber": "SO-08052",
             "deliveryDate": "2026-09-28",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-28",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-28T17:01:33+0530"
@@ -44989,7 +44994,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-28T11:49:48.577Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-28T11:49:49.159Z"
+          "zohoBackupQueuedAt": "2026-09-28T11:51:39.404Z",
+          "processedAt": "2026-09-28T11:51:39.404Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
