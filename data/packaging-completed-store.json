@@ -26082,6 +26082,66 @@
       "machineIds": [
         "1154219000037416020-1154219000037416023-1"
       ]
+    },
+    "1154219000037567001": {
+      "completedAt": "2026-09-28T11:34:10.699Z",
+      "order": {
+        "id": "1154219000037567001",
+        "zohoSalesOrderId": "1154219000037567001",
+        "salesOrderNumber": "SO-08049",
+        "status": "open",
+        "customerName": "Doershappy",
+        "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037567004",
+            "itemName": "Compressor (2 Hp)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000227672",
+            "rate": 30000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037567001-1154219000037567004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271361",
+            "qrToken": "26271361",
+            "orderId": "1154219000037567001",
+            "lineItemId": "1154219000037567004",
+            "itemName": "Compressor (2 Hp)",
+            "sku": "",
+            "customerName": "Doershappy",
+            "salesOrderNumber": "SO-08049",
+            "deliveryDate": "2026-09-28",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-28",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-28T12:28:29+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000037567001-1154219000037567004-1"
+      ]
     }
   }
 }
