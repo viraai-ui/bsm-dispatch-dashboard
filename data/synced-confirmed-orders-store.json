@@ -235,6 +235,30 @@
           "zohoItemId": "1154219000000279428",
           "rate": 520000,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037572005",
+          "itemName": "Compressor (5 Hp)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000279731",
+          "rate": 82000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037572006",
+          "itemName": "Silicon sheet for TPU Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 3,
+          "pendingQuantity": 3,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000615109",
+          "rate": 5000,
+          "dispatchCategory": "machine"
         }
       ],
       "machines": [
@@ -258,9 +282,93 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000037475007-1154219000037572005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037475007",
+          "lineItemId": "1154219000037572005",
+          "itemName": "Compressor (5 Hp)",
+          "sku": "",
+          "customerName": "Sarup Industries Limited",
+          "salesOrderNumber": "SO-08045",
+          "deliveryDate": "2026-09-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037475007-1154219000037572006-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037475007",
+          "lineItemId": "1154219000037572006",
+          "itemName": "Silicon sheet for TPU Machine",
+          "sku": "",
+          "customerName": "Sarup Industries Limited",
+          "salesOrderNumber": "SO-08045",
+          "deliveryDate": "2026-09-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037475007-1154219000037572006-2",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037475007",
+          "lineItemId": "1154219000037572006",
+          "itemName": "Silicon sheet for TPU Machine",
+          "sku": "",
+          "customerName": "Sarup Industries Limited",
+          "salesOrderNumber": "SO-08045",
+          "deliveryDate": "2026-09-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037475007-1154219000037572006-3",
+          "unitNumber": 5,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037475007",
+          "lineItemId": "1154219000037572006",
+          "itemName": "Silicon sheet for TPU Machine",
+          "sku": "",
+          "customerName": "Sarup Industries Limited",
+          "salesOrderNumber": "SO-08045",
+          "deliveryDate": "2026-09-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-28T10:38:58+0530"
+      "zohoLastModifiedTime": "2026-09-28T14:22:39+0530"
     },
     "1154219000037433003": {
       "id": "1154219000037433003",
@@ -5810,8 +5918,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T08:45:26.580Z",
-  "lastAttemptAt": "2026-09-28T08:59:28.348Z",
+  "lastSuccessfulSyncAt": "2026-09-28T09:00:19.892Z",
+  "lastAttemptAt": "2026-09-28T09:00:19.892Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
