@@ -8816,6 +8816,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037270001": {
+      "id": "ship-1790584674963-ad28l",
+      "itemId": "1154219000037270001",
+      "orderId": "1154219000037270001",
+      "machineId": "1154219000037270001-1154219000037270004-1",
+      "salesOrderNumber": "SO-07998",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAM9670",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-23",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:37:54.963Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
