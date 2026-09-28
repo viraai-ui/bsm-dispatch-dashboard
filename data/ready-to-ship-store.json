@@ -8168,6 +8168,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037449002": {
+      "id": "ship-1790579854754-8337n",
+      "itemId": "1154219000037449002",
+      "orderId": "1154219000037449002",
+      "machineId": "1154219000037449002-1154219000037449005-1",
+      "salesOrderNumber": "SO-08043",
+      "customerName": "SELFIEE FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK8974",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-28",
+      "notes": "",
+      "shippedAt": "2026-09-28T07:17:34.754Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
