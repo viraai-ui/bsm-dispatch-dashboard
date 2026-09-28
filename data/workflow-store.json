@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271358,
+  "serialCounter": 26271359,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -44669,6 +44669,82 @@
           "zohoBackupLastAttemptAt": "2026-09-28T05:45:34.114Z",
           "zohoBackupSyncedAt": "2026-09-28T05:45:34.114Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000037570001": {
+      "salesOrderId": "1154219000037570001",
+      "salesOrderNumber": "SO-08050",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037570001",
+        "zohoSalesOrderId": "1154219000037570001",
+        "salesOrderNumber": "SO-08050",
+        "status": "open",
+        "customerName": "Attirare Footwear Pvt Ltd",
+        "shippingAddress": "Plot No 1023, MIE , Part A, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037570004",
+            "itemName": "Zigzag Flatbed [Heavy duty]",
+            "sku": "1530",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226789",
+            "rate": 44000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037570005",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1186,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037570001-1154219000037570004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037570001",
+            "lineItemId": "1154219000037570004",
+            "itemName": "Zigzag Flatbed [Heavy duty]",
+            "sku": "1530",
+            "customerName": "Attirare Footwear Pvt Ltd",
+            "salesOrderNumber": "SO-08050",
+            "deliveryDate": "2026-09-28",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-28T13:07:30+0530"
+      },
+      "machines": {
+        "1154219000037570001-1154219000037570004-1": {
+          "machineUnitId": "1154219000037570001-1154219000037570004-1",
+          "lineItemId": "1154219000037570004",
+          "serialNumber": "26271359",
+          "qrToken": "26271359",
+          "qrStatus": "pending"
         }
       }
     }
