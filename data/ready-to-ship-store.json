@@ -8599,6 +8599,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037366002": {
+      "id": "ship-1790584224060-cru03",
+      "itemId": "1154219000037366002",
+      "orderId": "1154219000037366002",
+      "machineId": "1154219000037366002-1154219000037366005-1",
+      "salesOrderNumber": "SO-08024",
+      "customerName": "NMCEE INTERNATIONAL PVT. LTD.",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "UP16ST7178",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-24",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:30:24.060Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
