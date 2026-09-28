@@ -21,6 +21,7 @@ type SerialSheetRecord = {
 
 type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[]; verified?: boolean; missingFields?: string[]; vendorUpdated?: number; sourceEmptyVendors?: string[] }
 export type SerialSheetDatabaseResult = { orders: Order[]; warrantyDates: Record<string, string>; configured: boolean; errors: string[]; fetchedAt?: string; stale?: boolean }
+type SerialSyncEntry = { workflowId: string; machineId: string; serial: string; vendor: string; order?: Order; machine?: MachineUnit; generatedAt: string; replaceExisting: boolean }
 
 let cachedSheetAccessToken: { token: string; expiresAt: number } | null = null
 let pendingSheetAccessToken: Promise<string> | null = null
@@ -316,6 +317,36 @@ function buildRows(order: Order, machines: MachineUnit[], date: string, firstSNo
   }))
 }
 
+// Only rows absent from the sheet consume S.No.; historical workflows and
+// replacements of existing rows must not create gaps in the sequence.
+export function planSerialSheetRows(records: Record<string, unknown>[], entries: SerialSyncEntry[]) {
+  const existingSNo = new Map<string, string>()
+  for (const record of records) {
+    const serial = String(sheetValue(record, ['Serial No.', 'Serial No', 'Serial']) || '').trim()
+    if (serial && !existingSNo.has(serial)) existingSNo.set(serial, String(sheetValue(record, ['S.No.', 'S.No', 'S No', 'SNo', 's_no']) || '').trim())
+  }
+  const existing = new Set(existingSNo.keys())
+  let nextSNo = nextSerialSheetNumber(records)
+  const rows: SerialSheetRecord[] = []
+  const replacements: SerialSheetRecord[] = []
+  const sourceCounts = new Map<string, number>()
+  for (const entry of entries) sourceCounts.set(entry.serial, (sourceCounts.get(entry.serial) || 0) + 1)
+  for (const entry of entries) {
+    if (sourceCounts.get(entry.serial)! > 1 || !entry.order || !entry.machine) continue
+    if (existing.has(entry.serial)) {
+      if (entry.replaceExisting) replacements.push(...buildRows(entry.order, [entry.machine], entry.generatedAt, existingSNo.get(entry.serial) || nextSNo))
+      continue
+    }
+    const built = buildRows(entry.order, [entry.machine], entry.generatedAt, nextSNo)
+    if (entry.replaceExisting) replacements.push(...built)
+    else rows.push(...built)
+    existing.add(entry.serial)
+    existingSNo.set(entry.serial, nextSNo)
+    nextSNo = String(Number(nextSNo) + built.length)
+  }
+  return { rows, replacements }
+}
+
 async function fetchWorksheetContent(worksheetName: string) {
   const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName })
   if (!Array.isArray(data.range_details)) throw new Error('Zoho Sheet content response missing rows; refusing reconciliation')
@@ -485,7 +516,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
   try {
     const workflows = await listWorkflows()
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
-    const entries: { workflowId: string; machineId: string; serial: string; vendor: string; order?: Order; machine?: MachineUnit; generatedAt: string; replaceExisting: boolean }[] = []
+    const entries: SerialSyncEntry[] = []
     for (const workflow of Object.values(workflows)) {
       const processedOrder = workflow.processedOrder
       const syncedOrder = synced.data.orders?.[workflow.salesOrderId]
@@ -510,18 +541,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
     const records = await fetchSerialRecords()
     const existing = new Set(records.map((row: any) => String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()).filter(Boolean))
     const wasExisting = new Set(existing)
-    let nextSNo = nextSerialSheetNumber(records)
-    const rows: SerialSheetRecord[] = []; const replacements: SerialSheetRecord[] = []
-    const sourceCounts = new Map<string, number>()
-    for (const entry of entries) sourceCounts.set(entry.serial, (sourceCounts.get(entry.serial) || 0) + 1)
-    for (const entry of entries) {
-      if (sourceCounts.get(entry.serial)! > 1) continue
-      if (!entry.order || !entry.machine) continue // incomplete snapshots must remain queued
-      const built = buildRows(entry.order, [entry.machine], entry.generatedAt, nextSNo)
-      if (entry.replaceExisting) replacements.push(...built)
-      else if (!existing.has(entry.serial)) { rows.push(...built); existing.add(entry.serial) }
-      nextSNo = String(Number(nextSNo) + built.length)
-    }
+    const { rows, replacements } = planSerialSheetRows(records, entries)
     if (replacements.length) await replaceSerialRows(replacements)
     if (rows.length) await appendSerialRows(rows)
     const vendorSources = entries.map(entry => ({ serial: entry.serial, vendor: entry.vendor }))
