@@ -100,34 +100,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-28T10:39:28+0530"
     },
-    "1154219000037472002": {
-      "id": "1154219000037472002",
-      "zohoSalesOrderId": "1154219000037472002",
-      "salesOrderNumber": "SO-08046",
-      "status": "open",
-      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
-      "shippingAddress": "Khasra No. 508, Plot No. 9, Industrial Area, Basai Encalave-1, Gurugram, Haryana, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-27",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037472005",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 125,
-          "pendingQuantity": 125,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 345,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-28T10:38:58+0530"
-    },
     "1154219000037475007": {
       "id": "1154219000037475007",
       "zohoSalesOrderId": "1154219000037475007",
@@ -5678,7 +5650,6 @@
   "orderIds": [
     "1154219000037560001",
     "1154219000037538004",
-    "1154219000037472002",
     "1154219000037475007",
     "1154219000037469001",
     "1154219000037449002",
@@ -5725,8 +5696,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T05:34:34.089Z",
-  "lastAttemptAt": "2026-09-28T05:40:25.305Z",
+  "lastSuccessfulSyncAt": "2026-09-28T05:41:36.332Z",
+  "lastAttemptAt": "2026-09-28T05:41:36.332Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
