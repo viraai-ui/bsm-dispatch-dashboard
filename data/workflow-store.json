@@ -16894,11 +16894,13 @@
           "qrToken": "26271031",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-28T11:44:07.096Z",
-          "zohoBackupStatus": "synced",
+          "zohoBackupStatus": "error",
           "zohoBackupQueuedAt": "2026-08-21T11:20:50.739Z",
           "transferDestinationOrderId": "1154219000036922008",
           "transferDestinationSalesOrderNumber": "SO-07950",
-          "transferredAt": "2026-09-16T10:44:27Z"
+          "transferredAt": "2026-09-16T10:44:27Z",
+          "zohoBackupLastAttemptAt": "2026-09-28T11:45:36.925Z",
+          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
         }
       }
     },
