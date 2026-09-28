@@ -28,7 +28,7 @@ assert.ok(sheet.includes('replaceSerialRows(replacements)'), 'ownership changes 
 assert.ok(sheet.includes('zohoBackupReplaceExisting: ok ? false'), 'replace intent must remain durable until verified')
 assert.ok(sheet.includes("rows.length || replacements.length"), 'replacement must be read back before acknowledgement')
 assert.ok(sheet.includes("if (content === '')") && sheet.includes("method: 'range.clear'"), 'replacement must clear blank cells without sending an invalid empty cell.content.set request')
-assert.ok(sheet.includes('/api request limit|rate limit|too many requests|quota/'), 'quota failures must not be aggressively retried')
+assert.ok(sheet.includes('if (isSheetQuota(error) || /rate budget/.test(message)) break'), 'quota failures must not be aggressively retried')
 // Fault model: first append succeeds but readback fails. The item remains queued; on the
 // next tick the initial read sees it and skips append, then marks it synced. Repeated ticks
 // stop at the synced state and cannot append a duplicate.
