@@ -8423,6 +8423,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037309001": {
+      "id": "ship-1790583821244-srr99",
+      "itemId": "1154219000037309001",
+      "orderId": "1154219000037309001",
+      "machineId": "1154219000037309001-1154219000037309004-1",
+      "salesOrderNumber": "SO-08013",
+      "customerName": "Dev Cleaning Services Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL LOGISTICS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-28 at 1.53.13 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-28%2FSO-08013%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-28T08-23-37-768Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-28/SO-08013/shipment-lr-builty/Shipment-LR-Builty-2026-09-28T08-23-37-768Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-28T08:23:41.244Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-25",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:23:41.244Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
