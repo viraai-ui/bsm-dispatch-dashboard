@@ -8361,6 +8361,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037302003": {
+      "id": "ship-1790583610065-kbjzs",
+      "itemId": "1154219000037302003",
+      "orderId": "1154219000037302003",
+      "machineId": "1154219000037302003-1154219000037302006-1",
+      "salesOrderNumber": "SO-08016",
+      "customerName": "A-One Footarts Pvt. Ltd.(Mahesh Jee)",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL04EC3957",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-26",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:20:10.065Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
