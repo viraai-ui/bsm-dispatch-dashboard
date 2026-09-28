@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037560001": {
+      "id": "1154219000037560001",
+      "zohoSalesOrderId": "1154219000037560001",
+      "salesOrderNumber": "SO-08048",
+      "status": "open",
+      "customerName": "OLIVES AND GOLD (OPC) PRIVATE LIMITED",
+      "shippingAddress": "3rd Floor , V- 7, Red,Cross Road, Mie Part - B, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037560004",
+          "itemName": "Pneumatic Marginal Gluing Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004395037",
+          "rate": 75000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037560001-1154219000037560004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037560001",
+          "lineItemId": "1154219000037560004",
+          "itemName": "Pneumatic Marginal Gluing Machine",
+          "sku": "",
+          "customerName": "OLIVES AND GOLD (OPC) PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08048",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T10:54:58+0530"
+    },
     "1154219000037538004": {
       "id": "1154219000037538004",
       "zohoSalesOrderId": "1154219000037538004",
@@ -1365,56 +1415,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-22T15:00:17+0530"
-    },
-    "1154219000037224017": {
-      "id": "1154219000037224017",
-      "zohoSalesOrderId": "1154219000037224017",
-      "salesOrderNumber": "SO-07989",
-      "status": "open",
-      "customerName": "Easan Fine Arts",
-      "shippingAddress": "64, Thiruthangal Main Road, ( Opp. Bell Hotel ) Sivakasi, Virudhunagar, Tamil Nadu, 626123, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037224020",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000227370",
-          "rate": 53500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037224017-1154219000037224020-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037224017",
-          "lineItemId": "1154219000037224020",
-          "itemName": "Eyelet Punching Single Channel",
-          "sku": "918",
-          "customerName": "Easan Fine Arts",
-          "salesOrderNumber": "SO-07989",
-          "deliveryDate": "2026-09-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-22T11:07:55+0530"
     },
     "1154219000037205001": {
       "id": "1154219000037205001",
@@ -5470,6 +5470,56 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     },
+    "1154219000037224017": {
+      "id": "1154219000037224017",
+      "zohoSalesOrderId": "1154219000037224017",
+      "salesOrderNumber": "SO-07989",
+      "status": "open",
+      "customerName": "Easan Fine Arts",
+      "shippingAddress": "64, Thiruthangal Main Road, ( Opp. Bell Hotel ) Sivakasi, Virudhunagar, Tamil Nadu, 626123, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037224020",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000227370",
+          "rate": 53500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037224017-1154219000037224020-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037224017",
+          "lineItemId": "1154219000037224020",
+          "itemName": "Eyelet Punching Single Channel",
+          "sku": "918",
+          "customerName": "Easan Fine Arts",
+          "salesOrderNumber": "SO-07989",
+          "deliveryDate": "2026-09-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-22T11:07:55+0530"
+    },
     "1154219000037275001": {
       "id": "1154219000037275001",
       "zohoSalesOrderId": "1154219000037275001",
@@ -5626,6 +5676,7 @@
     }
   },
   "orderIds": [
+    "1154219000037560001",
     "1154219000037538004",
     "1154219000037472002",
     "1154219000037475007",
@@ -5644,7 +5695,6 @@
     "1154219000037243118",
     "1154219000037273001",
     "1154219000037260006",
-    "1154219000037224017",
     "1154219000037205001",
     "1154219000037152003",
     "1154219000036935021",
@@ -5670,12 +5720,13 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000030035027",
+    "1154219000037224017",
     "1154219000037275001",
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T05:21:21.511Z",
-  "lastAttemptAt": "2026-09-28T05:33:34.606Z",
+  "lastSuccessfulSyncAt": "2026-09-28T05:34:34.089Z",
+  "lastAttemptAt": "2026-09-28T05:34:34.089Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
