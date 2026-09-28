@@ -8847,6 +8847,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037155011": {
+      "id": "ship-1790584802290-gxhup",
+      "itemId": "1154219000037155011",
+      "orderId": "1154219000037155011",
+      "machineId": "1154219000037155011-1154219000037155014-1",
+      "salesOrderNumber": "SO-07985",
+      "customerName": "M & U FOOTWEAR TRADING",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL LOGISTICS",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-21",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:40:02.290Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
