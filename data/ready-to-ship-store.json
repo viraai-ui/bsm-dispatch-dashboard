@@ -8909,6 +8909,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037249013": {
+      "id": "ship-1790585549456-h4162",
+      "itemId": "1154219000037249013",
+      "orderId": "1154219000037249013",
+      "machineId": "1154219000037249013-1154219000037249016-1",
+      "salesOrderNumber": "SO-08009",
+      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Bullet Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "BUILD.pdf",
+        "type": "application/pdf",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-28%2FSO-08009%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-28T08-52-26-142Z.pdf",
+        "r2Key": "media-proof/shipment/2026-09-28/SO-08009/shipment-lr-builty/Shipment-LR-Builty-2026-09-28T08-52-26-142Z.pdf",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-28T08:52:29.456Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-28",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:52:29.456Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
