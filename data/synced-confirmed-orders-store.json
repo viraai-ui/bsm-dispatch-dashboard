@@ -150,34 +150,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-28T10:38:58+0530"
     },
-    "1154219000037469001": {
-      "id": "1154219000037469001",
-      "zohoSalesOrderId": "1154219000037469001",
-      "salesOrderNumber": "SO-08044",
-      "status": "open",
-      "customerName": "SHAKTI ENTERPRISES",
-      "shippingAddress": "GROUND FLOOR, KHEWAT NO-510,, Unnamed Road, NEAR- RADHA SWATI SATSANG, Surya Nagar, Sankhol,, Jhajjar, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-26",
-      "dashboardStatus": "Review Required",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037469004",
-          "itemName": "Hotmelt Adhesive - 7100",
-          "sku": "7100",
-          "description": "",
-          "quantity": 75,
-          "pendingQuantity": 75,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000228524",
-          "rate": 315,
-          "dispatchCategory": "adhesive"
-        }
-      ],
-      "machines": [],
-      "zohoLastModifiedTime": "2026-09-26T15:24:24+0530"
-    },
     "1154219000037449002": {
       "id": "1154219000037449002",
       "zohoSalesOrderId": "1154219000037449002",
@@ -5442,6 +5414,34 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     },
+    "1154219000037469001": {
+      "id": "1154219000037469001",
+      "zohoSalesOrderId": "1154219000037469001",
+      "salesOrderNumber": "SO-08044",
+      "status": "open",
+      "customerName": "SHAKTI ENTERPRISES",
+      "shippingAddress": "GROUND FLOOR, KHEWAT NO-510,, Unnamed Road, NEAR- RADHA SWATI SATSANG, Surya Nagar, Sankhol,, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-26",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037469004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 75,
+          "pendingQuantity": 75,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 315,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-26T15:24:24+0530"
+    },
     "1154219000037224017": {
       "id": "1154219000037224017",
       "zohoSalesOrderId": "1154219000037224017",
@@ -5651,7 +5651,6 @@
     "1154219000037560001",
     "1154219000037538004",
     "1154219000037475007",
-    "1154219000037469001",
     "1154219000037449002",
     "1154219000037433003",
     "1154219000037427005",
@@ -5691,13 +5690,14 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000030035027",
+    "1154219000037469001",
     "1154219000037224017",
     "1154219000037275001",
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T06:04:32.489Z",
-  "lastAttemptAt": "2026-09-28T06:18:35.249Z",
+  "lastSuccessfulSyncAt": "2026-09-28T06:19:31.785Z",
+  "lastAttemptAt": "2026-09-28T06:19:31.785Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
