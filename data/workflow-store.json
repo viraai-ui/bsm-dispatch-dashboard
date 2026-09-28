@@ -16823,9 +16823,9 @@
     "1154219000035933004": {
       "salesOrderId": "1154219000035933004",
       "salesOrderNumber": "SO-07789",
-      "status": "qr_generated",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-08-21T11:21:39.394Z",
+      "processedAt": "2026-09-28T12:14:05.960Z",
       "processedOrder": {
         "id": "1154219000035933004",
         "zohoSalesOrderId": "1154219000035933004",
@@ -16835,7 +16835,7 @@
         "shippingAddress": "DAG- 609, MOUZA- 87, NARAYANPUR, Malancha,, South Twenty Four Parganas, West Bengal, 743502",
         "salesperson": "Shivani Kumari",
         "deliveryDate": "2026-08-21",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -16846,6 +16846,8 @@
             "quantity": 1,
             "pendingQuantity": 1,
             "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225102",
+            "rate": 35000,
             "dispatchCategory": "machine"
           },
           {
@@ -16856,6 +16858,8 @@
             "quantity": 1,
             "pendingQuantity": 1,
             "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
             "dispatchCategory": "freight"
           }
         ],
@@ -16863,8 +16867,8 @@
           {
             "id": "1154219000035933004-1154219000035933007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271364",
+            "qrToken": "26271364",
             "orderId": "1154219000035933004",
             "lineItemId": "1154219000035933007",
             "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -16872,7 +16876,7 @@
             "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
             "salesOrderNumber": "SO-07789",
             "deliveryDate": "2026-08-21",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
@@ -16884,7 +16888,8 @@
             "vendor": "K S",
             "dispatchNote": "wooden"
           }
-        ]
+        ],
+        "zohoLastModifiedTime": "2026-08-21T16:44:17+0530"
       },
       "machines": {
         "1154219000035933004-1154219000035933007-1": {
@@ -16894,12 +16899,15 @@
           "qrToken": "26271364",
           "qrStatus": "generated",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-28T12:08:33.651Z",
+          "zohoBackupQueuedAt": "2026-09-28T12:14:05.960Z",
           "transferDestinationOrderId": "1154219000036922008",
           "transferDestinationSalesOrderNumber": "SO-07950",
           "transferredAt": "2026-09-16T10:44:27Z",
           "zohoBackupLastAttemptAt": "2026-09-28T12:00:40.534Z",
-          "qrGeneratedAt": "2026-09-28T12:08:33.651Z"
+          "qrGeneratedAt": "2026-09-28T12:08:33.651Z",
+          "processedAt": "2026-09-28T12:14:05.960Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     },
