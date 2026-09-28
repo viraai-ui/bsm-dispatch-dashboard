@@ -16823,7 +16823,7 @@
     "1154219000035933004": {
       "salesOrderId": "1154219000035933004",
       "salesOrderNumber": "SO-07789",
-      "status": "open",
+      "status": "qr_generated",
       "dispatchPriority": "regular",
       "processedAt": "2026-08-21T11:21:39.394Z",
       "processedOrder": {
@@ -16892,16 +16892,10 @@
           "lineItemId": "1154219000035933007",
           "serialNumber": "26271031",
           "qrToken": "26271031",
-          "qrStatus": "transferred",
-          "qrGeneratedAt": "2026-08-21T11:20:41.337Z",
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-09-28T11:44:07.096Z",
           "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-08-21T11:20:50.739Z",
-          "processedAt": "2026-08-21T11:21:39.394Z",
-          "dispatchNote": "wooden",
-          "vendor": "K S",
-          "zohoBackupLastAttemptAt": "2026-08-21T11:30:34.649Z",
-          "zohoBackupSyncedAt": "2026-08-21T11:30:34.649Z",
-          "dispatchedAt": "2026-08-22T09:33:44.799Z",
           "transferDestinationOrderId": "1154219000036922008",
           "transferDestinationSalesOrderNumber": "SO-07950",
           "transferredAt": "2026-09-16T10:44:27Z"
