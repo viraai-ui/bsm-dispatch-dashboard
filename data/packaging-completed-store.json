@@ -25535,6 +25535,65 @@
       "machineIds": [
         "1154219000037449002-1154219000037449005-1"
       ]
+    },
+    "1154219000037249013": {
+      "completedAt": "2026-09-28T08:51:07.785Z",
+      "order": {
+        "id": "1154219000037249013",
+        "zohoSalesOrderId": "1154219000037249013",
+        "salesOrderNumber": "SO-08009",
+        "status": "open",
+        "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+        "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037249016",
+            "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+            "sku": "205",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226939",
+            "rate": 195000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037249013-1154219000037249016-1",
+            "unitNumber": 1,
+            "serialNumber": "26271357",
+            "qrToken": "26271357",
+            "orderId": "1154219000037249013",
+            "lineItemId": "1154219000037249016",
+            "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+            "sku": "205",
+            "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+            "salesOrderNumber": "SO-08009",
+            "deliveryDate": "2026-09-22",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-26",
+            "dispatchNote": "WOODEN"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-23T10:33:31+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037249013-1154219000037249016-1"
+      ]
     }
   }
 }
