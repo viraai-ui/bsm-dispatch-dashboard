@@ -8199,6 +8199,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037285004": {
+      "id": "ship-1790579909492-bftj5",
+      "itemId": "1154219000037285004",
+      "orderId": "1154219000037285004",
+      "machineId": "1154219000037285004-1154219000037285007-1",
+      "salesOrderNumber": "SO-08005",
+      "customerName": "RNC IMPEX PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAF0257",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-25",
+      "notes": "",
+      "shippedAt": "2026-09-28T07:18:29.492Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
