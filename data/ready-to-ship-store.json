@@ -8947,6 +8947,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037416020": {
+      "id": "ship-1790590453107-dachb",
+      "itemId": "1154219000037416020",
+      "orderId": "1154219000037416020",
+      "machineId": "1154219000037416020-1154219000037416023-1",
+      "salesOrderNumber": "SO-08038",
+      "customerName": "Samu Sports",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-28",
+      "notes": "",
+      "shippedAt": "2026-09-28T10:14:13.107Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
