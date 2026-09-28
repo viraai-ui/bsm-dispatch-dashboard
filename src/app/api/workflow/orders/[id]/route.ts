@@ -50,7 +50,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const machines = { ...(current?.machines || {}) }
       if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) {
         const existing = machines[item.machineUnitId]
-        machines[item.machineUnitId] = { ...item, serialNumber: item.serialNumber || existing?.serialNumber, qrToken: item.qrToken || existing?.qrToken || item.serialNumber || existing?.serialNumber, qrStatus: 'generated', zohoBackupStatus: existing?.zohoBackupStatus === 'synced' ? 'synced' : 'pending', zohoBackupQueuedAt: existing?.zohoBackupQueuedAt || now, zohoBackupError: undefined }
+        machines[item.machineUnitId] = { ...item, serialNumber: item.serialNumber || existing?.serialNumber, qrToken: item.qrToken || existing?.qrToken || item.serialNumber || existing?.serialNumber, qrStatus: 'generated', zohoBackupStatus: existing?.zohoBackupStatus === 'synced' ? 'synced' : 'pending', zohoBackupQueuedAt: existing?.zohoBackupQueuedAt || now, zohoBackupError: undefined, transferDestinationOrderId: existing?.transferDestinationOrderId, transferDestinationSalesOrderNumber: existing?.transferDestinationSalesOrderNumber, transferredAt: existing?.transferredAt }
       }
       if (action === 'not_required') for (const machine of selectedMachines(order, body.selectedMachineIds)) machines[machine.id] = { machineUnitId: machine.id, lineItemId: machine.lineItemId, qrStatus: 'not_required', qrNotRequiredAt: now }
       const generated = Object.values(machines).filter((m) => m.qrStatus === 'generated').length

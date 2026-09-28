@@ -10,6 +10,7 @@ import { dispatchCategoryLabel } from '@/lib/item-classification'
 import type { MachineUnit, Order } from '@/types/domain'
 import type { MachineWorkflow, OrderWorkflow } from '@/lib/workflow-store'
 import { safeLocalStorageRemove, safeLocalStorageSet } from '@/lib/safe-local-storage'
+import { isTransferredMachineWorkflow } from '@/lib/machine-workflow-projection'
 
 type OrderStage = 'open' | 'processed' | 'packed' | 'packing_video' | 'loading_video' | 'closed'
 
@@ -391,8 +392,8 @@ function StageTracker({ stage }: { stage: OrderStage }) {
 function initialQrCodes(order: Order, workflow: OrderWorkflow | null) {
   const codes: Record<string, string> = {}
   for (const machine of order.machines) {
-    const saved = workflow?.machines?.[machine.id]?.qrCode
-    if (saved) codes[machine.id] = saved
+    const saved = workflow?.machines?.[machine.id]
+    if (saved?.qrCode && !isTransferredMachineWorkflow(saved)) codes[machine.id] = saved.qrCode
   }
   return codes
 }
@@ -528,7 +529,7 @@ function displayDescription(name: string, description?: string) {
   if (clean.toLowerCase() === String(name || '').replace(/\s+/g, ' ').trim().toLowerCase()) return ''
   return clean
 }
-function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.dispatchedAt ? 'Dispatched' : saved.processedAt ? 'Processed' : saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
+function applyWorkflow(order: Order, workflow: OrderWorkflow | null) { if (!workflow) return order; return { ...order, machines: order.machines.map((machine) => { const saved = workflow.machines[machine.id]; if (!saved) return machine; if (isTransferredMachineWorkflow(saved)) return machine; return { ...machine, serialNumber: saved.serialNumber || '', qrToken: saved.qrToken || '', status: saved.dispatchedAt ? 'Dispatched' : saved.processedAt ? 'Processed' : saved.qrStatus === 'generated' ? 'QR Generated' : saved.qrStatus === 'not_required' ? 'QR Printed' : machine.status } }) } }
 async function saveWorkflow(orderId: string, payload: unknown) { const controller = new AbortController(); const timeout = window.setTimeout(() => controller.abort(), 30_000); try { const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload), signal: controller.signal }); const json = await response.json().catch(() => ({})); if (!response.ok || !json.ok) throw new Error(json.error || `Could not save workflow (${response.status})`); return json } catch (error) { if (error instanceof DOMException && error.name === 'AbortError') throw new Error('Processing timed out. No duplicate will be created; please retry once.'); throw error } finally { window.clearTimeout(timeout) } }
 async function allocateSerials(orderId: string, order: Order, machineIds: string[]) { if (!machineIds.length) return {} as Record<string, string>; const response = await fetch(`/api/workflow/orders/${orderId}`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'allocate_serials', order, machineIds }) }); const json = await response.json(); if (!response.ok || !json.ok) throw new Error(json.error || 'Could not allocate serial numbers'); return (json.data?.serials || {}) as Record<string, string> }
 function readCachedOrders() { if (typeof window === 'undefined') return []; try { return sanitizeOrders(JSON.parse(localStorage.getItem(ORDERS_CACHE_KEY) || '[]') as Order[]) } catch { return [] } }

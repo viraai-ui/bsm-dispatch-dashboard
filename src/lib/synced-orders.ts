@@ -6,6 +6,7 @@ import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, t
 import { isCurrentZohoOrderTombstoned, isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { ensureOrderedMachineSlots, hasIncompleteMachineSlots } from './machine-unit-slots'
 import { reconcileConfirmedOrderSnapshots, type PackagingCompletedStore } from './synced-order-reconciliation'
+import { isTransferredMachineWorkflow } from './machine-workflow-projection'
 
 export type SyncedOrdersStore = {
   orders: Record<string, Order>
@@ -222,6 +223,7 @@ function applyWorkflow(order: Order, workflow?: OrderWorkflow): Order {
 function applyMachineWorkflow(machine: MachineUnit, workflow: OrderWorkflow): MachineUnit {
   const saved = workflow.machines?.[machine.id]
   if (!saved) return machine
+  if (isTransferredMachineWorkflow(saved)) return machine
   return {
     ...machine,
     serialNumber: saved.serialNumber || machine.serialNumber,

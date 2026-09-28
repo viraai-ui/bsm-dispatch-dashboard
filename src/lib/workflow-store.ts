@@ -1,6 +1,7 @@
 import type { Order } from '@/types/domain'
 import { isOrderIdentityTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { markPublicDatabaseDirty } from './public-database-freshness'
+import { isTransferredMachineWorkflow } from './machine-workflow-projection'
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
 const GITHUB_READ_COOLDOWN_MS = 2 * 60 * 1000
@@ -17,7 +18,7 @@ export type MachineWorkflow = {
   serialNumber?: string
   qrCode?: string
   qrToken?: string
-  qrStatus: 'pending' | 'generated' | 'not_required'
+  qrStatus: 'pending' | 'generated' | 'not_required' | 'transferred'
   qrGeneratedAt?: string
   qrNotRequiredAt?: string
   processedAt?: string
@@ -37,6 +38,9 @@ export type MachineWorkflow = {
   replacedSerialVoidedAt?: string
   /** Reconcile by replacing the existing Sheet row, not merely acknowledging its presence. */
   zohoBackupReplaceExisting?: boolean
+  transferDestinationOrderId?: string
+  transferDestinationSalesOrderNumber?: string
+  transferredAt?: string
 }
 
 export type OrderWorkflow = {
@@ -266,7 +270,7 @@ export async function allocateSerialNumbersLegacy(orderId: string, machineIds: s
 
 export function deriveWorkflowStatus(workflow: OrderWorkflow | null, totalMachines: number): OrderWorkflow['status'] {
   if (!workflow) return 'open'
-  const machines = Object.values(workflow.machines || {})
+  const machines = Object.values(workflow.machines || {}).filter((machine) => !isTransferredMachineWorkflow(machine))
   const dispatched = machines.filter((machine) => machine.dispatchedAt).length
   const processed = machines.filter((machine) => machine.processedAt).length
   if (totalMachines > 0 && dispatched >= totalMachines) return 'processed'
