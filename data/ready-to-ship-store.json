@@ -8630,6 +8630,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037316001": {
+      "id": "ship-1790584301598-mkdf1",
+      "itemId": "1154219000037316001",
+      "orderId": "1154219000037316001",
+      "machineId": "1154219000037316001-1154219000037316004-1",
+      "salesOrderNumber": "SO-08014",
+      "customerName": "EARTH DEFENCE SYSTEM",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAC8326",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-28",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:31:41.598Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
