@@ -38,10 +38,16 @@ test('future processed then closed remains, while active current remains unaffec
   assert.deepEqual(result.orders.map(x => x.id).sort(), ['current', 'future'])
 })
 
-test('baseline tombstone has precedence over active Zoho and no-LR local state', () => {
-  const saved = order('precedence')
-  const result = project({ synced: [saved], workflows: { precedence: workflow('precedence', saved) }, shipments: { precedence: { shipmentType: 'transporter', shippedAt: 'x', lrCopy: null } }, tombstones: { precedence: tombstone('precedence', 'builty_needed') } })
-  assert.equal(result.byId.precedence, undefined)
+test('current confirmed Zoho order overrides legacy omission tombstone', () => {
+  const saved = { ...order('1154219000035933004'), salesOrderNumber: 'SO-07789' }
+  const result = project({ synced: [saved], workflows: { [saved.id]: workflow(saved.id, saved) }, shipments: { [saved.id]: { shipmentType: 'transporter', shippedAt: 'x', lrCopy: null } }, tombstones: { [saved.id]: { ...tombstone(saved.id, 'builty_needed'), salesOrderNumber: saved.salesOrderNumber } } })
+  assert.equal(result.byId[saved.id]?.order.salesOrderNumber, 'SO-07789')
+})
+
+test('explicit dashboard cancellation still overrides a current confirmed Zoho order', () => {
+  const saved = order('cancelled-current')
+  const result = project({ synced: [saved], tombstones: { [saved.id]: { ...tombstone(saved.id), reason: 'cancelled_from_dashboard' } } })
+  assert.equal(result.byId[saved.id], undefined)
 })
 
 test('admin cancellation matches stable id first and normalized SO fallback while preserving history inputs', () => {

@@ -38,6 +38,19 @@ export function isOrderTombstoned(order: Pick<Order, 'id' | 'zohoSalesOrderId' |
   return isOrderIdentityTombstoned({ orderId: order.id, zohoSalesOrderId: order.zohoSalesOrderId, salesOrderNumber: order.salesOrderNumber }, tombstones)
 }
 
+function matchingTombstone(order: Pick<Order, 'id' | 'zohoSalesOrderId' | 'salesOrderNumber'>, tombstones: Record<string, LifecycleTombstone>) {
+  const direct = tombstones[order.id] || (order.zohoSalesOrderId ? tombstones[order.zohoSalesOrderId] : undefined)
+  if (direct) return direct
+  const number = normalizeOrderNumber(order.salesOrderNumber)
+  return number ? Object.values(tombstones).find((item) => normalizeOrderNumber(item.salesOrderNumber) === number) : undefined
+}
+
+/** Current Zoho presence supersedes the one-time pre-cutover omission guess.
+ * Explicit operator cancellations remain durable until deliberately undone. */
+export function isCurrentZohoOrderTombstoned(order: Pick<Order, 'id' | 'zohoSalesOrderId' | 'salesOrderNumber'>, tombstones: Record<string, LifecycleTombstone>) {
+  return matchingTombstone(order, tombstones)?.reason === 'cancelled_from_dashboard'
+}
+
 /** Cancellation boundary for queue/read-model records that may not carry a full Order.
  * Stable source IDs win; normalized SO is the compatibility fallback for legacy snapshots. */
 export function isOrderIdentityTombstoned(identity: { orderId?: string; zohoSalesOrderId?: string; salesOrderNumber?: string }, tombstones: Record<string, LifecycleTombstone>) {
@@ -71,11 +84,12 @@ export function projectOperationalOrders(input: OperationalProjectionInput) {
 
   for (const id of ids) {
     const candidate = syncedById.get(id) || workflows[id]?.processedOrder || completed[id]?.order
-    // Durable terminal decisions win; source workflow/media/history remain intact.
-    if (tombstones[id] || (candidate && isOrderTombstoned(candidate, tombstones))) continue
+    // Current Zoho presence supersedes a legacy "closed or omitted" guess. An
+    // explicit dashboard cancellation remains a durable operator decision.
+    const synced = syncedById.get(id)
+    if (candidate && (synced ? isCurrentZohoOrderTombstoned(candidate, tombstones) : isOrderTombstoned(candidate, tombstones))) continue
     const workflow = workflows[id]
     const durableOrder = workflow?.processedOrder || completed[id]?.order
-    const synced = syncedById.get(id)
     const processed = Boolean(durableOrder && (workflow?.status === 'processed' || workflow?.processedAt || Object.values(workflow?.machines || {}).some((machine) => machine.processedAt) || completed[id]))
     if (!processed && (!synced || !activeZoho(synced))) continue
     const order = (durableOrder ? { ...synced, ...durableOrder } : synced) as Order

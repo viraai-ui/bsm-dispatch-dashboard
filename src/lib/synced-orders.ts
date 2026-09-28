@@ -3,7 +3,7 @@ import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { fetchZohoConfirmedOrders, fetchZohoOrderDetail } from './zoho'
 import { reconcileOrder, type OrderSyncDiff } from './order-reconcile'
 import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow, type Store as WorkflowStore } from './workflow-store'
-import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
+import { isCurrentZohoOrderTombstoned, isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { ensureOrderedMachineSlots, hasIncompleteMachineSlots } from './machine-unit-slots'
 import { reconcileConfirmedOrderSnapshots, type PackagingCompletedStore } from './synced-order-reconciliation'
 
@@ -55,7 +55,7 @@ export function isOperationalZohoOrder(order: Order | null | undefined) {
 
 export async function getOperationalOrderIds() {
   const [store, baseline] = await Promise.all([readSyncedOrdersStore(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
-  return new Set(store.orderIds.filter((id) => isOperationalZohoOrder(store.orders[id]) && !isOrderTombstoned(store.orders[id], baseline.data.tombstones)))
+  return new Set(store.orderIds.filter((id) => isOperationalZohoOrder(store.orders[id]) && !isCurrentZohoOrderTombstoned(store.orders[id], baseline.data.tombstones)))
 }
 
 function normalizeStore(store: SyncedOrdersStore): SyncedOrdersStore {
@@ -84,12 +84,15 @@ export async function listOrdersModuleOrders() {
     .map((id) => store.orders[id] ? applyWorkflow(store.orders[id], workflows[id]) : null)
     .filter((order): order is Order => order !== null)
     .filter((order) => isOperationalZohoOrder(order) || hasIncompleteMachineSlots(order, workflows[order.id]))
-    .filter((order) => !isOrderTombstoned(order, baseline.data.tombstones))
+    .filter((order) => !isCurrentZohoOrderTombstoned(order, baseline.data.tombstones))
 }
 
 export async function listSyncedOrders() {
   const [store, workflows, baseline] = await Promise.all([readSyncedOrdersStore(), listWorkflows(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
-  return listSyncedOrdersFromSnapshots(store, workflows).filter((order) => !isOrderTombstoned(order, baseline.data.tombstones))
+  const currentIds = new Set(store.orderIds)
+  return listSyncedOrdersFromSnapshots(store, workflows).filter((order) => currentIds.has(order.id)
+    ? !isCurrentZohoOrderTombstoned(order, baseline.data.tombstones)
+    : !isOrderTombstoned(order, baseline.data.tombstones))
 }
 
 export function listSyncedOrdersFromSnapshots(store: SyncedOrdersStore, workflows: Record<string, OrderWorkflow>) {
