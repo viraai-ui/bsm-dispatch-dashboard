@@ -1,5 +1,67 @@
 {
   "orders": {
+    "1154219000037570001": {
+      "id": "1154219000037570001",
+      "zohoSalesOrderId": "1154219000037570001",
+      "salesOrderNumber": "SO-08050",
+      "status": "open",
+      "customerName": "Attirare Footwear Pvt Ltd",
+      "shippingAddress": "Plot No 1023, MIE , Part A, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037570004",
+          "itemName": "Zigzag Flatbed [Heavy duty]",
+          "sku": "1530",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226789",
+          "rate": 44000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037570005",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1186,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037570001-1154219000037570004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037570001",
+          "lineItemId": "1154219000037570004",
+          "itemName": "Zigzag Flatbed [Heavy duty]",
+          "sku": "1530",
+          "customerName": "Attirare Footwear Pvt Ltd",
+          "salesOrderNumber": "SO-08050",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T13:07:30+0530"
+    },
     "1154219000037567001": {
       "id": "1154219000037567001",
       "zohoSalesOrderId": "1154219000037567001",
@@ -443,7 +505,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-09-25T13:38:06+0530"
+      "zohoLastModifiedTime": "2026-09-28T13:10:35+0530"
     },
     "1154219000037415002": {
       "id": "1154219000037415002",
@@ -5698,6 +5760,7 @@
     }
   },
   "orderIds": [
+    "1154219000037570001",
     "1154219000037567001",
     "1154219000037560001",
     "1154219000037538004",
@@ -5747,8 +5810,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T07:21:20.509Z",
-  "lastAttemptAt": "2026-09-28T07:40:25.073Z",
+  "lastSuccessfulSyncAt": "2026-09-28T07:41:33.977Z",
+  "lastAttemptAt": "2026-09-28T07:41:33.977Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
