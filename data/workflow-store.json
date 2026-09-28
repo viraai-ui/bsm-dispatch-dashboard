@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271357,
+  "serialCounter": 26271358,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -44588,6 +44588,70 @@
           "zohoBackupLastAttemptAt": "2026-09-26T12:15:33.866Z",
           "zohoBackupSyncedAt": "2026-09-26T12:15:33.866Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000037560001": {
+      "salesOrderId": "1154219000037560001",
+      "salesOrderNumber": "SO-08048",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037560001",
+        "zohoSalesOrderId": "1154219000037560001",
+        "salesOrderNumber": "SO-08048",
+        "status": "open",
+        "customerName": "OLIVES AND GOLD (OPC) PRIVATE LIMITED",
+        "shippingAddress": "3rd Floor , V- 7, Red,Cross Road, Mie Part - B, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037560004",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004395037",
+            "rate": 75000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037560001-1154219000037560004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037560001",
+            "lineItemId": "1154219000037560004",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "customerName": "OLIVES AND GOLD (OPC) PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08048",
+            "deliveryDate": "2026-09-28",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-28T10:54:58+0530"
+      },
+      "machines": {
+        "1154219000037560001-1154219000037560004-1": {
+          "machineUnitId": "1154219000037560001-1154219000037560004-1",
+          "lineItemId": "1154219000037560004",
+          "serialNumber": "26271358",
+          "qrToken": "26271358",
+          "qrStatus": "pending"
         }
       }
     }
