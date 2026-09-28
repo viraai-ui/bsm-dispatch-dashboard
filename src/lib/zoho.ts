@@ -1,5 +1,6 @@
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
+import { fetchCompleteZohoSalesOrderFeed, isOpenZohoSalesOrderSummary } from './zoho-sales-order-feed'
 
 const dc = process.env.ZOHO_DC || 'in'
 const accountsDomain = `https://accounts.zoho.${dc}`
@@ -85,12 +86,8 @@ async function zohoGetWithRetry(path: string, token: string, retries = 4) {
   throw lastError instanceof Error ? lastError : new Error(`Zoho request failed: ${path}`)
 }
 
-const closedStatuses = new Set(['closed', 'void', 'cancelled', 'canceled'])
 function isOpenOrder(raw: any) {
-  const status = String(raw.status || raw.current_sub_status || raw.order_status || raw.salesorder_status || '').toLowerCase()
-  const shipment = String(raw.shipment_status || '').toLowerCase()
-  const invoiced = String(raw.invoiced_status || '').toLowerCase()
-  return !closedStatuses.has(status) && shipment !== 'shipped' && invoiced !== 'invoiced'
+  return isOpenZohoSalesOrderSummary(raw)
 }
 
 function readCustomField(source: any, names: string[]) {
@@ -298,31 +295,14 @@ export async function fetchZohoPaymentOpenOrders(): Promise<Order[]> {
 export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getZohoAccessToken()
-  const summaries: any[] = []
-  let pagesFetched = 0
-  for (let page = 1; page <= 500; page += 1) {
-    const list = await zohoGetWithRetry(`/inventory/v1/salesorders?filter_by=Status.Confirmed&per_page=200&page=${page}&sort_column=created_time&sort_order=D`, token)
-    const rows = list.salesorders || []
-    if (!Array.isArray(rows)) throw new Error(`Invalid Zoho sales order page ${page}`)
-    summaries.push(...rows)
-    pagesFetched = page
-    const pageContext = list.page_context || {}
-    if (Number(pageContext.page || page) !== page && pageContext.page) throw new Error(`Unexpected Zoho pagination response on page ${page}`)
-    if (!pageContext.has_more_page || rows.length === 0) break
-    if (page === 500) throw new Error('Zoho pagination limit reached before completion')
-  }
-  if (!pagesFetched) throw new Error('Zoho returned no pagination data')
-  const seen = new Set<string>()
-  const excludedStatuses = new Set(['draft', 'void', 'cancelled', 'canceled', 'closed'])
-  const confirmed = summaries.filter((row) => {
-    const id = String(row.salesorder_id || '')
-    const status = String(row.status || row.current_sub_status || row.order_status || '').toLowerCase()
-    if (!id || seen.has(id)) return false
-    seen.add(id)
-    return !excludedStatuses.has(status)
-  })
-  if (summaries.length > 0 && confirmed.length === 0) throw new Error('Zoho confirmed-order view returned no usable sales orders')
-  return fetchZohoOrderDetailsInBatches(confirmed.map((summary) => String(summary.salesorder_id)), token)
+  // Do not rely on Status.Confirmed: Zoho's filtered view can omit older open
+  // orders. Reconcile from the complete newest-first feed and classify every row.
+  const summaries = await fetchCompleteZohoSalesOrderFeed(
+    (page) => zohoGetWithRetry(`/inventory/v1/salesorders?per_page=200&page=${page}&sort_column=created_time&sort_order=D`, token),
+  )
+  const open = summaries.filter(isOpenOrder)
+  if (summaries.length > 0 && open.length === 0) throw new Error('Zoho sales-order feed returned no open sales orders')
+  return fetchZohoOrderDetailsInBatches(open.map((summary) => String(summary.salesorder_id)), token)
 }
 
 async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 2): Promise<Order[]> {
