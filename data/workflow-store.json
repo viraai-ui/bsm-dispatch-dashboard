@@ -10526,10 +10526,10 @@
           "dispatchNote": "local",
           "vendor": "Aradhya",
           "dispatchedAt": "2026-08-13T08:08:11.129Z",
-          "zohoBackupStatus": "error",
-          "zohoBackupLastAttemptAt": "2026-09-28T07:45:35.682Z",
-          "zohoBackupSyncedAt": "2026-08-17T11:00:33.076Z",
-          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
+          "zohoBackupStatus": "synced",
+          "zohoBackupLastAttemptAt": "2026-09-28T08:15:41.255Z",
+          "zohoBackupSyncedAt": "2026-09-28T08:15:41.255Z",
+          "zohoBackupReplaceExisting": false
         },
         "1154219000033848001-1154219000034224365-1": {
           "machineUnitId": "1154219000033848001-1154219000034224365-1",
@@ -10544,8 +10544,8 @@
           "vendor": "Able",
           "dispatchedAt": "2026-08-13T08:08:11.129Z",
           "zohoBackupStatus": "synced",
-          "zohoBackupLastAttemptAt": "2026-09-28T07:45:35.682Z",
-          "zohoBackupSyncedAt": "2026-09-28T07:45:35.682Z",
+          "zohoBackupLastAttemptAt": "2026-09-28T08:15:41.255Z",
+          "zohoBackupSyncedAt": "2026-09-28T08:15:41.255Z",
           "zohoBackupReplaceExisting": false
         }
       }
