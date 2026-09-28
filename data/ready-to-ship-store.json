@@ -8785,6 +8785,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000036137001": {
+      "id": "ship-1790584601186-up73s",
+      "itemId": "1154219000036137001",
+      "orderId": "1154219000036137001",
+      "machineId": "1154219000036137001-1154219000036137008-1",
+      "salesOrderNumber": "SO-07831",
+      "customerName": "Capital Footwear Pvt. Ltd. - Nepal",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "SUGAM TRANSPORT",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-23",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:36:41.186Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
