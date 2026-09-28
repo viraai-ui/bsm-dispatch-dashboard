@@ -4,9 +4,12 @@ import type { Order } from '@/types/domain'
 export type SerialAllocationStatus = 'allocated_pending' | 'generated' | 'processed' | 'dispatched' | 'voided'
 export type SerialAllocation = { machineUnitId: string; serialNumber: string; qrToken: string; status: SerialAllocationStatus }
 export type LedgerInsert = { serial: bigint; identity: string; orderId: string; salesOrderNumber: string; machineUnitId: string; idempotencyKey: string; qrToken: string; source: string; metadata: Record<string, unknown> }
+export type TransferReallocation = { key: string; destinationOrderId?: string; transferredAt?: string }
+export type AllocationLookup = { serial: bigint; metadata: Record<string, unknown> }
 export interface SerialTransaction {
   maximum(): Promise<bigint>
-  find(identity: string, idempotencyKey: string): Promise<bigint | undefined>
+  find(identity: string, idempotencyKey: string): Promise<AllocationLookup | undefined>
+  archiveForReallocation(identity: string, idempotencyKey: string, serial: bigint, detail: Record<string, unknown>): Promise<void>
   insert(row: LedgerInsert): Promise<void>
   setCounter(value: bigint): Promise<void>
 }
@@ -47,18 +50,21 @@ export async function ensureSerialLedgerSchema() {
 }
 
 /** Database-independent allocation core. The caller supplies one exclusive, atomic transaction. */
-export async function allocateInTransaction(tx: SerialTransaction, orderId: string, machineIds: string[], order?: Order) {
+export async function allocateInTransaction(tx: SerialTransaction, orderId: string, machineIds: string[], order?: Order, transfers: Record<string, TransferReallocation> = {}) {
   let next = await tx.maximum()
   const allocated: Record<string, string> = {}
   for (const machineUnitId of Array.from(new Set(machineIds.filter(Boolean)))) {
     const identity = `${orderId}:${machineUnitId}`, idempotencyKey = `serial:${identity}`
     const existing = await tx.find(identity, idempotencyKey)
-    if (existing !== undefined) { allocated[machineUnitId] = existing.toString(); continue }
+    const transfer = transfers[machineUnitId]
+    if (existing && (!transfer || existing.metadata.reallocationKey === transfer.key)) { allocated[machineUnitId] = existing.serial.toString(); continue }
+    if (existing && transfer) await tx.archiveForReallocation(identity, idempotencyKey, existing.serial, { reallocationKey: transfer.key, destinationOrderId: transfer.destinationOrderId, transferredAt: transfer.transferredAt })
     const source = order?.machines?.find(machine => machine.id === machineUnitId)
     const preserved = String(source?.serialNumber || '').trim()
-    const serial = preserved && /^\d+$/.test(preserved) ? BigInt(preserved) : ++next
-    const qrToken = String(source?.qrToken || serial)
-    await tx.insert({ serial, identity, orderId, salesOrderNumber: order?.salesOrderNumber || '', machineUnitId, idempotencyKey, qrToken, source: preserved ? 'preserved' : 'dashboard', metadata: { lineItemId: source?.lineItemId || '' } })
+    // A transferred machine must never preserve the serial now owned by its destination.
+    const serial = !transfer && preserved && /^\d+$/.test(preserved) ? BigInt(preserved) : ++next
+    const qrToken = transfer ? serial.toString() : String(source?.qrToken || serial)
+    await tx.insert({ serial, identity, orderId, salesOrderNumber: order?.salesOrderNumber || '', machineUnitId, idempotencyKey, qrToken, source: preserved && !transfer ? 'preserved' : transfer ? 'transfer_reallocation' : 'dashboard', metadata: { lineItemId: source?.lineItemId || '', ...(transfer ? { reallocationKey: transfer.key, reallocatedFromSerial: existing?.serial.toString(), transferDestinationOrderId: transfer.destinationOrderId, transferredAt: transfer.transferredAt } : {}) } })
     if (serial > next) next = serial
     allocated[machineUnitId] = serial.toString()
   }
@@ -72,7 +78,14 @@ function pgTransaction(client: PoolClient): SerialTransaction {
       const result = await client.query<{ maximum: string }>(`select greatest($1::bigint,coalesce((select last_serial from serial_counters where namespace='dashboard'),$1::bigint),coalesce((select max(serial_number) from serial_allocations where namespace='dashboard'),$1::bigint),coalesce((select max(serial_number::bigint) from machines where serial_number ~ '^[0-9]+$' and serial_number::bigint >= $1),$1::bigint))::text maximum`, [SERIAL_FLOOR.toString()])
       return BigInt(result.rows[0].maximum)
     },
-    async find(identity, key) { const r = await client.query<{ serial_number: string }>('select serial_number::text from serial_allocations where machine_identity=$1 or idempotency_key=$2', [identity, key]); return r.rowCount ? BigInt(r.rows[0].serial_number) : undefined },
+    async find(identity, key) { const r = await client.query<{ serial_number: string; metadata: Record<string, unknown> }>('select serial_number::text,metadata from serial_allocations where machine_identity=$1 or idempotency_key=$2', [identity, key]); return r.rowCount ? { serial: BigInt(r.rows[0].serial_number), metadata: r.rows[0].metadata || {} } : undefined },
+    async archiveForReallocation(identity, key, serial, detail) {
+      const archivedIdentity = `${identity}:history:${serial}`
+      const archivedKey = `${key}:history:${serial}`
+      await client.query(`update serial_workflow_mirrors set machine_identity=$2,updated_at=now() where machine_identity=$1`, [identity, archivedIdentity])
+      await client.query(`update serial_allocations set machine_identity=$2,idempotency_key=$3,metadata=metadata || $4::jsonb,updated_at=now() where serial_number=$1 and machine_identity=$5`, [serial.toString(), archivedIdentity, archivedKey, JSON.stringify({ archivedForTransferReallocation: true, ...detail }), identity])
+      await client.query(`insert into serial_allocation_events(serial_number,event_type,from_status,to_status,detail) select serial_number,'archived_for_transfer_reallocation',status,status,$2 from serial_allocations where serial_number=$1`, [serial.toString(), JSON.stringify(detail)])
+    },
     async insert(row) {
       await client.query(`insert into serial_allocations(serial_number,machine_identity,order_id,sales_order_number,machine_unit_id,idempotency_key,qr_token,status,source,metadata) values($1,$2,$3,$4,$5,$6,$7,'allocated_pending',$8,$9)`, [row.serial.toString(),row.identity,row.orderId,row.salesOrderNumber,row.machineUnitId,row.idempotencyKey,row.qrToken,row.source,JSON.stringify(row.metadata)])
       await client.query(`insert into serial_allocation_events(serial_number,event_type,to_status,detail) values($1,'allocated','allocated_pending',$2)`, [row.serial.toString(),JSON.stringify({ orderId: row.orderId, machineUnitId: row.machineUnitId })])
@@ -83,11 +96,11 @@ function pgTransaction(client: PoolClient): SerialTransaction {
 }
 
 /** Whole ordered batch commits atomically. DB errors propagate; no legacy fallback is attempted. */
-export async function allocateSerialBatch(orderId: string, machineIds: string[], order?: Order): Promise<Record<string, string>> {
+export async function allocateSerialBatch(orderId: string, machineIds: string[], order?: Order, transfers: Record<string, TransferReallocation> = {}): Promise<Record<string, string>> {
   const uniqueIds = Array.from(new Set(machineIds.filter(Boolean))); if (!uniqueIds.length) return {}
   await ensureSerialLedgerSchema()
   const client = await db().connect()
-  try { await client.query('begin'); await client.query('select pg_advisory_xact_lock($1)', [LOCK_KEY]); const result = await allocateInTransaction(pgTransaction(client), orderId, uniqueIds, order); await client.query('commit'); return result }
+  try { await client.query('begin'); await client.query('select pg_advisory_xact_lock($1)', [LOCK_KEY]); const result = await allocateInTransaction(pgTransaction(client), orderId, uniqueIds, order, transfers); await client.query('commit'); return result }
   catch (error) { await client.query('rollback').catch(() => undefined); throw error }
   finally { client.release() }
 }

@@ -11,7 +11,8 @@ class MemoryLedger {
     const snapshot = { counter:this.counter, rows:new Map(this.rows), identities:new Map(this.identities) }; let inserts=0
     const tx = {
       maximum: async () => [...this.rows.keys()].reduce((m,n)=>n>m?n:m,this.counter),
-      find: async identity => this.identities.get(identity),
+      find: async identity => { const serial=this.identities.get(identity); const row=serial === undefined ? undefined : this.rows.get(serial); return row && {serial,metadata:row.metadata} },
+      archiveForReallocation: async (identity,key,serial,detail) => { const row=this.rows.get(serial); this.identities.delete(identity); row.identity=`${identity}:history:${serial}`; row.idempotencyKey=`${key}:history:${serial}`; row.metadata={...row.metadata,archivedForTransferReallocation:true,...detail}; this.identities.set(row.identity,serial) },
       insert: async row => { if (++inserts === failInsertAt) throw new Error('injected insert failure'); if(this.rows.has(row.serial)) throw new Error('duplicate serial'); this.rows.set(row.serial,row); this.identities.set(row.identity,row.serial) },
       setCounter: async value => { if(value>this.counter)this.counter=value },
     }
@@ -43,6 +44,21 @@ assert.equal(timeoutObserved,true); const timeoutRetry=await allocate('timeout',
 // Downstream Zoho failure occurs after commit and cannot alter the allocation.
 const zoho=await allocate('zoho',['unit']); await assert.rejects(Promise.reject(new Error('Zoho unavailable')),/Zoho/)
 assert.equal((await allocate('zoho',['unit'])).unit,zoho.unit)
+
+// Exact Oxford regression: 26271031 was processed under SO-07789, transferred to
+// SO-07950, then a failed generation left transfer metadata but qrStatus generated.
+const oxfordOrder='1154219000035933004', oxfordMachine='1154219000035933004-1154219000035933007-1'
+const oldOxford=BigInt(26271031)
+ledger.rows.set(oldOxford,{serial:oldOxford,identity:`${oxfordOrder}:${oxfordMachine}`,idempotencyKey:`serial:${oxfordOrder}:${oxfordMachine}`,metadata:{},status:'processed'})
+ledger.identities.set(`${oxfordOrder}:${oxfordMachine}`,oldOxford); ledger.counter=BigInt(26271363)
+const oxfordTransfer={ [oxfordMachine]: { key:'transfer:2026-09-16T10:44:27Z:1154219000036922008', destinationOrderId:'1154219000036922008', transferredAt:'2026-09-16T10:44:27Z' } }
+const oxfordOrderSnapshot={salesOrderNumber:'SO-07789',machines:[{id:oxfordMachine,serialNumber:'26271031',qrToken:'26271031'}]}
+const fresh=await ledger.transaction(tx=>allocateInTransaction(tx,oxfordOrder,[oxfordMachine],oxfordOrderSnapshot,oxfordTransfer))
+assert.equal(fresh[oxfordMachine],'26271364')
+assert.equal(ledger.rows.get(oldOxford).status,'processed','immutable historical status')
+assert.match(ledger.rows.get(oldOxford).identity,/:history:26271031$/)
+const freshRetry=await ledger.transaction(tx=>allocateInTransaction(tx,oxfordOrder,[oxfordMachine],oxfordOrderSnapshot,oxfordTransfer))
+assert.deepEqual(freshRetry,fresh); assert.equal(ledger.rows.size,count + 4,'retry does not allocate another serial')
 
 // Counter repair uses ledger maximum, preserving deleted order/history records.
 ledger.counter=SERIAL_FLOOR

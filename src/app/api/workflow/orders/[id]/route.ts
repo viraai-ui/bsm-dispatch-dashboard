@@ -40,7 +40,17 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
     const order = body.order as Order
     if (action === 'allocate_serials') {
-      const serials = await allocateSerialNumbers(id, body.machineIds || [], body.order as Order | undefined)
+      // Transfer evidence is read from the authoritative workflow, never trusted from the
+      // client. It remains present after the failed Oxford attempt (qrStatus was generated),
+      // so transferredAt/destination form a stable reallocation idempotency generation.
+      const current = await getOrderWorkflow(id)
+      const transfers = Object.fromEntries((body.machineIds || []).flatMap((machineId: string) => {
+        const machine = current?.machines?.[machineId]
+        if (!machine?.transferredAt && !machine?.transferDestinationOrderId && machine?.qrStatus !== 'transferred') return []
+        const key = `transfer:${machine.transferredAt || 'unknown'}:${machine.transferDestinationOrderId || 'unknown'}`
+        return [[machineId, { key, destinationOrderId: machine.transferDestinationOrderId, transferredAt: machine.transferredAt }]]
+      }))
+      const serials = await allocateSerialNumbers(id, body.machineIds || [], body.order as Order | undefined, transfers)
       return apiOk({ serials })
     }
     const now = new Date().toISOString()

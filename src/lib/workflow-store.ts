@@ -220,8 +220,9 @@ export async function upsertOrderWorkflow(orderId: string, updater: (current: Or
 
 /** Mirror an already-authoritative allocation into the workflow store. Client-safe:
  * this module deliberately has no dependency (including dynamic imports) on pg/ledger code. */
-export async function mirrorAllocatedSerialNumbers(orderId: string, allocated: Record<string, string>, order?: Order) {
+export async function mirrorAllocatedSerialNumbers(orderId: string, allocated: Record<string, string>, order?: Order, reallocatedMachineIds: string[] = []) {
   const uniqueIds = Object.keys(allocated).filter(Boolean)
+  const reallocated = new Set(reallocatedMachineIds)
   if (!uniqueIds.length) return allocated
   await upsertOrderWorkflow(orderId, (current, store) => {
     const machines = { ...(current?.machines || {}) }
@@ -232,9 +233,9 @@ export async function mirrorAllocatedSerialNumbers(orderId: string, allocated: R
       const sourceMachine = orderMachinesById.get(machineUnitId)
       const serialNumber = allocated[machineUnitId]
       if (!serialNumber) throw new Error(`Serial allocation missing for ${machineUnitId}`)
-      if (existing?.serialNumber && existing.serialNumber !== serialNumber) throw new Error(`Workflow serial conflict for ${machineUnitId}`)
+      if (existing?.serialNumber && existing.serialNumber !== serialNumber && !reallocated.has(machineUnitId)) throw new Error(`Workflow serial conflict for ${machineUnitId}`)
       counter = Math.max(counter, Number(serialNumber))
-      machines[machineUnitId] = { ...existing, machineUnitId, lineItemId: existing?.lineItemId || sourceMachine?.lineItemId || '', serialNumber, qrToken: existing?.qrToken || sourceMachine?.qrToken || serialNumber, qrStatus: existing?.qrStatus || 'pending' }
+      machines[machineUnitId] = { ...existing, machineUnitId, lineItemId: existing?.lineItemId || sourceMachine?.lineItemId || '', serialNumber, qrToken: reallocated.has(machineUnitId) ? serialNumber : existing?.qrToken || sourceMachine?.qrToken || serialNumber, qrStatus: reallocated.has(machineUnitId) ? 'pending' : existing?.qrStatus || 'pending', ...(reallocated.has(machineUnitId) ? { qrGeneratedAt: undefined } : {}) }
     }
     store.serialCounter = counter
     return current ? { ...current, salesOrderNumber: current.salesOrderNumber || order?.salesOrderNumber || '', processedOrder: current.processedOrder || order, machines } : { salesOrderId: orderId, salesOrderNumber: order?.salesOrderNumber || '', status: 'open', processedOrder: order, machines }
