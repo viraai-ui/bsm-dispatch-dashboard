@@ -8692,6 +8692,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037325001": {
+      "id": "ship-1790584443905-91bnt",
+      "itemId": "1154219000037325001",
+      "orderId": "1154219000037325001",
+      "machineId": "1154219000037325001-1154219000037325004-1",
+      "salesOrderNumber": "SO-08017",
+      "customerName": "AIRCITY SHOES PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAK1477",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-24",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:34:03.905Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
