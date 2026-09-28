@@ -1,5 +1,55 @@
 {
   "orders": {
+    "1154219000037567001": {
+      "id": "1154219000037567001",
+      "zohoSalesOrderId": "1154219000037567001",
+      "salesOrderNumber": "SO-08049",
+      "status": "open",
+      "customerName": "Doershappy",
+      "shippingAddress": "G-53, Kh No. 55/20/2, First Floor, Jai Vihar, Bapraulla, Delhi, 110043, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037567004",
+          "itemName": "Compressor (2 Hp)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000227672",
+          "rate": 30000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037567001-1154219000037567004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037567001",
+          "lineItemId": "1154219000037567004",
+          "itemName": "Compressor (2 Hp)",
+          "sku": "",
+          "customerName": "Doershappy",
+          "salesOrderNumber": "SO-08049",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T12:28:29+0530"
+    },
     "1154219000037560001": {
       "id": "1154219000037560001",
       "zohoSalesOrderId": "1154219000037560001",
@@ -971,56 +1021,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-23T16:32:27+0530"
-    },
-    "1154219000037249013": {
-      "id": "1154219000037249013",
-      "zohoSalesOrderId": "1154219000037249013",
-      "salesOrderNumber": "SO-08009",
-      "status": "open",
-      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-22",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037249016",
-          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
-          "sku": "205",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 0,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000226939",
-          "rate": 195000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037249013-1154219000037249016-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037249013",
-          "lineItemId": "1154219000037249016",
-          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
-          "sku": "205",
-          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
-          "salesOrderNumber": "SO-08009",
-          "deliveryDate": "2026-09-22",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-28T12:10:43+0530"
     },
     "1154219000037243118": {
       "id": "1154219000037243118",
@@ -5364,6 +5364,56 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     },
+    "1154219000037249013": {
+      "id": "1154219000037249013",
+      "zohoSalesOrderId": "1154219000037249013",
+      "salesOrderNumber": "SO-08009",
+      "status": "open",
+      "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+      "shippingAddress": "108/40c- Kinfra Small Industrial Park,, Chundale ( P O), Kalpetta, Wayanad, Kerala, 673123, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-22",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037249016",
+          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+          "sku": "205",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 0,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000226939",
+          "rate": 195000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037249013-1154219000037249016-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037249013",
+          "lineItemId": "1154219000037249016",
+          "itemName": "Sole Stitch Cylinder Bed Single Needle (Extra Heavy Duty)",
+          "sku": "205",
+          "customerName": "Veekesy Polymers Pvt Ltd (Wayanad Branch)",
+          "salesOrderNumber": "SO-08009",
+          "deliveryDate": "2026-09-22",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T12:10:43+0530"
+    },
     "1154219000037449002": {
       "id": "1154219000037449002",
       "zohoSalesOrderId": "1154219000037449002",
@@ -5648,6 +5698,7 @@
     }
   },
   "orderIds": [
+    "1154219000037567001",
     "1154219000037560001",
     "1154219000037538004",
     "1154219000037475007",
@@ -5660,7 +5711,6 @@
     "1154219000037363007",
     "1154219000037346057",
     "1154219000037272011",
-    "1154219000037249013",
     "1154219000037243118",
     "1154219000037273001",
     "1154219000037260006",
@@ -5689,6 +5739,7 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000030035027",
+    "1154219000037249013",
     "1154219000037449002",
     "1154219000037469001",
     "1154219000037224017",
@@ -5696,8 +5747,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T06:41:38.379Z",
-  "lastAttemptAt": "2026-09-28T07:00:25.639Z",
+  "lastSuccessfulSyncAt": "2026-09-28T07:01:41.770Z",
+  "lastAttemptAt": "2026-09-28T07:01:41.770Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
