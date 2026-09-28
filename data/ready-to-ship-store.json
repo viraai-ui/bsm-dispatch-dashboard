@@ -8661,6 +8661,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000034633005": {
+      "id": "ship-1790584354724-jlqf2",
+      "itemId": "1154219000034633005",
+      "orderId": "1154219000034633005",
+      "machineId": "1154219000034633005-1154219000034633008-1",
+      "salesOrderNumber": "SO-07560",
+      "customerName": "THREE STAR FOOTWEARS",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "M.D. Logistics",
+      "transporterPhone": "9319113950",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01MA3577",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-24",
+      "notes": "",
+      "shippedAt": "2026-09-28T08:32:34.724Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
