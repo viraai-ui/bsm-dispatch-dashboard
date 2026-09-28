@@ -1,5 +1,133 @@
 {
   "orders": {
+    "1154219000037538004": {
+      "id": "1154219000037538004",
+      "zohoSalesOrderId": "1154219000037538004",
+      "salesOrderNumber": "SO-08047",
+      "status": "open",
+      "customerName": "DELUX INTERNATIONAL (F.W.D.)",
+      "shippingAddress": "PLOT NO.4 ARAJI NO.67,68,75 KHA, PEWANDI JAJMAU, KANPUR,, Kanpur Nagar, Uttar Pradesh, 208010",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037538007",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000018448369",
+          "rate": 24000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037538004-1154219000037538007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037538004",
+          "lineItemId": "1154219000037538007",
+          "itemName": "Thread Trimmer (Double Motor)",
+          "sku": "",
+          "customerName": "DELUX INTERNATIONAL (F.W.D.)",
+          "salesOrderNumber": "SO-08047",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T10:39:28+0530"
+    },
+    "1154219000037472002": {
+      "id": "1154219000037472002",
+      "zohoSalesOrderId": "1154219000037472002",
+      "salesOrderNumber": "SO-08046",
+      "status": "open",
+      "customerName": "AUTO FOAM INDUSTRIES (Gurgaon)",
+      "shippingAddress": "Khasra No. 508, Plot No. 9, Industrial Area, Basai Encalave-1, Gurugram, Haryana, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-27",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037472005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 125,
+          "pendingQuantity": 125,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 345,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-28T10:38:58+0530"
+    },
+    "1154219000037475007": {
+      "id": "1154219000037475007",
+      "zohoSalesOrderId": "1154219000037475007",
+      "salesOrderNumber": "SO-08045",
+      "status": "open",
+      "customerName": "Sarup Industries Limited",
+      "shippingAddress": "PO Ramdaspura, Ravidass Chowk, Jalandhar, Punjab, 144003",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-26",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037475010",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000279428",
+          "rate": 520000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037475007-1154219000037475010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037475007",
+          "lineItemId": "1154219000037475010",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "customerName": "Sarup Industries Limited",
+          "salesOrderNumber": "SO-08045",
+          "deliveryDate": "2026-09-26",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T10:38:58+0530"
+    },
     "1154219000037469001": {
       "id": "1154219000037469001",
       "zohoSalesOrderId": "1154219000037469001",
@@ -5498,6 +5626,9 @@
     }
   },
   "orderIds": [
+    "1154219000037538004",
+    "1154219000037472002",
+    "1154219000037475007",
     "1154219000037469001",
     "1154219000037449002",
     "1154219000037433003",
@@ -5543,8 +5674,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-28T05:01:17.765Z",
-  "lastAttemptAt": "2026-09-28T05:18:34.477Z",
+  "lastSuccessfulSyncAt": "2026-09-28T05:19:42.493Z",
+  "lastAttemptAt": "2026-09-28T05:19:42.493Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
