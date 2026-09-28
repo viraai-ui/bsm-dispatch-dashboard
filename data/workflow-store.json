@@ -16898,16 +16898,18 @@
           "serialNumber": "26271364",
           "qrToken": "26271364",
           "qrStatus": "generated",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-28T12:14:05.960Z",
           "transferDestinationOrderId": "1154219000036922008",
           "transferDestinationSalesOrderNumber": "SO-07950",
           "transferredAt": "2026-09-16T10:44:27Z",
-          "zohoBackupLastAttemptAt": "2026-09-28T12:00:40.534Z",
+          "zohoBackupLastAttemptAt": "2026-09-28T12:15:41.204Z",
           "qrGeneratedAt": "2026-09-28T12:08:33.651Z",
           "processedAt": "2026-09-28T12:14:05.960Z",
           "dispatchNote": "wooden",
-          "vendor": "K S"
+          "vendor": "K S",
+          "zohoBackupSyncedAt": "2026-09-28T12:15:41.204Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     },
