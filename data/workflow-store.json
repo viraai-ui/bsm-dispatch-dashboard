@@ -30124,15 +30124,15 @@
           "qrToken": "26271031",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-16T10:44:27Z",
-          "zohoBackupStatus": "error",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-09-15T08:25:59.153Z",
           "processedAt": "2026-09-15T08:26:52.769Z",
           "dispatchNote": "wooden",
           "vendor": "K S",
-          "zohoBackupLastAttemptAt": "2026-09-28T11:45:36.925Z",
-          "zohoBackupSyncedAt": "2026-09-16T10:44:27Z",
+          "zohoBackupLastAttemptAt": "2026-09-28T12:15:41.204Z",
+          "zohoBackupSyncedAt": "2026-09-28T12:15:41.204Z",
           "dispatchedAt": "2026-09-15T09:51:10.047Z",
-          "zohoBackupError": "Zoho Sheet update did not verify; queued for retry"
+          "zohoBackupReplaceExisting": false
         }
       }
     },
