@@ -8292,6 +8292,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037372003": {
+      "id": "ship-1790580220878-v6w82",
+      "itemId": "1154219000037372003",
+      "orderId": "1154219000037372003",
+      "machineId": "1154219000037372003-1154219000037372006-1",
+      "salesOrderNumber": "SO-08033",
+      "customerName": "Mata Bala Sundari Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01LAS7316",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-25",
+      "notes": "",
+      "shippedAt": "2026-09-28T07:23:40.878Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
