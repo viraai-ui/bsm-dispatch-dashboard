@@ -1,4 +1,5 @@
 import type { MachineUnit, Order } from '@/types/domain'
+import { exactAppendRows, exactSheetHeaders, planVendorUpdates, vendorEqual, workflowVendor, type VendorSource } from './serial-sheet-vendors'
 import { githubReadJson, listWorkflows, upsertOrderWorkflow } from './workflow-store'
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
@@ -17,7 +18,7 @@ type SerialSheetRecord = {
   Make: string
 }
 
-type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[]; verified?: boolean; missingFields?: string[] }
+type BackupResult = { synced: number; skipped: number; configured: boolean; errors: string[]; verified?: boolean; missingFields?: string[]; vendorUpdated?: number; sourceEmptyVendors?: string[] }
 export type SerialSheetDatabaseResult = { orders: Order[]; warrantyDates: Record<string, string>; configured: boolean; errors: string[]; fetchedAt?: string; stale?: boolean }
 
 let cachedSheetAccessToken: { token: string; expiresAt: number } | null = null
@@ -108,16 +109,17 @@ async function fetchSerialRecords(worksheetName = sheetConfig().worksheetName) {
 }
 
 async function fetchSerialContentRecords(worksheetName: string) {
-  const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName, range: 'A1:Z5000' })
-  const rows = Array.isArray(data.range_details) ? data.range_details : []
+  const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName })
+  if (!Array.isArray(data.range_details)) throw new Error('Zoho Sheet content response missing rows; refusing reconciliation')
+  const rows = data.range_details
   const headers = new Map<number, string>()
   const records: Record<string, unknown>[] = []
   for (const row of rows) {
     const rowDetails = Array.isArray(row.row_details) ? row.row_details : []
     if (Number(row.row_index) === 1) {
       for (const cell of rowDetails) {
-        const header = String(cell.content || '').trim()
-        if (header) headers.set(Number(cell.column_index), header)
+        const header = String(cell.content || '')
+        if (header.trim()) headers.set(Number(cell.column_index), header)
       }
       continue
     }
@@ -281,7 +283,7 @@ function uniqueId(base: string, used: Set<string>) { let id = base; let count = 
 
 function nextSerialSheetNumber(records: any[]) {
   const max = records.reduce((highest, row) => {
-    const raw = row['S.No.'] ?? row['S.No'] ?? row['S No'] ?? row.SNo ?? row.s_no
+    const raw = sheetValue(row, ['S.No.', 'S.No', 'S No', 'SNo', 's_no'])
     const value = Number(String(raw || '').replace(/[^0-9]/g, ''))
     return Number.isFinite(value) ? Math.max(highest, value) : highest
   }, 0)
@@ -304,23 +306,18 @@ function buildRows(order: Order, machines: MachineUnit[], date: string, firstSNo
     'Serial No.': machine.serialNumber,
     'Model No.': machine.itemName || '',
     Remark: '',
-    Make: titleCaseVendor(machine.vendor || ''),
+    Make: String(machine.vendor || '').trim(),
   }))
 }
 
 async function fetchWorksheetContent(worksheetName: string) {
-  const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName, range: 'A1:Z5000' })
-  return Array.isArray(data.range_details) ? data.range_details : []
+  const data = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName })
+  if (!Array.isArray(data.range_details)) throw new Error('Zoho Sheet content response missing rows; refusing reconciliation')
+  return data.range_details
 }
 
 function headerMapFromContent(rows: any[]) {
-  const headers = new Map<string, number>()
-  const first = rows.find((row) => Number(row.row_index) === 1)
-  for (const cell of first?.row_details || []) {
-    const header = String(cell.content || '').trim()
-    if (header) headers.set(normalizeSheetKey(header), Number(cell.column_index))
-  }
-  return headers
+  return new Map([...exactSheetHeaders(rows)].map(([key, header]) => [key, header.column]))
 }
 
 async function setCellContent(worksheetName: string, row: number, column: number, content: string) {
@@ -344,43 +341,48 @@ async function setCellContent(worksheetName: string, row: number, column: number
 export async function updateSerialVendorsInZohoSheet(machines: MachineUnit[]): Promise<BackupResult> {
   const result: BackupResult = { synced: 0, skipped: 0, configured: serialSheetConfigured(), errors: [] }
   if (!result.configured) return result
-  const updates = machines.map((machine) => ({ serial: String(machine.serialNumber || '').trim(), vendor: titleCaseVendor(machine.vendor || '') })).filter((item) => item.serial && item.vendor)
-  if (!updates.length) return result
+  const sources = machines.map(machine => ({ serial: String(machine.serialNumber || '').trim(), vendor: String(machine.vendor || '').trim() })).filter(item => item.serial)
+  if (!sources.length) return result
   try {
-    const { worksheetName } = sheetConfig()
-    const rows = await fetchWorksheetContent(worksheetName)
-    const headers = headerMapFromContent(rows)
-    const serialColumn = headers.get(normalizeSheetKey('Serial No.')) || headers.get(normalizeSheetKey('Serial No'))
-    const makeColumn = headers.get(normalizeSheetKey('Make'))
-    if (!serialColumn || !makeColumn) throw new Error('Serial No. or Make column not found in serial sheet')
-    const bySerial = new Map(updates.map((item) => [item.serial, item.vendor]))
-    for (const row of rows) {
-      const rowIndex = Number(row.row_index)
-      if (rowIndex <= 1) continue
-      const serialCell = (row.row_details || []).find((cell: any) => Number(cell.column_index) === serialColumn)
-      const serial = String(serialCell?.content || '').trim()
-      const vendor = bySerial.get(serial)
-      if (!vendor) continue
-      await setCellContent(worksheetName, rowIndex, makeColumn, vendor)
-      result.synced += 1
-      bySerial.delete(serial)
-    }
-    result.skipped = bySerial.size
-    return result
+    const reconciliation = await reconcileVendorSources(sources)
+    result.synced = reconciliation.updated
+    result.skipped = reconciliation.outcomes.filter(item => item.status === 'verified').length - result.synced
+    result.errors = reconciliation.outcomes.filter(item => !['verified', 'unknown'].includes(item.status)).map(item => item.error || `${item.serial}: vendor pending verification`)
+    result.verified = !result.errors.length
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet vendor update failed')
-    return result
   }
+  return result
+}
+
+async function reconcileVendorSources(sources: VendorSource[]) {
+  const { worksheetName } = sheetConfig()
+  const before = await fetchWorksheetContent(worksheetName)
+  const plan = planVendorUpdates(before, sources)
+  for (const update of plan.updates) {
+    // Recheck physical identity and blankness immediately before a single-cell write.
+    const fresh = await sheetPostWithRetry({ method: 'worksheet.content.get', worksheet_name: worksheetName, range: `A${update.row}:Z${update.row}` })
+    const current = planVendorUpdates([before.find((row: any) => Number(row.row_index) === 1), ...(fresh.range_details || [])], [{ serial: update.serial, vendor: update.vendor }])
+    if (current.updates.length !== 1 || current.updates[0].row !== update.row) continue
+    await setCellContent(worksheetName, update.row, update.column, update.vendor)
+    await new Promise(resolve => setTimeout(resolve, 250))
+  }
+  const after = plan.updates.length ? await fetchWorksheetContent(worksheetName) : before
+  const verified = planVendorUpdates(after, sources)
+  return { outcomes: verified.outcomes, updated: plan.updates.filter(update => verified.outcomes.some(item => item.serial === update.serial && item.status === 'verified')).length }
 }
 
 async function appendSerialRows(rows: SerialSheetRecord[]) {
   if (!rows.length) return
   const { worksheetName } = sheetConfig()
+  const content = await fetchWorksheetContent(worksheetName)
+  const mapped = exactAppendRows(rows, content)
+  // A timed-out append may have committed. Rediscover on the next cron, never retry blindly.
   await sheetPostWithRetry({
     method: 'worksheet.jsondata.append',
     worksheet_name: worksheetName,
-    json_data: JSON.stringify(rows),
-  })
+    json_data: JSON.stringify(mapped),
+  }, 1)
 }
 
 async function replaceSerialRows(rows: SerialSheetRecord[]) {
@@ -391,13 +393,19 @@ async function replaceSerialRows(rows: SerialSheetRecord[]) {
   const serialColumn = headers.get(normalizeSheetKey('Serial No.')) || headers.get(normalizeSheetKey('Serial No'))
   if (!serialColumn) throw new Error('Serial No. column not found in serial sheet')
   const expected = new Map(rows.map(row => [String(row['Serial No.']).trim(), row]))
+  const physicalCounts = new Map<string, number>()
+  for (const row of content) {
+    const serial = String((row.row_details || []).find((cell: any) => Number(cell.column_index) === serialColumn)?.content || '').trim()
+    if (expected.has(serial)) physicalCounts.set(serial, (physicalCounts.get(serial) || 0) + 1)
+  }
+  if ([...physicalCounts.values()].some(count => count > 1)) throw new Error('Duplicate physical serial rows; replacement refused')
   const replaced = new Set<string>()
   for (const sheetRow of content) {
     const rowIndex = Number(sheetRow.row_index); if (rowIndex <= 1) continue
     const serial = String((sheetRow.row_details || []).find((cell: any) => Number(cell.column_index) === serialColumn)?.content || '').trim()
     const replacement = expected.get(serial); if (!replacement) continue
     for (const [header, value] of Object.entries(replacement)) {
-      if (header === 'S.No.') continue
+      if (header === 'S.No.' || header === 'Make') continue // vendor is always blank-only
       const column = headers.get(normalizeSheetKey(header)); if (column) await setCellContent(worksheetName, rowIndex, column, String(value ?? ''))
     }
     replaced.add(serial)
@@ -413,6 +421,7 @@ function requiredSheetFields(row: Record<string, unknown>) {
     address: String(sheetValue(row, ['Address']) || '').trim(),
     dop: String(sheetValue(row, ['D.O.P.', 'D.O.P', 'DOP', 'D.O.P ', 'Date', 'Delivery Date']) || '').trim(),
     model: String(sheetValue(row, ['Model No.', 'Model', 'Machine Name']) || '').trim(),
+    vendor: String(sheetValue(row, ['Make', 'Vendor']) || '').trim(),
   }
 }
 
@@ -438,6 +447,7 @@ async function verifySerialRowsInSheet(expectedRows: SerialSheetRecord[]) {
     if (!fields.address) result.missingFields.push(`${serial}: missing address`)
     if (!fields.dop) result.missingFields.push(`${serial}: missing D.O.P.`)
     if (!fields.model) result.missingFields.push(`${serial}: missing model`)
+    if (expected.Make && !vendorEqual(fields.vendor, expected.Make)) result.missingFields.push(`${serial}: vendor missing or conflicting`)
   }
   if (result.missingFields.length) result.verified = false
   return result
@@ -450,7 +460,7 @@ export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: 
   if (!serialMachines.length) return result
   try {
     const records = await fetchSerialRecords()
-    const existingSerials = new Set(records.map((row: any) => String(row['Serial No.'] || row['Serial No'] || row.Serial || '').trim()).filter(Boolean))
+    const existingSerials = new Set(records.map((row: any) => String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()).filter(Boolean))
     const pendingSerials = new Set<string>()
     const newMachines = serialMachines.filter((machine) => {
       const serial = String(machine.serialNumber).trim()
@@ -466,7 +476,7 @@ export async function backupGeneratedSerialsToZohoSheet(order: Order, machines: 
     result.verified = verification.verified
     result.missingFields = verification.missingFields
     if (!verification.verified) result.errors.push(`Zoho Sheet backup verification failed: ${verification.missingFields.join('; ')}`)
-    result.synced = rows.length
+    result.synced = verification.verified ? rows.length : 0
     return result
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet backup failed')
@@ -480,7 +490,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
   try {
     const workflows = await listWorkflows()
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
-    const entries: { workflowId: string; machineId: string; serial: string; order?: Order; machine?: MachineUnit; generatedAt: string; replaceExisting: boolean }[] = []
+    const entries: { workflowId: string; machineId: string; serial: string; vendor: string; order?: Order; machine?: MachineUnit; generatedAt: string; replaceExisting: boolean }[] = []
     for (const workflow of Object.values(workflows)) {
       const processedOrder = workflow.processedOrder
       const syncedOrder = synced.data.orders?.[workflow.salesOrderId]
@@ -490,23 +500,27 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
         const serial = Number(machineWorkflow.serialNumber || 0)
         // Queue state, not a historical serial cutoff, determines retry eligibility. A cutoff
         // stranded older pending/error entries forever after partial incidents.
-        if (!serial || machineWorkflow.zohoBackupStatus === 'synced') continue
+        if (!serial || machineWorkflow.reallocatedToMachineId) continue
         const processedMachine = processedMachinesById.get(machineWorkflow.machineUnitId)
         const syncedMachine = syncedMachinesById.get(machineWorkflow.machineUnitId)
         const orderMachine = processedMachine || syncedMachine
         const order = processedMachine ? processedOrder : syncedOrder
-        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, serial: String(machineWorkflow.serialNumber).trim(), order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: orderMachine ? { ...orderMachine, serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } : undefined, replaceExisting: Boolean(machineWorkflow.zohoBackupReplaceExisting) })
+        entries.push({ workflowId: workflow.salesOrderId, machineId: machineWorkflow.machineUnitId, serial: String(machineWorkflow.serialNumber).trim(), vendor: workflowVendor(machineWorkflow, processedMachine), order, generatedAt: machineWorkflow.qrGeneratedAt || new Date().toISOString().slice(0, 10), machine: orderMachine ? { ...orderMachine, vendor: workflowVendor(machineWorkflow, processedMachine), serialNumber: String(machineWorkflow.serialNumber), qrToken: machineWorkflow.qrToken || String(machineWorkflow.serialNumber) } : undefined, replaceExisting: Boolean(machineWorkflow.zohoBackupReplaceExisting) })
       }
     }
     if (!entries.length) return result
 
-    // One full read for the whole queue, one batch append, and at most one readback.
+    // Scan synced serials too: vendor selection happens after serial generation.
+    // Stable no-op ticks do not write Sheet cells or workflow commits.
     const records = await fetchSerialRecords()
     const existing = new Set(records.map((row: any) => String(sheetValue(row, ['Serial No.', 'Serial No', 'Serial']) || '').trim()).filter(Boolean))
     const wasExisting = new Set(existing)
     let nextSNo = nextSerialSheetNumber(records)
     const rows: SerialSheetRecord[] = []; const replacements: SerialSheetRecord[] = []
+    const sourceCounts = new Map<string, number>()
+    for (const entry of entries) sourceCounts.set(entry.serial, (sourceCounts.get(entry.serial) || 0) + 1)
     for (const entry of entries) {
+      if (sourceCounts.get(entry.serial)! > 1) continue
       if (!entry.order || !entry.machine) continue // incomplete snapshots must remain queued
       const built = buildRows(entry.order, [entry.machine], entry.generatedAt, nextSNo)
       if (entry.replaceExisting) replacements.push(...built)
@@ -515,25 +529,40 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
     }
     if (replacements.length) await replaceSerialRows(replacements)
     if (rows.length) await appendSerialRows(rows)
+    const vendorSources = entries.map(entry => ({ serial: entry.serial, vendor: entry.vendor }))
+    const vendors = await reconcileVendorSources(vendorSources).catch(error => ({
+      updated: 0,
+      outcomes: vendorSources.map(item => ({ serial: item.serial, status: item.vendor ? 'pending' : 'unknown', error: item.vendor ? `${item.serial}: ${error instanceof Error ? error.message : 'vendor verification failed'}` : undefined })),
+    }))
+    result.vendorUpdated = vendors.updated
+    result.sourceEmptyVendors = vendors.outcomes.filter(item => item.status === 'unknown').map(item => item.serial)
+    const vendorBlocked = new Set(vendors.outcomes.filter(item => !['verified', 'unknown'].includes(item.status)).map(item => item.serial))
+    result.errors.push(...vendors.outcomes.filter(item => item.error).map(item => item.error!))
     const confirmed = new Set(Array.from(wasExisting).filter(serial => !entries.some(entry => entry.serial === serial && entry.replaceExisting)))
     if (rows.length || replacements.length) {
       const after = await fetchSerialRecords()
       const expected = new Map([...rows, ...replacements].map(row => [String(row['Serial No.']).trim(), requiredSheetFields(row)]))
       for (const row of after as Record<string, unknown>[]) {
         const actual = requiredSheetFields(row); const wanted = expected.get(actual.serial)
-        if (wanted && actual.customer === wanted.customer && actual.address === wanted.address && actual.model === wanted.model && actual.dop.replace(/^'/, '') === wanted.dop.replace(/^'/, '')) confirmed.add(actual.serial)
+        if (wanted && actual.customer === wanted.customer && actual.address === wanted.address && actual.model === wanted.model && actual.dop.replace(/^'/, '') === wanted.dop.replace(/^'/, '') && (!wanted.vendor || vendorEqual(actual.vendor, wanted.vendor))) confirmed.add(actual.serial)
       }
     }
     const now = new Date().toISOString()
+    for (const serial of vendorBlocked) confirmed.delete(serial)
     const byWorkflow = new Map<string, typeof entries>()
     for (const entry of entries) byWorkflow.set(entry.workflowId, [...(byWorkflow.get(entry.workflowId) || []), entry])
     for (const [workflowId, workflowEntries] of byWorkflow) {
+      const changed = workflowEntries.some(entry => {
+        const saved = workflows[workflowId]?.machines[entry.machineId]
+        return saved && (saved.zohoBackupStatus !== (confirmed.has(entry.serial) ? 'synced' : 'error') || saved.zohoBackupReplaceExisting)
+      })
+      if (!changed) { result.skipped += workflowEntries.length; continue }
       await upsertOrderWorkflow(workflowId, (current) => {
         if (!current) throw new Error(`Workflow ${workflowId} disappeared during Sheet reconciliation`)
         const machines = { ...current.machines }
         for (const entry of workflowEntries) {
           const machine = machines[entry.machineId]
-          if (!machine) continue
+          if (!machine || machine.serialNumber !== entry.serial || workflowVendor(machine, current.processedOrder?.machines.find(item => item.id === entry.machineId)) !== entry.vendor) continue
           const ok = confirmed.has(entry.serial)
           machines[entry.machineId] = { ...machine, zohoBackupStatus: ok ? 'synced' : 'error', zohoBackupLastAttemptAt: now, zohoBackupSyncedAt: ok ? now : machine.zohoBackupSyncedAt, zohoBackupError: ok ? undefined : 'Zoho Sheet update did not verify; queued for retry', zohoBackupReplaceExisting: ok ? false : machine.zohoBackupReplaceExisting }
           if (ok) wasExisting.has(entry.serial) ? result.skipped++ : result.synced++
@@ -541,6 +570,7 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
         return { ...current, machines }
       })
     }
+    result.verified = entries.every(entry => confirmed.has(entry.serial))
     return result
   } catch (error) {
     result.errors.push(error instanceof Error ? error.message : 'Zoho Sheet serial sync failed')

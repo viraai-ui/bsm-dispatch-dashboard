@@ -72,11 +72,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         if (!['urgent', 'regular'].includes(String(body.dispatchPriority || ''))) throw new Error('Please select urgent or regular order type')
         const notes = (body.dispatchNotes || {}) as Record<string, string>
         const vendors = (body.dispatchVendors || {}) as Record<string, string>
-        for (const machine of selected) machines[machine.id] = { ...machines[machine.id], machineUnitId: machine.id, lineItemId: machine.lineItemId, processedAt: now, dispatchNote: String(notes[machine.id] || '').trim(), vendor: titleCaseVendor(String(vendors[machine.id] || machine.vendor || '').trim()) }
+        for (const machine of selected) machines[machine.id] = { ...machines[machine.id], machineUnitId: machine.id, lineItemId: machine.lineItemId, processedAt: now, dispatchNote: String(notes[machine.id] || '').trim(), vendor: titleCaseVendor(String(vendors[machine.id] ?? machines[machine.id]?.vendor ?? '').trim()), zohoBackupStatus: 'pending', zohoBackupQueuedAt: now, zohoBackupError: undefined }
         status = 'processed'
       }
       const processedOrder = action === 'process'
-        ? { ...order, machines: order.machines.map((machine) => ({ ...machine, dispatchNote: machines[machine.id]?.dispatchNote || machine.dispatchNote || '', vendor: machines[machine.id]?.vendor || machine.vendor || '', ...(machines[machine.id]?.qrStatus === 'not_required' ? { status: 'QR Printed' as const } : {}) })) }
+        ? { ...order, machines: order.machines.map((machine) => ({ ...machine, dispatchNote: machines[machine.id]?.dispatchNote || machine.dispatchNote || '', vendor: machines[machine.id]?.vendor ?? '', ...(machines[machine.id]?.qrStatus === 'not_required' ? { status: 'QR Printed' as const } : {}) })) }
         : current?.processedOrder
       return { salesOrderId: id, salesOrderNumber: order.salesOrderNumber || current?.salesOrderNumber || '', status, dispatchPriority: action === 'process' ? body.dispatchPriority : current?.dispatchPriority, processedAt: action === 'process' ? now : current?.processedAt, processedOrder, machines }
     })
