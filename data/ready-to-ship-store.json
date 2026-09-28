@@ -8978,6 +8978,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037427005": {
+      "id": "ship-1790590478427-ads7x",
+      "itemId": "1154219000037427005",
+      "orderId": "1154219000037427005",
+      "machineId": "1154219000037427005-1154219000037427009-1",
+      "salesOrderNumber": "SO-08040",
+      "customerName": "CLASSIC POLYMERS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-28",
+      "notes": "",
+      "shippedAt": "2026-09-28T10:14:38.427Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
