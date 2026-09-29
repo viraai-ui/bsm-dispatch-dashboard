@@ -5,8 +5,5 @@
   "limit": 1200,
   "circuitUntil": "2026-09-29T18:30:00.000Z",
   "circuitReason": "Dispatch quota incident: provider calls blocked until next IST budget day",
-  "lease": {
-    "owner": "09e3c974-0d03-438f-976a-a9c62590b736",
-    "until": "2026-09-29T18:25:24.867Z"
-  }
+  "lease": null
 }
