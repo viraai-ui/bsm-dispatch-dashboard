@@ -1,5 +1,33 @@
 {
   "orders": {
+    "1154219000037616001": {
+      "id": "1154219000037616001",
+      "zohoSalesOrderId": "1154219000037616001",
+      "salesOrderNumber": "SO-08053",
+      "status": "open",
+      "customerName": "SHREE GANESH INDUSTRIES (PUNJAB)",
+      "shippingAddress": "D-26, I.G.C. Mansa Road, Bathinda, Punjab-151001, Punjab",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-29",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037616004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 345,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-29T10:49:40+0530"
+    },
     "1154219000037602001": {
       "id": "1154219000037602001",
       "zohoSalesOrderId": "1154219000037602001",
@@ -5968,6 +5996,7 @@
     }
   },
   "orderIds": [
+    "1154219000037616001",
     "1154219000037602001",
     "1154219000037568006",
     "1154219000037560001",
@@ -6020,8 +6049,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-29T05:01:53.018Z",
-  "lastAttemptAt": "2026-09-29T05:20:24.780Z",
+  "lastSuccessfulSyncAt": "2026-09-29T05:21:42.264Z",
+  "lastAttemptAt": "2026-09-29T05:21:42.264Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
