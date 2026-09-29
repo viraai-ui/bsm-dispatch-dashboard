@@ -7,7 +7,7 @@ import { Badge } from '@/components/DashboardShell'
 const WOODEN_CACHE_KEY = 'bsm.wooden.requirements.v2'
 const WOODEN_STATUS_KEY = 'bsm.wooden.status.v2'
 const OLD_WOODEN_STATUS_KEY = 'bsm.wooden.status.v1'
-const WOODEN_AUTO_SYNC_MS = 30 * 60 * 1000
+const WOODEN_AUTO_REFRESH_MS = 30 * 60 * 1000
 type WoodenStatus = 'Required' | 'Ordered'
 type WoodenItem = { id: string; salesOrderNumber: string; customerName: string; itemName: string; requiredQuantity: number }
 type WoodenQueue = { lastSuccessAt?: string | null; items: WoodenItem[] }
@@ -28,7 +28,7 @@ export function WoodenPackingClient({ initialQueue = { items: [] } }: { initialQ
   }, [initialQueue.items])
 
   useEffect(() => {
-    const timer = window.setInterval(() => { void syncZoho(false) }, WOODEN_AUTO_SYNC_MS)
+    const timer = window.setInterval(() => { void loadSaved() }, WOODEN_AUTO_REFRESH_MS)
     return () => window.clearInterval(timer)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

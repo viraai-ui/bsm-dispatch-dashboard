@@ -1,6 +1,7 @@
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
-import { fetchCompleteZohoSalesOrderFeed, isOpenZohoSalesOrderSummary } from './zoho-sales-order-feed'
+import { isOpenZohoSalesOrderSummary } from './zoho-sales-order-feed'
+import { consumeDispatchCall, openDispatchCircuit, providerResetAt } from './dispatch-sync-guard'
 
 const dc = process.env.ZOHO_DC || 'in'
 const accountsDomain = `https://accounts.zoho.${dc}`
@@ -21,19 +22,9 @@ export async function getZohoAccessToken() {
   return pendingAccessToken
 }
 
-const TOKEN_REFRESH_ATTEMPTS = 4
-const TOKEN_REFRESH_BACKOFF_MS = [2_000, 5_000, 10_000]
-
 function tokenRefreshThrottle(response: Response, data: any) {
   const detail = `${data?.error || ''} ${data?.error_description || ''}`
   return response.status === 429 || /too many requests|continuously|rate limit|throttl/i.test(detail)
-}
-
-function tokenRefreshDelay(response: Response, attempt: number) {
-  const retryAfterHeader = response.headers.get('retry-after')
-  const retryAfter = retryAfterHeader === null ? Number.NaN : Number(retryAfterHeader)
-  if (Number.isFinite(retryAfter) && retryAfter >= 0) return Math.min(30_000, retryAfter * 1_000)
-  return TOKEN_REFRESH_BACKOFF_MS[attempt] || TOKEN_REFRESH_BACKOFF_MS.at(-1)!
 }
 
 async function refreshAccessToken() {
@@ -43,47 +34,38 @@ async function refreshAccessToken() {
     client_secret: process.env.ZOHO_CLIENT_SECRET!,
     grant_type: 'refresh_token',
   })
-  let throttled = false
-  for (let attempt = 0; attempt < TOKEN_REFRESH_ATTEMPTS; attempt += 1) {
-    const response = await fetch(`${accountsDomain}/oauth/v2/token`, { method: 'POST', body, cache: 'no-store' })
-    const data = await response.json().catch(() => ({}))
-    if (response.ok && data.access_token) {
-      const expiresIn = Number(data.expires_in)
-      cachedAccessToken = { token: String(data.access_token), expiresAt: Date.now() + (Number.isFinite(expiresIn) && expiresIn > 0 ? expiresIn : 3600) * 1000 }
-      return cachedAccessToken.token
-    }
-    throttled = tokenRefreshThrottle(response, data)
-    if (!throttled || attempt === TOKEN_REFRESH_ATTEMPTS - 1) {
-      if (throttled) throw new Error('Zoho is temporarily rate limiting access. Please retry shortly.')
-      throw new Error(data.error_description || data.error || 'Unable to refresh Zoho token')
-    }
-    await new Promise((resolve) => setTimeout(resolve, tokenRefreshDelay(response, attempt)))
+  const response = await fetch(`${accountsDomain}/oauth/v2/token`, { method: 'POST', body, cache: 'no-store' })
+  const data = await response.json().catch(() => ({}))
+  if (response.ok && data.access_token) {
+    const expiresIn = Number(data.expires_in)
+    cachedAccessToken = { token: String(data.access_token), expiresAt: Date.now() + (Number.isFinite(expiresIn) && expiresIn > 0 ? expiresIn : 3600) * 1000 }
+    return cachedAccessToken.token
   }
-  throw new Error('Zoho is temporarily rate limiting access. Please retry shortly.')
+  if (tokenRefreshThrottle(response, data)) {
+    await openDispatchCircuit(providerResetAt(response), data.error_description || data.error || 'OAuth rate limited')
+    throw new Error('Zoho is temporarily rate limiting access; Dispatch circuit opened without retry.')
+  }
+  throw new Error(data.error_description || data.error || 'Unable to refresh Zoho token')
 }
 
 async function zohoGet(path: string, token: string) {
+  await consumeDispatchCall()
   const separator = path.includes('?') ? '&' : '?'
   const url = `${apiDomain}${path}${separator}organization_id=${process.env.ZOHO_ORGANIZATION_ID}`
   const response = await fetch(url, { headers: { Authorization: `Zoho-oauthtoken ${token}` }, cache: 'no-store' })
-  const data = await response.json()
+  const data = await response.json().catch(() => ({}))
+  const rateLimited = response.status === 429 || /maximum number of requests|too many requests|rate limit|blocked for some time/i.test(String(data.message || ''))
+  if (rateLimited) {
+    await openDispatchCircuit(providerResetAt(response), String(data.message || 'Zoho 429'))
+    throw new Error('Zoho rate limit reached; Dispatch circuit opened without retry.')
+  }
   if (!response.ok || (data.code && data.code !== 0)) throw new Error(data.message || `Zoho request failed: ${path}`)
   return data
 }
 
-async function zohoGetWithRetry(path: string, token: string, retries = 4) {
-  let lastError: unknown
-  for (let attempt = 1; attempt <= retries; attempt += 1) {
-    try { return await zohoGet(path, token) } catch (error) {
-      lastError = error
-      if (attempt < retries) {
-        const message = error instanceof Error ? error.message : String(error)
-        const rateLimited = /exceeded the maximum number of requests|too many requests|rate limit|blocked for some time/i.test(message)
-        await new Promise((resolve) => setTimeout(resolve, rateLimited ? attempt * 10_000 : attempt * 800))
-      }
-    }
-  }
-  throw lastError instanceof Error ? lastError : new Error(`Zoho request failed: ${path}`)
+async function zohoGetWithRetry(path: string, token: string, retries = 1) {
+  void retries
+  return zohoGet(path, token)
 }
 
 function isOpenOrder(raw: any) {
@@ -222,6 +204,7 @@ function mapOrderSummary(order: any): Order {
     reviewRequired: false,
     lineItems: [],
     machines: [],
+    zohoLastModifiedTime: order.last_modified_time || order.updated_time || undefined,
   }
 }
 
@@ -292,17 +275,22 @@ export async function fetchZohoPaymentOpenOrders(): Promise<Order[]> {
   })
 }
 
-export async function fetchZohoConfirmedOrders(): Promise<Order[]> {
+export async function fetchZohoConfirmedOrders(known: Record<string, Order> = {}, limit = 15, detailCap = 15): Promise<Order[]> {
   if (!hasZohoConfig()) throw new Error('Zoho credentials are not configured')
   const token = await getZohoAccessToken()
-  // Do not rely on Status.Confirmed: Zoho's filtered view can omit older open
-  // orders. Reconcile from the complete newest-first feed and classify every row.
-  const summaries = await fetchCompleteZohoSalesOrderFeed(
-    (page) => zohoGetWithRetry(`/inventory/v1/salesorders?per_page=200&page=${page}&sort_column=created_time&sort_order=D`, token),
-  )
+  // Routine sync is exactly one newest-first page. Historical import is separate
+  // and disabled; it is never called by cron, browser polling, or manual sync.
+  const pageSize = Math.min(15, Math.max(1, limit))
+  const list = await zohoGet(`/inventory/v1/salesorders?per_page=${pageSize}&page=1&sort_column=last_modified_time&sort_order=D`, token)
+  const summaries: any[] = Array.isArray(list.salesorders) ? list.salesorders.slice(0, pageSize) : []
   const open = summaries.filter(isOpenOrder)
   if (summaries.length > 0 && open.length === 0) throw new Error('Zoho sales-order feed returned no open sales orders')
-  return fetchZohoOrderDetailsInBatches(open.map((summary) => String(summary.salesorder_id)), token)
+  const changed = open.filter((summary: any) => {
+    const previous = known[String(summary.salesorder_id)]
+    const revision = summary.last_modified_time || summary.updated_time
+    return !previous || !revision || previous.zohoLastModifiedTime !== revision
+  }).slice(0, Math.min(15, Math.max(0, detailCap)))
+  return fetchZohoOrderDetailsInBatches(changed.map((summary: any) => String(summary.salesorder_id)), token)
 }
 
 async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 2): Promise<Order[]> {
@@ -345,7 +333,8 @@ async function fetchZohoOrderDetailWithToken(id: string, token: string): Promise
   if (!detail.salesorder?.salesorder_id || String(detail.salesorder.salesorder_id) !== String(id)) throw new Error(`Invalid Zoho sales order detail for ${id}`)
   const sourceStatus = String(detail.salesorder.status || detail.salesorder.current_sub_status || detail.salesorder.order_status || '').toLowerCase()
   if (['cancelled', 'canceled', 'void', 'closed', 'rejected', 'deleted'].includes(sourceStatus)) throw new Error('ORDER_UNAVAILABLE_IN_ZOHO')
-  await enrichZohoLineItemDescriptions(detail.salesorder, token)
+  // Detail line payload is authoritative. Never fan out to item detail endpoints
+  // during an operational sync.
   return mapOrder(detail.salesorder)
 }
 

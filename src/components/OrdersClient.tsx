@@ -17,7 +17,7 @@ type OrderStage = 'open' | 'processed' | 'packed' | 'packing_video' | 'loading_v
 const ORDERS_CACHE_KEY = 'bsm.orders.cache.v2'
 const MACHINE_DB_KEY = 'bsm.machine.database.v1'
 const PROCESSED_ORDERS_KEY = 'bsm.processed.orders.v1'
-const ORDERS_AUTO_SYNC_MS = 15 * 60 * 1000
+const ORDERS_AUTO_REFRESH_MS = 15 * 60 * 1000
 
 export function OrdersClient({ orders, live = false }: { orders: Order[]; live?: boolean }) {
   const [rows, setRows] = useState<Order[]>(orders)
@@ -84,7 +84,8 @@ export function OrdersClient({ orders, live = false }: { orders: Order[]; live?:
   }, [refreshPaymentProjection])
 
   useEffect(() => {
-    const timer = window.setInterval(() => { void syncOrders(false) }, ORDERS_AUTO_SYNC_MS)
+    // Browser polling reads the durable mirror only; provider sync is production cron/manual.
+    const timer = window.setInterval(() => { void loadOrders(false) }, ORDERS_AUTO_REFRESH_MS)
     return () => window.clearInterval(timer)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

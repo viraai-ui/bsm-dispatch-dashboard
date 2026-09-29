@@ -6,6 +6,7 @@ import { readSyncedOrdersStore } from '@/lib/synced-orders'
 import { listWorkflows } from '@/lib/workflow-store'
 import { r2Configured } from '@/lib/r2'
 import { workDriveConfigured } from '@/lib/workdrive'
+import { readDispatchGuard } from '@/lib/dispatch-sync-guard'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,20 +14,23 @@ export async function GET() {
   const auth = await requireUser(['Admin', 'Operations'])
   if (!auth.ok) return auth.response
   const checkedAt = new Date().toISOString()
-  const [ordersResult, workflowResult, ledgerResult] = await Promise.allSettled([
+  const [ordersResult, workflowResult, ledgerResult, guardResult] = await Promise.allSettled([
     withTimeout(readSyncedOrdersStore(), 8_000, 'order store'),
     withTimeout(listWorkflows(), 8_000, 'workflow store'),
     serialDatabaseConfigured() ? withTimeout(serialLedgerHealth(), 8_000, 'serial ledger') : Promise.resolve(null),
+    withTimeout(readDispatchGuard(), 8_000, 'dispatch guard'),
   ])
   const orders = ordersResult.status === 'fulfilled' ? ordersResult.value : null
   const workflows = workflowResult.status === 'fulfilled' ? workflowResult.value : null
   const ledger = ledgerResult.status === 'fulfilled' ? ledgerResult.value : null
+  const guard = guardResult.status === 'fulfilled' ? guardResult.value : null
   const machines = workflows ? Object.values(workflows).flatMap((workflow) => Object.values(workflow.machines || {})) : []
   const zohoPending = machines.filter((machine) => machine.zohoBackupStatus === 'pending' || machine.zohoBackupStatus === 'error')
   const components = {
     database: component(Boolean(ledger), serialDatabaseConfigured(), ledgerResult),
     workflowMirror: { status: !workflows ? 'unhealthy' : ledger && ledger.pendingMirrors > 0 ? 'degraded' : 'healthy', orderCount: workflows ? Object.keys(workflows).length : null, pending: ledger?.pendingMirrors ?? null, oldestPendingAt: ledger?.oldestPendingMirrorAt ?? null, error: rejected(workflowResult) },
     orderSync: { status: !orders ? 'unhealthy' : orders.lastError ? 'degraded' : 'healthy', orderCount: orders?.orderIds.length ?? null, lastSuccessfulAt: orders?.lastSuccessfulSyncAt ?? null, lastAttemptAt: orders?.lastAttemptAt ?? null, running: orders?.syncing ?? false, error: orders?.lastError || rejected(ordersResult) },
+    dispatchZohoGuard: { status: !guard ? 'unhealthy' : guard.circuitUntil && new Date(guard.circuitUntil).getTime() > Date.now() ? 'degraded' : 'healthy', used: guard?.used ?? null, limit: guard?.limit ?? null, circuitUntil: guard?.circuitUntil ?? null, circuitReason: guard?.circuitReason ?? null, leaseUntil: guard?.lease?.until ?? null, error: rejected(guardResult) },
     zohoSerialQueue: { status: !workflows ? 'unknown' : zohoPending.length ? 'degraded' : 'healthy', configured: serialSheetConfigured(), pending: zohoPending.length, oldestPendingAt: zohoPending.map((m) => m.zohoBackupQueuedAt).filter((v): v is string => Boolean(v)).sort()[0] || null },
     r2: { status: r2Configured() ? 'configured' : 'not_configured', configured: r2Configured() },
     workDrive: { status: workDriveConfigured() ? 'configured' : 'not_configured', configured: workDriveConfigured() },

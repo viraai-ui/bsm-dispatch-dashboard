@@ -7,6 +7,7 @@ import { isCurrentZohoOrderTombstoned, isOrderTombstoned, LIFECYCLE_BASELINE_PAT
 import { ensureOrderedMachineSlots, hasIncompleteMachineSlots } from './machine-unit-slots'
 import { reconcileConfirmedOrderSnapshots, type PackagingCompletedStore } from './synced-order-reconciliation'
 import { isTransferredMachineWorkflow } from './machine-workflow-projection'
+import { acquireDispatchLease, releaseDispatchLease } from './dispatch-sync-guard'
 
 export type SyncedOrdersStore = {
   orders: Record<string, Order>
@@ -120,14 +121,22 @@ export async function getSyncedOrder(id: string) {
 
 export async function syncConfirmedOrders() {
   if (inMemorySync) return inMemorySync
-  inMemorySync = performSync().finally(() => { inMemorySync = null })
+  inMemorySync = (async () => {
+    const lease = await acquireDispatchLease()
+    if (!lease.acquired) throw new Error(`Dispatch sync already running until ${lease.state.lease?.until || 'lease expiry'}`)
+    try { return await performSync() } finally { await releaseDispatchLease(lease.owner) }
+  })().finally(() => { inMemorySync = null })
   return inMemorySync
 }
 
 export async function syncSingleOrder(id: string, actor: string) {
   const running = orderSyncs.get(id)
   if (running) return running
-  const task = performSingleOrderSync(id, actor).finally(() => orderSyncs.delete(id))
+  const task = (async () => {
+    const lease = await acquireDispatchLease()
+    if (!lease.acquired) throw new Error(`Dispatch sync already running until ${lease.state.lease?.until || 'lease expiry'}`)
+    try { return await performSingleOrderSync(id, actor) } finally { await releaseDispatchLease(lease.owner) }
+  })().finally(() => orderSyncs.delete(id))
   orderSyncs.set(id, task)
   return task
 }
@@ -169,9 +178,8 @@ async function performSync() {
   }
   await writeSyncedOrdersStore({ ...previous, syncing: true, lastAttemptAt: new Date().toISOString(), lastError: null }, 'Start confirmed sales order sync')
   try {
-    const fetched = await fetchZohoConfirmedOrders()
+    const fetched = await fetchZohoConfirmedOrders(previous.orders, 15, 15)
     if (!Array.isArray(fetched)) throw new Error('Invalid Zoho response')
-    if (!fetched.length) throw new Error('Zoho sync returned zero confirmed sales orders; keeping last saved data')
     if (fetched.some((order) => !order.id || !order.zohoSalesOrderId)) throw new Error('Zoho sync returned invalid sales order IDs')
     const fetchedIds = fetched.map((order) => order.id)
     if (new Set(fetchedIds).size !== fetchedIds.length) throw new Error('Zoho sync returned duplicate sales order IDs')
@@ -180,7 +188,10 @@ async function performSync() {
       githubReadJson<PackagingCompletedStore>(PACKAGING_COMPLETED_PATH, { completed: {} }),
     ])
     const at = new Date().toISOString()
-    const reconciled = reconcileConfirmedOrderSnapshots({ previous, fetched, workflowStore: workflowSnapshot.data, completedStore: completedSnapshot.data, now: at })
+    // Operational sync is incremental. Preserve the durable mirror and overlay
+    // only the at-most-15 recently changed/new records fetched this run.
+    const merged = Object.values({ ...previous.orders, ...Object.fromEntries(fetched.map((order) => [order.id, order])) })
+    const reconciled = reconcileConfirmedOrderSnapshots({ previous, fetched: merged, workflowStore: workflowSnapshot.data, completedStore: completedSnapshot.data, now: at })
     // Durable identity stores are moved first. Each write is compare-and-swap guarded;
     // the synced index is only published after both migrations succeed.
     if (reconciled.migrated.length) {
