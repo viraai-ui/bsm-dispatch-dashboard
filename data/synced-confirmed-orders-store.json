@@ -173,56 +173,6 @@
       "machines": [],
       "zohoLastModifiedTime": "2026-09-29T12:00:18+0530"
     },
-    "1154219000037602001": {
-      "id": "1154219000037602001",
-      "zohoSalesOrderId": "1154219000037602001",
-      "salesOrderNumber": "SO-08052",
-      "status": "open",
-      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
-      "shippingAddress": "T-1/103-104, Phase-1, Mangol Puri Industrial Area, Delhi, 110083, India",
-      "salesperson": "Anuj Kumar",
-      "deliveryDate": "2026-09-28",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037602004",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000006379136",
-          "rate": 43500,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037602001-1154219000037602004-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037602001",
-          "lineItemId": "1154219000037602004",
-          "itemName": "Strobel Sewing machine (With Rechard Set)",
-          "sku": "600R",
-          "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
-          "salesOrderNumber": "SO-08052",
-          "deliveryDate": "2026-09-28",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-28T17:01:33+0530"
-    },
     "1154219000037568006": {
       "id": "1154219000037568006",
       "zohoSalesOrderId": "1154219000037568006",
@@ -5233,6 +5183,56 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     },
+    "1154219000037602001": {
+      "id": "1154219000037602001",
+      "zohoSalesOrderId": "1154219000037602001",
+      "salesOrderNumber": "SO-08052",
+      "status": "open",
+      "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+      "shippingAddress": "T-1/103-104, Phase-1, Mangol Puri Industrial Area, Delhi, 110083, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-28",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037602004",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000006379136",
+          "rate": 43500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037602001-1154219000037602004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037602001",
+          "lineItemId": "1154219000037602004",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "Aldas India Pvt. Ltd. (Unit 3)",
+          "salesOrderNumber": "SO-08052",
+          "deliveryDate": "2026-09-28",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T17:01:33+0530"
+    },
     "1154219000035933004": {
       "id": "1154219000035933004",
       "zohoSalesOrderId": "1154219000035933004",
@@ -5989,7 +5989,6 @@
     "1154219000037630001",
     "1154219000037626001",
     "1154219000037616014",
-    "1154219000037602001",
     "1154219000037568006",
     "1154219000037560001",
     "1154219000037475007",
@@ -6025,6 +6024,7 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000030035027",
+    "1154219000037602001",
     "1154219000035933004",
     "1154219000037427005",
     "1154219000037416020",
@@ -6040,8 +6040,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-29T08:21:35.181Z",
-  "lastAttemptAt": "2026-09-29T08:40:24.643Z",
+  "lastSuccessfulSyncAt": "2026-09-29T08:41:35.006Z",
+  "lastAttemptAt": "2026-09-29T08:41:35.006Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
