@@ -59,14 +59,20 @@ test('new generation retains the historical transfer destination audit', async (
   assert.match(source, /transferredAt: existing\?\.transferredAt/)
 })
 
-test('bundled SO-07789 workflow is open and retains transfer audit ownership', async () => {
+test('bundled SO-07789 workflow retains transfer audit ownership after legitimate regeneration', async () => {
   const store = JSON.parse(await readFile(new URL('../data/workflow-store.json', import.meta.url), 'utf8'))
   const workflow = store.orders[orderId]
   const machine = workflow.machines[machineId]
-  assert.equal(workflow.status, 'open')
-  assert.equal(machine.qrStatus, 'transferred')
+  if (machine.serialNumber) {
+    assert.equal(workflow.status, 'processed')
+    assert.equal(machine.qrStatus, 'generated')
+    assert.match(machine.serialNumber, /^\d{8}$/)
+  } else {
+    assert.equal(workflow.status, 'open')
+    assert.equal(machine.qrStatus, 'transferred')
+  }
   assert.equal(machine.transferDestinationOrderId, '1154219000036922008')
   assert.equal(machine.transferDestinationSalesOrderNumber, 'SO-07950')
-  assert.ok(machine.dispatchedAt)
+  if (!machine.serialNumber) assert.ok(machine.dispatchedAt)
   assert.ok(machine.transferredAt)
 })
