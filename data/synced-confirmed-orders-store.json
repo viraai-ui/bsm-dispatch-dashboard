@@ -5983,6 +5983,180 @@
       ],
       "zohoLastModifiedTime": "2026-09-25T14:04:48+0530",
       "retiredMachines": []
+    },
+    "1154219000037622005": {
+      "id": "1154219000037622005",
+      "zohoSalesOrderId": "1154219000037622005",
+      "salesOrderNumber": "SO-08060",
+      "status": "open",
+      "customerName": "MARIA EXPORTS INTERNATIONAL",
+      "shippingAddress": "H.NO.-19, JAJMAU, KANPUR,, Kanpur Nagar, Uttar Pradesh, 208010, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037622008",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000280682",
+          "rate": 33000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037622005-1154219000037622008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037622005",
+          "lineItemId": "1154219000037622008",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "MARIA EXPORTS INTERNATIONAL",
+          "salesOrderNumber": "SO-08060",
+          "deliveryDate": "2026-09-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-29T18:18:52+0530"
+    },
+    "1154219000037615009": {
+      "id": "1154219000037615009",
+      "zohoSalesOrderId": "1154219000037615009",
+      "salesOrderNumber": "SO-08059",
+      "status": "open",
+      "customerName": "VPRINT",
+      "shippingAddress": "37, CHANDU PARK GALI NO 19, DELHI, North East Delhi, Delhi, 110051, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037615012",
+          "itemName": "Hotmelt Roller Coater (20 Inch)",
+          "sku": "831-3",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004385212",
+          "rate": 68000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037615013",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 350,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037615009-1154219000037615012-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037615009",
+          "lineItemId": "1154219000037615012",
+          "itemName": "Hotmelt Roller Coater (20 Inch)",
+          "sku": "831-3",
+          "customerName": "VPRINT",
+          "salesOrderNumber": "SO-08059",
+          "deliveryDate": "2026-09-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-29T17:29:51+0530"
+    },
+    "1154219000037627006": {
+      "id": "1154219000037627006",
+      "zohoSalesOrderId": "1154219000037627006",
+      "salesOrderNumber": "SO-08058",
+      "status": "open",
+      "customerName": "Hype Impex",
+      "shippingAddress": "HYPE IMPEX F-91, UPSIDC INDUSTRIAL AREA,SELAQUI, UTTARAKHAND-248197, Selaqui, Dehradun, Uttarakhand, 248197",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-09-29",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037627009",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000225279",
+          "rate": 60000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037627010",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight cost from BSM to Abhishek Transport Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1200,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037627006-1154219000037627009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037627006",
+          "lineItemId": "1154219000037627009",
+          "itemName": "Hotmelt Spray machine (Double station)",
+          "sku": "834-2",
+          "customerName": "Hype Impex",
+          "salesOrderNumber": "SO-08058",
+          "deliveryDate": "2026-09-29",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-29T17:20:51+0530"
     }
   },
   "orderIds": [
@@ -6038,10 +6212,13 @@
     "1154219000037224017",
     "1154219000037275001",
     "1154219000037367014",
-    "1154219000037420001"
+    "1154219000037420001",
+    "1154219000037622005",
+    "1154219000037615009",
+    "1154219000037627006"
   ],
-  "lastSuccessfulSyncAt": "2026-09-29T08:55:09.773Z",
-  "lastAttemptAt": "2026-09-29T18:40:30.138Z",
+  "lastSuccessfulSyncAt": "2026-09-29T18:40:43.944Z",
+  "lastAttemptAt": "2026-09-29T18:40:43.944Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
