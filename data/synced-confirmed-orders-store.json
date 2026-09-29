@@ -431,106 +431,6 @@
       ],
       "zohoLastModifiedTime": "2026-09-28T14:22:39+0530"
     },
-    "1154219000037416006": {
-      "id": "1154219000037416006",
-      "zohoSalesOrderId": "1154219000037416006",
-      "salesOrderNumber": "SO-08037",
-      "status": "open",
-      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
-      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037416009",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225871",
-          "rate": 31000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037416006-1154219000037416009-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037416006",
-          "lineItemId": "1154219000037416009",
-          "itemName": "Tape Cutting machine [Electronic]",
-          "sku": "369",
-          "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
-          "salesOrderNumber": "SO-08037",
-          "deliveryDate": "2026-09-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-28T13:10:35+0530"
-    },
-    "1154219000037415002": {
-      "id": "1154219000037415002",
-      "zohoSalesOrderId": "1154219000037415002",
-      "salesOrderNumber": "SO-08034",
-      "status": "open",
-      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
-      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-09-25",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000037415005",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000280352",
-          "rate": 450000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000037415002-1154219000037415005-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000037415002",
-          "lineItemId": "1154219000037415005",
-          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
-          "sku": "601 - 12",
-          "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
-          "salesOrderNumber": "SO-08034",
-          "deliveryDate": "2026-09-25",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-09-29T13:11:38+0530"
-    },
     "1154219000037378005": {
       "id": "1154219000037378005",
       "zohoSalesOrderId": "1154219000037378005",
@@ -5183,6 +5083,106 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     },
+    "1154219000037416006": {
+      "id": "1154219000037416006",
+      "zohoSalesOrderId": "1154219000037416006",
+      "salesOrderNumber": "SO-08037",
+      "status": "open",
+      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037416009",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225871",
+          "rate": 31000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037416006-1154219000037416009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037416006",
+          "lineItemId": "1154219000037416009",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+          "salesOrderNumber": "SO-08037",
+          "deliveryDate": "2026-09-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-28T13:10:35+0530"
+    },
+    "1154219000037415002": {
+      "id": "1154219000037415002",
+      "zohoSalesOrderId": "1154219000037415002",
+      "salesOrderNumber": "SO-08034",
+      "status": "open",
+      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-25",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037415005",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000280352",
+          "rate": 450000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037415002-1154219000037415005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037415002",
+          "lineItemId": "1154219000037415005",
+          "itemName": "High Frequency Welding Embossing machine (12kw Hydraulic)",
+          "sku": "601 - 12",
+          "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+          "salesOrderNumber": "SO-08034",
+          "deliveryDate": "2026-09-25",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-29T13:11:38+0530"
+    },
     "1154219000037602001": {
       "id": "1154219000037602001",
       "zohoSalesOrderId": "1154219000037602001",
@@ -5992,8 +5992,6 @@
     "1154219000037568006",
     "1154219000037560001",
     "1154219000037475007",
-    "1154219000037416006",
-    "1154219000037415002",
     "1154219000037378005",
     "1154219000037363007",
     "1154219000037346057",
@@ -6024,6 +6022,8 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000030035027",
+    "1154219000037416006",
+    "1154219000037415002",
     "1154219000037602001",
     "1154219000035933004",
     "1154219000037427005",
@@ -6040,8 +6040,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-29T08:41:35.006Z",
-  "lastAttemptAt": "2026-09-29T08:54:01.891Z",
+  "lastSuccessfulSyncAt": "2026-09-29T08:55:09.773Z",
+  "lastAttemptAt": "2026-09-29T08:55:09.773Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
