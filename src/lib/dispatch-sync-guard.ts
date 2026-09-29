@@ -85,6 +85,7 @@ export function providerResetAt(response: Response) {
     const date = new Date(retry); if (Number.isFinite(date.getTime())) return date
   }
   const raw = Number(response.headers.get('x-rate-limit-reset'))
-  if (Number.isFinite(raw) && raw > 0) return new Date(raw > 10_000_000_000 ? raw : raw * 1000)
+  // Zoho Inventory reports this header as seconds remaining, not an epoch.
+  if (Number.isFinite(raw) && raw > 0) return new Date(raw > 10_000_000_000 ? raw : now + raw * 1000)
   return new Date(now + 60 * 60 * 1000)
 }

@@ -25,6 +25,7 @@ test('provider business calls reserve budget and 429 opens circuit without retry
   assert.doesNotMatch(get, /setTimeout|for\s*\(/)
   assert.match(guard, /if \(current\.used >= current\.limit\) return current/)
   assert.match(guard, /DISPATCH_ZOHO_DAILY_BUDGET_EXHAUSTED/)
+  assert.match(guard, /now \+ raw \* 1000/)
 })
 
 test('global durable lease covers routine and per-order manual sync', () => {
