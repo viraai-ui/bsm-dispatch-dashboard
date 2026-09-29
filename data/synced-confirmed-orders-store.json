@@ -2409,68 +2409,6 @@
       ],
       "zohoLastModifiedTime": "2026-08-24T16:35:24+0530"
     },
-    "1154219000035933004": {
-      "id": "1154219000035933004",
-      "zohoSalesOrderId": "1154219000035933004",
-      "salesOrderNumber": "SO-07789",
-      "status": "open",
-      "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
-      "shippingAddress": "DAG- 609, MOUZA- 87, NARAYANPUR, Malancha,, South Twenty Four Parganas, West Bengal, 743502",
-      "salesperson": "Shivani Kumari",
-      "deliveryDate": "2026-08-21",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000035933007",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000225102",
-          "rate": 35000,
-          "dispatchCategory": "machine"
-        },
-        {
-          "id": "1154219000035925477",
-          "itemName": "Freight/ Transportation Charges",
-          "sku": "",
-          "description": "Local Transportation Charges From BSM to OSC Logistics",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000004888581",
-          "rate": 1000,
-          "dispatchCategory": "freight"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000035933004-1154219000035933007-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000035933004",
-          "lineItemId": "1154219000035933007",
-          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
-          "sku": "108 B",
-          "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
-          "salesOrderNumber": "SO-07789",
-          "deliveryDate": "2026-08-21",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-08-21T16:44:17+0530"
-    },
     "1154219000035891004": {
       "id": "1154219000035891004",
       "zohoSalesOrderId": "1154219000035891004",
@@ -5240,6 +5178,68 @@
       ],
       "zohoLastModifiedTime": "2026-09-19T18:30:12+0530"
     },
+    "1154219000035933004": {
+      "id": "1154219000035933004",
+      "zohoSalesOrderId": "1154219000035933004",
+      "salesOrderNumber": "SO-07789",
+      "status": "open",
+      "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
+      "shippingAddress": "DAG- 609, MOUZA- 87, NARAYANPUR, Malancha,, South Twenty Four Parganas, West Bengal, 743502",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-08-21",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000035933007",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225102",
+          "rate": 35000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000035925477",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charges From BSM to OSC Logistics",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000035933004-1154219000035933007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000035933004",
+          "lineItemId": "1154219000035933007",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "customerName": "OXFORD SHOES & SAFETY PRODUCTS",
+          "salesOrderNumber": "SO-07789",
+          "deliveryDate": "2026-08-21",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-08-21T16:44:17+0530"
+    },
     "1154219000037427005": {
       "id": "1154219000037427005",
       "zohoSalesOrderId": "1154219000037427005",
@@ -5956,7 +5956,6 @@
     "1154219000036296003",
     "1154219000036185001",
     "1154219000035994029",
-    "1154219000035933004",
     "1154219000035891004",
     "1154219000035794018",
     "1154219000035711007",
@@ -5971,6 +5970,7 @@
     "1154219000032135005",
     "1154219000032046008",
     "1154219000030035027",
+    "1154219000035933004",
     "1154219000037427005",
     "1154219000037416020",
     "1154219000037570001",
@@ -5985,8 +5985,8 @@
     "1154219000037367014",
     "1154219000037420001"
   ],
-  "lastSuccessfulSyncAt": "2026-09-29T07:21:57.255Z",
-  "lastAttemptAt": "2026-09-29T07:32:47.884Z",
+  "lastSuccessfulSyncAt": "2026-09-29T07:34:15.908Z",
+  "lastAttemptAt": "2026-09-29T07:34:15.908Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
