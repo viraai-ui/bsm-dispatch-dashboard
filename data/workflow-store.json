@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271370,
+  "serialCounter": 26271371,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -45583,6 +45583,70 @@
           "processedAt": "2026-09-30T07:46:00.882Z",
           "dispatchNote": "local",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000037634005": {
+      "salesOrderId": "1154219000037634005",
+      "salesOrderNumber": "SO-08065",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037634005",
+        "zohoSalesOrderId": "1154219000037634005",
+        "salesOrderNumber": "SO-08065",
+        "status": "open",
+        "customerName": "MANAS FOOTWEARS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. 107 SEC-16 BAHADURGARH Distt.- JHAJJAR, HARYANA-124507, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037634008",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000002187978",
+            "rate": 38000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037634005-1154219000037634008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037634005",
+            "lineItemId": "1154219000037634008",
+            "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+            "sku": "",
+            "customerName": "MANAS FOOTWEARS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08065",
+            "deliveryDate": "2026-09-30",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-30T13:05:34+0530"
+      },
+      "machines": {
+        "1154219000037634005-1154219000037634008-1": {
+          "machineUnitId": "1154219000037634005-1154219000037634008-1",
+          "lineItemId": "1154219000037634008",
+          "serialNumber": "26271371",
+          "qrToken": "26271371",
+          "qrStatus": "pending"
         }
       }
     }
