@@ -45230,7 +45230,9 @@
     "1154219000037627006": {
       "salesOrderId": "1154219000037627006",
       "salesOrderNumber": "SO-08058",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T07:39:26.895Z",
       "processedOrder": {
         "id": "1154219000037627006",
         "zohoSalesOrderId": "1154219000037627006",
@@ -45272,8 +45274,8 @@
           {
             "id": "1154219000037627006-1154219000037627009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271368",
+            "qrToken": "26271368",
             "orderId": "1154219000037627006",
             "lineItemId": "1154219000037627009",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -45281,14 +45283,17 @@
             "customerName": "Hype Impex",
             "salesOrderNumber": "SO-08058",
             "deliveryDate": "2026-09-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "vendor": "Able",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-09-29T17:20:51+0530"
@@ -45302,7 +45307,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T07:38:25.405Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-30T07:38:25.866Z"
+          "zohoBackupQueuedAt": "2026-09-30T07:39:26.895Z",
+          "processedAt": "2026-09-30T07:39:26.895Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Able"
         }
       }
     }
