@@ -45752,7 +45752,9 @@
     "1154219000037686001": {
       "salesOrderId": "1154219000037686001",
       "salesOrderNumber": "SO-08069",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T11:27:14.121Z",
       "processedOrder": {
         "id": "1154219000037686001",
         "zohoSalesOrderId": "1154219000037686001",
@@ -45782,8 +45784,8 @@
           {
             "id": "1154219000037686001-1154219000037686004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271373",
+            "qrToken": "26271373",
             "orderId": "1154219000037686001",
             "lineItemId": "1154219000037686004",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -45791,14 +45793,17 @@
             "customerName": "Ankit Raj Enterprises",
             "salesOrderNumber": "SO-08069",
             "deliveryDate": "2026-09-30",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-30T16:53:07+0530"
@@ -45812,7 +45817,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T11:24:41.753Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-30T11:24:42.989Z"
+          "zohoBackupQueuedAt": "2026-09-30T11:27:14.121Z",
+          "processedAt": "2026-09-30T11:27:14.121Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
