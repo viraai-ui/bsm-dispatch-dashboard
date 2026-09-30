@@ -9243,6 +9243,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037626001": {
+      "id": "ship-1790764667914-0xz7k",
+      "itemId": "1154219000037626001",
+      "orderId": "1154219000037626001",
+      "machineId": "1154219000037626001-1154219000037626004-1",
+      "salesOrderNumber": "SO-08055",
+      "customerName": "RADEVIC INTERVENTION PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-29",
+      "notes": "",
+      "shippedAt": "2026-09-30T10:37:47.914Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
