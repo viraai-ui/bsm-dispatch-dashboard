@@ -26462,6 +26462,77 @@
       "machineIds": [
         "1154219000037626001-1154219000037626004-1"
       ]
+    },
+    "1154219000037615009": {
+      "completedAt": "2026-09-30T09:47:39.472Z",
+      "order": {
+        "id": "1154219000037615009",
+        "zohoSalesOrderId": "1154219000037615009",
+        "salesOrderNumber": "SO-08059",
+        "status": "open",
+        "customerName": "VPRINT",
+        "shippingAddress": "37, CHANDU PARK GALI NO 19, DELHI, North East Delhi, Delhi, 110051, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037615012",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004385212",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037615013",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228524",
+            "rate": 350,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037615009-1154219000037615012-1",
+            "unitNumber": 1,
+            "serialNumber": "26271370",
+            "qrToken": "26271370",
+            "orderId": "1154219000037615009",
+            "lineItemId": "1154219000037615012",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "VPRINT",
+            "salesOrderNumber": "SO-08059",
+            "deliveryDate": "2026-09-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-29T17:29:51+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037615009-1154219000037615012-1"
+      ]
     }
   }
 }
