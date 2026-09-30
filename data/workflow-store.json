@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271369,
+  "serialCounter": 26271370,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -45487,6 +45487,82 @@
           "processedAt": "2026-09-30T07:43:56.071Z",
           "dispatchNote": "Local",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000037615009": {
+      "salesOrderId": "1154219000037615009",
+      "salesOrderNumber": "SO-08059",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037615009",
+        "zohoSalesOrderId": "1154219000037615009",
+        "salesOrderNumber": "SO-08059",
+        "status": "open",
+        "customerName": "VPRINT",
+        "shippingAddress": "37, CHANDU PARK GALI NO 19, DELHI, North East Delhi, Delhi, 110051, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037615012",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004385212",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037615013",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228524",
+            "rate": 350,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037615009-1154219000037615012-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037615009",
+            "lineItemId": "1154219000037615012",
+            "itemName": "Hotmelt Roller Coater (20 Inch)",
+            "sku": "831-3",
+            "customerName": "VPRINT",
+            "salesOrderNumber": "SO-08059",
+            "deliveryDate": "2026-09-29",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-29T17:29:51+0530"
+      },
+      "machines": {
+        "1154219000037615009-1154219000037615012-1": {
+          "machineUnitId": "1154219000037615009-1154219000037615012-1",
+          "lineItemId": "1154219000037615012",
+          "serialNumber": "26271370",
+          "qrToken": "26271370",
+          "qrStatus": "pending"
         }
       }
     }
