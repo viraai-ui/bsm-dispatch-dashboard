@@ -9181,6 +9181,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037638004": {
+      "id": "ship-1790764521729-r78l0",
+      "itemId": "1154219000037638004",
+      "orderId": "1154219000037638004",
+      "machineId": "1154219000037638004-1154219000037638007-1",
+      "salesOrderNumber": "SO-08064",
+      "customerName": "V R SEWING MACHINE",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-30",
+      "notes": "",
+      "shippedAt": "2026-09-30T10:35:21.729Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
