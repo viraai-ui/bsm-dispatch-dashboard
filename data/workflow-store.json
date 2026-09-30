@@ -45418,7 +45418,9 @@
     "1154219000037638004": {
       "salesOrderId": "1154219000037638004",
       "salesOrderNumber": "SO-08064",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T07:43:56.071Z",
       "processedOrder": {
         "id": "1154219000037638004",
         "zohoSalesOrderId": "1154219000037638004",
@@ -45448,8 +45450,8 @@
           {
             "id": "1154219000037638004-1154219000037638007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271369",
+            "qrToken": "26271369",
             "orderId": "1154219000037638004",
             "lineItemId": "1154219000037638007",
             "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
@@ -45457,14 +45459,17 @@
             "customerName": "V R SEWING MACHINE",
             "salesOrderNumber": "SO-08064",
             "deliveryDate": "2026-09-30",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-30T12:06:03+0530"
@@ -45478,7 +45483,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T07:43:07.986Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-30T07:43:08.411Z"
+          "zohoBackupQueuedAt": "2026-09-30T07:43:56.071Z",
+          "processedAt": "2026-09-30T07:43:56.071Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
