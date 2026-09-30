@@ -45191,7 +45191,9 @@
     "1154219000036935021": {
       "salesOrderId": "1154219000036935021",
       "salesOrderNumber": "SO-07956",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T05:56:29.624Z",
       "processedOrder": {
         "id": "1154219000036935021",
         "zohoSalesOrderId": "1154219000036935021",
@@ -45221,8 +45223,8 @@
           {
             "id": "1154219000036935021-1154219000036935024-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271366",
+            "qrToken": "26271366",
             "orderId": "1154219000036935021",
             "lineItemId": "1154219000036935024",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -45230,20 +45232,23 @@
             "customerName": "LEGACY FOOTCRAFT PRIVATE LIMITED",
             "salesOrderNumber": "SO-07956",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Heavy Duty"
+            "itemDescription": "Heavy Duty",
+            "warrantyStart": "2026-09-30",
+            "vendor": "Siphon",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036935021-1154219000036935024-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271367",
+            "qrToken": "26271367",
             "orderId": "1154219000036935021",
             "lineItemId": "1154219000036935024",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -45251,14 +45256,17 @@
             "customerName": "LEGACY FOOTCRAFT PRIVATE LIMITED",
             "salesOrderNumber": "SO-07956",
             "deliveryDate": "2026-09-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Heavy Duty"
+            "itemDescription": "Heavy Duty",
+            "warrantyStart": "2026-09-30",
+            "vendor": "Siphon",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000036935021-1154219000036935024-3",
@@ -45279,7 +45287,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Heavy Duty"
+            "itemDescription": "Heavy Duty",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000036935021-1154219000036935024-4",
@@ -45300,7 +45310,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Heavy Duty"
+            "itemDescription": "Heavy Duty",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-09-18T20:38:57+0530"
@@ -45314,7 +45326,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T05:53:47.427Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-30T05:53:50.533Z"
+          "zohoBackupQueuedAt": "2026-09-30T05:56:29.624Z",
+          "processedAt": "2026-09-30T05:56:29.624Z",
+          "dispatchNote": "Local",
+          "vendor": "Siphon"
         },
         "1154219000036935021-1154219000036935024-2": {
           "machineUnitId": "1154219000036935021-1154219000036935024-2",
@@ -45324,7 +45339,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T05:53:47.427Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-30T05:53:50.533Z"
+          "zohoBackupQueuedAt": "2026-09-30T05:56:29.624Z",
+          "processedAt": "2026-09-30T05:56:29.624Z",
+          "dispatchNote": "Local",
+          "vendor": "Siphon"
         }
       }
     }
