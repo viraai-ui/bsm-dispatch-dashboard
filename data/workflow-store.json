@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271367,
+  "serialCounter": 26271368,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -45224,6 +45224,82 @@
           "zohoBackupLastAttemptAt": "2026-09-30T06:00:41.369Z",
           "zohoBackupSyncedAt": "2026-09-30T06:00:41.369Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000037627006": {
+      "salesOrderId": "1154219000037627006",
+      "salesOrderNumber": "SO-08058",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037627006",
+        "zohoSalesOrderId": "1154219000037627006",
+        "salesOrderNumber": "SO-08058",
+        "status": "open",
+        "customerName": "Hype Impex",
+        "shippingAddress": "HYPE IMPEX F-91, UPSIDC INDUSTRIAL AREA,SELAQUI, UTTARAKHAND-248197, Selaqui, Dehradun, Uttarakhand, 248197",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-09-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037627009",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225279",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037627010",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight cost from BSM to Abhishek Transport Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1200,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037627006-1154219000037627009-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037627006",
+            "lineItemId": "1154219000037627009",
+            "itemName": "Hotmelt Spray machine (Double station)",
+            "sku": "834-2",
+            "customerName": "Hype Impex",
+            "salesOrderNumber": "SO-08058",
+            "deliveryDate": "2026-09-29",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-29T17:20:51+0530"
+      },
+      "machines": {
+        "1154219000037627006-1154219000037627009-1": {
+          "machineUnitId": "1154219000037627006-1154219000037627009-1",
+          "lineItemId": "1154219000037627009",
+          "serialNumber": "26271368",
+          "qrToken": "26271368",
+          "qrStatus": "pending"
         }
       }
     }
