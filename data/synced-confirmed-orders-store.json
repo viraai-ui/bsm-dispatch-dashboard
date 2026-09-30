@@ -6557,6 +6557,34 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-30T13:05:34+0530"
+    },
+    "1154219000037626026": {
+      "id": "1154219000037626026",
+      "zohoSalesOrderId": "1154219000037626026",
+      "salesOrderNumber": "SO-08067",
+      "status": "open",
+      "customerName": "HARE KRISHNA SHOE UPPER",
+      "shippingAddress": "1ST AND 2 FLOOR, PROPERTY NO. 1/2 A, KH NO. 219/2, KIRARI SULEMAN NAGAR, INDER ENCLAVE PHASE -1, New Delhi, North West Delhi, Delhi, 110086",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-30",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037626029",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 12.5,
+          "pendingQuantity": 12.5,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 345,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-09-30T13:25:04+0530"
     }
   },
   "orderIds": [
@@ -6620,10 +6648,11 @@
     "1154219000037625007",
     "1154219000037645004",
     "1154219000037638004",
-    "1154219000037634005"
+    "1154219000037634005",
+    "1154219000037626026"
   ],
-  "lastSuccessfulSyncAt": "2026-09-30T07:40:34.424Z",
-  "lastAttemptAt": "2026-09-30T08:00:26.922Z",
+  "lastSuccessfulSyncAt": "2026-09-30T08:00:35.402Z",
+  "lastAttemptAt": "2026-09-30T08:00:35.402Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
