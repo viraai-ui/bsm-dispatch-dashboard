@@ -9212,6 +9212,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037615009": {
+      "id": "ship-1790764556918-hg3uf",
+      "itemId": "1154219000037615009",
+      "orderId": "1154219000037615009",
+      "machineId": "1154219000037615009-1154219000037615012-1",
+      "salesOrderNumber": "SO-08059",
+      "customerName": "VPRINT",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "UP14RT2283",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-30",
+      "notes": "",
+      "shippedAt": "2026-09-30T10:35:56.918Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
