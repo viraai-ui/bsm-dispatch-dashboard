@@ -6457,6 +6457,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-30T11:53:03+0530"
+    },
+    "1154219000037638004": {
+      "id": "1154219000037638004",
+      "zohoSalesOrderId": "1154219000037638004",
+      "salesOrderNumber": "SO-08064",
+      "status": "open",
+      "customerName": "V R SEWING MACHINE",
+      "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-09-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037638007",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225102",
+          "rate": 28500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037638004-1154219000037638007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037638004",
+          "lineItemId": "1154219000037638007",
+          "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+          "sku": "108 B",
+          "customerName": "V R SEWING MACHINE",
+          "salesOrderNumber": "SO-08064",
+          "deliveryDate": "2026-09-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-30T12:06:03+0530"
     }
   },
   "orderIds": [
@@ -6518,10 +6568,11 @@
     "1154219000037627006",
     "1154219000037635002",
     "1154219000037625007",
-    "1154219000037645004"
+    "1154219000037645004",
+    "1154219000037638004"
   ],
-  "lastSuccessfulSyncAt": "2026-09-30T06:32:31.646Z",
-  "lastAttemptAt": "2026-09-30T06:40:26.370Z",
+  "lastSuccessfulSyncAt": "2026-09-30T06:40:35.268Z",
+  "lastAttemptAt": "2026-09-30T06:40:35.268Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
