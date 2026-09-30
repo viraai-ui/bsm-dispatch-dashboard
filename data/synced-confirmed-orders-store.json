@@ -6303,6 +6303,160 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-30T11:36:14+0530"
+    },
+    "1154219000037625007": {
+      "id": "1154219000037625007",
+      "zohoSalesOrderId": "1154219000037625007",
+      "salesOrderNumber": "SO-08063",
+      "status": "open",
+      "customerName": "Shree Krishna Safety Products",
+      "shippingAddress": "GROUND FLOOR, W-57, Shree Krishna Safety Products, Indrayani Nagar Road, NEAR BABAR PETROL PUMP, BHOSARI MIDC, Pimpri Chinchwad, Pune, Maharashtra, 411026, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037625010",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000006379136",
+          "rate": 43000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037625007-1154219000037625010-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037625007",
+          "lineItemId": "1154219000037625010",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "Shree Krishna Safety Products",
+          "salesOrderNumber": "SO-08063",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-30T11:48:20+0530"
+    },
+    "1154219000037645004": {
+      "id": "1154219000037645004",
+      "zohoSalesOrderId": "1154219000037645004",
+      "salesOrderNumber": "SO-08062",
+      "status": "open",
+      "customerName": "House of Suman Private Limited",
+      "shippingAddress": "Khasra No. 31/2/2, MIE, Part A, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-09-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037645007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Fabric buff for polishing machine",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 950,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037645008",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Woolen Buff for Polishing Machine",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 950,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037645004-1154219000037645007-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037645004",
+          "lineItemId": "1154219000037645007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "House of Suman Private Limited",
+          "salesOrderNumber": "SO-08062",
+          "deliveryDate": "2026-09-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Fabric buff for polishing machine"
+        },
+        {
+          "id": "1154219000037645004-1154219000037645007-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037645004",
+          "lineItemId": "1154219000037645007",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "House of Suman Private Limited",
+          "salesOrderNumber": "SO-08062",
+          "deliveryDate": "2026-09-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Fabric buff for polishing machine"
+        },
+        {
+          "id": "1154219000037645004-1154219000037645008-1",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037645004",
+          "lineItemId": "1154219000037645008",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "House of Suman Private Limited",
+          "salesOrderNumber": "SO-08062",
+          "deliveryDate": "2026-09-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Woolen Buff for Polishing Machine"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-30T11:43:06+0530"
     }
   },
   "orderIds": [
@@ -6362,10 +6516,12 @@
     "1154219000037622005",
     "1154219000037615009",
     "1154219000037627006",
-    "1154219000037635002"
+    "1154219000037635002",
+    "1154219000037625007",
+    "1154219000037645004"
   ],
-  "lastSuccessfulSyncAt": "2026-09-30T06:12:40.393Z",
-  "lastAttemptAt": "2026-09-30T06:20:26.427Z",
+  "lastSuccessfulSyncAt": "2026-09-30T06:20:35.889Z",
+  "lastAttemptAt": "2026-09-30T06:20:35.889Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
