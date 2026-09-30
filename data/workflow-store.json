@@ -45589,7 +45589,9 @@
     "1154219000037634005": {
       "salesOrderId": "1154219000037634005",
       "salesOrderNumber": "SO-08065",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T07:48:40.986Z",
       "processedOrder": {
         "id": "1154219000037634005",
         "zohoSalesOrderId": "1154219000037634005",
@@ -45619,8 +45621,8 @@
           {
             "id": "1154219000037634005-1154219000037634008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271371",
+            "qrToken": "26271371",
             "orderId": "1154219000037634005",
             "lineItemId": "1154219000037634008",
             "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
@@ -45628,14 +45630,17 @@
             "customerName": "MANAS FOOTWEARS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08065",
             "deliveryDate": "2026-09-30",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-30T13:05:34+0530"
@@ -45649,7 +45654,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T07:47:27.214Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-09-30T07:47:27.434Z"
+          "zohoBackupQueuedAt": "2026-09-30T07:48:40.986Z",
+          "processedAt": "2026-09-30T07:48:40.986Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
