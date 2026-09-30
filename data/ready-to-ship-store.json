@@ -9143,6 +9143,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037272011": {
+      "id": "ship-1790764491153-8gcni",
+      "itemId": "1154219000037272011",
+      "orderId": "1154219000037272011",
+      "machineId": "1154219000037272011-1154219000037272015-1",
+      "salesOrderNumber": "SO-08012",
+      "customerName": "KARAM SAFETY PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Delhi Modi Transport",
+      "transporterPhone": "9811198516",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-30 at 3.53.39 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-09-30%2FSO-08012%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-09-30T10-34-46-113Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-09-30/SO-08012/shipment-lr-builty/Shipment-LR-Builty-2026-09-30T10-34-46-113Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-09-30T10:34:51.153Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-29",
+      "notes": "",
+      "shippedAt": "2026-09-30T10:34:51.153Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
