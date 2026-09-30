@@ -6507,6 +6507,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-30T12:06:03+0530"
+    },
+    "1154219000037634005": {
+      "id": "1154219000037634005",
+      "zohoSalesOrderId": "1154219000037634005",
+      "salesOrderNumber": "SO-08065",
+      "status": "open",
+      "customerName": "MANAS FOOTWEARS PRIVATE LIMITED",
+      "shippingAddress": "PLOT NO. 107 SEC-16 BAHADURGARH Distt.- JHAJJAR, HARYANA-124507, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-09-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037634008",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000002187978",
+          "rate": 38000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037634005-1154219000037634008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037634005",
+          "lineItemId": "1154219000037634008",
+          "itemName": "Sole Marking Machine (Pneumatic) With Adjustable Pad",
+          "sku": "",
+          "customerName": "MANAS FOOTWEARS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08065",
+          "deliveryDate": "2026-09-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-09-30T12:58:49+0530"
     }
   },
   "orderIds": [
@@ -6569,10 +6619,11 @@
     "1154219000037635002",
     "1154219000037625007",
     "1154219000037645004",
-    "1154219000037638004"
+    "1154219000037638004",
+    "1154219000037634005"
   ],
-  "lastSuccessfulSyncAt": "2026-09-30T07:20:34.214Z",
-  "lastAttemptAt": "2026-09-30T07:33:44.371Z",
+  "lastSuccessfulSyncAt": "2026-09-30T07:33:52.132Z",
+  "lastAttemptAt": "2026-09-30T07:33:52.132Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
