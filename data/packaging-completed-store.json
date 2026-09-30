@@ -26391,6 +26391,77 @@
       "machineIds": [
         "1154219000037602001-1154219000037602004-1"
       ]
+    },
+    "1154219000037626001": {
+      "completedAt": "2026-09-30T09:47:28.223Z",
+      "order": {
+        "id": "1154219000037626001",
+        "zohoSalesOrderId": "1154219000037626001",
+        "salesOrderNumber": "SO-08055",
+        "status": "open",
+        "customerName": "RADEVIC INTERVENTION PRIVATE LIMITED",
+        "shippingAddress": "1st Floor, SITE NO 7 & 8, GOLAHALLI VILLAGE, 80 FEET ROAD, Anjanapura Fire Station,, Bengaluru Urban, Karnataka,, 560062, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-09-29",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037626004",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006912047",
+            "rate": 110000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037626005",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037626001-1154219000037626004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271365",
+            "qrToken": "26271365",
+            "orderId": "1154219000037626001",
+            "lineItemId": "1154219000037626004",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "customerName": "RADEVIC INTERVENTION PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08055",
+            "deliveryDate": "2026-09-29",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-29",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-29T12:00:17+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037626001-1154219000037626004-1"
+      ]
     }
   }
 }
