@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271368,
+  "serialCounter": 26271369,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -45412,6 +45412,70 @@
           "processedAt": "2026-09-30T07:39:26.895Z",
           "dispatchNote": "Good wrapping",
           "vendor": "Able"
+        }
+      }
+    },
+    "1154219000037638004": {
+      "salesOrderId": "1154219000037638004",
+      "salesOrderNumber": "SO-08064",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037638004",
+        "zohoSalesOrderId": "1154219000037638004",
+        "salesOrderNumber": "SO-08064",
+        "status": "open",
+        "customerName": "V R SEWING MACHINE",
+        "shippingAddress": "GROUND, 438,KILLA NO 30/11/2/2, JAGDAMBA MARKT, KEWAT NO 360/316/7, NEAR KALI MATA MANDIR, JAGDAMBA MARKET, Bahadurgarh, Jhajjar, Haryana, 124507",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037638007",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225102",
+            "rate": 28500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037638004-1154219000037638007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037638004",
+            "lineItemId": "1154219000037638007",
+            "itemName": "Latex Glue Applicator (with Double Rollers) (16 + 4 inch)",
+            "sku": "108 B",
+            "customerName": "V R SEWING MACHINE",
+            "salesOrderNumber": "SO-08064",
+            "deliveryDate": "2026-09-30",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-30T12:06:03+0530"
+      },
+      "machines": {
+        "1154219000037638004-1154219000037638007-1": {
+          "machineUnitId": "1154219000037638004-1154219000037638007-1",
+          "lineItemId": "1154219000037638007",
+          "serialNumber": "26271369",
+          "qrToken": "26271369",
+          "qrStatus": "pending"
         }
       }
     }
