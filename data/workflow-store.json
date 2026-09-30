@@ -45667,7 +45667,9 @@
     "1154219000037622005": {
       "salesOrderId": "1154219000037622005",
       "salesOrderNumber": "SO-08060",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T08:32:52.231Z",
       "processedOrder": {
         "id": "1154219000037622005",
         "zohoSalesOrderId": "1154219000037622005",
@@ -45697,8 +45699,8 @@
           {
             "id": "1154219000037622005-1154219000037622008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271372",
+            "qrToken": "26271372",
             "orderId": "1154219000037622005",
             "lineItemId": "1154219000037622008",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -45706,14 +45708,17 @@
             "customerName": "MARIA EXPORTS INTERNATIONAL",
             "salesOrderNumber": "SO-08060",
             "deliveryDate": "2026-09-30",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-29T18:18:52+0530"
@@ -45726,11 +45731,14 @@
           "qrToken": "26271372",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T08:02:47.886Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-30T08:02:48.138Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-30T08:32:52.231Z",
           "zohoBackupLastAttemptAt": "2026-09-30T08:15:40.768Z",
           "zohoBackupSyncedAt": "2026-09-30T08:15:40.768Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-09-30T08:32:52.231Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
