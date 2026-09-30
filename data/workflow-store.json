@@ -45499,7 +45499,9 @@
     "1154219000037615009": {
       "salesOrderId": "1154219000037615009",
       "salesOrderNumber": "SO-08059",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-09-30T07:46:00.882Z",
       "processedOrder": {
         "id": "1154219000037615009",
         "zohoSalesOrderId": "1154219000037615009",
@@ -45541,8 +45543,8 @@
           {
             "id": "1154219000037615009-1154219000037615012-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271370",
+            "qrToken": "26271370",
             "orderId": "1154219000037615009",
             "lineItemId": "1154219000037615012",
             "itemName": "Hotmelt Roller Coater (20 Inch)",
@@ -45550,14 +45552,17 @@
             "customerName": "VPRINT",
             "salesOrderNumber": "SO-08059",
             "deliveryDate": "2026-09-29",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-09-29T17:29:51+0530"
@@ -45570,11 +45575,14 @@
           "qrToken": "26271370",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-09-30T07:44:58.678Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-09-30T07:44:58.901Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-09-30T07:46:00.882Z",
           "zohoBackupLastAttemptAt": "2026-09-30T07:45:40.744Z",
           "zohoBackupSyncedAt": "2026-09-30T07:45:40.744Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-09-30T07:46:00.882Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
