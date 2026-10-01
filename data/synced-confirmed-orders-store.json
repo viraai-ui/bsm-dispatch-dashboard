@@ -7072,6 +7072,56 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-01T17:37:55+0530"
+    },
+    "1154219000037791001": {
+      "id": "1154219000037791001",
+      "zohoSalesOrderId": "1154219000037791001",
+      "salesOrderNumber": "SO-08078",
+      "status": "open",
+      "customerName": "PAWPRO HANDMADE",
+      "shippingAddress": "J-15 A, J Block, GALI NO 12, Lakshmi Nagar, New Delhi, East Delhi, Delhi, 110092",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037791004",
+          "itemName": "Edge Coloring Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226354",
+          "rate": 46000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037791001-1154219000037791004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037791001",
+          "lineItemId": "1154219000037791004",
+          "itemName": "Edge Coloring Machine",
+          "sku": "",
+          "customerName": "PAWPRO HANDMADE",
+          "salesOrderNumber": "SO-08078",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-01T18:29:34+0530"
     }
   },
   "orderIds": [
@@ -7146,10 +7196,11 @@
     "1154219000037762002",
     "1154219000037781012",
     "1154219000037790001",
-    "1154219000037789001"
+    "1154219000037789001",
+    "1154219000037791001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-01T12:40:32.689Z",
-  "lastAttemptAt": "2026-10-01T12:59:43.444Z",
+  "lastSuccessfulSyncAt": "2026-10-01T12:59:50.948Z",
+  "lastAttemptAt": "2026-10-01T12:59:50.948Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
