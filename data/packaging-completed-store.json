@@ -27007,6 +27007,65 @@
       "machineIds": [
         "1154219000037686001-1154219000037686004-1"
       ]
+    },
+    "1154219000037723001": {
+      "completedAt": "2026-10-01T07:31:14.741Z",
+      "order": {
+        "id": "1154219000037723001",
+        "zohoSalesOrderId": "1154219000037723001",
+        "salesOrderNumber": "SO-08070",
+        "status": "open",
+        "customerName": "XO FOOTWEAR PVT LTD (34B)",
+        "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-10-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037723004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000006379136",
+            "rate": 45000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037723001-1154219000037723004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271375",
+            "qrToken": "26271375",
+            "orderId": "1154219000037723001",
+            "lineItemId": "1154219000037723004",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "XO FOOTWEAR PVT LTD (34B)",
+            "salesOrderNumber": "SO-08070",
+            "deliveryDate": "2026-10-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "dispatchNote": "local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-01T10:15:49+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037723001-1154219000037723004-1"
+      ]
     }
   }
 }
