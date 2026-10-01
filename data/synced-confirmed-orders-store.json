@@ -6844,6 +6844,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-01T13:57:22+0530"
+    },
+    "1154219000037751005": {
+      "id": "1154219000037751005",
+      "zohoSalesOrderId": "1154219000037751005",
+      "salesOrderNumber": "SO-08073",
+      "status": "open",
+      "customerName": "MADHU HANDICRAFT",
+      "shippingAddress": "OPP. TCP-II, CANTT, HISAR CANTT, Hisar, Haryana, 125001",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037751008",
+          "itemName": "Sole Stitching Machine Small Hook (Special Machine For Kids) 268s",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000016919328",
+          "rate": 760000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037751005-1154219000037751008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037751005",
+          "lineItemId": "1154219000037751008",
+          "itemName": "Sole Stitching Machine Small Hook (Special Machine For Kids) 268s",
+          "sku": "",
+          "customerName": "MADHU HANDICRAFT",
+          "salesOrderNumber": "SO-08073",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-01T14:55:13+0530"
     }
   },
   "orderIds": [
@@ -6913,10 +6963,11 @@
     "1154219000037686001",
     "1154219000037723001",
     "1154219000037683391",
-    "1154219000037738001"
+    "1154219000037738001",
+    "1154219000037751005"
   ],
-  "lastSuccessfulSyncAt": "2026-10-01T09:00:33.480Z",
-  "lastAttemptAt": "2026-10-01T09:40:27.115Z",
+  "lastSuccessfulSyncAt": "2026-10-01T09:40:34.711Z",
+  "lastAttemptAt": "2026-10-01T09:40:34.711Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
