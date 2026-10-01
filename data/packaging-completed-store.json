@@ -26830,6 +26830,65 @@
       "machineIds": [
         "1154219000037634005-1154219000037634008-1"
       ]
+    },
+    "1154219000037560001": {
+      "completedAt": "2026-10-01T06:47:59.152Z",
+      "order": {
+        "id": "1154219000037560001",
+        "zohoSalesOrderId": "1154219000037560001",
+        "salesOrderNumber": "SO-08048",
+        "status": "open",
+        "customerName": "OLIVES AND GOLD (OPC) PRIVATE LIMITED",
+        "shippingAddress": "3rd Floor , V- 7, Red,Cross Road, Mie Part - B, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-28",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037560004",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004395037",
+            "rate": 75000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037560001-1154219000037560004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271358",
+            "qrToken": "26271358",
+            "orderId": "1154219000037560001",
+            "lineItemId": "1154219000037560004",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "customerName": "OLIVES AND GOLD (OPC) PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08048",
+            "deliveryDate": "2026-09-28",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-28",
+            "dispatchNote": "LOCAL"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-28T10:54:58+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037560001-1154219000037560004-1"
+      ]
     }
   }
 }
