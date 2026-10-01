@@ -13,23 +13,23 @@ test('Accounts user is idempotently migrated with a bcrypt password and restrict
   assert.doesNotMatch(auth, /passwordHash:\s*'account'/)
 })
 
-test('payment API permits Admin and Accounts status updates while creation remains Admin-only', async () => {
+test('payment API preserves Accounts status access and grants payment creation only to Admin and Spare Part Sales', async () => {
   const route = await read('../src/app/api/payments/route.ts')
   const upload = await read('../src/app/api/payments/upload-target/route.ts')
-  assert.match(route, /GET\(\)[\s\S]*requireUser\(\['Admin', 'Accounts'\]\)/)
-  assert.match(route, /POST\(request: Request\)[\s\S]*requireUser\(\['Admin'\]\)/)
+  assert.match(route, /GET\(\)[\s\S]*requireUser\(\['Admin', 'Accounts', 'Spare Part Sales'\]\)/)
+  assert.match(route, /POST\(request: Request\)[\s\S]*requireUser\(\['Admin', 'Spare Part Sales'\]\)/)
   assert.match(route, /PATCH\(request: Request\)[\s\S]*requireUser\(\['Admin', 'Accounts'\]\)/)
   assert.match(route, /\['Pending', 'Payment Received'\]/)
-  assert.match(upload, /requireUser\(\['Admin'\]\)/)
+  assert.match(upload, /requireUser\(\['Admin', 'Spare Part Sales'\]\)/)
 })
 
 test('Accounts route and navigation are Payments-only', async () => {
   const gate = await read('../src/components/AuthGate.tsx')
   const shell = await read('../src/components/DashboardShell.tsx')
   const proxy = await read('../src/proxy.ts')
-  assert.match(gate, /role === 'Accounts' \? accountsOnlyPath/)
+  assert.match(gate, /role === 'Accounts' \|\| role === 'Spare Part Sales'/)
   assert.match(gate, /user\.role === 'Accounts' && pathname !== accountsOnlyPath/)
-  assert.match(shell, /accountsOnly \? nav\.filter\(\(item\) => item\.href === '\/payments'\)/)
+  assert.match(shell, /accountsOnly \|\| sparePartSalesOnly \? nav\.filter\(\(item\) => item\.href === '\/payments'\)/)
   assert.match(proxy, /payload\.role === 'Accounts' && pathname !== accountsOnly/)
 })
 
@@ -41,9 +41,9 @@ test('Payments uses its dedicated read-only sales-order API', async () => {
   assert.doesNotMatch(client, /fetch\('\/api\/orders'/)
   assert.match(client, /payment-sync-icon spinning/)
   assert.match(client, /setOrders\(\[\]\); setOrdersLoaded\(true\)/)
-  assert.match(client, /isAdmin && open/)
-  assert.match(client, /disabled=\{updatingPaymentId === payment\.id\}/)
-  assert.match(client, /if \(!isAdmin && !isAccounts\) return/)
+  assert.match(client, /canAddPayment && open/)
+  assert.match(client, /disabled=\{!canUpdateStatus \|\| updatingPaymentId === payment\.id\}/)
+  assert.match(client, /if \(!canUpdateStatus\) return/)
   assert.doesNotMatch(orders, /paymentOrderSuggestions|isOpenZohoSalesOrder|payments/)
   assert.match(paymentOrders, /export async function GET/)
   assert.doesNotMatch(paymentOrders, /export async function POST|syncConfirmedOrders|workflow/)

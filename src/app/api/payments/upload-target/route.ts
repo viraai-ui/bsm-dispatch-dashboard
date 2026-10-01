@@ -10,7 +10,7 @@ export const runtime = 'nodejs'
 function safe(value: string) { return value.trim().replace(/[^a-zA-Z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'payment' }
 
 export async function POST(request: Request) {
-  const auth = await requireUser(['Admin'])
+  const auth = await requireUser(['Admin', 'Spare Part Sales'])
   if (!auth.ok) return auth.response
   if (MAINTENANCE_MODE) return apiError(MAINTENANCE_API_MESSAGE, 503)
   try {

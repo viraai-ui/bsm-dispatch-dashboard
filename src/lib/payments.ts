@@ -13,6 +13,8 @@ export type Payment = {
   customerName: string
   /** Absent for a manually entered customer payment. */
   salesOrderNumber?: string
+  /** User-provided reference for a payment that is not linked to a sales order. */
+  manualReference?: string
   /** Optional only for records created before payment details were introduced. */
   paymentAmount?: number
   /** Optional only for records created before payment details were introduced. */

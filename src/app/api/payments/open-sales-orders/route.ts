@@ -3,7 +3,7 @@ import { requireUser } from '@/lib/auth'
 import { refreshPaymentOrderIndex, searchPaymentOrders } from '@/lib/payment-order-search'
 
 export async function GET(request: Request) {
-  const auth = await requireUser(['Admin', 'Accounts'])
+  const auth = await requireUser(['Admin', 'Accounts', 'Spare Part Sales'])
   if (!auth.ok) return auth.response
   try {
     const url = new URL(request.url)

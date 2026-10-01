@@ -4,7 +4,7 @@ import { cookies } from 'next/headers'
 import { githubReadJson, githubWriteJson } from './workflow-store'
 import bundledUserStore from '../../data/auth-users-store.json'
 
-export type AppRole = 'Admin' | 'Operations' | 'Dispatch' | 'Media' | 'Database' | 'Accounts'
+export type AppRole = 'Admin' | 'Operations' | 'Dispatch' | 'Media' | 'Database' | 'Accounts' | 'Spare Part Sales'
 export type AppUser = {
   id: string
   name: string
@@ -23,7 +23,7 @@ const USERS_PATH = 'data/auth-users-store.json'
 const SESSION_COOKIE = 'bsm_dispatch_session'
 const SESSION_DAYS = 365
 const USER_STORE_CACHE_MS = 5 * 60 * 1000
-const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media', 'Database', 'Accounts']
+const roles: AppRole[] = ['Admin', 'Operations', 'Dispatch', 'Media', 'Database', 'Accounts', 'Spare Part Sales']
 let userStoreCache: { store: UserStore; expiresAt: number } | null = null
 
 function copyUserStore(store: UserStore): UserStore {
@@ -49,6 +49,7 @@ async function seedUsers(): Promise<AppUser[]> {
     { id: 'u-media', name: 'Media', email: 'media@bsmindia.com', username: 'media', role: 'Media', active: true, passwordHash, createdAt: now, updatedAt: now },
     { id: 'u-database', name: 'Database', email: 'database@bsmindia.com', username: 'database', role: 'Database', active: true, passwordHash: await bcrypt.hash('database', 10), createdAt: now, updatedAt: now },
     { id: 'u-accounts', name: 'Accounts', email: 'accounts@bsmindia.com', username: 'account', role: 'Accounts', active: true, passwordHash: await bcrypt.hash('account', 10), createdAt: now, updatedAt: now },
+    { id: 'u-sonia', name: 'Sonia', email: 'sonia@bsmindia.com', username: 'sonia', role: 'Spare Part Sales', active: true, passwordHash: await bcrypt.hash('sonia', 10), createdAt: now, updatedAt: now },
   ]
 }
 
@@ -104,6 +105,14 @@ export async function getUserStore() {
       Object.assign(accounts, { name: 'Accounts', email: 'accounts@bsmindia.com', username: 'account', role: 'Accounts' as const, active: true, passwordHash: passwordMatches ? accounts.passwordHash : await bcrypt.hash('account', 10), updatedAt: now })
       changed = true
     }
+  }
+  const sonia = store.users.find((user) => user.id === 'u-sonia' || user.username.toLowerCase() === 'sonia' || user.email.toLowerCase() === 'sonia@bsmindia.com')
+  if (!sonia) {
+    store.users.push({ id: 'u-sonia', name: 'Sonia', email: 'sonia@bsmindia.com', username: 'sonia', role: 'Spare Part Sales', active: true, passwordHash: await bcrypt.hash('sonia', 10), createdAt: now, updatedAt: now })
+    changed = true
+  } else if (sonia.role !== 'Spare Part Sales' || !sonia.active) {
+    Object.assign(sonia, { name: 'Sonia', email: 'sonia@bsmindia.com', username: 'sonia', role: 'Spare Part Sales' as const, active: true, updatedAt: now })
+    changed = true
   }
   if (changed) await githubWriteJson(USERS_PATH, store, 'Update default dispatch users')
   userStoreCache = { store: copyUserStore(store), expiresAt: Date.now() + USER_STORE_CACHE_MS }

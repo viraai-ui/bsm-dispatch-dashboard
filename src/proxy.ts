@@ -35,6 +35,9 @@ export async function proxy(request: NextRequest) {
     if (payload.role === 'Accounts' && pathname !== accountsOnly) {
       return NextResponse.redirect(new URL(accountsOnly, request.url))
     }
+    if (payload.role === 'Spare Part Sales' && pathname !== accountsOnly) {
+      return NextResponse.redirect(new URL(accountsOnly, request.url))
+    }
     if (payload.role === 'Operations' && (pathname === '/settings' || pathname === '/media-proof')) {
       return NextResponse.redirect(new URL('/', request.url))
     }
