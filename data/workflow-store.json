@@ -46259,7 +46259,9 @@
     "1154219000037781012": {
       "salesOrderId": "1154219000037781012",
       "salesOrderNumber": "SO-08075",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-01T11:29:47.944Z",
       "processedOrder": {
         "id": "1154219000037781012",
         "zohoSalesOrderId": "1154219000037781012",
@@ -46289,8 +46291,8 @@
           {
             "id": "1154219000037781012-1154219000037781015-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271381",
+            "qrToken": "26271381",
             "orderId": "1154219000037781012",
             "lineItemId": "1154219000037781015",
             "itemName": "Spray table (for water-based adhesive)",
@@ -46298,14 +46300,17 @@
             "customerName": "REMATTER STUDIO",
             "salesOrderNumber": "SO-08075",
             "deliveryDate": "2026-10-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-01T16:54:54+0530"
@@ -46319,7 +46324,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T11:28:14.511Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-01T11:28:18.109Z"
+          "zohoBackupQueuedAt": "2026-10-01T11:29:47.944Z",
+          "processedAt": "2026-10-01T11:29:47.944Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
