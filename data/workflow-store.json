@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271380,
+  "serialCounter": 26271381,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -46253,6 +46253,70 @@
           "zohoBackupLastAttemptAt": "2026-10-01T10:30:40.540Z",
           "zohoBackupSyncedAt": "2026-10-01T10:30:40.540Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000037781012": {
+      "salesOrderId": "1154219000037781012",
+      "salesOrderNumber": "SO-08075",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037781012",
+        "zohoSalesOrderId": "1154219000037781012",
+        "salesOrderNumber": "SO-08075",
+        "status": "open",
+        "customerName": "REMATTER STUDIO",
+        "shippingAddress": "C-30, SECTOR-65, Chhajarsi, Noida,, Gautambuddha Nagar,, Uttar Pradesh, 201301, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-10-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037781015",
+            "itemName": "Spray table (for water-based adhesive)",
+            "sku": "301",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225379",
+            "rate": 77000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037781012-1154219000037781015-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037781012",
+            "lineItemId": "1154219000037781015",
+            "itemName": "Spray table (for water-based adhesive)",
+            "sku": "301",
+            "customerName": "REMATTER STUDIO",
+            "salesOrderNumber": "SO-08075",
+            "deliveryDate": "2026-10-01",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-01T16:54:54+0530"
+      },
+      "machines": {
+        "1154219000037781012-1154219000037781015-1": {
+          "machineUnitId": "1154219000037781012-1154219000037781015-1",
+          "lineItemId": "1154219000037781015",
+          "serialNumber": "26271381",
+          "qrToken": "26271381",
+          "qrStatus": "pending"
         }
       }
     }
