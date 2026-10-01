@@ -46415,7 +46415,9 @@
     "1154219000037791001": {
       "salesOrderId": "1154219000037791001",
       "salesOrderNumber": "SO-08078",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-01T13:01:31.963Z",
       "processedOrder": {
         "id": "1154219000037791001",
         "zohoSalesOrderId": "1154219000037791001",
@@ -46445,8 +46447,8 @@
           {
             "id": "1154219000037791001-1154219000037791004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271383",
+            "qrToken": "26271383",
             "orderId": "1154219000037791001",
             "lineItemId": "1154219000037791004",
             "itemName": "Edge Coloring Machine",
@@ -46454,14 +46456,17 @@
             "customerName": "PAWPRO HANDMADE",
             "salesOrderNumber": "SO-08078",
             "deliveryDate": "2026-10-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "vendor": "Aradhya",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-01T18:29:34+0530"
@@ -46475,7 +46480,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T13:00:34.849Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-01T13:00:37.941Z"
+          "zohoBackupQueuedAt": "2026-10-01T13:01:31.963Z",
+          "processedAt": "2026-10-01T13:01:31.963Z",
+          "dispatchNote": "Local",
+          "vendor": "Aradhya"
         }
       }
     }
