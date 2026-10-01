@@ -45830,57 +45830,7 @@
     "1154219000036916004": {
       "salesOrderId": "1154219000036916004",
       "salesOrderNumber": "SO-07949",
-      "status": "qr_generated",
-      "processedOrder": {
-        "id": "1154219000036916004",
-        "zohoSalesOrderId": "1154219000036916004",
-        "salesOrderNumber": "SO-07949",
-        "status": "open",
-        "customerName": "XO FOOTWEAR PVT LTD (34B)",
-        "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
-        "salesperson": "Karan Singh",
-        "deliveryDate": "2026-10-30",
-        "dashboardStatus": "Not Generated",
-        "reviewRequired": false,
-        "lineItems": [
-          {
-            "id": "1154219000036916007",
-            "itemName": "Toe lasting Machine with Cement [9 Pincer]",
-            "sku": "737 C",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": false,
-            "zohoItemId": "1154219000000400413",
-            "rate": 1125000,
-            "dispatchCategory": "machine"
-          }
-        ],
-        "machines": [
-          {
-            "id": "1154219000036916004-1154219000036916007-1",
-            "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
-            "orderId": "1154219000036916004",
-            "lineItemId": "1154219000036916007",
-            "itemName": "Toe lasting Machine with Cement [9 Pincer]",
-            "sku": "737 C",
-            "customerName": "XO FOOTWEAR PVT LTD (34B)",
-            "salesOrderNumber": "SO-07949",
-            "deliveryDate": "2026-10-30",
-            "status": "Not Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Not Required",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": ""
-          }
-        ],
-        "zohoLastModifiedTime": "2026-09-15T10:47:13+0530"
-      },
+      "status": "open",
       "machines": {
         "1154219000036916004-1154219000036916007-1": {
           "machineUnitId": "1154219000036916004-1154219000036916007-1",
