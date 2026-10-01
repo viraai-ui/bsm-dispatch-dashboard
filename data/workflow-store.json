@@ -45850,7 +45850,9 @@
     "1154219000037723001": {
       "salesOrderId": "1154219000037723001",
       "salesOrderNumber": "SO-08070",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-01T04:53:03.414Z",
       "processedOrder": {
         "id": "1154219000037723001",
         "zohoSalesOrderId": "1154219000037723001",
@@ -45880,8 +45882,8 @@
           {
             "id": "1154219000037723001-1154219000037723004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271375",
+            "qrToken": "26271375",
             "orderId": "1154219000037723001",
             "lineItemId": "1154219000037723004",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -45889,14 +45891,17 @@
             "customerName": "XO FOOTWEAR PVT LTD (34B)",
             "salesOrderNumber": "SO-08070",
             "deliveryDate": "2026-10-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "vendor": "T Sol",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-01T10:15:49+0530"
@@ -45909,11 +45914,14 @@
           "qrToken": "26271375",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T04:51:12.655Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-01T04:51:15.537Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-01T04:53:03.414Z",
           "zohoBackupLastAttemptAt": "2026-10-01T04:52:58.335Z",
           "zohoBackupSyncedAt": "2026-10-01T04:52:58.335Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-01T04:53:03.414Z",
+          "dispatchNote": "local",
+          "vendor": "T Sol"
         }
       }
     }
