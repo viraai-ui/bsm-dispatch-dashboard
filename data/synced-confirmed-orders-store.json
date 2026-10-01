@@ -6740,6 +6740,110 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-01T13:25:52+0530"
+    },
+    "1154219000037738001": {
+      "id": "1154219000037738001",
+      "zohoSalesOrderId": "1154219000037738001",
+      "salesOrderNumber": "SO-08072",
+      "status": "open",
+      "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+      "shippingAddress": "PLOT NO. 3, SECTOR 4B, HSIIDC INDUSTRIAL AREA, BAHADURGARH,HARYANA-124507",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037738004",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000278034",
+          "rate": 550000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037738005",
+          "itemName": "Sole Hammering Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000280139",
+          "rate": 132000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037738001-1154219000037738004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037738001",
+          "lineItemId": "1154219000037738004",
+          "itemName": "Hydraulic Sole Attaching machine",
+          "sku": "917",
+          "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08072",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037738001-1154219000037738005-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037738001",
+          "lineItemId": "1154219000037738005",
+          "itemName": "Sole Hammering Machine",
+          "sku": "",
+          "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08072",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000037738001-1154219000037738005-2",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037738001",
+          "lineItemId": "1154219000037738005",
+          "itemName": "Sole Hammering Machine",
+          "sku": "",
+          "customerName": "CITYSOLE POLYMERS PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08072",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-01T13:57:22+0530"
     }
   },
   "orderIds": [
@@ -6808,10 +6912,11 @@
     "1154219000037678001",
     "1154219000037686001",
     "1154219000037723001",
-    "1154219000037683391"
+    "1154219000037683391",
+    "1154219000037738001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-01T08:20:34.548Z",
-  "lastAttemptAt": "2026-10-01T08:31:26.489Z",
+  "lastSuccessfulSyncAt": "2026-10-01T08:31:33.427Z",
+  "lastAttemptAt": "2026-10-01T08:31:33.427Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
