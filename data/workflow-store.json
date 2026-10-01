@@ -46479,11 +46479,14 @@
           "qrToken": "26271383",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T13:00:34.849Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-01T13:01:31.963Z",
           "processedAt": "2026-10-01T13:01:31.963Z",
           "dispatchNote": "Local",
-          "vendor": "Aradhya"
+          "vendor": "Aradhya",
+          "zohoBackupLastAttemptAt": "2026-10-01T13:15:41.234Z",
+          "zohoBackupSyncedAt": "2026-10-01T13:15:41.234Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
