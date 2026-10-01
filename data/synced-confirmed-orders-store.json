@@ -6663,6 +6663,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-09-30T16:53:07+0530"
+    },
+    "1154219000037723001": {
+      "id": "1154219000037723001",
+      "zohoSalesOrderId": "1154219000037723001",
+      "salesOrderNumber": "SO-08070",
+      "status": "open",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "shippingAddress": "Plot No. 34B, Sec-57, Phase-IV, Industrial Estate, Kundli, Distt.- Sonepat, Haryana-131028, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037723004",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000006379136",
+          "rate": 45000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037723001-1154219000037723004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037723001",
+          "lineItemId": "1154219000037723004",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "XO FOOTWEAR PVT LTD (34B)",
+          "salesOrderNumber": "SO-08070",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-01T10:15:49+0530"
     }
   },
   "orderIds": [
@@ -6729,10 +6779,11 @@
     "1154219000037634005",
     "1154219000037626026",
     "1154219000037678001",
-    "1154219000037686001"
+    "1154219000037686001",
+    "1154219000037723001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-01T04:40:33.287Z",
-  "lastAttemptAt": "2026-10-01T04:50:08.296Z",
+  "lastSuccessfulSyncAt": "2026-10-01T04:50:16.147Z",
+  "lastAttemptAt": "2026-10-01T04:50:16.147Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
