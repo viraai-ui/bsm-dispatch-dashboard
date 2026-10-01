@@ -46181,7 +46181,9 @@
     "1154219000037762002": {
       "salesOrderId": "1154219000037762002",
       "salesOrderNumber": "SO-08074",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-01T10:25:14.483Z",
       "processedOrder": {
         "id": "1154219000037762002",
         "zohoSalesOrderId": "1154219000037762002",
@@ -46211,8 +46213,8 @@
           {
             "id": "1154219000037762002-1154219000037762005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271380",
+            "qrToken": "26271380",
             "orderId": "1154219000037762002",
             "lineItemId": "1154219000037762005",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -46220,14 +46222,17 @@
             "customerName": "REYANSH FOOTWEAR",
             "salesOrderNumber": "SO-08074",
             "deliveryDate": "2026-10-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "vendor": "T Sol",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-01T15:52:24+0530"
@@ -46241,7 +46246,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T10:23:33.928Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-01T10:23:37.565Z"
+          "zohoBackupQueuedAt": "2026-10-01T10:25:14.483Z",
+          "processedAt": "2026-10-01T10:25:14.483Z",
+          "dispatchNote": "Local",
+          "vendor": "T Sol"
         }
       }
     }
