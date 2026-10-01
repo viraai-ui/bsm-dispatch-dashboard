@@ -45928,7 +45928,9 @@
     "1154219000037625007": {
       "salesOrderId": "1154219000037625007",
       "salesOrderNumber": "SO-08063",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-01T06:00:30.670Z",
       "processedOrder": {
         "id": "1154219000037625007",
         "zohoSalesOrderId": "1154219000037625007",
@@ -45958,8 +45960,8 @@
           {
             "id": "1154219000037625007-1154219000037625010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271376",
+            "qrToken": "26271376",
             "orderId": "1154219000037625007",
             "lineItemId": "1154219000037625010",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -45967,14 +45969,17 @@
             "customerName": "Shree Krishna Safety Products",
             "salesOrderNumber": "SO-08063",
             "deliveryDate": "2026-10-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "vendor": "T Sol",
+            "dispatchNote": "Wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-30T11:53:03+0530"
@@ -45988,7 +45993,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T05:59:12.350Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-01T05:59:14.671Z"
+          "zohoBackupQueuedAt": "2026-10-01T06:00:30.670Z",
+          "processedAt": "2026-10-01T06:00:30.670Z",
+          "dispatchNote": "Wooden",
+          "vendor": "T Sol"
         }
       }
     }
