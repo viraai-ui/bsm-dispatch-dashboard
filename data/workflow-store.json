@@ -46337,7 +46337,9 @@
     "1154219000037790001": {
       "salesOrderId": "1154219000037790001",
       "salesOrderNumber": "SO-08077",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-01T12:24:37.152Z",
       "processedOrder": {
         "id": "1154219000037790001",
         "zohoSalesOrderId": "1154219000037790001",
@@ -46367,8 +46369,8 @@
           {
             "id": "1154219000037790001-1154219000037790004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271382",
+            "qrToken": "26271382",
             "orderId": "1154219000037790001",
             "lineItemId": "1154219000037790004",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -46376,14 +46378,17 @@
             "customerName": "Shreyansh Enterprises",
             "salesOrderNumber": "SO-08077",
             "deliveryDate": "2026-10-01",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "vendor": "Bsm",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-01T17:43:55+0530"
@@ -46397,7 +46402,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T12:23:25.619Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-01T12:23:29.317Z"
+          "zohoBackupQueuedAt": "2026-10-01T12:24:37.152Z",
+          "processedAt": "2026-10-01T12:24:37.152Z",
+          "dispatchNote": "local",
+          "vendor": "Bsm"
         }
       }
     }
