@@ -6944,6 +6944,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-01T15:52:24+0530"
+    },
+    "1154219000037781012": {
+      "id": "1154219000037781012",
+      "zohoSalesOrderId": "1154219000037781012",
+      "salesOrderNumber": "SO-08075",
+      "status": "open",
+      "customerName": "REMATTER STUDIO",
+      "shippingAddress": "C-30, SECTOR-65, Chhajarsi, Noida,, Gautambuddha Nagar,, Uttar Pradesh, 201301, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-10-01",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037781015",
+          "itemName": "Spray table (for water-based adhesive)",
+          "sku": "301",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000225379",
+          "rate": 77000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037781012-1154219000037781015-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037781012",
+          "lineItemId": "1154219000037781015",
+          "itemName": "Spray table (for water-based adhesive)",
+          "sku": "301",
+          "customerName": "REMATTER STUDIO",
+          "salesOrderNumber": "SO-08075",
+          "deliveryDate": "2026-10-01",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-01T16:54:54+0530"
     }
   },
   "orderIds": [
@@ -7015,10 +7065,11 @@
     "1154219000037683391",
     "1154219000037738001",
     "1154219000037751005",
-    "1154219000037762002"
+    "1154219000037762002",
+    "1154219000037781012"
   ],
-  "lastSuccessfulSyncAt": "2026-10-01T11:20:33.907Z",
-  "lastAttemptAt": "2026-10-01T11:26:47.428Z",
+  "lastSuccessfulSyncAt": "2026-10-01T11:26:56.081Z",
+  "lastAttemptAt": "2026-10-01T11:26:56.081Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
