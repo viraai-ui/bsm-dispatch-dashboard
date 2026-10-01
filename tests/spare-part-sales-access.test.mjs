@@ -6,9 +6,10 @@ const root = new URL('../', import.meta.url)
 const read = (path) => readFile(new URL(path, root), 'utf8')
 
 test('Spare Part Sales is a known authenticated role with a durable Sonia seed', async () => {
-  const [auth, users] = await Promise.all([read('src/lib/auth.ts'), read('data/auth-users-store.json')])
+  const [auth, users, settings] = await Promise.all([read('src/lib/auth.ts'), read('data/auth-users-store.json'), read('src/components/SettingsClient.tsx')])
   assert.match(auth, /export type AppRole = .*'Spare Part Sales'/)
   assert.match(auth, /roles: AppRole\[\] = \[.*'Spare Part Sales'/)
+  assert.match(settings, /const roles: AppRole\[\] = \[.*'Spare Part Sales'/)
   const sonia = JSON.parse(users).users.find((user) => user.username === 'sonia')
   assert.ok(sonia)
   assert.equal(sonia.name, 'Sonia')
