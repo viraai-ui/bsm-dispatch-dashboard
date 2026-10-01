@@ -26889,6 +26889,65 @@
       "machineIds": [
         "1154219000037560001-1154219000037560004-1"
       ]
+    },
+    "1154219000037622005": {
+      "completedAt": "2026-10-01T06:48:11.636Z",
+      "order": {
+        "id": "1154219000037622005",
+        "zohoSalesOrderId": "1154219000037622005",
+        "salesOrderNumber": "SO-08060",
+        "status": "open",
+        "customerName": "MARIA EXPORTS INTERNATIONAL",
+        "shippingAddress": "H.NO.-19, JAJMAU, KANPUR,, Kanpur Nagar, Uttar Pradesh, 208010, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-09-30",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037622008",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280682",
+            "rate": 33000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037622005-1154219000037622008-1",
+            "unitNumber": 1,
+            "serialNumber": "26271372",
+            "qrToken": "26271372",
+            "orderId": "1154219000037622005",
+            "lineItemId": "1154219000037622008",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "MARIA EXPORTS INTERNATIONAL",
+            "salesOrderNumber": "SO-08060",
+            "deliveryDate": "2026-09-30",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-09-30",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-29T18:18:52+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037622005-1154219000037622008-1"
+      ]
     }
   }
 }
