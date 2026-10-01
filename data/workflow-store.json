@@ -46135,11 +46135,14 @@
           "qrToken": "26271377",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T08:32:28.263Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-01T08:36:54.484Z",
           "processedAt": "2026-10-01T08:36:54.484Z",
           "dispatchNote": "Local",
-          "vendor": "Allure"
+          "vendor": "Allure",
+          "zohoBackupLastAttemptAt": "2026-10-01T08:45:42.958Z",
+          "zohoBackupSyncedAt": "2026-10-01T08:45:42.958Z",
+          "zohoBackupReplaceExisting": false
         },
         "1154219000037738001-1154219000037738005-1": {
           "machineUnitId": "1154219000037738001-1154219000037738005-1",
@@ -46148,11 +46151,14 @@
           "qrToken": "26271378",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T08:32:28.263Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-01T08:36:54.484Z",
           "processedAt": "2026-10-01T08:36:54.484Z",
           "dispatchNote": "Local",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupLastAttemptAt": "2026-10-01T08:45:42.958Z",
+          "zohoBackupSyncedAt": "2026-10-01T08:45:42.958Z",
+          "zohoBackupReplaceExisting": false
         },
         "1154219000037738001-1154219000037738005-2": {
           "machineUnitId": "1154219000037738001-1154219000037738005-2",
@@ -46161,11 +46167,14 @@
           "qrToken": "26271379",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T08:32:28.263Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-01T08:36:54.484Z",
           "processedAt": "2026-10-01T08:36:54.484Z",
           "dispatchNote": "Local",
-          "vendor": "Aradhya"
+          "vendor": "Aradhya",
+          "zohoBackupLastAttemptAt": "2026-10-01T08:45:42.958Z",
+          "zohoBackupSyncedAt": "2026-10-01T08:45:42.958Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
