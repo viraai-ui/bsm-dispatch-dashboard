@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export default async function PaymentsPage() {
   const user = await getSessionUser()
-  const authed = user?.role === 'Admin' || user?.role === 'Accounts' || user?.role === 'Spare Part Sales'
+  const authed = user?.role === 'Admin' || user?.role === 'Accounts'
   const payments = authed ? await listPayments() : []
   const paymentsModule = <DashboardShell active="Payments"><PaymentsClient initialPayments={payments} userRole={user?.role || 'Admin'} /></DashboardShell>
   if (!MAINTENANCE_MODE) return paymentsModule
