@@ -46401,11 +46401,14 @@
           "qrToken": "26271382",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-01T12:23:25.619Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-01T12:24:37.152Z",
           "processedAt": "2026-10-01T12:24:37.152Z",
           "dispatchNote": "local",
-          "vendor": "Bsm"
+          "vendor": "Bsm",
+          "zohoBackupLastAttemptAt": "2026-10-01T12:30:40.236Z",
+          "zohoBackupSyncedAt": "2026-10-01T12:30:40.236Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
