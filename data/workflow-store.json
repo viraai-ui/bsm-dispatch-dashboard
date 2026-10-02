@@ -46493,7 +46493,9 @@
     "1154219000037826005": {
       "salesOrderId": "1154219000037826005",
       "salesOrderNumber": "SO-08079",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-02T10:15:15.626Z",
       "processedOrder": {
         "id": "1154219000037826005",
         "zohoSalesOrderId": "1154219000037826005",
@@ -46523,8 +46525,8 @@
           {
             "id": "1154219000037826005-1154219000037826008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271384",
+            "qrToken": "26271384",
             "orderId": "1154219000037826005",
             "lineItemId": "1154219000037826008",
             "itemName": "Automatic Pipe Cutting Machine",
@@ -46532,14 +46534,17 @@
             "customerName": "Mahalaxmi Polyblend",
             "salesOrderNumber": "SO-08079",
             "deliveryDate": "2026-10-02",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-02",
+            "vendor": "Able",
+            "dispatchNote": "Self"
           }
         ],
         "zohoLastModifiedTime": "2026-10-02T15:41:10+0530"
@@ -46553,7 +46558,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-02T10:14:25.520Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-02T10:14:31.340Z"
+          "zohoBackupQueuedAt": "2026-10-02T10:15:15.626Z",
+          "processedAt": "2026-10-02T10:15:15.626Z",
+          "dispatchNote": "Self",
+          "vendor": "Able"
         }
       }
     }
