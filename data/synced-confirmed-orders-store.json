@@ -7122,6 +7122,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-01T18:29:55+0530"
+    },
+    "1154219000037826005": {
+      "id": "1154219000037826005",
+      "zohoSalesOrderId": "1154219000037826005",
+      "salesOrderNumber": "SO-08079",
+      "status": "open",
+      "customerName": "Mahalaxmi Polyblend",
+      "shippingAddress": "NA, Row House no 3, Shree Row Houses, 856/2 Plot no 1, wonder Kids English Medium School, Sinnar Rural, Sinnar, Nashik, Maharashtra - 422103",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-02",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037826008",
+          "itemName": "Automatic Pipe Cutting Machine",
+          "sku": "370",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000006912047",
+          "rate": 96000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037826005-1154219000037826008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037826005",
+          "lineItemId": "1154219000037826008",
+          "itemName": "Automatic Pipe Cutting Machine",
+          "sku": "370",
+          "customerName": "Mahalaxmi Polyblend",
+          "salesOrderNumber": "SO-08079",
+          "deliveryDate": "2026-10-02",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-02T15:37:43+0530"
     }
   },
   "orderIds": [
@@ -7197,10 +7247,11 @@
     "1154219000037781012",
     "1154219000037790001",
     "1154219000037789001",
-    "1154219000037791001"
+    "1154219000037791001",
+    "1154219000037826005"
   ],
-  "lastSuccessfulSyncAt": "2026-10-02T10:00:33.665Z",
-  "lastAttemptAt": "2026-10-02T10:10:30.422Z",
+  "lastSuccessfulSyncAt": "2026-10-02T10:10:37.567Z",
+  "lastAttemptAt": "2026-10-02T10:10:37.567Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
