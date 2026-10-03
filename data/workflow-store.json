@@ -46578,7 +46578,7 @@
     "1154219000037836007": {
       "salesOrderId": "1154219000037836007",
       "salesOrderNumber": "SO-08081",
-      "status": "open",
+      "status": "qr_generated",
       "processedOrder": {
         "id": "1154219000037836007",
         "zohoSalesOrderId": "1154219000037836007",
@@ -46722,28 +46722,40 @@
           "lineItemId": "1154219000037836010",
           "serialNumber": "26271385",
           "qrToken": "26271385",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
         },
         "1154219000037836007-1154219000037836011-1": {
           "machineUnitId": "1154219000037836007-1154219000037836011-1",
           "lineItemId": "1154219000037836011",
           "serialNumber": "26271386",
           "qrToken": "26271386",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
         },
         "1154219000037836007-1154219000037836012-1": {
           "machineUnitId": "1154219000037836007-1154219000037836012-1",
           "lineItemId": "1154219000037836012",
           "serialNumber": "26271387",
           "qrToken": "26271387",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
         },
         "1154219000037836007-1154219000037836012-2": {
           "machineUnitId": "1154219000037836007-1154219000037836012-2",
           "lineItemId": "1154219000037836012",
           "serialNumber": "26271388",
           "qrToken": "26271388",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
         }
       }
     }
