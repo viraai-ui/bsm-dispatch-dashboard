@@ -7843,6 +7843,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-03T15:06:26+0530"
+    },
+    "1154219000037863001": {
+      "id": "1154219000037863001",
+      "zohoSalesOrderId": "1154219000037863001",
+      "salesOrderNumber": "SO-08084",
+      "status": "open",
+      "customerName": "Kamadhenu Industrial Suppliers",
+      "shippingAddress": "No. 89, 1st Floor, 19th Main Road, Rajgopal Nagara Main Road, Rajgopal Nagar, Opp Rajagopal Nagar, Police Station, Peenya 2nd Stage, Bangaluru, Karnataka, 560058, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037863004",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000227234",
+          "rate": 2400,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037863001-1154219000037863004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037863001",
+          "lineItemId": "1154219000037863004",
+          "itemName": "Damping Container (Air Tight Pressure Container)",
+          "sku": "",
+          "customerName": "Kamadhenu Industrial Suppliers",
+          "salesOrderNumber": "SO-08084",
+          "deliveryDate": "2026-10-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-03T16:58:18+0530"
     }
   },
   "orderIds": [
@@ -7923,10 +7973,11 @@
     "1154219000037843002",
     "1154219000037836007",
     "1154219000037816003",
-    "1154219000037827005"
+    "1154219000037827005",
+    "1154219000037863001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-03T11:20:32.957Z",
-  "lastAttemptAt": "2026-10-03T11:40:26.384Z",
+  "lastSuccessfulSyncAt": "2026-10-03T11:40:35.876Z",
+  "lastAttemptAt": "2026-10-03T11:40:35.876Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
