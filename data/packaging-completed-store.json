@@ -27315,6 +27315,65 @@
       "machineIds": [
         "1154219000037762002-1154219000037762005-1"
       ]
+    },
+    "1154219000037791001": {
+      "completedAt": "2026-10-03T06:58:45.624Z",
+      "order": {
+        "id": "1154219000037791001",
+        "zohoSalesOrderId": "1154219000037791001",
+        "salesOrderNumber": "SO-08078",
+        "status": "open",
+        "customerName": "PAWPRO HANDMADE",
+        "shippingAddress": "J-15 A, J Block, GALI NO 12, Lakshmi Nagar, New Delhi, East Delhi, Delhi, 110092",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037791004",
+            "itemName": "Edge Coloring Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226354",
+            "rate": 46000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037791001-1154219000037791004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271383",
+            "qrToken": "26271383",
+            "orderId": "1154219000037791001",
+            "lineItemId": "1154219000037791004",
+            "itemName": "Edge Coloring Machine",
+            "sku": "",
+            "customerName": "PAWPRO HANDMADE",
+            "salesOrderNumber": "SO-08078",
+            "deliveryDate": "2026-10-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-01T18:29:34+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037791001-1154219000037791004-1"
+      ]
     }
   }
 }
