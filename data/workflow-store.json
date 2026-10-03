@@ -46802,7 +46802,9 @@
     "1154219000037827005": {
       "salesOrderId": "1154219000037827005",
       "salesOrderNumber": "SO-08083",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-03T09:40:45.181Z",
       "processedOrder": {
         "id": "1154219000037827005",
         "zohoSalesOrderId": "1154219000037827005",
@@ -46844,8 +46846,8 @@
           {
             "id": "1154219000037827005-1154219000037827008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271389",
+            "qrToken": "26271389",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46853,20 +46855,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271390",
+            "qrToken": "26271390",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46874,20 +46879,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271391",
+            "qrToken": "26271391",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46895,20 +46903,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271392",
+            "qrToken": "26271392",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46916,20 +46927,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-5",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271393",
+            "qrToken": "26271393",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46937,20 +46951,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-6",
             "unitNumber": 6,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271394",
+            "qrToken": "26271394",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46958,20 +46975,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-7",
             "unitNumber": 7,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271395",
+            "qrToken": "26271395",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -46979,20 +46999,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-8",
             "unitNumber": 8,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271396",
+            "qrToken": "26271396",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -47000,20 +47023,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-9",
             "unitNumber": 9,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271397",
+            "qrToken": "26271397",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -47021,20 +47047,23 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000037827005-1154219000037827008-10",
             "unitNumber": 10,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271398",
+            "qrToken": "26271398",
             "orderId": "1154219000037827005",
             "lineItemId": "1154219000037827008",
             "itemName": "Round Blade Edge trimming Machine",
@@ -47042,14 +47071,17 @@
             "customerName": "NEWWA TECHNO PLAAST LLP",
             "salesOrderNumber": "SO-08083",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-03T15:06:26+0530"
@@ -47063,7 +47095,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-2": {
           "machineUnitId": "1154219000037827005-1154219000037827008-2",
@@ -47073,7 +47108,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-3": {
           "machineUnitId": "1154219000037827005-1154219000037827008-3",
@@ -47083,7 +47121,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-4": {
           "machineUnitId": "1154219000037827005-1154219000037827008-4",
@@ -47093,7 +47134,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-5": {
           "machineUnitId": "1154219000037827005-1154219000037827008-5",
@@ -47103,7 +47147,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-6": {
           "machineUnitId": "1154219000037827005-1154219000037827008-6",
@@ -47113,7 +47160,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-7": {
           "machineUnitId": "1154219000037827005-1154219000037827008-7",
@@ -47123,7 +47173,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-8": {
           "machineUnitId": "1154219000037827005-1154219000037827008-8",
@@ -47133,7 +47186,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-9": {
           "machineUnitId": "1154219000037827005-1154219000037827008-9",
@@ -47143,7 +47199,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000037827005-1154219000037827008-10": {
           "machineUnitId": "1154219000037827005-1154219000037827008-10",
@@ -47153,7 +47212,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T09:38:26.567Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T09:38:27.372Z"
+          "zohoBackupQueuedAt": "2026-10-03T09:40:45.181Z",
+          "processedAt": "2026-10-03T09:40:45.181Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
