@@ -27374,6 +27374,65 @@
       "machineIds": [
         "1154219000037791001-1154219000037791004-1"
       ]
+    },
+    "1154219000037826005": {
+      "completedAt": "2026-10-03T06:58:50.092Z",
+      "order": {
+        "id": "1154219000037826005",
+        "zohoSalesOrderId": "1154219000037826005",
+        "salesOrderNumber": "SO-08079",
+        "status": "open",
+        "customerName": "Mahalaxmi Polyblend",
+        "shippingAddress": "NA, Row House no 3, Shree Row Houses, 856/2 Plot no 1, wonder Kids English Medium School, Sinnar Rural, Sinnar, Nashik, Maharashtra - 422103",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-02",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037826008",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000006912047",
+            "rate": 96000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037826005-1154219000037826008-1",
+            "unitNumber": 1,
+            "serialNumber": "26271384",
+            "qrToken": "26271384",
+            "orderId": "1154219000037826005",
+            "lineItemId": "1154219000037826008",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "customerName": "Mahalaxmi Polyblend",
+            "salesOrderNumber": "SO-08079",
+            "deliveryDate": "2026-10-02",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-02",
+            "dispatchNote": "Self"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-02T15:41:10+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037826005-1154219000037826008-1"
+      ]
     }
   }
 }
