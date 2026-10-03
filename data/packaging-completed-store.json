@@ -27492,6 +27492,65 @@
       "machineIds": [
         "1154219000037625007-1154219000037625010-1"
       ]
+    },
+    "1154219000037781012": {
+      "completedAt": "2026-10-03T07:58:46.916Z",
+      "order": {
+        "id": "1154219000037781012",
+        "zohoSalesOrderId": "1154219000037781012",
+        "salesOrderNumber": "SO-08075",
+        "status": "open",
+        "customerName": "REMATTER STUDIO",
+        "shippingAddress": "C-30, SECTOR-65, Chhajarsi, Noida,, Gautambuddha Nagar,, Uttar Pradesh, 201301, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-10-01",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037781015",
+            "itemName": "Spray table (for water-based adhesive)",
+            "sku": "301",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225379",
+            "rate": 77000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037781012-1154219000037781015-1",
+            "unitNumber": 1,
+            "serialNumber": "26271381",
+            "qrToken": "26271381",
+            "orderId": "1154219000037781012",
+            "lineItemId": "1154219000037781015",
+            "itemName": "Spray table (for water-based adhesive)",
+            "sku": "301",
+            "customerName": "REMATTER STUDIO",
+            "salesOrderNumber": "SO-08075",
+            "deliveryDate": "2026-10-01",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-01",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-01T16:54:54+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037781012-1154219000037781015-1"
+      ]
     }
   }
 }
