@@ -7521,6 +7521,77 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-03T11:40:23+0530"
+    },
+    "1154219000037816003": {
+      "id": "1154219000037816003",
+      "zohoSalesOrderId": "1154219000037816003",
+      "salesOrderNumber": "SO-08082",
+      "status": "open",
+      "customerName": "FORTUNE ELASTOMERS PVT LTD",
+      "shippingAddress": "10/360 M PLOT NO 34 KSIDC KINALOOR, CALICUT, KERALA, 673612",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-03",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037816006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Drum Type Bladder",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 2000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037816003-1154219000037816006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037816003",
+          "lineItemId": "1154219000037816006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "FORTUNE ELASTOMERS PVT LTD",
+          "salesOrderNumber": "SO-08082",
+          "deliveryDate": "2026-10-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum Type Bladder"
+        },
+        {
+          "id": "1154219000037816003-1154219000037816006-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037816003",
+          "lineItemId": "1154219000037816006",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "FORTUNE ELASTOMERS PVT LTD",
+          "salesOrderNumber": "SO-08082",
+          "deliveryDate": "2026-10-03",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum Type Bladder"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-03T13:03:13+0530"
     }
   },
   "orderIds": [
@@ -7599,10 +7670,11 @@
     "1154219000037791001",
     "1154219000037826005",
     "1154219000037843002",
-    "1154219000037836007"
+    "1154219000037836007",
+    "1154219000037816003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-03T07:20:34.611Z",
-  "lastAttemptAt": "2026-10-03T07:40:26.777Z",
+  "lastSuccessfulSyncAt": "2026-10-03T07:40:34.397Z",
+  "lastAttemptAt": "2026-10-03T07:40:34.397Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
