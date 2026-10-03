@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271384,
+  "serialCounter": 26271388,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -46572,6 +46572,178 @@
           "zohoBackupSyncedAt": "2026-10-02T10:15:39.757Z",
           "zohoBackupReplaceExisting": false,
           "dispatchedAt": "2026-10-03T06:58:50.092Z"
+        }
+      }
+    },
+    "1154219000037836007": {
+      "salesOrderId": "1154219000037836007",
+      "salesOrderNumber": "SO-08081",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037836007",
+        "zohoSalesOrderId": "1154219000037836007",
+        "salesOrderNumber": "SO-08081",
+        "status": "open",
+        "customerName": "Amoha Design Studio",
+        "shippingAddress": "41,Mutha colony sadar bazaar camp, Satara, Maharashtra, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-03",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037836010",
+            "itemName": "Flatbed double needle (large hook)",
+            "sku": "842 - 5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000279089",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037836011",
+            "itemName": "Skiving Machine",
+            "sku": "801",
+            "description": "With 550W Power Saving Motor",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225896",
+            "rate": 36000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037836012",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000279064",
+            "rate": 24000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037836007-1154219000037836010-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037836007",
+            "lineItemId": "1154219000037836010",
+            "itemName": "Flatbed double needle (large hook)",
+            "sku": "842 - 5",
+            "customerName": "Amoha Design Studio",
+            "salesOrderNumber": "SO-08081",
+            "deliveryDate": "2026-10-03",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037836007-1154219000037836011-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037836007",
+            "lineItemId": "1154219000037836011",
+            "itemName": "Skiving Machine",
+            "sku": "801",
+            "customerName": "Amoha Design Studio",
+            "salesOrderNumber": "SO-08081",
+            "deliveryDate": "2026-10-03",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "With 550W Power Saving Motor"
+          },
+          {
+            "id": "1154219000037836007-1154219000037836012-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037836007",
+            "lineItemId": "1154219000037836012",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "customerName": "Amoha Design Studio",
+            "salesOrderNumber": "SO-08081",
+            "deliveryDate": "2026-10-03",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000037836007-1154219000037836012-2",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037836007",
+            "lineItemId": "1154219000037836012",
+            "itemName": "Flatbed Single needle",
+            "sku": "202",
+            "customerName": "Amoha Design Studio",
+            "salesOrderNumber": "SO-08081",
+            "deliveryDate": "2026-10-03",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-03T11:40:23+0530"
+      },
+      "machines": {
+        "1154219000037836007-1154219000037836010-1": {
+          "machineUnitId": "1154219000037836007-1154219000037836010-1",
+          "lineItemId": "1154219000037836010",
+          "serialNumber": "26271385",
+          "qrToken": "26271385",
+          "qrStatus": "pending"
+        },
+        "1154219000037836007-1154219000037836011-1": {
+          "machineUnitId": "1154219000037836007-1154219000037836011-1",
+          "lineItemId": "1154219000037836011",
+          "serialNumber": "26271386",
+          "qrToken": "26271386",
+          "qrStatus": "pending"
+        },
+        "1154219000037836007-1154219000037836012-1": {
+          "machineUnitId": "1154219000037836007-1154219000037836012-1",
+          "lineItemId": "1154219000037836012",
+          "serialNumber": "26271387",
+          "qrToken": "26271387",
+          "qrStatus": "pending"
+        },
+        "1154219000037836007-1154219000037836012-2": {
+          "machineUnitId": "1154219000037836007-1154219000037836012-2",
+          "lineItemId": "1154219000037836012",
+          "serialNumber": "26271388",
+          "qrToken": "26271388",
+          "qrStatus": "pending"
         }
       }
     }
