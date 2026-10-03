@@ -46578,7 +46578,9 @@
     "1154219000037836007": {
       "salesOrderId": "1154219000037836007",
       "salesOrderNumber": "SO-08081",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-03T07:55:05.828Z",
       "processedOrder": {
         "id": "1154219000037836007",
         "zohoSalesOrderId": "1154219000037836007",
@@ -46632,8 +46634,8 @@
           {
             "id": "1154219000037836007-1154219000037836010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271385",
+            "qrToken": "26271385",
             "orderId": "1154219000037836007",
             "lineItemId": "1154219000037836010",
             "itemName": "Flatbed double needle (large hook)",
@@ -46641,20 +46643,23 @@
             "customerName": "Amoha Design Studio",
             "salesOrderNumber": "SO-08081",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           },
           {
             "id": "1154219000037836007-1154219000037836011-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271386",
+            "qrToken": "26271386",
             "orderId": "1154219000037836007",
             "lineItemId": "1154219000037836011",
             "itemName": "Skiving Machine",
@@ -46662,20 +46667,23 @@
             "customerName": "Amoha Design Studio",
             "salesOrderNumber": "SO-08081",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "With 550W Power Saving Motor"
+            "itemDescription": "With 550W Power Saving Motor",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           },
           {
             "id": "1154219000037836007-1154219000037836012-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271387",
+            "qrToken": "26271387",
             "orderId": "1154219000037836007",
             "lineItemId": "1154219000037836012",
             "itemName": "Flatbed Single needle",
@@ -46683,20 +46691,23 @@
             "customerName": "Amoha Design Studio",
             "salesOrderNumber": "SO-08081",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           },
           {
             "id": "1154219000037836007-1154219000037836012-2",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271388",
+            "qrToken": "26271388",
             "orderId": "1154219000037836007",
             "lineItemId": "1154219000037836012",
             "itemName": "Flatbed Single needle",
@@ -46704,14 +46715,17 @@
             "customerName": "Amoha Design Studio",
             "salesOrderNumber": "SO-08081",
             "deliveryDate": "2026-10-03",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-03",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-10-03T11:40:23+0530"
@@ -46725,7 +46739,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
+          "zohoBackupQueuedAt": "2026-10-03T07:55:05.828Z",
+          "processedAt": "2026-10-03T07:55:05.828Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         },
         "1154219000037836007-1154219000037836011-1": {
           "machineUnitId": "1154219000037836007-1154219000037836011-1",
@@ -46735,7 +46752,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
+          "zohoBackupQueuedAt": "2026-10-03T07:55:05.828Z",
+          "processedAt": "2026-10-03T07:55:05.828Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         },
         "1154219000037836007-1154219000037836012-1": {
           "machineUnitId": "1154219000037836007-1154219000037836012-1",
@@ -46745,7 +46765,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
+          "zohoBackupQueuedAt": "2026-10-03T07:55:05.828Z",
+          "processedAt": "2026-10-03T07:55:05.828Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         },
         "1154219000037836007-1154219000037836012-2": {
           "machineUnitId": "1154219000037836007-1154219000037836012-2",
@@ -46755,7 +46778,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-03T07:51:39.502Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-03T07:51:39.846Z"
+          "zohoBackupQueuedAt": "2026-10-03T07:55:05.828Z",
+          "processedAt": "2026-10-03T07:55:05.828Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         }
       }
     }
