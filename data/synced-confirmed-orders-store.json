@@ -7893,6 +7893,68 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-03T17:13:27+0530"
+    },
+    "1154219000037879002": {
+      "id": "1154219000037879002",
+      "zohoSalesOrderId": "1154219000037879002",
+      "salesOrderNumber": "SO-08085",
+      "status": "open",
+      "customerName": "FORTUNE ENTERPRISES",
+      "shippingAddress": "PLOT NO. 1870, M.I.E. PART-B, BAHADURGARH,, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037879005",
+          "itemName": "PU Adhesive Glue Pasting Machine",
+          "sku": "106",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225127",
+          "rate": 58000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000037879006",
+          "itemName": "Hotmelt Polyamide Granules",
+          "sku": "7160",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001151038",
+          "rate": 950,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037879002-1154219000037879005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037879002",
+          "lineItemId": "1154219000037879005",
+          "itemName": "PU Adhesive Glue Pasting Machine",
+          "sku": "106",
+          "customerName": "FORTUNE ENTERPRISES",
+          "salesOrderNumber": "SO-08085",
+          "deliveryDate": "2026-10-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-04T12:24:57+0530"
     }
   },
   "orderIds": [
@@ -7974,10 +8036,11 @@
     "1154219000037836007",
     "1154219000037816003",
     "1154219000037827005",
-    "1154219000037863001"
+    "1154219000037863001",
+    "1154219000037879002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-04T06:40:33.120Z",
-  "lastAttemptAt": "2026-10-04T07:00:26.030Z",
+  "lastSuccessfulSyncAt": "2026-10-04T07:00:33.714Z",
+  "lastAttemptAt": "2026-10-04T07:00:33.714Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
