@@ -1143,246 +1143,26 @@
       "orderId": "1154219000036013008",
       "salesOrderNumber": "SO-07804",
       "submittedAt": null,
-      "units": {
-        "1154219000036013008-1154219000036013015-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013015-1-video-1789192012777-hhfebm",
-              "name": "VID_20260912_111427.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013015-1%2FRound-Blade-Edge-trimming-Machine-2026-09-12T05-44-37-429Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013015-1/Round-Blade-Edge-trimming-Machine-2026-09-12T05-44-37-429Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T05:46:52.776Z",
-              "expiresAt": "2026-10-03T05:46:52.776Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013014-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013014-1-video-1789192449669-j4wh3z",
-              "name": "VID_20260912_112225.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013014-1%2FZigzag-Flatbed-2026-09-12T05-52-35-788Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013014-1/Zigzag-Flatbed-2026-09-12T05-52-35-788Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T05:54:09.669Z",
-              "expiresAt": "2026-10-03T05:54:09.669Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013012-5": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013012-5-video-1789192701328-p8mntp",
-              "name": "VID_20260912_112747.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013012-5%2FSingle-needle-post-bed-Drop-feed-2026-09-12T05-57-57-802Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013012-5/Single-needle-post-bed-Drop-feed-2026-09-12T05-57-57-802Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T05:58:21.328Z",
-              "expiresAt": "2026-10-03T05:58:21.328Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013013-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013013-1-video-1789192850004-sx8hjh",
-              "name": "VID_20260912_113013.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013013-1%2FDouble-Needle-Post-Bed-Drop-Feed-2026-09-12T06-00-24-882Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013013-1/Double-Needle-Post-Bed-Drop-Feed-2026-09-12T06-00-24-882Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T06:00:50.004Z",
-              "expiresAt": "2026-10-03T06:00:50.004Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013012-4": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013012-4-video-1789193010871-gefrg4",
-              "name": "VID_20260912_113300.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013012-4%2FSingle-needle-post-bed-Drop-feed-2026-09-12T06-03-08-937Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013012-4/Single-needle-post-bed-Drop-feed-2026-09-12T06-03-08-937Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T06:03:30.871Z",
-              "expiresAt": "2026-10-03T06:03:30.871Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013012-3": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013012-3-video-1789193148321-sqgtsv",
-              "name": "VID_20260912_113520.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013012-3%2FSingle-needle-post-bed-Drop-feed-2026-09-12T06-05-30-592Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013012-3/Single-needle-post-bed-Drop-feed-2026-09-12T06-05-30-592Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T06:05:48.321Z",
-              "expiresAt": "2026-10-03T06:05:48.321Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013012-2": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013012-2-video-1789193232713-rm2rd8",
-              "name": "VID_20260912_113646.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013012-2%2FSingle-needle-post-bed-Drop-feed-2026-09-12T06-06-56-577Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013012-2/Single-needle-post-bed-Drop-feed-2026-09-12T06-06-56-577Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T06:07:12.713Z",
-              "expiresAt": "2026-10-03T06:07:12.713Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013012-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013012-1-video-1789193338213-q0301d",
-              "name": "VID_20260912_113827.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013012-1%2FSingle-needle-post-bed-Drop-feed-2026-09-12T06-08-38-941Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013012-1/Single-needle-post-bed-Drop-feed-2026-09-12T06-08-38-941Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T06:08:58.213Z",
-              "expiresAt": "2026-10-03T06:08:58.213Z"
-            }
-          ]
-        },
-        "1154219000036013008-1154219000036013016-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036013008-1154219000036013016-1-video-1789193478663-sponwk",
-              "name": "VID_20260912_114048.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07804%2F1154219000036013008-1154219000036013016-1%2FBinding-single-needle-Auto-lubrication-heavy-duty-Cylinder-bed-2026-09-12T06-10-58-049Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07804/1154219000036013008-1154219000036013016-1/Binding-single-needle-Auto-lubrication-heavy-duty-Cylinder-bed-2026-09-12T06-10-58-049Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T06:11:18.663Z",
-              "expiresAt": "2026-10-03T06:11:18.663Z"
-            }
-          ]
-        }
-      },
+      "units": {},
       "videoNotRequired": false
     },
     "1154219000034276003": {
       "orderId": "1154219000034276003",
       "salesOrderNumber": "SO-07491",
       "submittedAt": "2026-09-12T11:10:29.221Z",
-      "units": {
-        "1154219000034276003-1154219000034276006-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000034276003-1154219000034276006-1-video-1789211416339-9ezugq",
-              "name": "VID_20260912_163934.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07491%2F1154219000034276003-1154219000034276006-1%2FHydraulic-Sole-Attaching-Machine-for-High-Heel-2026-09-12T11-09-45-086Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07491/1154219000034276003-1154219000034276006-1/Hydraulic-Sole-Attaching-Machine-for-High-Heel-2026-09-12T11-09-45-086Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T11:10:16.339Z",
-              "expiresAt": "2026-10-03T11:10:16.339Z"
-            }
-          ]
-        }
-      }
+      "units": {}
     },
     "1154219000036882003": {
       "orderId": "1154219000036882003",
       "salesOrderNumber": "SO-07938",
       "submittedAt": null,
-      "units": {
-        "1154219000036882003-1154219000036882006-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036882003-1154219000036882006-1-video-1789211880132-lrkqub",
-              "name": "VID_20260912_164729.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07938%2F1154219000036882003-1154219000036882006-1%2FSole-Marking-Machine-Pneumatic-With-Adjustable-Pad-2026-09-12T11-17-40-504Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07938/1154219000036882003-1154219000036882006-1/Sole-Marking-Machine-Pneumatic-With-Adjustable-Pad-2026-09-12T11-17-40-504Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T11:18:00.132Z",
-              "expiresAt": "2026-10-03T11:18:00.132Z"
-            }
-          ]
-        }
-      }
+      "units": {}
     },
     "1154219000036708018": {
       "orderId": "1154219000036708018",
       "salesOrderNumber": "SO-07922",
       "submittedAt": null,
-      "units": {
-        "1154219000036708018-1154219000036708021-1": {
-          "photos": [],
-          "videos": [
-            {
-              "id": "1154219000036708018-1154219000036708021-1-video-1789215110251-nd50mf",
-              "name": "VID_20260912_174119.mp4",
-              "type": "video/mp4",
-              "kind": "video",
-              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-09-12%2FSO-07922%2F1154219000036708018-1154219000036708021-1%2FRound-Blade-Edge-trimming-Machine-2026-09-12T12-11-31-622Z.mp4",
-              "workdriveFileId": null,
-              "workdriveUrl": null,
-              "r2Key": "media-proof/packing/2026-09-12/SO-07922/1154219000036708018-1154219000036708021-1/Round-Blade-Edge-trimming-Machine-2026-09-12T12-11-31-622Z.mp4",
-              "storageProvider": "r2",
-              "uploadedAt": "2026-09-12T12:11:50.251Z",
-              "expiresAt": "2026-10-03T12:11:50.251Z"
-            }
-          ]
-        }
-      }
+      "units": {}
     },
     "1154219000036923017": {
       "orderId": "1154219000036923017",
