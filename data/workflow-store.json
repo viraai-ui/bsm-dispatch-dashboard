@@ -47321,7 +47321,11 @@
           "lineItemId": "1154219000037879005",
           "serialNumber": "26271399",
           "qrToken": "26271399",
-          "qrStatus": "pending"
+          "qrStatus": "pending",
+          "zohoBackupStatus": "synced",
+          "zohoBackupLastAttemptAt": "2026-10-05T08:00:41.344Z",
+          "zohoBackupSyncedAt": "2026-10-05T08:00:41.344Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
