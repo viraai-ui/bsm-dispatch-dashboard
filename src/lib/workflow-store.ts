@@ -2,6 +2,7 @@ import type { Order } from '@/types/domain'
 import { isOrderIdentityTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { markPublicDatabaseDirty } from './public-database-freshness'
 import { isTransferredMachineWorkflow } from './machine-workflow-projection'
+import { preserveSheetSuppliers, applySheetSuppliers } from './serial-sheet-suppliers'
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
 const GITHUB_READ_COOLDOWN_MS = 2 * 60 * 1000
@@ -25,6 +26,7 @@ export type MachineWorkflow = {
   dispatchedAt?: string
   dispatchNote?: string
   vendor?: string
+  sheetVendor?: string
   zohoBackupStatus?: 'pending' | 'synced' | 'error'
   zohoBackupQueuedAt?: string
   zohoBackupSyncedAt?: string
@@ -223,6 +225,19 @@ export async function listWorkflows(authoritative = false) {
   return store.orders || {}
 }
 
+/** Supplier-only bulk CAS; retries preserve concurrent workflow changes. */
+export async function reconcileWorkflowSuppliers(suppliers: { serial: string; vendor: string }[]) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const { data, sha } = await githubReadJsonAuthoritative<Store>(STORE_PATH)
+    const changed = applySheetSuppliers(data, suppliers)
+    if (!changed) return 0
+    try { await writeStore(data, sha); return changed } catch (error) {
+      if (!isGitHubWriteConflict(error) || attempt === 2) throw error
+    }
+  }
+  return 0
+}
+
 export async function listProcessedOrders() {
   const [{ store }, baseline] = await Promise.all([readStoreWithSha(), githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })])
   return Object.values(store.orders).filter((order) => {
@@ -237,7 +252,8 @@ export async function upsertOrderWorkflow(orderId: string, updater: (current: Or
   for (let attempt = 0; attempt < 3; attempt += 1) {
     const { data: store, sha } = await githubReadJsonAuthoritative<Store>(STORE_PATH)
     if (!store.orders || typeof store.orders !== 'object') throw new Error('Invalid authoritative workflow store')
-    const next = updater(store.orders[orderId] || null, store)
+    const previous = store.orders[orderId] ? structuredClone(store.orders[orderId]) : null
+    const next = preserveSheetSuppliers(updater(store.orders[orderId] || null, store), previous)
     store.orders[orderId] = next
     try {
       await writeStore(store, sha)

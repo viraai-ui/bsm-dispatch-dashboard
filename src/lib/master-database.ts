@@ -50,7 +50,7 @@ export async function upsertGeneratedSerialsToMasterDatabase(order: Order, machi
           customer_name = excluded.customer_name,
           shipping_address = excluded.shipping_address,
           model_no = excluded.model_no,
-          make = excluded.make,
+          make = CASE WHEN machines.make <> '' THEN machines.make ELSE excluded.make END,
           date_of_purchase = coalesce(excluded.date_of_purchase, machines.date_of_purchase),
           warranty_start = coalesce(excluded.warranty_start, machines.warranty_start),
           warranty_end = coalesce(excluded.warranty_end, machines.warranty_end),
@@ -62,4 +62,13 @@ export async function upsertGeneratedSerialsToMasterDatabase(order: Order, machi
     }
   }
   return result
+}
+
+/** Field-only projection; identifiers, lifecycle, dates and customer untouched. */
+export async function reconcileMasterSuppliers(suppliers: { serial: string; vendor: string }[]) {
+  const db = sql()
+  if (!db || !suppliers.length) return
+  await db`UPDATE machines m SET make = s.vendor
+    FROM jsonb_to_recordset(${JSON.stringify(suppliers)}::jsonb) AS s(serial text, vendor text)
+    WHERE m.serial_number = s.serial AND s.vendor <> '' AND m.make IS DISTINCT FROM s.vendor`
 }

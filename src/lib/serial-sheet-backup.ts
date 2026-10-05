@@ -1,7 +1,9 @@
 import type { MachineUnit, Order } from '@/types/domain'
 import { reserveSheetCall, coolDownSheet, isSheetQuota, reconcileVendorRanges } from './serial-sheet-vendor-transport'
 import { exactAppendRows, exactSheetHeaders, planVendorUpdates, vendorEqual, workflowVendor, type VendorSource } from './serial-sheet-vendors'
-import { githubReadJson, listWorkflows, upsertOrderWorkflow } from './workflow-store'
+import { githubReadJson, listWorkflows, upsertOrderWorkflow, reconcileWorkflowSuppliers } from './workflow-store'
+import { sheetSuppliers } from './serial-sheet-suppliers'
+import { reconcileMasterSuppliers } from './master-database'
 
 const DEFAULT_SERIAL_SHEET_ID = 'ryxg17eef99a9ae0441b4bf62c69db2b5640c'
 const DEFAULT_SERIAL_WORKSHEET = 'Sr.No.26-27'
@@ -514,7 +516,13 @@ export async function syncMissingGeneratedSerialsToZohoSheet(): Promise<BackupRe
   const result: BackupResult = { synced: 0, skipped: 0, configured: serialSheetConfigured(), errors: [] }
   if (!result.configured) return result
   try {
-    const workflows = await listWorkflows()
+    // Scan every physical row, including previously synced machines.
+    const content = await fetchWorksheetContent(sheetConfig().worksheetName)
+    const before = await listWorkflows(true)
+    const suppliers = sheetSuppliers(content, { orders: before })
+    await reconcileWorkflowSuppliers(suppliers)
+    await reconcileMasterSuppliers(suppliers)
+    const workflows = await listWorkflows(true)
     const synced = await githubReadJson<{ orders: Record<string, Order> }>('data/synced-confirmed-orders-store.json', { orders: {} })
     const entries: SerialSyncEntry[] = []
     for (const workflow of Object.values(workflows)) {
