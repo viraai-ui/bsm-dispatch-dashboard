@@ -7955,6 +7955,34 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-05T11:33:26+0530"
+    },
+    "1154219000037917002": {
+      "id": "1154219000037917002",
+      "zohoSalesOrderId": "1154219000037917002",
+      "salesOrderNumber": "SO-08086",
+      "status": "open",
+      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+      "shippingAddress": "Plot No. 280, Sect-17, HSIIDC, Indl.Estate,, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-05",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037917005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 1000,
+          "pendingQuantity": 1000,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-05T13:42:27+0530"
     }
   },
   "orderIds": [
@@ -8037,10 +8065,11 @@
     "1154219000037816003",
     "1154219000037827005",
     "1154219000037863001",
-    "1154219000037879002"
+    "1154219000037879002",
+    "1154219000037917002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-05T08:00:33.499Z",
-  "lastAttemptAt": "2026-10-05T08:20:26.939Z",
+  "lastSuccessfulSyncAt": "2026-10-05T08:20:34.887Z",
+  "lastAttemptAt": "2026-10-05T08:20:34.887Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
