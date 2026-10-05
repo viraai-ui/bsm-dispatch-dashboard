@@ -7983,6 +7983,56 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-05T13:42:27+0530"
+    },
+    "1154219000037905012": {
+      "id": "1154219000037905012",
+      "zohoSalesOrderId": "1154219000037905012",
+      "salesOrderNumber": "SO-08087",
+      "status": "open",
+      "customerName": "AGNI KAWACH EXTINGUISHER CO",
+      "shippingAddress": "2nd Floor, SHOP NO 224, ELDORA BUILDING, Unnamed Road, Golden City Centre, Chikalthana, Aurangabad, Chhatrapati Sambhaji Nagar, Maharashtra, 431210, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-10-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037905015",
+          "itemName": "Automatic Pipe Cutting Machine",
+          "sku": "370",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000006912047",
+          "rate": 100000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037905012-1154219000037905015-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037905012",
+          "lineItemId": "1154219000037905015",
+          "itemName": "Automatic Pipe Cutting Machine",
+          "sku": "370",
+          "customerName": "AGNI KAWACH EXTINGUISHER CO",
+          "salesOrderNumber": "SO-08087",
+          "deliveryDate": "2026-10-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-05T16:04:00+0530"
     }
   },
   "orderIds": [
@@ -8066,10 +8116,11 @@
     "1154219000037827005",
     "1154219000037863001",
     "1154219000037879002",
-    "1154219000037917002"
+    "1154219000037917002",
+    "1154219000037905012"
   ],
-  "lastSuccessfulSyncAt": "2026-10-05T10:20:35.250Z",
-  "lastAttemptAt": "2026-10-05T10:40:26.801Z",
+  "lastSuccessfulSyncAt": "2026-10-05T10:40:35.375Z",
+  "lastAttemptAt": "2026-10-05T10:40:35.375Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
