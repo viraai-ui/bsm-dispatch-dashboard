@@ -47952,7 +47952,9 @@
     "1154219000037363007": {
       "salesOrderId": "1154219000037363007",
       "salesOrderNumber": "SO-08030",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-05T10:06:16.555Z",
       "processedOrder": {
         "id": "1154219000037363007",
         "zohoSalesOrderId": "1154219000037363007",
@@ -47994,8 +47996,8 @@
           {
             "id": "1154219000037363007-1154219000037363010-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271400",
+            "qrToken": "26271400",
             "orderId": "1154219000037363007",
             "lineItemId": "1154219000037363010",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -48003,14 +48005,17 @@
             "customerName": "Lord's Mark Industries Limited",
             "salesOrderNumber": "SO-08030",
             "deliveryDate": "2026-09-26",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-05",
+            "vendor": "K S",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-09-25T10:59:34+0530"
@@ -48024,7 +48029,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-05T10:03:26.642Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-05T10:03:27.039Z"
+          "zohoBackupQueuedAt": "2026-10-05T10:06:16.555Z",
+          "processedAt": "2026-10-05T10:06:16.555Z",
+          "dispatchNote": "wooden",
+          "vendor": "K S"
         }
       }
     }
