@@ -31,7 +31,13 @@ function databaseUrl() { return process.env.DATABASE_URL || process.env.NEON_DAT
 function db() {
   const url = databaseUrl()
   if (!url) throw new Error('Authoritative serial database is not configured')
-  return pool ||= new Pool({ connectionString: url, max: 10, connectionTimeoutMillis: 10_000, idleTimeoutMillis: 30_000 })
+  if (!pool) {
+    pool = new Pool({ connectionString: url, max: 10, connectionTimeoutMillis: 10_000, idleTimeoutMillis: 30_000, statement_timeout: 15_000 })
+    // Neon may close idle serverless connections. pg removes the dead client; an
+    // unhandled pool error must not terminate unrelated requests in the instance.
+    pool.on('error', error => console.error('Serial database idle connection closed', { code: (error as Error & { code?: string }).code }))
+  }
+  return pool
 }
 
 export async function ensureSerialLedgerSchema() {

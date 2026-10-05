@@ -43,7 +43,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       // Transfer evidence is read from the authoritative workflow, never trusted from the
       // client. It remains present after the failed Oxford attempt (qrStatus was generated),
       // so transferredAt/destination form a stable reallocation idempotency generation.
-      const current = await getOrderWorkflow(id)
+      const current = await getOrderWorkflow(id, true)
       const transfers = Object.fromEntries((body.machineIds || []).flatMap((machineId: string) => {
         const machine = current?.machines?.[machineId]
         if (!machine?.transferredAt && !machine?.transferDestinationOrderId && machine?.qrStatus !== 'transferred') return []

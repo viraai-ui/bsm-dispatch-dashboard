@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 
 process.env.GITHUB_TOKEN = 'test-token'
 process.env.GITHUB_OWNER = 'test-owner'
@@ -11,7 +12,7 @@ assert.equal(highestSerialCounter({ serialCounter: initial + 1, orders: { rolled
 assert.equal(highestSerialCounter({ serialCounter: initial + 11, orders: {} }), initial + 11, 'valid persisted counter remains authoritative')
 
 let store = { serialCounter: initial + 20, orders: { seed: { salesOrderId: 'seed', salesOrderNumber: 'SO-SEED', status: 'open', machines: {} } } }
-let shaVersion = 1
+const metadata = () => { const bytes = Buffer.from(JSON.stringify(store)); return { sha: createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex'), size: bytes.length, content: bytes.toString('base64') } }
 let conflicts = 0
 let reads = 0
 let writes = 0
@@ -20,17 +21,17 @@ globalThis.fetch = async (_url, init = {}) => {
   const method = init.method || 'GET'
   if (method === 'GET') {
     reads += 1
-    return response(200, { sha: `sha-${shaVersion}`, content: Buffer.from(JSON.stringify(store)).toString('base64') })
+    return response(200, metadata())
   }
   writes += 1
   await new Promise((resolve) => setTimeout(resolve, 5))
   const body = JSON.parse(init.body)
-  if (body.sha !== `sha-${shaVersion}`) {
+  if (body.sha !== metadata().sha) {
     conflicts += 1
-    return response(409, { message: `sha does not match current sha-${shaVersion}` })
+    return response(409, { message: 'sha does not match current revision' })
   }
   store = JSON.parse(Buffer.from(body.content, 'base64').toString('utf8'))
-  shaVersion += 1
+
   return response(200, {})
 }
 

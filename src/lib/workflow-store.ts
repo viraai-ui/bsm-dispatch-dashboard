@@ -86,6 +86,8 @@ export async function githubRequest(path: string, init: RequestInit = {}) {
   const { token, owner, repo } = ghConfig()
   if (!token) throw new Error('Workflow database is not configured')
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}${path}`, {
+    signal: AbortSignal.timeout(15_000),
+    redirect: 'error',
     ...init,
     headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', ...(init.headers || {}) },
     cache: 'no-store',
@@ -115,6 +117,34 @@ function isTransientGitHubReadFailure(error: unknown) {
   return /rate limit|api request limit|too many requests|quota|fetch failed|econnreset|etimedout|network/i.test(message)
 }
 
+/** Required existing store read for mutations/readiness. Never consult the read-only
+ * snapshot circuit, and verify bytes against the immutable blob revision used for CAS. */
+export async function githubReadJsonAuthoritative<T>(path: string): Promise<{ data: T; sha: string }> {
+  let failure: unknown
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const metadata = await githubRequest(`/contents/${path}`)
+      if (!/^[a-f0-9]{40}$/.test(metadata.sha || '')) throw new Error('Authoritative store SHA is missing')
+      const blob = metadata.content ? metadata : await githubRequest(`/git/blobs/${metadata.sha}`)
+      const bytes = Buffer.from(blob.content || '', 'base64')
+      // Dynamic import keeps this server-only operation out of client-side callers.
+      const cryptoModule = 'node:crypto'
+      const { createHash } = await import(cryptoModule)
+      const oid = createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex')
+      if (bytes.length !== metadata.size || oid !== metadata.sha) throw new Error('Authoritative store integrity mismatch (size/SHA)')
+      return { data: JSON.parse(bytes.toString('utf8')) as T, sha: metadata.sha }
+    } catch (error) {
+      failure = error
+      // A short retry can recover a connection/cold-start failure. Quota/auth/config
+      // failures remain closed rather than repeatedly hammering the provider.
+      const message = error instanceof Error ? error.message : String(error)
+      if (attempt || !/fetch failed|econnreset|etimedout|network|timeout/i.test(message)) throw error
+      await new Promise(resolve => setTimeout(resolve, 150))
+    }
+  }
+  throw failure
+}
+
 export async function githubReadJson<T>(path: string, fallback: T): Promise<{ data: T; sha?: string }> {
   if (githubReadUnavailableUntil > Date.now()) return { data: await readBundledJson(path, fallback) }
   try {
@@ -135,6 +165,7 @@ export async function githubReadJson<T>(path: string, fallback: T): Promise<{ da
     const message = error instanceof Error ? error.message : ''
     if (message.includes('Not Found') || message.includes('not configured')) return { data: fallback }
     if (isTransientGitHubReadFailure(error)) {
+      console.warn('GitHub read-only snapshot fallback', { path, reason: message })
       githubReadUnavailableUntil = Date.now() + GITHUB_READ_COOLDOWN_MS
       return { data: await readBundledJson(path, fallback) }
     }
@@ -175,19 +206,20 @@ async function readStoreWithSha(): Promise<{ store: Store; sha?: string }> {
 }
 
 async function writeStore(store: Store, sha?: string) {
+  if (!sha) throw new Error('Authoritative workflow revision unavailable; refusing stale write')
   const body: Record<string, string> = { message: 'Update dispatch workflow store', content: Buffer.from(JSON.stringify(store, null, 2)).toString('base64') }
   if (sha) body.sha = sha
   await githubRequest(`/contents/${STORE_PATH}`, { method: 'PUT', body: JSON.stringify(body) })
   markPublicDatabaseDirty()
 }
 
-export async function getOrderWorkflow(orderId: string) {
-  const { store } = await readStoreWithSha()
+export async function getOrderWorkflow(orderId: string, authoritative = false) {
+  const store = authoritative ? (await githubReadJsonAuthoritative<Store>(STORE_PATH)).data : (await readStoreWithSha()).store
   return store.orders[orderId] || null
 }
 
-export async function listWorkflows() {
-  const { store } = await readStoreWithSha()
+export async function listWorkflows(authoritative = false) {
+  const store = authoritative ? (await githubReadJsonAuthoritative<Store>(STORE_PATH)).data : (await readStoreWithSha()).store
   return store.orders || {}
 }
 
@@ -203,7 +235,8 @@ export async function listProcessedOrders() {
 export async function upsertOrderWorkflow(orderId: string, updater: (current: OrderWorkflow | null, store: Store) => OrderWorkflow) {
   let lastError: unknown
   for (let attempt = 0; attempt < 3; attempt += 1) {
-    const { store, sha } = await readStoreWithSha()
+    const { data: store, sha } = await githubReadJsonAuthoritative<Store>(STORE_PATH)
+    if (!store.orders || typeof store.orders !== 'object') throw new Error('Invalid authoritative workflow store')
     const next = updater(store.orders[orderId] || null, store)
     store.orders[orderId] = next
     try {
