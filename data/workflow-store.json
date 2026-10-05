@@ -47256,7 +47256,9 @@
     "1154219000037879002": {
       "salesOrderId": "1154219000037879002",
       "salesOrderNumber": "SO-08085",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-05T08:25:49.678Z",
       "processedOrder": {
         "id": "1154219000037879002",
         "zohoSalesOrderId": "1154219000037879002",
@@ -47266,7 +47268,7 @@
         "shippingAddress": "PLOT NO. 1870, M.I.E. PART-B, BAHADURGARH,, Jhajjar, Haryana, 124507, India",
         "salesperson": "Karan Singh",
         "deliveryDate": "2026-10-05",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -47298,8 +47300,8 @@
           {
             "id": "1154219000037879002-1154219000037879005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271399",
+            "qrToken": "26271399",
             "orderId": "1154219000037879002",
             "lineItemId": "1154219000037879005",
             "itemName": "PU Adhesive Glue Pasting Machine",
@@ -47307,14 +47309,16 @@
             "customerName": "FORTUNE ENTERPRISES",
             "salesOrderNumber": "SO-08085",
             "deliveryDate": "2026-10-05",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-05T11:33:26+0530"
@@ -47327,8 +47331,11 @@
           "qrToken": "26271399",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-05T08:09:16.274Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-05T08:09:17.557Z"
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-05T08:25:49.678Z",
+          "processedAt": "2026-10-05T08:25:49.678Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
