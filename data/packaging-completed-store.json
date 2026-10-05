@@ -28052,6 +28052,76 @@
         "1154219000037827005-1154219000037827008-9",
         "1154219000037827005-1154219000037827008-10"
       ]
+    },
+    "1154219000037879002": {
+      "completedAt": "2026-10-05T11:43:52.515Z",
+      "order": {
+        "id": "1154219000037879002",
+        "zohoSalesOrderId": "1154219000037879002",
+        "salesOrderNumber": "SO-08085",
+        "status": "open",
+        "customerName": "FORTUNE ENTERPRISES",
+        "shippingAddress": "PLOT NO. 1870, M.I.E. PART-B, BAHADURGARH,, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-10-05",
+        "dashboardStatus": "QR Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037879005",
+            "itemName": "PU Adhesive Glue Pasting Machine",
+            "sku": "106",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225127",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037879006",
+            "itemName": "Hotmelt Polyamide Granules",
+            "sku": "7160",
+            "description": "",
+            "quantity": 25,
+            "pendingQuantity": 25,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001151038",
+            "rate": 950,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037879002-1154219000037879005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271399",
+            "qrToken": "26271399",
+            "orderId": "1154219000037879002",
+            "lineItemId": "1154219000037879005",
+            "itemName": "PU Adhesive Glue Pasting Machine",
+            "sku": "106",
+            "customerName": "FORTUNE ENTERPRISES",
+            "salesOrderNumber": "SO-08085",
+            "deliveryDate": "2026-10-05",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-05T11:33:26+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037879002-1154219000037879005-1"
+      ]
     }
   }
 }
