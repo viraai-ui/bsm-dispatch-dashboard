@@ -8033,6 +8033,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-05T16:04:00+0530"
+    },
+    "1154219000037948002": {
+      "id": "1154219000037948002",
+      "zohoSalesOrderId": "1154219000037948002",
+      "salesOrderNumber": "SO-08088",
+      "status": "open",
+      "customerName": "Indus Fine Arts Pvt Ltd",
+      "shippingAddress": "B-115, RIICO IND AREA, KHAIRTHAL, DISTT. ALWAR RAJASTHAN-301404, Rajasthan",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-05",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000037948005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Drum type Bladder",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 2000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000037948002-1154219000037948005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000037948002",
+          "lineItemId": "1154219000037948005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Indus Fine Arts Pvt Ltd",
+          "salesOrderNumber": "SO-08088",
+          "deliveryDate": "2026-10-05",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Drum type Bladder"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-05T16:27:05+0530"
     }
   },
   "orderIds": [
@@ -8117,10 +8167,11 @@
     "1154219000037863001",
     "1154219000037879002",
     "1154219000037917002",
-    "1154219000037905012"
+    "1154219000037905012",
+    "1154219000037948002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-05T10:40:35.375Z",
-  "lastAttemptAt": "2026-10-05T11:00:27.149Z",
+  "lastSuccessfulSyncAt": "2026-10-05T11:00:34.704Z",
+  "lastAttemptAt": "2026-10-05T11:00:34.704Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
