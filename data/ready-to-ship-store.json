@@ -9484,6 +9484,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037826005": {
+      "id": "ship-1791275902812-dc5g5",
+      "itemId": "1154219000037826005",
+      "orderId": "1154219000037826005",
+      "machineId": "1154219000037826005-1154219000037826008-1",
+      "salesOrderNumber": "SO-08079",
+      "customerName": "Mahalaxmi Polyblend",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-02",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:38:22.812Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
