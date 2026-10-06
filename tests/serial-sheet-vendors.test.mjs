@@ -35,10 +35,13 @@ test('real reconciler revisits synced serial, fails closed on lost write, retrie
   const backup = load('serial-sheet-backup', {
     './serial-sheet-vendors': rules,
     './serial-sheet-vendor-transport': { ...(await import('../src/lib/serial-sheet-vendor-transport.ts')), reserveSheetCall: async () => {}, coolDownSheet: async () => {} },
+    './serial-sheet-suppliers': { sheetSuppliers: () => [] },
+    './master-database': { reconcileMasterSuppliers: async () => ({ updated: 0 }) },
     './workflow-store': {
       listWorkflows: async () => ({ order: workflow }),
       githubReadJson: async () => ({ data: { orders: {} } }),
       upsertOrderWorkflow: async (_, update) => { commits++; workflow = update(workflow) },
+      reconcileWorkflowSuppliers: async () => ({ updated: 0 }),
     },
   }, { fetch: async (url, options) => {
     if (url.includes('/oauth/')) return { ok: true, json: async () => ({ access_token: 'fixture', expires_in: 3600 }) }
