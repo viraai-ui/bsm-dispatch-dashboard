@@ -28193,6 +28193,65 @@
       "machineIds": [
         "1154219000037363007-1154219000037363010-1"
       ]
+    },
+    "1154219000037998001": {
+      "completedAt": "2026-10-06T09:05:20.277Z",
+      "order": {
+        "id": "1154219000037998001",
+        "zohoSalesOrderId": "1154219000037998001",
+        "salesOrderNumber": "SO-08089",
+        "status": "open",
+        "customerName": "SS Polymers",
+        "shippingAddress": "18, Laxmipur Panda, Khajauli, Madhubani, Bihar, 847228",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037998004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226034",
+            "rate": 13000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037998001-1154219000037998004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271401",
+            "qrToken": "26271401",
+            "orderId": "1154219000037998001",
+            "lineItemId": "1154219000037998004",
+            "itemName": "Manual Fusing Machine (15*15 inches)",
+            "sku": "38",
+            "customerName": "SS Polymers",
+            "salesOrderNumber": "SO-08089",
+            "deliveryDate": "2026-10-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-06",
+            "dispatchNote": "Good wrapping"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-06T11:48:46+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037998001-1154219000037998004-1"
+      ]
     }
   }
 }
