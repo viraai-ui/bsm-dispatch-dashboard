@@ -9677,6 +9677,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037686001": {
+      "id": "ship-1791276432596-dxj94",
+      "itemId": "1154219000037686001",
+      "orderId": "1154219000037686001",
+      "machineId": "1154219000037686001-1154219000037686004-1",
+      "salesOrderNumber": "SO-08069",
+      "customerName": "Ankit Raj Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-30",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:47:12.596Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
