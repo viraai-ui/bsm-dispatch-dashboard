@@ -9284,6 +9284,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037879002": {
+      "id": "ship-1791275479797-ty59k",
+      "itemId": "1154219000037879002",
+      "orderId": "1154219000037879002",
+      "machineId": "1154219000037879002-1154219000037879005-1",
+      "salesOrderNumber": "SO-08085",
+      "customerName": "FORTUNE ENTERPRISES",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-05",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:31:19.797Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
