@@ -28122,6 +28122,77 @@
       "machineIds": [
         "1154219000037879002-1154219000037879005-1"
       ]
+    },
+    "1154219000037363007": {
+      "completedAt": "2026-10-06T07:34:43.859Z",
+      "order": {
+        "id": "1154219000037363007",
+        "zohoSalesOrderId": "1154219000037363007",
+        "salesOrderNumber": "SO-08030",
+        "status": "open",
+        "customerName": "Lord's Mark Industries Limited",
+        "shippingAddress": "Survey No. 1186, Old Survey No. 277-1-2, Demni Road, Near cannel, Dadra Dungra, Dadra and Nagar Haveli, Daman and Diu, 396193, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-09-26",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037363010",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 55000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000037363011",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 12.5,
+            "pendingQuantity": 12.5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228524",
+            "rate": 360,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037363007-1154219000037363010-1",
+            "unitNumber": 1,
+            "serialNumber": "26271400",
+            "qrToken": "26271400",
+            "orderId": "1154219000037363007",
+            "lineItemId": "1154219000037363010",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "Lord's Mark Industries Limited",
+            "salesOrderNumber": "SO-08030",
+            "deliveryDate": "2026-09-26",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-05",
+            "dispatchNote": "wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-09-25T10:59:34+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000037363007-1154219000037363010-1"
+      ]
     }
   }
 }
