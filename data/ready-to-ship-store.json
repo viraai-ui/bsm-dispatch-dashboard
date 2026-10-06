@@ -9315,6 +9315,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037827005": {
+      "id": "ship-1791275542289-8d0ao",
+      "itemId": "1154219000037827005",
+      "orderId": "1154219000037827005",
+      "machineId": "1154219000037827005-1154219000037827008-1",
+      "salesOrderNumber": "SO-08083",
+      "customerName": "NEWWA TECHNO PLAAST LLP",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Kapil Ji",
+      "transporterPhone": "8178135379",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-03",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:32:22.289Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
