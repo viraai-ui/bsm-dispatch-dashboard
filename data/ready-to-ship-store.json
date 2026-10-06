@@ -9546,6 +9546,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037762002": {
+      "id": "ship-1791275987204-1mipb",
+      "itemId": "1154219000037762002",
+      "orderId": "1154219000037762002",
+      "machineId": "1154219000037762002-1154219000037762005-1",
+      "salesOrderNumber": "SO-08074",
+      "customerName": "REYANSH FOOTWEAR",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-01",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:39:47.204Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
