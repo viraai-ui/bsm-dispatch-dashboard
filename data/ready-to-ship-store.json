@@ -9646,6 +9646,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037723001": {
+      "id": "ship-1791276401038-6tpos",
+      "itemId": "1154219000037723001",
+      "orderId": "1154219000037723001",
+      "machineId": "1154219000037723001-1154219000037723004-1",
+      "salesOrderNumber": "SO-08070",
+      "customerName": "XO FOOTWEAR PVT LTD (34B)",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-01",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:46:41.038Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
