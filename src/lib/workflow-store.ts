@@ -6,7 +6,10 @@ import { preserveSheetSuppliers, applySheetSuppliers } from './serial-sheet-supp
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
 const GITHUB_READ_COOLDOWN_MS = 2 * 60 * 1000
+const GITHUB_READ_CACHE_MS = 15 * 1000
 let githubReadUnavailableUntil = 0
+const githubReadFlights = new Map<string, Promise<{ data: unknown; sha?: string }>>()
+const githubReadCache = new Map<string, { value: { data: unknown; sha?: string }; expiresAt: number }>()
 export function isGitHubWriteConflict(error: unknown) {
   const message = error instanceof Error ? error.message : String(error)
   return SHA_CONFLICT_PATTERNS.some((pattern) => pattern.test(message))
@@ -95,7 +98,12 @@ export async function githubRequest(path: string, init: RequestInit = {}) {
     cache: 'no-store',
   })
   const data = await response.json().catch(() => ({}))
-  if (!response.ok) throw new Error(data.message || 'Workflow database request failed')
+  if (!response.ok) {
+    const error = new Error(data.message || 'Workflow database request failed') as Error & { status?: number; rateLimited?: boolean }
+    error.status = response.status
+    error.rateLimited = response.status === 429 || (response.status === 403 && (response.headers.get('x-ratelimit-remaining') === '0' || /rate limit|api request limit|too many requests|quota/i.test(error.message)))
+    throw error
+  }
   return data
 }
 
@@ -115,8 +123,13 @@ async function readBundledJson<T>(filePath: string, fallback: T): Promise<T> {
 }
 
 function isTransientGitHubReadFailure(error: unknown) {
+  if ((error as { rateLimited?: boolean } | null)?.rateLimited) return true
   const message = error instanceof Error ? error.message : String(error)
   return /rate limit|api request limit|too many requests|quota|fetch failed|econnreset|etimedout|network/i.test(message)
+}
+
+function copyGithubRead<T>(value: { data: unknown; sha?: string }): { data: T; sha?: string } {
+  return { data: structuredClone(value.data) as T, ...(value.sha ? { sha: value.sha } : {}) }
 }
 
 /** Required existing store read for mutations/readiness. Never consult the read-only
@@ -149,37 +162,52 @@ export async function githubReadJsonAuthoritative<T>(path: string): Promise<{ da
 
 export async function githubReadJson<T>(path: string, fallback: T): Promise<{ data: T; sha?: string }> {
   if (githubReadUnavailableUntil > Date.now()) return { data: await readBundledJson(path, fallback) }
-  try {
-    const data = await githubRequest(`/contents/${path}`)
-    let content = data.content || ''
-    if (!content && data.git_url) {
-      const blobResponse = await fetch(data.git_url, {
-        headers: { Authorization: `Bearer ${ghConfig().token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
-        cache: 'no-store',
-      })
-      const blob = await blobResponse.json().catch(() => ({}))
-      if (!blobResponse.ok) throw new Error(blob.message || 'Workflow database blob request failed')
-      content = blob.content || ''
-    }
-    const json = Buffer.from(content, 'base64').toString('utf8')
-    return { data: JSON.parse(json || JSON.stringify(fallback)), sha: data.sha }
-  } catch (error) {
-    const message = error instanceof Error ? error.message : ''
-    if (message.includes('Not Found') || message.includes('not configured')) return { data: fallback }
-    if (isTransientGitHubReadFailure(error)) {
-      console.warn('GitHub read-only snapshot fallback', { path, reason: message })
-      githubReadUnavailableUntil = Date.now() + GITHUB_READ_COOLDOWN_MS
-      return { data: await readBundledJson(path, fallback) }
-    }
-    throw error
+  const cached = githubReadCache.get(path)
+  if (cached && cached.expiresAt > Date.now()) return copyGithubRead<T>(cached.value)
+  let flight = githubReadFlights.get(path)
+  if (!flight) {
+    flight = (async (): Promise<{ data: unknown; sha?: string }> => {
+      try {
+        const data = await githubRequest(`/contents/${path}`)
+        let content = data.content || ''
+        if (!content && data.git_url) {
+          const blobResponse = await fetch(data.git_url, {
+            signal: AbortSignal.timeout(15_000),
+            headers: { Authorization: `Bearer ${ghConfig().token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
+            cache: 'no-store',
+          })
+          const blob = await blobResponse.json().catch(() => ({}))
+          if (!blobResponse.ok) throw new Error(blob.message || 'Workflow database blob request failed')
+          content = blob.content || ''
+        }
+        const json = Buffer.from(content, 'base64').toString('utf8')
+        const value = { data: JSON.parse(json || JSON.stringify(fallback)), sha: data.sha }
+        githubReadCache.set(path, { value, expiresAt: Date.now() + GITHUB_READ_CACHE_MS })
+        return value
+      } catch (error) {
+        const message = error instanceof Error ? error.message : ''
+        if (message.includes('Not Found') || message.includes('not configured')) return { data: fallback }
+        if (isTransientGitHubReadFailure(error)) {
+          console.warn('GitHub read-only snapshot fallback', { path, reason: message })
+          githubReadUnavailableUntil = Date.now() + GITHUB_READ_COOLDOWN_MS
+          return { data: await readBundledJson(path, fallback) }
+        }
+        throw error
+      }
+    })().finally(() => githubReadFlights.delete(path))
+    githubReadFlights.set(path, flight)
   }
+  return copyGithubRead<T>(await flight)
 }
 
 export async function githubWriteJson<T>(path: string, data: T, message: string, expectedSha?: string) {
-  const current = expectedSha === undefined ? await githubReadJson<T>(path, data) : { data, sha: expectedSha }
+  // Read continuity may use a bundled/cached snapshot, but a mutation must never
+  // derive its CAS revision from that read-only path.
+  const current = expectedSha === undefined ? await githubReadJsonAuthoritative<T>(path) : { data, sha: expectedSha }
   const body: Record<string, string> = { message, content: Buffer.from(JSON.stringify(data, null, 2)).toString('base64') }
   if (current.sha) body.sha = current.sha
   await githubRequest(`/contents/${path}`, { method: 'PUT', body: JSON.stringify(body) })
+  githubReadCache.delete(path)
   markPublicDatabaseDirty()
 }
 

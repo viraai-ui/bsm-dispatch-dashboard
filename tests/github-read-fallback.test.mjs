@@ -15,3 +15,14 @@ test('a transient GitHub failure opens a short read circuit breaker', () => {
   assert.match(source, /githubReadUnavailableUntil > Date\.now\(\)/)
   assert.match(source, /githubReadUnavailableUntil = Date\.now\(\) \+ GITHUB_READ_COOLDOWN_MS/)
 })
+
+test('read fan-out is coalesced and briefly cached while callers receive isolated data', () => {
+  assert.match(source, /githubReadFlights\.get\(path\)/)
+  assert.match(source, /githubReadCache\.get\(path\)/)
+  assert.match(source, /structuredClone\(value\.data\)/)
+})
+
+test('generic writes bypass the read-only fallback and require an authoritative revision', () => {
+  assert.match(source, /expectedSha === undefined \? await githubReadJsonAuthoritative<T>\(path\)/)
+  assert.match(source, /githubReadCache\.delete\(path\)/)
+})
