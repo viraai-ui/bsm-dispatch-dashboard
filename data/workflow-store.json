@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271401,
+  "serialCounter": 26271402,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -48119,6 +48119,82 @@
           "vendor": "Ishu",
           "sheetVendor": "Ishu",
           "dispatchedAt": "2026-10-06T09:05:20.277Z"
+        }
+      }
+    },
+    "1154219000038008003": {
+      "salesOrderId": "1154219000038008003",
+      "salesOrderNumber": "SO-08090",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038008003",
+        "zohoSalesOrderId": "1154219000038008003",
+        "salesOrderNumber": "SO-08090",
+        "status": "open",
+        "customerName": "LOTUS DIAMOND TOOLS",
+        "shippingAddress": "Ground Floor, Survey No. 863, Ghuntu Lakhdhirpur Road, OPP. Arko Ceramic, Morbi,, Morbi, Gujarat, 363642",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038008006",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 50000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038008007",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charge Up to 10km from BSM to Vtrans",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038008003-1154219000038008006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038008003",
+            "lineItemId": "1154219000038008006",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "LOTUS DIAMOND TOOLS",
+            "salesOrderNumber": "SO-08090",
+            "deliveryDate": "2026-10-06",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-06T15:14:45+0530"
+      },
+      "machines": {
+        "1154219000038008003-1154219000038008006-1": {
+          "machineUnitId": "1154219000038008003-1154219000038008006-1",
+          "lineItemId": "1154219000038008006",
+          "serialNumber": "26271402",
+          "qrToken": "26271402",
+          "qrStatus": "pending"
         }
       }
     }
