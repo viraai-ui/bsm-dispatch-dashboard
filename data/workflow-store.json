@@ -48294,7 +48294,9 @@
     "1154219000037997009": {
       "salesOrderId": "1154219000037997009",
       "salesOrderNumber": "SO-08093",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-06T11:05:23.931Z",
       "processedOrder": {
         "id": "1154219000037997009",
         "zohoSalesOrderId": "1154219000037997009",
@@ -48324,8 +48326,8 @@
           {
             "id": "1154219000037997009-1154219000037997012-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271404",
+            "qrToken": "26271404",
             "orderId": "1154219000037997009",
             "lineItemId": "1154219000037997012",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -48333,14 +48335,17 @@
             "customerName": "SPORTS RED FOOTWEAR PRIVATE LIMITED",
             "salesOrderNumber": "SO-08093",
             "deliveryDate": "2026-10-06",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-06",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-06T16:32:46+0530"
@@ -48354,7 +48359,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-06T11:03:42.779Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-06T11:03:44.482Z"
+          "zohoBackupQueuedAt": "2026-10-06T11:05:23.931Z",
+          "processedAt": "2026-10-06T11:05:23.931Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
