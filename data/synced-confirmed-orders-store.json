@@ -8323,6 +8323,96 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-06T16:32:46+0530"
+    },
+    "1154219000038000010": {
+      "id": "1154219000038000010",
+      "zohoSalesOrderId": "1154219000038000010",
+      "salesOrderNumber": "SO-08095",
+      "status": "open",
+      "customerName": "INDIAHIKES PRIVATE LIMITED",
+      "shippingAddress": "Khasra No.148 CHA, Mohabbewala Industrial Area, Titan Road, Near Titan Factory,Chandramani Khalsa, Pargana Central Doon, Dehradun, Dehradun, Uttarakhand, 248002, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-10-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038000013",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000009427388",
+          "rate": 60000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038000014",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038000010-1154219000038000013-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038000010",
+          "lineItemId": "1154219000038000013",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
+          "customerName": "INDIAHIKES PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08095",
+          "deliveryDate": "2026-10-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-06T17:24:55+0530"
+    },
+    "1154219000038010003": {
+      "id": "1154219000038010003",
+      "zohoSalesOrderId": "1154219000038010003",
+      "salesOrderNumber": "SO-08094",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-06",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038010006",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-06T17:20:47+0530"
     }
   },
   "orderIds": [
@@ -8413,10 +8503,12 @@
     "1154219000038007006",
     "1154219000038008003",
     "1154219000038025002",
-    "1154219000037997009"
+    "1154219000037997009",
+    "1154219000038000010",
+    "1154219000038010003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-06T11:40:33.796Z",
-  "lastAttemptAt": "2026-10-06T12:00:27.885Z",
+  "lastSuccessfulSyncAt": "2026-10-06T12:00:40.222Z",
+  "lastAttemptAt": "2026-10-06T12:00:40.222Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
