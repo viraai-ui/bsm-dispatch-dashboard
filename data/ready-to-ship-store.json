@@ -9746,6 +9746,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037538004": {
+      "id": "ship-1791277325147-jwanh",
+      "itemId": "1154219000037538004",
+      "orderId": "1154219000037538004",
+      "machineId": "1154219000037538004-1154219000037538007-1",
+      "salesOrderNumber": "SO-08047",
+      "customerName": "DELUX INTERNATIONAL (F.W.D.)",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-10-01 at 2.26.26 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-10-06%2FSO-08047%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-10-06T09-02-03-729Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-10-06/SO-08047/shipment-lr-builty/Shipment-LR-Builty-2026-10-06T09-02-03-729Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-10-06T09:02:05.147Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-29",
+      "notes": "",
+      "shippedAt": "2026-10-06T09:02:05.148Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
