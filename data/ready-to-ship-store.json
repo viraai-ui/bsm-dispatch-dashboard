@@ -9346,6 +9346,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037836007": {
+      "id": "ship-1791275628458-r5yg2",
+      "itemId": "1154219000037836007",
+      "orderId": "1154219000037836007",
+      "machineId": "1154219000037836007-1154219000037836010-1",
+      "salesOrderNumber": "SO-08081",
+      "customerName": "Amoha Design Studio",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-10-06 at 11.31.40 AM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-10-06%2FSO-08081%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-10-06T08-33-46-904Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-10-06/SO-08081/shipment-lr-builty/Shipment-LR-Builty-2026-10-06T08-33-46-904Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-10-06T08:33:48.458Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-05",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:33:48.458Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
