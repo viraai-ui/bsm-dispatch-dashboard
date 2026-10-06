@@ -48379,7 +48379,9 @@
     "1154219000038004012": {
       "salesOrderId": "1154219000038004012",
       "salesOrderNumber": "SO-08096",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-06T12:39:57.023Z",
       "processedOrder": {
         "id": "1154219000038004012",
         "zohoSalesOrderId": "1154219000038004012",
@@ -48409,8 +48411,8 @@
           {
             "id": "1154219000038004012-1154219000038004015-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271405",
+            "qrToken": "26271405",
             "orderId": "1154219000038004012",
             "lineItemId": "1154219000038004015",
             "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
@@ -48418,14 +48420,17 @@
             "customerName": "RK PLASTIC",
             "salesOrderNumber": "SO-08096",
             "deliveryDate": "2026-10-06",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-06",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-06T18:07:47+0530"
@@ -48439,7 +48444,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-06T12:38:52.520Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-06T12:38:54.502Z"
+          "zohoBackupQueuedAt": "2026-10-06T12:39:57.023Z",
+          "processedAt": "2026-10-06T12:39:57.023Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
