@@ -9608,6 +9608,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037627006": {
+      "id": "ship-1791276219260-9xu5m",
+      "itemId": "1154219000037627006",
+      "orderId": "1154219000037627006",
+      "machineId": "1154219000037627006-1154219000037627009-1",
+      "salesOrderNumber": "SO-08058",
+      "customerName": "Hype Impex",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Abhishek Freight Carrier",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-09-29 at 7.49.25 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-10-06%2FSO-08058%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-10-06T08-43-37-979Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-10-06/SO-08058/shipment-lr-builty/Shipment-LR-Builty-2026-10-06T08-43-37-979Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-10-06T08:43:39.260Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-29",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:43:39.260Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
