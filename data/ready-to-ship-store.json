@@ -9877,6 +9877,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037243118": {
+      "id": "ship-1791277865855-qe62j",
+      "itemId": "1154219000037243118",
+      "orderId": "1154219000037243118",
+      "machineId": "1154219000037243118-1154219000037243121-1",
+      "salesOrderNumber": "SO-08003",
+      "customerName": "MIRACLE EYE PRIVATE LIMITED",
+      "customerPhone": "",
+      "salespersonName": "Manisha Gautam",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-24",
+      "notes": "",
+      "shippedAt": "2026-10-06T09:11:05.855Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
