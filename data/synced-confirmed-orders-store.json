@@ -8133,6 +8133,96 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-06T12:29:13+0530"
+    },
+    "1154219000038007006": {
+      "id": "1154219000038007006",
+      "zohoSalesOrderId": "1154219000038007006",
+      "salesOrderNumber": "SO-08091",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-06",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038007009",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-06T15:35:15+0530"
+    },
+    "1154219000038008003": {
+      "id": "1154219000038008003",
+      "zohoSalesOrderId": "1154219000038008003",
+      "salesOrderNumber": "SO-08090",
+      "status": "open",
+      "customerName": "LOTUS DIAMOND TOOLS",
+      "shippingAddress": "Ground Floor, Survey No. 863, Ghuntu Lakhdhirpur Road, OPP. Arko Ceramic, Morbi,, Morbi, Gujarat, 363642",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038008006",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225211",
+          "rate": 50000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038008007",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Transportation Charge Up to 10km from BSM to Vtrans",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038008003-1154219000038008006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038008003",
+          "lineItemId": "1154219000038008006",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "LOTUS DIAMOND TOOLS",
+          "salesOrderNumber": "SO-08090",
+          "deliveryDate": "2026-10-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-06T15:14:45+0530"
     }
   },
   "orderIds": [
@@ -8219,10 +8309,12 @@
     "1154219000037917002",
     "1154219000037905012",
     "1154219000037948002",
-    "1154219000037998001"
+    "1154219000037998001",
+    "1154219000038007006",
+    "1154219000038008003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-06T09:20:34.694Z",
-  "lastAttemptAt": "2026-10-06T10:07:11.942Z",
+  "lastSuccessfulSyncAt": "2026-10-06T10:07:20.639Z",
+  "lastAttemptAt": "2026-10-06T10:07:20.639Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
