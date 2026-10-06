@@ -9815,6 +9815,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037415002": {
+      "id": "ship-1791277558608-bnsom",
+      "itemId": "1154219000037415002",
+      "orderId": "1154219000037415002",
+      "machineId": "1154219000037415002-1154219000037415005-1",
+      "salesOrderNumber": "SO-08034",
+      "customerName": "Asian Footwear Pvt.Ltd. ( 280)",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-09-25",
+      "notes": "",
+      "shippedAt": "2026-10-06T09:05:58.608Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
