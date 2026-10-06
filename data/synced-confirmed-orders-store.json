@@ -8463,6 +8463,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-06T18:07:47+0530"
+    },
+    "1154219000038006003": {
+      "id": "1154219000038006003",
+      "zohoSalesOrderId": "1154219000038006003",
+      "salesOrderNumber": "SO-08097",
+      "status": "open",
+      "customerName": "Rashmi Cap House",
+      "shippingAddress": "6560-61/15, Nabi Karim Near Hanuman Mandir, Pradhan Chowk Pahar Ganj, New Delhi, 110055, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038006006",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225871",
+          "rate": 32000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038006003-1154219000038006006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038006003",
+          "lineItemId": "1154219000038006006",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "Rashmi Cap House",
+          "salesOrderNumber": "SO-08097",
+          "deliveryDate": "2026-10-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-06T18:48:57+0530"
     }
   },
   "orderIds": [
@@ -8556,10 +8606,11 @@
     "1154219000037997009",
     "1154219000038000010",
     "1154219000038010003",
-    "1154219000038004012"
+    "1154219000038004012",
+    "1154219000038006003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-06T13:00:35.361Z",
-  "lastAttemptAt": "2026-10-06T13:20:27.487Z",
+  "lastSuccessfulSyncAt": "2026-10-06T13:20:36.780Z",
+  "lastAttemptAt": "2026-10-06T13:20:36.780Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
