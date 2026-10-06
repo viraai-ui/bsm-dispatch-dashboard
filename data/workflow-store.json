@@ -48291,13 +48291,13 @@
           "zohoBackupReplaceExisting": false
         }
       },
-      "dispatchSortOrder": 1
+      "dispatchSortOrder": 2
     },
     "1154219000037997009": {
       "salesOrderId": "1154219000037997009",
       "salesOrderNumber": "SO-08093",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-10-06T11:05:23.931Z",
       "processedOrder": {
         "id": "1154219000037997009",
@@ -48367,7 +48367,7 @@
           "vendor": "K S"
         }
       },
-      "dispatchSortOrder": 3
+      "dispatchSortOrder": 1
     }
   },
   "machineReallocation": {
