@@ -9415,6 +9415,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000037781012": {
+      "id": "ship-1791275765979-pg0on",
+      "itemId": "1154219000037781012",
+      "orderId": "1154219000037781012",
+      "machineId": "1154219000037781012-1154219000037781015-1",
+      "salesOrderNumber": "SO-08075",
+      "customerName": "REMATTER STUDIO",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-01",
+      "notes": "",
+      "shippedAt": "2026-10-06T08:36:05.979Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
