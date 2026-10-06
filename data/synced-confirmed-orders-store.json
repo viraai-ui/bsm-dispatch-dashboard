@@ -8223,6 +8223,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-06T15:14:45+0530"
+    },
+    "1154219000038025002": {
+      "id": "1154219000038025002",
+      "zohoSalesOrderId": "1154219000038025002",
+      "salesOrderNumber": "SO-08092",
+      "status": "open",
+      "customerName": "GARG INDUSTRIES",
+      "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-10-06",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038025005",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000006379136",
+          "rate": 43000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038025002-1154219000038025005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038025002",
+          "lineItemId": "1154219000038025005",
+          "itemName": "Strobel Sewing machine (With Rechard Set)",
+          "sku": "600R",
+          "customerName": "GARG INDUSTRIES",
+          "salesOrderNumber": "SO-08092",
+          "deliveryDate": "2026-10-06",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-06T16:10:32+0530"
     }
   },
   "orderIds": [
@@ -8311,10 +8361,11 @@
     "1154219000037948002",
     "1154219000037998001",
     "1154219000038007006",
-    "1154219000038008003"
+    "1154219000038008003",
+    "1154219000038025002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-06T10:20:37.298Z",
-  "lastAttemptAt": "2026-10-06T10:40:26.698Z",
+  "lastSuccessfulSyncAt": "2026-10-06T10:40:36.006Z",
+  "lastAttemptAt": "2026-10-06T10:40:36.006Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
