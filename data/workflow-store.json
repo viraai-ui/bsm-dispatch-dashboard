@@ -48044,7 +48044,9 @@
     "1154219000037998001": {
       "salesOrderId": "1154219000037998001",
       "salesOrderNumber": "SO-08089",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-06T07:26:07.507Z",
       "processedOrder": {
         "id": "1154219000037998001",
         "zohoSalesOrderId": "1154219000037998001",
@@ -48074,8 +48076,8 @@
           {
             "id": "1154219000037998001-1154219000037998004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271401",
+            "qrToken": "26271401",
             "orderId": "1154219000037998001",
             "lineItemId": "1154219000037998004",
             "itemName": "Manual Fusing Machine (15*15 inches)",
@@ -48083,14 +48085,17 @@
             "customerName": "SS Polymers",
             "salesOrderNumber": "SO-08089",
             "deliveryDate": "2026-10-06",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-06",
+            "vendor": "Ishu",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-10-06T11:48:46+0530"
@@ -48103,11 +48108,14 @@
           "qrToken": "26271401",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-06T07:16:50.883Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-06T07:16:51.171Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-06T07:26:07.507Z",
           "zohoBackupLastAttemptAt": "2026-10-06T07:17:43.129Z",
           "zohoBackupSyncedAt": "2026-10-06T07:17:43.129Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-06T07:26:07.507Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "Ishu"
         }
       }
     }
