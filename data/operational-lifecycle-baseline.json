@@ -378,6 +378,21 @@
         "email": "operations@bsmindia.com"
       },
       "sourceRevision": "1152d0ef46cbb5e177b4799240d679a5cacdb5e7"
+    },
+    "1154219000037346057": {
+      "orderId": "1154219000037346057",
+      "salesOrderNumber": "SO-08026",
+      "reason": "cancelled_from_dashboard",
+      "stageAtCutover": "open",
+      "tombstonedAt": "2026-10-06T09:04:32.260Z",
+      "cutoverVersion": "admin-cancel-v1",
+      "cutoverDate": "2026-10-06",
+      "actor": {
+        "id": "u-ops",
+        "name": "Operations",
+        "email": "operations@bsmindia.com"
+      },
+      "sourceRevision": "b34f894cb01c560f972e2680c3727ce56a8f2050"
     }
   }
 }
