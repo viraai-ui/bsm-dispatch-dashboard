@@ -48380,7 +48380,7 @@
       "salesOrderId": "1154219000038004012",
       "salesOrderNumber": "SO-08096",
       "status": "processed",
-      "dispatchPriority": "regular",
+      "dispatchPriority": "urgent",
       "processedAt": "2026-10-06T12:39:57.023Z",
       "processedOrder": {
         "id": "1154219000038004012",
@@ -48449,7 +48449,8 @@
           "dispatchNote": "Local",
           "vendor": "K S"
         }
-      }
+      },
+      "dispatchSortOrder": 1
     }
   },
   "machineReallocation": {
