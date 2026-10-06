@@ -1744,17 +1744,7 @@
       "paymentAmount": 224500,
       "paymentMode": "Bank Transfer",
       "addedBy": "Ram",
-      "attachments": [
-        {
-          "key": "payments/public/manual/d26ea667-3845-41de-8d31-bc032e04441b/2026-09-05/1788614737920-d20a2008-bbc5-412d-b9d7-54b4f240b55b-WhatsApp-Image-2026-09-05-at-6.53.29-PM.jpg",
-          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fd26ea667-3845-41de-8d31-bc032e04441b%2F2026-09-05%2F1788614737920-d20a2008-bbc5-412d-b9d7-54b4f240b55b-WhatsApp-Image-2026-09-05-at-6.53.29-PM.jpg",
-          "name": "WhatsApp Image 2026-09-05 at 6.53.29 PM.jpeg",
-          "contentType": "image/jpeg",
-          "size": 91580,
-          "uploadedAt": "2026-09-05T13:25:40.295Z",
-          "expiresAt": "2026-10-05T13:25:40.295Z"
-        }
-      ],
+      "attachments": [],
       "publicDeleteTokenHash": "5ce22da71ec5d121db54462e88b82546f1ee48ba82a23bd5e3c0b79eda053d61",
       "id": "payment-520e3c0c-f3c3-4cf5-aeee-53abd9f2a9d0",
       "status": "Payment Received",
@@ -1785,17 +1775,7 @@
       "paymentAmount": 26181,
       "paymentMode": "Bank Transfer",
       "addedBy": "Anuj",
-      "attachments": [
-        {
-          "key": "payments/public/SO-07895/2026-09-05/1788605524688-aa835a81-9990-4036-baaf-9b9377e514fa-be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
-          "url": "/api/r2/view?key=payments%2Fpublic%2FSO-07895%2F2026-09-05%2F1788605524688-aa835a81-9990-4036-baaf-9b9377e514fa-be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
-          "name": "be13d445-b941-4edb-a978-84ccb8d1325c.jpg",
-          "contentType": "image/jpeg",
-          "size": 182231,
-          "uploadedAt": "2026-09-05T10:52:06.870Z",
-          "expiresAt": "2026-10-05T10:52:06.870Z"
-        }
-      ],
+      "attachments": [],
       "publicDeleteTokenHash": "7c78ebe8945b4cbef14253969d66e4b0bdf28f90e936628d5d0eff648cf7e99a",
       "id": "payment-795f29dc-0f6d-45cc-b470-4359cccf88a4",
       "status": "Payment Received",
@@ -1809,17 +1789,7 @@
       "paymentAmount": 19200,
       "paymentMode": "UPI",
       "addedBy": "Ram",
-      "attachments": [
-        {
-          "key": "payments/public/manual/ef9c2e02-e958-400f-9e05-a1a9a6170460/2026-09-05/1788590855442-d0a3a29e-8b36-4dfb-b170-fd5195b0a4a9-WhatsApp-Image-2026-09-05-at-12.15.52-PM.jpg",
-          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Fef9c2e02-e958-400f-9e05-a1a9a6170460%2F2026-09-05%2F1788590855442-d0a3a29e-8b36-4dfb-b170-fd5195b0a4a9-WhatsApp-Image-2026-09-05-at-12.15.52-PM.jpg",
-          "name": "WhatsApp Image 2026-09-05 at 12.15.52 PM.jpeg",
-          "contentType": "image/jpeg",
-          "size": 69824,
-          "uploadedAt": "2026-09-05T06:47:37.308Z",
-          "expiresAt": "2026-10-05T06:47:37.308Z"
-        }
-      ],
+      "attachments": [],
       "publicDeleteTokenHash": "eeaffc878e439a24cf4e211c974fdfacc14529f1728f7db59b7c5cd8ceb221ff",
       "id": "payment-bc5fe697-3490-43cc-97ee-3b03bfb2b365",
       "status": "Payment Received",
@@ -1834,26 +1804,7 @@
       "paymentMode": "UPI",
       "addedBy": "Anuj",
       "remarks": "2000 + 360",
-      "attachments": [
-        {
-          "key": "payments/public/manual/fb5c6ee2-4845-4881-8a34-3c4d4dc91a35/2026-09-05/1788589965453-15318a39-b046-4535-b4e3-763edbf1ab14-c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
-          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Ffb5c6ee2-4845-4881-8a34-3c4d4dc91a35%2F2026-09-05%2F1788589965453-15318a39-b046-4535-b4e3-763edbf1ab14-c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
-          "name": "c013392b-9047-4754-b3fc-05ca4a8f3847.jpg",
-          "contentType": "image/jpeg",
-          "size": 83588,
-          "uploadedAt": "2026-09-05T06:32:50.133Z",
-          "expiresAt": "2026-10-05T06:32:50.133Z"
-        },
-        {
-          "key": "payments/public/manual/fb5c6ee2-4845-4881-8a34-3c4d4dc91a35/2026-09-05/1788589967661-bd54ff97-9ea4-488d-a1de-99cca514c54f-b7bd4e74-2164-4e59-ab9e-61eb4acfcaa0.jpg",
-          "url": "/api/r2/view?key=payments%2Fpublic%2Fmanual%2Ffb5c6ee2-4845-4881-8a34-3c4d4dc91a35%2F2026-09-05%2F1788589967661-bd54ff97-9ea4-488d-a1de-99cca514c54f-b7bd4e74-2164-4e59-ab9e-61eb4acfcaa0.jpg",
-          "name": "b7bd4e74-2164-4e59-ab9e-61eb4acfcaa0.jpg",
-          "contentType": "image/jpeg",
-          "size": 82619,
-          "uploadedAt": "2026-09-05T06:32:50.133Z",
-          "expiresAt": "2026-10-05T06:32:50.133Z"
-        }
-      ],
+      "attachments": [],
       "publicDeleteTokenHash": "069a11a03e39b2a4fdf1948453638e23cc4b4465cce71ffd5f9b40733a2afa1a",
       "id": "payment-789c7af3-a0e1-43c6-bac1-631d33743221",
       "status": "Payment Received",
