@@ -28252,6 +28252,66 @@
       "machineIds": [
         "1154219000037998001-1154219000037998004-1"
       ]
+    },
+    "1154219000038025002": {
+      "completedAt": "2026-10-06T11:44:34.960Z",
+      "order": {
+        "id": "1154219000038025002",
+        "zohoSalesOrderId": "1154219000038025002",
+        "salesOrderNumber": "SO-08092",
+        "status": "open",
+        "customerName": "GARG INDUSTRIES",
+        "shippingAddress": "PLOT NO-1016,KILLA NO-27//16/1, M.I.E PART-A FREE HOLD, Bahadurgarh, Jhajjar, Haryana, 124507, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-10-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038025005",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006379136",
+            "rate": 43000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038025002-1154219000038025005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271403",
+            "qrToken": "26271403",
+            "orderId": "1154219000038025002",
+            "lineItemId": "1154219000038025005",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "GARG INDUSTRIES",
+            "salesOrderNumber": "SO-08092",
+            "deliveryDate": "2026-10-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-06",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-06T16:10:46+0530",
+        "dispatchPriority": "urgent",
+        "dispatchSortOrder": 2
+      },
+      "machineIds": [
+        "1154219000038025002-1154219000038025005-1"
+      ]
     }
   }
 }
