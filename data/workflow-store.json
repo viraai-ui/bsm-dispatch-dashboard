@@ -48620,7 +48620,9 @@
     "1154219000038002046": {
       "salesOrderId": "1154219000038002046",
       "salesOrderNumber": "SO-08101",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-07T10:30:02.443Z",
       "processedOrder": {
         "id": "1154219000038002046",
         "zohoSalesOrderId": "1154219000038002046",
@@ -48650,8 +48652,8 @@
           {
             "id": "1154219000038002046-1154219000038002051-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271408",
+            "qrToken": "26271408",
             "orderId": "1154219000038002046",
             "lineItemId": "1154219000038002051",
             "itemName": "Foil Stamping machine",
@@ -48659,14 +48661,17 @@
             "customerName": "DUTTA INDUSTRIAL SEWING MACHINE CORPORATION",
             "salesOrderNumber": "SO-08101",
             "deliveryDate": "2026-10-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-07",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T15:12:02+0530"
@@ -48680,7 +48685,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T10:28:48.576Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-07T10:26:12.755Z"
+          "zohoBackupQueuedAt": "2026-10-07T10:30:02.443Z",
+          "processedAt": "2026-10-07T10:30:02.443Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
