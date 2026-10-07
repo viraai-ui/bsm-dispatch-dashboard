@@ -48684,11 +48684,14 @@
           "qrToken": "26271408",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T10:28:48.576Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-07T10:30:02.443Z",
           "processedAt": "2026-10-07T10:30:02.443Z",
           "dispatchNote": "Local",
-          "vendor": "Able"
+          "vendor": "Able",
+          "zohoBackupLastAttemptAt": "2026-10-07T10:30:47.642Z",
+          "zohoBackupSyncedAt": "2026-10-07T10:30:47.642Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
