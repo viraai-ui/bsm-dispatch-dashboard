@@ -28668,6 +28668,78 @@
       "machineIds": [
         "1154219000038005004-1154219000038005007-1"
       ]
+    },
+    "1154219000038008003": {
+      "completedAt": "2026-10-07T11:54:37.755Z",
+      "order": {
+        "id": "1154219000038008003",
+        "zohoSalesOrderId": "1154219000038008003",
+        "salesOrderNumber": "SO-08090",
+        "status": "open",
+        "customerName": "LOTUS DIAMOND TOOLS",
+        "shippingAddress": "Ground Floor, Survey No. 863, Ghuntu Lakhdhirpur Road, OPP. Arko Ceramic, Morbi,, Morbi, Gujarat, 363642",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-06",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038008006",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 50000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038008007",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Transportation Charge Up to 10km from BSM to Vtrans",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038008003-1154219000038008006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271402",
+            "qrToken": "26271402",
+            "orderId": "1154219000038008003",
+            "lineItemId": "1154219000038008006",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "LOTUS DIAMOND TOOLS",
+            "salesOrderNumber": "SO-08090",
+            "deliveryDate": "2026-10-06",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-06",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-06T15:14:45+0530",
+        "dispatchPriority": "regular",
+        "dispatchSortOrder": 1
+      },
+      "machineIds": [
+        "1154219000038008003-1154219000038008006-1"
+      ]
     }
   }
 }
