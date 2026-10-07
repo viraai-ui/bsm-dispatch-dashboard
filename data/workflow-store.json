@@ -48540,7 +48540,9 @@
     "1154219000038008018": {
       "salesOrderId": "1154219000038008018",
       "salesOrderNumber": "SO-08098",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-07T07:17:15.618Z",
       "processedOrder": {
         "id": "1154219000038008018",
         "zohoSalesOrderId": "1154219000038008018",
@@ -48570,8 +48572,8 @@
           {
             "id": "1154219000038008018-1154219000038008021-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271407",
+            "qrToken": "26271407",
             "orderId": "1154219000038008018",
             "lineItemId": "1154219000038008021",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -48579,14 +48581,17 @@
             "customerName": "Balaji Polymers (Z3)",
             "salesOrderNumber": "SO-08098",
             "deliveryDate": "2026-10-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-07",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T12:38:29+0530"
@@ -48599,11 +48604,14 @@
           "qrToken": "26271407",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T07:15:02.626Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-07T07:15:03.774Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-07T07:17:15.618Z",
           "zohoBackupLastAttemptAt": "2026-10-07T07:15:47.500Z",
           "zohoBackupSyncedAt": "2026-10-07T07:15:47.500Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-07T07:17:15.618Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
