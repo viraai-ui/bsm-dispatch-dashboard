@@ -48460,7 +48460,9 @@
     "1154219000038006003": {
       "salesOrderId": "1154219000038006003",
       "salesOrderNumber": "SO-08097",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-07T05:36:58.990Z",
       "processedOrder": {
         "id": "1154219000038006003",
         "zohoSalesOrderId": "1154219000038006003",
@@ -48490,8 +48492,8 @@
           {
             "id": "1154219000038006003-1154219000038006006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271406",
+            "qrToken": "26271406",
             "orderId": "1154219000038006003",
             "lineItemId": "1154219000038006006",
             "itemName": "Tape Cutting machine [Electronic]",
@@ -48499,14 +48501,17 @@
             "customerName": "Rashmi Cap House",
             "salesOrderNumber": "SO-08097",
             "deliveryDate": "2026-10-06",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-07",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-06T18:48:57+0530"
@@ -48520,7 +48525,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T05:33:15.646Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-07T05:33:15.562Z"
+          "zohoBackupQueuedAt": "2026-10-07T05:36:58.990Z",
+          "processedAt": "2026-10-07T05:36:58.990Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
