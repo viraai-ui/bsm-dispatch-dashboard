@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271407,
+  "serialCounter": 26271408,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -48614,6 +48614,70 @@
           "vendor": "K S",
           "sheetVendor": "K S",
           "dispatchedAt": "2026-10-07T10:12:50.908Z"
+        }
+      }
+    },
+    "1154219000038002046": {
+      "salesOrderId": "1154219000038002046",
+      "salesOrderNumber": "SO-08101",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038002046",
+        "zohoSalesOrderId": "1154219000038002046",
+        "salesOrderNumber": "SO-08101",
+        "status": "open",
+        "customerName": "DUTTA INDUSTRIAL SEWING MACHINE CORPORATION",
+        "shippingAddress": "Shop No. 1635-A, Shop No. 1, Gali No. 14, Govind Puri,, Kalka Ji, South Delhi, DELHI, 110019, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038002051",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226295",
+            "rate": 32000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038002046-1154219000038002051-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038002046",
+            "lineItemId": "1154219000038002051",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "DUTTA INDUSTRIAL SEWING MACHINE CORPORATION",
+            "salesOrderNumber": "SO-08101",
+            "deliveryDate": "2026-10-07",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-07T15:12:02+0530"
+      },
+      "machines": {
+        "1154219000038002046-1154219000038002051-1": {
+          "machineUnitId": "1154219000038002046-1154219000038002051-1",
+          "lineItemId": "1154219000038002051",
+          "serialNumber": "26271408",
+          "qrToken": "26271408",
+          "qrStatus": "pending"
         }
       }
     }
