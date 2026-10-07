@@ -48781,7 +48781,9 @@
     "1154219000038008037": {
       "salesOrderId": "1154219000038008037",
       "salesOrderNumber": "SO-08108",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-07T12:32:49.665Z",
       "processedOrder": {
         "id": "1154219000038008037",
         "zohoSalesOrderId": "1154219000038008037",
@@ -48811,8 +48813,8 @@
           {
             "id": "1154219000038008037-1154219000038008040-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271410",
+            "qrToken": "26271410",
             "orderId": "1154219000038008037",
             "lineItemId": "1154219000038008040",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -48820,20 +48822,23 @@
             "customerName": "SHREE DURGA UPPER",
             "salesOrderNumber": "SO-08108",
             "deliveryDate": "2026-10-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-07",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038008037-1154219000038008040-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271411",
+            "qrToken": "26271411",
             "orderId": "1154219000038008037",
             "lineItemId": "1154219000038008040",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -48841,14 +48846,17 @@
             "customerName": "SHREE DURGA UPPER",
             "salesOrderNumber": "SO-08108",
             "deliveryDate": "2026-10-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-07",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T17:58:34+0530"
@@ -48861,11 +48869,14 @@
           "qrToken": "26271410",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T12:30:37.910Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-07T12:30:38.498Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-07T12:32:49.665Z",
           "zohoBackupLastAttemptAt": "2026-10-07T12:30:45.338Z",
           "zohoBackupSyncedAt": "2026-10-07T12:30:45.338Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-07T12:32:49.665Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000038008037-1154219000038008040-2": {
           "machineUnitId": "1154219000038008037-1154219000038008040-2",
@@ -48874,11 +48885,14 @@
           "qrToken": "26271411",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T12:30:37.910Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-07T12:30:38.498Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-07T12:32:49.665Z",
           "zohoBackupLastAttemptAt": "2026-10-07T12:30:45.338Z",
           "zohoBackupSyncedAt": "2026-10-07T12:30:45.338Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-07T12:32:49.665Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
