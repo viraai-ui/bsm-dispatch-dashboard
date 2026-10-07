@@ -8618,7 +8618,119 @@
         }
       ],
       "machines": [],
-      "zohoLastModifiedTime": "2026-10-07T14:22:53+0530"
+      "zohoLastModifiedTime": "2026-10-07T15:12:02+0530"
+    },
+    "1154219000038000744": {
+      "id": "1154219000038000744",
+      "zohoSalesOrderId": "1154219000038000744",
+      "salesOrderNumber": "SO-08102",
+      "status": "open",
+      "customerName": "Jeevika Enterprises",
+      "shippingAddress": "Yashwant Nagar Bhag No.1,Shell Colony Road ,Near Savitribai Phule High Schoole ,Chembur, Mumbai, Maharashtra, 400071, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-10-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038000747",
+          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+          "sku": "103",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225043",
+          "rate": 23000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038000748",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038000744-1154219000038000747-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038000744",
+          "lineItemId": "1154219000038000747",
+          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+          "sku": "103",
+          "customerName": "Jeevika Enterprises",
+          "salesOrderNumber": "SO-08102",
+          "deliveryDate": "2026-10-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-07T15:46:02+0530"
+    },
+    "1154219000038002046": {
+      "id": "1154219000038002046",
+      "zohoSalesOrderId": "1154219000038002046",
+      "salesOrderNumber": "SO-08101",
+      "status": "open",
+      "customerName": "DUTTA INDUSTRIAL SEWING MACHINE CORPORATION",
+      "shippingAddress": "Shop No. 1635-A, Shop No. 1, Gali No. 14, Govind Puri,, Kalka Ji, South Delhi, DELHI, 110019, India",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038002051",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226295",
+          "rate": 32000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038002046-1154219000038002051-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038002046",
+          "lineItemId": "1154219000038002051",
+          "itemName": "Foil Stamping machine",
+          "sku": "90-5",
+          "customerName": "DUTTA INDUSTRIAL SEWING MACHINE CORPORATION",
+          "salesOrderNumber": "SO-08101",
+          "deliveryDate": "2026-10-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-07T15:12:02+0530"
     }
   },
   "orderIds": [
@@ -8716,10 +8828,12 @@
     "1154219000038006003",
     "1154219000038008018",
     "1154219000038007020",
-    "1154219000038019013"
+    "1154219000038019013",
+    "1154219000038000744",
+    "1154219000038002046"
   ],
-  "lastSuccessfulSyncAt": "2026-10-07T09:20:34.480Z",
-  "lastAttemptAt": "2026-10-07T10:20:26.430Z",
+  "lastSuccessfulSyncAt": "2026-10-07T10:20:39.044Z",
+  "lastAttemptAt": "2026-10-07T10:20:39.044Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
