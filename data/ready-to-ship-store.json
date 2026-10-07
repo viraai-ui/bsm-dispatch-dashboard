@@ -10067,6 +10067,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038005004": {
+      "id": "ship-1791374167779-mchsc",
+      "itemId": "1154219000038005004",
+      "orderId": "1154219000038005004",
+      "machineId": "1154219000038005004-1154219000038005007-1",
+      "salesOrderNumber": "SO-08105",
+      "customerName": "Radhika Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL01RAA4762",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-07",
+      "notes": "",
+      "shippedAt": "2026-10-07T11:56:07.779Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
