@@ -89,8 +89,10 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
       }
       setProgressByUnit((prev) => ({ ...prev, [unitId]: 100 }))
       setMessage('Video uploaded successfully.')
-    } catch (err) { setMessage(err instanceof Error ? err.message : 'Upload failed') }
-    finally { setBusy('') }
+    } catch (err) {
+      setProgressByUnit((prev) => ({ ...prev, [unitId]: 0 }))
+      setMessage(err instanceof Error ? `${err.message} You can retry; Submit will unlock after a successful upload.` : 'Upload failed. Please retry.')
+    } finally { setBusy('') }
   }
 
   async function deleteVideo(unitId: string, videoId: string) {
@@ -131,7 +133,7 @@ function MediaModal({ order, record, apiPath, title, mode, onClose, onChanged, o
     finally { setBusy('') }
   }
 
-  return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card media-mobile-modal"><div className="modal-head media-modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{mode === 'loading' ? order.customerName : title}</p>{mode === 'packing' && <p className="media-salesperson-line">Salesperson: <strong>{order.salesperson || '—'}</strong></p>}</div><button className="drawer-close" onClick={onClose}>×</button></div><div className="media-modal-body">{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}{mode === 'loading' ? <LoadingVideoPanel order={order} videos={loadingVideos} busy={busy} progress={progressByUnit[LOADING_ORDER_UNIT_ID] || 0} onUpload={(files) => upload(LOADING_ORDER_UNIT_ID, files)} onDelete={(videoId) => deleteVideo(LOADING_ORDER_UNIT_ID, videoId)} /> : <PackingVideoPanel order={order} record={record} busy={busy} progressByUnit={progressByUnit} onUpload={upload} onDelete={deleteVideo} />}</div><section className="modal-actions media-submit-bar"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>Skip</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit'}</button></section></section></div>
+  return <div className="modal-backdrop media-modal-backdrop" role="dialog" aria-modal="true"><section className="order-modal card media-mobile-modal"><div className="modal-head media-modal-head"><div><h1>{order.salesOrderNumber}</h1><p className="muted">{mode === 'loading' ? order.customerName : title}</p>{mode === 'packing' && <p className="media-salesperson-line">Salesperson: <strong>{order.salesperson || '—'}</strong></p>}</div><button className="drawer-close" disabled={Boolean(busy)} aria-label={busy ? 'Upload in progress' : 'Close'} onClick={onClose}>×</button></div><div className="media-modal-body">{message && <div className={message.includes('success') ? 'form-success' : 'form-error'}>{message}</div>}{mode === 'loading' ? <LoadingVideoPanel order={order} videos={loadingVideos} busy={busy} progress={progressByUnit[LOADING_ORDER_UNIT_ID] || 0} onUpload={(files) => upload(LOADING_ORDER_UNIT_ID, files)} onDelete={(videoId) => deleteVideo(LOADING_ORDER_UNIT_ID, videoId)} /> : <PackingVideoPanel order={order} record={record} busy={busy} progressByUnit={progressByUnit} onUpload={upload} onDelete={deleteVideo} />}</div><section className="modal-actions media-submit-bar"><button className="btn light" disabled={Boolean(busy) || Boolean(record?.submittedAt)} onClick={proceedWithoutVideo}>Skip</button><button className="btn red" disabled={!ready || Boolean(busy) || Boolean(record?.submittedAt)} onClick={submit}>{record?.submittedAt ? 'Submitted' : busy === 'submit' ? 'Submitting…' : 'Submit'}</button></section></section></div>
 }
 
 function LoadingVideoPanel({ order, videos, busy, progress, onUpload, onDelete }: { order: Order; videos: MediaUpload[]; busy: string; progress: number; onUpload: (files: FileList | File[] | null) => void; onDelete: (videoId: string) => void }) {
@@ -158,15 +160,8 @@ function VideoUploadChoices({ disabled, onUpload, galleryMultiple = false }: { d
 function Previews({ files, onDelete, busy }: { files: MediaUpload[]; onDelete?: (videoId: string) => void; busy?: string }) { return <div className="preview-strip media-preview-strip">{files.length ? files.map((file, index) => <span key={file.id} className="media-preview-chip"><a href={file.workdriveUrl || file.url} target="_blank">Video {index + 1}</a>{file.expiresAt && <small className="muted">expires {new Date(file.expiresAt).toLocaleDateString('en-IN')}</small>}{onDelete && <button type="button" className="media-delete-video" disabled={busy === `delete-${file.id}`} onClick={() => onDelete(file.id)} aria-label={`Delete Video ${index + 1}`}>×</button>}</span>) : <em>No videos yet</em>}</div> }
 
 async function uploadVideoFile(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
-  try {
-    return await uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)
-  } catch (error) {
-    // Vercel request bodies are capped well below normal mobile video sizes.
-    // Never turn an actionable direct-R2 error into a second opaque NetworkError.
-    if (file.size > 4 * 1024 * 1024) throw error
-    onProgress(3)
-    return uploadViaServer(order, unitId, file, mode, onProgress)
-  }
+  // Never proxy video bodies through Vercel: direct phone-to-R2 is the only path.
+  return uploadDirectToR2(order, unitId, file, apiPath, mode, onProgress)
 }
 
 function normalizeCameraVideoFile(file: File, salesOrderNumber: string, unitId: string, index: number) {
@@ -187,30 +182,35 @@ function extensionForVideoType(type: string) {
 
 async function uploadDirectToR2(order: Order, unitId: string, file: File, apiPath: string, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
   const contentType = file.type || 'video/mp4'
-  const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId: unitId, name: file.name, type: contentType, size: file.size, stage: mode }) })
-  const targetJson = await parseJsonResponse(targetResponse, 'R2 upload target unavailable')
-  if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'R2 upload target unavailable')
-  const target = targetJson.data
-  if (target.corsReady === false) throw new Error(target.corsError || 'Cloudflare R2 bucket CORS is not configured for dispatch.bsmindia.com. Please add the R2 CORS policy and try again.')
-  await uploadBlobToR2(target.uploadUrl, file, contentType, onProgress)
-  const registered = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId: unitId, name: file.name, type: contentType, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt }) })
-  const json = await parseJsonResponse(registered, 'Could not register R2 video')
-  if (!registered.ok || !json.ok) throw new Error(json.error || 'Could not register R2 video')
-  return json
-}
-
-async function uploadViaServer(order: Order, unitId: string, file: File, mode: MediaMode, onProgress: (percent: number) => void): Promise<any> {
-  const form = new FormData()
-  form.append('orderId', order.id)
-  form.append('machineId', unitId)
-  form.append('stage', mode)
-  form.append('file', file, file.name || 'gallery-video.mp4')
-  onProgress(5)
-  const response = await fetch('/api/media-proof/upload', { method: 'POST', body: form })
-  onProgress(response.ok ? 100 : 5)
-  const json = await parseJsonResponse(response, 'Fallback video upload failed')
-  if (!response.ok || !json.ok) throw new Error(json.error || 'Fallback video upload failed')
-  return json
+  let target: any
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const targetResponse = await fetch('/api/r2/upload-target', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ orderId: order.id, machineId: unitId, name: file.name, type: contentType, size: file.size, stage: mode }) })
+      const targetJson = await parseJsonResponse(targetResponse, 'R2 upload target unavailable')
+      if (!targetResponse.ok || !targetJson.ok) throw new Error(targetJson.error || 'R2 upload target unavailable')
+      target = targetJson.data
+      if (target.corsReady === false) throw new Error(target.corsError || 'Cloudflare R2 bucket CORS is not configured for dispatch.bsmindia.com.')
+      await uploadBlobToR2(target.uploadUrl, file, contentType, onProgress)
+      break
+    } catch (error) {
+      if (attempt === 3) throw error
+      onProgress(1)
+      await wait(750 * attempt)
+    }
+  }
+  const registrationBody = JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId: unitId, name: file.name, type: contentType, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt })
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const registered = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: registrationBody })
+      const json = await parseJsonResponse(registered, 'Could not register R2 video')
+      if (!registered.ok || !json.ok) throw new Error(json.error || 'Could not register R2 video')
+      return json
+    } catch (error) {
+      if (attempt === 3) throw error
+      await wait(500 * attempt)
+    }
+  }
+  throw new Error('Could not register R2 video')
 }
 
 async function parseJsonResponse(response: Response, fallback: string): Promise<any> {
@@ -221,13 +221,19 @@ async function parseJsonResponse(response: Response, fallback: string): Promise<
 function uploadBlobToR2(uploadUrl: string, file: File, contentType: string, onProgress: (percent: number) => void): Promise<void> {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
-    const timeout = window.setTimeout(() => { xhr.abort(); reject(new Error('Upload is taking too long or got stuck. Please check internet and try again, or upload a shorter video.')) }, 600000)
+    let settled = false
+    let timeout = 0
+    const finish = (error?: Error) => { if (settled) return; settled = true; window.clearTimeout(timeout); error ? reject(error) : resolve() }
+    const refreshInactivityTimeout = () => { window.clearTimeout(timeout); timeout = window.setTimeout(() => { xhr.abort(); finish(new Error('Upload stalled for 90 seconds.')) }, 90_000) }
     xhr.open('PUT', uploadUrl)
     xhr.setRequestHeader('content-type', contentType)
-    xhr.upload.onprogress = (event) => { if (event.lengthComputable) onProgress(Math.max(1, Math.min(95, Math.round((event.loaded / event.total) * 100)))) }
-    xhr.onload = () => { window.clearTimeout(timeout); if (xhr.status >= 200 && xhr.status < 300) { onProgress(100); resolve() } else reject(new Error(`Cloudflare R2 upload failed: HTTP ${xhr.status}. Please try again.`)) }
-    xhr.onerror = () => { window.clearTimeout(timeout); reject(new Error('Upload failed due to network connection. Please try again on stronger internet.')) }
-    xhr.onabort = () => { window.clearTimeout(timeout); reject(new Error('Upload was cancelled or timed out. Please retry.')) }
+    xhr.upload.onprogress = (event) => { refreshInactivityTimeout(); if (event.lengthComputable) onProgress(Math.max(1, Math.min(95, Math.round((event.loaded / event.total) * 100)))) }
+    xhr.onload = () => { if (xhr.status >= 200 && xhr.status < 300) { onProgress(100); finish() } else finish(new Error(`Cloudflare R2 upload failed: HTTP ${xhr.status}.`)) }
+    xhr.onerror = () => finish(new Error('Upload failed due to network connection.'))
+    xhr.onabort = () => finish(new Error('Upload was cancelled or timed out.'))
+    refreshInactivityTimeout()
     xhr.send(file)
   })
 }
+
+function wait(ms: number) { return new Promise((resolve) => window.setTimeout(resolve, ms)) }

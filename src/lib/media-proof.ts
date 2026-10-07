@@ -228,6 +228,8 @@ async function registerStoredVideo(order: Order, machineId: string, upload: { na
   const store = await readMediaProofStore(stage)
   const current = store.records[order.id] || { orderId: order.id, salesOrderNumber: order.salesOrderNumber, submittedAt: null, units: {} }
   const unit = current.units[machineId] || { photos: [], videos: [] }
+  // A retry after a lost registration response must not create duplicate media.
+  if (upload.provider === 'r2' && unit.videos.some((video) => video.r2Key === upload.key)) return current
   if (stage === 'loading' && machineId === LOADING_ORDER_UNIT_ID && unit.videos.length >= MAX_LOADING_VIDEOS) throw new Error(`Loading Video allows up to ${MAX_LOADING_VIDEOS} videos`)
   const uploadedAt = new Date().toISOString()
   const file: MediaUpload = {

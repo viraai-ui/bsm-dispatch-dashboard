@@ -68,3 +68,12 @@ test('both packing and loading use the guarded direct-R2 path and audit monitors
   assert.match(audit, /ensureR2BrowserCors/)
   assert.doesNotMatch(audit, /R2_BUCKET_NAME/)
 })
+
+test('mobile video never falls back through Vercel and retries stalled direct uploads', () => {
+  assert.doesNotMatch(client, /uploadViaServer/)
+  assert.doesNotMatch(client, /api\/media-proof\/upload/)
+  assert.match(client, /attempt <= 3/)
+  assert.match(client, /refreshInactivityTimeout/)
+  assert.match(client, /90_000/)
+  assert.match(client, /Submit will unlock after a successful upload/)
+})
