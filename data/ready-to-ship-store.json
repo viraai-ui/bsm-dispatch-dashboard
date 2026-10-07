@@ -9974,6 +9974,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038004012": {
+      "id": "ship-1791353026008-yltwq",
+      "itemId": "1154219000038004012",
+      "orderId": "1154219000038004012",
+      "machineId": "1154219000038004012-1154219000038004015-1",
+      "salesOrderNumber": "SO-08096",
+      "customerName": "RK PLASTIC",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-06",
+      "notes": "",
+      "shippedAt": "2026-10-07T06:03:46.008Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
