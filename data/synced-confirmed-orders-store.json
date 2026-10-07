@@ -8513,6 +8513,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-07T10:53:28+0530"
+    },
+    "1154219000038008018": {
+      "id": "1154219000038008018",
+      "zohoSalesOrderId": "1154219000038008018",
+      "salesOrderNumber": "SO-08098",
+      "status": "open",
+      "customerName": "Balaji Polymers (Z3)",
+      "shippingAddress": "Plot No. 2731, Ground Floor, DSIIDC Blk-I, Narela, Delhi, 110040, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-07",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038008021",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225211",
+          "rate": 48000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038008018-1154219000038008021-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038008018",
+          "lineItemId": "1154219000038008021",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "Balaji Polymers (Z3)",
+          "salesOrderNumber": "SO-08098",
+          "deliveryDate": "2026-10-07",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-07T12:38:29+0530"
     }
   },
   "orderIds": [
@@ -8607,10 +8657,11 @@
     "1154219000038000010",
     "1154219000038010003",
     "1154219000038004012",
-    "1154219000038006003"
+    "1154219000038006003",
+    "1154219000038008018"
   ],
-  "lastSuccessfulSyncAt": "2026-10-07T07:00:34.120Z",
-  "lastAttemptAt": "2026-10-07T07:14:18.423Z",
+  "lastSuccessfulSyncAt": "2026-10-07T07:14:27.624Z",
+  "lastAttemptAt": "2026-10-07T07:14:27.624Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
