@@ -10098,6 +10098,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038008003": {
+      "id": "ship-1791378217511-6b0dk",
+      "itemId": "1154219000038008003",
+      "orderId": "1154219000038008003",
+      "machineId": "1154219000038008003-1154219000038008006-1",
+      "salesOrderNumber": "SO-08090",
+      "customerName": "LOTUS DIAMOND TOOLS",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "V Trans",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-07",
+      "notes": "",
+      "shippedAt": "2026-10-07T13:03:37.511Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
