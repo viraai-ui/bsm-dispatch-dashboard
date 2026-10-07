@@ -48861,8 +48861,11 @@
           "qrToken": "26271410",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T12:30:37.910Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-07T12:30:38.498Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-10-07T12:30:38.498Z",
+          "zohoBackupLastAttemptAt": "2026-10-07T12:30:45.338Z",
+          "zohoBackupSyncedAt": "2026-10-07T12:30:45.338Z",
+          "zohoBackupReplaceExisting": false
         },
         "1154219000038008037-1154219000038008040-2": {
           "machineUnitId": "1154219000038008037-1154219000038008040-2",
@@ -48871,8 +48874,11 @@
           "qrToken": "26271411",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T12:30:37.910Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-07T12:30:38.498Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-10-07T12:30:38.498Z",
+          "zohoBackupLastAttemptAt": "2026-10-07T12:30:45.338Z",
+          "zohoBackupSyncedAt": "2026-10-07T12:30:45.338Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
