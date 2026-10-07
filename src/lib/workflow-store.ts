@@ -6,7 +6,7 @@ import { preserveSheetSuppliers, applySheetSuppliers } from './serial-sheet-supp
 
 const SHA_CONFLICT_PATTERNS = [/\bsha\b/i, /\b409\b/, /does not match/i, /\bis at [0-9a-f]{7,64} but expected [0-9a-f]{7,64}\b/i]
 const GITHUB_READ_COOLDOWN_MS = 2 * 60 * 1000
-const GITHUB_READ_CACHE_MS = 15 * 1000
+const GITHUB_READ_CACHE_MS = 60 * 1000
 let githubReadUnavailableUntil = 0
 const githubReadFlights = new Map<string, Promise<{ data: unknown; sha?: string }>>()
 const githubReadCache = new Map<string, { value: { data: unknown; sha?: string }; expiresAt: number }>()
@@ -168,20 +168,26 @@ export async function githubReadJson<T>(path: string, fallback: T): Promise<{ da
   if (!flight) {
     flight = (async (): Promise<{ data: unknown; sha?: string }> => {
       try {
-        const data = await githubRequest(`/contents/${path}`)
-        let content = data.content || ''
-        if (!content && data.git_url) {
-          const blobResponse = await fetch(data.git_url, {
-            signal: AbortSignal.timeout(15_000),
-            headers: { Authorization: `Bearer ${ghConfig().token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
-            cache: 'no-store',
-          })
-          const blob = await blobResponse.json().catch(() => ({}))
-          if (!blobResponse.ok) throw new Error(blob.message || 'Workflow database blob request failed')
-          content = blob.content || ''
+        // Keep dashboard polling off the authenticated REST quota. Previously every
+        // serverless instance called /contents for every store, exhausting the shared
+        // token and starving the sync writer. The raw endpoint is CDN-backed and does
+        // not consume GitHub API quota. Mutations still perform authoritative SHA CAS.
+        const { owner, repo } = ghConfig()
+        const branch = process.env.GITHUB_BRANCH || 'main'
+        const safePath = path.split('/').map(encodeURIComponent).join('/')
+        const rawUrl = `https://raw.githubusercontent.com/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${encodeURIComponent(branch)}/${safePath}`
+        const response = await fetch(rawUrl, {
+          signal: AbortSignal.timeout(15_000),
+          cache: 'force-cache',
+          next: { revalidate: 60 },
+        } as RequestInit & { next: { revalidate: number } })
+        if (!response.ok) {
+          const detail = await response.text().catch(() => '')
+          const error = new Error(response.status === 404 ? 'Not Found' : detail || `Snapshot read failed (${response.status})`) as Error & { rateLimited?: boolean }
+          error.rateLimited = response.status === 429
+          throw error
         }
-        const json = Buffer.from(content, 'base64').toString('utf8')
-        const value = { data: JSON.parse(json || JSON.stringify(fallback)), sha: data.sha }
+        const value = { data: JSON.parse(await response.text()) }
         githubReadCache.set(path, { value, expiresAt: Date.now() + GITHUB_READ_CACHE_MS })
         return value
       } catch (error) {

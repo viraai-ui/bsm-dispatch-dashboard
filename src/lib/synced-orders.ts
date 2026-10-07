@@ -27,6 +27,14 @@ const orderSyncs = new Map<string, Promise<unknown>>()
 
 const fallbackStore: SyncedOrdersStore = { orders: {}, orderIds: [], lastSuccessfulSyncAt: null }
 
+export function safeOrderSyncError(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error || '')
+  if (/rate limit|api request limit|too many requests|quota|github|workflow database/i.test(message)) {
+    return 'The saved-order service is temporarily unavailable. No data was changed; please retry shortly.'
+  }
+  return message || 'Confirmed sales order sync failed'
+}
+
 export async function readSyncedOrdersStore() {
   const { data } = await githubReadJson<SyncedOrdersStore>(SYNCED_ORDERS_PATH, fallbackStore)
   const store = normalizeStore(data)
@@ -202,9 +210,11 @@ async function performSync() {
     await writeSyncedOrdersStore(next, 'Complete confirmed sales order sync')
     return next
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Confirmed sales order sync failed'
+    const message = safeOrderSyncError(error)
     const safe = { ...previous, syncing: false, lastAttemptAt: new Date().toISOString(), lastError: message }
-    await writeSyncedOrdersStore(safe, 'Confirmed sales order sync failed')
+    // The original failure may be the durable provider itself. Do not mask the
+    // sanitized result (or hammer exhausted quota) with a second failed write.
+    try { await writeSyncedOrdersStore(safe, 'Confirmed sales order sync failed') } catch { /* preserve last known good snapshot */ }
     throw new Error(message)
   }
 }

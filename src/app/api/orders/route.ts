@@ -1,6 +1,6 @@
 import { apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
-import { listOrdersModuleOrders, readSyncedOrdersStore, syncConfirmedOrders } from '@/lib/synced-orders'
+import { listOrdersModuleOrders, readSyncedOrdersStore, safeOrderSyncError, syncConfirmedOrders } from '@/lib/synced-orders'
 import { buildOrderStatusMap } from '@/lib/status-projection'
 
 
@@ -10,7 +10,7 @@ export async function GET() {
   const store = await readSyncedOrdersStore()
   const orders = await listOrdersModuleOrders()
   const { stages, statuses } = await buildOrderStatusMap(orders)
-  return apiOk({ source: 'local_confirmed_sales_orders', orders, stages, orderStatuses: statuses, lastSuccessfulSyncAt: store.lastSuccessfulSyncAt, lastError: store.lastError || null, syncing: Boolean(store.syncing) })
+  return apiOk({ source: 'local_confirmed_sales_orders', orders, stages, orderStatuses: statuses, lastSuccessfulSyncAt: store.lastSuccessfulSyncAt, lastError: store.lastError ? safeOrderSyncError(store.lastError) : null, syncing: Boolean(store.syncing) })
 }
 
 export async function POST() {
@@ -25,6 +25,6 @@ export async function POST() {
     const store = await readSyncedOrdersStore()
     const orders = await listOrdersModuleOrders()
     const { stages, statuses } = await buildOrderStatusMap(orders)
-    return Response.json({ ok: false, error: error instanceof Error ? `${error.message}. Showing last successfully synchronized data.` : 'Confirmed order sync failed. Showing last successfully synchronized data.', data: { orders, stages, orderStatuses: statuses, lastSuccessfulSyncAt: store.lastSuccessfulSyncAt } }, { status: 502 })
+    return Response.json({ ok: false, error: `${safeOrderSyncError(error)} Showing last successfully synchronized data.`, data: { orders, stages, orderStatuses: statuses, lastSuccessfulSyncAt: store.lastSuccessfulSyncAt } }, { status: 502 })
   }
 }

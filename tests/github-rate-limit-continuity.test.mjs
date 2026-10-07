@@ -16,10 +16,11 @@ const realFetch = globalThis.fetch
 try {
   await test('concurrent reads share one GitHub request and return isolated copies', async () => {
     let requests = 0
-    globalThis.fetch = async () => {
+    globalThis.fetch = async (url) => {
       requests++
+      assert.match(String(url), /^https:\/\/raw\.githubusercontent\.com\//)
       await new Promise(resolve => setTimeout(resolve, 10))
-      return Response.json({ sha: 'abc', content: Buffer.from(JSON.stringify({ orders: ['remote'] })).toString('base64') })
+      return Response.json({ orders: ['remote'] })
     }
     const [left, right] = await Promise.all([
       store.githubReadJson('data/orders.json', { orders: [] }),
@@ -32,11 +33,11 @@ try {
     assert.equal(requests, 1)
   })
 
-  await test('GitHub 403 rate limit serves the bundled snapshot and opens the circuit', async () => {
+  await test('snapshot-provider failure serves the bundled snapshot and opens the circuit', async () => {
     let requests = 0
     globalThis.fetch = async () => {
       requests++
-      return Response.json({ message: 'API rate limit exceeded' }, { status: 403, headers: { 'x-ratelimit-remaining': '0' } })
+      return new Response('upstream unavailable', { status: 429 })
     }
     const limited = await store.githubReadJson('data/limited.json', { missing: true })
     assert.deepEqual(limited.data, { missing: true })
