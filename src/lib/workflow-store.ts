@@ -178,9 +178,11 @@ export async function githubReadJson<T>(path: string, fallback: T): Promise<{ da
         const rawUrl = `https://raw.githubusercontent.com/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${encodeURIComponent(branch)}/${safePath}`
         const response = await fetch(rawUrl, {
           signal: AbortSignal.timeout(15_000),
-          cache: 'force-cache',
-          next: { revalidate: 60 },
-        } as RequestInit & { next: { revalidate: number } })
+          // Some operational snapshots exceed Next's 2 MB data-cache ceiling.
+          // The provider still supplies CDN caching; our bounded in-process cache and
+          // single-flight map protect each warm runtime without noisy cache failures.
+          cache: 'no-store',
+        })
         if (!response.ok) {
           const detail = await response.text().catch(() => '')
           const error = new Error(response.status === 404 ? 'Not Found' : detail || `Snapshot read failed (${response.status})`) as Error & { rateLimited?: boolean }
