@@ -48699,7 +48699,9 @@
     "1154219000038005004": {
       "salesOrderId": "1154219000038005004",
       "salesOrderNumber": "SO-08105",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-07T11:33:11.395Z",
       "processedOrder": {
         "id": "1154219000038005004",
         "zohoSalesOrderId": "1154219000038005004",
@@ -48729,8 +48731,8 @@
           {
             "id": "1154219000038005004-1154219000038005007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271409",
+            "qrToken": "26271409",
             "orderId": "1154219000038005004",
             "lineItemId": "1154219000038005007",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -48738,14 +48740,17 @@
             "customerName": "Radhika Enterprises",
             "salesOrderNumber": "SO-08105",
             "deliveryDate": "2026-10-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-07",
+            "vendor": "Ishu",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T16:28:33+0530"
@@ -48759,7 +48764,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-07T11:31:52.710Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-07T11:31:53.997Z"
+          "zohoBackupQueuedAt": "2026-10-07T11:33:11.395Z",
+          "processedAt": "2026-10-07T11:33:11.395Z",
+          "dispatchNote": "Local",
+          "vendor": "Ishu"
         }
       }
     }
