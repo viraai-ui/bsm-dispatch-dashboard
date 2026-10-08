@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271411,
+  "serialCounter": 26271412,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -48897,6 +48897,70 @@
           "vendor": "Able",
           "sheetVendor": "Able",
           "dispatchedAt": "2026-10-07T13:01:39.065Z"
+        }
+      }
+    },
+    "1154219000038017004": {
+      "salesOrderId": "1154219000038017004",
+      "salesOrderNumber": "SO-08111",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038017004",
+        "zohoSalesOrderId": "1154219000038017004",
+        "salesOrderNumber": "SO-08111",
+        "status": "open",
+        "customerName": "All Solutions",
+        "shippingAddress": "B/14/h/8 Asgar Mistry Lane Kolkata, Kolkata, West Bengal, 700046, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-10-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038017007",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000227284",
+            "rate": 16500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038017004-1154219000038017007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038017004",
+            "lineItemId": "1154219000038017007",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "All Solutions",
+            "salesOrderNumber": "SO-08111",
+            "deliveryDate": "2026-10-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-07T18:49:44+0530"
+      },
+      "machines": {
+        "1154219000038017004-1154219000038017007-1": {
+          "machineUnitId": "1154219000038017004-1154219000038017007-1",
+          "lineItemId": "1154219000038017007",
+          "serialNumber": "26271412",
+          "qrToken": "26271412",
+          "qrStatus": "pending"
         }
       }
     }
