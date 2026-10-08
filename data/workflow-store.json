@@ -49193,7 +49193,9 @@
     "1154219000038078002": {
       "salesOrderId": "1154219000038078002",
       "salesOrderNumber": "SO-08112",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-08T07:38:30.032Z",
       "processedOrder": {
         "id": "1154219000038078002",
         "zohoSalesOrderId": "1154219000038078002",
@@ -49223,8 +49225,8 @@
           {
             "id": "1154219000038078002-1154219000038078005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271416",
+            "qrToken": "26271416",
             "orderId": "1154219000038078002",
             "lineItemId": "1154219000038078005",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -49232,14 +49234,17 @@
             "customerName": "KC ARTS",
             "salesOrderNumber": "SO-08112",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-08T10:32:45+0530"
@@ -49253,7 +49258,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T07:37:06.268Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T07:37:06.501Z"
+          "zohoBackupQueuedAt": "2026-10-08T07:38:30.032Z",
+          "processedAt": "2026-10-08T07:38:30.032Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
