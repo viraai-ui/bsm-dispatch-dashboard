@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271414,
+  "serialCounter": 26271415,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -49096,6 +49096,82 @@
           "zohoBackupSyncedAt": "2026-10-08T05:45:52.153Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000038000744": {
+      "salesOrderId": "1154219000038000744",
+      "salesOrderNumber": "SO-08102",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038000744",
+        "zohoSalesOrderId": "1154219000038000744",
+        "salesOrderNumber": "SO-08102",
+        "status": "open",
+        "customerName": "Jeevika Enterprises",
+        "shippingAddress": "Yashwant Nagar Bhag No.1,Shell Colony Road ,Near Savitribai Phule High Schoole ,Chembur, Mumbai, Maharashtra, 400071, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-10-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038000747",
+            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+            "sku": "103",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225043",
+            "rate": 23000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038000748",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038000744-1154219000038000747-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038000744",
+            "lineItemId": "1154219000038000747",
+            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+            "sku": "103",
+            "customerName": "Jeevika Enterprises",
+            "salesOrderNumber": "SO-08102",
+            "deliveryDate": "2026-10-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-07T15:54:09+0530"
+      },
+      "machines": {
+        "1154219000038000744-1154219000038000747-1": {
+          "machineUnitId": "1154219000038000744-1154219000038000747-1",
+          "lineItemId": "1154219000038000747",
+          "serialNumber": "26271415",
+          "qrToken": "26271415",
+          "qrStatus": "pending"
         }
       }
     }
