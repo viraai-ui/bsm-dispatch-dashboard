@@ -29024,6 +29024,65 @@
       "machineIds": [
         "1154219000038084002-1154219000038084005-1"
       ]
+    },
+    "1154219000038078002": {
+      "completedAt": "2026-10-08T12:42:42.906Z",
+      "order": {
+        "id": "1154219000038078002",
+        "zohoSalesOrderId": "1154219000038078002",
+        "salesOrderNumber": "SO-08112",
+        "status": "open",
+        "customerName": "KC ARTS",
+        "shippingAddress": "GALI NO C, C-24, KUMAWAT COLONY, KHATIPURA ROAD, JHOTWARA,, Jaipur,, Rajasthan, 302012, India",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-10-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038078005",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 48000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038078002-1154219000038078005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271416",
+            "qrToken": "26271416",
+            "orderId": "1154219000038078002",
+            "lineItemId": "1154219000038078005",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "KC ARTS",
+            "salesOrderNumber": "SO-08112",
+            "deliveryDate": "2026-10-08",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-08T10:32:45+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038078002-1154219000038078005-1"
+      ]
     }
   }
 }
