@@ -49274,7 +49274,9 @@
     "1154219000038084002": {
       "salesOrderId": "1154219000038084002",
       "salesOrderNumber": "SO-08113",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-08T09:58:08.293Z",
       "processedOrder": {
         "id": "1154219000038084002",
         "zohoSalesOrderId": "1154219000038084002",
@@ -49304,8 +49306,8 @@
           {
             "id": "1154219000038084002-1154219000038084005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271417",
+            "qrToken": "26271417",
             "orderId": "1154219000038084002",
             "lineItemId": "1154219000038084005",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -49313,14 +49315,17 @@
             "customerName": "SHREE DURGA UPPER",
             "salesOrderNumber": "SO-08113",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-08T14:48:49+0530"
@@ -49334,7 +49339,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T09:49:48.471Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T09:49:48.934Z"
+          "zohoBackupQueuedAt": "2026-10-08T09:58:08.293Z",
+          "processedAt": "2026-10-08T09:58:08.293Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
