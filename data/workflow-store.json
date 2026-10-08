@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271412,
+  "serialCounter": 26271414,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -48975,6 +48975,98 @@
           "zohoBackupLastAttemptAt": "2026-10-08T05:30:46.555Z",
           "zohoBackupSyncedAt": "2026-10-08T05:30:46.555Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000038046435": {
+      "salesOrderId": "1154219000038046435",
+      "salesOrderNumber": "SO-08109",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038046435",
+        "zohoSalesOrderId": "1154219000038046435",
+        "salesOrderNumber": "SO-08109",
+        "status": "open",
+        "customerName": "NITCO SEWING MACHINE COMPANY",
+        "shippingAddress": "GF, D-8, YAMUNA VIHAR ROAD, NORTH GHONDA, DELHI, North East Delhi, Delhi, 110053, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-10-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038046438",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226864",
+            "rate": 32500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038046435-1154219000038046438-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038046435",
+            "lineItemId": "1154219000038046438",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "NITCO SEWING MACHINE COMPANY",
+            "salesOrderNumber": "SO-08109",
+            "deliveryDate": "2026-10-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038046435-1154219000038046438-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038046435",
+            "lineItemId": "1154219000038046438",
+            "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
+            "sku": "335",
+            "customerName": "NITCO SEWING MACHINE COMPANY",
+            "salesOrderNumber": "SO-08109",
+            "deliveryDate": "2026-10-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-07T18:16:04+0530"
+      },
+      "machines": {
+        "1154219000038046435-1154219000038046438-1": {
+          "machineUnitId": "1154219000038046435-1154219000038046438-1",
+          "lineItemId": "1154219000038046438",
+          "serialNumber": "26271413",
+          "qrToken": "26271413",
+          "qrStatus": "pending"
+        },
+        "1154219000038046435-1154219000038046438-2": {
+          "machineUnitId": "1154219000038046435-1154219000038046438-2",
+          "lineItemId": "1154219000038046438",
+          "serialNumber": "26271414",
+          "qrToken": "26271414",
+          "qrStatus": "pending"
         }
       }
     }
