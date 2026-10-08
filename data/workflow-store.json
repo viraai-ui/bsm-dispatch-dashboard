@@ -48981,7 +48981,9 @@
     "1154219000038046435": {
       "salesOrderId": "1154219000038046435",
       "salesOrderNumber": "SO-08109",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-08T05:33:08.421Z",
       "processedOrder": {
         "id": "1154219000038046435",
         "zohoSalesOrderId": "1154219000038046435",
@@ -49011,8 +49013,8 @@
           {
             "id": "1154219000038046435-1154219000038046438-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271413",
+            "qrToken": "26271413",
             "orderId": "1154219000038046435",
             "lineItemId": "1154219000038046438",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -49020,20 +49022,23 @@
             "customerName": "NITCO SEWING MACHINE COMPANY",
             "salesOrderNumber": "SO-08109",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038046435-1154219000038046438-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271414",
+            "qrToken": "26271414",
             "orderId": "1154219000038046435",
             "lineItemId": "1154219000038046438",
             "itemName": "Tape Binding, Single Needle (Cylinder Bed)",
@@ -49041,14 +49046,17 @@
             "customerName": "NITCO SEWING MACHINE COMPANY",
             "salesOrderNumber": "SO-08109",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T18:16:04+0530"
@@ -49062,7 +49070,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T05:31:23.926Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T05:31:26.573Z"
+          "zohoBackupQueuedAt": "2026-10-08T05:33:08.421Z",
+          "processedAt": "2026-10-08T05:33:08.421Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038046435-1154219000038046438-2": {
           "machineUnitId": "1154219000038046435-1154219000038046438-2",
@@ -49072,7 +49083,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T05:31:23.926Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T05:31:26.573Z"
+          "zohoBackupQueuedAt": "2026-10-08T05:33:08.421Z",
+          "processedAt": "2026-10-08T05:33:08.421Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
