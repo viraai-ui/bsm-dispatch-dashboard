@@ -48903,7 +48903,9 @@
     "1154219000038017004": {
       "salesOrderId": "1154219000038017004",
       "salesOrderNumber": "SO-08111",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-08T05:21:10.719Z",
       "processedOrder": {
         "id": "1154219000038017004",
         "zohoSalesOrderId": "1154219000038017004",
@@ -48933,8 +48935,8 @@
           {
             "id": "1154219000038017004-1154219000038017007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271412",
+            "qrToken": "26271412",
             "orderId": "1154219000038017004",
             "lineItemId": "1154219000038017007",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -48942,14 +48944,17 @@
             "customerName": "All Solutions",
             "salesOrderNumber": "SO-08111",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "Shree Sai",
+            "dispatchNote": "wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T18:49:44+0530"
@@ -48963,7 +48968,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T05:17:49.207Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T05:17:51.839Z"
+          "zohoBackupQueuedAt": "2026-10-08T05:21:10.719Z",
+          "processedAt": "2026-10-08T05:21:10.719Z",
+          "dispatchNote": "wooden",
+          "vendor": "Shree Sai"
         }
       }
     }
