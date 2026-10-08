@@ -49354,7 +49354,9 @@
     "1154219000037905012": {
       "salesOrderId": "1154219000037905012",
       "salesOrderNumber": "SO-08087",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-08T11:32:55.898Z",
       "processedOrder": {
         "id": "1154219000037905012",
         "zohoSalesOrderId": "1154219000037905012",
@@ -49384,8 +49386,8 @@
           {
             "id": "1154219000037905012-1154219000037905015-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271418",
+            "qrToken": "26271418",
             "orderId": "1154219000037905012",
             "lineItemId": "1154219000037905015",
             "itemName": "Automatic Pipe Cutting Machine",
@@ -49393,14 +49395,17 @@
             "customerName": "AGNI KAWACH EXTINGUISHER CO",
             "salesOrderNumber": "SO-08087",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-05T16:33:59+0530"
@@ -49414,7 +49419,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T11:31:48.765Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T11:31:49.756Z"
+          "zohoBackupQueuedAt": "2026-10-08T11:32:55.898Z",
+          "processedAt": "2026-10-08T11:32:55.898Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
