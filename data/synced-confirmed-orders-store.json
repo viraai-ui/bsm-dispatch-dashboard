@@ -9267,6 +9267,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-08T10:32:45+0530"
+    },
+    "1154219000038084002": {
+      "id": "1154219000038084002",
+      "zohoSalesOrderId": "1154219000038084002",
+      "salesOrderNumber": "SO-08113",
+      "status": "open",
+      "customerName": "SHREE DURGA UPPER",
+      "shippingAddress": "FIRST FLOOR, KH NO 51/7, VILLAGE, MUNDKA, Delhi, 110041, India",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-10-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038084005",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000280682",
+          "rate": 30000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038084002-1154219000038084005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038084002",
+          "lineItemId": "1154219000038084005",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "SHREE DURGA UPPER",
+          "salesOrderNumber": "SO-08113",
+          "deliveryDate": "2026-10-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-08T14:02:49+0530"
     }
   },
   "orderIds": [
@@ -9375,10 +9425,11 @@
     "1154219000038046435",
     "1154219000038017004",
     "1154219000038046471",
-    "1154219000038078002"
+    "1154219000038078002",
+    "1154219000038084002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-08T07:40:32.376Z",
-  "lastAttemptAt": "2026-10-08T08:40:26.709Z",
+  "lastSuccessfulSyncAt": "2026-10-08T08:40:33.899Z",
+  "lastAttemptAt": "2026-10-08T08:40:33.899Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
