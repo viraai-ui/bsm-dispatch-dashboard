@@ -49102,7 +49102,9 @@
     "1154219000038000744": {
       "salesOrderId": "1154219000038000744",
       "salesOrderNumber": "SO-08102",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-08T06:28:57.193Z",
       "processedOrder": {
         "id": "1154219000038000744",
         "zohoSalesOrderId": "1154219000038000744",
@@ -49144,8 +49146,8 @@
           {
             "id": "1154219000038000744-1154219000038000747-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271415",
+            "qrToken": "26271415",
             "orderId": "1154219000038000744",
             "lineItemId": "1154219000038000747",
             "itemName": "Latex Glue Applicator (roller type) (10 inch)",
@@ -49153,14 +49155,17 @@
             "customerName": "Jeevika Enterprises",
             "salesOrderNumber": "SO-08102",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-08",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-10-07T15:54:09+0530"
@@ -49174,7 +49179,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-08T06:27:52.581Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-08T06:27:52.776Z"
+          "zohoBackupQueuedAt": "2026-10-08T06:28:57.193Z",
+          "processedAt": "2026-10-08T06:28:57.193Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         }
       }
     }
