@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271417,
+  "serialCounter": 26271418,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -49348,6 +49348,70 @@
           "zohoBackupSyncedAt": "2026-10-08T10:00:46.696Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000037905012": {
+      "salesOrderId": "1154219000037905012",
+      "salesOrderNumber": "SO-08087",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000037905012",
+        "zohoSalesOrderId": "1154219000037905012",
+        "salesOrderNumber": "SO-08087",
+        "status": "open",
+        "customerName": "AGNI KAWACH EXTINGUISHER CO",
+        "shippingAddress": "2nd Floor, SHOP NO 224, ELDORA BUILDING, Unnamed Road, Golden City Centre, Chikalthana, Aurangabad, Chhatrapati Sambhaji Nagar, Maharashtra, 431210, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-10-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000037905015",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006912047",
+            "rate": 100000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000037905012-1154219000037905015-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000037905012",
+            "lineItemId": "1154219000037905015",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "customerName": "AGNI KAWACH EXTINGUISHER CO",
+            "salesOrderNumber": "SO-08087",
+            "deliveryDate": "2026-10-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-05T16:33:59+0530"
+      },
+      "machines": {
+        "1154219000037905012-1154219000037905015-1": {
+          "machineUnitId": "1154219000037905012-1154219000037905015-1",
+          "lineItemId": "1154219000037905015",
+          "serialNumber": "26271418",
+          "qrToken": "26271418",
+          "qrStatus": "pending"
         }
       }
     }
