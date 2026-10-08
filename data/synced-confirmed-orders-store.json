@@ -9345,6 +9345,56 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-08T15:40:19+0530"
+    },
+    "1154219000038109015": {
+      "id": "1154219000038109015",
+      "zohoSalesOrderId": "1154219000038109015",
+      "salesOrderNumber": "SO-08115",
+      "status": "open",
+      "customerName": "Mata Restaurant and Event Organiser",
+      "shippingAddress": "160/72, Arhat Bazar, Opposite Uttarakhand Gramin Bank, Dehradun, Uttarakhand, 248001",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-10-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038109018",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000009427388",
+          "rate": 58000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038109015-1154219000038109018-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038109015",
+          "lineItemId": "1154219000038109018",
+          "itemName": "Shoe repairing machine (5%)",
+          "sku": "2971 (5%)",
+          "customerName": "Mata Restaurant and Event Organiser",
+          "salesOrderNumber": "SO-08115",
+          "deliveryDate": "2026-10-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-08T19:27:56+0530"
     }
   },
   "orderIds": [
@@ -9455,10 +9505,11 @@
     "1154219000038046471",
     "1154219000038078002",
     "1154219000038084002",
-    "1154219000038109001"
+    "1154219000038109001",
+    "1154219000038109015"
   ],
-  "lastSuccessfulSyncAt": "2026-10-08T13:40:31.914Z",
-  "lastAttemptAt": "2026-10-08T14:00:26.993Z",
+  "lastSuccessfulSyncAt": "2026-10-08T14:00:34.805Z",
+  "lastAttemptAt": "2026-10-08T14:00:34.805Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
