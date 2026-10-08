@@ -10153,6 +10153,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038008037": {
+      "id": "ship-1791460618451-bgf93",
+      "itemId": "1154219000038008037",
+      "orderId": "1154219000038008037",
+      "machineId": "1154219000038008037-1154219000038008040-1",
+      "salesOrderNumber": "SO-08108",
+      "customerName": "SHREE DURGA UPPER",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-07",
+      "notes": "",
+      "shippedAt": "2026-10-08T11:56:58.451Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
