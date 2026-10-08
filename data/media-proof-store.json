@@ -3205,9 +3205,27 @@
     "1154219000038017004": {
       "orderId": "1154219000038017004",
       "salesOrderNumber": "SO-08111",
-      "submittedAt": null,
-      "units": {},
-      "videoNotRequired": false
+      "submittedAt": "2026-10-08T06:25:06.880Z",
+      "units": {
+        "1154219000038017004-1154219000038017007-1": {
+          "photos": [],
+          "videos": [
+            {
+              "id": "1154219000038017004-1154219000038017007-1-video-1791440247306-5akoq6",
+              "name": "VID_20261008_114620.mp4",
+              "type": "video/mp4",
+              "kind": "video",
+              "url": "/api/r2/view?key=media-proof%2Fpacking%2F2026-10-08%2FSO-08111%2F1154219000038017004-1154219000038017007-1%2FThread-Burner-Indian-Heavy-Duty-2026-10-08T06-16-25-044Z.mp4",
+              "workdriveFileId": null,
+              "workdriveUrl": null,
+              "r2Key": "media-proof/packing/2026-10-08/SO-08111/1154219000038017004-1154219000038017007-1/Thread-Burner-Indian-Heavy-Duty-2026-10-08T06-16-25-044Z.mp4",
+              "storageProvider": "r2",
+              "uploadedAt": "2026-10-08T06:17:27.306Z",
+              "expiresAt": "2026-10-29T06:17:27.306Z"
+            }
+          ]
+        }
+      }
     }
   }
 }
