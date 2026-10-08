@@ -9317,6 +9317,34 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-08T14:48:49+0530"
+    },
+    "1154219000038109001": {
+      "id": "1154219000038109001",
+      "zohoSalesOrderId": "1154219000038109001",
+      "salesOrderNumber": "SO-08114",
+      "status": "open",
+      "customerName": "United Products",
+      "shippingAddress": "Khasra No. 71/22/1/2,2-12, MIE Part-B, Bahaduragarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-08",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038109004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 75,
+          "pendingQuantity": 75,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 340,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-08T15:40:19+0530"
     }
   },
   "orderIds": [
@@ -9426,10 +9454,11 @@
     "1154219000038017004",
     "1154219000038046471",
     "1154219000038078002",
-    "1154219000038084002"
+    "1154219000038084002",
+    "1154219000038109001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-08T10:00:33.594Z",
-  "lastAttemptAt": "2026-10-08T10:20:26.443Z",
+  "lastSuccessfulSyncAt": "2026-10-08T10:20:33.351Z",
+  "lastAttemptAt": "2026-10-08T10:20:33.351Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
