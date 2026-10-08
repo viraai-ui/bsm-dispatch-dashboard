@@ -2,6 +2,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { buildR2Key, createR2UploadTarget, ensureR2BrowserCors } from '@/lib/r2'
 import { getMediaOrder } from '@/lib/media-order-resolver'
+import { issueMediaRegistrationCapability } from '@/lib/media-registration-capability'
 
 export const runtime = 'nodejs'
 
@@ -31,7 +32,8 @@ export async function POST(request: Request) {
     const target = createR2UploadTarget(key, type, 900, shipmentDocument ? 30 : 21)
     const cors = await ensureR2BrowserCors(target.uploadUrl)
     if (!cors.corsReady) return apiError(cors.corsError, 503)
-    return apiOk({ ...target, ...cors })
+    const registrationToken = shipmentDocument ? undefined : issueMediaRegistrationCapability({ stage, orderId: order.id, machineId, r2Key: key, order })
+    return apiOk({ ...target, ...cors, registrationToken })
   } catch (error) {
     return apiError(error instanceof Error ? error.message : 'Could not create R2 upload target', 400)
   }

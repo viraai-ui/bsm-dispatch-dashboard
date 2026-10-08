@@ -198,7 +198,7 @@ async function uploadDirectToR2(order: Order, unitId: string, file: File, apiPat
       await wait(750 * attempt)
     }
   }
-  const registrationBody = JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId: unitId, name: file.name, type: contentType, r2Key: target.key, url: target.publicUrl, expiresAt: target.expiresAt })
+  const registrationBody = JSON.stringify({ action: 'register_r2_video', orderId: order.id, machineId: unitId, name: file.name, type: contentType, r2Key: target.key, registrationToken: target.registrationToken })
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const registered = await fetch(apiPath, { method: 'POST', headers: { 'content-type': 'application/json' }, body: registrationBody })

@@ -1,12 +1,13 @@
 import type { Order } from '@/types/domain'
 import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { uploadBufferToGithubMedia } from './github-media'
-import { githubReadJson, githubStoreConfigured, githubWriteJson, listProcessedOrders } from './workflow-store'
+import { githubReadJson, listProcessedOrders } from './workflow-store'
 import { uploadBufferToWorkDrive, uploadVideoToWorkDrive } from './workdrive'
 import { cleanupExpiredMediaProofStore, mediaExpiresAt } from './media-retention'
 import { isMachineLineItem } from './item-classification'
 import { buildR2Key, deleteR2Object, R2_VIDEO_MAX_BYTES, r2Configured, uploadBufferToR2, verifyR2Object } from './r2'
 import { isLocallyTerminal } from './operational-orders'
+import { mediaProofDatabaseConfigured, readMediaProofDatabase, replaceMediaProofDatabase, writeMediaProofRecord } from './media-proof-database'
 
 export type MediaStage = 'packing' | 'loading'
 export const LOADING_ORDER_UNIT_ID = 'loading-order'
@@ -47,16 +48,13 @@ function mediaPath(stage: MediaStage = 'packing') { return MEDIA_PATHS[stage] }
 function stageLabel(stage: MediaStage) { return stage === 'loading' ? 'loading video' : 'packing video' }
 
 export async function readMediaProofStore(stage: MediaStage = 'packing') {
-  const path = mediaPath(stage)
-  const { data } = await githubReadJson<MediaProofStore>(path, { records: {} })
-  return { records: data.records || {} }
+  return readMediaProofDatabase(stage)
 }
 
 export async function cleanupExpiredMediaProofs(stage: MediaStage = 'packing') {
-  const path = mediaPath(stage)
-  const { data } = await githubReadJson<MediaProofStore>(path, { records: {} })
+  const data = await readMediaProofStore(stage)
   const cleaned = await cleanupExpiredMediaProofStore({ records: data.records || {} })
-  if (cleaned.changed) await githubWriteJson(path, cleaned.store, `Cleanup expired ${stageLabel(stage)} files`)
+  if (cleaned.changed) await replaceMediaProofDatabase(stage, cleaned.store)
   return cleaned.result
 }
 
@@ -96,8 +94,8 @@ export async function listMediaProofOrders(stage: MediaStage = 'packing') {
   }
   // Local/read-only deployments still use bundled stores. Keep page reads usable
   // there; these opportunistic maintenance writes require a configured remote.
-  if (packingChanged && githubStoreConfigured()) await githubWriteJson(mediaPath('packing'), packingStore, 'Auto-close packing video-not-required orders')
-  if (loadingChanged && githubStoreConfigured()) await githubWriteJson(mediaPath('loading'), loadingStore, 'Auto-close loading video-not-required orders')
+  if (packingChanged && mediaProofDatabaseConfigured()) await replaceMediaProofDatabase('packing', packingStore)
+  if (loadingChanged && mediaProofDatabaseConfigured()) await replaceMediaProofDatabase('loading', loadingStore)
 
   const orders = sourceOrders
     .map((order) => ({ ...order, machines: videoRequiredMachines(order) }))
@@ -147,7 +145,7 @@ export async function saveMediaUpload(order: Order, machineId: string, kind: 'ph
   const key = kind === 'photo' ? 'photos' : 'videos'
   current.units[machineId] = { ...unit, [key]: [...unit[key], file] }
   store.records[order.id] = current
-  await githubWriteJson(path, store, `Save ${stageLabel(stage)} proof for ${order.salesOrderNumber}`)
+  await writeMediaProofRecord(stage, current)
   return current
 }
 
@@ -189,7 +187,7 @@ export async function saveMediaUploadBuffer(order: Order, machineId: string, upl
   }
   current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current
-  await githubWriteJson(path, store, `Save ${stageLabel(stage)} proof for ${order.salesOrderNumber}`)
+  await writeMediaProofRecord(stage, current)
   return current
 }
 
@@ -219,7 +217,7 @@ export async function deleteMediaVideo(order: Order, machineId: string, videoId:
   record.submittedAt = null
   record.videoNotRequired = false
   store.records[order.id] = record
-  await githubWriteJson(path, store, `Delete ${stageLabel(stage)} video for ${order.salesOrderNumber}`)
+  await writeMediaProofRecord(stage, record)
   return record
 }
 
@@ -247,7 +245,7 @@ async function registerStoredVideo(order: Order, machineId: string, upload: { na
   }
   current.units[machineId] = { ...unit, videos: [...unit.videos, file] }
   store.records[order.id] = current
-  await githubWriteJson(path, store, `Save ${stageLabel(stage)} proof for ${order.salesOrderNumber}`)
+  await writeMediaProofRecord(stage, current)
   return current
 }
 
@@ -274,7 +272,7 @@ export async function submitMediaProof(order: Order, stage: MediaStage = 'packin
   }
   record.submittedAt = new Date().toISOString()
   store.records[order.id] = record
-  await githubWriteJson(path, store, `Submit ${stageLabel(stage)} proof for ${record.salesOrderNumber}`)
+  await writeMediaProofRecord(stage, record)
   return record
 }
 
@@ -285,7 +283,7 @@ export async function proceedWithoutVideo(order: Order, stage: MediaStage = 'pac
   current.submittedAt = new Date().toISOString()
   current.videoNotRequired = true
   store.records[order.id] = current
-  await githubWriteJson(path, store, `Proceed without ${stageLabel(stage)} for ${order.salesOrderNumber}`)
+  await writeMediaProofRecord(stage, current)
   return current
 }
 

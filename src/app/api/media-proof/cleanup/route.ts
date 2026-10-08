@@ -3,7 +3,7 @@ import { apiError, apiOk } from '@/lib/api'
 import { requireUser } from '@/lib/auth'
 import { isAuthorizedCron } from '@/lib/cron-auth'
 import { readMediaProofStore } from '@/lib/media-proof'
-import { githubWriteJson } from '@/lib/workflow-store'
+import { replaceMediaProofDatabase } from '@/lib/media-proof-database'
 import { deleteR2Object } from '@/lib/r2'
 import { cleanMediaStore, cleanPayments, cleanShipmentStore, VIDEO_RETENTION_DAYS, type DeleteMemo } from '@/lib/attachment-retention'
 import { readShipmentStore, writeShipmentStore } from '@/lib/ready-to-ship'
@@ -44,10 +44,8 @@ export async function GET(request: NextRequest) {
     const loading = await cleanMediaStore(loadingSource, remove, { days: requestedVideoDays, memo })
     const shipments = await cleanShipmentStore(shipmentSource, remove, { memo })
     const payments = await cleanPayments(paymentSource, remove, { memo })
-    // Serialize GitHub-backed writes: concurrent commits race the branch ref and
-    // can report failure after the R2 objects were already removed.
-    if (packing.result.removed || packing.result.metadataUpdated) await githubWriteJson('data/media-proof-store.json', packing.store, 'Apply 21-day packing video retention')
-    if (loading.result.removed || loading.result.metadataUpdated) await githubWriteJson('data/loading-video-store.json', loading.store, 'Apply 21-day loading video retention')
+    if (packing.result.removed || packing.result.metadataUpdated) await replaceMediaProofDatabase('packing', packing.store)
+    if (loading.result.removed || loading.result.metadataUpdated) await replaceMediaProofDatabase('loading', loading.store)
     if (shipments.result.removed) await writeShipmentStore(shipments.store, 'Apply LR/builty retention')
     if (payments.result.removed) await updatePaymentStore(() => payments.payments)
     const after = await reconcileR2Retention(registered)
