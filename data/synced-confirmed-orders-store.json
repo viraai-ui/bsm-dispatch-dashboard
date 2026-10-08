@@ -9217,6 +9217,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-07T18:31:04+0530"
+    },
+    "1154219000038078002": {
+      "id": "1154219000038078002",
+      "zohoSalesOrderId": "1154219000038078002",
+      "salesOrderNumber": "SO-08112",
+      "status": "open",
+      "customerName": "KC ARTS",
+      "shippingAddress": "GALI NO C, C-24, KUMAWAT COLONY, KHATIPURA ROAD, JHOTWARA,, Jaipur,, Rajasthan, 302012, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-08",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038078005",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225211",
+          "rate": 48000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038078002-1154219000038078005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038078002",
+          "lineItemId": "1154219000038078005",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "KC ARTS",
+          "salesOrderNumber": "SO-08112",
+          "deliveryDate": "2026-10-08",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-08T09:49:14+0530"
     }
   },
   "orderIds": [
@@ -9324,10 +9374,11 @@
     "1154219000038008037",
     "1154219000038046435",
     "1154219000038017004",
-    "1154219000038046471"
+    "1154219000038046471",
+    "1154219000038078002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-08T04:00:31.839Z",
-  "lastAttemptAt": "2026-10-08T04:20:26.660Z",
+  "lastSuccessfulSyncAt": "2026-10-08T04:20:33.478Z",
+  "lastAttemptAt": "2026-10-08T04:20:33.478Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
