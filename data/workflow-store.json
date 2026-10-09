@@ -49605,7 +49605,9 @@
     "1154219000038123005": {
       "salesOrderId": "1154219000038123005",
       "salesOrderNumber": "SO-08118",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-09T10:46:02.086Z",
       "processedOrder": {
         "id": "1154219000038123005",
         "zohoSalesOrderId": "1154219000038123005",
@@ -49635,8 +49637,8 @@
           {
             "id": "1154219000038123005-1154219000038123008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271421",
+            "qrToken": "26271421",
             "orderId": "1154219000038123005",
             "lineItemId": "1154219000038123008",
             "itemName": "Tape Cutting machine [Electronic]",
@@ -49644,14 +49646,17 @@
             "customerName": "Primestep Footwear",
             "salesOrderNumber": "SO-08118",
             "deliveryDate": "2026-10-09",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-09",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-09T16:08:36+0530"
@@ -49664,11 +49669,14 @@
           "qrToken": "26271421",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-09T10:44:30.291Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-09T10:44:30.924Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-09T10:46:02.086Z",
           "zohoBackupLastAttemptAt": "2026-10-09T10:45:45.553Z",
           "zohoBackupSyncedAt": "2026-10-09T10:45:45.553Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-09T10:46:02.086Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
