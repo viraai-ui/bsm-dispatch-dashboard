@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271418,
+  "serialCounter": 26271419,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -49429,6 +49429,70 @@
           "zohoBackupSyncedAt": "2026-10-08T11:45:46.135Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "Able"
+        }
+      }
+    },
+    "1154219000038109015": {
+      "salesOrderId": "1154219000038109015",
+      "salesOrderNumber": "SO-08115",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038109015",
+        "zohoSalesOrderId": "1154219000038109015",
+        "salesOrderNumber": "SO-08115",
+        "status": "open",
+        "customerName": "Mata Restaurant and Event Organiser",
+        "shippingAddress": "160/72, Arhat Bazar, Opposite Uttarakhand Gramin Bank, Dehradun, Uttarakhand, 248001",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-08",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038109018",
+            "itemName": "Shoe repairing machine (5%)",
+            "sku": "2971 (5%)",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000009427388",
+            "rate": 58000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038109015-1154219000038109018-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038109015",
+            "lineItemId": "1154219000038109018",
+            "itemName": "Shoe repairing machine (5%)",
+            "sku": "2971 (5%)",
+            "customerName": "Mata Restaurant and Event Organiser",
+            "salesOrderNumber": "SO-08115",
+            "deliveryDate": "2026-10-08",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-09T10:13:32+0530"
+      },
+      "machines": {
+        "1154219000038109015-1154219000038109018-1": {
+          "machineUnitId": "1154219000038109015-1154219000038109018-1",
+          "lineItemId": "1154219000038109018",
+          "serialNumber": "26271419",
+          "qrToken": "26271419",
+          "qrStatus": "pending"
         }
       }
     }
