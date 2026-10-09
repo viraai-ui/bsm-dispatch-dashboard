@@ -29083,6 +29083,77 @@
       "machineIds": [
         "1154219000038078002-1154219000038078005-1"
       ]
+    },
+    "1154219000038000010": {
+      "completedAt": "2026-10-09T10:46:36.308Z",
+      "order": {
+        "id": "1154219000038000010",
+        "zohoSalesOrderId": "1154219000038000010",
+        "salesOrderNumber": "SO-08095",
+        "status": "open",
+        "customerName": "INDIAHIKES PRIVATE LIMITED",
+        "shippingAddress": "Khasra No.148 CHA, Mohabbewala Industrial Area, Titan Road, Near Titan Factory,Chandramani Khalsa, Pargana Central Doon, Dehradun, Dehradun, Uttarakhand, 248002, India",
+        "salesperson": "Manisha Gautam",
+        "deliveryDate": "2026-10-07",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038000013",
+            "itemName": "Shoe repairing machine (5%)",
+            "sku": "2971 (5%)",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000009427388",
+            "rate": 60000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038000014",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038000010-1154219000038000013-1",
+            "unitNumber": 1,
+            "serialNumber": "26271420",
+            "qrToken": "26271420",
+            "orderId": "1154219000038000010",
+            "lineItemId": "1154219000038000013",
+            "itemName": "Shoe repairing machine (5%)",
+            "sku": "2971 (5%)",
+            "customerName": "INDIAHIKES PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08095",
+            "deliveryDate": "2026-10-07",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-09",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-06T17:49:17+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038000010-1154219000038000013-1"
+      ]
     }
   }
 }
