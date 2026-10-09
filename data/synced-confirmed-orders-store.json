@@ -9938,6 +9938,56 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-09T12:21:32+0530"
+    },
+    "1154219000038123005": {
+      "id": "1154219000038123005",
+      "zohoSalesOrderId": "1154219000038123005",
+      "salesOrderNumber": "SO-08118",
+      "status": "open",
+      "customerName": "Primestep Footwear",
+      "shippingAddress": "Plot No. 46, Gali No. 2, Ganpati Dham Industrial Area, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-09",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038123008",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225871",
+          "rate": 31500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038123005-1154219000038123008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038123005",
+          "lineItemId": "1154219000038123008",
+          "itemName": "Tape Cutting machine [Electronic]",
+          "sku": "369",
+          "customerName": "Primestep Footwear",
+          "salesOrderNumber": "SO-08118",
+          "deliveryDate": "2026-10-09",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-09T16:08:36+0530"
     }
   },
   "orderIds": [
@@ -10051,10 +10101,11 @@
     "1154219000038109001",
     "1154219000038109015",
     "1154219000038115003",
-    "1154219000038130002"
+    "1154219000038130002",
+    "1154219000038123005"
   ],
-  "lastSuccessfulSyncAt": "2026-10-09T10:20:32.079Z",
-  "lastAttemptAt": "2026-10-09T10:40:52.102Z",
+  "lastSuccessfulSyncAt": "2026-10-09T10:40:58.891Z",
+  "lastAttemptAt": "2026-10-09T10:40:58.891Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
