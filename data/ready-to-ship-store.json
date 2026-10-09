@@ -10208,6 +10208,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038078002": {
+      "id": "ship-1791522656288-mghwm",
+      "itemId": "1154219000038078002",
+      "orderId": "1154219000038078002",
+      "machineId": "1154219000038078002-1154219000038078005-1",
+      "salesOrderNumber": "SO-08112",
+      "customerName": "KC ARTS",
+      "customerPhone": "",
+      "salespersonName": "Karan Singh",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "RJ59CA1547",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-08",
+      "notes": "",
+      "shippedAt": "2026-10-09T05:10:56.288Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
