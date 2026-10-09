@@ -49590,11 +49590,14 @@
           "qrToken": "26271420",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-09T08:31:09.902Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-09T08:33:03.926Z",
           "processedAt": "2026-10-09T08:33:03.926Z",
           "dispatchNote": "Wooden",
-          "vendor": "T Sol"
+          "vendor": "T Sol",
+          "zohoBackupLastAttemptAt": "2026-10-09T08:45:46.553Z",
+          "zohoBackupSyncedAt": "2026-10-09T08:45:46.553Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
