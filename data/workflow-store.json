@@ -49435,7 +49435,9 @@
     "1154219000038109015": {
       "salesOrderId": "1154219000038109015",
       "salesOrderNumber": "SO-08115",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-09T05:15:05.194Z",
       "processedOrder": {
         "id": "1154219000038109015",
         "zohoSalesOrderId": "1154219000038109015",
@@ -49465,8 +49467,8 @@
           {
             "id": "1154219000038109015-1154219000038109018-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271419",
+            "qrToken": "26271419",
             "orderId": "1154219000038109015",
             "lineItemId": "1154219000038109018",
             "itemName": "Shoe repairing machine (5%)",
@@ -49474,14 +49476,17 @@
             "customerName": "Mata Restaurant and Event Organiser",
             "salesOrderNumber": "SO-08115",
             "deliveryDate": "2026-10-08",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-09",
+            "vendor": "T Sol",
+            "dispatchNote": "Wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-10-09T10:13:32+0530"
@@ -49495,7 +49500,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-09T05:12:14.881Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-09T05:12:14.972Z"
+          "zohoBackupQueuedAt": "2026-10-09T05:15:05.194Z",
+          "processedAt": "2026-10-09T05:15:05.194Z",
+          "dispatchNote": "Wooden",
+          "vendor": "T Sol"
         }
       }
     }
