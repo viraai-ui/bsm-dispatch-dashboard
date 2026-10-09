@@ -29084,57 +29084,45 @@
         "1154219000038078002-1154219000038078005-1"
       ]
     },
-    "1154219000038000744": {
-      "completedAt": "2026-10-09T10:47:01.918Z",
+    "1154219000037905012": {
+      "completedAt": "2026-10-09T10:47:17.206Z",
       "order": {
-        "id": "1154219000038000744",
-        "zohoSalesOrderId": "1154219000038000744",
-        "salesOrderNumber": "SO-08102",
+        "id": "1154219000037905012",
+        "zohoSalesOrderId": "1154219000037905012",
+        "salesOrderNumber": "SO-08087",
         "status": "open",
-        "customerName": "Jeevika Enterprises",
-        "shippingAddress": "Yashwant Nagar Bhag No.1,Shell Colony Road ,Near Savitribai Phule High Schoole ,Chembur, Mumbai, Maharashtra, 400071, India",
+        "customerName": "AGNI KAWACH EXTINGUISHER CO",
+        "shippingAddress": "2nd Floor, SHOP NO 224, ELDORA BUILDING, Unnamed Road, Golden City Centre, Chikalthana, Aurangabad, Chhatrapati Sambhaji Nagar, Maharashtra, 431210, India",
         "salesperson": "Manisha Gautam",
         "deliveryDate": "2026-10-08",
         "dashboardStatus": "Not Generated",
         "reviewRequired": false,
         "lineItems": [
           {
-            "id": "1154219000038000747",
-            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
-            "sku": "103",
+            "id": "1154219000037905015",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
             "description": "",
             "quantity": 1,
             "pendingQuantity": 1,
             "woodenPackingRequired": true,
-            "zohoItemId": "1154219000000225043",
-            "rate": 23000,
+            "zohoItemId": "1154219000006912047",
+            "rate": 100000,
             "dispatchCategory": "machine"
-          },
-          {
-            "id": "1154219000038000748",
-            "itemName": "Freight/ Transportation Charges",
-            "sku": "",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": false,
-            "zohoItemId": "1154219000004888581",
-            "rate": 1000,
-            "dispatchCategory": "freight"
           }
         ],
         "machines": [
           {
-            "id": "1154219000038000744-1154219000038000747-1",
+            "id": "1154219000037905012-1154219000037905015-1",
             "unitNumber": 1,
-            "serialNumber": "26271415",
-            "qrToken": "26271415",
-            "orderId": "1154219000038000744",
-            "lineItemId": "1154219000038000747",
-            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
-            "sku": "103",
-            "customerName": "Jeevika Enterprises",
-            "salesOrderNumber": "SO-08102",
+            "serialNumber": "26271418",
+            "qrToken": "26271418",
+            "orderId": "1154219000037905012",
+            "lineItemId": "1154219000037905015",
+            "itemName": "Automatic Pipe Cutting Machine",
+            "sku": "370",
+            "customerName": "AGNI KAWACH EXTINGUISHER CO",
+            "salesOrderNumber": "SO-08087",
             "deliveryDate": "2026-10-08",
             "status": "QR Generated",
             "selectedForBatch": false,
@@ -29145,14 +29133,14 @@
             "mediaVideos": 0,
             "itemDescription": "",
             "warrantyStart": "2026-10-08",
-            "dispatchNote": "Wooden"
+            "dispatchNote": "Local"
           }
         ],
-        "zohoLastModifiedTime": "2026-10-07T15:54:09+0530",
+        "zohoLastModifiedTime": "2026-10-05T16:33:59+0530",
         "dispatchPriority": "regular"
       },
       "machineIds": [
-        "1154219000038000744-1154219000038000747-1"
+        "1154219000037905012-1154219000037905015-1"
       ]
     }
   }
