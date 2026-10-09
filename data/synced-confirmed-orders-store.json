@@ -9910,6 +9910,34 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-09T10:33:32+0530"
+    },
+    "1154219000038130002": {
+      "id": "1154219000038130002",
+      "zohoSalesOrderId": "1154219000038130002",
+      "salesOrderNumber": "SO-08117",
+      "status": "open",
+      "customerName": "LIBERTY SHOES LTD. (Kutail-Karnal)",
+      "shippingAddress": "PO Bastara, 13th Milestone, G.T. Road, Libertypuram, Kutali, Karnal-132114, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-09",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038130005",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 310,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-09T11:51:33+0530"
     }
   },
   "orderIds": [
@@ -10022,10 +10050,11 @@
     "1154219000038084002",
     "1154219000038109001",
     "1154219000038109015",
-    "1154219000038115003"
+    "1154219000038115003",
+    "1154219000038130002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-09T06:20:31.052Z",
-  "lastAttemptAt": "2026-10-09T06:40:26.693Z",
+  "lastSuccessfulSyncAt": "2026-10-09T06:40:33.100Z",
+  "lastAttemptAt": "2026-10-09T06:40:33.100Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
