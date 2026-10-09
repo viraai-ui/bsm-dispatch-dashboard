@@ -29084,63 +29084,63 @@
         "1154219000038078002-1154219000038078005-1"
       ]
     },
-    "1154219000037905012": {
-      "completedAt": "2026-10-09T10:47:17.206Z",
+    "1154219000038109015": {
+      "completedAt": "2026-10-09T10:47:29.880Z",
       "order": {
-        "id": "1154219000037905012",
-        "zohoSalesOrderId": "1154219000037905012",
-        "salesOrderNumber": "SO-08087",
+        "id": "1154219000038109015",
+        "zohoSalesOrderId": "1154219000038109015",
+        "salesOrderNumber": "SO-08115",
         "status": "open",
-        "customerName": "AGNI KAWACH EXTINGUISHER CO",
-        "shippingAddress": "2nd Floor, SHOP NO 224, ELDORA BUILDING, Unnamed Road, Golden City Centre, Chikalthana, Aurangabad, Chhatrapati Sambhaji Nagar, Maharashtra, 431210, India",
-        "salesperson": "Manisha Gautam",
+        "customerName": "Mata Restaurant and Event Organiser",
+        "shippingAddress": "160/72, Arhat Bazar, Opposite Uttarakhand Gramin Bank, Dehradun, Uttarakhand, 248001",
+        "salesperson": "Ram Kumar",
         "deliveryDate": "2026-10-08",
         "dashboardStatus": "Not Generated",
         "reviewRequired": false,
         "lineItems": [
           {
-            "id": "1154219000037905015",
-            "itemName": "Automatic Pipe Cutting Machine",
-            "sku": "370",
+            "id": "1154219000038109018",
+            "itemName": "Shoe repairing machine (5%)",
+            "sku": "2971 (5%)",
             "description": "",
             "quantity": 1,
             "pendingQuantity": 1,
-            "woodenPackingRequired": true,
-            "zohoItemId": "1154219000006912047",
-            "rate": 100000,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000009427388",
+            "rate": 58000,
             "dispatchCategory": "machine"
           }
         ],
         "machines": [
           {
-            "id": "1154219000037905012-1154219000037905015-1",
+            "id": "1154219000038109015-1154219000038109018-1",
             "unitNumber": 1,
-            "serialNumber": "26271418",
-            "qrToken": "26271418",
-            "orderId": "1154219000037905012",
-            "lineItemId": "1154219000037905015",
-            "itemName": "Automatic Pipe Cutting Machine",
-            "sku": "370",
-            "customerName": "AGNI KAWACH EXTINGUISHER CO",
-            "salesOrderNumber": "SO-08087",
+            "serialNumber": "26271419",
+            "qrToken": "26271419",
+            "orderId": "1154219000038109015",
+            "lineItemId": "1154219000038109018",
+            "itemName": "Shoe repairing machine (5%)",
+            "sku": "2971 (5%)",
+            "customerName": "Mata Restaurant and Event Organiser",
+            "salesOrderNumber": "SO-08115",
             "deliveryDate": "2026-10-08",
             "status": "QR Generated",
             "selectedForBatch": false,
-            "woodenPacking": "Pending",
+            "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
             "itemDescription": "",
-            "warrantyStart": "2026-10-08",
-            "dispatchNote": "Local"
+            "warrantyStart": "2026-10-09",
+            "dispatchNote": "Wooden"
           }
         ],
-        "zohoLastModifiedTime": "2026-10-05T16:33:59+0530",
+        "zohoLastModifiedTime": "2026-10-09T10:13:32+0530",
         "dispatchPriority": "regular"
       },
       "machineIds": [
-        "1154219000037905012-1154219000037905015-1"
+        "1154219000038109015-1154219000038109018-1"
       ]
     }
   }
