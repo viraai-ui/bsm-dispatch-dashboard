@@ -49514,7 +49514,9 @@
     "1154219000038000010": {
       "salesOrderId": "1154219000038000010",
       "salesOrderNumber": "SO-08095",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-09T08:33:03.926Z",
       "processedOrder": {
         "id": "1154219000038000010",
         "zohoSalesOrderId": "1154219000038000010",
@@ -49556,8 +49558,8 @@
           {
             "id": "1154219000038000010-1154219000038000013-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271420",
+            "qrToken": "26271420",
             "orderId": "1154219000038000010",
             "lineItemId": "1154219000038000013",
             "itemName": "Shoe repairing machine (5%)",
@@ -49565,14 +49567,17 @@
             "customerName": "INDIAHIKES PRIVATE LIMITED",
             "salesOrderNumber": "SO-08095",
             "deliveryDate": "2026-10-07",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-09",
+            "vendor": "T Sol",
+            "dispatchNote": "Wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-10-06T17:49:17+0530"
@@ -49586,7 +49591,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-09T08:31:09.902Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-09T08:31:10.325Z"
+          "zohoBackupQueuedAt": "2026-10-09T08:33:03.926Z",
+          "processedAt": "2026-10-09T08:33:03.926Z",
+          "dispatchNote": "Wooden",
+          "vendor": "T Sol"
         }
       }
     }
