@@ -9988,6 +9988,34 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-09T16:08:36+0530"
+    },
+    "1154219000038130018": {
+      "id": "1154219000038130018",
+      "zohoSalesOrderId": "1154219000038130018",
+      "salesOrderNumber": "SO-08119",
+      "status": "open",
+      "customerName": "ADDMAX TECHNOLOGIES PRIVATE LIMITED",
+      "shippingAddress": "1ST FLOOR, J-61, NOIDA, Sector 63,, Noida, Gautambuddha Nagar,, Uttar Pradesh, 201301, India",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-10-09",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038130021",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 25,
+          "pendingQuantity": 25,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 340,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-09T16:33:17+0530"
     }
   },
   "orderIds": [
@@ -10102,10 +10130,11 @@
     "1154219000038109015",
     "1154219000038115003",
     "1154219000038130002",
-    "1154219000038123005"
+    "1154219000038123005",
+    "1154219000038130018"
   ],
-  "lastSuccessfulSyncAt": "2026-10-09T10:43:16.504Z",
-  "lastAttemptAt": "2026-10-09T11:40:25.946Z",
+  "lastSuccessfulSyncAt": "2026-10-09T11:40:32.947Z",
+  "lastAttemptAt": "2026-10-09T11:40:32.947Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
