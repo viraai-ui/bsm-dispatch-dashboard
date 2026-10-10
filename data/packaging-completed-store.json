@@ -29272,6 +29272,65 @@
       "machineIds": [
         "1154219000038170003-1154219000038170006-1"
       ]
+    },
+    "1154219000038123005": {
+      "completedAt": "2026-10-10T11:46:54.138Z",
+      "order": {
+        "id": "1154219000038123005",
+        "zohoSalesOrderId": "1154219000038123005",
+        "salesOrderNumber": "SO-08118",
+        "status": "open",
+        "customerName": "Primestep Footwear",
+        "shippingAddress": "Plot No. 46, Gali No. 2, Ganpati Dham Industrial Area, Bahadurgarh, Haryana, 124507, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-09",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038123008",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225871",
+            "rate": 31500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038123005-1154219000038123008-1",
+            "unitNumber": 1,
+            "serialNumber": "26271421",
+            "qrToken": "26271421",
+            "orderId": "1154219000038123005",
+            "lineItemId": "1154219000038123008",
+            "itemName": "Tape Cutting machine [Electronic]",
+            "sku": "369",
+            "customerName": "Primestep Footwear",
+            "salesOrderNumber": "SO-08118",
+            "deliveryDate": "2026-10-09",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-09",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-09T16:08:36+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038123005-1154219000038123008-1"
+      ]
     }
   }
 }
