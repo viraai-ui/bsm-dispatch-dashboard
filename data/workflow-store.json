@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271423,
+  "serialCounter": 26271424,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -49916,6 +49916,70 @@
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "Ayyan Clothing",
           "dispatchedAt": "2026-10-10T08:23:15.204Z"
+        }
+      }
+    },
+    "1154219000038170003": {
+      "salesOrderId": "1154219000038170003",
+      "salesOrderNumber": "SO-08123",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038170003",
+        "zohoSalesOrderId": "1154219000038170003",
+        "salesOrderNumber": "SO-08123",
+        "status": "open",
+        "customerName": "PAWPRO HANDMADE",
+        "shippingAddress": "J-15 A, J Block, GALI NO 12, Lakshmi Nagar, New Delhi, East Delhi, Delhi, 110092",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038170006",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "description": "with Adjusting guide",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226574",
+            "rate": 40350,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038170003-1154219000038170006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038170003",
+            "lineItemId": "1154219000038170006",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "customerName": "PAWPRO HANDMADE",
+            "salesOrderNumber": "SO-08123",
+            "deliveryDate": "2026-10-10",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "with Adjusting guide"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-10T13:46:34+0530"
+      },
+      "machines": {
+        "1154219000038170003-1154219000038170006-1": {
+          "machineUnitId": "1154219000038170003-1154219000038170006-1",
+          "lineItemId": "1154219000038170006",
+          "serialNumber": "26271424",
+          "qrToken": "26271424",
+          "qrStatus": "pending"
         }
       }
     }
