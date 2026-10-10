@@ -10454,6 +10454,56 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-10T15:19:05+0530"
+    },
+    "1154219000038183021": {
+      "id": "1154219000038183021",
+      "zohoSalesOrderId": "1154219000038183021",
+      "salesOrderNumber": "SO-08127",
+      "status": "open",
+      "customerName": "KARAM SAFETY PRIVATE LIMITED",
+      "shippingAddress": "C-35A B DEF, PHASE-III, ELDECO SIDCUL INDUSTRIAL PARK, Sidcul, Uttarakhand, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-11-30",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038183024",
+          "itemName": "Automatic Tongue Folding Machine",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000002778099",
+          "rate": 189000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038183021-1154219000038183024-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038183021",
+          "lineItemId": "1154219000038183024",
+          "itemName": "Automatic Tongue Folding Machine",
+          "sku": "",
+          "customerName": "KARAM SAFETY PRIVATE LIMITED",
+          "salesOrderNumber": "SO-08127",
+          "deliveryDate": "2026-11-30",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-10T16:46:36+0530"
     }
   },
   "orderIds": [
@@ -10575,10 +10625,11 @@
     "1154219000038183002",
     "1154219000038170003",
     "1154219000038194001",
-    "1154219000038166004"
+    "1154219000038166004",
+    "1154219000038183021"
   ],
-  "lastSuccessfulSyncAt": "2026-10-10T11:00:31.726Z",
-  "lastAttemptAt": "2026-10-10T11:20:26.162Z",
+  "lastSuccessfulSyncAt": "2026-10-10T11:20:32.182Z",
+  "lastAttemptAt": "2026-10-10T11:20:32.182Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
