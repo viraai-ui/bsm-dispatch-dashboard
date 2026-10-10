@@ -29142,6 +29142,77 @@
       "machineIds": [
         "1154219000038109015-1154219000038109018-1"
       ]
+    },
+    "1154219000038183002": {
+      "completedAt": "2026-10-10T08:23:15.204Z",
+      "order": {
+        "id": "1154219000038183002",
+        "zohoSalesOrderId": "1154219000038183002",
+        "salesOrderNumber": "SO-08122",
+        "status": "open",
+        "customerName": "IBS Safety India Pvt Ltd",
+        "shippingAddress": "H-689, RIICO Industrial Area, Khushkhera, Bhiwadi, Rajasthan, 301707",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038183005",
+            "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000026978103",
+            "rate": 47000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038183006",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Cutting Blade Set",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 4500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038183002-1154219000038183005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271423",
+            "qrToken": "26271423",
+            "orderId": "1154219000038183002",
+            "lineItemId": "1154219000038183005",
+            "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
+            "sku": "",
+            "customerName": "IBS Safety India Pvt Ltd",
+            "salesOrderNumber": "SO-08122",
+            "deliveryDate": "2026-10-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-10",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-10T13:02:03+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038183002-1154219000038183005-1"
+      ]
     }
   }
 }
