@@ -29213,6 +29213,65 @@
       "machineIds": [
         "1154219000038183002-1154219000038183005-1"
       ]
+    },
+    "1154219000038170003": {
+      "completedAt": "2026-10-10T11:25:00.272Z",
+      "order": {
+        "id": "1154219000038170003",
+        "zohoSalesOrderId": "1154219000038170003",
+        "salesOrderNumber": "SO-08123",
+        "status": "open",
+        "customerName": "PAWPRO HANDMADE",
+        "shippingAddress": "J-15 A, J Block, GALI NO 12, Lakshmi Nagar, New Delhi, East Delhi, Delhi, 110092",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-10",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038170006",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "description": "with Adjusting guide",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226574",
+            "rate": 40350,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038170003-1154219000038170006-1",
+            "unitNumber": 1,
+            "serialNumber": "26271424",
+            "qrToken": "26271424",
+            "orderId": "1154219000038170003",
+            "lineItemId": "1154219000038170006",
+            "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+            "sku": "9910",
+            "customerName": "PAWPRO HANDMADE",
+            "salesOrderNumber": "SO-08123",
+            "deliveryDate": "2026-10-10",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "with Adjusting guide",
+            "warrantyStart": "2026-10-10",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-10T13:46:34+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038170003-1154219000038170006-1"
+      ]
     }
   }
 }
