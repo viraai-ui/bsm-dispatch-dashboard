@@ -49688,7 +49688,9 @@
     "1154219000035685001": {
       "salesOrderId": "1154219000035685001",
       "salesOrderNumber": "SO-07727",
-      "status": "qr_not_required",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-10T06:50:46.606Z",
       "processedOrder": {
         "id": "1154219000035685001",
         "zohoSalesOrderId": "1154219000035685001",
@@ -49730,8 +49732,8 @@
           {
             "id": "1154219000035685001-1154219000035685004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271422",
+            "qrToken": "26271422",
             "orderId": "1154219000035685001",
             "lineItemId": "1154219000035685004",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -49739,14 +49741,17 @@
             "customerName": "Unipatch Rubber Ltd",
             "salesOrderNumber": "SO-07727",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Printed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-10",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000035685001-1154219000035685005-1",
@@ -49760,14 +49765,16 @@
             "customerName": "Unipatch Rubber Ltd",
             "salesOrderNumber": "SO-07727",
             "deliveryDate": "2026-08-18",
-            "status": "Not Generated",
+            "status": "QR Printed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-08-14T10:26:10+0530"
@@ -49777,13 +49784,23 @@
           "machineUnitId": "1154219000035685001-1154219000035685004-1",
           "lineItemId": "1154219000035685004",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-10-10T06:50:40.745Z"
+          "qrNotRequiredAt": "2026-10-10T06:50:40.745Z",
+          "processedAt": "2026-10-10T06:50:46.606Z",
+          "dispatchNote": "",
+          "vendor": "",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-10T06:50:46.606Z"
         },
         "1154219000035685001-1154219000035685005-1": {
           "machineUnitId": "1154219000035685001-1154219000035685005-1",
           "lineItemId": "1154219000035685005",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-10-10T06:50:40.745Z"
+          "qrNotRequiredAt": "2026-10-10T06:50:40.745Z",
+          "processedAt": "2026-10-10T06:50:46.606Z",
+          "dispatchNote": "",
+          "vendor": "",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-10T06:50:46.606Z"
         }
       }
     }
