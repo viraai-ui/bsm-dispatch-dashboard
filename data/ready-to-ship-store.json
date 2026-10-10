@@ -10270,6 +10270,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038109015": {
+      "id": "ship-1791621046693-8oltx",
+      "itemId": "1154219000038109015",
+      "orderId": "1154219000038109015",
+      "machineId": "1154219000038109015-1154219000038109018-1",
+      "salesOrderNumber": "SO-08115",
+      "customerName": "Mata Restaurant and Event Organiser",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-10-09 at 8.23.53 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-10-10%2FSO-08115%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-10-10T08-30-44-779Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-10-10/SO-08115/shipment-lr-builty/Shipment-LR-Builty-2026-10-10T08-30-44-779Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-10-10T08:30:46.693Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-09",
+      "notes": "",
+      "shippedAt": "2026-10-10T08:30:46.693Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
