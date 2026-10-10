@@ -10308,6 +10308,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038170003": {
+      "id": "ship-1791632429095-z0m3z",
+      "itemId": "1154219000038170003",
+      "orderId": "1154219000038170003",
+      "machineId": "1154219000038170003-1154219000038170006-1",
+      "salesOrderNumber": "SO-08123",
+      "customerName": "PAWPRO HANDMADE",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL51EV1835",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-10",
+      "notes": "",
+      "shippedAt": "2026-10-10T11:40:29.095Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
