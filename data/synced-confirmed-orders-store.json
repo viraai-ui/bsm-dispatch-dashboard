@@ -10348,6 +10348,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-10T13:02:03+0530"
+    },
+    "1154219000038170003": {
+      "id": "1154219000038170003",
+      "zohoSalesOrderId": "1154219000038170003",
+      "salesOrderNumber": "SO-08123",
+      "status": "open",
+      "customerName": "PAWPRO HANDMADE",
+      "shippingAddress": "J-15 A, J Block, GALI NO 12, Lakshmi Nagar, New Delhi, East Delhi, Delhi, 110092",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-10",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038170006",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "description": "with Adjusting guide",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226574",
+          "rate": 40350,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038170003-1154219000038170006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038170003",
+          "lineItemId": "1154219000038170006",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "customerName": "PAWPRO HANDMADE",
+          "salesOrderNumber": "SO-08123",
+          "deliveryDate": "2026-10-10",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "with Adjusting guide"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-10T13:46:34+0530"
     }
   },
   "orderIds": [
@@ -10466,10 +10516,11 @@
     "1154219000038130018",
     "1154219000038156001",
     "1154219000038181010",
-    "1154219000038183002"
+    "1154219000038183002",
+    "1154219000038170003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-10T08:00:30.896Z",
-  "lastAttemptAt": "2026-10-10T08:21:06.150Z",
+  "lastSuccessfulSyncAt": "2026-10-10T08:21:12.381Z",
+  "lastAttemptAt": "2026-10-10T08:21:12.381Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
