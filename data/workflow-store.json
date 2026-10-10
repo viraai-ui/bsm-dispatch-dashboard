@@ -49807,7 +49807,9 @@
     "1154219000038183002": {
       "salesOrderId": "1154219000038183002",
       "salesOrderNumber": "SO-08122",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-10T07:38:50.942Z",
       "processedOrder": {
         "id": "1154219000038183002",
         "zohoSalesOrderId": "1154219000038183002",
@@ -49849,8 +49851,8 @@
           {
             "id": "1154219000038183002-1154219000038183005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271423",
+            "qrToken": "26271423",
             "orderId": "1154219000038183002",
             "lineItemId": "1154219000038183005",
             "itemName": "Tape Cutting Machine Electronic (Heavy Duty)",
@@ -49858,14 +49860,17 @@
             "customerName": "IBS Safety India Pvt Ltd",
             "salesOrderNumber": "SO-08122",
             "deliveryDate": "2026-10-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-10",
+            "vendor": "Ayyan Clothing",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038183002-1154219000038183006-1",
@@ -49886,7 +49891,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade Set"
+            "itemDescription": "Cutting Blade Set",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-10-10T13:02:03+0530"
@@ -49900,7 +49907,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-10T07:37:01.750Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-10T07:37:05.693Z"
+          "zohoBackupQueuedAt": "2026-10-10T07:38:50.942Z",
+          "processedAt": "2026-10-10T07:38:50.942Z",
+          "dispatchNote": "Local",
+          "vendor": "Ayyan Clothing"
         }
       }
     }
