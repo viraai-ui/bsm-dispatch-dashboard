@@ -49922,7 +49922,9 @@
     "1154219000038170003": {
       "salesOrderId": "1154219000038170003",
       "salesOrderNumber": "SO-08123",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-10T08:26:58.817Z",
       "processedOrder": {
         "id": "1154219000038170003",
         "zohoSalesOrderId": "1154219000038170003",
@@ -49952,8 +49954,8 @@
           {
             "id": "1154219000038170003-1154219000038170006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271424",
+            "qrToken": "26271424",
             "orderId": "1154219000038170003",
             "lineItemId": "1154219000038170006",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -49961,14 +49963,17 @@
             "customerName": "PAWPRO HANDMADE",
             "salesOrderNumber": "SO-08123",
             "deliveryDate": "2026-10-10",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "with Adjusting guide"
+            "itemDescription": "with Adjusting guide",
+            "warrantyStart": "2026-10-10",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-10T13:46:34+0530"
@@ -49982,7 +49987,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-10T08:24:49.361Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-10T08:24:53.382Z"
+          "zohoBackupQueuedAt": "2026-10-10T08:26:58.817Z",
+          "processedAt": "2026-10-10T08:26:58.817Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
