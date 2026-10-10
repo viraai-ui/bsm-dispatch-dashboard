@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271421,
+  "serialCounter": 26271422,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -49682,6 +49682,103 @@
           "dispatchNote": "Local",
           "vendor": "Able",
           "sheetVendor": "Able"
+        }
+      }
+    },
+    "1154219000035685001": {
+      "salesOrderId": "1154219000035685001",
+      "salesOrderNumber": "SO-07727",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000035685001",
+        "zohoSalesOrderId": "1154219000035685001",
+        "salesOrderNumber": "SO-07727",
+        "status": "open",
+        "customerName": "Unipatch Rubber Ltd",
+        "shippingAddress": "E-89,90A, INDUSTRIAL AREA, UNIPATCH RUBBER LIMITED, NEELAM CHOWK, BHIWADI, Alwar, Rajasthan, 301019, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-08-18",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000035685004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277612",
+            "rate": 280000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035685005",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000335059",
+            "rate": 18500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000035685001-1154219000035685004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035685001",
+            "lineItemId": "1154219000035685004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "Unipatch Rubber Ltd",
+            "salesOrderNumber": "SO-07727",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000035685001-1154219000035685005-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035685001",
+            "lineItemId": "1154219000035685005",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "customerName": "Unipatch Rubber Ltd",
+            "salesOrderNumber": "SO-07727",
+            "deliveryDate": "2026-08-18",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-08-14T10:26:10+0530"
+      },
+      "machines": {
+        "1154219000035685001-1154219000035685004-1": {
+          "machineUnitId": "1154219000035685001-1154219000035685004-1",
+          "lineItemId": "1154219000035685004",
+          "serialNumber": "26271422",
+          "qrToken": "26271422",
+          "qrStatus": "pending"
         }
       }
     }
