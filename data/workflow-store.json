@@ -49906,11 +49906,14 @@
           "qrToken": "26271423",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-10T07:37:01.750Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-10T07:38:50.942Z",
           "processedAt": "2026-10-10T07:38:50.942Z",
           "dispatchNote": "Local",
-          "vendor": "Ayyan Clothing"
+          "vendor": "Ayyan Clothing",
+          "zohoBackupLastAttemptAt": "2026-10-10T07:45:45.728Z",
+          "zohoBackupSyncedAt": "2026-10-10T07:45:45.728Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
