@@ -10239,6 +10239,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038183002": {
+      "id": "ship-1791620940740-j324i",
+      "itemId": "1154219000038183002",
+      "orderId": "1154219000038183002",
+      "machineId": "1154219000038183002-1154219000038183005-1",
+      "salesOrderNumber": "SO-08122",
+      "customerName": "IBS Safety India Pvt Ltd",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL8CAZ8669",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-10",
+      "notes": "",
+      "shippedAt": "2026-10-10T08:29:00.740Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
