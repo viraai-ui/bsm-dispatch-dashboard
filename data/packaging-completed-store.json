@@ -29273,63 +29273,98 @@
         "1154219000038170003-1154219000038170006-1"
       ]
     },
-    "1154219000038123005": {
-      "completedAt": "2026-10-10T11:46:54.138Z",
+    "1154219000035685001": {
+      "completedAt": "2026-10-10T11:46:56.918Z",
       "order": {
-        "id": "1154219000038123005",
-        "zohoSalesOrderId": "1154219000038123005",
-        "salesOrderNumber": "SO-08118",
+        "id": "1154219000035685001",
+        "zohoSalesOrderId": "1154219000035685001",
+        "salesOrderNumber": "SO-07727",
         "status": "open",
-        "customerName": "Primestep Footwear",
-        "shippingAddress": "Plot No. 46, Gali No. 2, Ganpati Dham Industrial Area, Bahadurgarh, Haryana, 124507, India",
+        "customerName": "Unipatch Rubber Ltd",
+        "shippingAddress": "E-89,90A, INDUSTRIAL AREA, UNIPATCH RUBBER LIMITED, NEELAM CHOWK, BHIWADI, Alwar, Rajasthan, 301019, India",
         "salesperson": "Anuj Kumar",
-        "deliveryDate": "2026-10-09",
+        "deliveryDate": "2026-08-18",
         "dashboardStatus": "Not Generated",
         "reviewRequired": false,
         "lineItems": [
           {
-            "id": "1154219000038123008",
-            "itemName": "Tape Cutting machine [Electronic]",
-            "sku": "369",
+            "id": "1154219000035685004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
             "description": "",
             "quantity": 1,
             "pendingQuantity": 1,
-            "woodenPackingRequired": true,
-            "zohoItemId": "1154219000000225871",
-            "rate": 31500,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277612",
+            "rate": 280000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000035685005",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000335059",
+            "rate": 18500,
             "dispatchCategory": "machine"
           }
         ],
         "machines": [
           {
-            "id": "1154219000038123005-1154219000038123008-1",
+            "id": "1154219000035685001-1154219000035685004-1",
             "unitNumber": 1,
-            "serialNumber": "26271421",
-            "qrToken": "26271421",
-            "orderId": "1154219000038123005",
-            "lineItemId": "1154219000038123008",
-            "itemName": "Tape Cutting machine [Electronic]",
-            "sku": "369",
-            "customerName": "Primestep Footwear",
-            "salesOrderNumber": "SO-08118",
-            "deliveryDate": "2026-10-09",
-            "status": "QR Generated",
+            "serialNumber": "26271422",
+            "qrToken": "26271422",
+            "orderId": "1154219000035685001",
+            "lineItemId": "1154219000035685004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "Unipatch Rubber Ltd",
+            "salesOrderNumber": "SO-07727",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Printed",
             "selectedForBatch": false,
-            "woodenPacking": "Pending",
+            "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
             "itemDescription": "",
-            "warrantyStart": "2026-10-09",
-            "dispatchNote": "Local"
+            "warrantyStart": "2026-10-10",
+            "dispatchNote": ""
+          },
+          {
+            "id": "1154219000035685001-1154219000035685005-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000035685001",
+            "lineItemId": "1154219000035685005",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "customerName": "Unipatch Rubber Ltd",
+            "salesOrderNumber": "SO-07727",
+            "deliveryDate": "2026-08-18",
+            "status": "QR Printed",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "dispatchNote": ""
           }
         ],
-        "zohoLastModifiedTime": "2026-10-09T16:08:36+0530",
+        "zohoLastModifiedTime": "2026-08-14T10:26:10+0530",
         "dispatchPriority": "regular"
       },
       "machineIds": [
-        "1154219000038123005-1154219000038123008-1"
+        "1154219000035685001-1154219000035685004-1",
+        "1154219000035685001-1154219000035685005-1"
       ]
     }
   }
