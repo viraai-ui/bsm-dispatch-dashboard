@@ -1,4 +1,4 @@
-import { githubReadJson, githubRequest } from './workflow-store'
+import { githubReadJson, githubReadJsonAuthoritative, githubRequest } from './workflow-store'
 
 export type PaymentStatus = 'Pending' | 'Payment Received'
 export type PaymentMode = 'Bank Transfer' | 'UPI' | 'Cash' | 'Credit Card' | 'Debit Card' | 'Other'
@@ -59,7 +59,9 @@ export async function listPayments() {
 export async function updatePaymentStore(updater: (payments: Payment[]) => Payment[]) {
   let lastError: unknown
   for (let attempt = 0; attempt < 3; attempt += 1) {
-    const current = await githubReadJson<PaymentStore>(STORE_PATH, { payments: [] })
+    // Mutations must never use the display-continuity cache/snapshot because it
+    // can omit the current revision SHA and make an existing-file PUT unsafe.
+    const current = await githubReadJsonAuthoritative<PaymentStore>(STORE_PATH)
     const next = { payments: updater(current.data.payments || []) }
     const body: Record<string, string> = {
       message: 'Update payments store',

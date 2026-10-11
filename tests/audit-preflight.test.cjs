@@ -41,6 +41,11 @@ async function run() {
   assert.match(auditScript, /scripts\/verify-production-media\.cjs/)
   assert.ok(!existsSync(resolve(root, 'scripts/build-with-production-env.cjs')))
 
+  const paymentsSource = readFileSync(resolve(root, 'src/lib/payments.ts'), 'utf8')
+  assert.match(paymentsSource, /githubReadJsonAuthoritative<PaymentStore>\(STORE_PATH\)/, 'payment mutations must use a revision-verified read before CAS')
+  const mutationBody = paymentsSource.slice(paymentsSource.indexOf('export async function updatePaymentStore'), paymentsSource.indexOf('export async function createPayment'))
+  assert.doesNotMatch(mutationBody, /githubReadJson<PaymentStore>/, 'payment mutations must not use display-continuity fallback reads')
+
   const originalFetch = global.fetch
   global.fetch = async () => new Response(JSON.stringify({ ok: true, mediaCount: 3, media: { ready: false, status: 'unavailable' } }), { status: 200, headers: { 'content-type': 'application/json' } })
   try {
