@@ -1,12 +1,10 @@
 {
   "version": 1,
   "dayIst": "2026-10-12",
-  "used": 0,
+  "used": 1,
   "limit": 1200,
   "circuitUntil": null,
   "circuitReason": null,
-  "lease": {
-    "owner": "41bc5994-933b-451c-ac63-f718a4d88d1d",
-    "until": "2026-10-11T22:05:24.835Z"
-  }
+  "lease": null,
+  "lastCallAt": "2026-10-11T22:00:28.785Z"
 }
