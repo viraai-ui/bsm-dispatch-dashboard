@@ -50005,7 +50005,9 @@
     "1154219000038259001": {
       "salesOrderId": "1154219000038259001",
       "salesOrderNumber": "SO-08128",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-12T06:19:40.706Z",
       "processedOrder": {
         "id": "1154219000038259001",
         "zohoSalesOrderId": "1154219000038259001",
@@ -50071,8 +50073,8 @@
           {
             "id": "1154219000038259001-1154219000038259004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271425",
+            "qrToken": "26271425",
             "orderId": "1154219000038259001",
             "lineItemId": "1154219000038259004",
             "itemName": "Round Blade Edge trimming Machine",
@@ -50080,14 +50082,17 @@
             "customerName": "Rimras Shoes Pvt Ltd",
             "salesOrderNumber": "SO-08128",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           },
           {
             "id": "1154219000038259001-1154219000038259005-1",
@@ -50108,7 +50113,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-2",
@@ -50129,7 +50136,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-3",
@@ -50150,7 +50159,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-4",
@@ -50171,7 +50182,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-5",
@@ -50192,7 +50205,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-6",
@@ -50213,7 +50228,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-7",
@@ -50234,7 +50251,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-8",
@@ -50255,7 +50274,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-9",
@@ -50276,7 +50297,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259005-10",
@@ -50297,7 +50320,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902"
+            "itemDescription": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259006-1",
@@ -50318,7 +50343,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Round Blade / Knife support for BS-902"
+            "itemDescription": "Round Blade / Knife support for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259006-2",
@@ -50339,7 +50366,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Round Blade / Knife support for BS-902"
+            "itemDescription": "Round Blade / Knife support for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259006-3",
@@ -50360,7 +50389,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Round Blade / Knife support for BS-902"
+            "itemDescription": "Round Blade / Knife support for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259006-4",
@@ -50381,7 +50412,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Round Blade / Knife support for BS-902"
+            "itemDescription": "Round Blade / Knife support for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259006-5",
@@ -50402,7 +50435,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Round Blade / Knife support for BS-902"
+            "itemDescription": "Round Blade / Knife support for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259007-1",
@@ -50423,7 +50458,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Belt for BS-902"
+            "itemDescription": "Belt for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038259001-1154219000038259007-2",
@@ -50444,7 +50481,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Belt for BS-902"
+            "itemDescription": "Belt for BS-902",
+            "dispatchNote": "",
+            "vendor": ""
           }
         ],
         "zohoLastModifiedTime": "2026-10-12T11:14:06+0530"
@@ -50458,7 +50497,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T06:16:35.297Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-12T06:16:43.859Z"
+          "zohoBackupQueuedAt": "2026-10-12T06:19:40.706Z",
+          "processedAt": "2026-10-12T06:19:40.706Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         }
       }
     }
