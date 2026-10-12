@@ -12076,6 +12076,18 @@
           "zohoItemId": "1154219000000278601",
           "rate": 20000,
           "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038291004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "Table",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 3333,
+          "dispatchCategory": "machine"
         }
       ],
       "machines": [
@@ -12141,9 +12153,30 @@
           "mediaPhotos": 0,
           "mediaVideos": 0,
           "itemDescription": ""
+        },
+        {
+          "id": "1154219000038276005-1154219000038291004-1",
+          "unitNumber": 4,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038276005",
+          "lineItemId": "1154219000038291004",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Ganesh Footwear",
+          "salesOrderNumber": "SO-08132",
+          "deliveryDate": "2026-10-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Table"
         }
       ],
-      "zohoLastModifiedTime": "2026-10-12T16:12:10+0530"
+      "zohoLastModifiedTime": "2026-10-12T16:30:32+0530"
     }
   },
   "orderIds": [
@@ -12273,8 +12306,8 @@
     "1154219000038281001",
     "1154219000038276005"
   ],
-  "lastSuccessfulSyncAt": "2026-10-12T11:00:32.117Z",
-  "lastAttemptAt": "2026-10-12T11:20:26.222Z",
+  "lastSuccessfulSyncAt": "2026-10-12T11:20:31.571Z",
+  "lastAttemptAt": "2026-10-12T11:20:31.571Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
