@@ -12,6 +12,7 @@ const readyUi = fs.readFileSync(new URL('../src/components/ReadyToShipClient.tsx
 test('routine Dispatch sync is one bounded page with bounded selective details', () => {
   const routine = zoho.slice(zoho.indexOf('export async function fetchZohoConfirmedOrders'), zoho.indexOf('async function fetchZohoOrderDetailsInBatches'))
   assert.match(routine, /page=1/)
+  assert.match(routine, /filter_by=Status\.Confirmed/)
   assert.match(routine, /Math\.min\(15/)
   assert.doesNotMatch(routine, /for\s*\(let page|has_more_page|fetchCompleteZohoSalesOrderFeed/)
   assert.match(routine, /previous\.zohoLastModifiedTime !== revision/)

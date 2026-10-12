@@ -281,7 +281,10 @@ export async function fetchZohoConfirmedOrders(known: Record<string, Order> = {}
   // Routine sync is exactly one newest-first page. Historical import is separate
   // and disabled; it is never called by cron, browser polling, or manual sync.
   const pageSize = Math.min(15, Math.max(1, limit))
-  const list = await zohoGet(`/inventory/v1/salesorders?per_page=${pageSize}&page=1&sort_column=created_time&sort_order=D`, token)
+  // Filter at the provider before applying the strict page cap. Without this,
+  // newer drafts/closed orders can fill the page and hide a confirmed order,
+  // making a successful sync appear to fetch nothing.
+  const list = await zohoGet(`/inventory/v1/salesorders?per_page=${pageSize}&page=1&filter_by=Status.Confirmed&sort_column=created_time&sort_order=D`, token)
   const summaries: any[] = Array.isArray(list.salesorders) ? list.salesorders.slice(0, pageSize) : []
   const open = summaries.filter(isOpenOrder)
   if (summaries.length > 0 && open.length === 0) throw new Error('Zoho sales-order feed returned no open sales orders')
