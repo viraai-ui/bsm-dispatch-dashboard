@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271427,
+  "serialCounter": 26271430,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -50672,6 +50672,150 @@
           "dispatchNote": "Wooden",
           "vendor": "K S",
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000038276005": {
+      "salesOrderId": "1154219000038276005",
+      "salesOrderNumber": "SO-08132",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038276005",
+        "zohoSalesOrderId": "1154219000038276005",
+        "salesOrderNumber": "SO-08132",
+        "status": "open",
+        "customerName": "Ganesh Footwear",
+        "shippingAddress": "Ground Floor, Kh.No. 15/24, Street No 9 Shaheed Bhaght Nagar, Ms Model School, Karala, Delhi, 110081",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038276008",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226515",
+            "rate": 23500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038276009",
+            "itemName": "Double Needle Post Bed Drop Feed",
+            "sku": "2820",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228592",
+            "rate": 26500,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038276010",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000278601",
+            "rate": 20000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038276005-1154219000038276008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038276005",
+            "lineItemId": "1154219000038276008",
+            "itemName": "Single needle post bed Drop feed",
+            "sku": "2810",
+            "customerName": "Ganesh Footwear",
+            "salesOrderNumber": "SO-08132",
+            "deliveryDate": "2026-10-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038276005-1154219000038276009-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038276005",
+            "lineItemId": "1154219000038276009",
+            "itemName": "Double Needle Post Bed Drop Feed",
+            "sku": "2820",
+            "customerName": "Ganesh Footwear",
+            "salesOrderNumber": "SO-08132",
+            "deliveryDate": "2026-10-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038276005-1154219000038276010-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038276005",
+            "lineItemId": "1154219000038276010",
+            "itemName": "Manual Fusing Machine (16*24 inches)",
+            "sku": "38-2",
+            "customerName": "Ganesh Footwear",
+            "salesOrderNumber": "SO-08132",
+            "deliveryDate": "2026-10-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-12T16:12:10+0530"
+      },
+      "machines": {
+        "1154219000038276005-1154219000038276008-1": {
+          "machineUnitId": "1154219000038276005-1154219000038276008-1",
+          "lineItemId": "1154219000038276008",
+          "serialNumber": "26271428",
+          "qrToken": "26271428",
+          "qrStatus": "pending"
+        },
+        "1154219000038276005-1154219000038276009-1": {
+          "machineUnitId": "1154219000038276005-1154219000038276009-1",
+          "lineItemId": "1154219000038276009",
+          "serialNumber": "26271429",
+          "qrToken": "26271429",
+          "qrStatus": "pending"
+        },
+        "1154219000038276005-1154219000038276010-1": {
+          "machineUnitId": "1154219000038276005-1154219000038276010-1",
+          "lineItemId": "1154219000038276010",
+          "serialNumber": "26271430",
+          "qrToken": "26271430",
+          "qrStatus": "pending"
         }
       }
     }
