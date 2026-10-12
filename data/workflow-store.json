@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271425,
+  "serialCounter": 26271426,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -50505,6 +50505,78 @@
           "zohoBackupSyncedAt": "2026-10-12T06:30:47.175Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "manual-so-08130": {
+      "salesOrderId": "manual-so-08130",
+      "salesOrderNumber": "SO-08130",
+      "status": "open",
+      "processedOrder": {
+        "id": "manual-so-08130",
+        "zohoSalesOrderId": "manual-so-08130",
+        "salesOrderNumber": "SO-08130",
+        "status": "open",
+        "customerName": "Rajinder Ji",
+        "shippingAddress": "L-335, Camp no, 3 JJ Colony, Nangloi, 110041 Delhi, India",
+        "salesperson": "Deepak Kumar",
+        "orderDate": "2026-10-12",
+        "expectedShipmentDate": "2026-10-12",
+        "deliveryDate": "2026-10-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "subtotal": 37000,
+        "cgst": 3330,
+        "sgst": 3330,
+        "total": 43660,
+        "note": "cash received give arvind ji",
+        "lineItems": [
+          {
+            "id": "manual-so-08130-line-1",
+            "itemName": "Foil Stamping machine",
+            "sku": "",
+            "description": "900",
+            "hsnSac": "84532000",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "unit": "Set",
+            "woodenPackingRequired": false,
+            "rate": 37000,
+            "amount": 37000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "manual-so-08130-manual-so-08130-line-1-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "manual-so-08130",
+            "lineItemId": "manual-so-08130-line-1",
+            "itemName": "Foil Stamping machine",
+            "sku": "",
+            "customerName": "Rajinder Ji",
+            "salesOrderNumber": "SO-08130",
+            "deliveryDate": "2026-10-12",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "900"
+          }
+        ]
+      },
+      "machines": {
+        "manual-so-08130-manual-so-08130-line-1-1": {
+          "machineUnitId": "manual-so-08130-manual-so-08130-line-1-1",
+          "lineItemId": "manual-so-08130-line-1",
+          "serialNumber": "26271426",
+          "qrToken": "26271426",
+          "qrStatus": "pending"
         }
       }
     }
