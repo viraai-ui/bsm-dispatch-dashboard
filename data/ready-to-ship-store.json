@@ -10377,6 +10377,37 @@
           "phone": ""
         }
       }
+    },
+    "manual-so-08130": {
+      "id": "ship-1791804996852-ubcwc",
+      "itemId": "manual-so-08130",
+      "orderId": "manual-so-08130",
+      "machineId": "manual-so-08130-manual-so-08130-line-1-1",
+      "salesOrderNumber": "SO-08130",
+      "customerName": "Rajinder Ji",
+      "customerPhone": "",
+      "salespersonName": "Deepak Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-12",
+      "notes": "",
+      "shippedAt": "2026-10-12T11:36:36.852Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
