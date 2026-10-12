@@ -50511,7 +50511,7 @@
     "manual-so-08130": {
       "salesOrderId": "manual-so-08130",
       "salesOrderNumber": "SO-08130",
-      "status": "open",
+      "status": "qr_generated",
       "processedOrder": {
         "id": "manual-so-08130",
         "zohoSalesOrderId": "manual-so-08130",
@@ -50576,7 +50576,10 @@
           "lineItemId": "manual-so-08130-line-1",
           "serialNumber": "26271426",
           "qrToken": "26271426",
-          "qrStatus": "pending"
+          "qrStatus": "generated",
+          "qrGeneratedAt": "2026-10-12T09:00:00.093Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-12T09:00:08.925Z"
         }
       }
     }
