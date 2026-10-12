@@ -50511,7 +50511,9 @@
     "manual-so-08130": {
       "salesOrderId": "manual-so-08130",
       "salesOrderNumber": "SO-08130",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-12T09:00:46.280Z",
       "processedOrder": {
         "id": "manual-so-08130",
         "zohoSalesOrderId": "manual-so-08130",
@@ -50550,8 +50552,8 @@
           {
             "id": "manual-so-08130-manual-so-08130-line-1-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271426",
+            "qrToken": "26271426",
             "orderId": "manual-so-08130",
             "lineItemId": "manual-so-08130-line-1",
             "itemName": "Foil Stamping machine",
@@ -50559,14 +50561,17 @@
             "customerName": "Rajinder Ji",
             "salesOrderNumber": "SO-08130",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "900"
+            "itemDescription": "900",
+            "warrantyStart": "2026-10-12",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ]
       },
@@ -50578,11 +50583,14 @@
           "qrToken": "26271426",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T09:00:00.093Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-12T09:00:08.925Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-12T09:00:46.280Z",
           "zohoBackupLastAttemptAt": "2026-10-12T09:00:45.410Z",
           "zohoBackupSyncedAt": "2026-10-12T09:00:45.410Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-12T09:00:46.280Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
