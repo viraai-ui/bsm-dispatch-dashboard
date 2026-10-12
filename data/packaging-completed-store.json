@@ -29433,6 +29433,101 @@
       "machineIds": [
         "manual-so-08130-manual-so-08130-line-1-1"
       ]
+    },
+    "1154219000038259001": {
+      "completedAt": "2026-10-12T11:56:47.382Z",
+      "order": {
+        "id": "1154219000038259001",
+        "zohoSalesOrderId": "1154219000038259001",
+        "salesOrderNumber": "SO-08128",
+        "status": "open",
+        "customerName": "Rimras Shoes Pvt Ltd",
+        "shippingAddress": "S.F. No 12/1,2,3,4,5 Gudiyattam Road, Chinnavarikam Village, Ayithamput Bus Stop, Ambur, Tamil Nadu, 635811",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038259004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225787",
+            "rate": 27000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038259005",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Cutting Blade / Knife (1 Packet 10 Pcs) for BS-902",
+            "quantity": 10,
+            "pendingQuantity": 10,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 90,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038259006",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Round Blade / Knife support for BS-902",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 280,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038259007",
+            "itemName": "Spare Parts (Shoe Machine)",
+            "sku": "",
+            "description": "Belt for BS-902",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000001709067",
+            "rate": 150,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038259001-1154219000038259004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271425",
+            "qrToken": "26271425",
+            "orderId": "1154219000038259001",
+            "lineItemId": "1154219000038259004",
+            "itemName": "Round Blade Edge trimming Machine",
+            "sku": "902",
+            "customerName": "Rimras Shoes Pvt Ltd",
+            "salesOrderNumber": "SO-08128",
+            "deliveryDate": "2026-10-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "dispatchNote": "Wooden"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-12T11:14:06+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038259001-1154219000038259004-1"
+      ]
     }
   }
 }
