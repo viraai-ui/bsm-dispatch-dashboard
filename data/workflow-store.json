@@ -50678,7 +50678,9 @@
     "1154219000038276005": {
       "salesOrderId": "1154219000038276005",
       "salesOrderNumber": "SO-08132",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-12T10:49:35.859Z",
       "processedOrder": {
         "id": "1154219000038276005",
         "zohoSalesOrderId": "1154219000038276005",
@@ -50732,8 +50734,8 @@
           {
             "id": "1154219000038276005-1154219000038276008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271428",
+            "qrToken": "26271428",
             "orderId": "1154219000038276005",
             "lineItemId": "1154219000038276008",
             "itemName": "Single needle post bed Drop feed",
@@ -50741,20 +50743,23 @@
             "customerName": "Ganesh Footwear",
             "salesOrderNumber": "SO-08132",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038276005-1154219000038276009-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271429",
+            "qrToken": "26271429",
             "orderId": "1154219000038276005",
             "lineItemId": "1154219000038276009",
             "itemName": "Double Needle Post Bed Drop Feed",
@@ -50762,20 +50767,23 @@
             "customerName": "Ganesh Footwear",
             "salesOrderNumber": "SO-08132",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038276005-1154219000038276010-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271430",
+            "qrToken": "26271430",
             "orderId": "1154219000038276005",
             "lineItemId": "1154219000038276010",
             "itemName": "Manual Fusing Machine (16*24 inches)",
@@ -50783,14 +50791,17 @@
             "customerName": "Ganesh Footwear",
             "salesOrderNumber": "SO-08132",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "vendor": "Ishu",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-12T16:12:10+0530"
@@ -50804,7 +50815,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T10:46:30.036Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-12T10:46:40.110Z"
+          "zohoBackupQueuedAt": "2026-10-12T10:49:35.859Z",
+          "processedAt": "2026-10-12T10:49:35.859Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038276005-1154219000038276009-1": {
           "machineUnitId": "1154219000038276005-1154219000038276009-1",
@@ -50814,7 +50828,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T10:46:30.036Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-12T10:46:40.110Z"
+          "zohoBackupQueuedAt": "2026-10-12T10:49:35.859Z",
+          "processedAt": "2026-10-12T10:49:35.859Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038276005-1154219000038276010-1": {
           "machineUnitId": "1154219000038276005-1154219000038276010-1",
@@ -50824,7 +50841,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T10:46:30.036Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-12T10:46:40.110Z"
+          "zohoBackupQueuedAt": "2026-10-12T10:49:35.859Z",
+          "processedAt": "2026-10-12T10:49:35.859Z",
+          "dispatchNote": "Local",
+          "vendor": "Ishu"
         }
       }
     }
