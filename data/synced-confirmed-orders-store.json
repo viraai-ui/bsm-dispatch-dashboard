@@ -10946,7 +10946,35 @@
           "itemDescription": "Belt for BS-902"
         }
       ],
-      "zohoLastModifiedTime": "2026-10-12T11:10:02+0530"
+      "zohoLastModifiedTime": "2026-10-12T11:14:06+0530"
+    },
+    "1154219000038261001": {
+      "id": "1154219000038261001",
+      "zohoSalesOrderId": "1154219000038261001",
+      "salesOrderNumber": "SO-08129",
+      "status": "open",
+      "customerName": "WALKAROO INTERNATIONAL PVT LTD - Hr",
+      "shippingAddress": "Plot No. 35, Sector-4B, HSIIDC, Industrial Estate, Bahadurgarh, Haryana, 124507, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-12",
+      "dashboardStatus": "Review Required",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038261004",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 200,
+          "pendingQuantity": 200,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 300,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [],
+      "zohoLastModifiedTime": "2026-10-12T11:28:40+0530"
     }
   },
   "orderIds": [
@@ -11070,10 +11098,11 @@
     "1154219000038194001",
     "1154219000038166004",
     "1154219000038183021",
-    "1154219000038259001"
+    "1154219000038259001",
+    "1154219000038261001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-12T05:40:31.352Z",
-  "lastAttemptAt": "2026-10-12T06:00:27.460Z",
+  "lastSuccessfulSyncAt": "2026-10-12T06:00:36.443Z",
+  "lastAttemptAt": "2026-10-12T06:00:36.443Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
