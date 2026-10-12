@@ -50864,7 +50864,9 @@
     "1154219000038279008": {
       "salesOrderId": "1154219000038279008",
       "salesOrderNumber": "SO-08133",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-12T12:39:26.840Z",
       "processedOrder": {
         "id": "1154219000038279008",
         "zohoSalesOrderId": "1154219000038279008",
@@ -50894,8 +50896,8 @@
           {
             "id": "1154219000038279008-1154219000038279011-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271431",
+            "qrToken": "26271431",
             "orderId": "1154219000038279008",
             "lineItemId": "1154219000038279011",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -50903,14 +50905,17 @@
             "customerName": "GIK INTERNATIONAL",
             "salesOrderNumber": "SO-08133",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-12T18:02:11+0530"
@@ -50924,7 +50929,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T12:36:33.233Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-12T12:36:43.220Z"
+          "zohoBackupQueuedAt": "2026-10-12T12:39:26.840Z",
+          "processedAt": "2026-10-12T12:39:26.840Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
