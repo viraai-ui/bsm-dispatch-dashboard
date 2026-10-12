@@ -12177,6 +12177,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-12T17:36:32+0530"
+    },
+    "1154219000038279008": {
+      "id": "1154219000038279008",
+      "zohoSalesOrderId": "1154219000038279008",
+      "salesOrderNumber": "SO-08133",
+      "status": "open",
+      "customerName": "GIK INTERNATIONAL",
+      "shippingAddress": "GROUND, WZ-306, MADIPUR VILLAGE, JWALAHERI,, West Delhi,, 110063, India",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-12",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038279011",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000280682",
+          "rate": 29000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038279008-1154219000038279011-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038279008",
+          "lineItemId": "1154219000038279011",
+          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+          "sku": "103 Big",
+          "customerName": "GIK INTERNATIONAL",
+          "salesOrderNumber": "SO-08133",
+          "deliveryDate": "2026-10-12",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-12T18:02:11+0530"
     }
   },
   "orderIds": [
@@ -12304,10 +12354,11 @@
     "1154219000038261001",
     "manual-so-08130",
     "1154219000038281001",
-    "1154219000038276005"
+    "1154219000038276005",
+    "1154219000038279008"
   ],
-  "lastSuccessfulSyncAt": "2026-10-12T12:20:32.675Z",
-  "lastAttemptAt": "2026-10-12T12:36:00.793Z",
+  "lastSuccessfulSyncAt": "2026-10-12T12:36:07.790Z",
+  "lastAttemptAt": "2026-10-12T12:36:07.790Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
