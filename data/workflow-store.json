@@ -50598,7 +50598,9 @@
     "1154219000038281001": {
       "salesOrderId": "1154219000038281001",
       "salesOrderNumber": "SO-08131",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-12T10:11:32.324Z",
       "processedOrder": {
         "id": "1154219000038281001",
         "zohoSalesOrderId": "1154219000038281001",
@@ -50628,8 +50630,8 @@
           {
             "id": "1154219000038281001-1154219000038281004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271427",
+            "qrToken": "26271427",
             "orderId": "1154219000038281001",
             "lineItemId": "1154219000038281004",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -50637,14 +50639,17 @@
             "customerName": "June Shoes LLP",
             "salesOrderNumber": "SO-08131",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "vendor": "K S",
+            "dispatchNote": "Wooden"
           }
         ],
         "zohoLastModifiedTime": "2026-10-12T15:17:39+0530"
@@ -50657,11 +50662,14 @@
           "qrToken": "26271427",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-12T09:57:28.453Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-12T09:57:38.051Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-12T10:11:32.324Z",
           "zohoBackupLastAttemptAt": "2026-10-12T10:00:45.427Z",
           "zohoBackupSyncedAt": "2026-10-12T10:00:45.427Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-12T10:11:32.324Z",
+          "dispatchNote": "Wooden",
+          "vendor": "K S"
         }
       }
     }
