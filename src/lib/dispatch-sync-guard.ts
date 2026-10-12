@@ -56,14 +56,15 @@ export async function releaseDispatchLease(owner: string) {
 }
 
 /** Atomically reserves one Dispatch business API call. Rejection performs zero provider calls. */
-export async function consumeDispatchCall() {
+export async function reserveDispatchCalls(count = 1) {
+  if (!Number.isInteger(count) || count < 1 || count > 16) throw new Error('INVALID_DISPATCH_ZOHO_RESERVATION')
   let allowed = false
   const state = await update((current) => {
     allowed = false
     if (current.circuitUntil && new Date(current.circuitUntil).getTime() > Date.now()) return current
-    if (current.used >= current.limit) return current
+    if (current.used + count > current.limit) return current
     allowed = true
-    return { ...current, used: current.used + 1, lastCallAt: new Date().toISOString() }
+    return { ...current, used: current.used + count, lastCallAt: new Date().toISOString() }
   })
   if (!allowed) {
     if (state.circuitUntil && new Date(state.circuitUntil).getTime() > Date.now()) throw new Error(`DISPATCH_ZOHO_CIRCUIT_OPEN_UNTIL_${state.circuitUntil}`)
@@ -71,6 +72,8 @@ export async function consumeDispatchCall() {
   }
   return state
 }
+
+export async function consumeDispatchCall() { return reserveDispatchCalls(1) }
 
 export async function openDispatchCircuit(until: Date, reason: string) {
   return update((current) => ({ ...current, circuitUntil: until.toISOString(), circuitReason: reason.slice(0, 300) }))

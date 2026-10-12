@@ -24,9 +24,19 @@ test('provider business calls reserve budget and 429 opens circuit without retry
   assert.match(get, /response\.status === 429/)
   assert.match(get, /await openDispatchCircuit/)
   assert.doesNotMatch(get, /setTimeout|for\s*\(/)
-  assert.match(guard, /if \(current\.used >= current\.limit\) return current/)
+  assert.match(guard, /current\.used \+ count > current\.limit/)
   assert.match(guard, /DISPATCH_ZOHO_DAILY_BUDGET_EXHAUSTED/)
   assert.match(guard, /now \+ raw \* 1000/)
+})
+
+test('routine sync reserves one bounded batch instead of writing its guard per provider call', () => {
+  const routine = zoho.slice(zoho.indexOf('export async function fetchZohoConfirmedOrders'), zoho.indexOf('async function enrichZohoLineItemDescriptions'))
+  assert.match(routine, /await reserveDispatchCalls\(1 \+ boundedDetailCap\)/)
+  assert.match(routine, /token, true\)/)
+  assert.match(routine, /token, 2, true\)/)
+  assert.doesNotMatch(routine, /consumeDispatchCall/)
+  assert.match(guard, /count > 16/)
+  assert.match(guard, /current\.used \+ count > current\.limit/)
 })
 
 test('global durable lease covers routine and per-order manual sync', () => {

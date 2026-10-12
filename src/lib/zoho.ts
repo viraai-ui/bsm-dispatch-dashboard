@@ -1,7 +1,7 @@
 import type { MachineUnit, Order, OrderLineItem } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { isOpenZohoSalesOrderSummary } from './zoho-sales-order-feed'
-import { consumeDispatchCall, openDispatchCircuit, providerResetAt } from './dispatch-sync-guard'
+import { consumeDispatchCall, openDispatchCircuit, providerResetAt, reserveDispatchCalls } from './dispatch-sync-guard'
 
 const dc = process.env.ZOHO_DC || 'in'
 const accountsDomain = `https://accounts.zoho.${dc}`
@@ -48,8 +48,8 @@ async function refreshAccessToken() {
   throw new Error(data.error_description || data.error || 'Unable to refresh Zoho token')
 }
 
-async function zohoGet(path: string, token: string) {
-  await consumeDispatchCall()
+async function zohoGet(path: string, token: string, reserved = false) {
+  if (!reserved) await consumeDispatchCall()
   const separator = path.includes('?') ? '&' : '?'
   const url = `${apiDomain}${path}${separator}organization_id=${process.env.ZOHO_ORGANIZATION_ID}`
   const response = await fetch(url, { headers: { Authorization: `Zoho-oauthtoken ${token}` }, cache: 'no-store' })
@@ -63,9 +63,9 @@ async function zohoGet(path: string, token: string) {
   return data
 }
 
-async function zohoGetWithRetry(path: string, token: string, retries = 1) {
+async function zohoGetWithRetry(path: string, token: string, retries = 1, reserved = false) {
   void retries
-  return zohoGet(path, token)
+  return zohoGet(path, token, reserved)
 }
 
 function isOpenOrder(raw: any) {
@@ -281,10 +281,14 @@ export async function fetchZohoConfirmedOrders(known: Record<string, Order> = {}
   // Routine sync is exactly one newest-first page. Historical import is separate
   // and disabled; it is never called by cron, browser polling, or manual sync.
   const pageSize = Math.min(15, Math.max(1, limit))
+  const boundedDetailCap = Math.min(15, Math.max(0, detailCap))
+  // Reserve the worst-case provider budget in one durable CAS. The previous
+  // per-request guard amplified one bounded sync into up to 32 GitHub API calls.
+  await reserveDispatchCalls(1 + boundedDetailCap)
   // Filter at the provider before applying the strict page cap. Without this,
   // newer drafts/closed orders can fill the page and hide a confirmed order,
   // making a successful sync appear to fetch nothing.
-  const list = await zohoGet(`/inventory/v1/salesorders?per_page=${pageSize}&page=1&filter_by=Status.Confirmed&sort_column=created_time&sort_order=D`, token)
+  const list = await zohoGet(`/inventory/v1/salesorders?per_page=${pageSize}&page=1&filter_by=Status.Confirmed&sort_column=created_time&sort_order=D`, token, true)
   const summaries: any[] = Array.isArray(list.salesorders) ? list.salesorders.slice(0, pageSize) : []
   const open = summaries.filter(isOpenOrder)
   if (summaries.length > 0 && open.length === 0) throw new Error('Zoho sales-order feed returned no open sales orders')
@@ -292,15 +296,15 @@ export async function fetchZohoConfirmedOrders(known: Record<string, Order> = {}
     const previous = known[String(summary.salesorder_id)]
     const revision = summary.last_modified_time || summary.updated_time
     return !previous || !revision || previous.zohoLastModifiedTime !== revision
-  }).slice(0, Math.min(15, Math.max(0, detailCap)))
-  return fetchZohoOrderDetailsInBatches(changed.map((summary: any) => String(summary.salesorder_id)), token)
+  }).slice(0, boundedDetailCap)
+  return fetchZohoOrderDetailsInBatches(changed.map((summary: any) => String(summary.salesorder_id)), token, 2, true)
 }
 
-async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 2): Promise<Order[]> {
+async function fetchZohoOrderDetailsInBatches(ids: string[], token: string, batchSize = 2, reserved = false): Promise<Order[]> {
   const detailed: Order[] = []
   for (let index = 0; index < ids.length; index += batchSize) {
     const batch = ids.slice(index, index + batchSize)
-    const orders = await Promise.all(batch.map((id) => fetchZohoOrderDetailWithToken(id, token)))
+    const orders = await Promise.all(batch.map((id) => fetchZohoOrderDetailWithToken(id, token, reserved)))
     detailed.push(...orders)
     if (index + batchSize < ids.length) await new Promise((resolve) => setTimeout(resolve, 2_000))
   }
@@ -331,8 +335,8 @@ async function enrichZohoLineItemDescriptions(order: any, token: string) {
   }
 }
 
-async function fetchZohoOrderDetailWithToken(id: string, token: string): Promise<Order> {
-  const detail = await zohoGetWithRetry(`/inventory/v1/salesorders/${id}`, token)
+async function fetchZohoOrderDetailWithToken(id: string, token: string, reserved = false): Promise<Order> {
+  const detail = await zohoGetWithRetry(`/inventory/v1/salesorders/${id}`, token, 1, reserved)
   if (!detail.salesorder?.salesorder_id || String(detail.salesorder.salesorder_id) !== String(id)) throw new Error(`Invalid Zoho sales order detail for ${id}`)
   const sourceStatus = String(detail.salesorder.status || detail.salesorder.current_sub_status || detail.salesorder.order_status || '').toLowerCase()
   if (['cancelled', 'canceled', 'void', 'closed', 'rejected', 'deleted'].includes(sourceStatus)) throw new Error('ORDER_UNAVAILABLE_IN_ZOHO')
