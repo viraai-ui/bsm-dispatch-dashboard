@@ -10339,6 +10339,44 @@
           "phone": ""
         }
       }
+    },
+    "1154219000035685001": {
+      "id": "ship-1791792817328-ep3b1",
+      "itemId": "1154219000035685001",
+      "orderId": "1154219000035685001",
+      "machineId": "1154219000035685001-1154219000035685004-1",
+      "salesOrderNumber": "SO-07727",
+      "customerName": "Unipatch Rubber Ltd",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "VRL Logistics",
+      "transporterPhone": "",
+      "shipmentType": "transporter",
+      "lrCopy": {
+        "name": "WhatsApp Image 2026-10-10 at 2.21.01 PM.jpeg",
+        "type": "image/jpeg",
+        "url": "/api/r2/view?key=media-proof%2Fshipment%2F2026-10-12%2FSO-07727%2Fshipment-lr-builty%2FShipment-LR-Builty-2026-10-12T08-13-34-001Z.jpeg",
+        "r2Key": "media-proof/shipment/2026-10-12/SO-07727/shipment-lr-builty/Shipment-LR-Builty-2026-10-12T08-13-34-001Z.jpeg",
+        "expiresAt": null,
+        "uploadedAt": "2026-10-12T08:13:37.328Z"
+      },
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-10",
+      "notes": "",
+      "shippedAt": "2026-10-12T08:13:37.328Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
