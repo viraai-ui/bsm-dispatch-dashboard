@@ -12253,15 +12253,15 @@
           "dispatchCategory": "machine"
         },
         {
-          "id": "1154219000038299008",
-          "itemName": "Pattern sewing machine (300x200 mm)",
-          "sku": "3020",
+          "id": "1154219000038279056",
+          "itemName": "Pattern Sewing Machine (350x250 mm)",
+          "sku": "3525",
           "description": "",
           "quantity": 1,
           "pendingQuantity": 1,
           "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000227098",
-          "rate": 280000,
+          "zohoItemId": "1154219000034751157",
+          "rate": 295000,
           "dispatchCategory": "machine"
         },
         {
@@ -12300,14 +12300,14 @@
           "itemDescription": "Electricity Load:- 3kw"
         },
         {
-          "id": "1154219000038299004-1154219000038299008-1",
+          "id": "1154219000038299004-1154219000038279056-1",
           "unitNumber": 2,
           "serialNumber": "",
           "qrToken": "",
           "orderId": "1154219000038299004",
-          "lineItemId": "1154219000038299008",
-          "itemName": "Pattern sewing machine (300x200 mm)",
-          "sku": "3020",
+          "lineItemId": "1154219000038279056",
+          "itemName": "Pattern Sewing Machine (350x250 mm)",
+          "sku": "3525",
           "customerName": "ROSEUS PRIVATE LIMITED",
           "salesOrderNumber": "SO-08136",
           "deliveryDate": "2026-10-13",
@@ -12342,7 +12342,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-10-13T10:46:54+0530"
+      "zohoLastModifiedTime": "2026-10-13T11:22:48+0530"
     },
     "1154219000038276020": {
       "id": "1154219000038276020",
@@ -12765,8 +12765,8 @@
     "1154219000038276020",
     "1154219000038275005"
   ],
-  "lastSuccessfulSyncAt": "2026-10-13T05:40:33.033Z",
-  "lastAttemptAt": "2026-10-13T06:00:26.262Z",
+  "lastSuccessfulSyncAt": "2026-10-13T06:00:33.313Z",
+  "lastAttemptAt": "2026-10-13T06:00:33.313Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
