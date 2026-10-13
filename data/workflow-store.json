@@ -51216,7 +51216,9 @@
     "1154219000038277033": {
       "salesOrderId": "1154219000038277033",
       "salesOrderNumber": "SO-08139",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-13T12:01:12.770Z",
       "processedOrder": {
         "id": "1154219000038277033",
         "zohoSalesOrderId": "1154219000038277033",
@@ -51258,8 +51260,8 @@
           {
             "id": "1154219000038277033-1154219000038277036-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271436",
+            "qrToken": "26271436",
             "orderId": "1154219000038277033",
             "lineItemId": "1154219000038277036",
             "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
@@ -51267,20 +51269,23 @@
             "customerName": "Attirare Footwear Pvt Ltd",
             "salesOrderNumber": "SO-08139",
             "deliveryDate": "2026-10-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-13",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038277033-1154219000038277037-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271437",
+            "qrToken": "26271437",
             "orderId": "1154219000038277033",
             "lineItemId": "1154219000038277037",
             "itemName": "Single needle post bed Drop feed",
@@ -51288,20 +51293,23 @@
             "customerName": "Attirare Footwear Pvt Ltd",
             "salesOrderNumber": "SO-08139",
             "deliveryDate": "2026-10-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-13",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038277033-1154219000038277037-2",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271438",
+            "qrToken": "26271438",
             "orderId": "1154219000038277033",
             "lineItemId": "1154219000038277037",
             "itemName": "Single needle post bed Drop feed",
@@ -51309,14 +51317,17 @@
             "customerName": "Attirare Footwear Pvt Ltd",
             "salesOrderNumber": "SO-08139",
             "deliveryDate": "2026-10-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-13",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-13T16:59:59+0530"
@@ -51329,11 +51340,14 @@
           "qrToken": "26271436",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T11:48:47.678Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-13T11:49:00.003Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-13T12:01:12.770Z",
           "zohoBackupLastAttemptAt": "2026-10-13T12:00:46.071Z",
           "zohoBackupSyncedAt": "2026-10-13T12:00:46.071Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-13T12:01:12.770Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038277033-1154219000038277037-1": {
           "machineUnitId": "1154219000038277033-1154219000038277037-1",
@@ -51342,11 +51356,14 @@
           "qrToken": "26271437",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T11:48:47.678Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-13T11:49:00.003Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-13T12:01:12.770Z",
           "zohoBackupLastAttemptAt": "2026-10-13T12:00:46.071Z",
           "zohoBackupSyncedAt": "2026-10-13T12:00:46.071Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-13T12:01:12.770Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038277033-1154219000038277037-2": {
           "machineUnitId": "1154219000038277033-1154219000038277037-2",
@@ -51355,11 +51372,14 @@
           "qrToken": "26271438",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T11:48:47.678Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-13T11:49:00.003Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-13T12:01:12.770Z",
           "zohoBackupLastAttemptAt": "2026-10-13T12:00:46.071Z",
           "zohoBackupSyncedAt": "2026-10-13T12:00:46.071Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-13T12:01:12.770Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
