@@ -10470,6 +10470,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038276020": {
+      "id": "ship-1791876640907-i4w1c",
+      "itemId": "1154219000038276020",
+      "orderId": "1154219000038276020",
+      "machineId": "1154219000038276020-1154219000038276023-1",
+      "salesOrderNumber": "SO-08135",
+      "customerName": "A R V Footwear Private Limited",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "DL04EC3957",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-13",
+      "notes": "",
+      "shippedAt": "2026-10-13T07:30:40.907Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
