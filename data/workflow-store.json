@@ -50943,7 +50943,9 @@
     "1154219000038299004": {
       "salesOrderId": "1154219000038299004",
       "salesOrderNumber": "SO-08136",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-13T05:51:15.838Z",
       "processedOrder": {
         "id": "1154219000038299004",
         "zohoSalesOrderId": "1154219000038299004",
@@ -50997,8 +50999,8 @@
           {
             "id": "1154219000038299004-1154219000038299007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271432",
+            "qrToken": "26271432",
             "orderId": "1154219000038299004",
             "lineItemId": "1154219000038299007",
             "itemName": "Swing Arm Clicker (22 Ton)",
@@ -51006,20 +51008,23 @@
             "customerName": "ROSEUS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08136",
             "deliveryDate": "2026-10-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Electricity Load:- 3kw"
+            "itemDescription": "Electricity Load:- 3kw",
+            "warrantyStart": "2026-10-13",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038299004-1154219000038299008-1",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271433",
+            "qrToken": "26271433",
             "orderId": "1154219000038299004",
             "lineItemId": "1154219000038299008",
             "itemName": "Pattern sewing machine (300x200 mm)",
@@ -51027,20 +51032,23 @@
             "customerName": "ROSEUS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08136",
             "deliveryDate": "2026-10-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-13",
+            "vendor": "Aradhya",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038299004-1154219000038299009-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271434",
+            "qrToken": "26271434",
             "orderId": "1154219000038299004",
             "lineItemId": "1154219000038299009",
             "itemName": "Pneumatic Marginal Gluing Machine",
@@ -51048,14 +51056,17 @@
             "customerName": "ROSEUS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08136",
             "deliveryDate": "2026-10-13",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-13",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-13T10:46:54+0530"
@@ -51068,11 +51079,14 @@
           "qrToken": "26271432",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T05:44:12.175Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-13T05:44:24.162Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-13T05:51:15.838Z",
           "zohoBackupLastAttemptAt": "2026-10-13T05:45:48.801Z",
           "zohoBackupSyncedAt": "2026-10-13T05:45:48.801Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-13T05:51:15.838Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         },
         "1154219000038299004-1154219000038299008-1": {
           "machineUnitId": "1154219000038299004-1154219000038299008-1",
@@ -51081,11 +51095,14 @@
           "qrToken": "26271433",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T05:44:12.175Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-13T05:44:24.162Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-13T05:51:15.838Z",
           "zohoBackupLastAttemptAt": "2026-10-13T05:45:48.801Z",
           "zohoBackupSyncedAt": "2026-10-13T05:45:48.801Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-13T05:51:15.838Z",
+          "dispatchNote": "Local",
+          "vendor": "Aradhya"
         },
         "1154219000038299004-1154219000038299009-1": {
           "machineUnitId": "1154219000038299004-1154219000038299009-1",
@@ -51094,11 +51111,14 @@
           "qrToken": "26271434",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T05:44:12.175Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-13T05:44:24.162Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-13T05:51:15.838Z",
           "zohoBackupLastAttemptAt": "2026-10-13T05:45:48.801Z",
           "zohoBackupSyncedAt": "2026-10-13T05:45:48.801Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-13T05:51:15.838Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
