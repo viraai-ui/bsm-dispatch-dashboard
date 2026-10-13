@@ -10408,6 +10408,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038279008": {
+      "id": "ship-1791871494531-fop62",
+      "itemId": "1154219000038279008",
+      "orderId": "1154219000038279008",
+      "machineId": "1154219000038279008-1154219000038279011-1",
+      "salesOrderNumber": "SO-08133",
+      "customerName": "GIK INTERNATIONAL",
+      "customerPhone": "",
+      "salespersonName": "Shivani Kumari",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-12",
+      "notes": "",
+      "shippedAt": "2026-10-13T06:04:54.531Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
