@@ -10439,6 +10439,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038276005": {
+      "id": "ship-1791872332388-3cljo",
+      "itemId": "1154219000038276005",
+      "orderId": "1154219000038276005",
+      "machineId": "1154219000038276005-1154219000038276008-1",
+      "salesOrderNumber": "SO-08132",
+      "customerName": "Ganesh Footwear",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-12",
+      "notes": "",
+      "shippedAt": "2026-10-13T06:18:52.388Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
