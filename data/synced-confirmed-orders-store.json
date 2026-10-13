@@ -12632,6 +12632,110 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-13T10:38:53+0530"
+    },
+    "1154219000038277033": {
+      "id": "1154219000038277033",
+      "zohoSalesOrderId": "1154219000038277033",
+      "salesOrderNumber": "SO-08139",
+      "status": "open",
+      "customerName": "Attirare Footwear Pvt Ltd",
+      "shippingAddress": "Plot No 1023, MIE , Part A, Bahadurgarh, Jhajjar, Haryana, 124507",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-10-13",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038277036",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226574",
+          "rate": 42500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038277037",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226515",
+          "rate": 23000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038277033-1154219000038277036-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038277033",
+          "lineItemId": "1154219000038277036",
+          "itemName": "Single Needle Post Bed Roller Feed Sewing Machine",
+          "sku": "9910",
+          "customerName": "Attirare Footwear Pvt Ltd",
+          "salesOrderNumber": "SO-08139",
+          "deliveryDate": "2026-10-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000038277033-1154219000038277037-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038277033",
+          "lineItemId": "1154219000038277037",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "Attirare Footwear Pvt Ltd",
+          "salesOrderNumber": "SO-08139",
+          "deliveryDate": "2026-10-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000038277033-1154219000038277037-2",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038277033",
+          "lineItemId": "1154219000038277037",
+          "itemName": "Single needle post bed Drop feed",
+          "sku": "2810",
+          "customerName": "Attirare Footwear Pvt Ltd",
+          "salesOrderNumber": "SO-08139",
+          "deliveryDate": "2026-10-13",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-13T16:59:59+0530"
     }
   },
   "orderIds": [
@@ -12763,10 +12867,11 @@
     "1154219000038279008",
     "1154219000038299004",
     "1154219000038276020",
-    "1154219000038275005"
+    "1154219000038275005",
+    "1154219000038277033"
   ],
-  "lastSuccessfulSyncAt": "2026-10-13T11:20:31.514Z",
-  "lastAttemptAt": "2026-10-13T11:30:18.194Z",
+  "lastSuccessfulSyncAt": "2026-10-13T11:30:23.790Z",
+  "lastAttemptAt": "2026-10-13T11:30:23.790Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
