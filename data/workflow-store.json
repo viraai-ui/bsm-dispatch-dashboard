@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271431,
+  "serialCounter": 26271434,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -50937,6 +50937,150 @@
           "zohoBackupSyncedAt": "2026-10-12T12:45:44.861Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "Able"
+        }
+      }
+    },
+    "1154219000038299004": {
+      "salesOrderId": "1154219000038299004",
+      "salesOrderNumber": "SO-08136",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038299004",
+        "zohoSalesOrderId": "1154219000038299004",
+        "salesOrderNumber": "SO-08136",
+        "status": "open",
+        "customerName": "ROSEUS PRIVATE LIMITED",
+        "shippingAddress": "PLOT NO. - 742 H PACE CITY 2 , SECTOR -37 GURGAON, HARYANA -, 122001, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-13",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038299007",
+            "itemName": "Swing Arm Clicker (22 Ton)",
+            "sku": "",
+            "description": "Electricity Load:- 3kw",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000447145",
+            "rate": 320000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038299008",
+            "itemName": "Pattern sewing machine (300x200 mm)",
+            "sku": "3020",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000227098",
+            "rate": 280000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038299009",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004395037",
+            "rate": 68000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038299004-1154219000038299007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038299004",
+            "lineItemId": "1154219000038299007",
+            "itemName": "Swing Arm Clicker (22 Ton)",
+            "sku": "",
+            "customerName": "ROSEUS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08136",
+            "deliveryDate": "2026-10-13",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Electricity Load:- 3kw"
+          },
+          {
+            "id": "1154219000038299004-1154219000038299008-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038299004",
+            "lineItemId": "1154219000038299008",
+            "itemName": "Pattern sewing machine (300x200 mm)",
+            "sku": "3020",
+            "customerName": "ROSEUS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08136",
+            "deliveryDate": "2026-10-13",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038299004-1154219000038299009-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038299004",
+            "lineItemId": "1154219000038299009",
+            "itemName": "Pneumatic Marginal Gluing Machine",
+            "sku": "",
+            "customerName": "ROSEUS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08136",
+            "deliveryDate": "2026-10-13",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-13T10:46:54+0530"
+      },
+      "machines": {
+        "1154219000038299004-1154219000038299007-1": {
+          "machineUnitId": "1154219000038299004-1154219000038299007-1",
+          "lineItemId": "1154219000038299007",
+          "serialNumber": "26271432",
+          "qrToken": "26271432",
+          "qrStatus": "pending"
+        },
+        "1154219000038299004-1154219000038299008-1": {
+          "machineUnitId": "1154219000038299004-1154219000038299008-1",
+          "lineItemId": "1154219000038299008",
+          "serialNumber": "26271433",
+          "qrToken": "26271433",
+          "qrStatus": "pending"
+        },
+        "1154219000038299004-1154219000038299009-1": {
+          "machineUnitId": "1154219000038299004-1154219000038299009-1",
+          "lineItemId": "1154219000038299009",
+          "serialNumber": "26271434",
+          "qrToken": "26271434",
+          "qrStatus": "pending"
         }
       }
     }
