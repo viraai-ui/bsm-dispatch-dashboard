@@ -29528,6 +29528,65 @@
       "machineIds": [
         "1154219000038259001-1154219000038259004-1"
       ]
+    },
+    "1154219000038279008": {
+      "completedAt": "2026-10-13T06:03:16.282Z",
+      "order": {
+        "id": "1154219000038279008",
+        "zohoSalesOrderId": "1154219000038279008",
+        "salesOrderNumber": "SO-08133",
+        "status": "open",
+        "customerName": "GIK INTERNATIONAL",
+        "shippingAddress": "GROUND, WZ-306, MADIPUR VILLAGE, JWALAHERI,, West Delhi,, 110063, India",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-12",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038279011",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000280682",
+            "rate": 29000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038279008-1154219000038279011-1",
+            "unitNumber": 1,
+            "serialNumber": "26271431",
+            "qrToken": "26271431",
+            "orderId": "1154219000038279008",
+            "lineItemId": "1154219000038279011",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "GIK INTERNATIONAL",
+            "salesOrderNumber": "SO-08133",
+            "deliveryDate": "2026-10-12",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-12",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-12T18:02:11+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038279008-1154219000038279011-1"
+      ]
     }
   }
 }
