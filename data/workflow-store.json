@@ -51125,7 +51125,9 @@
     "1154219000038276020": {
       "salesOrderId": "1154219000038276020",
       "salesOrderNumber": "SO-08135",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-13T05:55:19.628Z",
       "processedOrder": {
         "id": "1154219000038276020",
         "zohoSalesOrderId": "1154219000038276020",
@@ -51155,8 +51157,8 @@
           {
             "id": "1154219000038276020-1154219000038276023-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271435",
+            "qrToken": "26271435",
             "orderId": "1154219000038276020",
             "lineItemId": "1154219000038276023",
             "itemName": "Hotmelt Spray machine (Double station)",
@@ -51164,14 +51166,17 @@
             "customerName": "A R V Footwear Private Limited",
             "salesOrderNumber": "SO-08135",
             "deliveryDate": "2026-10-12",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-13",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-13T10:39:23+0530"
@@ -51185,7 +51190,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-13T05:51:44.876Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-13T05:51:56.603Z"
+          "zohoBackupQueuedAt": "2026-10-13T05:55:19.628Z",
+          "processedAt": "2026-10-13T05:55:19.628Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
