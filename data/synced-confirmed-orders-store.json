@@ -12990,155 +12990,6 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-14T14:06:55+0530"
-    },
-    "1154219000038398003": {
-      "id": "1154219000038398003",
-      "zohoSalesOrderId": "1154219000038398003",
-      "salesOrderNumber": "SO-08146",
-      "status": "open",
-      "customerName": "BALAJI COLLECTION",
-      "shippingAddress": "PLOT NO - 4 GROUND FLOOR, HOUSE NO NEW RZ-2, KHASRA NO 355, NEAR PNB ATM, PH-1 CITY, PARTAP VIHAR, Delhi, 110041, India",
-      "salesperson": "Deepak Kumar",
-      "deliveryDate": "2026-10-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000038398006",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": true,
-          "zohoItemId": "1154219000000280682",
-          "rate": 31000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000038398003-1154219000038398006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000038398003",
-          "lineItemId": "1154219000038398006",
-          "itemName": "Latex Glue Applicator (roller type) (16 inch)",
-          "sku": "103 Big",
-          "customerName": "BALAJI COLLECTION",
-          "salesOrderNumber": "SO-08146",
-          "deliveryDate": "2026-10-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Pending",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-10-14T16:08:45+0530"
-    },
-    "1154219000038384015": {
-      "id": "1154219000038384015",
-      "zohoSalesOrderId": "1154219000038384015",
-      "salesOrderNumber": "SO-08145",
-      "status": "open",
-      "customerName": "Pioneer Tech",
-      "shippingAddress": "304,Raj Appartments,Kale-Ka-Taal Delhi Gate,Hariparvat Road, Agra, Uttar Pradesh, 282002, India",
-      "deliveryDate": "2026-10-14",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000038384018",
-          "itemName": "Tape folding machine (heavy duty)",
-          "sku": "12",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278847",
-          "rate": 40000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000038384015-1154219000038384018-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000038384015",
-          "lineItemId": "1154219000038384018",
-          "itemName": "Tape folding machine (heavy duty)",
-          "sku": "12",
-          "customerName": "Pioneer Tech",
-          "salesOrderNumber": "SO-08145",
-          "deliveryDate": "2026-10-14",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-10-14T16:01:16+0530"
-    },
-    "1154219000038410003": {
-      "id": "1154219000038410003",
-      "zohoSalesOrderId": "1154219000038410003",
-      "salesOrderNumber": "SO-08144",
-      "status": "open",
-      "customerName": "ROYAL MARKETERS",
-      "shippingAddress": "BASTI PEER DAAD, ROYAL MARKETERS, SANGAL SOHAL ROAD, JALANDHAR,, Jalandhar, Punjab, 144021, India",
-      "salesperson": "Karan Singh",
-      "deliveryDate": "2026-10-19",
-      "dashboardStatus": "Not Generated",
-      "reviewRequired": false,
-      "lineItems": [
-        {
-          "id": "1154219000038410006",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "description": "",
-          "quantity": 1,
-          "pendingQuantity": 1,
-          "woodenPackingRequired": false,
-          "zohoItemId": "1154219000000278034",
-          "rate": 575000,
-          "dispatchCategory": "machine"
-        }
-      ],
-      "machines": [
-        {
-          "id": "1154219000038410003-1154219000038410006-1",
-          "unitNumber": 1,
-          "serialNumber": "",
-          "qrToken": "",
-          "orderId": "1154219000038410003",
-          "lineItemId": "1154219000038410006",
-          "itemName": "Hydraulic Sole Attaching machine",
-          "sku": "917",
-          "customerName": "ROYAL MARKETERS",
-          "salesOrderNumber": "SO-08144",
-          "deliveryDate": "2026-10-19",
-          "status": "Not Generated",
-          "selectedForBatch": false,
-          "woodenPacking": "Not Required",
-          "qrPasted": false,
-          "qcDone": false,
-          "mediaPhotos": 0,
-          "mediaVideos": 0,
-          "itemDescription": ""
-        }
-      ],
-      "zohoLastModifiedTime": "2026-10-14T16:01:16+0530"
     }
   },
   "orderIds": [
@@ -13275,13 +13126,10 @@
     "1154219000038355002",
     "1154219000038379002",
     "1154219000038362003",
-    "1154219000038380111",
-    "1154219000038398003",
-    "1154219000038384015",
-    "1154219000038410003"
+    "1154219000038380111"
   ],
-  "lastSuccessfulSyncAt": "2026-10-14T10:39:05.535Z",
-  "lastAttemptAt": "2026-10-14T10:39:05.535Z",
+  "lastSuccessfulSyncAt": "2026-10-14T10:20:33.102Z",
+  "lastAttemptAt": "2026-10-14T10:40:26.090Z",
   "lastError": null,
-  "syncing": false
+  "syncing": true
 }
