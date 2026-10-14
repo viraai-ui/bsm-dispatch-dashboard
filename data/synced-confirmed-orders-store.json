@@ -12736,6 +12736,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-13T16:59:59+0530"
+    },
+    "1154219000038355002": {
+      "id": "1154219000038355002",
+      "zohoSalesOrderId": "1154219000038355002",
+      "salesOrderNumber": "SO-08140",
+      "status": "open",
+      "customerName": "QUANTUM INTERNATIONAL",
+      "shippingAddress": "Kh.No.155/91, Industrial Plot Of Village Pooth Khurd, New Delhi, North West Delhi, Delhi,, 110039",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038370028",
+          "itemName": "Multiple Angle Tape Cutting Machine (Electronic) (Pneumatic) (With Rotoating Head)",
+          "sku": "369 AHD",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004017451",
+          "rate": 95000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038355002-1154219000038370028-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038355002",
+          "lineItemId": "1154219000038370028",
+          "itemName": "Multiple Angle Tape Cutting Machine (Electronic) (Pneumatic) (With Rotoating Head)",
+          "sku": "369 AHD",
+          "customerName": "QUANTUM INTERNATIONAL",
+          "salesOrderNumber": "SO-08140",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T10:45:40+0530"
     }
   },
   "orderIds": [
@@ -12868,10 +12918,11 @@
     "1154219000038299004",
     "1154219000038276020",
     "1154219000038275005",
-    "1154219000038277033"
+    "1154219000038277033",
+    "1154219000038355002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-14T05:00:32.312Z",
-  "lastAttemptAt": "2026-10-14T05:20:26.581Z",
+  "lastSuccessfulSyncAt": "2026-10-14T05:20:33.244Z",
+  "lastAttemptAt": "2026-10-14T05:20:33.244Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
