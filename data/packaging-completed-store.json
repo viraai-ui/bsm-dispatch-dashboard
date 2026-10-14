@@ -30027,6 +30027,113 @@
         "1154219000038277033-1154219000038277037-1",
         "1154219000038277033-1154219000038277037-2"
       ]
+    },
+    "1154219000038380111": {
+      "completedAt": "2026-10-14T11:02:28.392Z",
+      "order": {
+        "id": "1154219000038380111",
+        "zohoSalesOrderId": "1154219000038380111",
+        "salesOrderNumber": "SO-08143",
+        "status": "open",
+        "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "shippingAddress": "KH NO.-88/14,88/15 MUNDKA ,WEST DELHI, Delhi, 110041",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "description": "",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000003664009",
+            "rate": 24000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038380111-1154219000038380235-1",
+            "unitNumber": 1,
+            "serialNumber": "26271441",
+            "qrToken": "26271441",
+            "orderId": "1154219000038380111",
+            "lineItemId": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08143",
+            "deliveryDate": "2026-10-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000038380111-1154219000038380235-2",
+            "unitNumber": 2,
+            "serialNumber": "26271442",
+            "qrToken": "26271442",
+            "orderId": "1154219000038380111",
+            "lineItemId": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08143",
+            "deliveryDate": "2026-10-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "dispatchNote": "Local"
+          },
+          {
+            "id": "1154219000038380111-1154219000038380235-3",
+            "unitNumber": 3,
+            "serialNumber": "26271443",
+            "qrToken": "26271443",
+            "orderId": "1154219000038380111",
+            "lineItemId": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08143",
+            "deliveryDate": "2026-10-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T14:06:55+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038380111-1154219000038380235-1",
+        "1154219000038380111-1154219000038380235-2",
+        "1154219000038380111-1154219000038380235-3"
+      ]
     }
   }
 }
