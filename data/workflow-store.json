@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271438,
+  "serialCounter": 26271439,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -51383,6 +51383,70 @@
           "dispatchNote": "Local",
           "vendor": "K S",
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000038355002": {
+      "salesOrderId": "1154219000038355002",
+      "salesOrderNumber": "SO-08140",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038355002",
+        "zohoSalesOrderId": "1154219000038355002",
+        "salesOrderNumber": "SO-08140",
+        "status": "open",
+        "customerName": "QUANTUM INTERNATIONAL",
+        "shippingAddress": "Kh.No.155/91, Industrial Plot Of Village Pooth Khurd, New Delhi, North West Delhi, Delhi,, 110039",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038370028",
+            "itemName": "Multiple Angle Tape Cutting Machine (Electronic) (Pneumatic) (With Rotoating Head)",
+            "sku": "369 AHD",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004017451",
+            "rate": 95000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038355002-1154219000038370028-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038355002",
+            "lineItemId": "1154219000038370028",
+            "itemName": "Multiple Angle Tape Cutting Machine (Electronic) (Pneumatic) (With Rotoating Head)",
+            "sku": "369 AHD",
+            "customerName": "QUANTUM INTERNATIONAL",
+            "salesOrderNumber": "SO-08140",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T10:45:40+0530"
+      },
+      "machines": {
+        "1154219000038355002-1154219000038370028-1": {
+          "machineUnitId": "1154219000038355002-1154219000038370028-1",
+          "lineItemId": "1154219000038370028",
+          "serialNumber": "26271439",
+          "qrToken": "26271439",
+          "qrStatus": "pending"
         }
       }
     }
