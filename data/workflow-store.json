@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271443,
+  "serialCounter": 26271444,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -51717,6 +51717,70 @@
           "zohoBackupSyncedAt": "2026-10-14T09:00:49.671Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000038398003": {
+      "salesOrderId": "1154219000038398003",
+      "salesOrderNumber": "SO-08146",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038398003",
+        "zohoSalesOrderId": "1154219000038398003",
+        "salesOrderNumber": "SO-08146",
+        "status": "open",
+        "customerName": "BALAJI COLLECTION",
+        "shippingAddress": "PLOT NO - 4 GROUND FLOOR, HOUSE NO NEW RZ-2, KHASRA NO 355, NEAR PNB ATM, PH-1 CITY, PARTAP VIHAR, Delhi, 110041, India",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038398006",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000280682",
+            "rate": 31000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038398003-1154219000038398006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038398003",
+            "lineItemId": "1154219000038398006",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "BALAJI COLLECTION",
+            "salesOrderNumber": "SO-08146",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T16:08:45+0530"
+      },
+      "machines": {
+        "1154219000038398003-1154219000038398006-1": {
+          "machineUnitId": "1154219000038398003-1154219000038398006-1",
+          "lineItemId": "1154219000038398006",
+          "serialNumber": "26271444",
+          "qrToken": "26271444",
+          "qrStatus": "pending"
         }
       }
     }
