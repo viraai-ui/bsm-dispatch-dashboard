@@ -51562,7 +51562,9 @@
     "1154219000038380111": {
       "salesOrderId": "1154219000038380111",
       "salesOrderNumber": "SO-08143",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-14T08:53:04.327Z",
       "processedOrder": {
         "id": "1154219000038380111",
         "zohoSalesOrderId": "1154219000038380111",
@@ -51592,8 +51594,8 @@
           {
             "id": "1154219000038380111-1154219000038380235-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271441",
+            "qrToken": "26271441",
             "orderId": "1154219000038380111",
             "lineItemId": "1154219000038380235",
             "itemName": "Round Blade Edge trimming Machine (5 %)",
@@ -51601,20 +51603,23 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08143",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038380111-1154219000038380235-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271442",
+            "qrToken": "26271442",
             "orderId": "1154219000038380111",
             "lineItemId": "1154219000038380235",
             "itemName": "Round Blade Edge trimming Machine (5 %)",
@@ -51622,20 +51627,23 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08143",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           },
           {
             "id": "1154219000038380111-1154219000038380235-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271443",
+            "qrToken": "26271443",
             "orderId": "1154219000038380111",
             "lineItemId": "1154219000038380235",
             "itemName": "Round Blade Edge trimming Machine (5 %)",
@@ -51643,14 +51651,17 @@
             "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
             "salesOrderNumber": "SO-08143",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T14:06:55+0530"
@@ -51664,7 +51675,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-14T08:47:03.494Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-14T08:47:18.013Z"
+          "zohoBackupQueuedAt": "2026-10-14T08:53:04.327Z",
+          "processedAt": "2026-10-14T08:53:04.327Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038380111-1154219000038380235-2": {
           "machineUnitId": "1154219000038380111-1154219000038380235-2",
@@ -51674,7 +51688,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-14T08:47:03.494Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-14T08:47:18.013Z"
+          "zohoBackupQueuedAt": "2026-10-14T08:53:04.327Z",
+          "processedAt": "2026-10-14T08:53:04.327Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         },
         "1154219000038380111-1154219000038380235-3": {
           "machineUnitId": "1154219000038380111-1154219000038380235-3",
@@ -51684,7 +51701,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-14T08:47:03.494Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-14T08:47:18.013Z"
+          "zohoBackupQueuedAt": "2026-10-14T08:53:04.327Z",
+          "processedAt": "2026-10-14T08:53:04.327Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
