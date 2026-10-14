@@ -12786,6 +12786,118 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-14T11:42:23+0530"
+    },
+    "1154219000038379002": {
+      "id": "1154219000038379002",
+      "zohoSalesOrderId": "1154219000038379002",
+      "salesOrderNumber": "SO-08142",
+      "status": "open",
+      "customerName": "Liberty Shoes Limited (Karnal)",
+      "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
+      "salesperson": "Deepak Kumar",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038379005",
+          "itemName": "Cover Type Sole Press Double Station (pneumatic)",
+          "sku": "2003-2",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225463",
+          "rate": 88000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038364009",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 5000,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038379002-1154219000038379005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038379002",
+          "lineItemId": "1154219000038379005",
+          "itemName": "Cover Type Sole Press Double Station (pneumatic)",
+          "sku": "2003-2",
+          "customerName": "Liberty Shoes Limited (Karnal)",
+          "salesOrderNumber": "SO-08142",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T12:39:14+0530"
+    },
+    "1154219000038362003": {
+      "id": "1154219000038362003",
+      "zohoSalesOrderId": "1154219000038362003",
+      "salesOrderNumber": "SO-08141",
+      "status": "open",
+      "customerName": "Thermo Care Rockwool India Private Limited",
+      "shippingAddress": "Prabhu Kutir, Ramadhin Marg, Rajnandgaon, Rajnandgaon, Chhattisgarh, 491441",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038362006",
+          "itemName": "Hot Melt Adhesive Melter",
+          "sku": "",
+          "description": "Gear Type Machine Glue Capacity: 5 Ltr 2 Pcs Gun Attachment 2 Pcs Hose Pipe 2 Meter",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000008115171",
+          "rate": 187500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038362003-1154219000038362006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038362003",
+          "lineItemId": "1154219000038362006",
+          "itemName": "Hot Melt Adhesive Melter",
+          "sku": "",
+          "customerName": "Thermo Care Rockwool India Private Limited",
+          "salesOrderNumber": "SO-08141",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Gear Type Machine Glue Capacity: 5 Ltr 2 Pcs Gun Attachment 2 Pcs Hose Pipe 2 Meter"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T12:39:15+0530"
     }
   },
   "orderIds": [
@@ -12919,10 +13031,12 @@
     "1154219000038276020",
     "1154219000038275005",
     "1154219000038277033",
-    "1154219000038355002"
+    "1154219000038355002",
+    "1154219000038379002",
+    "1154219000038362003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-14T06:40:33.107Z",
-  "lastAttemptAt": "2026-10-14T07:20:26.455Z",
+  "lastSuccessfulSyncAt": "2026-10-14T07:20:33.433Z",
+  "lastAttemptAt": "2026-10-14T07:20:33.433Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
