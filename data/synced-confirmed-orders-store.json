@@ -517188,6 +517188,201 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-14T16:44:46+0530"
+    },
+    "1154219000038399006": {
+      "id": "1154219000038399006",
+      "zohoSalesOrderId": "1154219000038399006",
+      "salesOrderNumber": "SO-08154",
+      "status": "open",
+      "customerName": "A B Polymers",
+      "shippingAddress": "C-358, DSIIDC NARELA INDUSTRIAL AREA, DELHI, 110040, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038399009",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000226814",
+          "rate": 82000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038399006-1154219000038399009-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038399006",
+          "lineItemId": "1154219000038399009",
+          "itemName": "zigzag binding (Cylinder bed)",
+          "sku": "2150",
+          "customerName": "A B Polymers",
+          "salesOrderNumber": "SO-08154",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T18:09:48+0530"
+    },
+    "1154219000038405005": {
+      "id": "1154219000038405005",
+      "zohoSalesOrderId": "1154219000038405005",
+      "salesOrderNumber": "SO-08153",
+      "status": "open",
+      "customerName": "DIVINE PACKAGING INDUSTRY",
+      "shippingAddress": "Survey No. 10/3B, No. 125, ORAKKADU VILLAGE, PONNERI TALUK, Chennai, Tiruvallur,, Chennai, Tamil Nadu -, 600067",
+      "salesperson": "Shivani Kumari",
+      "deliveryDate": "2026-10-15",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038405008",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225211",
+          "rate": 50000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038405009",
+          "itemName": "Hotmelt Adhesive - 7100",
+          "sku": "7100",
+          "description": "",
+          "quantity": 50,
+          "pendingQuantity": 50,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000228524",
+          "rate": 340,
+          "dispatchCategory": "adhesive"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038405005-1154219000038405008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038405005",
+          "lineItemId": "1154219000038405008",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "DIVINE PACKAGING INDUSTRY",
+          "salesOrderNumber": "SO-08153",
+          "deliveryDate": "2026-10-15",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T18:09:47+0530"
+    },
+    "1154219000038418016": {
+      "id": "1154219000038418016",
+      "zohoSalesOrderId": "1154219000038418016",
+      "salesOrderNumber": "SO-08152",
+      "status": "open",
+      "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+      "shippingAddress": "46/157, Halsey Road,, Kanpur,, Uttar Pradesh, 208001",
+      "salesperson": "Ram Kumar",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038418019",
+          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+          "sku": "103",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000225043",
+          "rate": 24000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038418020",
+          "itemName": "Freight/ Transportation Charges",
+          "sku": "",
+          "description": "Local Freight Cost from BSM to Mehta Transport Delhi Godown for Booking",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888581",
+          "rate": 1500,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038418016-1154219000038418019-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038418016",
+          "lineItemId": "1154219000038418019",
+          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+          "sku": "103",
+          "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+          "salesOrderNumber": "SO-08152",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000038418016-1154219000038418019-2",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038418016",
+          "lineItemId": "1154219000038418019",
+          "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+          "sku": "103",
+          "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+          "salesOrderNumber": "SO-08152",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T18:09:47+0530"
     }
   },
   "orderIds": [
@@ -517329,10 +517524,13 @@
     "1154219000038384015",
     "1154219000038410003",
     "1154219000038422002",
-    "1154219000038418002"
+    "1154219000038418002",
+    "1154219000038399006",
+    "1154219000038405005",
+    "1154219000038418016"
   ],
-  "lastSuccessfulSyncAt": "2026-10-14T12:20:39.529Z",
-  "lastAttemptAt": "2026-10-14T12:40:27.226Z",
+  "lastSuccessfulSyncAt": "2026-10-14T12:40:44.127Z",
+  "lastAttemptAt": "2026-10-14T12:40:44.127Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
