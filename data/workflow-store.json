@@ -51805,7 +51805,9 @@
     "1154219000038399006": {
       "salesOrderId": "1154219000038399006",
       "salesOrderNumber": "SO-08154",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-14T12:58:08.320Z",
       "processedOrder": {
         "id": "1154219000038399006",
         "zohoSalesOrderId": "1154219000038399006",
@@ -51835,8 +51837,8 @@
           {
             "id": "1154219000038399006-1154219000038399009-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271445",
+            "qrToken": "26271445",
             "orderId": "1154219000038399006",
             "lineItemId": "1154219000038399009",
             "itemName": "zigzag binding (Cylinder bed)",
@@ -51844,14 +51846,17 @@
             "customerName": "A B Polymers",
             "salesOrderNumber": "SO-08154",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "vendor": "K S",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T18:09:48+0530"
@@ -51865,7 +51870,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-14T12:52:10.563Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-14T12:52:25.927Z"
+          "zohoBackupQueuedAt": "2026-10-14T12:58:08.320Z",
+          "processedAt": "2026-10-14T12:58:08.320Z",
+          "dispatchNote": "Local",
+          "vendor": "K S"
         }
       }
     }
