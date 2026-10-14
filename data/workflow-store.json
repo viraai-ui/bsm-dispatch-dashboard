@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271440,
+  "serialCounter": 26271443,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -51556,6 +51556,126 @@
           "dispatchNote": "Local",
           "vendor": "Aradhya",
           "sheetVendor": "Aradhya"
+        }
+      }
+    },
+    "1154219000038380111": {
+      "salesOrderId": "1154219000038380111",
+      "salesOrderNumber": "SO-08143",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038380111",
+        "zohoSalesOrderId": "1154219000038380111",
+        "salesOrderNumber": "SO-08143",
+        "status": "open",
+        "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+        "shippingAddress": "KH NO.-88/14,88/15 MUNDKA ,WEST DELHI, Delhi, 110041",
+        "salesperson": "Manoj Sir",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "description": "",
+            "quantity": 3,
+            "pendingQuantity": 3,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000003664009",
+            "rate": 24000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038380111-1154219000038380235-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038380111",
+            "lineItemId": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08143",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038380111-1154219000038380235-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038380111",
+            "lineItemId": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08143",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038380111-1154219000038380235-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038380111",
+            "lineItemId": "1154219000038380235",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "RFL YARN & LAMIKNITS PRIVATE LIMITED",
+            "salesOrderNumber": "SO-08143",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T14:06:55+0530"
+      },
+      "machines": {
+        "1154219000038380111-1154219000038380235-1": {
+          "machineUnitId": "1154219000038380111-1154219000038380235-1",
+          "lineItemId": "1154219000038380235",
+          "serialNumber": "26271441",
+          "qrToken": "26271441",
+          "qrStatus": "pending"
+        },
+        "1154219000038380111-1154219000038380235-2": {
+          "machineUnitId": "1154219000038380111-1154219000038380235-2",
+          "lineItemId": "1154219000038380235",
+          "serialNumber": "26271442",
+          "qrToken": "26271442",
+          "qrStatus": "pending"
+        },
+        "1154219000038380111-1154219000038380235-3": {
+          "machineUnitId": "1154219000038380111-1154219000038380235-3",
+          "lineItemId": "1154219000038380235",
+          "serialNumber": "26271443",
+          "qrToken": "26271443",
+          "qrStatus": "pending"
         }
       }
     }
