@@ -13139,6 +13139,118 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-14T16:01:16+0530"
+    },
+    "1154219000038422002": {
+      "id": "1154219000038422002",
+      "zohoSalesOrderId": "1154219000038422002",
+      "salesOrderNumber": "SO-08148",
+      "status": "open",
+      "customerName": "M.S. Enterprises",
+      "shippingAddress": "N-44, GALI NO. 2, New-6, Bajarang Bali Mohalla, Maujpur, Delhi, 110053, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038422005",
+          "itemName": "Fiber Laser Marking Machine",
+          "sku": "",
+          "description": "Size: 200 * 200mm , 50W",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000868033",
+          "rate": 190000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038422002-1154219000038422005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038422002",
+          "lineItemId": "1154219000038422005",
+          "itemName": "Fiber Laser Marking Machine",
+          "sku": "",
+          "customerName": "M.S. Enterprises",
+          "salesOrderNumber": "SO-08148",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Size: 200 * 200mm , 50W"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T16:44:46+0530"
+    },
+    "1154219000038418002": {
+      "id": "1154219000038418002",
+      "zohoSalesOrderId": "1154219000038418002",
+      "salesOrderNumber": "SO-08147",
+      "status": "open",
+      "customerName": "Naresh Udyog",
+      "shippingAddress": "Baldev Nagar, Chandigarh Road, Ambala CIty, Haryana-134007, Haryana",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-14",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038418005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "description": "pully bracket eyelet machine",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000001709067",
+          "rate": 3500,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038418006",
+          "itemName": "Freight Charge",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000004888609",
+          "rate": 250,
+          "dispatchCategory": "freight"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038418002-1154219000038418005-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038418002",
+          "lineItemId": "1154219000038418005",
+          "itemName": "Spare Parts (Shoe Machine)",
+          "sku": "",
+          "customerName": "Naresh Udyog",
+          "salesOrderNumber": "SO-08147",
+          "deliveryDate": "2026-10-14",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "pully bracket eyelet machine"
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-14T16:44:46+0530"
     }
   },
   "orderIds": [
@@ -13278,10 +13390,12 @@
     "1154219000038380111",
     "1154219000038398003",
     "1154219000038384015",
-    "1154219000038410003"
+    "1154219000038410003",
+    "1154219000038422002",
+    "1154219000038418002"
   ],
-  "lastSuccessfulSyncAt": "2026-10-14T11:00:31.841Z",
-  "lastAttemptAt": "2026-10-14T11:20:26.653Z",
+  "lastSuccessfulSyncAt": "2026-10-14T11:20:32.191Z",
+  "lastAttemptAt": "2026-10-14T11:20:32.191Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
