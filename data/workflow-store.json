@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271444,
+  "serialCounter": 26271445,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -51799,6 +51799,70 @@
           "dispatchNote": "Local",
           "vendor": "Able",
           "sheetVendor": "Able"
+        }
+      }
+    },
+    "1154219000038399006": {
+      "salesOrderId": "1154219000038399006",
+      "salesOrderNumber": "SO-08154",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038399006",
+        "zohoSalesOrderId": "1154219000038399006",
+        "salesOrderNumber": "SO-08154",
+        "status": "open",
+        "customerName": "A B Polymers",
+        "shippingAddress": "C-358, DSIIDC NARELA INDUSTRIAL AREA, DELHI, 110040, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038399009",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000226814",
+            "rate": 82000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038399006-1154219000038399009-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038399006",
+            "lineItemId": "1154219000038399009",
+            "itemName": "zigzag binding (Cylinder bed)",
+            "sku": "2150",
+            "customerName": "A B Polymers",
+            "salesOrderNumber": "SO-08154",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T18:09:48+0530"
+      },
+      "machines": {
+        "1154219000038399006-1154219000038399009-1": {
+          "machineUnitId": "1154219000038399006-1154219000038399009-1",
+          "lineItemId": "1154219000038399009",
+          "serialNumber": "26271445",
+          "qrToken": "26271445",
+          "qrStatus": "pending"
         }
       }
     }
