@@ -12989,8 +12989,7 @@
           "itemDescription": ""
         }
       ],
-      "zohoLastModifiedTime": "2026-10-14T14:06:55+0530",
-      "retiredMachines": []
+      "zohoLastModifiedTime": "2026-10-14T14:06:55+0530"
     }
   },
   "orderIds": [
@@ -13129,26 +13128,8 @@
     "1154219000038362003",
     "1154219000038380111"
   ],
-  "lastSuccessfulSyncAt": "2026-10-14T08:56:16.553Z",
-  "lastAttemptAt": "2026-10-14T08:46:36.922Z",
+  "lastSuccessfulSyncAt": "2026-10-14T08:46:36.922Z",
+  "lastAttemptAt": "2026-10-14T09:00:26.604Z",
   "lastError": null,
-  "syncing": false,
-  "orderSyncAudit": {
-    "1154219000038380111": [
-      {
-        "actor": "Operations (u-ops)",
-        "at": "2026-10-14T08:56:16.553Z",
-        "previousRevision": "2026-10-14T14:06:55+0530",
-        "currentRevision": "2026-10-14T14:06:55+0530",
-        "outcome": "unchanged",
-        "diff": {
-          "added": [],
-          "removed": [],
-          "updated": [],
-          "quantityDeltas": {},
-          "retiredUnits": 0
-        }
-      }
-    ]
-  }
+  "syncing": true
 }
