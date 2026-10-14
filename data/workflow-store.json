@@ -51468,7 +51468,9 @@
     "1154219000038379002": {
       "salesOrderId": "1154219000038379002",
       "salesOrderNumber": "SO-08142",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-14T08:10:09.304Z",
       "processedOrder": {
         "id": "1154219000038379002",
         "zohoSalesOrderId": "1154219000038379002",
@@ -51510,8 +51512,8 @@
           {
             "id": "1154219000038379002-1154219000038379005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271440",
+            "qrToken": "26271440",
             "orderId": "1154219000038379002",
             "lineItemId": "1154219000038379005",
             "itemName": "Cover Type Sole Press Double Station (pneumatic)",
@@ -51519,14 +51521,17 @@
             "customerName": "Liberty Shoes Limited (Karnal)",
             "salesOrderNumber": "SO-08142",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-14",
+            "vendor": "Aradhya",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T12:39:14+0530"
@@ -51539,11 +51544,14 @@
           "qrToken": "26271440",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-14T07:55:52.148Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-14T07:56:05.851Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-14T08:10:09.304Z",
           "zohoBackupLastAttemptAt": "2026-10-14T08:00:46.309Z",
           "zohoBackupSyncedAt": "2026-10-14T08:00:46.309Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-14T08:10:09.304Z",
+          "dispatchNote": "Local",
+          "vendor": "Aradhya"
         }
       }
     }
