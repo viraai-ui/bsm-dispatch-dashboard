@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271439,
+  "serialCounter": 26271440,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -51462,6 +51462,82 @@
           "dispatchNote": "Local",
           "vendor": "Able",
           "sheetVendor": "Able"
+        }
+      }
+    },
+    "1154219000038379002": {
+      "salesOrderId": "1154219000038379002",
+      "salesOrderNumber": "SO-08142",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038379002",
+        "zohoSalesOrderId": "1154219000038379002",
+        "salesOrderNumber": "SO-08142",
+        "status": "open",
+        "customerName": "Liberty Shoes Limited (Karnal)",
+        "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
+        "salesperson": "Deepak Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038379005",
+            "itemName": "Cover Type Sole Press Double Station (pneumatic)",
+            "sku": "2003-2",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225463",
+            "rate": 88000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038364009",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 5000,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038379002-1154219000038379005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038379002",
+            "lineItemId": "1154219000038379005",
+            "itemName": "Cover Type Sole Press Double Station (pneumatic)",
+            "sku": "2003-2",
+            "customerName": "Liberty Shoes Limited (Karnal)",
+            "salesOrderNumber": "SO-08142",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T12:39:14+0530"
+      },
+      "machines": {
+        "1154219000038379002-1154219000038379005-1": {
+          "machineUnitId": "1154219000038379002-1154219000038379005-1",
+          "lineItemId": "1154219000038379005",
+          "serialNumber": "26271440",
+          "qrToken": "26271440",
+          "qrStatus": "pending"
         }
       }
     }
