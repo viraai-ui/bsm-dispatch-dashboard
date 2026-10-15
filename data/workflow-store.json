@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271448,
+  "serialCounter": 26271449,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52091,6 +52091,70 @@
           "processedAt": "2026-10-15T05:53:06.506Z",
           "dispatchNote": "WOODEN",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000038413010": {
+      "salesOrderId": "1154219000038413010",
+      "salesOrderNumber": "SO-08162",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038413010",
+        "zohoSalesOrderId": "1154219000038413010",
+        "salesOrderNumber": "SO-08162",
+        "status": "open",
+        "customerName": "SELFIEE FOOTWEAR",
+        "shippingAddress": "First Floor, Hasra No. 264, Bhagat Singh Park, GST Karnal Road, Siraspur, Delhi, 110042, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038413013",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "description": "String Lasting",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000006379136",
+            "rate": 44000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038413010-1154219000038413013-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038413010",
+            "lineItemId": "1154219000038413013",
+            "itemName": "Strobel Sewing machine (With Rechard Set)",
+            "sku": "600R",
+            "customerName": "SELFIEE FOOTWEAR",
+            "salesOrderNumber": "SO-08162",
+            "deliveryDate": "2026-10-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "String Lasting"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-15T11:14:28+0530"
+      },
+      "machines": {
+        "1154219000038413010-1154219000038413013-1": {
+          "machineUnitId": "1154219000038413010-1154219000038413013-1",
+          "lineItemId": "1154219000038413013",
+          "serialNumber": "26271449",
+          "qrToken": "26271449",
+          "qrStatus": "pending"
         }
       }
     }
