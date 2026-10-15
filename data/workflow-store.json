@@ -52276,11 +52276,14 @@
           "qrToken": "26271451",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T08:54:50.139Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-15T08:56:30.462Z",
           "processedAt": "2026-10-15T08:56:30.462Z",
           "dispatchNote": "Local",
-          "vendor": "Wanneng Trading"
+          "vendor": "Wanneng Trading",
+          "zohoBackupLastAttemptAt": "2026-10-15T09:00:48.173Z",
+          "zohoBackupSyncedAt": "2026-10-15T09:00:48.173Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
