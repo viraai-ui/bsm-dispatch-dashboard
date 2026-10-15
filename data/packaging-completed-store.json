@@ -30135,57 +30135,45 @@
         "1154219000038380111-1154219000038380235-3"
       ]
     },
-    "1154219000038379002": {
-      "completedAt": "2026-10-15T05:25:58.296Z",
+    "1154219000038398003": {
+      "completedAt": "2026-10-15T05:26:22.778Z",
       "order": {
-        "id": "1154219000038379002",
-        "zohoSalesOrderId": "1154219000038379002",
-        "salesOrderNumber": "SO-08142",
+        "id": "1154219000038398003",
+        "zohoSalesOrderId": "1154219000038398003",
+        "salesOrderNumber": "SO-08146",
         "status": "open",
-        "customerName": "Liberty Shoes Limited (Karnal)",
-        "shippingAddress": "Liberty Complex, 17th Mile Stone, GT Road, Karnal, Gharaunda-132114, Haryana",
+        "customerName": "BALAJI COLLECTION",
+        "shippingAddress": "PLOT NO - 4 GROUND FLOOR, HOUSE NO NEW RZ-2, KHASRA NO 355, NEAR PNB ATM, PH-1 CITY, PARTAP VIHAR, Delhi, 110041, India",
         "salesperson": "Deepak Kumar",
         "deliveryDate": "2026-10-14",
         "dashboardStatus": "Not Generated",
         "reviewRequired": false,
         "lineItems": [
           {
-            "id": "1154219000038379005",
-            "itemName": "Cover Type Sole Press Double Station (pneumatic)",
-            "sku": "2003-2",
+            "id": "1154219000038398006",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
             "description": "",
             "quantity": 1,
             "pendingQuantity": 1,
             "woodenPackingRequired": true,
-            "zohoItemId": "1154219000000225463",
-            "rate": 88000,
+            "zohoItemId": "1154219000000280682",
+            "rate": 31000,
             "dispatchCategory": "machine"
-          },
-          {
-            "id": "1154219000038364009",
-            "itemName": "Freight/ Transportation Charges",
-            "sku": "",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": false,
-            "zohoItemId": "1154219000004888581",
-            "rate": 5000,
-            "dispatchCategory": "freight"
           }
         ],
         "machines": [
           {
-            "id": "1154219000038379002-1154219000038379005-1",
+            "id": "1154219000038398003-1154219000038398006-1",
             "unitNumber": 1,
-            "serialNumber": "26271440",
-            "qrToken": "26271440",
-            "orderId": "1154219000038379002",
-            "lineItemId": "1154219000038379005",
-            "itemName": "Cover Type Sole Press Double Station (pneumatic)",
-            "sku": "2003-2",
-            "customerName": "Liberty Shoes Limited (Karnal)",
-            "salesOrderNumber": "SO-08142",
+            "serialNumber": "26271444",
+            "qrToken": "26271444",
+            "orderId": "1154219000038398003",
+            "lineItemId": "1154219000038398006",
+            "itemName": "Latex Glue Applicator (roller type) (16 inch)",
+            "sku": "103 Big",
+            "customerName": "BALAJI COLLECTION",
+            "salesOrderNumber": "SO-08146",
             "deliveryDate": "2026-10-14",
             "status": "QR Generated",
             "selectedForBatch": false,
@@ -30199,11 +30187,11 @@
             "dispatchNote": "Local"
           }
         ],
-        "zohoLastModifiedTime": "2026-10-14T12:39:14+0530",
+        "zohoLastModifiedTime": "2026-10-14T16:08:45+0530",
         "dispatchPriority": "regular"
       },
       "machineIds": [
-        "1154219000038379002-1154219000038379005-1"
+        "1154219000038398003-1154219000038398006-1"
       ]
     }
   }
