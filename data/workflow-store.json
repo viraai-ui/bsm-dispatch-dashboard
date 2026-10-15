@@ -52212,7 +52212,9 @@
     "1154219000038422002": {
       "salesOrderId": "1154219000038422002",
       "salesOrderNumber": "SO-08148",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-15T08:56:30.462Z",
       "processedOrder": {
         "id": "1154219000038422002",
         "zohoSalesOrderId": "1154219000038422002",
@@ -52242,8 +52244,8 @@
           {
             "id": "1154219000038422002-1154219000038422005-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271451",
+            "qrToken": "26271451",
             "orderId": "1154219000038422002",
             "lineItemId": "1154219000038422005",
             "itemName": "Fiber Laser Marking Machine",
@@ -52251,14 +52253,17 @@
             "customerName": "M.S. Enterprises",
             "salesOrderNumber": "SO-08148",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Size: 200 * 200mm , 50W"
+            "itemDescription": "Size: 200 * 200mm , 50W",
+            "warrantyStart": "2026-10-15",
+            "vendor": "Wanneng Trading",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T16:44:46+0530"
@@ -52272,7 +52277,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T08:54:50.139Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-15T08:55:07.066Z"
+          "zohoBackupQueuedAt": "2026-10-15T08:56:30.462Z",
+          "processedAt": "2026-10-15T08:56:30.462Z",
+          "dispatchNote": "Local",
+          "vendor": "Wanneng Trading"
         }
       }
     }
