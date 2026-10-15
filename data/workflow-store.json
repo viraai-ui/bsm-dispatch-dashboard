@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271447,
+  "serialCounter": 26271448,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52004,6 +52004,82 @@
           "processedAt": "2026-10-15T05:51:48.655Z",
           "dispatchNote": "WOODEN",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000038405005": {
+      "salesOrderId": "1154219000038405005",
+      "salesOrderNumber": "SO-08153",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038405005",
+        "zohoSalesOrderId": "1154219000038405005",
+        "salesOrderNumber": "SO-08153",
+        "status": "open",
+        "customerName": "DIVINE PACKAGING INDUSTRY",
+        "shippingAddress": "Survey No. 10/3B, No. 125, ORAKKADU VILLAGE, PONNERI TALUK, Chennai, Tiruvallur,, Chennai, Tamil Nadu -, 600067",
+        "salesperson": "Shivani Kumari",
+        "deliveryDate": "2026-10-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038405008",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225211",
+            "rate": 50000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038405009",
+            "itemName": "Hotmelt Adhesive - 7100",
+            "sku": "7100",
+            "description": "",
+            "quantity": 50,
+            "pendingQuantity": 50,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000228524",
+            "rate": 340,
+            "dispatchCategory": "adhesive"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038405005-1154219000038405008-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038405005",
+            "lineItemId": "1154219000038405008",
+            "itemName": "Hotmelt Roller Coater (12 inch)",
+            "sku": "831",
+            "customerName": "DIVINE PACKAGING INDUSTRY",
+            "salesOrderNumber": "SO-08153",
+            "deliveryDate": "2026-10-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T18:09:47+0530"
+      },
+      "machines": {
+        "1154219000038405005-1154219000038405008-1": {
+          "machineUnitId": "1154219000038405005-1154219000038405008-1",
+          "lineItemId": "1154219000038405008",
+          "serialNumber": "26271448",
+          "qrToken": "26271448",
+          "qrStatus": "pending"
         }
       }
     }
