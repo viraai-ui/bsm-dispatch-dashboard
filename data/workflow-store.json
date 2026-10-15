@@ -52172,7 +52172,9 @@
     "1154219000038362003": {
       "salesOrderId": "1154219000038362003",
       "salesOrderNumber": "SO-08141",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-15T05:58:13.244Z",
       "processedOrder": {
         "id": "1154219000038362003",
         "zohoSalesOrderId": "1154219000038362003",
@@ -52202,8 +52204,8 @@
           {
             "id": "1154219000038362003-1154219000038362006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271450",
+            "qrToken": "26271450",
             "orderId": "1154219000038362003",
             "lineItemId": "1154219000038362006",
             "itemName": "Hot Melt Adhesive Melter",
@@ -52211,14 +52213,17 @@
             "customerName": "Thermo Care Rockwool India Private Limited",
             "salesOrderNumber": "SO-08141",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Gear Type Machine Glue Capacity: 5 Ltr 2 Pcs Gun Attachment 2 Pcs Hose Pipe 2 Meter"
+            "itemDescription": "Gear Type Machine Glue Capacity: 5 Ltr 2 Pcs Gun Attachment 2 Pcs Hose Pipe 2 Meter",
+            "warrantyStart": "2026-10-15",
+            "vendor": "Able",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T12:39:15+0530"
@@ -52232,7 +52237,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T05:57:07.272Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-15T05:57:23.881Z"
+          "zohoBackupQueuedAt": "2026-10-15T05:58:13.244Z",
+          "processedAt": "2026-10-15T05:58:13.244Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "Able"
         }
       }
     }
