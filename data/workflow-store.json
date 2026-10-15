@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271445,
+  "serialCounter": 26271447,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -51880,6 +51880,110 @@
           "zohoBackupSyncedAt": "2026-10-14T13:00:45.995Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000038418016": {
+      "salesOrderId": "1154219000038418016",
+      "salesOrderNumber": "SO-08152",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038418016",
+        "zohoSalesOrderId": "1154219000038418016",
+        "salesOrderNumber": "SO-08152",
+        "status": "open",
+        "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+        "shippingAddress": "46/157, Halsey Road,, Kanpur,, Uttar Pradesh, 208001",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038418019",
+            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+            "sku": "103",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225043",
+            "rate": 24000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038418020",
+            "itemName": "Freight/ Transportation Charges",
+            "sku": "",
+            "description": "Local Freight Cost from BSM to Mehta Transport Delhi Godown for Booking",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000004888581",
+            "rate": 1500,
+            "dispatchCategory": "freight"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038418016-1154219000038418019-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038418016",
+            "lineItemId": "1154219000038418019",
+            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+            "sku": "103",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-08152",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038418016-1154219000038418019-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038418016",
+            "lineItemId": "1154219000038418019",
+            "itemName": "Latex Glue Applicator (roller type) (10 inch)",
+            "sku": "103",
+            "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
+            "salesOrderNumber": "SO-08152",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T18:09:47+0530"
+      },
+      "machines": {
+        "1154219000038418016-1154219000038418019-1": {
+          "machineUnitId": "1154219000038418016-1154219000038418019-1",
+          "lineItemId": "1154219000038418019",
+          "serialNumber": "26271446",
+          "qrToken": "26271446",
+          "qrStatus": "pending"
+        },
+        "1154219000038418016-1154219000038418019-2": {
+          "machineUnitId": "1154219000038418016-1154219000038418019-2",
+          "lineItemId": "1154219000038418019",
+          "serialNumber": "26271447",
+          "qrToken": "26271447",
+          "qrStatus": "pending"
         }
       }
     }
