@@ -51807,62 +51807,7 @@
     "1154219000038399006": {
       "salesOrderId": "1154219000038399006",
       "salesOrderNumber": "SO-08154",
-      "status": "processed",
-      "dispatchPriority": "regular",
-      "processedAt": "2026-10-14T12:58:08.320Z",
-      "processedOrder": {
-        "id": "1154219000038399006",
-        "zohoSalesOrderId": "1154219000038399006",
-        "salesOrderNumber": "SO-08154",
-        "status": "open",
-        "customerName": "A B Polymers",
-        "shippingAddress": "C-358, DSIIDC NARELA INDUSTRIAL AREA, DELHI, 110040, India",
-        "salesperson": "Anuj Kumar",
-        "deliveryDate": "2026-10-14",
-        "dashboardStatus": "Not Generated",
-        "reviewRequired": false,
-        "lineItems": [
-          {
-            "id": "1154219000038399009",
-            "itemName": "zigzag binding (Cylinder bed)",
-            "sku": "2150",
-            "description": "",
-            "quantity": 1,
-            "pendingQuantity": 1,
-            "woodenPackingRequired": false,
-            "zohoItemId": "1154219000000226814",
-            "rate": 82000,
-            "dispatchCategory": "machine"
-          }
-        ],
-        "machines": [
-          {
-            "id": "1154219000038399006-1154219000038399009-1",
-            "unitNumber": 1,
-            "serialNumber": "26271445",
-            "qrToken": "26271445",
-            "orderId": "1154219000038399006",
-            "lineItemId": "1154219000038399009",
-            "itemName": "zigzag binding (Cylinder bed)",
-            "sku": "2150",
-            "customerName": "A B Polymers",
-            "salesOrderNumber": "SO-08154",
-            "deliveryDate": "2026-10-14",
-            "status": "QR Generated",
-            "selectedForBatch": false,
-            "woodenPacking": "Not Required",
-            "qrPasted": false,
-            "qcDone": false,
-            "mediaPhotos": 0,
-            "mediaVideos": 0,
-            "itemDescription": "",
-            "warrantyStart": "2026-10-14",
-            "vendor": "K S",
-            "dispatchNote": "Local"
-          }
-        ],
-        "zohoLastModifiedTime": "2026-10-14T18:09:48+0530"
-      },
+      "status": "open",
       "machines": {
         "1154219000038399006-1154219000038399009-1": {
           "machineUnitId": "1154219000038399006-1154219000038399009-1",
