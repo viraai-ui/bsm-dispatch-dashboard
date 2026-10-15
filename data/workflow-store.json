@@ -52010,7 +52010,9 @@
     "1154219000038405005": {
       "salesOrderId": "1154219000038405005",
       "salesOrderNumber": "SO-08153",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-15T05:53:06.506Z",
       "processedOrder": {
         "id": "1154219000038405005",
         "zohoSalesOrderId": "1154219000038405005",
@@ -52052,8 +52054,8 @@
           {
             "id": "1154219000038405005-1154219000038405008-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271448",
+            "qrToken": "26271448",
             "orderId": "1154219000038405005",
             "lineItemId": "1154219000038405008",
             "itemName": "Hotmelt Roller Coater (12 inch)",
@@ -52061,14 +52063,17 @@
             "customerName": "DIVINE PACKAGING INDUSTRY",
             "salesOrderNumber": "SO-08153",
             "deliveryDate": "2026-10-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-15",
+            "vendor": "K S",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T18:09:47+0530"
@@ -52082,7 +52087,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T05:52:07.907Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-15T05:52:24.523Z"
+          "zohoBackupQueuedAt": "2026-10-15T05:53:06.506Z",
+          "processedAt": "2026-10-15T05:53:06.506Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "K S"
         }
       }
     }
