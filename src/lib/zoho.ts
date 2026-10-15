@@ -338,8 +338,9 @@ async function enrichZohoLineItemDescriptions(order: any, token: string) {
 async function fetchZohoOrderDetailWithToken(id: string, token: string, reserved = false): Promise<Order> {
   const detail = await zohoGetWithRetry(`/inventory/v1/salesorders/${id}`, token, 1, reserved)
   if (!detail.salesorder?.salesorder_id || String(detail.salesorder.salesorder_id) !== String(id)) throw new Error(`Invalid Zoho sales order detail for ${id}`)
-  const sourceStatus = String(detail.salesorder.status || detail.salesorder.current_sub_status || detail.salesorder.order_status || '').toLowerCase()
-  if (['cancelled', 'canceled', 'void', 'closed', 'rejected', 'deleted'].includes(sourceStatus)) throw new Error('ORDER_UNAVAILABLE_IN_ZOHO')
+  const lifecycleStates = [detail.salesorder.status, detail.salesorder.current_sub_status, detail.salesorder.order_status, detail.salesorder.salesorder_status]
+    .map(value => String(value || '').trim().toLowerCase().replace(/[\s-]+/g, '_'))
+  if (lifecycleStates.some(status => ['draft', 'pending_approval', 'cancelled', 'canceled', 'void', 'closed', 'rejected', 'deleted'].includes(status))) throw new Error('ORDER_UNAVAILABLE_IN_ZOHO')
   // Detail line payload is authoritative. Never fan out to item detail endpoints
   // during an operational sync.
   return mapOrder(detail.salesorder)

@@ -27,7 +27,7 @@ test('complete feed fails closed on partial, malformed, or mismatched pagination
 
 test('status reconciliation keeps genuine old open orders and removes every terminal variant', () => {
   for (const status of ['confirmed', 'open', 'partially_fulfilled']) assert.equal(isOpenZohoSalesOrderSummary(row('x', { status })), true, status)
-  for (const status of ['closed', 'void', 'cancelled', 'canceled', 'rejected', 'deleted']) assert.equal(isOpenZohoSalesOrderSummary(row('x', { status })), false, status)
+  for (const status of ['draft', 'pending_approval', 'pending approval', 'closed', 'void', 'cancelled', 'canceled', 'rejected', 'deleted']) assert.equal(isOpenZohoSalesOrderSummary(row('x', { status })), false, status)
   assert.equal(isOpenZohoSalesOrderSummary(row('x', { shipment_status: 'shipped' })), false)
   assert.equal(isOpenZohoSalesOrderSummary(row('x', { shipment_status: 'delivered' })), false)
   assert.equal(isOpenZohoSalesOrderSummary(row('x', { invoiced_status: 'invoiced' })), false)

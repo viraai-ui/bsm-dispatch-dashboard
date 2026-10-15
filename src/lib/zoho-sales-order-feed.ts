@@ -3,7 +3,7 @@ export type ZohoSalesOrderPage = {
   page_context?: { page?: number | string; has_more_page?: boolean }
 }
 
-const CLOSED_ORDER_STATUSES = new Set(['closed', 'void', 'cancelled', 'canceled', 'rejected', 'deleted'])
+const CLOSED_ORDER_STATUSES = new Set(['draft', 'pending_approval', 'pending approval', 'closed', 'void', 'cancelled', 'canceled', 'rejected', 'deleted'])
 const CLOSED_SHIPMENT_STATUSES = new Set(['shipped', 'delivered'])
 const CLOSED_INVOICE_STATUSES = new Set(['invoiced'])
 
