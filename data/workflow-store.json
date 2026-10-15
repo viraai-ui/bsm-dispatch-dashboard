@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271450,
+  "serialCounter": 26271451,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52206,6 +52206,70 @@
           "zohoBackupSyncedAt": "2026-10-15T06:00:46.161Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "Able"
+        }
+      }
+    },
+    "1154219000038422002": {
+      "salesOrderId": "1154219000038422002",
+      "salesOrderNumber": "SO-08148",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038422002",
+        "zohoSalesOrderId": "1154219000038422002",
+        "salesOrderNumber": "SO-08148",
+        "status": "open",
+        "customerName": "M.S. Enterprises",
+        "shippingAddress": "N-44, GALI NO. 2, New-6, Bajarang Bali Mohalla, Maujpur, Delhi, 110053, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038422005",
+            "itemName": "Fiber Laser Marking Machine",
+            "sku": "",
+            "description": "Size: 200 * 200mm , 50W",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000868033",
+            "rate": 190000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038422002-1154219000038422005-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038422002",
+            "lineItemId": "1154219000038422005",
+            "itemName": "Fiber Laser Marking Machine",
+            "sku": "",
+            "customerName": "M.S. Enterprises",
+            "salesOrderNumber": "SO-08148",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Size: 200 * 200mm , 50W"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T16:44:46+0530"
+      },
+      "machines": {
+        "1154219000038422002-1154219000038422005-1": {
+          "machineUnitId": "1154219000038422002-1154219000038422005-1",
+          "lineItemId": "1154219000038422005",
+          "serialNumber": "26271451",
+          "qrToken": "26271451",
+          "qrStatus": "pending"
         }
       }
     }
