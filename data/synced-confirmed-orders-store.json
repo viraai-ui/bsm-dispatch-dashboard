@@ -518570,6 +518570,110 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-15T12:39:59+0530"
+    },
+    "1154219000038402005": {
+      "id": "1154219000038402005",
+      "zohoSalesOrderId": "1154219000038402005",
+      "salesOrderNumber": "SO-08165",
+      "status": "open",
+      "customerName": "AASHA INTERNATIONAL",
+      "shippingAddress": "419-422 LEATHER COMPLEX, KAPURTHALA ROAD, 419-422 LEATHER COMPLEX,, Jalandhar, Punjab,, 144021, India",
+      "salesperson": "Karan Singh",
+      "deliveryDate": "2026-10-19",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038402008",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000279428",
+          "rate": 500000,
+          "dispatchCategory": "machine"
+        },
+        {
+          "id": "1154219000038402009",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "description": "",
+          "quantity": 2,
+          "pendingQuantity": 2,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000225211",
+          "rate": 48500,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038402005-1154219000038402008-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038402005",
+          "lineItemId": "1154219000038402008",
+          "itemName": "TPU fusing machine [Hot And Cold]",
+          "sku": "",
+          "customerName": "AASHA INTERNATIONAL",
+          "salesOrderNumber": "SO-08165",
+          "deliveryDate": "2026-10-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000038402005-1154219000038402009-1",
+          "unitNumber": 2,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038402005",
+          "lineItemId": "1154219000038402009",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "AASHA INTERNATIONAL",
+          "salesOrderNumber": "SO-08165",
+          "deliveryDate": "2026-10-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        },
+        {
+          "id": "1154219000038402005-1154219000038402009-2",
+          "unitNumber": 3,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038402005",
+          "lineItemId": "1154219000038402009",
+          "itemName": "Hotmelt Roller Coater (12 inch)",
+          "sku": "831",
+          "customerName": "AASHA INTERNATIONAL",
+          "salesOrderNumber": "SO-08165",
+          "deliveryDate": "2026-10-19",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-15T12:55:30+0530"
     }
   },
   "orderIds": [
@@ -518718,10 +518822,11 @@
     "1154219000038413010",
     "1154219000038426007",
     "1154219000038413023",
-    "1154219000038412008"
+    "1154219000038412008",
+    "1154219000038402005"
   ],
-  "lastSuccessfulSyncAt": "2026-10-15T07:20:38.510Z",
-  "lastAttemptAt": "2026-10-15T07:40:27.137Z",
+  "lastSuccessfulSyncAt": "2026-10-15T07:40:38.476Z",
+  "lastAttemptAt": "2026-10-15T07:40:38.476Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
