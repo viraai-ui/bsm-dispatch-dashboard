@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271449,
+  "serialCounter": 26271450,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52166,6 +52166,70 @@
           "processedAt": "2026-10-15T05:56:29.159Z",
           "dispatchNote": "LOCAL",
           "vendor": "K S"
+        }
+      }
+    },
+    "1154219000038362003": {
+      "salesOrderId": "1154219000038362003",
+      "salesOrderNumber": "SO-08141",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038362003",
+        "zohoSalesOrderId": "1154219000038362003",
+        "salesOrderNumber": "SO-08141",
+        "status": "open",
+        "customerName": "Thermo Care Rockwool India Private Limited",
+        "shippingAddress": "Prabhu Kutir, Ramadhin Marg, Rajnandgaon, Rajnandgaon, Chhattisgarh, 491441",
+        "salesperson": "Ram Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038362006",
+            "itemName": "Hot Melt Adhesive Melter",
+            "sku": "",
+            "description": "Gear Type Machine Glue Capacity: 5 Ltr 2 Pcs Gun Attachment 2 Pcs Hose Pipe 2 Meter",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000008115171",
+            "rate": 187500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038362003-1154219000038362006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038362003",
+            "lineItemId": "1154219000038362006",
+            "itemName": "Hot Melt Adhesive Melter",
+            "sku": "",
+            "customerName": "Thermo Care Rockwool India Private Limited",
+            "salesOrderNumber": "SO-08141",
+            "deliveryDate": "2026-10-14",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Gear Type Machine Glue Capacity: 5 Ltr 2 Pcs Gun Attachment 2 Pcs Hose Pipe 2 Meter"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T12:39:15+0530"
+      },
+      "machines": {
+        "1154219000038362003-1154219000038362006-1": {
+          "machineUnitId": "1154219000038362003-1154219000038362006-1",
+          "lineItemId": "1154219000038362006",
+          "serialNumber": "26271450",
+          "qrToken": "26271450",
+          "qrStatus": "pending"
         }
       }
     }
