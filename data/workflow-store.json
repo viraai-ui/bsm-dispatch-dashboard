@@ -52097,7 +52097,9 @@
     "1154219000038413010": {
       "salesOrderId": "1154219000038413010",
       "salesOrderNumber": "SO-08162",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-15T05:56:29.159Z",
       "processedOrder": {
         "id": "1154219000038413010",
         "zohoSalesOrderId": "1154219000038413010",
@@ -52127,8 +52129,8 @@
           {
             "id": "1154219000038413010-1154219000038413013-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271449",
+            "qrToken": "26271449",
             "orderId": "1154219000038413010",
             "lineItemId": "1154219000038413013",
             "itemName": "Strobel Sewing machine (With Rechard Set)",
@@ -52136,14 +52138,17 @@
             "customerName": "SELFIEE FOOTWEAR",
             "salesOrderNumber": "SO-08162",
             "deliveryDate": "2026-10-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "String Lasting"
+            "itemDescription": "String Lasting",
+            "warrantyStart": "2026-10-15",
+            "vendor": "K S",
+            "dispatchNote": "LOCAL"
           }
         ],
         "zohoLastModifiedTime": "2026-10-15T11:14:28+0530"
@@ -52157,7 +52162,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T05:55:25.003Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-15T05:55:42.007Z"
+          "zohoBackupQueuedAt": "2026-10-15T05:56:29.159Z",
+          "processedAt": "2026-10-15T05:56:29.159Z",
+          "dispatchNote": "LOCAL",
+          "vendor": "K S"
         }
       }
     }
