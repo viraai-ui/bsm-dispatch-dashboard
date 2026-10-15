@@ -52170,11 +52170,14 @@
           "qrToken": "26271449",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T05:55:25.003Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-15T05:56:29.159Z",
           "processedAt": "2026-10-15T05:56:29.159Z",
           "dispatchNote": "LOCAL",
-          "vendor": "K S"
+          "vendor": "K S",
+          "zohoBackupLastAttemptAt": "2026-10-15T06:00:46.161Z",
+          "zohoBackupSyncedAt": "2026-10-15T06:00:46.161Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     },
