@@ -51886,7 +51886,9 @@
     "1154219000038418016": {
       "salesOrderId": "1154219000038418016",
       "salesOrderNumber": "SO-08152",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-15T05:51:48.655Z",
       "processedOrder": {
         "id": "1154219000038418016",
         "zohoSalesOrderId": "1154219000038418016",
@@ -51928,8 +51930,8 @@
           {
             "id": "1154219000038418016-1154219000038418019-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271446",
+            "qrToken": "26271446",
             "orderId": "1154219000038418016",
             "lineItemId": "1154219000038418019",
             "itemName": "Latex Glue Applicator (roller type) (10 inch)",
@@ -51937,20 +51939,23 @@
             "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
             "salesOrderNumber": "SO-08152",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-15",
+            "vendor": "K S",
+            "dispatchNote": "WOODEN"
           },
           {
             "id": "1154219000038418016-1154219000038418019-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271447",
+            "qrToken": "26271447",
             "orderId": "1154219000038418016",
             "lineItemId": "1154219000038418019",
             "itemName": "Latex Glue Applicator (roller type) (10 inch)",
@@ -51958,14 +51963,17 @@
             "customerName": "Vrindawan Bihari Rubber Products Pvt Ltd",
             "salesOrderNumber": "SO-08152",
             "deliveryDate": "2026-10-14",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-15",
+            "vendor": "K S",
+            "dispatchNote": "WOODEN"
           }
         ],
         "zohoLastModifiedTime": "2026-10-14T18:09:47+0530"
@@ -51979,7 +51987,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T05:48:37.983Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-15T05:48:54.590Z"
+          "zohoBackupQueuedAt": "2026-10-15T05:51:48.655Z",
+          "processedAt": "2026-10-15T05:51:48.655Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "K S"
         },
         "1154219000038418016-1154219000038418019-2": {
           "machineUnitId": "1154219000038418016-1154219000038418019-2",
@@ -51989,7 +52000,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-15T05:48:37.983Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-15T05:48:54.590Z"
+          "zohoBackupQueuedAt": "2026-10-15T05:51:48.655Z",
+          "processedAt": "2026-10-15T05:51:48.655Z",
+          "dispatchNote": "WOODEN",
+          "vendor": "K S"
         }
       }
     }
