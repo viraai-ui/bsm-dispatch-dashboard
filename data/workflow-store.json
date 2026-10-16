@@ -52710,7 +52710,9 @@
     "1154219000038510001": {
       "salesOrderId": "1154219000038510001",
       "salesOrderNumber": "SO-08193",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T08:43:59.050Z",
       "processedOrder": {
         "id": "1154219000038510001",
         "zohoSalesOrderId": "1154219000038510001",
@@ -52740,8 +52742,8 @@
           {
             "id": "1154219000038510001-1154219000038510004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271458",
+            "qrToken": "26271458",
             "orderId": "1154219000038510001",
             "lineItemId": "1154219000038510004",
             "itemName": "Thread Burner (Indian Heavy Duty)",
@@ -52749,14 +52751,17 @@
             "customerName": "Purewalk Footwear Company",
             "salesOrderNumber": "SO-08193",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Shree Sai Corp.",
+            "dispatchNote": ""
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T14:04:48+0530"
@@ -52770,7 +52775,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:40:41.040Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T08:41:00.763Z"
+          "zohoBackupQueuedAt": "2026-10-16T08:43:59.050Z",
+          "processedAt": "2026-10-16T08:43:59.050Z",
+          "dispatchNote": "",
+          "vendor": "Shree Sai Corp."
         }
       }
     }
