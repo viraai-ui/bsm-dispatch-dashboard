@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271451,
+  "serialCounter": 26271453,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52285,6 +52285,97 @@
           "zohoBackupSyncedAt": "2026-10-15T09:00:48.173Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "Wanneng Trading"
+        }
+      }
+    },
+    "1154219000038460004": {
+      "salesOrderId": "1154219000038460004",
+      "salesOrderNumber": "SO-08189",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038460004",
+        "zohoSalesOrderId": "1154219000038460004",
+        "salesOrderNumber": "SO-08189",
+        "status": "open",
+        "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+        "shippingAddress": "INDUSTRIAL PLOT NO-1, STREET NO-3 SECTOR-5, DADRI TOE, Reliance Distribution Centre, Reliance Model Economic Township, Jhajjar, Haryana, 124515",
+        "deliveryDate": "2026-10-15",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038460007",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000226295",
+            "rate": 34500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038460004-1154219000038460007-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038460004",
+            "lineItemId": "1154219000038460007",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+            "salesOrderNumber": "SO-08189",
+            "deliveryDate": "2026-10-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038460004-1154219000038460007-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038460004",
+            "lineItemId": "1154219000038460007",
+            "itemName": "Foil Stamping machine",
+            "sku": "90-5",
+            "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
+            "salesOrderNumber": "SO-08189",
+            "deliveryDate": "2026-10-15",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-16T10:16:16+0530"
+      },
+      "machines": {
+        "1154219000038460004-1154219000038460007-1": {
+          "machineUnitId": "1154219000038460004-1154219000038460007-1",
+          "lineItemId": "1154219000038460007",
+          "serialNumber": "26271452",
+          "qrToken": "26271452",
+          "qrStatus": "pending"
+        },
+        "1154219000038460004-1154219000038460007-2": {
+          "machineUnitId": "1154219000038460004-1154219000038460007-2",
+          "lineItemId": "1154219000038460007",
+          "serialNumber": "26271453",
+          "qrToken": "26271453",
+          "qrStatus": "pending"
         }
       }
     }
