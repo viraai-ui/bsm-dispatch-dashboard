@@ -30193,6 +30193,65 @@
       "machineIds": [
         "1154219000038398003-1154219000038398006-1"
       ]
+    },
+    "1154219000038422002": {
+      "completedAt": "2026-10-16T06:18:56.089Z",
+      "order": {
+        "id": "1154219000038422002",
+        "zohoSalesOrderId": "1154219000038422002",
+        "salesOrderNumber": "SO-08148",
+        "status": "open",
+        "customerName": "M.S. Enterprises",
+        "shippingAddress": "N-44, GALI NO. 2, New-6, Bajarang Bali Mohalla, Maujpur, Delhi, 110053, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-14",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038422005",
+            "itemName": "Fiber Laser Marking Machine",
+            "sku": "",
+            "description": "Size: 200 * 200mm , 50W",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000868033",
+            "rate": 190000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038422002-1154219000038422005-1",
+            "unitNumber": 1,
+            "serialNumber": "26271451",
+            "qrToken": "26271451",
+            "orderId": "1154219000038422002",
+            "lineItemId": "1154219000038422005",
+            "itemName": "Fiber Laser Marking Machine",
+            "sku": "",
+            "customerName": "M.S. Enterprises",
+            "salesOrderNumber": "SO-08148",
+            "deliveryDate": "2026-10-14",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Size: 200 * 200mm , 50W",
+            "warrantyStart": "2026-10-15",
+            "dispatchNote": "Local"
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-14T16:44:46+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038422002-1154219000038422005-1"
+      ]
     }
   }
 }
