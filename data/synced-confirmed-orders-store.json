@@ -519244,6 +519244,56 @@
       ],
       "machines": [],
       "zohoLastModifiedTime": "2026-10-16T14:44:48+0530"
+    },
+    "1154219000038546003": {
+      "id": "1154219000038546003",
+      "zohoSalesOrderId": "1154219000038546003",
+      "salesOrderNumber": "SO-08200",
+      "status": "open",
+      "customerName": "AONE FOOTWEAR",
+      "shippingAddress": "G:- 1-38, RIICO INDUSTRIAL AREA,, KAITHAL, Rajasthan, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-16",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038546006",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "description": "Including Stand and table.",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": true,
+          "zohoItemId": "1154219000000225837",
+          "rate": 38000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038546003-1154219000038546006-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038546003",
+          "lineItemId": "1154219000038546006",
+          "itemName": "Flesh trimming Machine",
+          "sku": "206",
+          "customerName": "AONE FOOTWEAR",
+          "salesOrderNumber": "SO-08200",
+          "deliveryDate": "2026-10-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Pending",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": "Including Stand and table."
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-16T16:05:49+0530"
     }
   },
   "orderIds": [
@@ -519401,10 +519451,11 @@
     "1154219000038506001",
     "1154219000038510001",
     "1154219000038513001",
-    "1154219000038519001"
+    "1154219000038519001",
+    "1154219000038546003"
   ],
-  "lastSuccessfulSyncAt": "2026-10-16T10:20:39.643Z",
-  "lastAttemptAt": "2026-10-16T10:20:39.643Z",
+  "lastSuccessfulSyncAt": "2026-10-16T11:30:59.227Z",
+  "lastAttemptAt": "2026-10-16T11:30:59.227Z",
   "lastError": null,
   "syncing": false
 }
