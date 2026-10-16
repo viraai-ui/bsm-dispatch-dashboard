@@ -10504,6 +10504,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038422002": {
+      "id": "ship-1792137941358-7g3rv",
+      "itemId": "1154219000038422002",
+      "orderId": "1154219000038422002",
+      "machineId": "1154219000038422002-1154219000038422005-1",
+      "salesOrderNumber": "SO-08148",
+      "customerName": "M.S. Enterprises",
+      "customerPhone": "",
+      "salespersonName": "Anuj Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Porter",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-16",
+      "notes": "",
+      "shippedAt": "2026-10-16T08:05:41.358Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
