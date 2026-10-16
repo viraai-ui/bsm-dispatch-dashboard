@@ -2,7 +2,7 @@ import type { MachineUnit, Order } from '@/types/domain'
 import { classifyDispatchItem, isMachineLineItem } from './item-classification'
 import { fetchZohoConfirmedOrders, fetchZohoOrderDetail } from './zoho'
 import { reconcileOrder, type OrderSyncDiff } from './order-reconcile'
-import { deriveWorkflowStatus, githubReadJson, githubWriteJson, listWorkflows, type OrderWorkflow, type Store as WorkflowStore } from './workflow-store'
+import { deriveWorkflowStatus, githubReadJson, githubReadJsonAuthoritative, githubWriteJson, listWorkflows, type OrderWorkflow, type Store as WorkflowStore } from './workflow-store'
 import { isCurrentZohoOrderTombstoned, isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from './operational-orders'
 import { ensureOrderedMachineSlots, hasIncompleteMachineSlots } from './machine-unit-slots'
 import { reconcileConfirmedOrderSnapshots, type PackagingCompletedStore } from './synced-order-reconciliation'
@@ -128,7 +128,7 @@ export async function getSyncedOrder(id: string) {
 }
 
 export async function syncConfirmedOrders() {
-  if (inMemorySync) return inMemorySync
+  if (inMemorySync) throw new Error('Dispatch sync already running on this server')
   inMemorySync = (async () => {
     const lease = await acquireDispatchLease()
     if (!lease.acquired) throw new Error(`Dispatch sync already running until ${lease.state.lease?.until || 'lease expiry'}`)
@@ -180,11 +180,11 @@ async function performSingleOrderSync(id: string, actor: string) {
 }
 
 async function performSync() {
-  const previous = await readSyncedOrdersStore()
-  if (previous.syncing && previous.lastAttemptAt && Date.now() - new Date(previous.lastAttemptAt).getTime() < 10 * 60 * 1000) {
-    throw new Error('A confirmed order sync is already running')
-  }
-  await writeSyncedOrdersStore({ ...previous, syncing: true, lastAttemptAt: new Date().toISOString(), lastError: null }, 'Start confirmed sales order sync')
+  // A sync is a mutation: begin from the authoritative blob and retain its SHA.
+  // The lease is the running marker, so avoid a data-only "start" commit. This
+  // also means failures and busy callers cannot disturb the last good snapshot.
+  const snapshot = await githubReadJsonAuthoritative<SyncedOrdersStore>(SYNCED_ORDERS_PATH)
+  const previous = normalizeStore(snapshot.data)
   try {
     const fetched = await fetchZohoConfirmedOrders(previous.orders, 15, 15)
     if (!Array.isArray(fetched)) throw new Error('Invalid Zoho response')
@@ -207,14 +207,12 @@ async function performSync() {
       await githubWriteJson(PACKAGING_COMPLETED_PATH, reconciled.completedStore, 'Reconcile packaging orders with Zoho identities', completedSnapshot.sha)
     }
     const next: SyncedOrdersStore = { orders: reconciled.orders, orderIds: reconciled.orderIds, lastSuccessfulSyncAt: at, lastAttemptAt: at, lastError: null, syncing: false }
-    await writeSyncedOrdersStore(next, 'Complete confirmed sales order sync')
+    await writeSyncedOrdersStore(next, 'Complete confirmed sales order sync', snapshot.sha)
     return next
   } catch (error) {
     const message = safeOrderSyncError(error)
-    const safe = { ...previous, syncing: false, lastAttemptAt: new Date().toISOString(), lastError: message }
-    // The original failure may be the durable provider itself. Do not mask the
-    // sanitized result (or hammer exhausted quota) with a second failed write.
-    try { await writeSyncedOrdersStore(safe, 'Confirmed sales order sync failed') } catch { /* preserve last known good snapshot */ }
+    // Preserve the complete last-known-good snapshot. In particular, never
+    // publish a partial fetch or turn a provider failure into another commit.
     throw new Error(message)
   }
 }

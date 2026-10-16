@@ -1,4 +1,4 @@
-import { githubReadJson, githubWriteJson, isGitHubWriteConflict } from './workflow-store'
+import { githubReadJson, githubReadJsonAuthoritative, githubWriteJson, githubWriteRetryDelay, isGitHubWriteConflict } from './workflow-store'
 
 export const DISPATCH_GUARD_PATH = 'data/dispatch-sync-guard.json'
 export const DISPATCH_DAILY_BUDGET = Math.max(1, Number(process.env.DISPATCH_ZOHO_DAILY_BUDGET || 1200))
@@ -27,10 +27,17 @@ function normalized(value: Partial<GuardState>, now = new Date()): GuardState {
 async function update(mutator: (state: GuardState) => GuardState) {
   let error: unknown
   for (let attempt = 0; attempt < 4; attempt += 1) {
-    const current = await githubReadJson<GuardState>(DISPATCH_GUARD_PATH, initial())
+    // Guard mutations are correctness-critical. The display read is deliberately
+    // CDN/in-process cached and may have no SHA, so it must never feed a mutation.
+    const current = await githubReadJsonAuthoritative<GuardState>(DISPATCH_GUARD_PATH)
     const next = mutator(normalized(current.data))
+    if (JSON.stringify(next) === JSON.stringify(current.data)) return next
     try { await githubWriteJson(DISPATCH_GUARD_PATH, next, 'Update Dispatch Zoho safety guard', current.sha); return next }
-    catch (caught) { error = caught; if (!isGitHubWriteConflict(caught)) throw caught }
+    catch (caught) {
+      error = caught
+      if (!isGitHubWriteConflict(caught)) throw caught
+      await new Promise((resolve) => setTimeout(resolve, githubWriteRetryDelay(attempt)))
+    }
   }
   throw error instanceof Error ? error : new Error('Dispatch guard update conflict')
 }

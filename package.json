@@ -23,6 +23,7 @@
     "test:serial-sheet-audit": "node tests/serial-sheet-audit-config.test.cjs",
     "test:r2-mobile-upload": "node --test tests/r2-mobile-upload.test.mjs",
     "test:lifecycle": "node --experimental-strip-types --test tests/operational-lifecycle.test.mjs",
+    "test:dispatch-guard": "tsx --test tests/dispatch-sync-guard.test.ts",
     "typecheck": "tsc --noEmit",
     "snapshot:public": "npx --yes tsx scripts/generate-public-database-snapshot.ts"
   },

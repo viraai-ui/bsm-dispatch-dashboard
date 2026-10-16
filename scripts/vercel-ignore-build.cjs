@@ -9,6 +9,7 @@ const { spawnSync } = require('node:child_process')
 const OPERATIONAL_FILES = new Set([
   'data/auth-users-store.json',
   'data/dispatch-priority-store.json',
+  'data/dispatch-sync-guard.json',
   'data/dispatch-store.json',
   'data/loading-video-store.json',
   'data/media-proof-store.json',
