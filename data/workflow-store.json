@@ -52410,9 +52410,9 @@
     "1154219000038464001": {
       "salesOrderId": "1154219000038464001",
       "salesOrderNumber": "SO-08190",
-      "status": "qr_not_required",
+      "status": "processed",
       "dispatchPriority": "regular",
-      "processedAt": "2026-10-16T05:59:03.202Z",
+      "processedAt": "2026-10-16T06:09:21.038Z",
       "processedOrder": {
         "id": "1154219000038464001",
         "zohoSalesOrderId": "1154219000038464001",
@@ -52475,7 +52475,7 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -52499,7 +52499,7 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "Not Generated",
+            "status": "QR Printed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -52522,7 +52522,7 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -52546,7 +52546,7 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "QR Generated",
+            "status": "Processed",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
@@ -52614,7 +52614,12 @@
           "machineUnitId": "1154219000038464001-1154219000038464005-1",
           "lineItemId": "1154219000038464005",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-10-16T06:09:15.622Z"
+          "qrNotRequiredAt": "2026-10-16T06:09:15.622Z",
+          "processedAt": "2026-10-16T06:09:21.038Z",
+          "dispatchNote": "",
+          "vendor": "",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-16T06:09:21.038Z"
         }
       }
     }
