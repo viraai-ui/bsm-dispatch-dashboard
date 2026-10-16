@@ -52632,7 +52632,9 @@
     "1154219000038506001": {
       "salesOrderId": "1154219000038506001",
       "salesOrderNumber": "SO-08192",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T08:31:55.844Z",
       "processedOrder": {
         "id": "1154219000038506001",
         "zohoSalesOrderId": "1154219000038506001",
@@ -52662,8 +52664,8 @@
           {
             "id": "1154219000038506001-1154219000038506004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271457",
+            "qrToken": "26271457",
             "orderId": "1154219000038506001",
             "lineItemId": "1154219000038506004",
             "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
@@ -52671,14 +52673,17 @@
             "customerName": "Nisha Enterprises",
             "salesOrderNumber": "SO-08192",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T13:53:18+0530"
@@ -52691,11 +52696,14 @@
           "qrToken": "26271457",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:29:59.228Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-16T08:30:19.454Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-16T08:31:55.844Z",
           "zohoBackupLastAttemptAt": "2026-10-16T08:30:48.749Z",
           "zohoBackupSyncedAt": "2026-10-16T08:30:48.749Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-16T08:31:55.844Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         }
       }
     }
