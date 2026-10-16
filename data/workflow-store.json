@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271463,
+  "serialCounter": 26271464,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -53036,6 +53036,70 @@
         }
       },
       "dispatchSortOrder": 1
+    },
+    "1154219000038546003": {
+      "salesOrderId": "1154219000038546003",
+      "salesOrderNumber": "SO-08200",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038546003",
+        "zohoSalesOrderId": "1154219000038546003",
+        "salesOrderNumber": "SO-08200",
+        "status": "open",
+        "customerName": "AONE FOOTWEAR",
+        "shippingAddress": "G:- 1-38, RIICO INDUSTRIAL AREA,, KAITHAL, Rajasthan, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038546006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "description": "Including Stand and table.",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": true,
+            "zohoItemId": "1154219000000225837",
+            "rate": 38000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038546003-1154219000038546006-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038546003",
+            "lineItemId": "1154219000038546006",
+            "itemName": "Flesh trimming Machine",
+            "sku": "206",
+            "customerName": "AONE FOOTWEAR",
+            "salesOrderNumber": "SO-08200",
+            "deliveryDate": "2026-10-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Pending",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "Including Stand and table."
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-16T16:05:49+0530"
+      },
+      "machines": {
+        "1154219000038546003-1154219000038546006-1": {
+          "machineUnitId": "1154219000038546003-1154219000038546006-1",
+          "lineItemId": "1154219000038546006",
+          "serialNumber": "26271464",
+          "qrToken": "26271464",
+          "qrStatus": "pending"
+        }
+      }
     }
   },
   "machineReallocation": {
