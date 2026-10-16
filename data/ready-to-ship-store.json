@@ -10535,6 +10535,37 @@
           "phone": ""
         }
       }
+    },
+    "1154219000038510001": {
+      "id": "ship-1792141180426-17toc",
+      "itemId": "1154219000038510001",
+      "orderId": "1154219000038510001",
+      "machineId": "1154219000038510001-1154219000038510004-1",
+      "salesOrderNumber": "SO-08193",
+      "customerName": "Purewalk Footwear Company",
+      "customerPhone": "",
+      "salespersonName": "Ram Kumar",
+      "salespersonPhone": "",
+      "transporterName": "Customer's Own Transport",
+      "transporterPhone": "",
+      "shipmentType": "direct",
+      "lrCopy": null,
+      "vehicleNumber": "—",
+      "driverName": "—",
+      "driverPhone": "—",
+      "expectedDelivery": "2026-10-16",
+      "notes": "Self Customer",
+      "shippedAt": "2026-10-16T08:59:40.426Z",
+      "messages": {
+        "customer": {
+          "status": "skipped",
+          "phone": ""
+        },
+        "salesperson": {
+          "status": "skipped",
+          "phone": ""
+        }
+      }
     }
   }
 }
