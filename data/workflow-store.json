@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271458,
+  "serialCounter": 26271463,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52786,6 +52786,182 @@
           "zohoBackupLastAttemptAt": "2026-10-16T08:45:52.635Z",
           "zohoBackupSyncedAt": "2026-10-16T08:45:52.635Z",
           "zohoBackupReplaceExisting": false
+        }
+      }
+    },
+    "1154219000038513001": {
+      "salesOrderId": "1154219000038513001",
+      "salesOrderNumber": "SO-08194",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038513001",
+        "zohoSalesOrderId": "1154219000038513001",
+        "salesOrderNumber": "SO-08194",
+        "status": "open",
+        "customerName": "R K UPPER FABRICATIONS",
+        "shippingAddress": "GOL PAHADIYA 0, NEAR KAMBAL KENDRA, LASHKAR, Gwalior, Madhya Pradesh, 474001, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038513004",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "description": "",
+            "quantity": 5,
+            "pendingQuantity": 5,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000003572039",
+            "rate": 61500,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038513001-1154219000038513004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038513001",
+            "lineItemId": "1154219000038513004",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "R K UPPER FABRICATIONS",
+            "salesOrderNumber": "SO-08194",
+            "deliveryDate": "2026-10-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038513001-1154219000038513004-2",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038513001",
+            "lineItemId": "1154219000038513004",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "R K UPPER FABRICATIONS",
+            "salesOrderNumber": "SO-08194",
+            "deliveryDate": "2026-10-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038513001-1154219000038513004-3",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038513001",
+            "lineItemId": "1154219000038513004",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "R K UPPER FABRICATIONS",
+            "salesOrderNumber": "SO-08194",
+            "deliveryDate": "2026-10-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038513001-1154219000038513004-4",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038513001",
+            "lineItemId": "1154219000038513004",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "R K UPPER FABRICATIONS",
+            "salesOrderNumber": "SO-08194",
+            "deliveryDate": "2026-10-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038513001-1154219000038513004-5",
+            "unitNumber": 5,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038513001",
+            "lineItemId": "1154219000038513004",
+            "itemName": "Computerized Post Bed Single Needle Roller Feed",
+            "sku": "9910RTC",
+            "customerName": "R K UPPER FABRICATIONS",
+            "salesOrderNumber": "SO-08194",
+            "deliveryDate": "2026-10-16",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-16T14:16:18+0530"
+      },
+      "machines": {
+        "1154219000038513001-1154219000038513004-1": {
+          "machineUnitId": "1154219000038513001-1154219000038513004-1",
+          "lineItemId": "1154219000038513004",
+          "serialNumber": "26271459",
+          "qrToken": "26271459",
+          "qrStatus": "pending"
+        },
+        "1154219000038513001-1154219000038513004-2": {
+          "machineUnitId": "1154219000038513001-1154219000038513004-2",
+          "lineItemId": "1154219000038513004",
+          "serialNumber": "26271460",
+          "qrToken": "26271460",
+          "qrStatus": "pending"
+        },
+        "1154219000038513001-1154219000038513004-3": {
+          "machineUnitId": "1154219000038513001-1154219000038513004-3",
+          "lineItemId": "1154219000038513004",
+          "serialNumber": "26271461",
+          "qrToken": "26271461",
+          "qrStatus": "pending"
+        },
+        "1154219000038513001-1154219000038513004-4": {
+          "machineUnitId": "1154219000038513001-1154219000038513004-4",
+          "lineItemId": "1154219000038513004",
+          "serialNumber": "26271462",
+          "qrToken": "26271462",
+          "qrStatus": "pending"
+        },
+        "1154219000038513001-1154219000038513004-5": {
+          "machineUnitId": "1154219000038513001-1154219000038513004-5",
+          "lineItemId": "1154219000038513004",
+          "serialNumber": "26271463",
+          "qrToken": "26271463",
+          "qrStatus": "pending"
         }
       }
     }
