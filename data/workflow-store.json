@@ -52410,7 +52410,7 @@
     "1154219000038464001": {
       "salesOrderId": "1154219000038464001",
       "salesOrderNumber": "SO-08190",
-      "status": "processed",
+      "status": "qr_not_required",
       "dispatchPriority": "regular",
       "processedAt": "2026-10-16T05:59:03.202Z",
       "processedOrder": {
@@ -52609,6 +52609,12 @@
           "processedAt": "2026-10-16T05:59:03.202Z",
           "dispatchNote": "",
           "vendor": "Ks"
+        },
+        "1154219000038464001-1154219000038464005-1": {
+          "machineUnitId": "1154219000038464001-1154219000038464005-1",
+          "lineItemId": "1154219000038464005",
+          "qrStatus": "not_required",
+          "qrNotRequiredAt": "2026-10-16T06:09:15.622Z"
         }
       }
     }
