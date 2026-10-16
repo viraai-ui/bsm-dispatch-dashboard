@@ -52792,7 +52792,9 @@
     "1154219000038513001": {
       "salesOrderId": "1154219000038513001",
       "salesOrderNumber": "SO-08194",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T08:53:22.922Z",
       "processedOrder": {
         "id": "1154219000038513001",
         "zohoSalesOrderId": "1154219000038513001",
@@ -52822,8 +52824,8 @@
           {
             "id": "1154219000038513001-1154219000038513004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271459",
+            "qrToken": "26271459",
             "orderId": "1154219000038513001",
             "lineItemId": "1154219000038513004",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -52831,20 +52833,23 @@
             "customerName": "R K UPPER FABRICATIONS",
             "salesOrderNumber": "SO-08194",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000038513001-1154219000038513004-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271460",
+            "qrToken": "26271460",
             "orderId": "1154219000038513001",
             "lineItemId": "1154219000038513004",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -52852,20 +52857,23 @@
             "customerName": "R K UPPER FABRICATIONS",
             "salesOrderNumber": "SO-08194",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000038513001-1154219000038513004-3",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271461",
+            "qrToken": "26271461",
             "orderId": "1154219000038513001",
             "lineItemId": "1154219000038513004",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -52873,20 +52881,23 @@
             "customerName": "R K UPPER FABRICATIONS",
             "salesOrderNumber": "SO-08194",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000038513001-1154219000038513004-4",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271462",
+            "qrToken": "26271462",
             "orderId": "1154219000038513001",
             "lineItemId": "1154219000038513004",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -52894,20 +52905,23 @@
             "customerName": "R K UPPER FABRICATIONS",
             "salesOrderNumber": "SO-08194",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000038513001-1154219000038513004-5",
             "unitNumber": 5,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271463",
+            "qrToken": "26271463",
             "orderId": "1154219000038513001",
             "lineItemId": "1154219000038513004",
             "itemName": "Computerized Post Bed Single Needle Roller Feed",
@@ -52915,14 +52929,17 @@
             "customerName": "R K UPPER FABRICATIONS",
             "salesOrderNumber": "SO-08194",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T14:16:18+0530"
@@ -52936,7 +52953,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:51:24.321Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T08:51:43.603Z"
+          "zohoBackupQueuedAt": "2026-10-16T08:53:22.922Z",
+          "processedAt": "2026-10-16T08:53:22.922Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         },
         "1154219000038513001-1154219000038513004-2": {
           "machineUnitId": "1154219000038513001-1154219000038513004-2",
@@ -52946,7 +52966,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:51:24.321Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T08:51:43.603Z"
+          "zohoBackupQueuedAt": "2026-10-16T08:53:22.922Z",
+          "processedAt": "2026-10-16T08:53:22.922Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         },
         "1154219000038513001-1154219000038513004-3": {
           "machineUnitId": "1154219000038513001-1154219000038513004-3",
@@ -52956,7 +52979,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:51:24.321Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T08:51:43.603Z"
+          "zohoBackupQueuedAt": "2026-10-16T08:53:22.922Z",
+          "processedAt": "2026-10-16T08:53:22.922Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         },
         "1154219000038513001-1154219000038513004-4": {
           "machineUnitId": "1154219000038513001-1154219000038513004-4",
@@ -52966,7 +52992,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:51:24.321Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T08:51:43.603Z"
+          "zohoBackupQueuedAt": "2026-10-16T08:53:22.922Z",
+          "processedAt": "2026-10-16T08:53:22.922Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         },
         "1154219000038513001-1154219000038513004-5": {
           "machineUnitId": "1154219000038513001-1154219000038513004-5",
@@ -52976,7 +53005,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:51:24.321Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T08:51:43.603Z"
+          "zohoBackupQueuedAt": "2026-10-16T08:53:22.922Z",
+          "processedAt": "2026-10-16T08:53:22.922Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         }
       }
     }
