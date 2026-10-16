@@ -53178,8 +53178,11 @@
           "qrToken": "26271465",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T12:28:51.227Z",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T12:29:10.910Z"
+          "zohoBackupStatus": "synced",
+          "zohoBackupQueuedAt": "2026-10-16T12:29:10.910Z",
+          "zohoBackupLastAttemptAt": "2026-10-16T12:30:50.372Z",
+          "zohoBackupSyncedAt": "2026-10-16T12:30:50.372Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
