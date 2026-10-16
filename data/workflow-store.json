@@ -52291,7 +52291,9 @@
     "1154219000038460004": {
       "salesOrderId": "1154219000038460004",
       "salesOrderNumber": "SO-08189",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T05:12:11.325Z",
       "processedOrder": {
         "id": "1154219000038460004",
         "zohoSalesOrderId": "1154219000038460004",
@@ -52320,8 +52322,8 @@
           {
             "id": "1154219000038460004-1154219000038460007-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271452",
+            "qrToken": "26271452",
             "orderId": "1154219000038460004",
             "lineItemId": "1154219000038460007",
             "itemName": "Foil Stamping machine",
@@ -52329,20 +52331,23 @@
             "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
             "salesOrderNumber": "SO-08189",
             "deliveryDate": "2026-10-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "K S",
+            "dispatchNote": "local"
           },
           {
             "id": "1154219000038460004-1154219000038460007-2",
             "unitNumber": 2,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271453",
+            "qrToken": "26271453",
             "orderId": "1154219000038460004",
             "lineItemId": "1154219000038460007",
             "itemName": "Foil Stamping machine",
@@ -52350,14 +52355,17 @@
             "customerName": "KAY TENT INDUSTRIES (Jhajjar)",
             "salesOrderNumber": "SO-08189",
             "deliveryDate": "2026-10-15",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "K S",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T10:16:16+0530"
@@ -52371,7 +52379,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T05:07:19.390Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T05:07:38.068Z"
+          "zohoBackupQueuedAt": "2026-10-16T05:12:11.325Z",
+          "processedAt": "2026-10-16T05:12:11.325Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         },
         "1154219000038460004-1154219000038460007-2": {
           "machineUnitId": "1154219000038460004-1154219000038460007-2",
@@ -52381,7 +52392,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T05:07:19.390Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T05:07:38.068Z"
+          "zohoBackupQueuedAt": "2026-10-16T05:12:11.325Z",
+          "processedAt": "2026-10-16T05:12:11.325Z",
+          "dispatchNote": "local",
+          "vendor": "K S"
         }
       }
     }
