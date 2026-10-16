@@ -53040,7 +53040,9 @@
     "1154219000038546003": {
       "salesOrderId": "1154219000038546003",
       "salesOrderNumber": "SO-08200",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T11:50:03.272Z",
       "processedOrder": {
         "id": "1154219000038546003",
         "zohoSalesOrderId": "1154219000038546003",
@@ -53070,8 +53072,8 @@
           {
             "id": "1154219000038546003-1154219000038546006-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271464",
+            "qrToken": "26271464",
             "orderId": "1154219000038546003",
             "lineItemId": "1154219000038546006",
             "itemName": "Flesh trimming Machine",
@@ -53079,14 +53081,17 @@
             "customerName": "AONE FOOTWEAR",
             "salesOrderNumber": "SO-08200",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": "Including Stand and table."
+            "itemDescription": "Including Stand and table.",
+            "warrantyStart": "2026-10-16",
+            "vendor": "K S",
+            "dispatchNote": "Good wrapping"
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T16:05:49+0530"
@@ -53100,7 +53105,10 @@
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T11:46:41.661Z",
           "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T11:47:01.253Z"
+          "zohoBackupQueuedAt": "2026-10-16T11:50:03.272Z",
+          "processedAt": "2026-10-16T11:50:03.272Z",
+          "dispatchNote": "Good wrapping",
+          "vendor": "K S"
         }
       }
     }
