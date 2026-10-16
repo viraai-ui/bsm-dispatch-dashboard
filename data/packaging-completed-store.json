@@ -30348,45 +30348,45 @@
         "1154219000038418016-1154219000038418019-2"
       ]
     },
-    "1154219000038506001": {
-      "completedAt": "2026-10-16T08:53:53.687Z",
+    "1154219000038510001": {
+      "completedAt": "2026-10-16T08:53:57.416Z",
       "order": {
-        "id": "1154219000038506001",
-        "zohoSalesOrderId": "1154219000038506001",
-        "salesOrderNumber": "SO-08192",
+        "id": "1154219000038510001",
+        "zohoSalesOrderId": "1154219000038510001",
+        "salesOrderNumber": "SO-08193",
         "status": "open",
-        "customerName": "Nisha Enterprises",
-        "shippingAddress": "GROUND FLOOR, H.NO.6, TIKRI KALAN,, Delhi, 110041, India",
-        "salesperson": "Anuj Kumar",
+        "customerName": "Purewalk Footwear Company",
+        "shippingAddress": "1st Floor, Plot No-63, Sector-17 Jakhoda Kassar, Coim, HSIIDCIndustrial Estate Bahadurgarh, Sankhol, Jhajjar, Haryana, 124507",
+        "salesperson": "Ram Kumar",
         "deliveryDate": "2026-10-16",
         "dashboardStatus": "Not Generated",
         "reviewRequired": false,
         "lineItems": [
           {
-            "id": "1154219000038506004",
-            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-            "sku": "003-1",
+            "id": "1154219000038510004",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
             "description": "",
             "quantity": 1,
             "pendingQuantity": 1,
             "woodenPackingRequired": false,
-            "zohoItemId": "1154219000000225152",
-            "rate": 43000,
+            "zohoItemId": "1154219000000227284",
+            "rate": 17000,
             "dispatchCategory": "machine"
           }
         ],
         "machines": [
           {
-            "id": "1154219000038506001-1154219000038506004-1",
+            "id": "1154219000038510001-1154219000038510004-1",
             "unitNumber": 1,
-            "serialNumber": "26271457",
-            "qrToken": "26271457",
-            "orderId": "1154219000038506001",
-            "lineItemId": "1154219000038506004",
-            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
-            "sku": "003-1",
-            "customerName": "Nisha Enterprises",
-            "salesOrderNumber": "SO-08192",
+            "serialNumber": "26271458",
+            "qrToken": "26271458",
+            "orderId": "1154219000038510001",
+            "lineItemId": "1154219000038510004",
+            "itemName": "Thread Burner (Indian Heavy Duty)",
+            "sku": "",
+            "customerName": "Purewalk Footwear Company",
+            "salesOrderNumber": "SO-08193",
             "deliveryDate": "2026-10-16",
             "status": "QR Generated",
             "selectedForBatch": false,
@@ -30400,11 +30400,11 @@
             "dispatchNote": ""
           }
         ],
-        "zohoLastModifiedTime": "2026-10-16T13:53:18+0530",
+        "zohoLastModifiedTime": "2026-10-16T14:04:48+0530",
         "dispatchPriority": "regular"
       },
       "machineIds": [
-        "1154219000038506001-1154219000038506004-1"
+        "1154219000038510001-1154219000038510004-1"
       ]
     }
   }
