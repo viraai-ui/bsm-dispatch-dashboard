@@ -52410,7 +52410,7 @@
     "1154219000038464001": {
       "salesOrderId": "1154219000038464001",
       "salesOrderNumber": "SO-08190",
-      "status": "processed",
+      "status": "qr_not_required",
       "dispatchPriority": "regular",
       "processedAt": "2026-10-16T06:09:21.038Z",
       "processedOrder": {
@@ -52614,12 +52614,7 @@
           "machineUnitId": "1154219000038464001-1154219000038464005-1",
           "lineItemId": "1154219000038464005",
           "qrStatus": "not_required",
-          "qrNotRequiredAt": "2026-10-16T06:09:15.622Z",
-          "processedAt": "2026-10-16T06:09:21.038Z",
-          "dispatchNote": "",
-          "vendor": "",
-          "zohoBackupStatus": "pending",
-          "zohoBackupQueuedAt": "2026-10-16T06:09:21.038Z"
+          "qrNotRequiredAt": "2026-10-16T06:09:27.059Z"
         }
       }
     }
