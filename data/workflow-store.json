@@ -52410,7 +52410,9 @@
     "1154219000038464001": {
       "salesOrderId": "1154219000038464001",
       "salesOrderNumber": "SO-08190",
-      "status": "partially_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T05:59:03.202Z",
       "processedOrder": {
         "id": "1154219000038464001",
         "zohoSalesOrderId": "1154219000038464001",
@@ -52464,8 +52466,8 @@
           {
             "id": "1154219000038464001-1154219000038464004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271454",
+            "qrToken": "26271454",
             "orderId": "1154219000038464001",
             "lineItemId": "1154219000038464004",
             "itemName": "Travel Head Cutting Press (25 ton)",
@@ -52473,14 +52475,17 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Rk Hydraulic",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000038464001-1154219000038464005-1",
@@ -52501,13 +52506,15 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "",
+            "vendor": ""
           },
           {
             "id": "1154219000038464001-1154219000038464006-1",
             "unitNumber": 3,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271455",
+            "qrToken": "26271455",
             "orderId": "1154219000038464001",
             "lineItemId": "1154219000038464006",
             "itemName": "Round Blade Edge trimming Machine (5 %)",
@@ -52515,20 +52522,23 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           },
           {
             "id": "1154219000038464001-1154219000038464006-2",
             "unitNumber": 4,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271456",
+            "qrToken": "26271456",
             "orderId": "1154219000038464001",
             "lineItemId": "1154219000038464006",
             "itemName": "Round Blade Edge trimming Machine (5 %)",
@@ -52536,14 +52546,17 @@
             "customerName": "Great Lamifab",
             "salesOrderNumber": "SO-08190",
             "deliveryDate": "2026-10-22",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Ks",
+            "dispatchNote": ""
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T10:16:15+0530"
@@ -52556,11 +52569,14 @@
           "qrToken": "26271454",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T05:42:01.147Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-16T05:42:19.877Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-16T05:59:03.202Z",
           "zohoBackupLastAttemptAt": "2026-10-16T05:45:49.465Z",
           "zohoBackupSyncedAt": "2026-10-16T05:45:49.465Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-16T05:59:03.202Z",
+          "dispatchNote": "",
+          "vendor": "Rk Hydraulic"
         },
         "1154219000038464001-1154219000038464006-1": {
           "machineUnitId": "1154219000038464001-1154219000038464006-1",
@@ -52569,11 +52585,14 @@
           "qrToken": "26271455",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T05:42:01.147Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-16T05:42:19.877Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-16T05:59:03.202Z",
           "zohoBackupLastAttemptAt": "2026-10-16T05:45:49.465Z",
           "zohoBackupSyncedAt": "2026-10-16T05:45:49.465Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-16T05:59:03.202Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         },
         "1154219000038464001-1154219000038464006-2": {
           "machineUnitId": "1154219000038464001-1154219000038464006-2",
@@ -52582,11 +52601,14 @@
           "qrToken": "26271456",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T05:42:01.147Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-16T05:42:19.877Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-16T05:59:03.202Z",
           "zohoBackupLastAttemptAt": "2026-10-16T05:45:49.465Z",
           "zohoBackupSyncedAt": "2026-10-16T05:45:49.465Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-16T05:59:03.202Z",
+          "dispatchNote": "",
+          "vendor": "Ks"
         }
       }
     }
