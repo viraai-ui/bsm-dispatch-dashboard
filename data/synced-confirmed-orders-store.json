@@ -518982,6 +518982,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-16T10:16:15+0530"
+    },
+    "1154219000038506001": {
+      "id": "1154219000038506001",
+      "zohoSalesOrderId": "1154219000038506001",
+      "salesOrderNumber": "SO-08192",
+      "status": "open",
+      "customerName": "Nisha Enterprises",
+      "shippingAddress": "GROUND FLOOR, H.NO.6, TIKRI KALAN,, Delhi, 110041, India",
+      "salesperson": "Anuj Kumar",
+      "deliveryDate": "2026-10-16",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038506004",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000225152",
+          "rate": 43000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038506001-1154219000038506004-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038506001",
+          "lineItemId": "1154219000038506004",
+          "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+          "sku": "003-1",
+          "customerName": "Nisha Enterprises",
+          "salesOrderNumber": "SO-08192",
+          "deliveryDate": "2026-10-16",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-16T13:53:18+0530"
     }
   },
   "orderIds": [
@@ -519135,10 +519185,11 @@
     "1154219000038464001",
     "1154219000038460004",
     "1154219000038455001",
-    "1154219000038449001"
+    "1154219000038449001",
+    "1154219000038506001"
   ],
-  "lastSuccessfulSyncAt": "2026-10-16T08:20:38.285Z",
-  "lastAttemptAt": "2026-10-16T08:29:31.887Z",
+  "lastSuccessfulSyncAt": "2026-10-16T08:29:42.029Z",
+  "lastAttemptAt": "2026-10-16T08:29:42.029Z",
   "lastError": null,
-  "syncing": true
+  "syncing": false
 }
