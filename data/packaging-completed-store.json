@@ -30347,6 +30347,65 @@
         "1154219000038418016-1154219000038418019-1",
         "1154219000038418016-1154219000038418019-2"
       ]
+    },
+    "1154219000038506001": {
+      "completedAt": "2026-10-16T08:53:53.687Z",
+      "order": {
+        "id": "1154219000038506001",
+        "zohoSalesOrderId": "1154219000038506001",
+        "salesOrderNumber": "SO-08192",
+        "status": "open",
+        "customerName": "Nisha Enterprises",
+        "shippingAddress": "GROUND FLOOR, H.NO.6, TIKRI KALAN,, Delhi, 110041, India",
+        "salesperson": "Anuj Kumar",
+        "deliveryDate": "2026-10-16",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038506004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000225152",
+            "rate": 43000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038506001-1154219000038506004-1",
+            "unitNumber": 1,
+            "serialNumber": "26271457",
+            "qrToken": "26271457",
+            "orderId": "1154219000038506001",
+            "lineItemId": "1154219000038506004",
+            "itemName": "Glass jar Applicator [Single jar] (for Rubber based adhesives)",
+            "sku": "003-1",
+            "customerName": "Nisha Enterprises",
+            "salesOrderNumber": "SO-08192",
+            "deliveryDate": "2026-10-16",
+            "status": "QR Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "dispatchNote": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-16T13:53:18+0530",
+        "dispatchPriority": "regular"
+      },
+      "machineIds": [
+        "1154219000038506001-1154219000038506004-1"
+      ]
     }
   }
 }
