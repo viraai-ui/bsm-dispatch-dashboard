@@ -1,5 +1,5 @@
 {
-  "serialCounter": 26271453,
+  "serialCounter": 26271456,
   "orders": {
     "1154219000034532009": {
       "salesOrderId": "1154219000034532009",
@@ -52404,6 +52404,171 @@
           "zohoBackupSyncedAt": "2026-10-16T05:15:47.373Z",
           "zohoBackupReplaceExisting": false,
           "sheetVendor": "K S"
+        }
+      }
+    },
+    "1154219000038464001": {
+      "salesOrderId": "1154219000038464001",
+      "salesOrderNumber": "SO-08190",
+      "status": "open",
+      "processedOrder": {
+        "id": "1154219000038464001",
+        "zohoSalesOrderId": "1154219000038464001",
+        "salesOrderNumber": "SO-08190",
+        "status": "open",
+        "customerName": "Great Lamifab",
+        "shippingAddress": "WZ-430-A, VILL MADIPUR, Jawalaheri, New Delhi, West Delhi, Delhi,, 110026",
+        "salesperson": "Karan Singh",
+        "deliveryDate": "2026-10-22",
+        "dashboardStatus": "Not Generated",
+        "reviewRequired": false,
+        "lineItems": [
+          {
+            "id": "1154219000038464004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000277612",
+            "rate": 268000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038464005",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "description": "",
+            "quantity": 1,
+            "pendingQuantity": 1,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000000335059",
+            "rate": 22000,
+            "dispatchCategory": "machine"
+          },
+          {
+            "id": "1154219000038464006",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "description": "",
+            "quantity": 2,
+            "pendingQuantity": 2,
+            "woodenPackingRequired": false,
+            "zohoItemId": "1154219000003664009",
+            "rate": 25000,
+            "dispatchCategory": "machine"
+          }
+        ],
+        "machines": [
+          {
+            "id": "1154219000038464001-1154219000038464004-1",
+            "unitNumber": 1,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038464001",
+            "lineItemId": "1154219000038464004",
+            "itemName": "Travel Head Cutting Press (25 ton)",
+            "sku": "",
+            "customerName": "Great Lamifab",
+            "salesOrderNumber": "SO-08190",
+            "deliveryDate": "2026-10-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038464001-1154219000038464005-1",
+            "unitNumber": 2,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038464001",
+            "lineItemId": "1154219000038464005",
+            "itemName": "Cutting Board [PP Board] - 60*20*3 Inch",
+            "sku": "PP Board 60*20*3",
+            "customerName": "Great Lamifab",
+            "salesOrderNumber": "SO-08190",
+            "deliveryDate": "2026-10-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038464001-1154219000038464006-1",
+            "unitNumber": 3,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038464001",
+            "lineItemId": "1154219000038464006",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "Great Lamifab",
+            "salesOrderNumber": "SO-08190",
+            "deliveryDate": "2026-10-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          },
+          {
+            "id": "1154219000038464001-1154219000038464006-2",
+            "unitNumber": 4,
+            "serialNumber": "",
+            "qrToken": "",
+            "orderId": "1154219000038464001",
+            "lineItemId": "1154219000038464006",
+            "itemName": "Round Blade Edge trimming Machine (5 %)",
+            "sku": "902 (5%)",
+            "customerName": "Great Lamifab",
+            "salesOrderNumber": "SO-08190",
+            "deliveryDate": "2026-10-22",
+            "status": "Not Generated",
+            "selectedForBatch": false,
+            "woodenPacking": "Not Required",
+            "qrPasted": false,
+            "qcDone": false,
+            "mediaPhotos": 0,
+            "mediaVideos": 0,
+            "itemDescription": ""
+          }
+        ],
+        "zohoLastModifiedTime": "2026-10-16T10:16:15+0530"
+      },
+      "machines": {
+        "1154219000038464001-1154219000038464004-1": {
+          "machineUnitId": "1154219000038464001-1154219000038464004-1",
+          "lineItemId": "1154219000038464004",
+          "serialNumber": "26271454",
+          "qrToken": "26271454",
+          "qrStatus": "pending"
+        },
+        "1154219000038464001-1154219000038464006-1": {
+          "machineUnitId": "1154219000038464001-1154219000038464006-1",
+          "lineItemId": "1154219000038464006",
+          "serialNumber": "26271455",
+          "qrToken": "26271455",
+          "qrStatus": "pending"
+        },
+        "1154219000038464001-1154219000038464006-2": {
+          "machineUnitId": "1154219000038464001-1154219000038464006-2",
+          "lineItemId": "1154219000038464006",
+          "serialNumber": "26271456",
+          "qrToken": "26271456",
+          "qrStatus": "pending"
         }
       }
     }
