@@ -52774,11 +52774,14 @@
           "qrToken": "26271458",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T08:40:41.040Z",
-          "zohoBackupStatus": "pending",
+          "zohoBackupStatus": "synced",
           "zohoBackupQueuedAt": "2026-10-16T08:43:59.050Z",
           "processedAt": "2026-10-16T08:43:59.050Z",
           "dispatchNote": "",
-          "vendor": "Shree Sai Corp."
+          "vendor": "Shree Sai Corp.",
+          "zohoBackupLastAttemptAt": "2026-10-16T08:45:52.635Z",
+          "zohoBackupSyncedAt": "2026-10-16T08:45:52.635Z",
+          "zohoBackupReplaceExisting": false
         }
       }
     }
