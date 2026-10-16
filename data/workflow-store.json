@@ -53119,7 +53119,9 @@
     "1154219000038551001": {
       "salesOrderId": "1154219000038551001",
       "salesOrderNumber": "SO-08201",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-16T12:37:08.377Z",
       "processedOrder": {
         "id": "1154219000038551001",
         "zohoSalesOrderId": "1154219000038551001",
@@ -53149,8 +53151,8 @@
           {
             "id": "1154219000038551001-1154219000038551004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271465",
+            "qrToken": "26271465",
             "orderId": "1154219000038551001",
             "lineItemId": "1154219000038551004",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -53158,14 +53160,17 @@
             "customerName": "Super Tech",
             "salesOrderNumber": "SO-08201",
             "deliveryDate": "2026-10-16",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Not Required",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "warrantyStart": "2026-10-16",
+            "vendor": "Able",
+            "dispatchNote": "Local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-16T17:36:50+0530"
@@ -53178,11 +53183,14 @@
           "qrToken": "26271465",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-16T12:28:51.227Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-16T12:29:10.910Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-16T12:37:08.377Z",
           "zohoBackupLastAttemptAt": "2026-10-16T12:30:50.372Z",
           "zohoBackupSyncedAt": "2026-10-16T12:30:50.372Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-16T12:37:08.377Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
