@@ -25,7 +25,9 @@ export async function GET() {
   const ledger = ledgerResult.status === 'fulfilled' ? ledgerResult.value : null
   const guard = guardResult.status === 'fulfilled' ? guardResult.value : null
   const machines = workflows ? Object.values(workflows).flatMap((workflow) => Object.values(workflow.machines || {})) : []
-  const zohoPending = machines.filter((machine) => machine.zohoBackupStatus === 'pending' || machine.zohoBackupStatus === 'error')
+  const zohoPending = machines.filter((machine) =>
+    Boolean(machine.serialNumber) && (machine.zohoBackupStatus === 'pending' || machine.zohoBackupStatus === 'error'),
+  )
   const components = {
     database: component(Boolean(ledger), serialDatabaseConfigured(), ledgerResult),
     workflowMirror: { status: !workflows ? 'unhealthy' : ledger && ledger.pendingMirrors > 0 ? 'degraded' : 'healthy', orderCount: workflows ? Object.keys(workflows).length : null, pending: ledger?.pendingMirrors ?? null, oldestPendingAt: ledger?.oldestPendingMirrorAt ?? null, error: rejected(workflowResult) },
