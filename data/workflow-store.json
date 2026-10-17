@@ -53198,7 +53198,9 @@
     "1154219000038588001": {
       "salesOrderId": "1154219000038588001",
       "salesOrderNumber": "SO-08208",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-17T07:29:33.959Z",
       "processedOrder": {
         "id": "1154219000038588001",
         "zohoSalesOrderId": "1154219000038588001",
@@ -53208,7 +53210,7 @@
         "shippingAddress": "GROUND FLOOR, PLOT NO. 38-39, KH NO. 54/11/1 AND 54/4/1, PKT -D, Uttam Nagar Sub Post Office, VIDYA VIHAR VILLAGE, HASTSAL, Delhi, 110059, India",
         "salesperson": "Deepak Kumar",
         "deliveryDate": "2026-10-17",
-        "dashboardStatus": "Not Generated",
+        "dashboardStatus": "QR Generated",
         "reviewRequired": false,
         "lineItems": [
           {
@@ -53228,8 +53230,8 @@
           {
             "id": "1154219000038588001-1154219000038588004-1",
             "unitNumber": 1,
-            "serialNumber": "",
-            "qrToken": "",
+            "serialNumber": "26271466",
+            "qrToken": "26271466",
             "orderId": "1154219000038588001",
             "lineItemId": "1154219000038588004",
             "itemName": "Latex Glue Applicator (roller type) (16 inch)",
@@ -53237,14 +53239,16 @@
             "customerName": "ARIVANT LABELS",
             "salesOrderNumber": "SO-08208",
             "deliveryDate": "2026-10-17",
-            "status": "Not Generated",
+            "status": "QR Generated",
             "selectedForBatch": false,
             "woodenPacking": "Pending",
             "qrPasted": false,
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "vendor": "Able",
+            "dispatchNote": "local"
           }
         ],
         "zohoLastModifiedTime": "2026-10-17T12:31:02+0530"
@@ -53257,11 +53261,14 @@
           "qrToken": "26271466",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-17T07:08:54.930Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-17T07:09:16.698Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-17T07:29:33.959Z",
           "zohoBackupLastAttemptAt": "2026-10-17T07:15:46.967Z",
           "zohoBackupSyncedAt": "2026-10-17T07:15:46.967Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-17T07:29:33.959Z",
+          "dispatchNote": "local",
+          "vendor": "Able"
         }
       }
     }
