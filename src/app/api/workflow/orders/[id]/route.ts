@@ -5,6 +5,7 @@ import { allocateSerialNumbers } from '@/lib/serial-allocation-service'
 import { isMachineLineItem } from '@/lib/item-classification'
 import { markSerialStatus } from '@/lib/serial-ledger'
 import { isOrderTombstoned, LIFECYCLE_BASELINE_PATH, type LifecycleBaselineStore } from '@/lib/operational-orders'
+import { getSyncedOrder } from '@/lib/synced-orders'
 
 import type { Order } from '@/types/domain'
 
@@ -23,6 +24,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const { id } = await params
     const body = await request.json()
     const action = body.action as string
+    if (!['undo', 'allocate_serials', 'generate', 'not_required', 'process'].includes(action)) return apiError('Unsupported workflow action', 400)
     if (action === 'undo') {
       const order = body.order as Order | undefined
       const baseline = await githubReadJson<LifecycleBaselineStore>(LIFECYCLE_BASELINE_PATH, { version: 1, cutoverVersion: '', cutoverDate: '', tombstones: {} })
@@ -38,19 +40,27 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       })
       return apiOk({ workflow })
     }
-    const order = body.order as Order
+    const submittedOrder = body.order as Order | undefined
+    const order = await getSyncedOrder(id)
+    if (!order) return apiError('Order not found', 404)
+    if (submittedOrder && submittedOrder.id !== order.id) return apiError('Order identity does not match route', 400)
+    const requestedMachineIds = action === 'generate'
+      ? (Array.isArray(body.machines) ? body.machines.map((machine: MachineWorkflow) => machine.machineUnitId) : [])
+      : (Array.isArray(body.machineIds) ? body.machineIds : Array.isArray(body.selectedMachineIds) ? body.selectedMachineIds : [])
+    const canonicalMachineIds = new Set(order.machines.map((machine) => machine.id))
+    if (requestedMachineIds.some((machineId: unknown) => typeof machineId !== 'string' || !canonicalMachineIds.has(machineId))) return apiError('One or more machine units do not belong to this order', 400)
     if (action === 'allocate_serials') {
       // Transfer evidence is read from the authoritative workflow, never trusted from the
       // client. It remains present after the failed Oxford attempt (qrStatus was generated),
       // so transferredAt/destination form a stable reallocation idempotency generation.
       const current = await getOrderWorkflow(id, true)
-      const transfers = Object.fromEntries((body.machineIds || []).flatMap((machineId: string) => {
+      const transfers = Object.fromEntries(requestedMachineIds.flatMap((machineId: string) => {
         const machine = current?.machines?.[machineId]
         if (!machine?.transferredAt && !machine?.transferDestinationOrderId && machine?.qrStatus !== 'transferred') return []
         const key = `transfer:${machine.transferredAt || 'unknown'}:${machine.transferDestinationOrderId || 'unknown'}`
         return [[machineId, { key, destinationOrderId: machine.transferDestinationOrderId, transferredAt: machine.transferredAt }]]
       }))
-      const serials = await allocateSerialNumbers(id, body.machineIds || [], body.order as Order | undefined, transfers)
+      const serials = await allocateSerialNumbers(id, requestedMachineIds, order, transfers)
       return apiOk({ serials })
     }
     const now = new Date().toISOString()
@@ -60,6 +70,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const machines = { ...(current?.machines || {}) }
       if (action === 'generate') for (const item of body.machines as MachineWorkflow[]) {
         const existing = machines[item.machineUnitId]
+        if (!existing?.serialNumber || item.serialNumber !== existing.serialNumber) throw new Error(`Serial was not allocated for ${item.machineUnitId}`)
         machines[item.machineUnitId] = { ...item, serialNumber: item.serialNumber || existing?.serialNumber, qrToken: item.qrToken || existing?.qrToken || item.serialNumber || existing?.serialNumber, qrStatus: 'generated', zohoBackupStatus: existing?.zohoBackupStatus === 'synced' ? 'synced' : 'pending', zohoBackupQueuedAt: existing?.zohoBackupQueuedAt || now, zohoBackupError: undefined, transferDestinationOrderId: existing?.transferDestinationOrderId, transferDestinationSalesOrderNumber: existing?.transferDestinationSalesOrderNumber, transferredAt: existing?.transferredAt }
       }
       if (action === 'not_required') for (const machine of selectedMachines(order, body.selectedMachineIds)) machines[machine.id] = { machineUnitId: machine.id, lineItemId: machine.lineItemId, qrStatus: 'not_required', qrNotRequiredAt: now }

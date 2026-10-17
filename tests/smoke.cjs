@@ -2,7 +2,8 @@ const assert = require('node:assert/strict')
 const { spawn } = require('node:child_process')
 
 const base = 'http://127.0.0.1:4178'
-const env = { ...process.env, PORT: '4178', GITHUB_TOKEN: '' }
+const smokeSecret = 'bsm-dispatch-smoke-local-only-secret'
+const env = { ...process.env, PORT: '4178', GITHUB_TOKEN: '', APP_LOCAL_ONLY: 'true', AUTH_SECRET: smokeSecret }
 const server = spawn(process.platform === 'win32' ? 'node_modules/.bin/next.cmd' : 'node_modules/.bin/next', ['start', '-p', '4178'], { env, stdio: ['ignore', 'pipe', 'pipe'] })
 let serverOutput = ''
 server.stdout.on('data', (chunk) => { serverOutput += chunk.toString() })
@@ -18,6 +19,17 @@ async function login(login = 'admin@bsmindia.com', password = '1231') {
   const response = await fetch(base + '/api/auth/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ login, password }) })
   assert.equal(response.status, 200, 'login should return 200')
   return response.headers.get('set-cookie').split(';')[0]
+}
+
+async function roleCookie(userId, role, email) {
+  const { SignJWT } = await import('jose')
+  const token = await new SignJWT({ role, email })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setSubject(userId)
+    .setIssuedAt()
+    .setExpirationTime('10m')
+    .sign(new TextEncoder().encode(smokeSecret))
+  return `bsm_dispatch_session=${token}`
 }
 
 async function waitForServer() {
@@ -40,7 +52,10 @@ async function run() {
     assert.equal(response.status, 200, `${path} should return 200\nServer output:\n${serverOutput.slice(-4000)}`)
   }
 
-  const operationsCookie = await login('operations', '1231')
+  // Exercise Operations authorization with an isolated, short-lived local session.
+  // The tracked user store retains its real password hash and is never rewritten
+  // merely to make smoke credentials agree with historical defaults.
+  const operationsCookie = await roleCookie('u-ops', 'Operations', 'operations@bsmindia.com')
   for (const path of ['/ready-to-ship', '/api/ready-to-ship']) {
     const { response } = await fetchText(path, { headers: { cookie: operationsCookie } })
     assert.equal(response.status, 200, `Operations should access ${path}`)

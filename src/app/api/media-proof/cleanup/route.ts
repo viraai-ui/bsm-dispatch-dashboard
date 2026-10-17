@@ -38,6 +38,7 @@ export async function GET(request: NextRequest) {
     ;[packingSource, loadingSource, shipmentSource, paymentSource].forEach(collect)
     // Vercel cron URLs are static: authorized cron executes; Admin GET stays dry-run by default.
     const execute = cron || request.nextUrl.searchParams.get('execute') === 'true'
+    if (process.env.APP_LOCAL_ONLY === 'true') return apiOk({ mode: 'inventory', configured: false, registered: registered.size, orphaned: [], note: 'External retention is disabled in local-only preview mode' })
     const reconciliation = await reconcileR2Retention(registered, { execute })
     if (!execute) return apiOk({ mode: 'inventory', ...reconciliation })
     const packing = await cleanMediaStore(packingSource, remove, { days: requestedVideoDays, memo })

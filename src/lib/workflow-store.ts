@@ -88,6 +88,7 @@ export function githubStoreConfigured() {
 }
 
 export async function githubRequest(path: string, init: RequestInit = {}) {
+  if (process.env.APP_LOCAL_ONLY === 'true') throw new Error('External GitHub access is disabled in local-only preview mode')
   const { token, owner, repo } = ghConfig()
   if (!token) throw new Error('Workflow database is not configured')
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}${path}`, {
@@ -161,6 +162,8 @@ export async function githubReadJsonAuthoritative<T>(path: string): Promise<{ da
 }
 
 export async function githubReadJson<T>(path: string, fallback: T): Promise<{ data: T; sha?: string }> {
+  // Explicit local previews must never contact or mutate production-backed stores.
+  if (process.env.APP_LOCAL_ONLY === 'true') return { data: await readBundledJson(path, fallback) }
   if (githubReadUnavailableUntil > Date.now()) return { data: await readBundledJson(path, fallback) }
   const cached = githubReadCache.get(path)
   if (cached && cached.expiresAt > Date.now()) return copyGithubRead<T>(cached.value)
