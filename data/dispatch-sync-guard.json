@@ -5,6 +5,9 @@
   "limit": 1200,
   "circuitUntil": null,
   "circuitReason": null,
-  "lease": null,
+  "lease": {
+    "owner": "f71372a1-ff14-4825-bfed-1a4a130f09b4",
+    "until": "2026-10-17T09:25:24.658Z"
+  },
   "lastCallAt": "2026-10-17T09:00:28.075Z"
 }
