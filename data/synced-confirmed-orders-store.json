@@ -519773,6 +519773,56 @@
         }
       ],
       "zohoLastModifiedTime": "2026-10-17T16:10:35+0530"
+    },
+    "1154219000038568203": {
+      "id": "1154219000038568203",
+      "zohoSalesOrderId": "1154219000038568203",
+      "salesOrderNumber": "SO-08213",
+      "status": "open",
+      "customerName": "Indishoe Company",
+      "shippingAddress": "PLOT NO-699, PACE CITY-II, SECTOR-37, Gurugram, Haryana, 122001, India",
+      "salesperson": "Manisha Gautam",
+      "deliveryDate": "2026-10-17",
+      "dashboardStatus": "Not Generated",
+      "reviewRequired": false,
+      "lineItems": [
+        {
+          "id": "1154219000038568206",
+          "itemName": "Tape folding machine (heavy duty)",
+          "sku": "12",
+          "description": "",
+          "quantity": 1,
+          "pendingQuantity": 1,
+          "woodenPackingRequired": false,
+          "zohoItemId": "1154219000000278847",
+          "rate": 37000,
+          "dispatchCategory": "machine"
+        }
+      ],
+      "machines": [
+        {
+          "id": "1154219000038568203-1154219000038568206-1",
+          "unitNumber": 1,
+          "serialNumber": "",
+          "qrToken": "",
+          "orderId": "1154219000038568203",
+          "lineItemId": "1154219000038568206",
+          "itemName": "Tape folding machine (heavy duty)",
+          "sku": "12",
+          "customerName": "Indishoe Company",
+          "salesOrderNumber": "SO-08213",
+          "deliveryDate": "2026-10-17",
+          "status": "Not Generated",
+          "selectedForBatch": false,
+          "woodenPacking": "Not Required",
+          "qrPasted": false,
+          "qcDone": false,
+          "mediaPhotos": 0,
+          "mediaVideos": 0,
+          "itemDescription": ""
+        }
+      ],
+      "zohoLastModifiedTime": "2026-10-17T16:37:35+0530"
     }
   },
   "orderIds": [
@@ -519935,10 +519985,11 @@
     "1154219000038551001",
     "1154219000038588001",
     "1154219000038577001",
-    "1154219000038597002"
+    "1154219000038597002",
+    "1154219000038568203"
   ],
-  "lastSuccessfulSyncAt": "2026-10-17T11:00:31.486Z",
-  "lastAttemptAt": "2026-10-17T11:00:31.486Z",
+  "lastSuccessfulSyncAt": "2026-10-17T11:08:07.028Z",
+  "lastAttemptAt": "2026-10-17T11:08:07.028Z",
   "lastError": null,
   "syncing": false
 }
