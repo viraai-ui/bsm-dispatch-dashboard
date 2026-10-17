@@ -53276,7 +53276,9 @@
     "1154219000038568203": {
       "salesOrderId": "1154219000038568203",
       "salesOrderNumber": "SO-08213",
-      "status": "qr_generated",
+      "status": "processed",
+      "dispatchPriority": "regular",
+      "processedAt": "2026-10-17T11:16:00.341Z",
       "processedOrder": {
         "id": "1154219000038568203",
         "zohoSalesOrderId": "1154219000038568203",
@@ -53322,7 +53324,9 @@
             "qcDone": false,
             "mediaPhotos": 0,
             "mediaVideos": 0,
-            "itemDescription": ""
+            "itemDescription": "",
+            "dispatchNote": "Local",
+            "vendor": "Able"
           }
         ],
         "zohoLastModifiedTime": "2026-10-17T16:37:35+0530"
@@ -53335,11 +53339,14 @@
           "qrToken": "26271467",
           "qrStatus": "generated",
           "qrGeneratedAt": "2026-10-17T11:13:53.907Z",
-          "zohoBackupStatus": "synced",
-          "zohoBackupQueuedAt": "2026-10-17T11:14:16.304Z",
+          "zohoBackupStatus": "pending",
+          "zohoBackupQueuedAt": "2026-10-17T11:16:00.341Z",
           "zohoBackupLastAttemptAt": "2026-10-17T11:15:43.145Z",
           "zohoBackupSyncedAt": "2026-10-17T11:15:43.145Z",
-          "zohoBackupReplaceExisting": false
+          "zohoBackupReplaceExisting": false,
+          "processedAt": "2026-10-17T11:16:00.341Z",
+          "dispatchNote": "Local",
+          "vendor": "Able"
         }
       }
     }
